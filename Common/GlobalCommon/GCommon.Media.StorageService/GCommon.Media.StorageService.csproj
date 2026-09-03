@@ -1,0 +1,232 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C5DFDE5F-5512-41BB-8F5D-6FC223831B8A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AvePoint.GCommon.Media.StorageService</RootNamespace>
+    <AssemblyName>CommonMediaStorageService</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisIgnoreGeneratedCode>false</CodeAnalysisIgnoreGeneratedCode>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\bin\Release\</OutputPath>
+    <DefineConstants>TRACE;CODE_ANALYSIS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>..\..\Shared\DocAveStandard.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=1.2.0.246, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\SharpZipLib.1.2.0\lib\net45\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI, Version=2.4.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\NPOI.2.4.1\lib\net45\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OOXML, Version=2.4.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\NPOI.2.4.1\lib\net45\NPOI.OOXML.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXml4Net, Version=2.4.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\NPOI.2.4.1\lib\net45\NPOI.OpenXml4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXmlFormats, Version=2.4.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\NPOI.2.4.1\lib\net45\NPOI.OpenXmlFormats.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CPLGenerateService\IntentionImpl\CplGenerateService.cs" />
+    <Compile Include="CPLGenerateService\Intention\ICplGenerateService.cs" />
+    <Compile Include="ExportService\IntentionImpl\AutonomyCompatibleForamatGenerator\AutonomyCompatibleForamatGenerator.cs" />
+    <Compile Include="ExportService\IntentionImpl\AutonomyExportService.cs" />
+    <Compile Include="ExportService\IntentionImpl\ConcordanceCompatibleFormatGenerator\ConcordanceCompatibleFormatGeneratorBase.cs" />
+    <Compile Include="ExportService\IntentionImpl\ConcordanceCompatibleFormatGenerator\ConcordanceCompatibleFormatGeneratorFactory.cs" />
+    <Compile Include="ExportService\IntentionImpl\ConcordanceExportService.cs" />
+    <Compile Include="ExportService\IntentionImpl\ConcordanceCompatibleFormatGenerator\CsvConcordanceCompatibleFormatGenerator.cs" />
+    <Compile Include="ExportService\IntentionImpl\ConcordanceCompatibleFormatGenerator\CustomConcordanceCompatibleFormatGenerator.cs" />
+    <Compile Include="ExportService\IntentionImpl\ConcordanceCompatibleFormatGenerator\DefaultConcordanceCompatibleFormatGenerator.cs" />
+    <Compile Include="ExportService\IntentionImpl\EventType.cs" />
+    <Compile Include="ExportService\IntentionImpl\ExportServiceBase.cs" />
+    <Compile Include="ExportService\IntentionImpl\ExportServiceBaseEvents.cs" />
+    <Compile Include="ExportService\IntentionImpl\ExportServiceProvider.cs" />
+    <Compile Include="ExportService\IntentionImpl\HoldFileExporter.cs" />
+    <Compile Include="ExportService\IntentionImpl\MhtFormatGenerator\MailMessageBuilder.cs" />
+    <Compile Include="ExportService\IntentionImpl\MhtFormatGenerator\MhtFormatGenerator.cs" />
+    <Compile Include="ExportService\IntentionImpl\NAAExportService.cs" />
+    <Compile Include="ExportService\IntentionImpl\NARAExportService.cs" />
+    <Compile Include="ExportService\IntentionImpl\NativeExportService.cs" />
+    <Compile Include="ExportService\IntentionImpl\ConcordanceCompatibleFormatGenerator\TabConcordanceCompatibleFormatGenerator.cs" />
+    <Compile Include="ExportService\Intention\ExportAction.cs" />
+    <Compile Include="ExportService\Intention\ExportDataFileResult.cs" />
+    <Compile Include="ExportService\Intention\ExportEventArgs.cs" />
+    <Compile Include="ExportService\Intention\ExportFileInfo.cs" />
+    <Compile Include="ExportService\Intention\ExportInfo.cs" />
+    <Compile Include="ExportService\Intention\ExportMetaDataFileResult.cs" />
+    <Compile Include="ExportService\Intention\ExportResult.cs" />
+    <Compile Include="ExportService\Intention\ExportServiceInfo.cs" />
+    <Compile Include="ExportService\Intention\ExportFormat.cs" />
+    <Compile Include="ExportService\Intention\HoldFileExportServiceInfo.cs" />
+    <Compile Include="ExportService\Intention\IAutonomyCompatibleForamatGenerator.cs" />
+    <Compile Include="ExportService\Intention\IConcordanceCompatibleFormatGenerator .cs" />
+    <Compile Include="ExportService\Intention\IExportService.cs" />
+    <Compile Include="ExportService\Intention\IExportServiceEvents.cs" />
+    <Compile Include="ExportService\Intention\IExportServiceProvider.cs" />
+    <Compile Include="ExportService\Intention\IHoldFileExporter.cs" />
+    <Compile Include="ExportService\Intention\IMailMessageBuilder.cs" />
+    <Compile Include="ExportService\Intention\IMhtFormatGenerator.cs" />
+    <Compile Include="HoldService\IntentionImpl\HoldService.cs" />
+    <Compile Include="StorageService\DataStorageInfo.cs" />
+    <Compile Include="StorageService\ExportReadException.cs" />
+    <Compile Include="StorageService\IStorageManager.cs" />
+    <Compile Include="StorageService\ItemAttachment.cs" />
+    <Compile Include="StorageService\ItemAttachmentCollection.cs" />
+    <Compile Include="StorageService\DataReadAction.cs" />
+    <Compile Include="HoldService\Intention\HoldFileInfo.cs" />
+    <Compile Include="StorageService\IDataReader.cs" />
+    <Compile Include="StorageService\MediaCommonStorageResult.cs" />
+    <Compile Include="StorageService\MetaData.cs" />
+    <Compile Include="StorageService\MetaData\ConcordanceMetaDataAttribute.cs" />
+    <Compile Include="StorageService\MetaDataFormat.cs" />
+    <Compile Include="HoldService\Intention\ReleaseResult.cs" />
+    <Compile Include="MetaDataService\IntentionImpl\Analyzer\BinaryMetaDataAnalyzer.cs" />
+    <Compile Include="MetaDataService\IntentionImpl\Analyzer\CsvMetaDataAnalyzer.cs" />
+    <Compile Include="MetaDataService\IntentionImpl\Analyzer\MetaDataAnalyzerBase.cs" />
+    <Compile Include="MetaDataService\IntentionImpl\Analyzer\MetaDataAnalyzerFactory.cs" />
+    <Compile Include="MetaDataService\IntentionImpl\Analyzer\XmlMetaDataAnalyzer.cs" />
+    <Compile Include="MetaDataService\IntentionImpl\Builder\BinaryMetaDataBuilder.cs" />
+    <Compile Include="MetaDataService\IntentionImpl\Builder\CsvMetaDataBuilder.cs" />
+    <Compile Include="MetaDataService\IntentionImpl\Builder\MetaDataBuilderBase.cs" />
+    <Compile Include="MetaDataService\IntentionImpl\Builder\MetaDataBuilderFactory.cs" />
+    <Compile Include="MetaDataService\IntentionImpl\Builder\XmlMetaDataBuilder.cs" />
+    <Compile Include="MetaDataService\Intention\IMetaDataAnalyzer.cs" />
+    <Compile Include="MetaDataService\Intention\IMetaDataAnalyzerFactory.cs" />
+    <Compile Include="MetaDataService\Intention\IMetaDataBuilder.cs" />
+    <Compile Include="StorageService\CompressionType.cs" />
+    <Compile Include="StorageService\EncryptionAlgorithm.cs" />
+    <Compile Include="HoldService\Intention\HoldServiceInfo.cs" />
+    <Compile Include="HoldService\Intention\HoldResult.cs" />
+    <Compile Include="HoldService\Intention\IHoldService.cs" />
+    <Compile Include="MetaDataService\Intention\IMetaDataBuilderFactory.cs" />
+    <Compile Include="MetaDataService\MetaDataArchitecture\MetaDataConfigurationSectionHandler.csd.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MetaDataConfigurationSectionHandler.csd</DependentUpon>
+    </Compile>
+    <Compile Include="PathService\IntentionImpl\NameGenerator.cs" />
+    <Compile Include="PathService\IntentionImpl\NameGeneratorFactory.cs" />
+    <Compile Include="PathService\IntentionImpl\PathGenerator.cs" />
+    <Compile Include="PathService\Intention\INameGenerator.cs" />
+    <Compile Include="PathService\Intention\INameGeneratorFactory.cs" />
+    <Compile Include="PathService\Intention\IPathGenerator.cs" />
+    <Compile Include="PathService\Intention\PathParameter.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StorageService\MetaDataItemInfo.cs" />
+    <Compile Include="StorageService\MetaData\AutonomyMetaData.cs" />
+    <Compile Include="StorageService\MetaData\ConcordanceMetaData.cs" />
+    <Compile Include="StorageService\MetaData\AutonomyMetaDataAttribute.cs" />
+    <Compile Include="StorageService\MetaData\CsvMetaData.cs" />
+    <Compile Include="StorageService\MetaData\CsvMetaDataAttribute.cs" />
+    <Compile Include="StorageService\MetaData\HoldServiceMetaDataAttribute.cs" />
+    <Compile Include="StorageService\MetaData\HoldServiceMetaData.cs" />
+    <Compile Include="StorageService\StorageFileInfo.cs" />
+    <Compile Include="StorageService\StorageFileInfoBase.cs" />
+    <Compile Include="StorageService\StorageManager.cs" />
+    <Compile Include="StorageService\StorageManagerInfo.cs" />
+    <Compile Include="StorageService\StorageServiceInfoBase.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\MediaStorage\Media.Storage\Media.Storage.csproj">
+      <Project>{3180AE0E-D8E3-4B4D-903B-4AF57D16CAF5}</Project>
+      <Name>Media.Storage</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GCommon.Extension\GCommon.Extension.csproj">
+      <Project>{2F42782B-ED26-43A1-A6DF-60DF01DAB76D}</Project>
+      <Name>GCommon.Extension</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GCommonContract\DocAve.GCommonContract.csproj">
+      <Project>{361F3C7C-ABBF-42D5-975A-65E4E9866068}</Project>
+      <Name>DocAve.GCommonContract</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GCommonUtility\DocAve.GCommonUtility.csproj">
+      <Project>{7151E862-A761-4A90-ACE6-37D7442047A6}</Project>
+      <Name>DocAve.GCommonUtility</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="CPLFile\CommonCreateConcordanceDB.cpl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="CPLFile\CommonCreateHyperlinks.cpl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Document\Autonomy\autonomy.pdf" />
+    <None Include="Document\Autonomy\Autonomy_Technology_WP.pdf" />
+    <None Include="Document\Autonomy’s indexing file format.pdf" />
+    <None Include="Document\CN_CPL_Guide.pdf" />
+    <None Include="Document\Concordance Research.docx" />
+    <None Include="Document\Autonomy\DRE3rev2.pdf" />
+    <None Include="Document\Hold Data Format Draft design.pdf" />
+    <None Include="Document\hold&amp;export.doc" />
+    <None Include="Document\Autonomy\Import Module 2.5.x-rev3.pdf" />
+    <None Include="MetaDataService\MetaDataArchitecture\MetaDataConfigurationSectionHandler.csd">
+      <Generator>CsdFileGenerator</Generator>
+      <LastGenOutput>MetaDataConfigurationSectionHandler.csd.cs</LastGenOutput>
+    </None>
+    <None Include="MetaDataService\MetaDataArchitecture\MetaDataConfigurationSectionHandler.csd.config">
+      <DependentUpon>MetaDataConfigurationSectionHandler.csd</DependentUpon>
+    </None>
+    <None Include="MetaDataService\MetaDataArchitecture\MetaDataConfigurationSectionHandler.csd.diagram">
+      <DependentUpon>MetaDataConfigurationSectionHandler.csd</DependentUpon>
+    </None>
+    <None Include="MetaDataService\MetaDataArchitecture\MetaDataConfigurationSectionHandler.csd.xsd">
+      <DependentUpon>MetaDataConfigurationSectionHandler.csd</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,61 @@
+<!--Covered by AvePoint copyright and license agreement-->
+<template>
+    <div class="app-header">
+        <div class="slds-page-header">
+            <div class="slds-page-header__row">
+                <div class="slds-page-header__col-title">
+                    <div class="slds-media">
+                        <div class="logo-zone">
+                            <lightning-icon icon-name="standard:channel_programs" class="logo-icon">
+                            </lightning-icon>
+                        </div>
+                        <div class="slds-media__body">
+                            <div class="slds-page-header__name">
+                                <div class="slds-page-header__name-title">
+                                    <h1>
+                                        <span class="appname-header">{translation.appName}</span>
+                                    </h1>
+                                </div>
+                            </div>
+                            <!-- <p class="slds-page-header__name-meta">Mark Jaeckal • Unlimited Customer • 11/13/15</p> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <template if:true={showErrorPage}>
+        <c-error-page status-code={errorStatusCode} target="app">
+        </c-error-page>
+    </template>
+
+    <template if:false={showErrorPage}>
+        <div class="opus-app-container">
+            <c-loading></c-loading>
+            <div class="opus-app-content" if:true={readyToDisplay}>
+                <div class="dashboard-name">{translation.inactiveDataTitle}</div>
+                <div class="gadget-container">
+                    <c-summary-card summary-data={summaryData}></c-summary-card>
+                </div>
+                <div class="gadget-container">
+                    <c-definition-of-inactive inactive-data={inactiveData} time-range-option={timeRangeOption}
+                        query-param={inactiveDataQueryParameter} onrangechange={handleTimeRangeChange}>
+                    </c-definition-of-inactive>
+                </div>
+                <div class="gadget-container">
+                    <c-data-analysis search-object={searchObjectData} chart-data={figuredDataInfo}
+                        table-data={dataAnalysisTable} table-total={dataAnalysisTableTotal}
+                        onselectionchange={onSelectionChange} onrowselection={updateChartData} onnextpage={handleNextPage}>
+                    </c-data-analysis>
+                </div>
+                <div class="gadget-container">
+                    <c-file-analysis size-range-info={sizeRangeData} file-types-data={fileExtensionsData}
+                        table-data={fileAnalysisTable} table-total={fileAnalysisTableTotal}
+                        query-param={fileAnalysisQueryParameter}
+                        onfilterchange={handleFileAnalysisFilterChange}></c-file-analysis>
+                </div>
+            </div>
+        </div>
+    </template>
+</template>

@@ -1,0 +1,105 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <OutputType>Library</OutputType>
+    <RootNamespace>AvePoint.Deployment.CommonGUI</RootNamespace>
+    <AssemblyName>AvePoint.CallAssist.CommonDeploymentGUI</AssemblyName>
+    <UseWPF>true</UseWPF>
+    <ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>..\..\..\bin\Debug\StandaloneTool\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>..\..\..\bin\Release\StandaloneTool\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationFramework.Aero" />
+    <Reference Include="System.ServiceProcess" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ItemControl\PageWizardItem\Images\wi_Unconfigured_16x16.png" />
+    <Resource Include="ItemControl\ScanRuleItem\Images\sii_mismatch_16x16.png" />
+    <Resource Include="ItemControl\ScanRuleItem\Images\sii_passed_16x16.png" />
+    <Resource Include="ItemControl\ScanRuleItem\Images\sii_waiting_16x16.png" />
+    <Resource Include="ItemControl\ScanRuleItem\Images\sii_warning_16x16.png" />
+    <EmbeddedResource Include="Fonts\HelveticaNeueLTPro-Lt.otf" />
+    <EmbeddedResource Include="Fonts\HelveticaNeueLTPro-LtCn.otf" />
+    <EmbeddedResource Include="Fonts\HelveticaNeueLTPro-LtCnO.otf" />
+    <EmbeddedResource Include="Fonts\HelveticaNeueLTPro-LtEx.otf" />
+    <EmbeddedResource Include="Fonts\HelveticaNeueLTPro-LtExO.otf" />
+    <EmbeddedResource Include="Fonts\HelveticaNeueLTPro-LtIt.otf" />
+    <EmbeddedResource Include="Fonts\HelveticaNeueLTPro-Roman.otf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="UI\BaseWindowUI\Images\close_21x21_over.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="UI\BaseWindowUI\Images\max_21x21_over.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="UI\BaseWindowUI\Images\mini_21x21_over.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Documents\Logger.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Documents\I18N.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Documents\Encryption.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Documents\ControlsGuide.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="UI\TextBox\Images\errormsg_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="UI\BaseWindowUI\Images\restore_21x21_over.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="UI\BaseMessageUI\Images\cfmwin_exit_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="UI\BaseMessageUI\Images\msgwin_done_32x32.png" />
+    <Resource Include="UI\BaseMessageUI\Images\msgwin_error_32x32.png" />
+    <Resource Include="UI\BaseMessageUI\Images\msgwin_pop_32x32.png" />
+    <Resource Include="UI\BaseMessageUI\Images\msgwin_warning_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="UI\BaseMessageUI\Images\DocAve6.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="UI\Ads\Image\ad_background.jpg" />
+    <Resource Include="UI\Ads\Image\ad_support_bg.png" />
+    <Resource Include="UI\Ads\Image\ad_winnower.png" />
+    <Resource Include="UI\Ads\Image\ECM_v1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="UI\BaseMessageUI\Images\install_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="UI\Cover\Image\loading_70x70.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ItemControl\PageWizardItem\Images\wi_Configured_16x16.png" />
+    <Resource Include="ItemControl\PageWizardItem\Images\wi_Configuring_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="UI\SearchTextBox\Image\close_16x16_normal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="UI\SearchTextBox\Image\search_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="UI\BaseWindowUI\Images\close_grey_21x21_over.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Windows.Compatibility" Version="10.0.2" />
+  </ItemGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>..\AvePointPhoneActiveX.snk</AssemblyOriginatorKeyFile>
+    <BaseOutputPath></BaseOutputPath>
+  </PropertyGroup>
+</Project>

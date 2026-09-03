@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<!--/********************************************************************
+ *
+ *  PROPRIETARY and CONFIDENTIAL
+ *
+ *  This file is licensed from, and is a trade secret of:
+ *
+ *                   AvePoint, Inc.
+ *                   525 Washington Blvd, Suite 1400
+ *                   Jersey City, NJ 07310
+ *                   United States of America
+ *                   Telephone: +1-201-793-1111
+ *                   WWW: www.avepoint.com
+ *
+ *  Refer to your License Agreement for restrictions on use,
+ *  duplication, or disclosure.
+ *
+ *  RESTRICTED RIGHTS LEGEND
+ *
+ *  Use, duplication, or disclosure by the Government is
+ *  subject to restrictions as set forth in subdivision
+ *  (c)(1)(ii) of the Rights in Technical Data and Computer
+ *  Software clause at DFARS 252.227-7013 (Oct. 1988) and
+ *  FAR 52.227-19 (C) (June 1987).
+ *
+ *  Copyright © 2017-2026 AvePoint® Inc. All Rights Reserved. 
+ *
+ *  Unpublished - All rights reserved under the copyright laws of the United States.
+ */-->
+<!--When editing this file, please make sure the content format is not changed. Changing the content format may cause errors.-->
+<!--Some of Exchange properties can be customized as the ExchangeMetadata parameter value in the following format: @Property@-->
+
+<!--Use @Subject@ to retrieve the object subject as the metadata value.-->
+<!--Use @DateTimeSent@ to retrieve the email sent time as the metadata value.-->
+<!--Use @DateTimeReceived@ to retrieve the email received time as the metadata value.-->
+<!--Use @TimeNow@ to retrieve the time when the object is exported into a VEO file. The time is in the time zone of the server where the Archiver job is run.-->
+<!--Use @ID@ to retrieve the object ID as the metadata value.-->
+<!--Use @FilePath@ to retrieve the object FilePath as the metadata value.-->
+<!--Use @File Type@ to retrieve the object file type as the metadata value.-->
+<!--Use @FileContent@ to retrieve the email content as the metadata value.-->
+<!--Use @FileSize@ to retrieve the email size as the metadata value.-->
+<!--Use @NewGuid@ to generate new Id with Guid format by using Guid.NewGuid().-->
+<EXOVEOContentXML>
+	<M1 MetadataName = "VEOContent">
+		<!--<M2 MetadataName = "Version" ExchangeMetadataAsSource = "false" ExchangeMetadata = "" DefaultValue = "3.0" /> Only the vers standard 3.0 is supported.-->
+		<!--<M3 MetadataName = "HashFunctionAlgorithm" ExchangeMetadataAsSource = "false" ExchangeMetadata = "" DefaultValue = "SHA-512" /> Only the hash algorithm SHA-512 is supported.-->
+		<M4 metadataname = "InfomationObject">
+			<!--<M5 MetadataName = "InformationObjectType"  ExchangeMetadataAsSource = "false" ExchangeMetadata = "" DefaultValue = "Record" /> This element cannot be edited.--> 
+			<!--<M6 MetadataName = "InformationObjectDepth" ExchangeMetadataAsSource = "false" ExchangeMetadata = "" DefaultValue = "0" /> This element cannot be edited.-->
+			<M7 MetadataName = "MetadataPackage">
+				<!--<M8 MetadataName = "MetadataSchemaIdentifier" ExchangeMetadataAsSource = "false" ExchangeMetadata = "" DefaultValue = "http://prov.vic.gov.au/vers/schema/ANZS5478" /> This element cannot be edited.-->
+				<!--<M9 MetadataName = "MetadataSyntaxIdentifier" ExchangeMetadataAsSource = "false" ExchangeMetadata = "" DefaultValue = "http://www.w3.org/1999/02/22-rdf-syntax-ns" /> This element cannot be edited.-->
+				<M10 MetadataName = "RDF">
+					<M90 MetadataName ="Description">
+						<M11 MetadataName = "Record">
+							<!--<M12 MetadataName="EntityType" ExchangeMetadataAsSource = "false" ExchangeMetadata = "" DefaultValue = "Record" /> This element cannot be edited.-->
+							<M13 MetadataName="Category" ExchangeMetadataAsSource = "false" ExchangeMetadata = "" DefaultValue = "Item" />
+							<M14 MetadataName="Identifier">
+								<M15 MetadataName="IdentifierString" ExchangeMetadataAsSource = "true" ExchangeMetadata = "@ID@" DefaultValue = "" />
+								<M16 MetadataName="IdentifierScheme" ExchangeMetadataAsSource = "false" ExchangeMetadata = "" DefaultValue = "" />
+							</M14>
+							<M17 MetadataName="Name" >
+								<M18 MetadataName="NameWords" ExchangeMetadataAsSource = "true" ExchangeMetadata = "@Subject@" DefaultValue = "" />
+								<M19 MetadataName="NameScheme" ExchangeMetadataAsSource = "false" ExchangeMetadata = "" DefaultValue = "" />
+							</M17>
+							<M20 MetadataName="DateRange">
+								<M21 MetadataName="StartDate" ExchangeMetadataAsSource = "true" ExchangeMetadata = "@DateTimeSent@" DefaultValue = "" />
+								<M22 MetadataName="EndDate" ExchangeMetadataAsSource = "true" ExchangeMetadata = "@DateTimeReceived@" DefaultValue = "" />
+							</M20>
+							<M23 MetadataName="Description" ExchangeMetadataAsSource = "false" ExchangeMetadata = "" DefaultValue = "" />
+							<M24 MetadataName="Jurisdiction" ExchangeMetadataAsSource = "false" ExchangeMetadata = "" DefaultValue = "AU" />
+							<M25 MetadataName="SecurityClassification" ExchangeMetadataAsSource = "false" ExchangeMetadata = "" DefaultValue = "Unclassified" />
+							<M26 MetadataName="SecurityCaveat">
+								<M27 MetadataName="CaveatText" ExchangeMetadataAsSource = "false" ExchangeMetadata = "" DefaultValue = "" />
+								<M28 MetadataName="CaveatCategory" ExchangeMetadataAsSource = "false" ExchangeMetadata = "" DefaultValue = "" />
+							</M26>
+							<M29 MetadataName="Rights">
+								<M30 MetadataName="RightsStatement" ExchangeMetadataAsSource = "false" ExchangeMetadata = "" DefaultValue = "" />
+								<M31 MetadataName="RightsType" ExchangeMetadataAsSource = "false" ExchangeMetadata = "" DefaultValue = "" />
+								<M32 MetadataName="RightsStatus" ExchangeMetadataAsSource = "false" ExchangeMetadata = "" DefaultValue = "" />
+							</M29>
+							<M33 MetadataName="Language" ExchangeMetadataAsSource = "false" ExchangeMetadata = "" DefaultValue = "en-AU" />
+							<M34 MetadataName="Coverage">
+								<M35 MetadataName="JurisdictionalCoverage" ExchangeMetadataAsSource = "false" ExchangeMetadata = "" DefaultValue = "" />
+								<M36 MetadataName="TemporalCoverage" ExchangeMetadataAsSource = "false" ExchangeMetadata = "" DefaultValue = "" />
+								<M37 MetadataName="SpatialCoverage" ExchangeMetadataAsSource = "false" ExchangeMetadata = "" DefaultValue = "" />
+							</M34>
+							<M38 MetadataName="Keyword">
+								<M39 MetadataName="KeywordTerm" ExchangeMetadataAsSource = "false" ExchangeMetadata = "" DefaultValue = "" />
+								<M40 MetadataName="KeywordID" ExchangeMetadataAsSource = "false" ExchangeMetadata = "" DefaultValue = "" />
+								<M41 MetadataName="KeywordScheme" ExchangeMetadataAsSource = "false" ExchangeMetadata = "" DefaultValue = "" />
+								<M42 MetadataName="KeywordSchemeType" ExchangeMetadataAsSource = "false" ExchangeMetadata = "" DefaultValue = "" />
+							</M38>
+							<M43 MetadataName="Disposal">
+								<M44 MetadataName="RetentionAndDisposalAuthority" ExchangeMetadataAsSource = "false" ExchangeMetadata = "" DefaultValue = "No Disposal Coverage" />
+								<M45 MetadataName="DisposalClassID" ExchangeMetadataAsSource = "false" ExchangeMetadata = "" DefaultValue = "" />
+								<M46 MetadataName="DisposalAction" ExchangeMetadataAsSource = "false" ExchangeMetadata = "" DefaultValue = "" />
+								<M47 MetadataName="DisposalTriggerDate" ExchangeMetadataAsSource = "false" ExchangeMetadata = "" DefaultValue = "" />
+								<M48 MetadataName="DisposalActionDue" ExchangeMetadataAsSource = "false" ExchangeMetadata = "" DefaultValue = "" />
+							</M43>
+							<M49 MetadataName="Format">
+								<M50 MetadataName="FormatName" ExchangeMetadataAsSource = "true" ExchangeMetadata = "@File Type@" DefaultValue = "" />
+								<M51 MetadataName="FormatVersion" ExchangeMetadataAsSource = "false" ExchangeMetadata = "" DefaultValue = "1.0" />
+								<M52 MetadataName="CreatingApplicationName" ExchangeMetadataAsSource = "false" ExchangeMetadata = "" DefaultValue = "" />
+								<M53 MetadataName="CreatingApplicationVersion" ExchangeMetadataAsSource = "false" ExchangeMetadata = "" DefaultValue = "" />
+								<M54 MetadataName="FormatRegistry" ExchangeMetadataAsSource = "false" ExchangeMetadata = "" DefaultValue = "" />
+								<M55 MetadataName="FormatRegistryID" ExchangeMetadataAsSource = "false" ExchangeMetadata = "" DefaultValue = "" />
+							</M49>
+							<M56 MetadataName="Extent">
+								<M57 MetadataName="PhysicalDimensions" ExchangeMetadataAsSource = "false" ExchangeMetadata = "" DefaultValue = "" />
+								<M58 MetadataName="LogicalSize" ExchangeMetadataAsSource = "true" ExchangeMetadata = "@FileSize@" DefaultValue = "" />
+								<M59 MetadataName="Quantity" ExchangeMetadataAsSource = "false" ExchangeMetadata = "" DefaultValue = "1" />
+								<M60 MetadataName="Units" ExchangeMetadataAsSource = "false" ExchangeMetadata = "" DefaultValue = "KB" />
+							</M56>
+							<M61 MetadataName="Medium" ExchangeMetadataAsSource = "false" ExchangeMetadata = "" DefaultValue = "" />
+							<M62 MetadataName="IntegrityCheck">
+								<M63 MetadataName="HashFunctionName" ExchangeMetadataAsSource = "false" ExchangeMetadata = "" DefaultValue = "SHA-512" />
+								<!--<M64 MetadataName="MessageDigest" ExchangeMetadataAsSource = "false" ExchangeMetadata = "" DefaultValue = "" />  This element cannot be edited.-->
+							</M62>
+							<M65 MetadataName="Location" ExchangeMetadataAsSource = "true" ExchangeMetadata = "@FilePath@" DefaultValue = "" />
+							<M66 MetadataName="DocumentForm" ExchangeMetadataAsSource = "false" ExchangeMetadata = "" DefaultValue = "" />
+							<M67 MetadataName="Precedence" ExchangeMetadataAsSource = "false" ExchangeMetadata = "" DefaultValue = "" />
+							<M73 MetadataName="Relationship">
+								<!--<M12 MetadataName="EntityType" ExchangeMetadataAsSource = "false" ExchangeMetadata = "" DefaultValue = "Relationship" /> This element cannot be edited.-->
+								<M13 MetadataName="Category" ExchangeMetadataAsSource = "false" ExchangeMetadata = "" DefaultValue = "Recordkeeping Event" />
+								<M14 MetadataName="Identifier">
+									<M15 MetadataName="IdentifierString" ExchangeMetadataAsSource = "false" ExchangeMetadata = "" DefaultValue = "@NewGuid@" />
+									<M16 MetadataName="IdentifierScheme" ExchangeMetadataAsSource = "false" ExchangeMetadata = "" DefaultValue = "System Assigned" />
+								</M14>
+								<M17 MetadataName="Name">
+									<M18 MetadataName="NameWords" ExchangeMetadataAsSource = "false" ExchangeMetadata = "" DefaultValue = "Created By" />
+									<M19 MetadataName="NameScheme" ExchangeMetadataAsSource = "false" ExchangeMetadata = "" DefaultValue = "" />
+								</M17>
+								<M20 MetadataName="DateRange">
+									<M21 MetadataName="StartDate" ExchangeMetadataAsSource = "true" ExchangeMetadata = "@TimeNow@" DefaultValue = "" />
+									<M22 MetadataName="EndDate" ExchangeMetadataAsSource = "false" ExchangeMetadata = "" DefaultValue = "" />
+								</M20>
+								<M23 MetadataName="Description" ExchangeMetadataAsSource = "false" ExchangeMetadata = "" DefaultValue = "" />
+								<M74 MetadataName="RelatedEntity">
+									<M75 MetadataName="AssignedEntityID" ExchangeMetadataAsSource = "false" ExchangeMetadata = "" DefaultValue = "" /> <!--Only use AssignedEntityID or Agent entity below.-->
+									<M76 MetadataName="AssignedEntityIDScheme" ExchangeMetadataAsSource = "false" ExchangeMetadata = "" DefaultValue = "" /> <!--Only fill if use AssignedEntityID.-->
+									<M77 MetadataName="RelationshipRole" ExchangeMetadataAsSource = "false" ExchangeMetadata = "" DefaultValue = "2" />
+									<M78 MetadataName="Agent">
+										<!--<M12 MetadataName="EntityType" ExchangeMetadataAsSource = "false" ExchangeMetadata = "" DefaultValue = "Agent" /> This element cannot be edited.-->
+										<M13 MetadataName="Category" ExchangeMetadataAsSource = "false" ExchangeMetadata = "" DefaultValue = "Organisation" />
+										<M14 MetadataName="Identifier">
+											<M15 MetadataName="IdentifierString" ExchangeMetadataAsSource = "false" ExchangeMetadata = "" DefaultValue = "4939" />
+											<M16 MetadataName="IdentifierScheme" ExchangeMetadataAsSource = "false" ExchangeMetadata = "" DefaultValue = "" />
+										</M14>
+										<M17 MetadataName="Name">
+											<M18 MetadataName="NameWords" ExchangeMetadataAsSource = "false" ExchangeMetadata = "" DefaultValue = "Your Company" />
+											<M19 MetadataName="NameScheme" ExchangeMetadataAsSource = "false" ExchangeMetadata = "" DefaultValue = "" />
+										</M17>
+										<M20 MetadataName="DateRange">
+											<M21 MetadataName="StartDate" ExchangeMetadataAsSource = "true" ExchangeMetadata = "@TimeNow@" DefaultValue = "" />
+											<M22 MetadataName="EndDate" ExchangeMetadataAsSource = "false" ExchangeMetadata = "" DefaultValue = "" />
+										</M20>
+										<M23 MetadataName="Description" ExchangeMetadataAsSource = "false" ExchangeMetadata = "" DefaultValue = "" />
+										<M24 MetadataName="Jurisdiction" ExchangeMetadataAsSource = "false" ExchangeMetadata = "" DefaultValue = "AU" />
+										<M80 MetadataName="Permissions">
+											<M81 MetadataName="PermissionText" ExchangeMetadataAsSource = "false" ExchangeMetadata = "" DefaultValue = ""/>
+											<M82 MetadataName="PermissionType" ExchangeMetadataAsSource = "false" ExchangeMetadata = "" DefaultValue = ""/>
+										</M80>
+										<M83 MetadataName="Contact">
+											<M84 MetadataName="ContactDetails" ExchangeMetadataAsSource = "false" ExchangeMetadata = "" DefaultValue = "" />
+											<M85 MetadataName="ContactType" ExchangeMetadataAsSource = "false" ExchangeMetadata = "" DefaultValue = "" />
+										</M83>
+										<M79 MetadataName="Position" ExchangeMetadataAsSource = "false" ExchangeMetadata = "" DefaultValue = "" />
+										<M33 MetadataName="Language" ExchangeMetadataAsSource = "false" ExchangeMetadata = "" DefaultValue = "en-AU" />
+									</M78>
+								</M74>
+								<M86 MetadataName="ChangeHistory">
+									<M87 MetadataName="PropertyName" ExchangeMetadataAsSource = "false" ExchangeMetadata = "" DefaultValue = "" />
+									<M88 MetadataName="PriorValue" ExchangeMetadataAsSource = "false" ExchangeMetadata = "" DefaultValue = "" />
+									<M89 MetadataName="RelationshipID" ExchangeMetadataAsSource = "false" ExchangeMetadata = "" DefaultValue = "" />
+								</M86>
+							</M73>
+						</M11>
+					</M90>
+				</M10>
+			</M7>
+			<M68 MetadataName = "InformationPiece">
+				<M69 MetadataName= "Label" ExchangeMetadataAsSource = "true" ExchangeMetadata = "@FilePath@" DefaultValue = "" />
+				<M70 MetadataName= "ContentFile">
+					<!--<M71 MetadataName= "PathName" ExchangeMetadataAsSource = "false" ExchangeMetadata = "" DefaultValue = "" /> This element cannot be edited.-->
+					<!--<M72 MetadataName= "HashValue" ExchangeMetadataAsSource = "true" ExchangeMetadata = "@FileContent@" DefaultValue = "" /> This element cannot be edited.-->
+				</M70>
+			</M68>
+		</M4>
+	</M1>
+</EXOVEOContentXML>

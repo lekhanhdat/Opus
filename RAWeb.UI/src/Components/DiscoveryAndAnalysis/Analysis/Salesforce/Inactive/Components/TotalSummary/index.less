@@ -1,0 +1,36 @@
+.reco-sf-total-summary {
+    width: 100%;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+  
+    .title {
+      font: bold 14px "Open Sans", sans-serif;
+      color: #323e4d;
+    }
+  
+    .summary-section {
+      display: flex;
+      flex-direction: column;
+      row-gap: 8px;
+  
+      .label {
+        font: 600 14px "Open Sans", sans-serif;
+        color: #323e4d;
+      }
+    
+      .cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(0, 1fr));;
+        column-gap: 16px;
+    
+        & > div {
+            height: 84px;
+        }
+      }
+    }
+  }
+  

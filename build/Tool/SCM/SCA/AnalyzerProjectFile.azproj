@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+<Project xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <GlobalConfig IsUpdate="true" CodePath="${workspace}\SourceCode" BuildXmlPath="${workspace}\SourceCode\build\Build.xml" BuildTargets="MainDeploy" PropertySetting="BuildType=Release;BuildTarget=Rebuild;Platform=Any CPU" ReportPath="${workspace}\Reports" />
+  <DatabaseSettingsInfo IsSharePointAPI="false" IsNetwork="true">
+    <DatabaseServer Value="scmdb.avepoint.net" />
+    <Failover Value="" />
+    <DatabaseName Value="PackagingData" />
+    <Username Value="sa" />
+    <Password Value="SLfEzz1e6k8IB8NLjQPQpg==" />
+  </DatabaseSettingsInfo>
+  <BuildConfig IsCheck="true" WebURL="" ListTitle="" Password="" User="" CamlQuery="" FileNameColumn="" PlatformColumn="" SqlQuery="select id, column1, REPLACE(cast(column11 AS varchar(8000)),'x86(C#)','x86 (C#)') &#xD;&#xA;from AllData &#xD;&#xA;where list_id='239'&#xD;&#xA;and is_current=1 ">
+    <WhiteList>
+      <ExceptItem Value="*Test.csproj" />
+      <ExceptItem Value="RATimerWorkerRole.csproj" />
+      <ExceptItem Value="RADB.csproj" />
+      <ExceptItem Value="RAScheduleJob.csproj" />
+      <ExceptItem Value="RAScheduleJobWorkerRole.csproj" />
+      <ExceptItem Value="References.csproj" />
+    </WhiteList>
+    <MultiPlatformList />
+  </BuildConfig>
+  <ReferenceFilesSettings IsCheck="true" WebURL="" ListTitle="" Password="" User="" CamlQuery="" FileNameColumn="" GACWebURL="" GACListTitle="" GACFileNameColumn="" SqlQuery="-- 3rd List&#xD;&#xA;select column1&#xD;&#xA;from AllData&#xD;&#xA;where list_id = '238'&#xD;&#xA;and is_current = 1&#xD;&#xA;and column23 like 'Approved'&#xD;&#xA;&#xD;&#xA;-- Components&#xD;&#xA;union all&#xD;&#xA;select column1&#xD;&#xA;from AllData&#xD;&#xA;where list_id = '239'&#xD;&#xA;and is_current = 1&#xD;&#xA;and column26 not like 'No'&#xD;&#xA;&#xD;&#xA;union all&#xD;&#xA;-- Third Bank&#xD;&#xA;select column1&#xD;&#xA;from AllData&#xD;&#xA;where list_id = '64'&#xD;&#xA;and is_current = 1&#xD;&#xA;">
+    <WhiteList>
+      <ExceptItem Value="*Test.csproj" />
+    </WhiteList>
+  </ReferenceFilesSettings>
+  <ProjectInSolution IsCheck="true">
+    <WhiteList>
+      <ExceptItem Value="*Test.csproj" />
+    </WhiteList>
+  </ProjectInSolution>
+  <ProjectSettings IsCheck="true">
+    <DebugType IsCheck="true" CheckValue="pdbonly" />
+    <Optimize IsCheck="true" CheckValue="true" />
+    <OutputPath IsCheck="true">
+      <OutputList>
+        <PathItem Output="${workspace}\SourceCode" />
+      </OutputList>
+    </OutputPath>
+    <WhiteList />
+  </ProjectSettings>
+  <ThirdDllReferences IsCheck="true">
+    <CheckItems>
+      <CheckItem Value="${workspace}\SourceCode">
+        <CheckList>
+          <ForCheck Value="${workspace}\SourceCode\DocaveReference" />
+          <ForCheck Value="${workspace}\SourceCode\packages" />
+        </CheckList>
+      </CheckItem>
+    </CheckItems>
+    <WhiteList />
+    <BlackList />
+  </ThirdDllReferences>
+  <CheckUnitTest IsCheck="false">
+    <SearchCondition />
+    <WhiteList />
+  </CheckUnitTest>
+  <FrameworkVersion IsCheck="true" FrameworkVersionUpperLimit="4.6.1">
+    <WhiteList />
+  </FrameworkVersion>
+  <MessyCode IsCheck="true" CheckFolder="${workspace}\SourceCode" ThreadCount="4">
+    <CheckFileTypeItems>
+      <CheckFileTypeItem FileType="*.cs" FilterNote="Yes" />
+      <CheckFileTypeItem FileType="*.h" FilterNote="Yes" />
+      <CheckFileTypeItem FileType="*.cpp" FilterNote="Yes" />
+      <CheckFileTypeItem FileType="*.xaml" FilterNote="Yes" />
+      <CheckFileTypeItem FileType="*.svc" FilterNote="Yes" />
+      <CheckFileTypeItem FileType="*.sql" FilterNote="No" />
+      <CheckFileTypeItem FileType="*.config" FilterNote="No" />
+      <CheckFileTypeItem FileType="*.xml" FilterNote="No" />
+      <CheckFileTypeItem FileType="*.asax" FilterNote="No" />
+      <CheckFileTypeItem FileType="*.bat" FilterNote="No" />
+      <CheckFileTypeItem FileType="*.cshtml" FilterNote="No" />
+      <CheckFileTypeItem FileType="*.manifest" FilterNote="No" />
+    </CheckFileTypeItems>
+    <WhiteList>
+      <ExceptItem Value="\build\" />
+      <ExceptItem Value="\DocAveReference\" />
+    </WhiteList>
+  </MessyCode>
+</Project>

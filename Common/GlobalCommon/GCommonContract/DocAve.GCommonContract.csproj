@@ -1,0 +1,125 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <OutputType>Library</OutputType>
+    <RootNamespace>AvePoint.GCommon.Contract</RootNamespace>
+    <AssemblyName>CommonContract</AssemblyName>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <GenerateTargetFrameworkAttribute>false</GenerateTargetFrameworkAttribute>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>..\..\..\bin\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <OutputPath>..\..\..\bin\Release\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+	<PropertyGroup>
+		<EnableUnsafeBinaryFormatterSerialization>true</EnableUnsafeBinaryFormatterSerialization>
+	</PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>..\..\..\DocaveReference\DocAveStandard.snk</AssemblyOriginatorKeyFile>
+    <BaseOutputPath>bin\</BaseOutputPath>
+    <BaseIntermediateOutputPath>obj\</BaseIntermediateOutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="..\..\..\DocaveReference\DocAveStandard.snk">
+      <Link>DocAveStandard.snk</Link>
+    </None>
+    <None Update="ServiceVersion.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ErrorCode\" />
+    <Folder Include="ReportCenter\UsageReport\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="AccountManager\Object\AccountStatusDto.cs" />
+    <Compile Remove="Agent\SharePointBrowser\Object\UrlParserContract.cs" />
+    <Compile Remove="AveModuleContract\AgentTypeStructure.cs" />
+    <Compile Remove="AveModuleContract\AveModuleContract.cs" />
+    <Compile Remove="CentralAdmin\Object\Utility\MergeHandlerAttribute.cs" />
+    <Compile Remove="Common\Attributes\AveActionType.cs" />
+    <Compile Remove="Common\Attributes\AveMoudle.cs" />
+    <Compile Remove="Common\Attributes\AveMoudleEnum.cs" />
+    <Compile Remove="Common\Attributes\AveObjectControl.cs" />
+    <Compile Remove="Common\Attributes\Example.cs" />
+    <Compile Remove="Compliance\eDiscovery\Object\EDHoldJob.cs" />
+    <Compile Remove="Compliance\eDiscovery\Object\EDRealTimeJob.cs" />
+    <Compile Remove="Compliance\eDiscovery\Object\EDSyncJob.cs" />
+    <Compile Remove="Compliance\eDiscovery\Object\HoldItemInfo.cs" />
+    <Compile Remove="Compliance\eDiscovery\Object\HoldMessage.cs" />
+    <Compile Remove="Compliance\eDiscovery\Object\HoldSyncMessage.cs" />
+    <Compile Remove="Compliance\eDiscovery\Service\IAHoldService.cs" />
+    <Compile Remove="DataManager\IMJobPruningService.cs" />
+    <Compile Remove="DataManager\Object\JobPruningRuleDto.cs" />
+    <Compile Remove="DataManager\Object\JobPruningScheduleDto.cs" />
+    <Compile Remove="ExchangeOnline\ExchangeOnlineBackup\IMExchangeOnlineBackupFilterService.cs" />
+    <Compile Remove="ExchangeOnline\ExchangeOnlineBackup\IMExchangeOnlineBackupServiceForGui.cs" />
+    <Compile Remove="GranularRestore\Object\BackupRestoreWorkflow.cs" />
+    <Compile Remove="Media\WcfService\PR\IMMPlatformCheckDataService.cs" />
+    <Compile Remove="PlatformRecovery\Object\SMSPPRBackupInfoDto.cs" />
+    <Compile Remove="ReportCenter\Object\AgentScope.cs" />
+    <Compile Remove="ReportCenter\Object\DowloadRankingChartConfig.cs" />
+    <Compile Remove="ReportCenter\Object\ExportUsingReportingSercviceMessage.cs" />
+    <Compile Remove="ReportCenter\Object\FarmExplorerCollectionDefinition.cs" />
+    <Compile Remove="ReportCenter\Object\HostScope.cs" />
+    <Compile Remove="ReportCenter\Object\LassAccessTimeCollectorDefinition.cs" />
+    <Compile Remove="ReportCenter\Object\RCJobDetailCommentConstants.cs" />
+    <Compile Remove="ReportCenter\Object\ReportServiceEndPointInfo.cs" />
+    <Compile Remove="ReportCenter\Object\RuleFilterScope.cs" />
+    <Compile Remove="ReportCenter\Object\SPTreeScope.cs" />
+    <Compile Remove="ReportCenter\Object\SPUserScope.cs" />
+    <Compile Remove="Server\Common\IDNameTypeContract.cs" />
+    <Compile Remove="Server\Common\Monitor\Action\GetDetailAction.cs" />
+    <Compile Remove="Server\Common\Monitor\Action\GetRibbonAction.cs" />
+    <Compile Remove="Server\Common\Monitor\Action\GetViewAction.cs" />
+    <Compile Remove="Server\Common\Monitor\Action\IMonitorAction.cs" />
+    <Compile Remove="Server\Common\Monitor\Action\SearchJobAction.cs" />
+    <Compile Remove="Server\Common\Monitor\Command\DeleteJobCommand.cs" />
+    <Compile Remove="Server\Common\Monitor\Command\IMonitorCommand.cs" />
+    <Compile Remove="Server\Common\Schedule\Object\ScheduleDto.cs" />
+    <Compile Remove="Server\ControlPanel\IAgentAspect.cs" />
+    <Compile Remove="Server\ControlPanel\Object\UserDto.cs" />
+    <Compile Remove="Server\ControlPanel\TemplateMapping\Object\TemplateMappingDto.cs" />
+    <Compile Remove="Server\ControlPanel\UpdateManager\IMPatchDownloadService.cs" />
+    <Compile Remove="Server\ControlPanel\UpdateManager\IMUpdateManagerService.cs" />
+    <Compile Remove="Server\GranularRestore\Object\MigrationRestorePlanDto.cs" />
+    <Compile Remove="Server\Login\IMLoginAuthenticateService.cs" />
+    <Compile Remove="Server\Security\Objects\UserInfoDto.cs" />
+    <Compile Remove="Server\SingleSignOn\SingleSignOnTypes.cs" />
+    <Compile Remove="StorageOptimization\Object\DeviceCacheContract.cs" />
+    <Compile Remove="StorageOptimization\Object\ProviderConfigContract.cs" />
+    <Compile Remove="Storage\Entity\MediaDataDto.cs" />
+    <Compile Remove="Storage\IMAcceptMediaData.cs" />
+    <Compile Remove="Tree\Object\MigFSTreeMessage.cs" />
+    <Compile Remove="Tree\Object\MigFSTreeNodeDto.cs" />
+    <Compile Remove="UsageCalculation\Object\UsageCalculationConstants.cs" />
+    <Compile Remove="Wcf\CoreMessage.cs" />
+    <Compile Remove="Wcf\CoreServiceEndpointInfo.cs" />
+    <Compile Remove="Wcf\CoreServiceEndPointType.cs" />
+    <Compile Remove="Wcf\CoreServiceInvocationContext.cs" />
+    <Compile Remove="Wcf\ICoreService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="log4net" Version="3.3.1" />
+    <PackageReference Include="Microsoft.IdentityModel.JsonWebTokens" Version="8.15.0" />
+    <PackageReference Include="System.Runtime.Serialization.Formatters" Version="10.0.2" />
+    <PackageReference Include="System.Security.Cryptography.Xml" Version="10.0.10" />
+    <PackageReference Include="System.ServiceModel.Duplex" Version="6.0.0" />
+    <PackageReference Include="System.ServiceModel.NetTcp" Version="8.1.2" />
+    <PackageReference Include="System.ServiceModel.Federation" Version="8.1.2" />
+    <PackageReference Include="Microsoft.DotNet.UpgradeAssistant.Extensions.Default.Analyzers" Version="0.4.421302">
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="System.Text.Json" Version="10.0.10" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\RAApi.Contract\RAApi.Contract.csproj" />
+    <ProjectReference Include="..\..\..\RACommon.Global\RACommon.Global.csproj" />
+  </ItemGroup>
+</Project>

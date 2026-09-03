@@ -1,0 +1,1726 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9380E15E-5F69-4F2C-889F-E04756F6CCCA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AvePoint.Wrapper.Common</RootNamespace>
+    <AssemblyName>AgentCommonWrapperCommon</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\bin\Agent\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;PerformanceLog</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <WarningsAsErrors>0168</WarningsAsErrors>
+    <CodeAnalysisRuleSet>RolesSet\WrapperRuleSet.ruleset</CodeAnalysisRuleSet>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\bin\Agent\Release\</OutputPath>
+    <DefineConstants>TRACE;CODE_ANALYSIS;PerformanceLog</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <WarningsAsErrors>0168</WarningsAsErrors>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>DocAveStandard.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <WarningsAsErrors>0168</WarningsAsErrors>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>RolesSet\WrapperRuleSet.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE;CODE_ANALYSIS</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>none</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <WarningsAsErrors>0168</WarningsAsErrors>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'DebugWithCodeAnaylysis|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\DebugWithCodeAnaylysis\</OutputPath>
+    <DefineConstants>CODE_ANALYSIS;DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <WarningsAsErrors>0168</WarningsAsErrors>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+    <CodeAnalysisLogFile>..\..\..\bin\Debug\AgentCommonWrapperCommon.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>RolesSet\WrapperRuleSet.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'DebugWithCodeAnaylysis|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\DebugWithCodeAnaylysis\</OutputPath>
+    <DefineConstants>CODE_ANALYSIS;DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <WarningsAsErrors>0168</WarningsAsErrors>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+    <CodeAnalysisLogFile>bin\x64\Debug\AgentCommonWrapperCommon.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>RolesSet\WrapperRuleSet.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'DebugWithoutUnitTest|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\DebugWithoutUnitTest\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <WarningsAsErrors>0168</WarningsAsErrors>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>RolesSet\WrapperRuleSet.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'DebugWithoutUnitTest|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\DebugWithoutUnitTest\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <WarningsAsErrors>0168</WarningsAsErrors>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>RolesSet\WrapperRuleSet.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="HtmlAgilityPack, Version=1.12.4.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Packages\HtmlAgilityPack.1.12.4\lib\Net45\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="Ionic.Zip, Version=1.9.1.5, Culture=neutral, PublicKeyToken=edbe51ad942a3f5c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Hybrid\AutoInstallationCommon\ThirdDlls\Ionic.Zip.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Azure.ActiveDirectory.GraphClient, Version=2.1.10.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Packages\Microsoft.Azure.ActiveDirectory.GraphClient.2.1.1\lib\portable-net4+sl5+win+wpa+wp8\Microsoft.Azure.ActiveDirectory.GraphClient.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Data.Edm, Version=5.8.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Packages\Microsoft.Data.Edm.5.8.4\lib\net40\Microsoft.Data.Edm.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.OData, Version=5.8.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Packages\Microsoft.Data.OData.5.8.4\lib\net40\Microsoft.Data.OData.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.Services.Client, Version=5.8.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Packages\Microsoft.Data.Services.Client.5.8.4\lib\net40\Microsoft.Data.Services.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Identity.Client, Version=4.21.1.0, Culture=neutral, PublicKeyToken=0a613f4dd989e8ae, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Packages\Microsoft.SharePointOnline.CSOM.16.1.26712.12000\lib\net45\Microsoft.Identity.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Clients.ActiveDirectory, Version=5.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Packages\Microsoft.IdentityModel.Clients.ActiveDirectory.5.3.0\lib\net45\Microsoft.IdentityModel.Clients.ActiveDirectory.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Client.Policy, Version=16.1.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Packages\Microsoft.SharePointOnline.CSOM.16.1.26712.12000\lib\net45\Microsoft.Office.Client.Policy.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Client.TranslationServices, Version=16.1.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Packages\Microsoft.SharePointOnline.CSOM.16.1.26712.12000\lib\net45\Microsoft.Office.Client.TranslationServices.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.SharePoint.Tools, Version=16.1.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Packages\Microsoft.SharePointOnline.CSOM.16.1.26712.12000\lib\net45\Microsoft.Office.SharePoint.Tools.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Online.SharePoint.Client.Tenant, Version=16.1.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Packages\Microsoft.SharePointOnline.CSOM.16.1.26712.12000\lib\net45\Microsoft.Online.SharePoint.Client.Tenant.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ProjectServer.Client, Version=16.1.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Packages\Microsoft.SharePointOnline.CSOM.16.1.26712.12000\lib\net45\Microsoft.ProjectServer.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Client, Version=16.1.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Packages\Microsoft.SharePointOnline.CSOM.16.1.26712.12000\lib\net45\Microsoft.SharePoint.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Client.DocumentManagement, Version=16.1.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Packages\Microsoft.SharePointOnline.CSOM.16.1.26712.12000\lib\net45\Microsoft.SharePoint.Client.DocumentManagement.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Client.Publishing, Version=16.1.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Packages\Microsoft.SharePointOnline.CSOM.16.1.26712.12000\lib\net45\Microsoft.SharePoint.Client.Publishing.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Client.Runtime, Version=16.1.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Packages\Microsoft.SharePointOnline.CSOM.16.1.26712.12000\lib\net45\Microsoft.SharePoint.Client.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Client.Search, Version=16.1.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Packages\Microsoft.SharePointOnline.CSOM.16.1.26712.12000\lib\net45\Microsoft.SharePoint.Client.Search.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Client.Search.Applications, Version=16.1.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Packages\Microsoft.SharePointOnline.CSOM.16.1.26712.12000\lib\net45\Microsoft.SharePoint.Client.Search.Applications.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Client.Taxonomy, Version=16.1.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Packages\Microsoft.SharePointOnline.CSOM.16.1.26712.12000\lib\net45\Microsoft.SharePoint.Client.Taxonomy.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Client.UserProfiles, Version=16.1.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Packages\Microsoft.SharePointOnline.CSOM.16.1.26712.12000\lib\net45\Microsoft.SharePoint.Client.UserProfiles.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Client.WorkflowServices, Version=16.1.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Packages\Microsoft.SharePointOnline.CSOM.16.1.26712.12000\lib\net45\Microsoft.SharePoint.Client.WorkflowServices.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Packages\Newtonsoft.Json.13.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Office365Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=fffb45e56dd478e3, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Packages\Office365Api.2.1.1\lib\net461\Office365Api.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.DirectoryServices.AccountManagement" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IdentityModel" />
+    <Reference Include="System.IO, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Packages\System.IO.4.3.0\lib\net462\System.IO.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.IO.Compression, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Packages\System.IO.Compression.4.3.0\lib\net46\System.IO.Compression.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http, Version=4.1.1.3, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Packages\System.Net.Http.4.3.4\lib\net46\System.Net.Http.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime, Version=4.1.1.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Packages\System.Runtime.4.3.1\lib\net462\System.Runtime.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Packages\System.Runtime.CompilerServices.Unsafe.4.5.3\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security.Cryptography.Algorithms, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Packages\System.Security.Cryptography.Algorithms.4.3.1\lib\net463\System.Security.Cryptography.Algorithms.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Encoding, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Packages\System.Security.Cryptography.Encoding.4.3.0\lib\net46\System.Security.Cryptography.Encoding.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Primitives, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Packages\System.Security.Cryptography.Primitives.4.3.0\lib\net46\System.Security.Cryptography.Primitives.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.X509Certificates, Version=4.1.1.2, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Packages\System.Security.Cryptography.X509Certificates.4.3.2\lib\net461\System.Security.Cryptography.X509Certificates.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Spatial, Version=5.8.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Packages\System.Spatial.5.8.4\lib\net40\System.Spatial.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Packages\System.Threading.Tasks.Extensions.4.5.2\lib\netstandard2.0\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AveAccountInfo.cs" />
+    <Compile Include="AveBackupOption.cs" />
+    <Compile Include="AveBackupTree.cs" />
+    <Compile Include="AveCamlQuery.cs" />
+    <Compile Include="AveCollections\AveDictionary.cs" />
+    <Compile Include="AveCollections\IAveDictionary.cs" />
+    <Compile Include="AveCollections\ThreadLocker.cs" />
+    <Compile Include="AveCommonContext.cs" />
+    <Compile Include="AveDestTreePath.cs" />
+    <Compile Include="AveMappingManager.cs" />
+    <Compile Include="AveRequestAudit.cs" />
+    <Compile Include="AveRestorableProperty.cs" />
+    <Compile Include="AveServiceContextInfo.cs" />
+    <Compile Include="AveSPDocumentSet.cs" />
+    <Compile Include="AveSPUtility.cs" />
+    <Compile Include="AveStreamStatistics.cs" />
+    <Compile Include="AveUserAccountInfo.cs" />
+    <Compile Include="AveUserBackupOption.cs" />
+    <Compile Include="Cabinet\BasicExtractStreamContext.cs" />
+    <Compile Include="Cabinet\CabinetCompressionLevel.cs" />
+    <Compile Include="Cabinet\CabinetCreator.cs" />
+    <Compile Include="Cabinet\CabinetEngine.cs" />
+    <Compile Include="Cabinet\CabinetException.cs" />
+    <Compile Include="Cabinet\CabinetExtractor.cs" />
+    <Compile Include="Cabinet\CabinetFileInfo.cs" />
+    <Compile Include="Cabinet\CabinetFileStreamContext.cs" />
+    <Compile Include="Cabinet\CabinetInfo.cs" />
+    <Compile Include="Cabinet\CabinetProgressEventArgs.cs" />
+    <Compile Include="Cabinet\CabinetProgressType.cs" />
+    <Compile Include="Cabinet\DuplicateStream.cs" />
+    <Compile Include="Cabinet\HandleManager.cs" />
+    <Compile Include="Cabinet\ICabinetCreateStreamContext.cs" />
+    <Compile Include="Cabinet\ICabinetExtractStreamContext.cs" />
+    <Compile Include="Cabinet\InfoPathLinkReplace.cs" />
+    <Compile Include="Cabinet\NativeMethods.cs" />
+    <Compile Include="Cabinet\OffsetStream.cs" />
+    <Compile Include="Cache.cs" />
+    <Compile Include="Client\AveClientRequestType.cs" />
+    <Compile Include="Client\IAveHttpWebRequestCommon.cs" />
+    <Compile Include="Client\IAveRequest.cs" />
+    <Compile Include="Client\WorkflowStartOptionCache.cs" />
+    <Compile Include="Common.Constants\Ave2010ListFlags.cs" />
+    <Compile Include="Common.Constants\Ave2010SiteFlags.cs" />
+    <Compile Include="Common.Constants\AveAccessMemberType.cs" />
+    <Compile Include="Common.Constants\AveBaseType.cs" />
+    <Compile Include="Common.Constants\AveCommunitiesConstants.cs" />
+    <Compile Include="Common.Constants\AveConstants.cs" />
+    <Compile Include="Common.Constants\AveContextKind.cs" />
+    <Compile Include="Common.Constants\AveCommonEnum.cs" />
+    <Compile Include="Common.Constants\AveDefaultItemOpen.cs" />
+    <Compile Include="Common.Constants\AveDocFlags.cs" />
+    <Compile Include="Common.Constants\AveFieldNameCollection.cs" />
+    <Compile Include="Common.Constants\AveProjectConstants.cs" />
+    <Compile Include="Common.Constants\AveUserResourceConstants.cs" />
+    <Compile Include="Common.ObjectModel\ClientRequest\AveClientVersion.cs" />
+    <Compile Include="Common.ObjectModel\ClientRequest\IAveClientRequest.cs" />
+    <Compile Include="Common.ObjectModel\Comments\AveCommentInfo.cs" />
+    <Compile Include="Common.ObjectModel\Comments\IAveSPCommentStorage.cs" />
+    <Compile Include="Common.ObjectModel\Item\AveItemComplianceTagInfo.cs" />
+    <Compile Include="Common.ObjectModel\Item\IAveListItemComplianceInfo.cs" />
+    <Compile Include="Common.ObjectModel\Item\ModernData\IDataProcessor.cs" />
+    <Compile Include="Common.ObjectModel\Item\ModernData\ISharePointDataProcessor.cs" />
+    <Compile Include="Common.ObjectModel\Item\ModernData\PostActionContract.cs" />
+    <Compile Include="Common.ObjectModel\List\AveListExperience.cs" />
+    <Compile Include="Common.ObjectModel\List\AveComplianceTagInfo.cs" />
+    <Compile Include="Common.ObjectModel\List\IAveComplianceTag.cs" />
+    <Compile Include="Common.ObjectModel\Project\AveProjectCommonInfo.cs" />
+    <Compile Include="Common.ObjectModel\Project\AveProjectConfig.cs" />
+    <Compile Include="Common.ObjectModel\Project\AveProjectInfo.cs" />
+    <Compile Include="Common.ObjectModel\Project\EnterpriseProjectTypes\AveProjectDetailPageInfo.cs" />
+    <Compile Include="Common.ObjectModel\Project\EnterpriseProjectTypes\AveProjectDetailPageType.cs" />
+    <Compile Include="Common.ObjectModel\Project\EnterpriseProjectTypes\AveProjectEnterpriseProjectTypeInfo.cs" />
+    <Compile Include="Common.ObjectModel\Project\EnterpriseProjectTypes\IAveProjectDetailPage.cs" />
+    <Compile Include="Common.ObjectModel\Project\EnterpriseProjectTypes\IAveProjectDetailPageCollection.cs" />
+    <Compile Include="Common.ObjectModel\Project\EnterpriseProjectTypes\IAveProjectEnterpriseProjectType.cs" />
+    <Compile Include="Common.ObjectModel\Project\EnterpriseProjectTypes\IAveProjectEnterpriseProjectTypeCollection.cs" />
+    <Compile Include="Common.ObjectModel\Project\EnterpriseResource\AveBookingType.cs" />
+    <Compile Include="Common.ObjectModel\Project\EnterpriseResource\AveProjectEnterpriseResourceInfo.cs" />
+    <Compile Include="Common.ObjectModel\Project\EnterpriseResource\AveProjectStatusAssignmentInfo.cs" />
+    <Compile Include="Common.ObjectModel\Project\EnterpriseResource\IAveProjectEnterpriseResource.cs" />
+    <Compile Include="Common.ObjectModel\Project\EnterpriseResource\IAveProjectEnterpriseResourceCollection.cs" />
+    <Compile Include="Common.ObjectModel\Project\EnterpriseResource\IAveProjectStatusAssignment.cs" />
+    <Compile Include="Common.ObjectModel\Project\EnterpriseResource\IAveProjectStatusAssignmentCollection.cs" />
+    <Compile Include="Common.ObjectModel\Project\IAveProject.cs" />
+    <Compile Include="Common.ObjectModel\Project\IAveProjectCollection.cs" />
+    <Compile Include="Common.ObjectModel\Project\IAveProjectSerializer.cs" />
+    <Compile Include="Common.ObjectModel\Project\IAveProjectServer.cs" />
+    <Compile Include="Common.ObjectModel\Project\ProjectCalendarException\AveCalendarRecurrenceWeek.cs" />
+    <Compile Include="Common.ObjectModel\Project\ProjectCalendarException\AveProjectCalendarExceptionInfo.cs" />
+    <Compile Include="Common.ObjectModel\Project\ProjectCalendarException\IAveProjectCalendarException.cs" />
+    <Compile Include="Common.ObjectModel\Project\ProjectCalendarException\IAveProjectCalendarExceptionCollection.cs" />
+    <Compile Include="Common.ObjectModel\Project\ProjectCalendar\AveProjectCalendarInfo.cs" />
+    <Compile Include="Common.ObjectModel\Project\ProjectCalendar\IAveProjectCalendar.cs" />
+    <Compile Include="Common.ObjectModel\Project\ProjectCalendar\IAveProjectCalendarCollection.cs" />
+    <Compile Include="Common.ObjectModel\Project\ProjectCustomField\AveProjectCustomFieldInfo.cs" />
+    <Compile Include="Common.ObjectModel\Project\ProjectCustomField\AveProjectEntityTypeInfo.cs" />
+    <Compile Include="Common.ObjectModel\Project\ProjectCustomField\IAveProjectCustomField.cs" />
+    <Compile Include="Common.ObjectModel\Project\ProjectCustomField\IAveProjectCustomFieldCollection.cs" />
+    <Compile Include="Common.ObjectModel\Project\ProjectCustomField\IAveProjectEntityType.cs" />
+    <Compile Include="Common.ObjectModel\Project\ProjectLookupTable\AveProjectCustomFieldType.cs" />
+    <Compile Include="Common.ObjectModel\Project\ProjectLookupTable\AveProjectLookupEntryInfo.cs" />
+    <Compile Include="Common.ObjectModel\Project\ProjectLookupTable\AveProjectLookupMaskInfo.cs" />
+    <Compile Include="Common.ObjectModel\Project\ProjectLookupTable\AveProjectLookupTableInfo.cs" />
+    <Compile Include="Common.ObjectModel\Project\ProjectLookupTable\IAveProjectLookupEntry.cs" />
+    <Compile Include="Common.ObjectModel\Project\ProjectLookupTable\IAveProjectLookupEntryCollection.cs" />
+    <Compile Include="Common.ObjectModel\Project\ProjectLookupTable\IAveProjectLookupMask.cs" />
+    <Compile Include="Common.ObjectModel\Project\ProjectLookupTable\IAveProjectLookupTable.cs" />
+    <Compile Include="Common.ObjectModel\Project\ProjectLookupTable\IAveProjectLookupTableCollection.cs" />
+    <Compile Include="Common.ObjectModel\Project\ProjectPhase\AveProjectPhaseInfo.cs" />
+    <Compile Include="Common.ObjectModel\Project\ProjectPhase\IAveProjectPhase.cs" />
+    <Compile Include="Common.ObjectModel\Project\ProjectPhase\IAveProjectPhaseCollection.cs" />
+    <Compile Include="Common.ObjectModel\Project\ProjectStage\AveProjectStageCustomFieldInfo.cs" />
+    <Compile Include="Common.ObjectModel\Project\ProjectStage\AveProjectStageDetailPageInfo.cs" />
+    <Compile Include="Common.ObjectModel\Project\ProjectStage\AveProjectStageInfo.cs" />
+    <Compile Include="Common.ObjectModel\Project\ProjectStage\IAveProjectStage.cs" />
+    <Compile Include="Common.ObjectModel\Project\ProjectStage\IAveProjectStageCollection.cs" />
+    <Compile Include="Common.ObjectModel\Project\ProjectStage\IAveProjectStageCustomField.cs" />
+    <Compile Include="Common.ObjectModel\Project\ProjectStage\IAveProjectStageCustomFieldCollection.cs" />
+    <Compile Include="Common.ObjectModel\Project\ProjectStage\IAveProjectStageDetailPage.cs" />
+    <Compile Include="Common.ObjectModel\Project\ProjectStage\IAveProjectStageDetailPageCollection.cs" />
+    <Compile Include="Common.ObjectModel\Project\ProjectTask\AveProjectTaskInfo.cs" />
+    <Compile Include="Common.ObjectModel\Project\ProjectTask\IAveProjectTask.cs" />
+    <Compile Include="Common.ObjectModel\Project\ProjectTask\IAveProjectTaskCollection.cs" />
+    <Compile Include="Common.ObjectModel\Security\IAveUserIdInfo.cs" />
+    <Compile Include="Common.ObjectModel\Service\IAveSiteServiceHelper.cs" />
+    <Compile Include="Common.Utility\Auth\AveTokenHelper.cs" />
+    <EmbeddedResource Include="Common.Utility\NintexForm\ResponsivePlaceholderLabel.txt" />
+    <Compile Include="Exception\AutheticationException.cs" />
+    <Compile Include="Exception\AveInternalResource.cs" />
+    <Compile Include="Common.Constants\AveLocStringId13.cs" />
+    <Compile Include="Common.Constants\AveNintexFormControlType.cs" />
+    <Compile Include="Common.Constants\AveReportResource.cs" />
+    <Compile Include="Common.Constants\AveResourceScope.cs" />
+    <Compile Include="Common.Constants\AveResourceType.cs" />
+    <Compile Include="Common.Constants\AveSPErrorCode.cs" />
+    <Compile Include="Common.Constants\AveItemFlags.cs" />
+    <Compile Include="Common.Constants\AveJobLockType.cs" />
+    <Compile Include="Common.Constants\AveListFlags.cs" />
+    <Compile Include="Common.Constants\AveListSettingFlags.cs" />
+    <Compile Include="Common.Constants\AveListTemplateType.cs" />
+    <Compile Include="Common.Constants\AveLocStringId.cs" />
+    <Compile Include="Common.Constants\AveObjectModelConstant.cs" />
+    <Compile Include="Common.Constants\AveOLocStringId.cs" />
+    <Compile Include="Common.Constants\AveProtocolAnalyzer.cs" />
+    <Compile Include="Common.Constants\AveProtocolHeader.cs" />
+    <Compile Include="Common.Constants\AveRatingsFeatureConstants.cs" />
+    <Compile Include="Common.Constants\AveRedirectFlags.cs" />
+    <Compile Include="Common.Constants\AveRequestKind.cs" />
+    <Compile Include="Common.Constants\AveWebASPXPageIndexMode.cs" />
+    <Compile Include="Common.Constants\AveWebFlags.cs" />
+    <Compile Include="Common.Constants\AveWorkflowConstants.cs" />
+    <Compile Include="Common.Constants\AveWrapperConstants.cs" />
+    <Compile Include="Common.Constants\AveFeatureDefinitions.cs" />
+    <Compile Include="Common.Constants\SerializationConstants.cs" />
+    <Compile Include="Common.DynamicProxy\AveMetaDataFactory.cs" />
+    <Compile Include="Common.DynamicProxy\AveProxyFactory.cs" />
+    <Compile Include="Common.DynamicProxy\IAveProxyInvocationHandler.cs" />
+    <Compile Include="Common.ObjectModel\Admin\IAveAccessControlledMetadataObject.cs" />
+    <Compile Include="Common.ObjectModel\Admin\IAveAutoSerializingObject.cs" />
+    <Compile Include="Common.ObjectModel\Admin\IAveCategory.cs" />
+    <Compile Include="Common.ObjectModel\Admin\IAveCategoryCollection.cs" />
+    <Compile Include="Common.ObjectModel\Admin\IAveCategoryCollectionImpl.cs" />
+    <Compile Include="Common.ObjectModel\Admin\IAveCategoryImpl.cs" />
+    <Compile Include="Common.ObjectModel\Admin\IAveClaimTypes.cs" />
+    <Compile Include="Common.ObjectModel\Admin\IAveConfigurationDatabase.cs" />
+    <Compile Include="Common.ObjectModel\Admin\IAveCrawledProperty.cs" />
+    <Compile Include="Common.ObjectModel\Admin\IAveCrawledPropertyImpl.cs" />
+    <Compile Include="Common.ObjectModel\Admin\IAveEntity.cs" />
+    <Compile Include="Common.ObjectModel\Admin\IAveEntityCollection.cs" />
+    <Compile Include="Common.ObjectModel\Admin\IAveGlobalConfig.cs" />
+    <Compile Include="Common.ObjectModel\Admin\IAveHtmlTransformSettings.cs" />
+    <Compile Include="Common.ObjectModel\Admin\IAveIisSmtpServer.cs" />
+    <Compile Include="Common.ObjectModel\Admin\IAveIndividuallySecurableMetadataObject.cs" />
+    <Compile Include="Common.ObjectModel\Admin\IAveIrmSettings.cs" />
+    <Compile Include="Common.ObjectModel\Admin\IAveLastUpdateInfo.cs" />
+    <Compile Include="Common.ObjectModel\Admin\IAveLobSystem.cs" />
+    <Compile Include="Common.ObjectModel\Admin\IAveManagedProperty.cs" />
+    <Compile Include="Common.ObjectModel\Admin\IAveManagedPropertyImpl.cs" />
+    <Compile Include="Common.ObjectModel\Admin\IAveBDMetadataObject.cs" />
+    <Compile Include="Common.ObjectModel\Admin\IAveMethod.cs" />
+    <Compile Include="Common.ObjectModel\Admin\IAveMethodCollection.cs" />
+    <Compile Include="Common.ObjectModel\Admin\IAveMethodInstance.cs" />
+    <Compile Include="Common.ObjectModel\Admin\IAveMethodInstanceCollection.cs" />
+    <Compile Include="Common.ObjectModel\Admin\IAveOriginalIssuers.cs" />
+    <Compile Include="Common.ObjectModel\Admin\IAvePeoplePickerSearchActiveDirectoryDomain.cs" />
+    <Compile Include="Common.ObjectModel\Admin\IAvePeoplePickerSettings.cs" />
+    <Compile Include="Common.ObjectModel\Admin\IAvePersistedCustomWebTemplate.cs" />
+    <Compile Include="Common.ObjectModel\Admin\IAvePersistedCustomWebTemplateCollection.cs" />
+    <Compile Include="Common.ObjectModel\Admin\IAvePersistedFile.cs" />
+    <Compile Include="Common.ObjectModel\Admin\IAveProviderHierarchyElement.cs" />
+    <Compile Include="Common.ObjectModel\Admin\IAveProviderHierarchyNode.cs" />
+    <Compile Include="Common.ObjectModel\Admin\IAveProviderHierarchyTree.cs" />
+    <Compile Include="Common.ObjectModel\Admin\IAveSchema.cs" />
+    <Compile Include="Common.ObjectModel\Admin\IAveSchemaContext.cs" />
+    <Compile Include="Common.ObjectModel\Admin\IAveSchemaImpl.cs" />
+    <Compile Include="Common.ObjectModel\Admin\IAveSiteAdministration.cs" />
+    <Compile Include="Common.ObjectModel\Admin\IAveTrustedClaimProvider.cs" />
+    <Compile Include="Common.ObjectModel\Admin\IAveTypeDescriptor.cs" />
+    <Compile Include="Common.ObjectModel\Admin\IAveTypeDescriptorCollection.cs" />
+    <Compile Include="Common.ObjectModel\Admin\IAveUserSettingsProvider.cs" />
+    <Compile Include="Common.ObjectModel\Admin\IAveUserSettingsProviderManager.cs" />
+    <Compile Include="Common.ObjectModel\ApplicationPages\IAveContentTypePageUtil.cs" />
+    <Compile Include="Common.ObjectModel\Alert\AveAlertInfo.cs" />
+    <Compile Include="Common.ObjectModel\Audit\IAveAuditEntry.cs" />
+    <Compile Include="Common.ObjectModel\Audit\IAveAuditEntryCollection.cs" />
+    <Compile Include="Common.ObjectModel\Audit\IAveAuditQuery.cs" />
+    <Compile Include="Common.ObjectModel\AuthenticationProvider\IAveCertificateValidator.cs" />
+    <Compile Include="Common.ObjectModel\AzurePowerShell\IAveAzurePowerShellRequest.cs" />
+    <Compile Include="Common.ObjectModel\Browser\AveBrowserOption.cs" />
+    <Compile Include="Common.ObjectModel\Browser\IAveBrowserQuery.cs" />
+    <Compile Include="Common.ObjectModel\ChangeLog\IAveChangeAlert.cs" />
+    <Compile Include="Common.ObjectModel\ContentType\AveSitePolicyInfo.cs" />
+    <Compile Include="Common.ObjectModel\ChangeLog\IAveChange.cs" />
+    <Compile Include="Common.ObjectModel\ChangeLog\IAveChangeCollection.cs" />
+    <Compile Include="Common.ObjectModel\ChangeLog\IAveChangeContentType.cs" />
+    <Compile Include="Common.ObjectModel\ChangeLog\IAveChangeField.cs" />
+    <Compile Include="Common.ObjectModel\ChangeLog\IAveChangeFile.cs" />
+    <Compile Include="Common.ObjectModel\ChangeLog\IAveChangeFolder.cs" />
+    <Compile Include="Common.ObjectModel\ChangeLog\IAveChangeGroup.cs" />
+    <Compile Include="Common.ObjectModel\ChangeLog\IAveChangeItem.cs" />
+    <Compile Include="Common.ObjectModel\ChangeLog\IAveChangeList.cs" />
+    <Compile Include="Common.ObjectModel\ChangeLog\IAveChangeQuery.cs" />
+    <Compile Include="Common.ObjectModel\ChangeLog\IAveChangeSecurityPolicy.cs" />
+    <Compile Include="Common.ObjectModel\ChangeLog\IAveChangeSite.cs" />
+    <Compile Include="Common.ObjectModel\ChangeLog\IAveChangeToken.cs" />
+    <Compile Include="Common.ObjectModel\ChangeLog\IAveChangeUser.cs" />
+    <Compile Include="Common.ObjectModel\ChangeLog\IAveChangeView.cs" />
+    <Compile Include="Common.ObjectModel\ChangeLog\IAveChangeWeb.cs" />
+    <Compile Include="Common.ObjectModel\ContentDatabase\IAveDatabaseCollection.cs" />
+    <Compile Include="Common.ObjectModel\Office\UserProfile\IAveProfileLoader.cs" />
+    <Compile Include="Common.ObjectModel\Security\IAveO365Group.cs" />
+    <Compile Include="Common.ObjectModel\Security\IAveO365User.cs" />
+    <Compile Include="Common.ObjectModel\Site\AveProvisionedMigrationContainersInfo.cs" />
+    <Compile Include="Common.ObjectModel\Site\AveProvisionedMigrationQueueInfo.cs" />
+    <Compile Include="Common.ObjectModel\Site\IAveEncryptionOption.cs" />
+    <Compile Include="Common.ObjectModel\Site\IAveSiteProperties.cs" />
+    <Compile Include="Common.ObjectModel\UserCustomAction\AveUserCustomActionInfo.cs" />
+    <Compile Include="Common.ObjectModel\Discover\AveDiscoverQueryForAPI.cs" />
+    <Compile Include="Common.ObjectModel\Discover\Object\AveSiteObject.cs" />
+    <Compile Include="Common.ObjectModel\Discover\Object\EventObject.cs" />
+    <Compile Include="Common.ObjectModel\Discover\Reader\AveArchiveDiscoverReader.cs" />
+    <Compile Include="Common.ObjectModel\Discover\Reader\AveContentManagerDiscoverReader.cs" />
+    <Compile Include="Common.ObjectModel\Discover\Reader\AveDiscoverReader.cs" />
+    <Compile Include="Common.ObjectModel\Discover\Reader\AveExtenderDiscoverReader.cs" />
+    <Compile Include="Common.ObjectModel\Discover\Reader\AveItemDiscoverReader.cs" />
+    <Compile Include="Common.ObjectModel\Discover\Reader\AvePlatformRecoveryDiscoverReader.cs" />
+    <Compile Include="Common.ObjectModel\Discover\Reader\AveReplicatorDiscoverReader.cs" />
+    <Compile Include="Common.ObjectModel\Discover\DiscoverModule.cs" />
+    <Compile Include="Common.ObjectModel\Discover\Reader\IAveDiscoverReader.cs" />
+    <Compile Include="Common.ObjectModel\EventReceiver\IAveEventReceiverBase.cs" />
+    <Compile Include="Common.ObjectModel\Feature\IAveFeatureDefinitionContext.cs" />
+    <Compile Include="Common.ObjectModel\Feature\IAveFeaturePropertyCollection.cs" />
+    <Compile Include="Common.ObjectModel\Feature\IAveUserCodeFeatureDeninitionContext.cs" />
+    <Compile Include="Common.ObjectModel\Feature\IAveWebFeatureDefinitionContext .cs" />
+    <Compile Include="Common.ObjectModel\Field\IAveBusinessDataField.cs" />
+    <Compile Include="Common.ObjectModel\Field\IAveFieldGeolocation.cs" />
+    <Compile Include="Common.ObjectModel\Field\IAveFieldGeolocationValue.cs" />
+    <Compile Include="Common.ObjectModel\Field\IAveHtmlTagValue.cs" />
+    <Compile Include="Common.ObjectModel\Field\IAveLinkFieldValue.cs" />
+    <Compile Include="Common.ObjectModel\Field\IAveMediaFieldValue.cs" />
+    <Compile Include="Common.ObjectModel\Field\IAveOutcomeChoiceField.cs" />
+    <Compile Include="Common.ObjectModel\Filter\AveCustomFilter.cs" />
+    <Compile Include="Common.ObjectModel\Item\AveBasicItemInfo.cs" />
+    <Compile Include="Common.ObjectModel\Item\IAveDocumentSet.cs" />
+    <Compile Include="Common.ObjectModel\Item\IAveEnableCache.cs" />
+    <Compile Include="Common.ObjectModel\Item\IAveFileExtension.cs" />
+    <Compile Include="Common.ObjectModel\Item\IAveLink.cs" />
+    <Compile Include="Common.ObjectModel\Item\IAveLinkCollection.cs" />
+    <Compile Include="Common.ObjectModel\List\IAveInformationRightsManagementSettings.cs" />
+    <Compile Include="Common.ObjectModel\List\IAveSPListItemInfo.cs" />
+    <Compile Include="Common.ObjectModel\UserCustomAction\IAveUserCustomAction.cs" />
+    <Compile Include="Common.ObjectModel\UserCustomAction\IAveUserCustomActionCollection.cs" />
+    <Compile Include="Common.ObjectModel\Mapping\ContentType\IAveContentTypeMapping.cs" />
+    <Compile Include="Common.ObjectModel\Mapping\ContentType\IAveCustomContentTypeMappingFactory.cs" />
+    <Compile Include="Common.ObjectModel\Mapping\Feature\IAveFeatureMapping.cs" />
+    <Compile Include="Common.ObjectModel\Mapping\Field\AveCustomFieldInfoEqualityComparer.cs" />
+    <Compile Include="Common.ObjectModel\Mapping\Field\IAveCustomFieldMappingFactory.cs" />
+    <Compile Include="Common.ObjectModel\Mapping\Field\IAveFieldMappingConditionInfo.cs" />
+    <Compile Include="Common.ObjectModel\Mapping\List\IAveCustomListMapping.cs" />
+    <Compile Include="Common.ObjectModel\Mapping\List\IAveListMapping.cs" />
+    <Compile Include="Common.ObjectModel\Mapping\List\IAveRestoreListMapping.cs" />
+    <Compile Include="Common.ObjectModel\Mapping\Template\IAveCustomTemplateMappingFactory.cs" />
+    <Compile Include="Common.ObjectModel\Mapping\UserAndDomain\IAveCustomUserAndDomainMappingFactory.cs" />
+    <Compile Include="Common.ObjectModel\Meeting\IAveMeeting.cs" />
+    <Compile Include="Common.ObjectModel\Deployment\IAveDeploymentObject.cs" />
+    <Compile Include="Common.ObjectModel\Deployment\IAveDeploymentSettings.cs" />
+    <Compile Include="Common.ObjectModel\Deployment\IAveExport.cs" />
+    <Compile Include="Common.ObjectModel\Deployment\IAveExportObject.cs" />
+    <Compile Include="Common.ObjectModel\Deployment\IAveExportObjectCollection.cs" />
+    <Compile Include="Common.ObjectModel\Deployment\IAveExportSettings.cs" />
+    <Compile Include="Common.ObjectModel\Discover\AveDiscoverConnection.cs" />
+    <Compile Include="Common.ObjectModel\Discover\AveDiscoverExtraItemBaseInfo.cs" />
+    <Compile Include="Common.ObjectModel\Discover\AveDiscoverQueryString.cs" />
+    <Compile Include="Common.ObjectModel\Discover\Cache\AveCache.cs" />
+    <Compile Include="Common.ObjectModel\Discover\Cache\AveFolderCache.cs" />
+    <Compile Include="Common.ObjectModel\Discover\Cache\AveItemCache.cs" />
+    <Compile Include="Common.ObjectModel\Discover\Cache\AveListCache.cs" />
+    <Compile Include="Common.ObjectModel\Discover\Cache\AveSiteCache.cs" />
+    <Compile Include="Common.ObjectModel\Discover\Cache\AveWebCache.cs" />
+    <Compile Include="Common.ObjectModel\Discover\Cache\ChangeType.cs" />
+    <Compile Include="Common.ObjectModel\Discover\DiscoverUtility.cs" />
+    <Compile Include="Common.ObjectModel\Discover\Object\AveAlertObject.cs" />
+    <Compile Include="Common.ObjectModel\Discover\Object\AveContentTypeObject.cs" />
+    <Compile Include="Common.ObjectModel\Discover\Object\AveItemObject.cs" />
+    <Compile Include="Common.ObjectModel\Discover\Object\AveListObject.cs" />
+    <Compile Include="Common.ObjectModel\Discover\Object\AveSecurityObject.cs" />
+    <Compile Include="Common.ObjectModel\Discover\Object\AveVersionObject.cs" />
+    <Compile Include="Common.ObjectModel\Discover\Object\AveViewObject.cs" />
+    <Compile Include="Common.ObjectModel\Discover\Object\AveWebObject.cs" />
+    <Compile Include="Common.ObjectModel\Discover\Object\AveWebPartObject.cs" />
+    <Compile Include="Common.ObjectModel\ExternalStorage\IAveSOConnectorIntegration.cs" />
+    <Compile Include="Common.ObjectModel\ExternalStorage\IAveSOIntegrationUtility.cs" />
+    <Compile Include="Common.ObjectModel\ExternalStorage\IAveStorageOptimizationIntegration.cs" />
+    <Compile Include="Common.ObjectModel\ExternalStorage\StubDocumentInfo.cs" />
+    <Compile Include="Common.ObjectModel\Feature\IAveElementDefinition.cs" />
+    <Compile Include="Common.ObjectModel\Feature\IAveElementDefinitionCollection.cs" />
+    <Compile Include="Common.ObjectModel\Feature\IAveElementProvider.cs" />
+    <Compile Include="Common.ObjectModel\Feature\IAveFeatureProperty.cs" />
+    <Compile Include="Common.ObjectModel\Feature\IAveFeatureSerializer.cs" />
+    <Compile Include="Common.ObjectModel\Field\AveFieldId.cs" />
+    <Compile Include="Common.ObjectModel\Field\AveFieldValuesType.cs" />
+    <Compile Include="Common.ObjectModel\Field\IAveFieldMultiChoiceValue.cs" />
+    <Compile Include="Common.ObjectModel\Field\IAveFieldRatingScaleValue.cs" />
+    <Compile Include="Common.ObjectModel\Field\IAveRelatedFieldCollection.cs" />
+    <Compile Include="Common.ObjectModel\Item\AveDocumentTaggingInfo.cs" />
+    <Compile Include="Common.ObjectModel\Item\IAveDocTemplate.cs" />
+    <Compile Include="Common.ObjectModel\Item\IAveDocTemplateCollection.cs" />
+    <Compile Include="Common.ObjectModel\Item\IAveDocumentSerializer.cs" />
+    <Compile Include="Common.ObjectModel\Item\IAveListItemSerializer.cs" />
+    <Compile Include="Common.ObjectModel\List\IAveLegacyListTemplate.cs" />
+    <Compile Include="Common.ObjectModel\Mapping\Field\IFieldMapping.cs" />
+    <Compile Include="Common.ObjectModel\Mapping\UserAndDomain\IAveUserAndDomainMapping.cs" />
+    <Compile Include="Common.ObjectModel\Mapping\Template\IItemplateMapping.cs" />
+    <Compile Include="Common.ObjectModel\Mapping\Template\TemplateMappingCommon.cs" />
+    <Compile Include="Common.ObjectModel\Navigation\IAveNavigationSerializer.cs" />
+    <Compile Include="Common.ObjectModel\Navigation\NavigationRestoreSetting.cs" />
+    <Compile Include="Common.ObjectModel\NonPublicAPIAttribute.cs" />
+    <Compile Include="Common.ObjectModel\ObjectModelWrapperList.cs" />
+    <Compile Include="Common.ObjectModel\Office\AveOSearchObjectLevel.cs" />
+    <Compile Include="Common.ObjectModel\Office\AveUserProfileInfo.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveOAdminTopologySettings.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveOAnalyticsReportingStoreCollectionSettings.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveOAnalyticsReportingStoreSettings.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveOApplicationRegistry.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveOAuthenticationInformation.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveOAuthorityPage.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveOAuthorityPageCollection.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveOBaseDatabase.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveOBusinessDataContentSource.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveOCategory.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveOCategoryCollection.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveOComponentSettings.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveOContent.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveOContentIterator.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveOContentSource.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveOContentSourceCollection.cs" />
+    <Compile Include="Common.ObjectModel\Office\Crawl\IAveOCrawlComponentSettings.cs" />
+    <Compile Include="Common.ObjectModel\Office\Crawl\IAveOCrawledProperty.cs" />
+    <Compile Include="Common.ObjectModel\Office\Crawl\IAveOCrawlLogData.cs" />
+    <Compile Include="Common.ObjectModel\Office\Crawl\IAveOCrawlLogFilters.cs" />
+    <Compile Include="Common.ObjectModel\Office\Crawl\IAveOCrawlMapping.cs" />
+    <Compile Include="Common.ObjectModel\Office\Crawl\IAveOCrawlMappingCollection.cs" />
+    <Compile Include="Common.ObjectModel\Office\Crawl\IAveOCrawlRule.cs" />
+    <Compile Include="Common.ObjectModel\Office\Crawl\IAveOCrawlRuleCollection.cs" />
+    <Compile Include="Common.ObjectModel\Office\Crawl\IAveOCrawlStoreSettings.cs" />
+    <Compile Include="Common.ObjectModel\Office\Crawl\IAveOCrawlTopologySettings.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveOCustomConnector.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveOCustomConnectorContentSource.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveOCustomContentSource.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveODailySchedule.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveODatabaseSetting.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveODatabaseStoreSettings.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveODemotedSite.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveODemotedSiteCollection.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveOExchangePublicFolderContentSource.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveOExpiration.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveOExtension.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveOExtensionCollection.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveOFASTAdminProxy.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveOAdminOMHelperBase.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveOBestBet.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveOBestBetCollection.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveOAudience.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveOAudienceCollection.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveOAudienceManager.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveOBestBetHelper.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveOColleague.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveOColleagueManager.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveOConfiguredView.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveOConverterMessage.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveOConverterMessageCollection.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveODataConnectionFile.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveODataConnectionFileCollection.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveODisplayGroupInfo.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveODocIdLookup.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveODocIdUiSettings.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveODocumentId.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveOFeaturedContentHelper.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveOFieldIndexDictionary.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveOFieldIndexRef.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveOFileShareContentSource.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveOFormsService.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveOFormTemplate.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveOFormTemplateCollection.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveOHierarchicalContentSource.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveOKeyword.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveOKeywordCollection.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveOKeywordHelper.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveOKeywords.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveOLinksStoreSettings.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveOLobSystemInstance.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveOLocalizedStringManager.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveOLocationConfiguration.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveOLocationConfigurationCollection.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveOLocation.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveOLocationList.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveOLogViewer.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveOLotusNotesContentSource.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveOManagedProperty.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveOManagedPropertyCollection.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveOManagedPropertyInfo.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveOMapping.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveOMappingCollection.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveOMemberGroup.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveOMemberGroupManager.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveOMembership.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveOMembershipManager.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveOMetadataDefaults.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveOMetadataHierarchyNodeTaxonomy.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveOMetadataNavigationCollection.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveOMetadataNavigationHierarchy.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveOMetadataNavigationItem.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveOMetadataNavigationKeyFilter.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveOMetadataNavigationSettings.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveOMetadataObject.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveOMonthlyDateSchedule.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveONamedLobSystemInstanceDictionary.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveONewCustomConnector.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveONodeViewSettings.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveOOobProvider.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveOOrganizationProfile.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveOPolicy.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveOPolicyAudit.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveOPolicyCatalog.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveOPolicyCollection.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveOPolicyFeature.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveOPolicyFeatureCollection.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveOPolicyItem.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveOPolicyItemCollection.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveOPortalLog.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveOPrivacyPolicyItem.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveOProfileBase.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveOProfileBaseChange.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveOProfileBaseChangeQuery.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveOProfileDatabase.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveOProfileLoader.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveOProfileSubtypeProperty.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveOProfileSubtypePropertyManager.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveOProfileValueCollectionBase.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveOPropagation.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveOProperty.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveOPropertyCollection.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveOPropertyStoreSettings.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveOQueryComponentSettings.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveOQueryManager.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveOQueryPartitionSettings.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveOQueryTopologySettings.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveOQuickLink.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveOQuickLinkManager.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveORanking.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveORankPromotionHelper.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveORecords.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveORemoteScopes.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveORemoveCustomConnector.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveORuleInfo.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveOSchedule.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveOSchema.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveOSchemaDatabase.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveOScope.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveOScopeCollection.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveOScopeDisplayGroup.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveOScopeDisplayGroupCollection.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveOScopes.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveOScopesManager.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveOScopesUtilities.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveOSearchAnalyticsReportingDatabase.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveOSocialDataItem.cs" />
+    <Compile Include="Common.ObjectModel\Office\Search\IAveOQueryReportData.cs" />
+    <Compile Include="Common.ObjectModel\Office\Search\IAveOSearchAdminDashboardWebPart.cs" />
+    <Compile Include="Common.ObjectModel\Office\Search\IAveOSearchAdminUtils.cs" />
+    <Compile Include="Common.ObjectModel\Office\Search\IAveOSearchApplicationSystemStatus.cs" />
+    <Compile Include="Common.ObjectModel\Office\Search\IAveOSearchComponent.cs" />
+    <Compile Include="Common.ObjectModel\Office\Search\IAveOSearchContext.cs" />
+    <Compile Include="Common.ObjectModel\Office\Search\IAveOSearchObjectOwner.cs" />
+    <Compile Include="Common.ObjectModel\Office\Search\IAveOSearchProxyInfo.cs" />
+    <Compile Include="Common.ObjectModel\Office\Search\IAveOSearchQueryAndSiteSettingsService.cs" />
+    <Compile Include="Common.ObjectModel\Office\Search\IAveOSearchQueryConfigurationSettings.cs" />
+    <Compile Include="Common.ObjectModel\Office\Search\IAveOSearchSchemaConfigurationSettings.cs" />
+    <Compile Include="Common.ObjectModel\Office\Search\IAveOSearchServiceApplication.cs" />
+    <Compile Include="Common.ObjectModel\Office\Search\IAveOSearchServiceApplicationInfo.cs" />
+    <Compile Include="Common.ObjectModel\Office\Search\IAveOSearchServiceApplicationMonitoring.cs" />
+    <Compile Include="Common.ObjectModel\Office\Search\IAveOSearchServiceApplicationProxy.cs" />
+    <Compile Include="Common.ObjectModel\Office\Search\IAveOSearchServiceInstance.cs" />
+    <Compile Include="Common.ObjectModel\Office\Search\IAveOSearchTopology.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveOServerContext.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveOServerFarm.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveOSetFormsServiceCmdlet.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveOSetupLicensing.cs" />
+    <Compile Include="Common.ObjectModel\Admin\IAvePersistedChildCollection.cs" />
+    <Compile Include="Common.ObjectModel\Admin\IAvePersistedStoreProvider.cs" />
+    <Compile Include="Common.ObjectModel\Admin\IAvePersistedTypeCollection.cs" />
+    <Compile Include="Common.ObjectModel\Admin\IAvePersistedUpgradableObject .cs" />
+    <Compile Include="Common.ObjectModel\Admin\IAvePickerEntity.cs" />
+    <Compile Include="Common.ObjectModel\Admin\IAveAdministrationWebApplication.cs" />
+    <Compile Include="Common.ObjectModel\Admin\IAveApplicationPool.cs" />
+    <Compile Include="Common.ObjectModel\Admin\IAveApplicationPoolCollection.cs" />
+    <Compile Include="Common.ObjectModel\Admin\IAveClaim.cs" />
+    <Compile Include="Common.ObjectModel\Admin\IAveClaimEncodingManager.cs" />
+    <Compile Include="Common.ObjectModel\Admin\IAveClaimEntityTypes.cs" />
+    <Compile Include="Common.ObjectModel\Admin\IAveClaimProvider.cs" />
+    <Compile Include="Common.ObjectModel\Admin\IAveClaimProviderManager.cs" />
+    <Compile Include="Common.ObjectModel\Admin\IAveClaimProviderOperations.cs" />
+    <Compile Include="Common.ObjectModel\Admin\IAveCredentialDeployment.cs" />
+    <Compile Include="Common.ObjectModel\Admin\IAveGlobalAdmin.cs" />
+    <Compile Include="Common.ObjectModel\Admin\IAvePersistedDependencyCollection.cs" />
+    <Compile Include="Common.ObjectModel\Admin\IAvePersistedObject.cs" />
+    <Compile Include="Common.ObjectModel\Admin\IAvePersistedObjectCollection.cs" />
+    <Compile Include="Common.ObjectModel\Alert\IAveAlert.cs" />
+    <Compile Include="Common.ObjectModel\Alert\IAveAlertCollection .cs" />
+    <Compile Include="Common.ObjectModel\Alert\IAveAlertTemplate.cs" />
+    <Compile Include="Common.ObjectModel\Alert\IAveAlertTemplateCollection.cs" />
+    <Compile Include="Common.ObjectModel\AlternateUrl\IAveAlternateUrl.cs" />
+    <Compile Include="Common.ObjectModel\AlternateUrl\IAveAlternateUrlCollection.cs" />
+    <Compile Include="Common.ObjectModel\AlternateUrl\IAveAlternateUrlCollectionManager.cs" />
+    <Compile Include="Common.ObjectModel\Antivirus\IAveAntivirusSettings.cs" />
+    <Compile Include="Common.ObjectModel\ApplicationPages\IAveDeliveryChannelSettings.cs" />
+    <Compile Include="Common.ObjectModel\Attachment\AveAttachmentInfo.cs" />
+    <Compile Include="Common.ObjectModel\Attachment\IAveAttachment.cs" />
+    <Compile Include="Common.ObjectModel\Attachment\IAveAttachmentCollection.cs" />
+    <Compile Include="Common.ObjectModel\Audit\IAveAudit.cs" />
+    <Compile Include="Common.ObjectModel\AuthenticationProvider\IAveAuthenticationProvider.cs" />
+    <Compile Include="Common.ObjectModel\AuthenticationProvider\IAveFormsAuthenticationProvider.cs" />
+    <Compile Include="Common.ObjectModel\AuthenticationProvider\IAveTrustedAuthenticationProvider.cs" />
+    <Compile Include="Common.ObjectModel\AuthenticationProvider\IAveWindowsAuthenticationProvider.cs" />
+    <Compile Include="Common.ObjectModel\AveDto\AveFolderDto.cs" />
+    <Compile Include="Common.ObjectModel\AveDto\AveItemDto.cs" />
+    <Compile Include="Common.ObjectModel\AveDto\AveListDto.cs" />
+    <Compile Include="Common.ObjectModel\AveDto\AveObjectDto.cs" />
+    <Compile Include="Common.ObjectModel\AveDto\AveWebDto.cs" />
+    <Compile Include="Common.ObjectModel\AveObjectModelFactory.cs" />
+    <Compile Include="Common.ObjectModel\AveObjectModelStaticMember.cs" />
+    <Compile Include="Common.ObjectModel\ContentDatabase\IAveContentDatabase.cs" />
+    <Compile Include="Common.ObjectModel\ContentDatabase\IAveContentDatabaseCollection.cs" />
+    <Compile Include="Common.ObjectModel\ContentDatabase\IAveDatabase.cs" />
+    <Compile Include="Common.ObjectModel\ContentDatabase\IAveDatabaseSchemaVersionList.cs" />
+    <Compile Include="Common.ObjectModel\ContentDatabase\IAveDatabaseSequence.cs" />
+    <Compile Include="Common.ObjectModel\ContentDatabase\IAveSearchDatabase.cs" />
+    <Compile Include="Common.ObjectModel\ContentDatabase\IAveQuerySession.cs" />
+    <Compile Include="Common.ObjectModel\ContentType\AveBuiltInContentTypeId.cs" />
+    <Compile Include="Common.ObjectModel\ContentType\AveContentTypeInfo.cs" />
+    <Compile Include="Common.ObjectModel\ContentType\IAveContentType.cs" />
+    <Compile Include="Common.ObjectModel\ContentType\IAveContentTypeCollection.cs" />
+    <Compile Include="Common.ObjectModel\ContentType\IAveXmlDocumentCollection .cs" />
+    <Compile Include="Common.ObjectModel\Context\IAveContext.cs" />
+    <Compile Include="Common.ObjectModel\Context\IAveHelpContextManager.cs" />
+    <Compile Include="Common.ObjectModel\Context\IAveQueryProvider.cs" />
+    <Compile Include="Common.ObjectModel\Diagnostic\AveSQMDP.cs" />
+    <Compile Include="Common.ObjectModel\Diagnostic\IAveSQM.cs" />
+    <Compile Include="Common.ObjectModel\EventReceiver\AveEventReceiverInfo.cs" />
+    <Compile Include="Common.ObjectModel\EventReceiver\IAveEventReceiverDefinition.cs" />
+    <Compile Include="Common.ObjectModel\EventReceiver\IAveEventReceiverDefinitionCollection.cs" />
+    <Compile Include="Common.ObjectModel\EventReceiver\IAveItemEventReceiver.cs" />
+    <Compile Include="Common.ObjectModel\Farm\IAveFarm.cs" />
+    <Compile Include="Common.ObjectModel\Farm\IAveProduct.cs" />
+    <Compile Include="Common.ObjectModel\Farm\IAveProductVersions.cs" />
+    <Compile Include="Common.ObjectModel\Feature\AveFeatureInfo.cs" />
+    <Compile Include="Common.ObjectModel\Feature\IAveFeature.cs" />
+    <Compile Include="Common.ObjectModel\Feature\IAveFeatureCollection.cs" />
+    <Compile Include="Common.ObjectModel\Feature\IAveFeatureDefinition.cs" />
+    <Compile Include="Common.ObjectModel\Feature\IAveFeatureDefinitionCollection.cs" />
+    <Compile Include="Common.ObjectModel\Feature\IAveFeatureDependency.cs" />
+    <Compile Include="Common.ObjectModel\Feature\IAveFeatureDependencyCollection.cs" />
+    <Compile Include="Common.ObjectModel\Field\AveFieldInfo.cs" />
+    <Compile Include="Common.ObjectModel\Field\AveFieldUtility.cs" />
+    <Compile Include="Common.ObjectModel\Field\IAveField.cs" />
+    <Compile Include="Common.ObjectModel\Field\IAveFieldAllDayEvent.cs" />
+    <Compile Include="Common.ObjectModel\Field\IAveFieldAttachments.cs" />
+    <Compile Include="Common.ObjectModel\Field\IAveFieldBoolean.cs" />
+    <Compile Include="Common.ObjectModel\Field\IAveFieldCalculated.cs" />
+    <Compile Include="Common.ObjectModel\Field\IAveFieldChoice.cs" />
+    <Compile Include="Common.ObjectModel\Field\IAveFieldCollection.cs" />
+    <Compile Include="Common.ObjectModel\Field\IAveFieldComputed.cs" />
+    <Compile Include="Common.ObjectModel\Field\IAveFieldCurrency.cs" />
+    <Compile Include="Common.ObjectModel\Field\IAveFieldDateTime.cs" />
+    <Compile Include="Common.ObjectModel\Field\IAveFieldIndex.cs" />
+    <Compile Include="Common.ObjectModel\Field\IAveFieldIndexCollection.cs" />
+    <Compile Include="Common.ObjectModel\Field\IAveFieldLink.cs" />
+    <Compile Include="Common.ObjectModel\Field\IAveFieldLinkCollection.cs" />
+    <Compile Include="Common.ObjectModel\Field\IAveFieldLookup.cs" />
+    <Compile Include="Common.ObjectModel\Field\IAveFieldLookupValue.cs" />
+    <Compile Include="Common.ObjectModel\Field\IAveFieldLookupValueCollection.cs" />
+    <Compile Include="Common.ObjectModel\Field\IAveFieldModStat .cs" />
+    <Compile Include="Common.ObjectModel\Field\IAveFieldMultiChoice.cs" />
+    <Compile Include="Common.ObjectModel\Field\IAveFieldMultiLineText.cs" />
+    <Compile Include="Common.ObjectModel\Field\IAveFieldNumber.cs" />
+    <Compile Include="Common.ObjectModel\Field\IAveFieldRatingScale.cs" />
+    <Compile Include="Common.ObjectModel\Field\IAveFieldText.cs" />
+    <Compile Include="Common.ObjectModel\Field\IAveFieldTypeDefinition.cs" />
+    <Compile Include="Common.ObjectModel\Field\IAveFieldTypeDefinitionCollection.cs" />
+    <Compile Include="Common.ObjectModel\Field\IAveFieldUrl.cs" />
+    <Compile Include="Common.ObjectModel\Field\IAveFieldUrlValue.cs" />
+    <Compile Include="Common.ObjectModel\Field\IAveFieldUser.cs" />
+    <Compile Include="Common.ObjectModel\Field\IAveFieldUserValue.cs" />
+    <Compile Include="Common.ObjectModel\Field\IAveFieldUserValueCollection.cs" />
+    <Compile Include="Common.ObjectModel\Field\IAveFieldWorkflowStatus.cs" />
+    <Compile Include="Common.ObjectModel\Field\IAveTaxonomyField .cs" />
+    <Compile Include="Common.ObjectModel\Field\IAveTaxonomyFieldValue.cs" />
+    <Compile Include="Common.ObjectModel\Field\IAveTaxonomyFieldValueCollection.cs" />
+    <Compile Include="Common.ObjectModel\Iis\IAveIisApplicationPool.cs" />
+    <Compile Include="Common.ObjectModel\Iis\IAveIisVirtualDirectory.cs" />
+    <Compile Include="Common.ObjectModel\Iis\IAveMetabaseObject.cs" />
+    <Compile Include="Common.ObjectModel\Item\AveItemInfo.cs" />
+    <Compile Include="Common.ObjectModel\Item\IAveDocumentConverter.cs" />
+    <Compile Include="Common.ObjectModel\Item\IAveDocumentConverterCollection.cs" />
+    <Compile Include="Common.ObjectModel\Item\IAveItem.cs" />
+    <Compile Include="Common.ObjectModel\JobDefinition\IAveAdministrationServiceJobDefinition.cs" />
+    <Compile Include="Common.ObjectModel\JobDefinition\IAveDeadSiteDeleteJobDefinition.cs" />
+    <Compile Include="Common.ObjectModel\JobDefinition\IAveIisWebsiteUnprovisioningJobDefinition.cs" />
+    <Compile Include="Common.ObjectModel\JobDefinition\IAveJobHistory.cs" />
+    <Compile Include="Common.ObjectModel\JobDefinition\IAveJobHistoryEntries.cs" />
+    <Compile Include="Common.ObjectModel\JobDefinition\IAveNativeDatabaseJobDefinition.cs" />
+    <Compile Include="Common.ObjectModel\JobDefinition\IAveNativeJobDefinition.cs" />
+    <Compile Include="Common.ObjectModel\JobDefinition\IAveServiceInstanceJobDefinition.cs" />
+    <Compile Include="Common.ObjectModel\JobDefinition\IAveSkuUpgradeJob.cs" />
+    <Compile Include="Common.ObjectModel\JobDefinition\IAveSmtpSettingsPushJobDefinition.cs" />
+    <Compile Include="Common.ObjectModel\JobDefinition\IAveWebApplicationProvisioningJobDefinition.cs" />
+    <Compile Include="Common.ObjectModel\List\IAveForm.cs" />
+    <Compile Include="Common.ObjectModel\List\IAveFormCollection.cs" />
+    <Compile Include="Common.ObjectModel\Mobile\IAveMobileMessageServiceProvider.cs" />
+    <Compile Include="Common.ObjectModel\Mobile\IAveMobileMessageServiceResponse.cs" />
+    <Compile Include="Common.ObjectModel\Mobile\IAveMobileMessageUserInfo.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveOSharedSearchBoxSettings.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveOSharePointContentSource.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveOSiteHitRule.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveOSiteHitRulesCollection.cs" />
+    <Compile Include="Common.ObjectModel\Office\Social\Follow\AveOFollowedItemType.cs" />
+    <Compile Include="Common.ObjectModel\Office\Social\Follow\AveOFollowResultType.cs" />
+    <Compile Include="Common.ObjectModel\Office\Social\Follow\IAveOFollowedContent.cs" />
+    <Compile Include="Common.ObjectModel\Office\Social\Follow\IAveOFollowedItem.cs" />
+    <Compile Include="Common.ObjectModel\Office\Social\Follow\IAveOFollowResult.cs" />
+    <Compile Include="Common.ObjectModel\Office\Social\IAveOSocialActor.cs" />
+    <Compile Include="Common.ObjectModel\Office\Social\IAveOSocialActorInfo.cs" />
+    <Compile Include="Common.ObjectModel\Office\Social\IAveOSocialAttachment.cs" />
+    <Compile Include="Common.ObjectModel\Office\Social\IAveOSocialComment.cs" />
+    <Compile Include="Common.ObjectModel\Office\Social\IAveOSocialCommentManager.cs" />
+    <Compile Include="Common.ObjectModel\Office\Social\IAveOSocialData.cs" />
+    <Compile Include="Common.ObjectModel\Office\Social\IAveOSocialDatabase.cs" />
+    <Compile Include="Common.ObjectModel\Office\Social\IAveOSocialDataManager.cs" />
+    <Compile Include="Common.ObjectModel\Office\Social\IAveOSocialDataOverlay.cs" />
+    <Compile Include="Common.ObjectModel\Office\Social\IAveOSocialFeed.cs" />
+    <Compile Include="Common.ObjectModel\Office\Social\IAveOSocialFeedManager.cs" />
+    <Compile Include="Common.ObjectModel\Office\Social\IAveOSocialFeedOptions.cs" />
+    <Compile Include="Common.ObjectModel\Office\Social\IAveOSocialLink.cs" />
+    <Compile Include="Common.ObjectModel\Office\Social\IAveOSocialPost.cs" />
+    <Compile Include="Common.ObjectModel\Office\Social\IAveOSocialPostActorInfo.cs" />
+    <Compile Include="Common.ObjectModel\Office\Social\IAveOSocialPostCreationData.cs" />
+    <Compile Include="Common.ObjectModel\Office\Social\IAveOSocialPostReference.cs" />
+    <Compile Include="Common.ObjectModel\Office\Social\IAveOSocialRating.cs" />
+    <Compile Include="Common.ObjectModel\Office\Social\IAveOSocialRatingManager.cs" />
+    <Compile Include="Common.ObjectModel\Office\Social\IAveOSocialTag.cs" />
+    <Compile Include="Common.ObjectModel\Office\Social\IAveOSocialTagManager.cs" />
+    <Compile Include="Common.ObjectModel\Admin\IAveAdministrationMetadataCatalog.cs" />
+    <Compile Include="Common.ObjectModel\Office\Social\IAveOSocialFollowingManager.cs" />
+    <Compile Include="Common.ObjectModel\Office\Social\IAveOSocialThread.cs" />
+    <Compile Include="Common.ObjectModel\Office\UserProfile\IAveOProfileSubtype.cs" />
+    <Compile Include="Common.ObjectModel\Office\UserProfile\IAveOUserProfileAnniversaryChange.cs" />
+    <Compile Include="Common.ObjectModel\Office\UserProfile\IAveOUserProfileChange.cs" />
+    <Compile Include="Common.ObjectModel\Office\UserProfile\IAveOUserProfileChangeCollection.cs" />
+    <Compile Include="Common.ObjectModel\Office\UserProfile\IAveOUserProfileChangeQuery.cs" />
+    <Compile Include="Common.ObjectModel\Office\UserProfile\IAveOUserProfileChangeToken.cs" />
+    <Compile Include="Common.ObjectModel\Office\UserProfile\IAveOUserProfileColleagueChange.cs" />
+    <Compile Include="Common.ObjectModel\Office\UserProfile\IAveOUserProfileCoreProperty.cs" />
+    <Compile Include="Common.ObjectModel\Office\UserProfile\IAveOUserProfileCorePropertyManager.cs" />
+    <Compile Include="Common.ObjectModel\Office\UserProfile\IAveOUserProfileCustomChange.cs" />
+    <Compile Include="Common.ObjectModel\Office\UserProfile\IAveOUserProfileLinkItemChange.cs" />
+    <Compile Include="Common.ObjectModel\Office\UserProfile\IAveOUserProfileMemberShipChange.cs" />
+    <Compile Include="Common.ObjectModel\Office\UserProfile\IAveOUserProfileMultiValueChange.cs" />
+    <Compile Include="Common.ObjectModel\Office\UserProfile\IAveOUserProfileOrganizationMemberShipChange.cs" />
+    <Compile Include="Common.ObjectModel\Office\UserProfile\IAveOUserProfilePropertyManager.cs" />
+    <Compile Include="Common.ObjectModel\Office\UserProfile\IAveOUserProfilePropertyValueChange.cs" />
+    <Compile Include="Common.ObjectModel\Office\UserProfile\IAveOUserProfileSingleValueChange.cs" />
+    <Compile Include="Common.ObjectModel\Office\UserProfile\IAveOUserProfileSiteMembershipChange.cs" />
+    <Compile Include="Common.ObjectModel\Office\UserProfile\IAveOUserProfileSubTypeManager.cs" />
+    <Compile Include="Common.ObjectModel\Office\UserProfile\IAveOUserProfileSubtypeProperty.cs" />
+    <Compile Include="Common.ObjectModel\Office\UserProfile\IAveOUserProfileSubtypePropertyManager.cs" />
+    <Compile Include="Common.ObjectModel\Office\UserProfile\IAveOUserProfileTypeProperty.cs" />
+    <Compile Include="Common.ObjectModel\Office\UserProfile\IAveOUserProfileWebLogChange.cs" />
+    <Compile Include="Common.ObjectModel\Office\UserProfile\IAveOUserProfileTypePropertyManager.cs" />
+    <Compile Include="Common.ObjectModel\Publishing\IAvePortalNavigation.cs" />
+    <Compile Include="Common.ObjectModel\RecycleBin\IAveSPRecycleBinQuery.cs" />
+    <Compile Include="Common.ObjectModel\Site\AveMigrationJobState.cs" />
+    <Compile Include="Common.ObjectModel\Site\StorageUsageInfo.cs" />
+    <Compile Include="Common.ObjectModel\Solution\AveSolutionDependency.cs" />
+    <Compile Include="Common.ObjectModel\Solution\AveSolutionFeature.cs" />
+    <Compile Include="Common.ObjectModel\Taxonomy\IAveChangedItem.cs" />
+    <Compile Include="Common.ObjectModel\Taxonomy\IAveChangedItemCollection.cs" />
+    <Compile Include="Common.ObjectModel\Tenant\IAveTenant.cs" />
+    <Compile Include="Common.ObjectModel\UserResource\AveUserResourceInfo.cs" />
+    <Compile Include="Common.ObjectModel\UserResource\IAveUserResource.cs" />
+    <Compile Include="Common.ObjectModel\WebApplication\IAveWebConfigModification.cs" />
+    <Compile Include="Common.ObjectModel\WebApplication\IAveWebConfigModificationCollection.cs" />
+    <Compile Include="Common.ObjectModel\WebPart\IAveContentEditorWebPart.cs" />
+    <Compile Include="Common.ObjectModel\Publishing\IAveImageRendition.cs" />
+    <Compile Include="Common.ObjectModel\Publishing\IAveImageRenditionCollection.cs" />
+    <Compile Include="Common.ObjectModel\Service\IAveBdcService.cs" />
+    <Compile Include="Common.ObjectModel\Service\IAveServiceContextScope.cs" />
+    <Compile Include="Common.ObjectModel\SPApp\IAveAppSerializer.cs" />
+    <Compile Include="Common.ObjectModel\Workflow\IAveWorkflowDefinition.cs" />
+    <Compile Include="Common.ObjectModel\Workflow\IAveWorkflowDefinitionCollection.cs" />
+    <Compile Include="Common.ObjectModel\Workflow\IAveWorkflowDeploymentService.cs" />
+    <Compile Include="Common.ObjectModel\Workflow\IAveWorkflowInstance.cs" />
+    <Compile Include="Common.ObjectModel\Workflow\IAveWorkflowInstanceCollection.cs" />
+    <Compile Include="Common.ObjectModel\Workflow\IAveWorkflowInstanceService.cs" />
+    <Compile Include="Common.ObjectModel\Workflow\IAveWorkflowInventoryUpgrade.cs" />
+    <Compile Include="Common.ObjectModel\Workflow\IAveWorkflowServicesManager.cs" />
+    <Compile Include="Common.ObjectModel\Workflow\IAveWorkflowSubscription.cs" />
+    <Compile Include="Common.ObjectModel\Workflow\IAveWorkflowSubscriptionCollection.cs" />
+    <Compile Include="Common.ObjectModel\Workflow\IAveWorkflowSubscriptionService.cs" />
+    <Compile Include="Common.ObjectModel\SPApp\AveAppInstanceInfo.cs" />
+    <Compile Include="Common.ObjectModel\SPApp\AveAppPackageInfo.cs" />
+    <Compile Include="Common.ObjectModel\SPApp\IAveApp.cs" />
+    <Compile Include="Common.ObjectModel\SPApp\IAveAppCatalog.cs" />
+    <Compile Include="Common.ObjectModel\SPApp\IAveAppInstance.cs" />
+    <Compile Include="Common.ObjectModel\Web\IAveSiteDataQuery.cs" />
+    <Compile Include="Common.ObjectModel\Workflow\IAveFormsServicesWebService.cs" />
+    <Compile Include="Common.Restore\AveRestoreEnum.cs" />
+    <Compile Include="Common.Utility\ActiveDirectory\ActiveDirectoryDomain.cs" />
+    <Compile Include="Common.Utility\ActiveDirectory\ActiveDirectoryEntry.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common.Utility\ActiveDirectory\ActiveDirectoryNameInfo.cs" />
+    <Compile Include="Common.Utility\ActiveDirectory\ActiveDirectoryObject.cs" />
+    <Compile Include="Common.Utility\ActiveDirectory\ActiveDirectoryProperty.cs" />
+    <Compile Include="Common.Utility\ActiveDirectory\ActiveDirectoryPropertyNames.cs" />
+    <Compile Include="Common.Utility\ActiveDirectory\ActiveDirectorySearcher.cs" />
+    <Compile Include="Common.Utility\ActiveDirectory\MCache.cs" />
+    <Compile Include="Common.Utility\Auth\Idcrl\ClientRequestException.cs" />
+    <Compile Include="Common.Utility\Auth\Idcrl\IdcrlAuth.cs" />
+    <Compile Include="Common.Utility\Auth\Idcrl\IdcrlConstants.cs" />
+    <Compile Include="Common.Utility\Auth\Idcrl\IdcrlEnvironment.cs" />
+    <Compile Include="Common.Utility\Auth\Idcrl\IdcrlErrorCodes.cs" />
+    <Compile Include="Common.Utility\Auth\Idcrl\IdcrlException.cs" />
+    <Compile Include="Common.Utility\Auth\Idcrl\IdcrlMessageConstants.cs" />
+    <Compile Include="Common.Utility\Auth\Idcrl\IdcrlUtility.cs" />
+    <Compile Include="Common.Utility\Auth\Idcrl\SharePointOnlineAuthenticationProvider.cs" />
+    <Compile Include="Common.Utility\Auth\Idcrl\STSSoapFaultCodes.cs" />
+    <Compile Include="Common.Utility\Auth\ISharePointOnlineAuthenticationProvider.cs" />
+    <Compile Include="Common.Utility\Auth\SharePointOnlineAuthenticationModule.cs" />
+    <Compile Include="Common.Utility\Auth\SharePointOnlineAuthenticationProviderHelper.cs" />
+    <Compile Include="Common.Utility\Auth\SharePointOnlineCredentials.cs" />
+    <Compile Include="Common.Utility\Auth\SharePointOnlineCredentialsWebRequestEventArgs.cs" />
+    <Compile Include="Common.Utility\AveAlertUtility.cs" />
+    <Compile Include="Common.Utility\AveBrowserHelper.cs" />
+    <Compile Include="Common.Utility\AveDataUpgradeUtil.cs" />
+    <Compile Include="Common.Utility\AveDelegateExecutor.cs" />
+    <Compile Include="Common.Utility\AveEqualityComparer.cs" />
+    <Compile Include="Common.Utility\AveProfixUtiliy.cs" />
+    <Compile Include="Common.Utility\AveRegexCommon.cs" />
+    <Compile Include="Common.Utility\AveTaskRetryHelper.cs" />
+    <Compile Include="Common.Utility\AveUserAndGroupUtilty.cs" />
+    <Compile Include="Common.Utility\AveEventHelper.cs" />
+    <Compile Include="Exception\AveExceptionHelper.cs" />
+    <Compile Include="Common.Utility\AveHttpValueCollection.cs" />
+    <Compile Include="Common.Utility\DFSSortUtility.cs" />
+    <Compile Include="Common.Utility\ExtensionMethod\ArrayExtension.cs" />
+    <Compile Include="Common.Utility\ExtensionMethod\DictionaryExtension.cs" />
+    <Compile Include="Common.Utility\ExtensionMethod\EnumExtension.cs" />
+    <Compile Include="Common.Utility\ExtensionMethod\ExceptionExtension.cs" />
+    <Compile Include="Common.Utility\ExtensionMethod\IAveUserResourceExtension.cs" />
+    <Compile Include="Common.Utility\ExtensionMethod\LinqExtension.cs" />
+    <Compile Include="Common.Utility\ExtensionMethod\StreamExtension.cs" />
+    <Compile Include="Common.Utility\ExtensionMethod\StringExtension.cs" />
+    <Compile Include="Common.Utility\NintexForm\AveNintexFormUtility.cs" />
+    <Compile Include="Common.Utility\OrderedStreamBackup\AveOrderedCoordinatedStream.cs" />
+    <Compile Include="Common.Utility\AveStringHelper.cs" />
+    <Compile Include="Common.Utility\OrderedStreamBackup\BlockingDictionary.cs" />
+    <Compile Include="Common.Utility\OrderedStreamBackup\OrderedChunkedFileStreamManager.cs" />
+    <Compile Include="Common.Utility\OrderedStreamBackup\PartitionedList.cs" />
+    <Compile Include="Common.Utility\PerformanceScope.cs" />
+    <Compile Include="Common.Utility\ProcessLogger.cs" />
+    <Compile Include="Common.Utility\ReconnectableHttpWebRequest.cs" />
+    <Compile Include="Common.Utility\Reflection\DelegateMaker.cs" />
+    <Compile Include="Common.Utility\ExtensionMethod\TypeExtension.cs" />
+    <Compile Include="Common.Utility\Reflection\WrapperInvoker.cs" />
+    <Compile Include="Common.Utility\ReportServiceUtil.cs" />
+    <Compile Include="Common.Utility\SingleInstance\SingleInstanceV4.cs" />
+    <Compile Include="Common.Utility\ExtensionMethod\SqlDataReaderExtension.cs" />
+    <Compile Include="Common.Utility\ThreadSafeDictionary.cs" />
+    <Compile Include="Common.Utility\WrapperWin32Native.cs" />
+    <Compile Include="Common.Utility\ExtensionMethod\XmlExtension.cs" />
+    <Compile Include="Core\WrapperSPMode.cs" />
+    <Compile Include="Exception\AveQueryException.cs" />
+    <Compile Include="Exception\AveWrapperAppException.cs" />
+    <Compile Include="Exception\AveWrapperCheckoutFileException.cs" />
+    <Compile Include="Exception\AveWrapperDiscoverException.cs" />
+    <Compile Include="Common.Utility\OrderedStreamBackup\IOrderedChunkedStreamManager.cs" />
+    <Compile Include="Exception\AveWrapperFileContentBrwokenException.cs" />
+    <Compile Include="Exception\AveWrapperLookupFieldNotFoundException.cs" />
+    <Compile Include="Exception\AveWrapperNotSupportedException.cs" />
+    <Compile Include="Exception\AveWrapperOffice365ApiException.cs" />
+    <Compile Include="Exception\WrapperResultException.cs" />
+    <Compile Include="Html\crc32.cs" />
+    <Compile Include="Html\EncodingFoundException.cs" />
+    <Compile Include="Html\HtmlAttribute.cs" />
+    <Compile Include="Html\HtmlAttributeCollection.cs" />
+    <Compile Include="Html\HtmlCmdLine.cs" />
+    <Compile Include="Html\HtmlCommentNode.cs" />
+    <Compile Include="Html\HtmlConsoleListener.cs" />
+    <Compile Include="Html\HtmlDocument.cs" />
+    <Compile Include="Html\HtmlElementFlag.cs" />
+    <Compile Include="Html\HtmlEntity.cs" />
+    <Compile Include="Html\HtmlNameTable.cs" />
+    <Compile Include="Html\HtmlNode.cs" />
+    <Compile Include="Html\HtmlNodeCollection.cs" />
+    <Compile Include="Html\HtmlNodeNavigator.cs" />
+    <Compile Include="Html\HtmlNodeType.cs" />
+    <Compile Include="Html\HtmlParseError.cs" />
+    <Compile Include="Html\HtmlParseErrorCode.cs" />
+    <Compile Include="Html\HtmlTextNode.cs" />
+    <Compile Include="Html\HtmlWeb.cs" />
+    <Compile Include="Html\HtmlWebException.cs" />
+    <Compile Include="Html\IOLibrary.cs" />
+    <Compile Include="Html\MixedCodeDocument.cs" />
+    <Compile Include="Html\MixedCodeDocumentCodeFragment.cs" />
+    <Compile Include="Html\MixedCodeDocumentFragment.cs" />
+    <Compile Include="Html\MixedCodeDocumentFragmentList.cs" />
+    <Compile Include="Html\MixedCodeDocumentFragmentType.cs" />
+    <Compile Include="Html\MixedCodeDocumentTextFragment.cs" />
+    <Compile Include="Html\NameValuePair.cs" />
+    <Compile Include="Html\NameValuePairList.cs" />
+    <Compile Include="InternalStream\BackupStream\AveCommonBackupStream.cs" />
+    <Compile Include="InternalStream\BackupStream\StreamHeader.cs" />
+    <Compile Include="InternalStream\BackupStream\WrapperBackupStreamV1.cs" />
+    <Compile Include="InternalStream\BackupStream\WrapperBackupStreamBase.cs" />
+    <Compile Include="InternalStream\InputStreamWrapper\FileReceiverWrapper.cs" />
+    <Compile Include="InternalStream\Project\AveProjectExtension.cs" />
+    <Compile Include="InternalStream\Project\AveProjectReader.cs" />
+    <Compile Include="InternalStream\Project\AveProjectWriter.cs" />
+    <Compile Include="InternalStream\Project\ProjectSerializerTag.cs" />
+    <Compile Include="InternalStream\RestoreStream\AveCommonRestoreStream.cs" />
+    <Compile Include="InternalStream\RestoreStream\WrapperRestoreStreamV1.cs" />
+    <Compile Include="InternalStream\RestoreStream\IAveRestoreStream.cs" />
+    <Compile Include="InternalStream\InputStreamWrapper\IIntputStreamWrapper.cs" />
+    <Compile Include="InternalStream\OutputStreamWrapper\IOutputStreamWrapper.cs" />
+    <Compile Include="InternalStream\OutputStreamWrapper\FileSendWrapper.cs" />
+    <Compile Include="InternalStream\RestoreStream\InternalRestoreStream\AveInternalRestoreStream.cs" />
+    <Compile Include="InternalStream\RestoreStream\WrapperRestoreStreamBase.cs" />
+    <Compile Include="MetaInfo\MetaInfoAccess.cs" />
+    <Compile Include="MetaInfo\MetaInfoHandler.cs" />
+    <Compile Include="MetaInfo\MetaInfoProperty.cs" />
+    <Compile Include="MetaInfo\MetaInfoValueType.cs" />
+    <Compile Include="NintexForm\AveNintexFormInfo.cs" />
+    <Compile Include="NintexForm\NintexFormAPI\FormDigest2010.cs" />
+    <Compile Include="NintexForm\NintexFormAPI\FormDigest2013.cs" />
+    <Compile Include="NintexForm\NintexFormAPI\FormDigestBase.cs" />
+    <Compile Include="NintexForm\NintexFormAPI\FormDigestFactory.cs" />
+    <Compile Include="NintexForm\NintexFormAPI\FormSaveInfo.cs" />
+    <Compile Include="NintexForm\NintexFormAPI\FormsHeaderBehavior.cs" />
+    <Compile Include="NintexForm\NintexFormAPI\FormsHeaderInspector.cs" />
+    <Compile Include="NintexForm\NintexFormAPI\IFormsWcfService.cs" />
+    <Compile Include="NintexForm\NintexFormAPI\NfClientContext.cs" />
+    <Compile Include="QueryMonitor\AveConnectionControler.cs" />
+    <Compile Include="QueryMonitor\AveConnectionMonitorUtil.cs" />
+    <Compile Include="QueryMonitor\AveMonitorStatistics.cs" />
+    <Compile Include="QueryMonitor\AveMonitorTyper.cs" />
+    <Compile Include="QueryMonitor\AveQueryMonitor.cs" />
+    <Compile Include="QueryService\Attribute\QueryCommandArgumentAttribute.cs" />
+    <Compile Include="QueryService\Attribute\QueryCommandStringAttribute.cs" />
+    <Compile Include="QueryService\Attribute\QueryService.AdditonalAttribute.cs" />
+    <Compile Include="QueryService\IAveCommonQueryService\IAveCentralAdminQueryService.cs" />
+    <Compile Include="QueryService\IAveCommonQueryService\IAveMetadataServiceQueryService.cs" />
+    <Compile Include="QueryService\Query13\IAveBackupRestoreQueryService13.cs" />
+    <Compile Include="QueryService\QueryString\AveQueryStringCommonUtility.cs" />
+    <Compile Include="QueryService\Util\AveQueryColumnInfoManager.cs" />
+    <Compile Include="QueryService\Util\AveQueryCounter.cs" />
+    <Compile Include="QueryService\Util\AveQueryDataReader.cs" />
+    <Compile Include="QueryService\Util\AveQueryServiceBase.cs" />
+    <Compile Include="QueryService\Util\AveQueryUtility.cs" />
+    <Compile Include="QueryService\Util\AveQueryWorker.cs" />
+    <Compile Include="QueryService\Util\AveUpdateCheckString.cs" />
+    <Compile Include="SP13common\Common.ObjectModel\IAveOSearchProvider.cs" />
+    <Compile Include="SP13common\Common.ObjectModel\IAveOSource.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveOStartAddressCollection.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveOStringResourceManager.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveOSupportedFieldsLookup.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveOSynonym.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveOSynonymCollection.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveOSystemStatusBase.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveOTopologySettings.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveOULS.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveOULSCat.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveOULSCatBase.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveOUrlScopeRule.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveOUserContextHelper.cs" />
+    <Compile Include="Common.ObjectModel\Office\UserProfile\IAveOUserProfile.cs" />
+    <Compile Include="Common.ObjectModel\Office\UserProfile\IAveOUserProfileApplication.cs" />
+    <Compile Include="Common.ObjectModel\Office\UserProfile\IAveOUserProfileApplicationProxy.cs" />
+    <Compile Include="Common.ObjectModel\Office\UserProfile\IAveOUserProfileManager.cs" />
+    <Compile Include="Common.ObjectModel\Office\UserProfile\IAveOUserProfilePropertyHelper.cs" />
+    <Compile Include="Common.ObjectModel\Office\UserProfile\IAveOUserProfileService.cs" />
+    <Compile Include="Common.ObjectModel\Office\UserProfile\IAveOUserProfileValueCollection.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveOViewSettingsCollection.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveOSqlSession.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveOScopeRule.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveOScopeRuleCollection.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveOSessionStateService.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveOVisualization.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveOWebAnalyticsServiceApplication.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveOWebAnalyticsWebService.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveOWebContentSource.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveOWeeklySchedule.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveOHold.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveUserProfileSerializer.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveOScopesManagerInfo.cs" />
+    <Compile Include="Common.ObjectModel\Patch\IAvePatchableUnitInfo.cs" />
+    <Compile Include="Common.ObjectModel\Patch\IAvePatchInfo.cs" />
+    <Compile Include="Common.ObjectModel\PerformancePoint\AvePerformancePointCache.cs" />
+    <Compile Include="Common.ObjectModel\Portal\IAveLinksCheckerJob.cs" />
+    <Compile Include="Common.ObjectModel\Portal\IAvePortalService.cs" />
+    <Compile Include="Common.ObjectModel\Portal\IAveReputationHelper.cs" />
+    <Compile Include="Common.ObjectModel\Portal\IAveSkuUpgradePage.cs" />
+    <Compile Include="Common.ObjectModel\Portal\IAveStringResourceManager.cs" />
+    <Compile Include="Common.ObjectModel\Publishing\IAveCommonUtilities.cs" />
+    <Compile Include="Common.ObjectModel\Publishing\IAveFieldId.cs" />
+    <Compile Include="Common.ObjectModel\Publishing\IAveInheritableStringProperty.cs" />
+    <Compile Include="Common.ObjectModel\Publishing\IAveNavigationSiteMapNode.cs" />
+    <Compile Include="Common.ObjectModel\Publishing\IAvePortalSiteMapNode.cs" />
+    <Compile Include="Common.ObjectModel\Publishing\IAvePublishing.cs" />
+    <Compile Include="Common.ObjectModel\Publishing\IAveScheduledItem.cs" />
+    <Compile Include="Common.ObjectModel\Publishing\IEcmDocumentRouting.cs" />
+    <Compile Include="Common.ObjectModel\Schedule\IAveMonthlyByDaySchedule.cs" />
+    <Compile Include="Common.ObjectModel\Schedule\IAveSecondSchedule.cs" />
+    <Compile Include="Common.ObjectModel\Search\IAveKeywordContext.cs" />
+    <Compile Include="Common.ObjectModel\Search\AveSearchInfo.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveOScopeInfo.cs" />
+    <Compile Include="Common.ObjectModel\Search\IAveAggregateContextExpression.cs" />
+    <Compile Include="Common.ObjectModel\Search\IAveAtomicContextExpression.cs" />
+    <Compile Include="Common.ObjectModel\Search\IAveBestBet.cs" />
+    <Compile Include="Common.ObjectModel\Search\IAveBestBetCollection.cs" />
+    <Compile Include="Common.ObjectModel\Search\IAveContext.cs" />
+    <Compile Include="Common.ObjectModel\Search\IAveContextCollection.cs" />
+    <Compile Include="Common.ObjectModel\Search\IAveContextExpression .cs" />
+    <Compile Include="Common.ObjectModel\Search\IAveDescribable.cs" />
+    <Compile Include="Common.ObjectModel\Search\IAveFeaturedContent.cs" />
+    <Compile Include="Common.ObjectModel\Search\IAveFeaturedContentCollection.cs" />
+    <Compile Include="Common.ObjectModel\Search\IAveIdentifiable.cs" />
+    <Compile Include="Common.ObjectModel\Search\IAveKeyValueAtomicContextExpression.cs" />
+    <Compile Include="Common.ObjectModel\Search\IAveKeyword.cs" />
+    <Compile Include="Common.ObjectModel\Search\IAveKeywordCollection.cs" />
+    <Compile Include="Common.ObjectModel\Search\IAveManagedResult.cs" />
+    <Compile Include="Common.ObjectModel\Search\IAvePromotedDocument.cs" />
+    <Compile Include="Common.ObjectModel\Search\IAvePromotedExpression.cs" />
+    <Compile Include="Common.ObjectModel\Search\IAvePromotedItem.cs" />
+    <Compile Include="Common.ObjectModel\Search\IAvePromotedItemCollection.cs" />
+    <Compile Include="Common.ObjectModel\Search\IAvePromotedLocation.cs" />
+    <Compile Include="Common.ObjectModel\Search\IAvePromotion.cs" />
+    <Compile Include="Common.ObjectModel\Search\IAvePromotionCollection.cs" />
+    <Compile Include="Common.ObjectModel\Search\IAveSearchSetting.cs" />
+    <Compile Include="Common.ObjectModel\Search\IAveSearchSettingGroup.cs" />
+    <Compile Include="Common.ObjectModel\Search\IAveSearchSettingGroupCollection .cs" />
+    <Compile Include="Common.ObjectModel\Search\IAveSynonym.cs" />
+    <Compile Include="Common.ObjectModel\Search\IAveSynonymCollection.cs" />
+    <Compile Include="Common.ObjectModel\Security\IAveGeneratePasswordJobDefinition.cs" />
+    <Compile Include="Common.ObjectModel\Security\IAveGroupSerializer.cs" />
+    <Compile Include="Common.ObjectModel\Security\IAveGroupsSerializer.cs" />
+    <Compile Include="Common.ObjectModel\Security\IAvePeopleEditor.cs" />
+    <Compile Include="Common.ObjectModel\Security\IAvePermissionInfo.cs" />
+    <Compile Include="Common.ObjectModel\Security\IAvePolicy.cs" />
+    <Compile Include="Common.ObjectModel\Security\IAvePolicyCollection.cs" />
+    <Compile Include="Common.ObjectModel\Security\IAvePolicyRole.cs" />
+    <Compile Include="Common.ObjectModel\Security\IAvePolicyRoleBindingCollection.cs" />
+    <Compile Include="Common.ObjectModel\Security\IAvePolicyRoleCollection.cs" />
+    <Compile Include="Common.ObjectModel\Security\IAvePrincipalInfo.cs" />
+    <Compile Include="Common.ObjectModel\Security\IAveProcessAccount.cs" />
+    <Compile Include="Common.ObjectModel\Security\IAveProcessIdentity.cs" />
+    <Compile Include="Common.ObjectModel\Security\IAveRole.cs" />
+    <Compile Include="Common.ObjectModel\Security\IAveRoleAssignmentsSerializer.cs" />
+    <Compile Include="Common.ObjectModel\Security\IAveRoleCollection.cs" />
+    <Compile Include="Common.ObjectModel\Security\IAveRolesSerializer.cs" />
+    <Compile Include="Common.ObjectModel\Security\IAveSecurableObjectImpl.cs" />
+    <Compile Include="Common.ObjectModel\Security\IAveSecureString.cs" />
+    <Compile Include="Common.ObjectModel\Security\IAveSecurityContext.cs" />
+    <Compile Include="Common.ObjectModel\Security\IAveSecurityTokenServiceManager.cs" />
+    <Compile Include="Common.ObjectModel\Security\IAveTrustedAccessProvider.cs" />
+    <Compile Include="Common.ObjectModel\Security\IAveTrustedAccessProviderCollection .cs" />
+    <Compile Include="Common.ObjectModel\Security\IAveTrustedProviderBase.cs" />
+    <Compile Include="Common.ObjectModel\Security\IAveTrustedRootAuthority.cs" />
+    <Compile Include="Common.ObjectModel\Security\IAveTrustedRootAuthorityCollection.cs" />
+    <Compile Include="Common.ObjectModel\Security\IAveTrustedRootAuthorityManager.cs" />
+    <Compile Include="Common.ObjectModel\Security\IAveUserSerializer.cs" />
+    <Compile Include="Common.ObjectModel\Security\IAveUsersSerializer.cs" />
+    <Compile Include="Common.ObjectModel\Server\IAveVirtualServer.cs" />
+    <Compile Include="Common.ObjectModel\Server\IAveVirtualServerCollection.cs" />
+    <Compile Include="Common.ObjectModel\Service\IAveDatabaseService.cs" />
+    <Compile Include="Common.ObjectModel\Service\IAveDatabaseServiceInstance.cs" />
+    <Compile Include="Common.ObjectModel\Service\IAveDiagnosticsServiceBase.cs" />
+    <Compile Include="Common.ObjectModel\Service\IAveIisWebService.cs" />
+    <Compile Include="Common.ObjectModel\Service\IAveIisWebServiceApplication.cs" />
+    <Compile Include="Common.ObjectModel\Service\IAveIisWebServiceApplicationPool.cs" />
+    <Compile Include="Common.ObjectModel\Service\IAveIisWebServiceApplicationPoolCollection.cs" />
+    <Compile Include="Common.ObjectModel\Service\IAveIisWebServiceApplicationProxy.cs" />
+    <Compile Include="Common.ObjectModel\Service\IAveIisWebServiceSettings.cs" />
+    <Compile Include="Common.ObjectModel\Service\IAveLoadBalancerServiceInstance.cs" />
+    <Compile Include="Common.ObjectModel\Office\Search\IAveOSearchService.cs" />
+    <Compile Include="Common.ObjectModel\Service\IAveSearchService.cs" />
+    <Compile Include="Common.ObjectModel\Service\IAveSearchServiceInstance.cs" />
+    <Compile Include="Common.ObjectModel\Service\IAveServiceApplication.cs" />
+    <Compile Include="Common.ObjectModel\Service\IAveServiceApplicationCollection.cs" />
+    <Compile Include="Common.ObjectModel\Service\IAveSubscriptionSettingsServiceApplicationProxy.cs" />
+    <Compile Include="Common.ObjectModel\Service\IAveTimerServiceInstance.cs" />
+    <Compile Include="Common.ObjectModel\Service\IAveTopologyWebServiceApplicationProxy.cs" />
+    <Compile Include="Common.ObjectModel\Service\IAveServiceContext.cs" />
+    <Compile Include="Common.ObjectModel\Service\IAveUsageApplicationProxy.cs" />
+    <Compile Include="Common.ObjectModel\Service\IAveWebServiceCollection.cs" />
+    <Compile Include="Common.ObjectModel\Service\IAveWebServiceInstance.cs" />
+    <Compile Include="Common.ObjectModel\Service\IAveServiceApplicationProxyGroupCollection.cs" />
+    <Compile Include="Common.ObjectModel\Service\IAveServiceProxy.cs" />
+    <Compile Include="Common.ObjectModel\Service\IAveServiceProxyCollection.cs" />
+    <Compile Include="Common.ObjectModel\Service\IAveWindowsService.cs" />
+    <Compile Include="Common.ObjectModel\Site\AveUsageInfo.cs" />
+    <Compile Include="Common.ObjectModel\Site\IAveBaseSiteCollectionCopier.cs" />
+    <Compile Include="Common.ObjectModel\Register\IAveRegister.cs" />
+    <Compile Include="Common.ObjectModel\Site\IAveSiteCollectionCopier.cs" />
+    <Compile Include="Common.ObjectModel\Service\IAveWindowsServiceInstance.cs" />
+    <Compile Include="Common.ObjectModel\Site\IAveSiteSerializer.cs" />
+    <Compile Include="Common.ObjectModel\Site\IAveSiteSettingSerializer.cs" />
+    <Compile Include="Common.ObjectModel\Solution\IAveDeploymentConfig.cs" />
+    <Compile Include="Common.ObjectModel\Solution\IAveDeploymentConfigCollection.cs" />
+    <Compile Include="Common.ObjectModel\Solution\IAveFarmSolutionPackage.cs" />
+    <Compile Include="Common.ObjectModel\Solution\IAveSolutionDeploymentJobDefinition.cs" />
+    <Compile Include="Common.ObjectModel\Solution\IAveSolutionLanguagePack.cs" />
+    <Compile Include="Common.ObjectModel\Solution\IAveSolutionLanguagePackCollection.cs" />
+    <Compile Include="Common.ObjectModel\Solution\IAveSolutionPackage.cs" />
+    <Compile Include="Common.ObjectModel\Storage\IAveRemoteBlobStorageSettings.cs" />
+    <Compile Include="Common.ObjectModel\Storage\StorageInfo.cs" />
+    <Compile Include="Common.ObjectModel\Taxonomy\AveMetadataInfo.cs" />
+    <Compile Include="Common.ObjectModel\Taxonomy\IAveContentTypePublisher.cs" />
+    <Compile Include="Common.ObjectModel\Taxonomy\IAveLabelCollection.cs" />
+    <Compile Include="Common.ObjectModel\Taxonomy\IAveLable.cs" />
+    <Compile Include="Common.ObjectModel\Taxonomy\IAveMetadataListFieldSettings.cs" />
+    <Compile Include="Common.ObjectModel\Office\IAveOAlternateAccessMapping.cs" />
+    <Compile Include="Common.ObjectModel\Taxonomy\IAveMetaDataSerializer.cs" />
+    <Compile Include="Common.ObjectModel\Taxonomy\IAveMetadataServiceApplication.cs" />
+    <Compile Include="Common.ObjectModel\Taxonomy\IAveMetadataServiceRestorer.cs" />
+    <Compile Include="Common.ObjectModel\Taxonomy\IAveTaxonomyGroup.cs" />
+    <Compile Include="Common.ObjectModel\Taxonomy\IAveTaxonomyGroupCollection.cs" />
+    <Compile Include="Common.ObjectModel\Taxonomy\IAveTaxonomyGroupSerializer.cs" />
+    <Compile Include="Common.ObjectModel\Taxonomy\IAveTaxonomyItem.cs" />
+    <Compile Include="Common.ObjectModel\Taxonomy\IAveTaxonomySession.cs" />
+    <Compile Include="Common.ObjectModel\Taxonomy\IAveTerm.cs" />
+    <Compile Include="Common.ObjectModel\Taxonomy\IAveTermCollection.cs" />
+    <Compile Include="Common.ObjectModel\Taxonomy\IAveTermSerializer.cs" />
+    <Compile Include="Common.ObjectModel\Taxonomy\IAveTermSet.cs" />
+    <Compile Include="Common.ObjectModel\Taxonomy\IAveTermSetCollection.cs" />
+    <Compile Include="Common.ObjectModel\Taxonomy\IAveTermSetItem.cs" />
+    <Compile Include="Common.ObjectModel\Taxonomy\IAveTermSetSerializer.cs" />
+    <Compile Include="Common.ObjectModel\Taxonomy\IAveTermStore.cs" />
+    <Compile Include="Common.ObjectModel\Taxonomy\IAveTermStoreCollection.cs" />
+    <Compile Include="Common.ObjectModel\Field\IAveViewFieldCollection.cs" />
+    <Compile Include="Common.ObjectModel\Iis\IAveIisSettings.cs" />
+    <Compile Include="Common.ObjectModel\Iis\IAveIisWebSite.cs" />
+    <Compile Include="Common.ObjectModel\Iis\IAveServerBinding.cs" />
+    <Compile Include="Common.ObjectModel\Item\AveItemFieldInfo.cs" />
+    <Compile Include="Common.ObjectModel\Item\AveListRootFolderInfo.cs" />
+    <Compile Include="Common.ObjectModel\Item\IAveCheckedOutFile.cs" />
+    <Compile Include="Common.ObjectModel\Item\IAveFile.cs" />
+    <Compile Include="Common.ObjectModel\Item\IAveFileCollection.cs" />
+    <Compile Include="Common.ObjectModel\Item\IAveFolder.cs" />
+    <Compile Include="Common.ObjectModel\Item\IAveFolderCollection.cs" />
+    <Compile Include="Common.ObjectModel\Item\IAveListItem.cs" />
+    <Compile Include="Common.ObjectModel\Item\IAveListItemCollection.cs" />
+    <Compile Include="Common.ObjectModel\Item\IAveListItemVersion.cs" />
+    <Compile Include="Common.ObjectModel\Item\IAveListItemVersionCollection.cs" />
+    <Compile Include="Common.ObjectModel\Item\IAveModerationInformation.cs" />
+    <Compile Include="Common.ObjectModel\Item\IAveOfficialFileHost.cs" />
+    <Compile Include="Common.ObjectModel\Item\IAveOfficialFileSoap.cs" />
+    <Compile Include="Common.ObjectModel\JobDefinition\IAveJobDefinition.cs" />
+    <Compile Include="Common.ObjectModel\JobDefinition\IAveJobDefinitionCollection.cs" />
+    <Compile Include="Common.ObjectModel\Language\AveLanguageInfo.cs" />
+    <Compile Include="Common.ObjectModel\List\AveListInfo.cs" />
+    <Compile Include="Common.ObjectModel\List\IAveDocumentLibrary.cs" />
+    <Compile Include="Common.ObjectModel\List\IAveList.cs" />
+    <Compile Include="Common.ObjectModel\List\IAveListCollection.cs" />
+    <Compile Include="Common.ObjectModel\List\IAveListDataSource.cs" />
+    <Compile Include="Common.ObjectModel\List\IAveListTemplate.cs" />
+    <Compile Include="Common.ObjectModel\List\IAveListTemplateCollection.cs" />
+    <Compile Include="Common.ObjectModel\Mobile\IAveMobileMessagingAccount.cs" />
+    <Compile Include="Common.ObjectModel\Mobile\IAveMobileUtility.cs" />
+    <Compile Include="Common.ObjectModel\Mobile\IAveOmsMobileFacade.cs" />
+    <Compile Include="Common.ObjectModel\Navigation\AveNavNodeInfo.cs" />
+    <Compile Include="Common.ObjectModel\Navigation\IAveNavigation.cs" />
+    <Compile Include="Common.ObjectModel\Navigation\IAveNavigationNode.cs" />
+    <Compile Include="Common.ObjectModel\Navigation\IAveNavigationNodeCollection.cs" />
+    <Compile Include="Common.ObjectModel\Portal\IAveRatingsSettingsPage.cs" />
+    <Compile Include="Common.ObjectModel\Publishing\IAveContentTypeIdPub.cs" />
+    <Compile Include="Common.ObjectModel\Publishing\IAvePageLayout.cs" />
+    <Compile Include="Common.ObjectModel\Publishing\IAvePublishingPage.cs" />
+    <Compile Include="Common.ObjectModel\Publishing\IAvePublishingPageCollection.cs" />
+    <Compile Include="Common.ObjectModel\Publishing\IAvePublishingSite.cs" />
+    <Compile Include="Common.ObjectModel\Publishing\IAvePublishingWeb.cs" />
+    <Compile Include="Common.ObjectModel\Quota\IAveQuota.cs" />
+    <Compile Include="Common.ObjectModel\Quota\IAveQuotaTemplate.cs" />
+    <Compile Include="Common.ObjectModel\Quota\IAveQuotaTemplateCollection.cs" />
+    <Compile Include="Common.ObjectModel\RecycleBin\IAveRecycleBinItemCollection.cs" />
+    <Compile Include="Common.ObjectModel\RecycleBin\IRecycleBinItem.cs" />
+    <Compile Include="Common.ObjectModel\Report\AveRestoreObjectCommonInfo.cs" />
+    <Compile Include="Common.ObjectModel\Report\AveStatisticsInfo.cs" />
+    <Compile Include="Common.ObjectModel\Request\IAveCommonRequest.cs" />
+    <Compile Include="Common.ObjectModel\Resource\IAveResource.cs" />
+    <Compile Include="Common.ObjectModel\Schedule\IAveDailySchedule.cs" />
+    <Compile Include="Common.ObjectModel\Schedule\IAveHourlySchedule.cs" />
+    <Compile Include="Common.ObjectModel\Schedule\IAveMinuteSchedule.cs" />
+    <Compile Include="Common.ObjectModel\Schedule\IAveMonthlySchedule.cs" />
+    <Compile Include="Common.ObjectModel\Schedule\IAveOneTimeSchedule.cs" />
+    <Compile Include="Common.ObjectModel\Schedule\IAveSchedule.cs" />
+    <Compile Include="Common.ObjectModel\Schedule\IAveWeeklySchedule.cs" />
+    <Compile Include="Common.ObjectModel\Iis\IAveSecureBinding .cs" />
+    <Compile Include="Common.ObjectModel\Security\AveBasePermissions.cs" />
+    <Compile Include="Common.ObjectModel\Security\AveGroupInfo.cs" />
+    <Compile Include="Common.ObjectModel\Security\AveMemberInfo.cs" />
+    <Compile Include="Common.ObjectModel\Security\AveMemberInfoCollection.cs" />
+    <Compile Include="Common.ObjectModel\Security\AveRoleAssignmentInfo.cs" />
+    <Compile Include="Common.ObjectModel\Security\AveRoleInfo.cs" />
+    <Compile Include="Common.ObjectModel\Security\AveSecurityInfo.cs" />
+    <Compile Include="Common.ObjectModel\Security\AveUserInfo.cs" />
+    <Compile Include="Common.ObjectModel\Security\IAveFarmManagedAccountCollection .cs" />
+    <Compile Include="Common.ObjectModel\Security\IAveGroup.cs" />
+    <Compile Include="Common.ObjectModel\Security\IAveGroupCollection.cs" />
+    <Compile Include="Common.ObjectModel\Security\IAveManagedAccount.cs" />
+    <Compile Include="Common.ObjectModel\Security\IAveMember.cs" />
+    <Compile Include="Common.ObjectModel\Security\IAvePrincipal.cs" />
+    <Compile Include="Common.ObjectModel\Security\IAveRoleAssignment.cs" />
+    <Compile Include="Common.ObjectModel\Security\IAveRoleAssignmentCollection.cs" />
+    <Compile Include="Common.ObjectModel\Security\IAveRoleDefinition.cs" />
+    <Compile Include="Common.ObjectModel\Security\IAveRoleDefinitionBindingCollection.cs" />
+    <Compile Include="Common.ObjectModel\Security\IAveRoleDefinitionCollection.cs" />
+    <Compile Include="Common.ObjectModel\Security\IAveSecurableObject.cs" />
+    <Compile Include="Common.ObjectModel\Security\IAveSecurity.cs" />
+    <Compile Include="Common.ObjectModel\Security\IAveUser.cs" />
+    <Compile Include="Common.ObjectModel\Security\IAveUserCollection.cs" />
+    <Compile Include="Common.ObjectModel\Security\IAveUserToken.cs" />
+    <Compile Include="Common.ObjectModel\Server\IAveServer.cs" />
+    <Compile Include="Common.ObjectModel\Server\IAveWebServer.cs" />
+    <Compile Include="Common.ObjectModel\Server\IAveWebServerCollection.cs" />
+    <Compile Include="Common.ObjectModel\Server\IAveServerCollection.cs" />
+    <Compile Include="Common.ObjectModel\Server\IAveServerProductInfo.cs" />
+    <Compile Include="Common.ObjectModel\Service\IAveDiagnosticsService.cs" />
+    <Compile Include="Common.ObjectModel\Service\IAveServiceApplicationProxy.cs" />
+    <Compile Include="Common.ObjectModel\Service\IAveServiceApplicationProxyCollection.cs" />
+    <Compile Include="Common.ObjectModel\Service\IAveServiceApplicationProxyGroup.cs" />
+    <Compile Include="Common.ObjectModel\Service\IAveServiceCollection.cs" />
+    <Compile Include="Common.ObjectModel\Service\IAveOutboundMailServiceInstance.cs" />
+    <Compile Include="Common.ObjectModel\Service\IAveService.cs" />
+    <Compile Include="Common.ObjectModel\Service\IAveServiceInstance.cs" />
+    <Compile Include="Common.ObjectModel\Service\IAveServiceInstanceDependencyCollection.cs" />
+    <Compile Include="Common.ObjectModel\Service\IAveUserCodeService.cs" />
+    <Compile Include="Common.ObjectModel\Service\IAveWebService.cs" />
+    <Compile Include="Common.ObjectModel\Service\IAveIncomingEmailService.cs" />
+    <Compile Include="Common.ObjectModel\Service\IAveServiceInstanceCollection .cs" />
+    <Compile Include="Common.ObjectModel\Site\AveSiteInfo.cs" />
+    <Compile Include="Common.ObjectModel\Site\IAveSite.cs" />
+    <Compile Include="Common.ObjectModel\Service\IAveTimerService.cs" />
+    <Compile Include="Common.ObjectModel\Site\IAveSiteCollection.cs" />
+    <Compile Include="Common.ObjectModel\Solution\IAveBlockedSolution.cs" />
+    <Compile Include="Common.ObjectModel\Solution\IAveBlockedSolutionCollection.cs" />
+    <Compile Include="Common.ObjectModel\Solution\IAveSolution.cs" />
+    <Compile Include="Common.ObjectModel\Solution\IAveSolutionCollection.cs" />
+    <Compile Include="Common.ObjectModel\Solution\IAveUserSolution .cs" />
+    <Compile Include="Common.ObjectModel\Solution\IAveUserSolutionCollection.cs" />
+    <Compile Include="Common.ObjectModel\Taxonomy\IAveTermStoreSerializer.cs" />
+    <Compile Include="Common.ObjectModel\UI\IConversionPage.cs" />
+    <Compile Include="Common.ObjectModel\Upgrade\IAveManager.cs" />
+    <Compile Include="Common.ObjectModel\Upgrade\IAveUpgradeSession.cs" />
+    <Compile Include="Common.ObjectModel\Upgrade\IAveUpgradeSessionCollection.cs" />
+    <Compile Include="Common.ObjectModel\Utilities\AveSimpleDate.cs" />
+    <Compile Include="Common.ObjectModel\Utilities\IAveDateOptions.cs" />
+    <Compile Include="Common.ObjectModel\Utilities\IAveExecutionTimeCounter.cs" />
+    <Compile Include="Common.ObjectModel\Utilities\IAvePropertyBag.cs" />
+    <Compile Include="Common.ObjectModel\Utilities\IAveThmxTheme.cs" />
+    <Compile Include="Common.ObjectModel\Utilities\IAveUtility.cs" />
+    <Compile Include="Common.ObjectModel\View\AveViewInfo.cs" />
+    <Compile Include="Common.ObjectModel\View\IAveView.cs" />
+    <Compile Include="Common.ObjectModel\View\IAveViewCollection.cs" />
+    <Compile Include="Common.ObjectModel\View\IAveViewStyle.cs" />
+    <Compile Include="Common.ObjectModel\View\IAveViewStyleCollection.cs" />
+    <Compile Include="Common.ObjectModel\WebApplication\AveWebApplicatinInfo.cs" />
+    <Compile Include="Common.ObjectModel\WebApplication\IAveDataRetrievalProvider.cs" />
+    <Compile Include="Common.ObjectModel\WebApplication\IAveFormDigestSettings.cs" />
+    <Compile Include="Common.ObjectModel\WebApplication\IAveHttpThrottleSettings.cs" />
+    <Compile Include="Common.ObjectModel\WebApplication\IAvePrefix.cs" />
+    <Compile Include="Common.ObjectModel\WebApplication\IAvePrefixCollection.cs" />
+    <Compile Include="Common.ObjectModel\WebApplication\IAveSiteSubscriptionIdentifier.cs" />
+    <Compile Include="Common.ObjectModel\WebApplication\IAveSiteSubscriptionSettings.cs" />
+    <Compile Include="Common.ObjectModel\WebApplication\IAveWebApplication.cs" />
+    <Compile Include="Common.ObjectModel\WebApplication\IAveWebApplicationBuilder.cs" />
+    <Compile Include="Common.ObjectModel\WebApplication\IAveWebApplicationCollection.cs" />
+    <Compile Include="Common.ObjectModel\WebPart\AveWebPartBaseInfo.cs" />
+    <Compile Include="Common.ObjectModel\WebPart\IAveCompressedXmlReader.cs" />
+    <Compile Include="Common.ObjectModel\WebPart\IAveDataFormWebPart.cs" />
+    <Compile Include="Common.ObjectModel\WebPart\IAveLimitedWebPartCollection.cs" />
+    <Compile Include="Common.ObjectModel\WebPart\IAveLimitedWebPartManager.cs" />
+    <Compile Include="Common.ObjectModel\WebPart\IAveListFormWebPart.cs" />
+    <Compile Include="Common.ObjectModel\WebPart\IAveListViewWebPart.cs" />
+    <Compile Include="Common.ObjectModel\WebPart\IAveListWebPart.cs" />
+    <Compile Include="Common.ObjectModel\WebPart\IAveMembersWebPart.cs" />
+    <Compile Include="Common.ObjectModel\WebPart\IAveWebPart.cs" />
+    <Compile Include="Common.ObjectModel\WebPart\IAveWebPartCollection.cs" />
+    <Compile Include="Common.ObjectModel\WebPart\IAveXsltListFormWebPart.cs" />
+    <Compile Include="Common.ObjectModel\WebPart\IAveXsltListViewWebPart.cs" />
+    <Compile Include="Common.ObjectModel\Web\AveWebInfo.cs" />
+    <Compile Include="Common.ObjectModel\Web\IAveLanguage.cs" />
+    <Compile Include="Common.ObjectModel\Web\IAveLanguageCollection .cs" />
+    <Compile Include="Common.ObjectModel\Web\IAveRegionalSettings.cs" />
+    <Compile Include="Common.ObjectModel\Web\IAveTimeZone.cs" />
+    <Compile Include="Common.ObjectModel\Web\IAveWeb.cs" />
+    <Compile Include="Common.ObjectModel\Web\IAveWebCollection.cs" />
+    <Compile Include="Common.ObjectModel\Web\IAveWebSerializer.cs" />
+    <Compile Include="Common.ObjectModel\Web\IAveWebSettingSerializer.cs" />
+    <Compile Include="Common.ObjectModel\Web\IAveWebTemplate.cs" />
+    <Compile Include="Common.ObjectModel\Web\IAveWebTemplateCollection.cs" />
+    <Compile Include="Common.ObjectModel\Workflow\IAveEventManager.cs" />
+    <Compile Include="Common.ObjectModel\Workflow\IAveWebPartPagesWebService.cs" />
+    <Compile Include="Common.ObjectModel\Workflow\IAveWorkflow.cs" />
+    <Compile Include="Common.ObjectModel\Workflow\IAveWorkflowAssociation.cs" />
+    <Compile Include="Common.ObjectModel\Workflow\IAveWorkflowAssociationCollection.cs" />
+    <Compile Include="Common.ObjectModel\Workflow\IAveWorkflowCollection.cs" />
+    <Compile Include="Common.ObjectModel\Workflow\IAveWorkflowElement.cs" />
+    <Compile Include="Common.ObjectModel\Workflow\IAveWorkflowInternalTaskCollection.cs" />
+    <Compile Include="Common.ObjectModel\Workflow\IAveWorkflowManager.cs" />
+    <Compile Include="Common.ObjectModel\Workflow\IAveWorkflowService.cs" />
+    <Compile Include="Common.ObjectModel\Workflow\IAveWorkflowTask.cs" />
+    <Compile Include="Common.ObjectModel\Workflow\IAveWorkflowTaskCollection.cs" />
+    <Compile Include="Common.ObjectModel\Workflow\IAveWorkflowTemplate.cs" />
+    <Compile Include="Common.ObjectModel\Workflow\IAveWorkflowTemplateCollection.cs" />
+    <Compile Include="Common.ObjectModel\Workflow\IAveWorkflowTemplateIdSet.cs" />
+    <Compile Include="Common.ObjectModel\Workflow\WorkflowInfo.cs" />
+    <Compile Include="Common.Utility\ArgumentCheck.cs" />
+    <Compile Include="Common.Utility\AveAdministrationServiceUtilities.cs" />
+    <Compile Include="Common.Utility\AveAssemblyUtility.cs" />
+    <Compile Include="Common.Utility\AveAuthenticationUtility.cs" />
+    <Compile Include="Common.Utility\AveCompressedUtility.cs" />
+    <Compile Include="Common.Utility\AveCompressedXmlReader.cs" />
+    <Compile Include="Common.Utility\AveConvert.cs" />
+    <Compile Include="Common.Utility\AveCoordinatedStream.cs" />
+    <Compile Include="Common.Utility\AveDatabaseStatusChecker.cs" />
+    <Compile Include="Common.Utility\AveDirectoryServiceUtility.cs" />
+    <Compile Include="Common.Utility\AveEnv.cs" />
+    <Compile Include="Common.Utility\AveEnvironment.cs" />
+    <Compile Include="Exception\AveException.cs" />
+    <Compile Include="Common.Utility\AveFBAUtility.cs" />
+    <Compile Include="Common.Utility\AveHtmlUtility.cs" />
+    <Compile Include="Common.Utility\AveHttpUtility.cs" />
+    <Compile Include="Common.Utility\AveIOHelper.cs" />
+    <Compile Include="Common.Utility\AveJsonIgnore.cs" />
+    <Compile Include="Common.Utility\AveLanguageProcesser.cs" />
+    <Compile Include="Common.Utility\AveObjectCopy.cs" />
+    <Compile Include="Common.Utility\AvePerformanceMonitor.cs" />
+    <Compile Include="Common.Utility\AvePerformanceScope.cs" />
+    <Compile Include="Common.Utility\AvePermissionChecker.cs" />
+    <Compile Include="Common.Utility\AveRBSUtiliy.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common.Utility\AveReadOnlyDictionary.cs" />
+    <Compile Include="Common.Utility\AveReflectionUtility.cs" />
+    <Compile Include="Common.Utility\AveReplaceProcessor.cs" />
+    <Compile Include="Common.Utility\AveSPResource.cs" />
+    <Compile Include="Common.Utility\AveSqlColumnInfoManager.cs" />
+    <Compile Include="Common.Utility\AveSqlUtility.cs" />
+    <Compile Include="Common.Utility\AveTaxonomyFieldUtility.cs" />
+    <Compile Include="Common.Utility\AveTimeZoneUtility.cs" />
+    <Compile Include="Common.Utility\AveUrlUtility.cs" />
+    <Compile Include="Common.Utility\AveUserUtility.cs" />
+    <Compile Include="Common.Utility\AveWebPartNameTable.cs" />
+    <Compile Include="Common.Utility\AveXmlSerializer.cs" />
+    <Compile Include="Common.Utility\AveTypeHelper.cs" />
+    <Compile Include="Common.Utility\BlockingQueue.cs" />
+    <Compile Include="Common.Utility\ChunckedCacheReader.cs" />
+    <Compile Include="Common.Utility\ChunckedCacheWriter.cs" />
+    <Compile Include="Common.Utility\ChunkedFileStreamManager.cs" />
+    <Compile Include="Common.Utility\CookieCacheCollection.cs" />
+    <Compile Include="Common.Utility\CountdownLatch.cs" />
+    <Compile Include="Common.Utility\EventReceiverUtility.cs" />
+    <Compile Include="Common.Utility\GAPolicyHelper.cs" />
+    <Compile Include="Common.ObjectModel\Utilities\IAveColor.cs" />
+    <Compile Include="Common.ObjectModel\Utilities\IAveFont.cs" />
+    <Compile Include="Common.ObjectModel\Utilities\IAveTheme.cs" />
+    <Compile Include="Common.ObjectModel\Utilities\IAveThemeColor.cs" />
+    <Compile Include="Common.ObjectModel\Utilities\IAveThemeFont.cs" />
+    <Compile Include="Common.Utility\IBlockedStreamManager.cs" />
+    <Compile Include="Common.Utility\IChunckedCacheReader.cs" />
+    <Compile Include="Common.Utility\IChunckedCacheWriter.cs" />
+    <Compile Include="Common.Utility\IChunkedStreamManager.cs" />
+    <Compile Include="Common.Utility\LockerDispatcher.cs" />
+    <Compile Include="Common.Utility\SafeExecutor.cs" />
+    <Compile Include="Common.Utility\SPOnlineAuthentication.cs" />
+    <Compile Include="Common.Utility\TaskExecutor.cs" />
+    <Compile Include="Common.Utility\WinInetNativeMethods.cs" />
+    <Compile Include="ContextInstanceMode.cs" />
+    <Compile Include="Exception\AveWrapperErrorCode.cs" />
+    <Compile Include="Exception\AveWrapperException.cs" />
+    <Compile Include="Exception\AveWrapperSkipException.cs" />
+    <Compile Include="Exception\AveWrapperWorkflowException.cs" />
+    <Compile Include="IAveDiscoveryQuery.cs" />
+    <Compile Include="IAveOSearchObjectFilter.cs" />
+    <Compile Include="IAveQuery.cs" />
+    <Compile Include="QueryService\IAveAuditorQueryService.cs" />
+    <Compile Include="QueryService\IAveConnectorQueryService.cs" />
+    <Compile Include="QueryService\IAveQueryDataReader.cs" />
+    <Compile Include="QueryService\IAveQueryService.cs" />
+    <Compile Include="IAveSerializationSurrogate.cs" />
+    <Compile Include="InternalStream\AveMetadata.cs" />
+    <Compile Include="InternalStream\AveRestoreProtocolAnalyzer.cs" />
+    <Compile Include="InternalStream\AveRestoreProtocolHeader.cs" />
+    <Compile Include="InternalStream\AveSPFileStream.cs" />
+    <Compile Include="InternalStream\BackupStream\IAveBackupStream.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QueryService\IAveBackupRestoreQueryService.cs" />
+    <Compile Include="QueryService\IAveCommonQueryService.cs" />
+    <Compile Include="QueryService\IAveDiscoverQueryService.cs" />
+    <Compile Include="QueryService\IAveReportCenterQueryService.cs" />
+    <Compile Include="QueryService\IAveSOIntegrationQueryService.cs" />
+    <Compile Include="Report\AveReportObjectType.cs" />
+    <Compile Include="Report\AveWrapperReport.cs" />
+    <Compile Include="Report\AveWrapperReportDto.cs" />
+    <Compile Include="Report\IReport.cs" />
+    <Compile Include="Report\IReportable.cs" />
+    <Compile Include="SP13common\Common.Constants\AveProjectPolicyInfo.cs" />
+    <Compile Include="SP13common\Common.Constants\AveSEOSettings.cs" />
+    <Compile Include="SP13common\Common.Constants\AveVariationSettings.cs" />
+    <Compile Include="SP13common\Common.ObjectModel\IAveFederationManager.cs" />
+    <Compile Include="SP13common\Common.ObjectModel\IAveProjectPolicyItemListUtility.cs" />
+    <Compile Include="SP13common\Common.ObjectModel\IAveQueryTransform.cs" />
+    <Compile Include="SP13common\Common.ObjectModel\IAveSEOSetting.cs" />
+    <Compile Include="SP13common\Common.ObjectModel\IAveVariationSettingsFactory.cs" />
+    <Compile Include="SP13common\WrapperCommonObjectModelExtension.cs" />
+    <Compile Include="StreamConvertor\AIR\FileProtector.cs" />
+    <Compile Include="StreamConvertor\AIR\IPC\ILockBytesOverStream.cs" />
+    <Compile Include="StreamConvertor\AIR\IPC\ManagedAPIClasses.cs" />
+    <Compile Include="StreamConvertor\AIR\IPC\NativeAPIStructures.cs" />
+    <Compile Include="StreamConvertor\AIR\IPC\SafeFileApiNativeMethods.cs" />
+    <Compile Include="StreamConvertor\AIR\IPC\SafeNativeMethods.cs" />
+    <Compile Include="StreamConvertor\AIR\IPC\UnsafeFileApiNativeMethods.cs" />
+    <Compile Include="StreamConvertor\AIR\IPC\UnsafeNativeMethods.cs" />
+    <Compile Include="StreamConvertor\AIR\MSIPCRuntime.cs" />
+    <Compile Include="StreamConvertor\IStreamConvertor.cs" />
+    <Compile Include="StreamConvertor\RMSDecryptor.cs" />
+    <Compile Include="WebPart\AveContentBySearchWebPartUtility.cs" />
+    <Compile Include="WebPart\AveWebPartDefinitionXmlUtility.cs" />
+    <Compile Include="WebPart\AveWebPartUtility.cs" />
+    <Compile Include="WebPart\Client\IWebPartPropertyExtractor.cs" />
+    <Compile Include="WebPart\Client\V2WebPartPropertyExtractor.cs" />
+    <Compile Include="WebPart\Client\V3WebPartPropertyExtractor.cs" />
+    <Compile Include="WebPart\Client\WebPartExtractorFactory.cs" />
+    <Compile Include="WebPart\Client\WebPartPropertyExtractorBase.cs" />
+    <Compile Include="WrapperBackup.cs" />
+    <Compile Include="WrapperCache.cs" />
+    <Compile Include="WrapperConfiguration.cs" />
+    <Compile Include="WrapperConfigurationForBPOSS.cs" />
+    <Compile Include="WrapperContext.cs" />
+    <Compile Include="WrapperRuntime.cs" />
+    <Compile Include="WrapperStateException.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\GCommon\GCommonContract\DocAve.GCommonContract.csproj">
+      <Project>{361F3C7C-ABBF-42D5-975A-65E4E9866068}</Project>
+      <Name>DocAve.GCommonContract</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\GCommon\GCommonFileReceiver\GCommonFileReceiver.csproj">
+      <Project>{1F76A416-ED79-4A0E-8079-8308E44EE98F}</Project>
+      <Name>GCommonFileReceiver</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\GCommon\GCommonFileSender\GCommonFileSender.csproj">
+      <Project>{284A9DB0-5AD7-49A0-AA73-FD5EE781B813}</Project>
+      <Name>GCommonFileSender</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\GCommon\GCommonNetWork\GCommonNetwork.csproj">
+      <Project>{590C8B1E-D973-4CF4-A142-B475131EC4B5}</Project>
+      <Name>GCommonNetwork</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\GCommon\GCommonUtility\DocAve.GCommonUtility.csproj">
+      <Project>{7151E862-A761-4A90-ACE6-37D7442047A6}</Project>
+      <Name>DocAve.GCommonUtility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\GCommon\CommonUtility30\DocAve.CommonUtility30.csproj">
+      <Project>{ABF32DB9-9D2A-4F78-96B5-E2B1FAC08658}</Project>
+      <Name>DocAve.CommonUtility30</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Wrapper.CustomUtility\Wrapper.CustomUtility.csproj">
+      <Project>{5ff18312-8da2-4abf-bc20-805a18065db6}</Project>
+      <Name>Wrapper.CustomUtility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Wrapper.Resource\Wrapper.Resource.csproj">
+      <Project>{F977BD26-9DD0-4B6D-95DA-58096DCA1913}</Project>
+      <Name>Wrapper.Resource</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="AgentCommonWrapperConfig.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="app.config" />
+    <None Include="DocAveStandard.snk" />
+    <None Include="packages.config" />
+    <None Include="RolesSet\WrapperRuleSet.ruleset">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="MossConfig.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AdfsProtocol.xml" />
+    <EmbeddedResource Include="Common.Utility\NintexForm\PlaceholderLabel.txt" />
+    <Content Include="InternalStream\Documents\Wrapper备份数据存储格式_V0.0.txt" />
+    <Content Include="InternalStream\Documents\Wrapper备份数据存储格式_V1.0.txt" />
+    <Content Include="InternalStream\Project\ProjectSerializerDataSample.xml" />
+    <Content Include="RolesSet\FxCopCustomRules.dll" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

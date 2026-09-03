@@ -1,0 +1,164 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>AvePoint.RA.Api.Web</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <OutputPath>bin\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <EnableUnsafeBinaryFormatterSerialization>true</EnableUnsafeBinaryFormatterSerialization>
+  </PropertyGroup>
+  <ItemGroup>
+    <Antlr4 Remove="App_Start\**" />
+    <Antlr4 Remove="Views\**" />
+    <Compile Remove="App_Start\**" />
+    <Compile Remove="Views\**" />
+    <Content Remove="App_Start\**" />
+    <Content Remove="Views\**" />
+    <EmbeddedResource Remove="App_Start\**" />
+    <EmbeddedResource Remove="Views\**" />
+    <EntityDeploy Remove="App_Start\**" />
+    <EntityDeploy Remove="Views\**" />
+    <None Remove="App_Start\**" />
+    <None Remove="Views\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Common\WindsorControllerFactory.cs" />
+    <Compile Remove="Common\WindsorHttpControllerActivator.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Update="appsettings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Config\ApiLog4net.dev.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Update="Config\BrowserLog4net.dev.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Update="Config\Castle\ServiceCastle.config">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Config\ApiLog4net.config">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Config\Castle\BrowserServiceCastle.config">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Config\BrowserLog4net.config">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\RACommon\ServiceVersion\ServiceVersion.config">
+      <Link>Config\ServiceVersion\ServiceVersion.config</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Config\File Plan Import Template.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="..\Media\Media.Common\SDS-SEE.exml" Link="SDS-SEE.exml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Common\GlobalCommon\GCommonContract\DocAve.GCommonContract.csproj" />
+    <ProjectReference Include="..\Common\GlobalCommon\GCommonUtility\DocAve.GCommonUtility.csproj" />
+    <ProjectReference Include="..\Common\MediaStorage\Media.StorageApi\Media.StorageApi.csproj" />
+    <ProjectReference Include="..\Hybrid\Hybrid.ClientLibrary\Hybrid.ClientLibrary.csproj" />
+    <ProjectReference Include="..\Hybrid\Hybrid.Contract\Hybrid.Contract.csproj" />
+    <ProjectReference Include="..\RAApi.Contract\RAApi.Contract.csproj" />
+    <ProjectReference Include="..\RAApi.Services\RAApi.Services.csproj" />
+    <ProjectReference Include="..\RABrowser\RABrowser.csproj" />
+    <ProjectReference Include="..\RACommon.Global\RACommon.Global.csproj" />
+    <ProjectReference Include="..\RACommonUtility\RACommonUtility.csproj" />
+    <ProjectReference Include="..\RACommon\RACommon.csproj" />
+    <ProjectReference Include="..\RAContract.Global\RAContract.Global.csproj" />
+    <ProjectReference Include="..\RAContract\RAContract.csproj" />
+    <ProjectReference Include="..\RADataBroker\RADataBroker.csproj" />
+    <ProjectReference Include="..\RADB\RADB.csproj" />
+    <ProjectReference Include="..\RAI18N\RAI18N.csproj" />
+    <ProjectReference Include="..\RAService\RAService.csproj" />
+    <ProjectReference Include="..\RAWebExtensions\RAWebExtensions.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="AWSSDK.S3" Version="4.0.17.3" />
+    <PackageReference Include="Cloud.sdk.Data.Opus" Version="5.10.26" />
+    <PackageReference Include="Cloud.sdk.Data.Records" Version="3.8.9" />
+    <PackageReference Include="Cloud.Sdk.MyHub" Version="6.4.118" />
+    <PackageReference Include="log4net" Version="3.3.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Server.Kestrel.Transport.Libuv" Version="6.0.36" />
+    <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="6.1.4" />
+    <PackageReference Include="Microsoft.Identity.Web" Version="4.3.0" />
+    <PackageReference Include="Microsoft.IdentityModel.Protocols.OpenIdConnect" Version="8.15.0" />
+    <PackageReference Include="Modernizr" Version="2.8.3" />
+    <PackageReference Include="Newtonsoft.Json.Bson" Version="1.0.3" />
+    <PackageReference Include="NSwag.AspNetCore" Version="14.6.3" />
+    <PackageReference Include="NSwag.MSBuild" Version="14.6.3">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0" />
+    <PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
+    <PackageReference Include="Microsoft.DotNet.UpgradeAssistant.Extensions.Default.Analyzers" Version="0.4.421302">
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Antlr4" Version="4.6.6" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="8.0.19" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.9.0" />
+    <PackageReference Include="System.Private.Uri" Version="4.3.2" />
+    <PackageReference Include="System.Text.RegularExpressions" Version="4.3.1" />
+    <PackageReference Include="util.ai.text.extractor" Version="6.10.11" />
+    <PackageReference Include="util.database" Version="5.4.6" PrivateAssets="analyzers" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="Properties\launchSettings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>..\DocaveReference\DocAveStandard.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <Target Condition="'$(Configuration)' == 'Debug'" Name="CopyAppSettings" BeforeTargets="PrepareForBuild">
+    <Copy SourceFiles="$(ProjectDir)..\build\AppConfig\appsettings.json" DestinationFolder="$(ProjectDir)" />
+  </Target>
+  <PropertyGroup Condition="'$(Configuration)'!='DEBUG'">
+    <CopyBadgeCoreFiles Condition="'$(CopyBadgeCoreFiles)' == ''">false</CopyBadgeCoreFiles>
+    <CopyHarpyLibraryFiles Condition="'$(CopyHarpyLibraryFiles)' == ''">false</CopyHarpyLibraryFiles>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SkipNSwagOnBuild Condition="'$(SkipNSwagOnBuild)' == ''">false</SkipNSwagOnBuild>
+  </PropertyGroup>
+  <Target Name="PostCopyHarpyCoreFilesAfterBuild" AfterTargets="Build">
+    <ItemGroup>
+      <HarpyPackageCoreFiles Include="$(TargetDir)lib\Harpy1.0\Harpy.dll" />
+    </ItemGroup>
+    <Copy SourceFiles="@(HarpyPackageCoreFiles)" DestinationFolder="$(TargetDir)" SkipUnchangedFiles="false" Condition="Exists(@(HarpyPackageCoreFiles))" />
+    <Copy SourceFiles="@(HarpyPackageCoreFiles)" DestinationFolder="$(PublishDir)" SkipUnchangedFiles="false" Condition="Exists(@(HarpyPackageCoreFiles))" />
+  </Target>
+  <Target Name="PostCopyHarpyLibraryFilesAfterBuild" AfterTargets="Build">
+    <ItemGroup>
+      <HarpyPackageLibraryFiles Include="$(TargetDir)lib\**\*" />
+    </ItemGroup>
+    <Copy SourceFiles="@(HarpyPackageLibraryFiles)" DestinationFolder="$(PublishDir)\lib\%(RecursiveDir)" SkipUnchangedFiles="false" Condition="Exists(@(HarpyPackageLibraryFiles))" />
+  </Target>
+
+  <Target Name="NSwag" AfterTargets="PostBuildEvent"
+    Condition=" '$(Configuration)' == 'Debug' and '$(SkipNSwagOnBuild)' != 'true' ">
+    <Exec WorkingDirectory="$(ProjectDir)" EnvironmentVariables="ASPNETCORE_ENVIRONMENT=Development"
+      Command="$(NSwagExe_Net80) aspnetcore2openapi /verbose:true /project:RAApi.Web.csproj /nobuild:true /output:OpenRAWebAPI-Opus.json" />
+  </Target>
+</Project>

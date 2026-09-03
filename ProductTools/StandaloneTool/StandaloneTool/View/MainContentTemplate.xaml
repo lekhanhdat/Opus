@@ -1,0 +1,128 @@
+﻿<!--/********************************************************************
+ *
+ *  PROPRIETARY and CONFIDENTIAL
+ *
+ *  This file is licensed from, and is a trade secret of:
+ *
+ *                   AvePoint, Inc.
+ *                   525 Washington Blvd, Suite 1400
+ *                   Jersey City, NJ 07310
+ *                   United States of America
+ *                   Telephone: +1-201-793-1111
+ *                   WWW: www.avepoint.com
+ *
+ *  Refer to your License Agreement for restrictions on use,
+ *  duplication, or disclosure.
+ *
+ *  RESTRICTED RIGHTS LEGEND
+ *
+ *  Use, duplication, or disclosure by the Government is
+ *  subject to restrictions as set forth in subdivision
+ *  (c)(1)(ii) of the Rights in Technical Data and Computer
+ *  Software clause at DFARS 252.227-7013 (Oct. 1988) and
+ *  FAR 52.227-19 (C) (June 1987).
+ *
+ *  Copyright © 2017-2026 AvePoint® Inc. All Rights Reserved. 
+ *
+ *  Unpublished - All rights reserved under the copyright laws of the United States.
+ */-->
+<!--
+/********************************************************************
+*
+*  PROPRIETARY and CONFIDENTIAL
+*
+*  This file is licensed from, and is a trade secret of:
+*
+*                   AvePoint, Inc.
+*                   525 Washington Blvd, Suite 1400
+*                   Jersey City, NJ 07310
+*                   United States of America
+*                   Telephone: +1-201-793-1111
+*                   WWW: www.avepoint.com
+*
+*  Refer to your License Agreement for restrictions on use,
+*  duplication, or disclosure.
+*
+*  RESTRICTED RIGHTS LEGEND
+*
+*  Use, duplication, or disclosure by the Government is
+*  subject to restrictions as set forth in subdivision
+*  (c)(1)(ii) of the Rights in Technical Data and Computer
+*  Software clause at DFARS 252.227-7013 (Oct. 1988) and
+*  FAR 52.227-19 (C) (June 1987).
+*
+*  Copyright © 2017-2024 AvePoint® Inc. All Rights Reserved.
+*
+*  Unpublished - All rights reserved under the copyright laws of the United States.
+*/
+-->
+<!--
+/********************************************************************
+*
+*  PROPRIETARY and CONFIDENTIAL
+*
+*  This file is licensed from, and is a trade secret of:
+*
+*                   AvePoint, Inc.
+*                   525 Washington Blvd, Suite 1400
+*                   Jersey City, NJ 07310
+*                   United States of America
+*                   Telephone: +1-201-793-1111
+*                   WWW: www.avepoint.com
+*
+*  Refer to your License Agreement for restrictions on use,
+*  duplication, or disclosure.
+*
+*  RESTRICTED RIGHTS LEGEND
+*
+*  Use, duplication, or disclosure by the Government is
+*  subject to restrictions as set forth in subdivision
+*  (c)(1)(ii) of the Rights in Technical Data and Computer
+*  Software clause at DFARS 252.227-7013 (Oct. 1988) and
+*  FAR 52.227-19 (C) (June 1987).
+*
+*  Copyright © 2017-2024 AvePoint® Inc. All Rights Reserved.
+*
+*  Unpublished - All rights reserved under the copyright laws of the United States.
+*/
+-->
+<Page
+    x:Class="StandaloneTool.View.MainContentTemplate"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:commands="clr-namespace:StandaloneTool.View.Model.Command"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    d:DesignHeight="600"
+    d:DesignWidth="780"
+    DataContext="{x:Static commands:BaseDataContext.Instance}"
+    mc:Ignorable="d">
+    <Grid Margin="0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="619*" />
+            <ColumnDefinition Width="161*" />
+            <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Frame
+            Grid.Row="1"
+            Grid.ColumnSpan="2"
+            HorizontalAlignment="Stretch"
+            VerticalAlignment="Stretch"
+            IsTabStop="False"
+            Source="{Binding NavigationOperator.LeftFrameSource}" />
+        <Grid
+            Grid.Row="0"
+            Grid.ColumnSpan="2"
+            Background="#1188EE">
+            <Frame
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                IsTabStop="False"
+                Source="{Binding NavigationOperator.TopFrameSource}" />
+        </Grid>
+    </Grid>
+</Page>

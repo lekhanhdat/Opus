@@ -1,0 +1,68 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFramework>net10.0</TargetFramework>
+		<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+		<AutoGenerateBindingRedirects>false</AutoGenerateBindingRedirects>
+		<OutputType>Library</OutputType>
+		<AssemblyName>AgentCommonWrapperWorkflow</AssemblyName>
+	</PropertyGroup>
+	<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+		<OutputPath>..\..\..\bin\Debug\</OutputPath>
+	</PropertyGroup>
+	<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+		<OutputPath>..\..\..\bin\Release\</OutputPath>
+	</PropertyGroup>
+	<PropertyGroup>
+		<SignAssembly>true</SignAssembly>
+		<AssemblyOriginatorKeyFile>..\..\..\DocaveReference\DocAveStandard.snk</AssemblyOriginatorKeyFile>
+	</PropertyGroup>
+	<PropertyGroup>
+		<EnableUnsafeBinaryFormatterSerialization>true</EnableUnsafeBinaryFormatterSerialization>
+	</PropertyGroup>
+	<ItemGroup>
+		<Compile Remove="LS.BinarySerialization.Replacer\Analysis\**" />
+		<Compile Remove="LS.BinarySerialization.Replacer\BinaryObjectReader\**" />
+		<EmbeddedResource Remove="LS.BinarySerialization.Replacer\Analysis\**" />
+		<EmbeddedResource Remove="LS.BinarySerialization.Replacer\BinaryObjectReader\**" />
+		<None Remove="LS.BinarySerialization.Replacer\Analysis\**" />
+		<None Remove="LS.BinarySerialization.Replacer\BinaryObjectReader\**" />
+	</ItemGroup>
+	<ItemGroup>
+		<Compile Remove="LS.BinarySerialization.Replacer\BinarySerializationCommonFiles\LS.BinaryAssemblyInfo.cs" />
+		<Compile Remove="LS.BinarySerialization.Replacer\BinarySerializationCommonFiles\LS.BinaryCommonClasses.cs" />
+		<Compile Remove="LS.BinarySerialization.Replacer\BinarySerializationCommonFiles\LS.BinaryConverter.cs" />
+		<Compile Remove="LS.BinarySerialization.Replacer\BinarySerializationCommonFiles\LS.Converter.cs" />
+		<Compile Remove="LS.BinarySerialization.Replacer\BinarySerializationCommonFiles\LS.HighPerformanceTimer.cs" />
+		<Compile Remove="LS.BinarySerialization.Replacer\BinarySerializationCommonFiles\LS.InternalFE.cs" />
+		<Compile Remove="LS.BinarySerialization.Replacer\BinarySerializationCommonFiles\LS.LSResource.cs" />
+		<Compile Remove="LS.BinarySerialization.Replacer\BinarySerializationCommonFiles\LS.ObjectProgress.cs" />
+		<Compile Remove="LS.BinarySerialization.Replacer\BinarySerializationCommonFiles\LS.SizedArray.cs" />
+		<Compile Remove="LS.BinarySerialization.Replacer\LS.BinarySerialization.Replacer.cs" />
+	</ItemGroup>
+	<ItemGroup>
+		<Reference Include="Nintex.Workflow, Version=1.0.0.0, Culture=neutral, PublicKeyToken=913f6bae0ca5ae12, processorArchitecture=MSIL">
+			<SpecificVersion>False</SpecificVersion>
+			<HintPath>..\..\..\DocaveReference\Nintex.Workflow.dll</HintPath>
+		</Reference>
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\..\..\Common\GlobalCommon\GCommonUtility\DocAve.GCommonUtility.csproj" />
+		<ProjectReference Include="..\..\GlobalCommon\GCommon.Extension\GCommon.Extension.csproj" />
+		<ProjectReference Include="..\..\VCService30\CommonUtility30\DocAve.CommonUtility30.csproj" />
+		<ProjectReference Include="..\Wrapper.Common\Wrapper.Common.csproj" />
+		<ProjectReference Include="..\Wrapper.Resource\Wrapper.Resource.csproj" />
+	</ItemGroup>
+	<ItemGroup>
+		<None Include="..\..\..\DocaveReference\DocAveStandard.snk">
+			<Link>DocAveStandard.snk</Link>
+		</None>
+	</ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="log4net" Version="3.3.1" />
+		<PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
+		<PackageReference Include="Microsoft.DotNet.UpgradeAssistant.Extensions.Default.Analyzers" Version="0.4.421302">
+			<PrivateAssets>all</PrivateAssets>
+		</PackageReference>
+	</ItemGroup>
+</Project>

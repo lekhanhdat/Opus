@@ -1,0 +1,100 @@
+﻿/********************************************************************
+ *
+ *  PROPRIETARY and CONFIDENTIAL
+ *
+ *  This file is licensed from, and is a trade secret of:
+ *
+ *                   AvePoint, Inc.
+ *                   525 Washington Blvd, Suite 1400
+ *                   Jersey City, NJ 07310
+ *                   United States of America
+ *                   Telephone: +1-201-793-1111
+ *                   WWW: www.avepoint.com
+ *
+ *  Refer to your License Agreement for restrictions on use,
+ *  duplication, or disclosure.
+ *
+ *  RESTRICTED RIGHTS LEGEND
+ *
+ *  Use, duplication, or disclosure by the Government is
+ *  subject to restrictions as set forth in subdivision
+ *  (c)(1)(ii) of the Rights in Technical Data and Computer
+ *  Software clause at DFARS 252.227-7013 (Oct. 1988) and
+ *  FAR 52.227-19 (C) (June 1987).
+ *
+ *  Copyright © 2017-2026 AvePoint® Inc. All Rights Reserved. 
+ *
+ *  Unpublished - All rights reserved under the copyright laws of the United States.
+ */
+
+
+
+using System.Collections.Generic;
+using System.Runtime.Serialization;
+using AvePoint.GCommon.Contract.Common;
+using AvePoint.GCommon.Contract.Server.ControlPanel.SystemSetting.Object;
+
+
+namespace AvePoint.GCommon.Contract.Server.SingleSignOn.Object
+{
+    /// <summary>
+    /// SingleSignOnSetting  存储SSO登录功能Setting
+    /// </summary>
+    [DataContract(Namespace = ContractConstants.Namespace)]
+    public class SingleSignOnSettingDto : ISystemSettingContent
+    {
+        [DataMember]
+        public string Issuer { get ; set ; } //ADFS  STS 
+        [DataMember]
+        public string Realm { get; set; } // Relying Party Identifier
+        [DataMember]
+        public CertificateDetailDto SignedCertificate { get; set; } //Signed-Cert  must have one at least
+        [DataMember]
+        public CertificateDetailDto EncryptCertificate { get; set; } // encrypt-CERT  
+        [DataMember]
+        public string AudienceUri { get; set; } // the same  urn with ADFS
+        [DataMember]
+        public string MetadataEndpoint { get; set; } // Federation metadata endpoint
+        [DataMember]
+        public string Name { get; set; }
+
+        [DataMember]
+        public string ApplicationUri { get; set; }
+
+
+        [DataMember]
+        public IntegrationMethodType IntegrationMethod { get; set; } // Federation Integration Method
+
+        [DataMember]
+        public List<ClaimTypeMappingDto> ClaimTypeMappings { get; set; }
+
+        [DataMember]
+        public List<ClaimTypeMappingDto> OfferedClaimTypeMappings { get; set; }
+
+        [DataMember]
+        public List<FederationTrustConfigsDto> TrustConfigs { get; set; }
+
+        [DataMember]
+        public List<string> UsedClaimTypes { get; set; }
+ 
+    }
+    [DataContract(Namespace = ContractConstants.Namespace)]
+    public class FederationTrustConfigsDto : ISystemSettingContent
+    {
+        [DataMember]
+        public string Name { get; set; }
+
+        [DataMember]
+        public string Url { get; set; }
+    }
+
+    [DataContract(Namespace = ContractConstants.Namespace)]
+    public enum IntegrationMethodType : int
+    {
+        [EnumMember]
+        Manually = 0,
+
+        [EnumMember]
+        Authomatically = 1,
+    }
+}

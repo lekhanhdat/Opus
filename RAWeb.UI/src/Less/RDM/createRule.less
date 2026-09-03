@@ -1,0 +1,440 @@
+﻿#raCreateRulePanel{
+    .ra-rule-copy-combobox{
+        display: block !important;
+        margin: 8px 0 0 26px;
+    }
+    
+    .ra-rule-relate-term{
+        max-height: 145px;
+        overflow: auto;
+    }
+    
+    .ra-rule-relate-term{
+        max-height: 145px;
+        overflow: auto;
+    }
+    
+    .cr-progress-bar-background{
+        display: flex;
+        width: 100%;
+        border: 1px solid #F7F7F7;
+        border-radius: 7px;
+        padding: 3px;
+        margin-bottom: 8px;
+    }
+    
+    .progress-bar-background-left{
+        height: 8px;    
+        background-color: #0072D0;
+        border-radius: 4px 0 0 4px;
+        text-align: center;
+        width: 50%;
+    }
+    
+    .progress-bar-background-right{
+        height: 8px;
+        background-color: #0072D0;
+        border-radius: 0 4px 4px 0;
+        text-align: center;
+        width: 50%;
+    }
+    
+    .progress-bar-bgc-blank{
+        background-color: #fff;
+    }
+    
+    .cr-progress-text{
+        display: flex;
+        width: 100%;
+        margin-bottom: 32px;
+    }
+
+    .cr-restore-link{
+      display: flex;
+      padding: 8px 0 0 0;
+      font-size: 13px;
+    }
+    
+    .progress-bar-text{
+        width: 50%;
+        text-align: center;
+    }
+    
+    .ra-createRule-criteria-content {
+        border: 1px solid #E5EBEF;
+        padding: 16px;
+        .aui-datepicker{
+            min-width: 0;
+        }
+    }
+    
+    .criteria-column{
+        display: flex;
+        width: 100%
+    }
+    
+    .criteria-column > div{
+        flex: 1;
+        margin-right: 8px;
+        width: 0
+    }
+    
+    .criteria-column > aui-input {
+        display: flex;
+        flex: 1;
+        margin-right: 8px;
+    }
+    
+    .cr-archive-action-children-selection{
+        margin-left: 26px
+    }
+    
+    .sp_tag-metadata-retention-records-label_valid {
+        margin-left: 48px;
+    }
+
+    .sp_tag-metadata-retention_valid{
+        margin-left: 67px;
+    }
+    
+    .rm_export_error{
+        margin-left: 107px;
+    }
+    
+    .width-percent-100{
+        width: 100%
+    }
+    
+    .ra-createRule-title-inline {
+        display: inline-block;
+        height: 34px;
+        line-height: 34px;
+        vertical-align: top;
+        margin-bottom: 7px;
+    }
+    
+    .ra-createRule-title-inline a {
+        color: #0072D0;
+    }
+    
+    .location-title,.sub-options-container{
+        margin-top: 8px;
+    }
+
+    .ra-move-cell {
+      flex: 1;
+      width: 0;
+    }
+
+    .rm-createRule-validation-msg {
+      margin-top: 8px;
+      font: normal normal normal 13px/18px "Open Sans", sans-serif;
+      color: #cc0000;
+    }
+    
+    #rm_createRule_move_container, .rm_createRule_keep_container,#exo_keep_tag_container,
+    .rm-createRule-leaveStubMessage-container,#fsRuleMoveOfFs, .sub-options-container, .ra-cr-remove-archived {
+        margin-left: 26px;
+    }
+
+    #rm_createRule_move_container .ra-tree {
+      max-width: 100%;
+    }
+    
+    .ra-tree-container {
+        border: 1px solid #cccccc;
+        height: 200px;
+        overflow: auto;
+        margin-top: 8px;
+
+        .destination-tab {
+          padding: 0;
+          margin-top: 8px;
+
+          .ra-tree {
+            padding: 0;
+
+            .ra-tree-list {
+              margin-top: 0;           
+            }
+          }
+        }
+    }
+    #keep_undeclare,#keep_tag,#keep_tag_YesorNo,#keep_tag_by,#keep_tag_time,#keep_tag_metadata_container,
+    #keep_tag_retention,.option-title, #rm_createRule_move_declare，#spApprova,#rm_createRule_move_declare,
+    #exoApproval,#oneDriveApproval，#azureFileApproval, #connectorApproval{
+        margin-top: 8px
+    }
+
+    #moveto-records-panel-sp, #moveto-records-panel-exo, #fsRuleMoveOfFs{
+        margin-top: 4px
+    }
+    
+    #keep_tag_container{
+        margin-left: 26px;
+        margin-top: 8px
+    }
+
+    #retentionPolicyCheckbox {
+      #raCrRemoveArchivedChk {
+        .aui-choice-content {
+          font: normal normal 600 14px "Open Sans", sans-serif;
+        }
+      }
+    }
+
+    .cr-archive-remove, .cr-archive-remove-content{
+        margin-left: 26px;
+        margin-top: 4px;
+    }
+
+    .cr-archive-remove-title {
+      margin-bottom: 8px;
+    }
+
+    .archive-remove-time-part3{
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      grid-gap: 8px;
+    }
+
+    .archive-remove-time-part4{
+      display: grid;
+      grid-template-columns: repeat(4,1fr);
+      grid-gap: 8px;
+    }
+
+    .retention-data-radio {
+      text-align: left;
+      font: normal normal normal 13px/18px "Open Sans", sans-serif;
+      color: #27313C;
+      margin: 8px 0;
+    }
+
+    .retention-title {
+      font: normal normal 600 13px/18px "Open Sans", sans-serif;
+      color: #323E4D;
+      margin-bottom: 8px;
+      display: inline-block;
+    }
+
+    .retention-line-top {
+      margin-bottom: 8px;
+
+      >div {
+          display: inline-block;
+      }
+
+      >div,
+      >span {
+          vertical-align: top !important;
+      }
+    }
+
+    .retention-label {
+      line-height: 34px;
+      margin-right: 10px;
+    }
+
+    .retention-tier {
+      margin: 8px 0 0 28px;
+    }
+    
+    .tag-metadata-column,.tag-metadata-retention,#keep_tag_metadata_trueOrfalse,#keep_tag_metadata_date{
+        margin-left: 8px;
+        width: 100%
+    }
+    
+    #exo_keep_declareAsRecord{
+        display: flex;
+        align-items: center;
+    }
+    
+    .location-path{
+        margin-right: 8px;
+    }
+    
+    #metadata_content{
+        margin-left: 26px;
+        margin-top: 8px;
+        display: flex;
+        
+    }
+    
+    .rm_createRule_archiveAction, .file-body, #rm_createRule_move_declare, .move-hold-body {
+        margin-top: 24px
+    }
+    
+    .main-title{
+        font-weight: 600
+    }
+    
+    .ra-createRule-title-exp{
+        white-space:nowrap;
+        font-weight: 600;
+    }
+    
+    #spApproval, #teamsApproval {
+        margin-top: 8px;
+    }
+    
+    #spExport, #teamsExport,#oneDriveExport,#exoExport,#googleExport{
+        margin-top: 16px;
+    }
+
+    .codition-li {
+        list-style: none;
+        margin: 0px;
+        border-collapse: collapse;
+        display: list-item;
+        position: relative;
+    }
+
+    .codition-ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .ra-codition-ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        border-collapse: collapse;
+        display: list-item;
+        position: relative;
+        white-space: nowrap
+    }
+
+    .action-menu-option {
+        padding-right: 18px;
+    }
+
+    #rm_popupTrueOrFase{
+        width: 64px !important;
+        position: absolute;
+        background: white;
+        top: 25px;
+        left: 0;
+        z-Index: 999;
+    }
+
+    .action-menu-option {
+        // border: none;
+        font-size: 14px;
+        background: #fff;
+        padding: 0 5px;
+        margin: 0;
+        width: 100%;
+        min-height: 24px;
+        text-align: left;
+        border: transparent solid 1px;
+        cursor: default;
+        color: #1c1c1c;
+        /*outline: 0;*/
+        text-decoration: none !important;
+    }
+
+    #rm_createRule_TrueOrFalse {
+        text-decoration: underline;
+        color: #0026b3;
+        cursor: pointer;
+        position: relative;
+    }
+
+    //aui
+    #rm_copyAndNew_container{
+        .aui-tabs-underline > .aui-tabs-bar-container .aui-tabs-bars .aui-tabs-bar {
+            max-width: 300px;
+        }
+    }
+
+    #location-vlidat-msg{
+      margin-top: 8px;
+    }
+
+    .ra-cr-form-row{
+      margin-top: 24px;
+    }
+
+    .ra-cr-form-row .ra-form-label{
+      font-size: 14px;
+      margin-bottom: 0
+    }
+
+    .cr-normal-valid-msg{
+      font-style: italic;
+      font-size: 13px;
+      margin-top: 4px;
+      width: calc(100% - 42px);
+    }
+
+    .cr-short-valid-msg{
+      font-style: italic;
+      font-size: 13px;
+      margin-top: 4px;
+      width: calc(100% - 70px);
+    }
+
+    .ra-createRule-note {
+      margin-top: 16px;
+      font: normal normal normal 13px/18px "Open Sans", sans-serif;
+    }
+
+    .criteria-column-logic {
+      margin: 8px 0;
+      display: flex;
+    }
+
+    .criteria-column-logic :first-child {
+      margin-right: 8px;
+    }
+
+    .criteria-filter-logic-text {
+      margin: 8px 0;
+      color: #707174;
+      font: italic normal normal 13px/18px "Open Sans", sans-serif;
+    }
+    
+    .logic-button {
+      width: 48px;
+      height: 26px;
+      text-align: center;
+      line-height: 26px;
+      border: 1px solid #E7EAEB;
+      border-radius: 4px;
+      font-size: 13px;
+      cursor: pointer
+    }
+
+    .logic-btn-ckecked {
+      // .logic-button;
+      width: 48px;
+      height: 26px;
+      text-align: center;
+      line-height: 26px;
+      // border: 1px solid #E7EAEB;
+      border-radius: 4px;
+      font-size: 13px;
+      cursor: pointer;
+      
+      background-color: #0072D0;
+      color: #fff;
+      border: #0072D0;
+    }
+
+    #raRuleBaseInfo {
+      .ra-disposal-form-row .ra-form-label {
+        margin-bottom: 0
+      }
+    }
+}
+
+#raRuleDetailPanel{
+    .aui-tabs-underline > .aui-tabs-bar-container .aui-tabs-bars .aui-tabs-bar {
+        max-width: 300px;
+    }
+}
+
+
+

@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<configuration>
+  <!--查看文件的匹配百分比，来判断是否有license头-->
+  <addLicenseFiles>
+    <!--前台页面及相关文件:-->
+    <TextSourceCode type="*.cshtml" license="Template\License_cshtml.txt" Keyword="AvePoint copyright" percentage="70" startKey="@*" endKey="*@" />
+    <TextSourceCode type="*.css|*.js" license="Template\License_CSS.txt" Keyword="AvePoint copyright" percentage="70" startKey="/*" endKey="*/" />
+    <TextSourceCode type="*.htm|*.html" license="Template\License_HTM.txt" Keyword="AvePoint copyright" percentage="70" startKey="--" endKey="-->" />
+    
+    <!--客户能看到的文件-->
+    <TextSourceCode type="*.xml|*.config|*.cscfg|*.csdef" license="Template\License_Xml.txt" Keyword="PROPRIETARY and CONFIDENTIAL" percentage="70" startKey="--/**********" endKey="*/-->" />
+    <TextSourceCode type="*.bat|*.cmd" license="Template\LicenseBAT.txt" Keyword="PROPRIETARY and CONFIDENTIAL" percentage="70" startKey=":: /***********" endKey=":: */" />
+    <TextSourceCode type="*.ps1" license="Template\License_PS1.txt" Keyword="PROPRIETARY and CONFIDENTIAL" percentage="70" startKey="# /***********" endKey="*/#>" />
+    
+    <!--客户看不到的文件-->
+    <TextSourceCode type="*.cs" license="Template\LicenseCS.txt" Keyword="PROPRIETARY and CONFIDENTIAL" percentage="70" startKey="/**********" endKey="*/" />
+    <TextSourceCode type="*.xaml" license="Template\LicenseXaml.txt" Keyword="PROPRIETARY and CONFIDENTIAL" percentage="70" startKey="--/**********" endKey="*/-->" />
+  </addLicenseFiles>
+  <!--黑名单-->
+  <!--说明：黑名单里的文件不进行license维护，且在进行检查第三方文件申请路径检查时也不进行提示-->
+  <!--支持黑名单格式：文件路径，文件名，文件相对路径，文件全路径-->
+  <!--如果是文件夹，则需要以"\"结尾-->
+  <!--include和exclude不能同时配置-->
+  <blackList>
+     <!--以下文件维护之后会导致编译失败-->
+    <item value="resource.h"/>
+    <item value="resource3.h"/>
+
+    <!--以下文件为第三方-->
+    <item value="\ThirdDlls\" include="*.*"/>
+    <item value="\3rd\" include="*.*"/>
+    <item value="\packages\" include="*.*"/>
+    <item value="\nodejs\" include="*.*"/>
+	<item value="packages.config"/>
+	<item value="AveRoolingFileAppender.cs"/>
+	
+	<item value="\bundle\" include="*.*"/>
+	<item value="all.css"/>
+	<item value="all.min.css"/>
+	<item value="bootstrap.css"/>
+	<item value="bootstrap.min.css"/>
+	<item value="bootstrap-theme.css"/>
+	<item value="bootstrap-theme.min.css"/>
+	<item value="jquery-1.9.1.js"/>
+	<item value="jquery.extend.css"/>
+	
+
+    <!--以下路径为引用其他产品或组件的路径，应在其他产品或组件内进行维护-->
+    <item value="\DocaveReference\" include="*.*"/>
+    <item value="\RAWeb\aui\" include="*.*"/>
+	<item value="\build\Tool\" include="*.*"/>
+	
+	<item value="\build\" include="*.*"/>
+  </blackList>
+  <filterList>
+    <connectionString value="C44jPjLDQMMYOrw891tyChQzfMYP9lXqk4Wd6YI+doJ7Rr0XJ90BTiRmiPWPLrQRjmfZ1j+ZVm2C00WiiGUQz/L42SiXD9YJt69sETYHp7ouYvyrJbbQBl6iMg60f8jtd2DRNEDyHVUxRAFD+pT1qsClvKKuUb+4hp8HmHpT6LtUWj7ALGMrHurZ7e3Zf18aJVUqwk3NF6oRF2369A/xNg=="/>
+    <query value="SELECT column1
+       FROM [PackagingData].[dbo].[AllData]
+       where list_id=208
+	   and is_current=1"/>
+  </filterList>
+  <thirdPartyContentKeywords>
+    <item>/license.txt</item>
+    <item>Apache License</item>
+    <item>BSD license</item>
+    <item>commercial license</item>
+    <item>Dual licensed</item>
+    <item>GPL Version 2 licenses</item>
+    <item>jQuery UI</item>
+    <item>license.org</item>
+    <item>MIT License</item>
+    <item>NUGET: BEGIN LICENSE TEXT</item>
+  </thirdPartyContentKeywords>
+</configuration>

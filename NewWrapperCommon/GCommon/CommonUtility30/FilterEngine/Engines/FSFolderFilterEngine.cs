@@ -1,0 +1,91 @@
+﻿/********************************************************************
+ *
+ *  PROPRIETARY and CONFIDENTIAL
+ *
+ *  This file is licensed from, and is a trade secret of:
+ *
+ *                   AvePoint, Inc.
+ *                   525 Washington Blvd, Suite 1400
+ *                   Jersey City, NJ 07310
+ *                   United States of America
+ *                   Telephone: +1-201-793-1111
+ *                   WWW: www.avepoint.com
+ *
+ *  Refer to your License Agreement for restrictions on use,
+ *  duplication, or disclosure.
+ *
+ *  RESTRICTED RIGHTS LEGEND
+ *
+ *  Use, duplication, or disclosure by the Government is
+ *  subject to restrictions as set forth in subdivision
+ *  (c)(1)(ii) of the Rights in Technical Data and Computer
+ *  Software clause at DFARS 252.227-7013 (Oct. 1988) and
+ *  FAR 52.227-19 (C) (June 1987).
+ *
+ *  Copyright © 2017-2026 AvePoint® Inc. All Rights Reserved. 
+ *
+ *  Unpublished - All rights reserved under the copyright laws of the United States.
+ */
+using AvePoint.Common.FilterEngine.ObjectInfos;
+using AvePoint.GCommon.Contract.CommonFilter;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace AvePoint.Common.FilterEngine
+{
+    internal class FSFolderFilterEngine : FilterEngineBase
+    {
+        public FSFolderFilterEngine(FilterOption option)
+            : base(option)
+        {
+        }
+
+        protected override bool IsQualified(ObjectInfoBase objectInfo, GCommon.Contract.CommonFilter.FilterPolicy policy)
+        {
+            FSFolderInfo folderInfo = objectInfo as FSFolderInfo;
+            bool isQualified = false;
+            if (policy.Rule is NameRule)
+            {
+                isQualified = StringConditionChecker.IsQualified(policy.Condition, folderInfo.Name, policy.Value);
+                RecordFilterLog(isQualified, folderInfo.Name, policy);
+                return isQualified;
+            }
+            else if (policy.Rule is NameAndExtentionRule)
+            {
+                isQualified = StringConditionChecker.IsQualified(policy.Condition, folderInfo.Name, policy.Value);
+                RecordFilterLog(isQualified, folderInfo.Name, policy);
+                return isQualified;
+            }
+            else if (policy.Rule is FSTermRule || policy.Rule is TermRule)
+            {
+                string columnValue;
+                string columnName = policy.Rule.Value1.ToLowerInvariant();
+                //if (!folderInfo.TermInfosOfDisplayName.ContainsKey(columnName))
+                //{
+                //    return false;
+                //}
+                columnValue = folderInfo.TermInfosOfDisplayName[columnName].ToString();
+                isQualified = StringConditionChecker.IsQualified(policy.Condition, columnValue, policy.Value);
+                RecordFilterLog(isQualified, columnValue, policy);
+                return isQualified;
+            }
+            else if (policy.Rule is OwnerRule)
+            {
+                isQualified = StringConditionChecker.IsQualified(policy.Condition, folderInfo.Owner, policy.Value);
+                RecordFilterLog(isQualified, folderInfo.Owner, policy);
+                return isQualified;
+            }
+            else
+            {
+                throw new RuleNotSupportedException(policy.Rule.ToString());
+            }
+        }
+
+        protected override GCommon.Contract.CommonFilter.PolicyLevel Level
+        {
+            get { return PolicyLevel.FileSysFolder; }
+        }
+    }
+}

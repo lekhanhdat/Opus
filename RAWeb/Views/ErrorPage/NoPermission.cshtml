@@ -1,0 +1,32 @@
+﻿@*Covered by AvePoint copyright and license agreement*@
+@using AvePoint.RA.I18N.Core;
+@using AvePoint.RA.Web.Extentions.Util
+@using Microsoft.AspNetCore.Html
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@Html.I18N("RM_JS_ErrorPage_Error")</title>
+    <link rel='SHORTCUT ICON' href='https://res.cdn.avepointonlineservices.com/cloud%20records/favicon.ico' type='image/x-icon' />
+    <link rel="stylesheet" type="text/css" href="~/Content/ErrorPage/errorpage.css" />
+</head>
+<body>
+    <div class="errorPageContainer">
+        <div class="page-error-content">
+            <div class="icon-page-error-base icon-not-permission">
+
+            </div>
+            <div class="page-error-title">
+                @Html.I18N("RM_JS_AccessDenied_Title")
+            </div>
+            <div class="page-error-desc">
+                @Html.I18N("RM_JS_AccessDenied_Body")
+            </div>
+        </div>
+    </div>
+</body>
+</html>

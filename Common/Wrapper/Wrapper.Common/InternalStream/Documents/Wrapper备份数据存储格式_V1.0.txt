@@ -1,0 +1,121 @@
+﻿/********************************************************************
+ *
+ *  PROPRIETARY and CONFIDENTIAL
+ *
+ *  This file is licensed from, and is a trade secret of:
+ *
+ *                   AvePoint, Inc.
+ *                   Harborside Financial Center
+ *                   9th Fl.   Plaza Ten
+ *                   Jersey City, NJ 07311
+ *                   United States of America
+ *                   Telephone: +1-800-661-6588
+ *                   WWW: www.avepoint.com
+ *
+ *  Refer to your License Agreement for restrictions on use,
+ *  duplication, or disclosure.
+ *
+ *  RESTRICTED RIGHTS LEGEND
+ *
+ *  Use, duplication, or disclosure by the Government is
+ *  subject to restrictions as set forth in subdivision
+ *  (c)(1)(ii) of the Rights in Technical Data and Computer
+ *  Software clause at DFARS 252.227-7013 (Oct. 1988) and
+ *  FAR 52.227-19 (C) (June 1987).
+ *
+ *  Copyright © 2013-2018 AvePoint® Inc. All Rights Reserved. 
+ *
+ *  Unpublished - All rights reserved under the copyright laws of the United States.
+ */
+*************************************************************************
+Wrapper Backup Data Format v1.0
+
+Used in the future, in order to support larger metadata and content length.
+qinglong.luo@avepoint.com
+2015-5-18
+
+Remove reserved bytes(11-15,20-31), to avoid data size increase.
+qinglong.luo@avepoint.com; long.liang@avepoint.com
+2015-6-12
+*************************************************************************
+1. Header
+    0                   1                   2                   3
+    0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1
+   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+  -+
+1  |                                                               |   |
+   +                       Metadata Length                         +   |
+2  |                                                               |   |
+   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+   |
+3  |       Header Version          |          Reserved             |   > 20 bytes
+   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+   |
+4  |                                                               |   |
+   +                       Content Length                          +   |
+5  |                                                               |   |
+   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+  -+
+   |                                                               |   |
+   |                        Metadata Body                          |   > (0 ~ 2^63-1)bytes
+   |                                                               |   |
+   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+  -+
+   |                                                               |   |
+   |                        Content Body                           |   > (0 ~ 2^63-1)bytes
+   |                                                               |   |
+   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+  -+
+   a. Metadata/Content length endianness.
+      Use Big-Endian 64-bit signed integer.
+      Big-Endian integer: greatest value byte in smallest memory address.
+
+                    64-bit interger
+        Memory  | 0A 0B 0C 0D 1A 1B 1C 1D|
+       | ...|     |  |  |  |  |  |  |  |
+     a:| 0A | <---|  |  |  |  |  |  |  |
+   a+1:| 0B | <------|  |  |  |  |  |  |
+   a+2:| 0C | <---------|  |  |  |  |  |
+   a+3:| 0D | <------------|  |  |  |  | 
+   a+4:| 1A | <---------------|  |  |  |
+   a+5:| 1B | <------------------|  |  |
+   a+6:| 1C | <---------------------|  |
+   a+7:| 1D | <------------------------|
+       | ...|
+   b. Header Version.
+       0                   1
+       0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 
+      +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+      | Major Version | Minior Version|
+      |0 0 0 0 0 0 0 1|0 0 0 0 0 0 0 0|
+      +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+      I. Major/Minior version: 8-bit unsigned integer.
+      II. Increase the major version when:
+          a. Header length is changed.
+          b. Original occupied bits are used as different flags.
+          c. Body part structure is changed, support multiple content body.
+      III. Increase the minor version when:
+           a. Reserved bits are occupied as new flags.
+           b. Original occupied bits are obsoleted.
+2. Metadata Body
+   <Data version="1.0">
+       <Field name="SiteBasicInfo" type="AvePoint.Wrapper.Common.AveSiteInfo">...<Field>
+       <Field name="SiteFeature" type="AvePoint.Wrapper.Common.AveFeatureInfoBox">...<Field>
+       ...
+   </Data>
+   a. UTF-8 encoding XML
+   b. Maximum byte-length is 2^63-1=9223372036854775807.
+      If metadata length is larger than the limit, the exact metadata length will be lost which will cause unexpected error. The behavior on this circumstance depends on the implementation. 
+      It is recommend to throw exception when trying to write extra metadata.
+
+3. Content Body
+   a. Bytes format file content without any specified encoding method.
+   b. Maximum byte-length is 2^63-1=9223372036854775807.
+      If metadata length is larger than the limit, the exact metadata length will be lost which will cause unexpected error. The behavior on this circumstance depends on the implementation.
+
+
+Notes:
+1. Since first 8 bytes in header are occupied in V0.0, header version started from index 64 (9th byte). It is not a good way to design the protocol.
+2. It is recommend to set up a hard-code limit for metadata/content maximum length. Maximum value of 64-bit integer is huge for software today.
+3. Since UInt64 is not CLS-compliant in .Net Framework, metadata/content length is defined as 64-bit signed integer, instead of 64-bit unsigned integer.
+4. Since SByte is not CLS-compliant in .Net Framework, header version is defined as 8-bit unsigned integer, instead of 8-bit signed integer.
+ 
+Modification between V0.0 and V1.0:
+1. Header is changed from 16 bytes to 20 bytes, header format changed include the following.
+   a. Use 2 bytes to define the header version which was reserved in V0.0.
+   b. Extend metadata/content length from 32-bit signed integer to 64-bit signed integer.
+   c. Add more reserved bits for further use.

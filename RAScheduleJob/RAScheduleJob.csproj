@@ -1,0 +1,211 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>AvePoint.RA.ScheduleJob</RootNamespace>
+    <AssemblyName>RevIMScheduleJob</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <OutputPath>..\bin\Release\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>..\DocaveReference\DocAveStandard.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <EnableUnsafeBinaryFormatterSerialization>true</EnableUnsafeBinaryFormatterSerialization>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="AgentLog4net.config" />
+    <None Remove="AgentLog4net.dev.config" />
+    <None Remove="appsettings.json" />
+    <None Remove="Config\AppPackages\JPMC\opus-customization.sppkg" />
+    <None Remove="Config\NAA Configuration File.zip" />
+    <None Remove="Config\NARA Configuration File.zip" />
+    <None Remove="Config\VEO Configuration Files.zip" />
+    <None Remove="Config\VEO V3 Configuration Files.zip" />
+    <None Remove="RAScheduleJob_TemporaryKey.pfx" />
+    <None Remove="Config\DAOExportTemplate\NAA Configuration File.zip" />
+    <None Remove="Config\DAOExportTemplate\NARA Configuration File.zip" />
+    <None Remove="Config\DAOExportTemplate\VEO Configuration Files.zip" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="..\Media\Media.Common\SDS-SEE.exml" Link="SDS-SEE.exml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <None Include="..\RACommon\ServiceVersion\ServiceVersion.config">
+      <Link>Config\ServiceVersion\ServiceVersion.config</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Config\BarcodeTemplate\BarcodeTemplate.docx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <Content Include="Config\BarcodeTemplate\Label_95x65-R_Word_Template.docx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Config\BarcodeTemplate\Label_200x93-R_Word_Template.docx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Config\BarcodeTemplate\Label_135x95-R_Word_Template.docx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Config\BarcodeTemplate\Label_99x67-R_Word_Template.docx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Config\BarcodeTemplate\Label_72x63-R_Word_Template.docx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Update="Config\Castle\ServiceCastle.config">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Config\Castle\TimerCastle.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Config\DesignLists\DesignLists.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Config\emailVelocityTemplate\invitation_email_bottom_775x30.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Config\emailVelocityTemplate\invitation_email_top_775x96.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Config\StubTemplate\ArchiverCommonHtmlStubPageStyle.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Config\StubTemplate\ArchiverCommonStubPageStyle.aspx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Dockerfile">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Config\emailVelocityTemplate\TemplateEmailNotificationHtml.cshtml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Common\GlobalCommon\GCommonUtility\DocAve.GCommonUtility.csproj" />
+    <ProjectReference Include="..\Media\Media.Common\Media.Common.csproj" />
+    <ProjectReference Include="..\RAArchiverMaintenance\RAArchiverMaintenance.csproj" />
+    <ProjectReference Include="..\RAArchiverMigration\RAArchiverMigration.csproj" />
+    <ProjectReference Include="..\RAArtificialIntelligence\RAArtificialIntelligence.csproj" />
+    <ProjectReference Include="..\RAAzureFile\RAAzureFile.csproj" />
+    <ProjectReference Include="..\RABox\RABox.csproj" />
+    <ProjectReference Include="..\RACloudFS\RAFileSystem.csproj" />
+    <ProjectReference Include="..\RACommon.Global\RACommon.Global.csproj" />
+    <ProjectReference Include="..\RACommon\RACommon.csproj" />
+    <ProjectReference Include="..\RAContract.Global\RAContract.Global.csproj" />
+    <ProjectReference Include="..\RAContract\RAContract.csproj" />
+    <ProjectReference Include="..\RADashboard\RADashboard.csproj" />
+    <ProjectReference Include="..\RADB\RADB.csproj" />
+    <ProjectReference Include="..\RADownloadCentre\RADownloadCentre.csproj" />
+    <ProjectReference Include="..\RAEnduserArchive\RAEnduserArchive.csproj" />
+    <ProjectReference Include="..\RAExchange\RAExchange.csproj" />
+    <ProjectReference Include="..\RAExtractor\RAExtractor.csproj" />
+    <ProjectReference Include="..\RAGlobalSearch\RAGlobalSearch.csproj" />
+    <ProjectReference Include="..\RAGoogle\RAGoogle.csproj" />
+    <ProjectReference Include="..\RAManualApproval\RAManualApproval.csproj" />
+    <ProjectReference Include="..\RAMultiGeo\RAMultiGeo.csproj" />
+    <ProjectReference Include="..\RAPhysical\RAPhysical.csproj" />
+    <ProjectReference Include="..\RAReportCenter\RAReportCenter.csproj" />
+    <!--<ProjectReference Include="..\RASalesforce\RASalesforce.csproj" />-->
+    <ProjectReference Include="..\RAService\RAService.csproj" />
+    <ProjectReference Include="..\RASharePointOnPrem\RASharePointOnPrem.csproj" />
+    <ProjectReference Include="..\RASharePoint\RASharePoint.csproj" />
+    <ProjectReference Include="..\RATeams\RATeams.csproj" />
+    <ProjectReference Include="..\RMExternalSynchronize\RMSynchronize.csproj" />
+	  <ProjectReference Include="..\AIExtractWorker\AIExtractWorker.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AgentLog4net.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="AgentLog4net.dev.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="appsettings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Config\AppPackages\JPMC\opus-customization.sppkg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Config\NAA Configuration File.zip">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Config\NARA Configuration File.zip">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Config\VEO Configuration Files.zip">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Config\VEO V3 Configuration Files.zip">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Config\DAOExportTemplate\VEO Configuration Files.zip">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Config\DAOExportTemplate\NAA Configuration File.zip">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Config\DAOExportTemplate\NARA Configuration File.zip">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="AWSSDK.S3" Version="4.0.17.3" />
+    <PackageReference Include="Castle.Windsor" Version="6.0.0" />
+    <PackageReference Include="Cloud.Sdk.Aos.Integration" Version="4.8.7" />
+    <PackageReference Include="Cloud.Sdk.Data.Dal" Version="6.10.16" />
+    <PackageReference Include="Cloud.Sdk.LAL.PlatformSS" Version="6.10.16" />
+    <PackageReference Include="EntityFramework" Version="6.5.1" />
+    <PackageReference Include="log4net" Version="3.3.1" />
+    <PackageReference Include="Microsoft.Bcl.AsyncInterfaces" Version="10.0.11" />
+    <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="6.1.4" />
+    <PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0" />
+    <PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.9.0" />
+    <PackageReference Include="System.DirectoryServices" Version="10.0.2" />
+    <PackageReference Include="System.Net.Http" Version="4.3.4" />
+    <PackageReference Include="System.Private.Uri" Version="4.3.2" />
+    <PackageReference Include="System.Security.Cryptography.Algorithms" Version="4.3.1" />
+    <PackageReference Include="System.Security.Cryptography.X509Certificates" Version="4.3.2" />
+    <PackageReference Include="System.ServiceModel.Federation" Version="8.1.2" />
+    <PackageReference Include="Microsoft.DotNet.UpgradeAssistant.Extensions.Default.Analyzers" Version="0.4.421302">
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="System.Text.RegularExpressions" Version="4.3.1" />
+    <PackageReference Include="util.ai.text.extractor" Version="6.10.11" />
+    <PackageReference Include="util.database" Version="5.4.6" PrivateAssets="analyzers" />
+  </ItemGroup>
+  <Target Condition="'$(Configuration)' == 'Debug'" Name="CopyAppSettings" BeforeTargets="PrepareForBuild">
+    <Copy SourceFiles="$(ProjectDir)..\build\AppConfig\appsettings.json" DestinationFolder="$(ProjectDir)" />
+  </Target>
+  <PropertyGroup Condition="'$(Configuration)'!='DEBUG'">
+    <CopyBadgeCoreFiles Condition="'$(CopyBadgeCoreFiles)' == ''">false</CopyBadgeCoreFiles>
+    <CopyHarpyLibraryFiles Condition="'$(CopyHarpyLibraryFiles)' == ''">false</CopyHarpyLibraryFiles>
+  </PropertyGroup>
+  <Target Name="PostCopyHarpyCoreFilesAfterBuild" AfterTargets="Build">
+    <ItemGroup>
+      <HarpyPackageCoreFiles Include="$(TargetDir)lib\Harpy1.0\Harpy.dll" />
+    </ItemGroup>
+    <Copy SourceFiles="@(HarpyPackageCoreFiles)" DestinationFolder="$(TargetDir)" SkipUnchangedFiles="false" Condition="Exists(@(HarpyPackageCoreFiles))" />
+    <Copy SourceFiles="@(HarpyPackageCoreFiles)" DestinationFolder="$(PublishDir)" SkipUnchangedFiles="false" Condition="Exists(@(HarpyPackageCoreFiles))" />
+  </Target>
+  <Target Name="PostCopyHarpyLibraryFilesAfterBuild" AfterTargets="Build">
+    <ItemGroup>
+      <HarpyPackageLibraryFiles Include="$(TargetDir)lib\**\*" />
+    </ItemGroup>
+    <Copy SourceFiles="@(HarpyPackageLibraryFiles)" DestinationFolder="$(PublishDir)\lib\%(RecursiveDir)" SkipUnchangedFiles="false" Condition="Exists(@(HarpyPackageLibraryFiles))" />
+  </Target>
+</Project>

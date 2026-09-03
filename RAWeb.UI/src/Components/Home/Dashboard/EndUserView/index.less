@@ -1,0 +1,28 @@
+.reco-dashboard-enduser-view-wrapper {
+    width: 100%;
+
+    .reco-dashboard-layout-wrapper {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(358px, 1fr));
+        column-gap: 16px;
+
+        .reco-dashboard-enduser-card {
+            width: 100%;
+            // height: 244px;
+        }
+    }
+
+    @media (max-width: 1280px) {
+        .reco-dashboard-layout-wrapper {
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(2, minmax(358px, 1fr));
+            gap: 16px;
+
+            .reco-dashboard-enduser-card {
+                width: 100%;
+            }
+        }
+    }
+}

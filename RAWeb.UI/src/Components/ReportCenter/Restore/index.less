@@ -1,0 +1,179 @@
+.reco-disposal-create-wrapper,
+.reco-disposal-edit-wrapper {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-rows: auto minmax(330px, auto) 1fr 66px;
+  grid-template-columns: 100%;
+
+  .reco-disposal-form-card {
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid #DAE0E2;
+    border-radius: 8px;
+    padding: 24px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    margin-bottom: 16px;
+
+    .reco-disposal-form {
+      width: 100%;
+      height: 100%;
+      padding-right: 68px;
+    }
+
+    .reco-disposal-form-item {
+      margin-bottom: 24px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    .reco-disposal-tips {
+      width: 100%;
+      height: 100%;
+      padding-left: 24px;
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 1px;
+        background: #E7EAEB;
+      }
+    }
+
+    .reco-disposal-tips-header {
+      height: 40px;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+
+      .reco-disposal-tips-icon {
+        width: 40px;
+        height: 100%;
+        background: #F2F3F4;
+        border-radius: 4px;
+        font-size: 20px;
+        margin-right: 8px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .reco-disposal-tips-title {
+        font: normal normal 600 13px "Open Sans", sans-serif;
+        color: #323E4D;
+      }
+    }
+
+    .reco-disposal-tips-content {
+      width: 100%;
+      font: normal normal normal 13px "Open Sans", sans-serif;
+      color: #323E4D;
+    }
+
+    .reco-disposal-tips-picture {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 233px;
+      height: 155px;
+      background-image: url(/Images/RC/report_info.png);
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+    }
+  }
+
+  .reco-disposal-actions {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 66px;
+    padding-right: 40px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background: #FFFFFF;
+    box-shadow: 0px -1px 0px #dae0e2;
+  }
+
+  .reco-disposal-tree-card {
+    width: 100%;
+    padding: 24px;
+    background-color: #fff;
+    border: 1px solid #DAE0E2;
+    border-radius: 8px;
+    display: grid;
+    grid-template-rows: auto 1fr;
+
+    .reco-disposal-tree {
+      transform: translateX(-22px);
+    }
+  }
+
+  .reco-disposal-input-title {
+    height: 18px;
+    font: normal normal 600 13px/18px "Open Sans", sans-serif;
+    color: #323E4D;
+    margin-bottom: 8px;
+    position: relative;
+  }
+
+  .reco-disposal-input-desc {
+    display: block;
+    margin-top: 8px;
+    height: 17px;
+    font: normal normal normal 12px/17px "Open Sans", sans-serif;
+    color: #5D6778;
+  }
+
+  .require {
+    &::after {
+      content: "*";
+      right: -8px;
+      top: 0;
+      font: normal normal 600 13px "Open Sans", sans-serif;
+      color: #FF4444;
+    }
+  }
+}
+
+.reco-disposal-view-wrapper {
+  width: 100%;
+
+  .reco-disposal-view-section {
+    width: 100%;
+    margin-bottom: 24px;
+
+    .reco-disposal-section-title {
+      height: 18px;
+      font: normal normal 600 13px/18px "Open Sans", sans-serif;
+      color: #323E4D;
+      margin-bottom: 8px;
+    }
+
+    .reco-disposal-seciton-value {
+      font: normal normal normal 13px "Open Sans", sans-serif;
+      color: #27313C;
+    }
+
+    .reco-disposal-section-tree-value {
+      background: #F2F3F4;
+      border-radius: 8px;
+      padding: 16px 0;
+      overflow-x: auto;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

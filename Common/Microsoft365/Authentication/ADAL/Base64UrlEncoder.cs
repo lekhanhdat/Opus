@@ -1,0 +1,90 @@
+/********************************************************************
+ *
+ *  PROPRIETARY and CONFIDENTIAL
+ *
+ *  This file is licensed from, and is a trade secret of:
+ *
+ *                   AvePoint, Inc.
+ *                   525 Washington Blvd, Suite 1400
+ *                   Jersey City, NJ 07310
+ *                   United States of America
+ *                   Telephone: +1-201-793-1111
+ *                   WWW: www.avepoint.com
+ *
+ *  Refer to your License Agreement for restrictions on use,
+ *  duplication, or disclosure.
+ *
+ *  RESTRICTED RIGHTS LEGEND
+ *
+ *  Use, duplication, or disclosure by the Government is
+ *  subject to restrictions as set forth in subdivision
+ *  (c)(1)(ii) of the Rights in Technical Data and Computer
+ *  Software clause at DFARS 252.227-7013 (Oct. 1988) and
+ *  FAR 52.227-19 (C) (June 1987).
+ *
+ *  Copyright © 2017-2026 AvePoint® Inc. All Rights Reserved. 
+ *
+ *  Unpublished - All rights reserved under the copyright laws of the United States.
+ */
+using System;
+using System.Globalization;
+using System.Text;
+
+namespace Microsoft365.Authentication.ADAL
+{
+	internal static class Base64UrlEncoder
+	{
+
+
+
+
+
+		private static readonly Encoding TextEncoding = Encoding.UTF8;
+
+		private static readonly string DoubleBase64PadCharacter = string.Format(CultureInfo.InvariantCulture, "{0}{0}", new object[1]
+		{
+			'='
+		});
+
+		public static string Encode(string arg)
+		{
+			if (arg == null)
+			{
+				throw new ArgumentNullException("arg");
+			}
+			return Encode(TextEncoding.GetBytes(arg));
+		}
+
+		public static byte[] DecodeBytes(string arg)
+		{
+			string text = arg.Replace('-', '+');
+			text = text.Replace('_', '/');
+			switch (text.Length % 4)
+			{
+			case 2:
+				text += DoubleBase64PadCharacter;
+				break;
+			case 3:
+				text += '=';
+				break;
+			default:
+				throw new ArgumentException("Illegal base64url string!", "arg");
+			case 0:
+				break;
+			}
+			return Convert.FromBase64String(text);
+		}
+
+		internal static string Encode(byte[] arg)
+		{
+			if (arg == null)
+			{
+				throw new ArgumentNullException("arg");
+			}
+			string text = Convert.ToBase64String(arg);
+			text = text.Split('=')[0];
+			text = text.Replace('+', '-');
+			return text.Replace('/', '_');
+		}
+	}
+}

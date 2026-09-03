@@ -1,0 +1,190 @@
+.reco-error-messages {
+  display: flex;
+  flex-direction: row;
+  row-gap: 8px;
+
+  .reco-error-message {
+    color: #c00;
+    font-size: 14px;
+    font-weight: 400;
+  }
+}
+
+.reco-analysis-configurator-container {
+  width: 100%;
+  
+  .reco-fac-panel {
+    min-height: 650px;
+    background-color: #fff;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 330px calc(100% - 330px);
+    border: 1px solid #e8e9ea;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .reco-fac-progress-panel {
+    height: 100%;
+    border-right: 1px solid rgb(232, 233, 234);
+  }
+
+  .reco-fac-progress {
+    padding: 16px 24px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+
+    .reco-title {
+      font: normal normal 600 14px/19px Open Sans;
+      letter-spacing: -0.21px;
+      color: #323e4d;
+    }
+
+    .reco-progress-bars {
+      display: flex;
+      column-gap: 2px;
+
+      .reco-progress-bar {
+        width: 64px;
+        height: 8px;
+        background-color: #0072d0;
+
+        &:first-child {
+          border-top-left-radius: 4px;
+          border-bottom-left-radius: 4px;
+        }
+
+        &:last-child {
+          border-top-right-radius: 4px;
+          border-bottom-right-radius: 4px;
+        }
+      }
+
+      .reco-progress-bar-waiting {
+        background-color: #e8e9ea;
+      }
+
+      .reco-progress-bar-progressing {
+        background-color: #c2ddf4;
+      }
+
+      .reco-progress-bar-completed {
+        background-color: #0072d0;
+      }
+    }
+  }
+
+  .reco-fac-steps {
+    display: flex;
+    flex-direction: column;
+
+    .reco-fac-step {
+      display: flex;
+      column-gap: 8px;
+      align-items: center;
+      min-height: 56px;
+      padding: 0 24px;
+      border-top: 1px solid rgb(232, 233, 234);
+    }
+
+    .reco-fac-step-number {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      font: normal normal 600 14px/0px Open Sans;
+      letter-spacing: -0.21px;
+      color: #323e4d;
+    }
+
+    .reco-fac-step-processing {
+      border: 2px solid #0072d0;
+    }
+
+    .reco-fac-step-waiting {
+      border: 2px solid #e8e9ea;
+    }
+
+    .reco-fac-step-completed {
+      background-color: #0072d0;
+      color: #ffffff !important;
+      cursor: pointer;
+    }
+  }
+
+  .reco-fac-form-panel {
+    display: grid;
+    grid-template-rows: calc(100% - 76px) 76px;
+
+    .reco-fac-form-content {
+      padding: 32px 24px;
+    }
+
+    .reco-fac-form-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: right;
+      column-gap: 8px;
+      padding: 0 24px;
+      border-top: 1px solid #e8e9ea;
+    }
+  }
+
+  .reco-ac-component-title-main {
+    .button.button-icon {
+      border: none !important;
+    }
+  }
+}
+
+.reco-discovery-configurator {
+  width: 100%;
+
+  .reco-discovery-container {
+    min-height: 450px;
+    background-color: #fff;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    border: 1px solid #e8e9ea;
+    border-radius: 8px;
+    overflow: hidden;
+    padding: 80px 32px;
+
+    .reco-discovery-left {
+      margin: auto auto;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .reco-discovery-right {
+      margin-left: 30px;
+    }
+
+    .reco-discovery-textstyle {
+      margin-bottom: 40px;
+      color: #323E4D;
+
+      .reco-discovery-text1 {
+        font: normal normal 600 14px/19px "Open Sans", sans-serif;
+        margin-bottom: 4px;
+      }
+
+      .reco-discovery-text2 {
+        font: normal normal bold 24px/33px "Open Sans", sans-serif;
+        margin-bottom: 24px;
+      }
+
+      .reco-discovery-text3 {
+        font: normal normal normal 14px/19px "Open Sans", sans-serif;
+        margin-bottom: 16px;
+      }
+    }
+  }
+}
+

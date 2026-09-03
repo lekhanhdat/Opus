@@ -1,0 +1,76 @@
+﻿*************************************************************************
+Wrapper Backup Data Format v0.0
+
+qinglong.luo@avepoint.com
+2015-5-18
+*************************************************************************
+1. Header
+    0                   1                   2                   3
+    0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1
+   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+  -+
+   |                       Metadata Length                         |   |
+   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+   |
+   |                       Content Length                          |   |
+   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+   > 16 bytes
+   |       Header Version          |                               |   |
+   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+   |
+   |                        Reserved                               |   |
+   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+  -+
+   |                                                               |   |
+   |                        Metadata Body                          |   > (0 ~ 2^31-1)bytes
+   |                                                               |   |
+   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+  -+
+   |                                                               |   |
+   |                        Content Body                           |   > (0 ~ 2^31-1)bytes
+   |                                                               |   |
+   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+  -+
+   a. Metadata/Content length endianness.
+      Use Big-Endian 32-bit signed integer.
+      Big-Endian integer: greatest value byte in smallest memory address.
+
+                32-bit interger
+        Memory  | 0A 0B 0C 0D |
+       | ...|     |  |  |  |
+     a:| 0A | <---|  |  |  |
+   a+1:| 0B | <------|  |  |
+   a+2:| 0C | <---------|  |
+   a+3:| 0D | <------------|
+       | ...|
+	   
+   b. Header Version.
+       0                   1
+       0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 
+      +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+      | Major Version | Minior Version|
+      |0 0 0 0 0 0 0 0|0 0 0 0 0 0 0 0|
+      +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+      I. Major/Minior version: 8-bit unsigned integer.
+      II. Increase the major version when:
+          a. Header length is changed.
+          b. Original occupied bits are used as different flags.
+          c. Body part structure is changed, support multiple content body.
+      III. Increase the minor version when:
+           a. Reserved bits are occupied as new flags.
+           b. Original occupied bits are obsoleted.
+2. Metadata Body
+   <Data version="1.0">
+       <Field name="SiteBasicInfo" type="AvePoint.Wrapper.Common.AveSiteInfo">...<Field>
+       <Field name="SiteFeature" type="AvePoint.Wrapper.Common.AveFeatureInfoBox">...<Field>
+       ...
+   </Data>
+   a. UTF-8 encoding XML
+   b. Maximum byte-length is 2^31-1=2147483647.
+      If metadata length is larger than the limit, the exact metadata length will be lost which will cause unexpected error. The behavior on this circumstance depends on the implementation. 
+	  It is recommend to throw exception when trying to write extra metadata.
+
+3. Content Body
+   a. Bytes format file content without any specified encoding method.
+   b. Maximum byte-length is 2^31-1=2147483647.
+      If metadata length is larger than the limit, the exact metadata length will be lost which will cause unexpected error. The behavior on this circumstance depends on the implementation.
+
+
+Notes:
+1. Since UInt32 is not CLS-compliant in .Net Framework, metadata/content length is defined as 32-bit signed integer, instead of 32-bit unsigned integer.
+2. Use Big-Endian integer to avoid byte order complication.
+
+ 

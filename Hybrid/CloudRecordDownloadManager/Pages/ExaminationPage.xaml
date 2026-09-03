@@ -1,0 +1,185 @@
+<!--/********************************************************************
+ *
+ *  PROPRIETARY and CONFIDENTIAL
+ *
+ *  This file is licensed from, and is a trade secret of:
+ *
+ *                   AvePoint, Inc.
+ *                   525 Washington Blvd, Suite 1400
+ *                   Jersey City, NJ 07310
+ *                   United States of America
+ *                   Telephone: +1-201-793-1111
+ *                   WWW: www.avepoint.com
+ *
+ *  Refer to your License Agreement for restrictions on use,
+ *  duplication, or disclosure.
+ *
+ *  RESTRICTED RIGHTS LEGEND
+ *
+ *  Use, duplication, or disclosure by the Government is
+ *  subject to restrictions as set forth in subdivision
+ *  (c)(1)(ii) of the Rights in Technical Data and Computer
+ *  Software clause at DFARS 252.227-7013 (Oct. 1988) and
+ *  FAR 52.227-19 (C) (June 1987).
+ *
+ *  Copyright © 2017-2026 AvePoint® Inc. All Rights Reserved. 
+ *
+ *  Unpublished - All rights reserved under the copyright laws of the United States.
+ */-->
+<local:BasePage x:Class="CloudRecordDownloadManager.Pages.ExaminationPage"
+                xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                xmlns:local="clr-namespace:CloudRecordDownloadManager.Pages"
+                xmlns:res="clr-namespace:CloudRecordDownloadManager.Properties"
+                xmlns:modules="clr-namespace:CloudRecordDownloadManager.Modules"
+                mc:Ignorable="d">
+    <Page.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="../Resources/Styles/Style.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Page.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="312" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="25" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.Background>
+                <ImageBrush x:Name="BackgroundImage" ImageSource="../Resources/Images/bg.png" />
+            </Grid.Background>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="33" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="24" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="40" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="2*" />
+            </Grid.ColumnDefinitions>
+            <TextBlock Grid.Row="1" Grid.Column="1"
+                       Margin="16, 0"
+                       Text="{x:Static res:I18N.key_43f63948_5986_415b_9036_7b74ba2759b9}"
+                       TextWrapping="WrapWithOverflow"
+                       TextAlignment="Left"
+                       FontFamily="Segoe UI"
+                       LineHeight="19"
+                       FontSize="16"
+                       FontWeight="SemiBold"
+                       Foreground="#333333" />
+            <Grid Grid.Row="3" Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="25" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="16" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="16" />
+                </Grid.ColumnDefinitions>
+                <Border Grid.Row="0" Grid.Column="1" BorderBrush="#F8F8F8" BorderThickness="0.5">
+                    <Grid Background="#F8F8F9">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="40" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="64" />
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Grid.Column="1"
+                                   Style="{StaticResource TitleLabel}"
+                                   Text="{x:Static res:I18N.key_aa23e68a_835e_47bb_8968_bc332fc96efa}" />
+                        <TextBlock Grid.Column="2"
+                                   Style="{StaticResource TitleLabel}"
+                                   Text="{x:Static res:I18N.key_aa75fb0b_a805_4e77_a040_d753e2507b04}" />
+                    </Grid>
+                </Border>
+                <Grid Grid.Row="1" Grid.Column="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="40" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="64" />
+                    </Grid.ColumnDefinitions>
+                </Grid>
+                <ItemsControl Grid.Row="2" Grid.Column="1" x:Name="ExaminationView" Background="White">
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate DataType="modules:ExaminationItem">
+                            <Grid Height="36" ToolTipService.InitialShowDelay="500">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="40" />
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="64" />
+                                </Grid.ColumnDefinitions>
+                                <Grid Grid.Column="0">
+                                    <Path Width="12" Height="12" HorizontalAlignment="Center" VerticalAlignment="Center" Fill="{Binding IconColor}" Stretch="Uniform">
+                                        <Path.Data>
+                                            <PathGeometry Figures="{Binding IconPath}" FillRule="NonZero" />
+                                        </Path.Data>
+                                    </Path>
+                                </Grid>
+                                <TextBlock Grid.Column="1"
+                                           Style="{StaticResource InfoLabel}"
+                                           Text="{Binding Title}" />
+                                <TextBlock Grid.Column="2"
+                                           Style="{StaticResource InfoLabel}"
+                                           Text="{Binding Message}" />
+                                <Grid.ToolTip>
+                                    <ToolTip Background="White" Visibility="{Binding TipVisibility}">
+                                        <TextBlock Style="{StaticResource InfoLabel}"
+                                                   TextAlignment="Left"
+                                                   Text="{Binding TipMessage}"
+                                                   Width="300"
+                                                   TextWrapping="Wrap" />
+                                    </ToolTip>
+                                </Grid.ToolTip>
+                            </Grid>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+            </Grid>
+        </Grid>
+        <Grid Grid.Row="1" Margin="0, 0, 6, 0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.5" />
+                <RowDefinition Height="1.5" />
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0" Background="#A0A0A0" Margin="0, 0, 1, 0" />
+            <Grid Grid.Row="1" Background="White" />
+        </Grid>
+        <Grid Grid.Row="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="4" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="10" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="16" />
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="1"
+                    Style="{StaticResource ActionButton}"
+                    Content="{x:Static res:I18N.key_76ee35c6_8e5d_44f0_b1ba_046cee19e6e7}"
+                    Click="BackAction" />
+            <Button Grid.Column="3"
+                    x:Name="DownloadButton"
+                    Style="{StaticResource ActionButton}"
+                    Content="{x:Static res:I18N.key_75584acc_6208_43b5_b8d9_8cfaab54f03e}"
+                    Width="115"
+                    IsDefault="True"
+                    IsEnabled="False"
+                    Click="NextAction" />
+            <Button Grid.Column="5"
+                    Style="{StaticResource ActionButton}"
+                    Content="{x:Static res:I18N.key_7315adb9_0e80_42ec_9e98_f1b0a14ecf4d}"
+                    Click="CloseAction" />
+        </Grid>
+    </Grid>
+</local:BasePage>

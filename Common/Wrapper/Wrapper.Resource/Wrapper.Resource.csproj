@@ -1,0 +1,204 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <OutputType>Library</OutputType>
+    <RootNamespace>AvePoint.Wrapper.Resource</RootNamespace>
+    <AssemblyName>AgentCommonWrapperResource</AssemblyName>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>..\..\..\bin\Debug\Resources\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>..\..\..\bin\Release\Resources\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>..\..\..\DocaveReference\DocAveStandard.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+	<PropertyGroup>
+		<EnableUnsafeBinaryFormatterSerialization>true</EnableUnsafeBinaryFormatterSerialization>
+	</PropertyGroup>
+  <ItemGroup>
+    <Compile Update="Backup\WrapperBackupResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WrapperBackupResource.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Client\AveClientCompoundRequestResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AveClientCompoundRequestResource.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Client\AveClientExtensionRequestResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AveClientExtensionRequestResource.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Client\AveClientOMRequestResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AveClientOMRequestResource.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Client\AveObjectModel.CommonResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AveObjectModel.CommonResource.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Client\AveWebServiceRequestResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AveWebServiceRequestResource.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Common\WrapperCommonResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WrapperCommonResource.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Discovery\WrapperDiscoverResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WrapperDiscoverResource.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Mapping\WrapperMappingResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WrapperMappingResource.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Exception\WrapperExceptionResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WrapperExceptionResource.resx</DependentUpon>
+    </Compile>
+    <Compile Update="ResourceFile\AveSPResourceFile.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AveSPResourceFile.resx</DependentUpon>
+    </Compile>
+    <Compile Update="ServerAPI2010\ServerAPIResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ServerAPIResource.resx</DependentUpon>
+    </Compile>
+    <Compile Update="SPService\WrapperSPServiceResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WrapperSPServiceResource.resx</DependentUpon>
+    </Compile>
+    <Compile Update="QueryService\WrapperQueryServiceResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WrapperQueryServiceResource.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Restore\WrapperRestoreResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WrapperRestoreResource.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Workflow\WrapperWorkflowResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WrapperWorkflowResource.resx</DependentUpon>
+    </Compile>
+    <Compile Update="RestoreReport\WrapperRestoreReportResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WrapperRestoreReportResource.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="FileTransfer\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="Mapping\WrapperMappingResource.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>WrapperMappingResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Exception\WrapperExceptionResource.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>WrapperExceptionResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="ResourceFile\AveSPResourceFile.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>AveSPResourceFile.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>AvePoint.Wrapper.Resource</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Update="ServerAPI2010\ServerAPIResource.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>ServerAPIResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Client\AveClientCompoundRequestResource.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>AveClientCompoundRequestResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Client\AveClientExtensionRequestResource.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>AveClientExtensionRequestResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Client\AveClientOMRequestResource.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>AveClientOMRequestResource.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Client\AveObjectModel.CommonResource.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>AveObjectModel.CommonResource.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Client\AveWebServiceRequestResource.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>AveWebServiceRequestResource.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Update="SPService\WrapperSPServiceResource.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>WrapperSPServiceResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="RestoreReport\WrapperRestoreReportResource.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>WrapperRestoreReportResource.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+      <CustomToolNamespace>AvePoint.Wrapper.Resource</CustomToolNamespace>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="Backup\WrapperBackupResource.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>WrapperBackupResource.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="Common\WrapperCommonResource.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>WrapperCommonResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Discovery\WrapperDiscoverResource.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>WrapperDiscoverResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="QueryService\WrapperQueryServiceResource.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>WrapperQueryServiceResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Restore\WrapperRestoreResource.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>WrapperRestoreResource.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Workflow\WrapperWorkflowResource.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>WrapperWorkflowResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\..\DocaveReference\DocAveStandard.snk">
+      <Link>DocAveStandard.snk</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.DotNet.UpgradeAssistant.Extensions.Default.Analyzers" Version="0.4.421302">
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+  </ItemGroup>
+</Project>

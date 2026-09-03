@@ -1,0 +1,18 @@
+﻿Site Restore public 方法跟踪:
+1. KeepDestItemRowId 放到item level。 [Done]
+2. DestinationUrl，不提供，通过构造函数来提供。
+3. KeepDefaultValue 放到item level。[Done]
+4. VerifyItemMMSColumnValue 已经在item level。 [Done]
+5. SetPlaceHolderAccount 已经通过User Mapping来提供 [Done]
+6. SetUserMapping 已经通过User Mapping来提供。 [Done]
+7. SetLanguageForNew 需要通过language mapping来提供。
+8. SetFieldFilter 需要放到web level和list level。
+9. DisableSPEventReceiver 已经放到site level的option上。 [Done]
+10. SetUseHostHeader 需要去掉，整理逻辑。 [Done]
+11. SetSiteCreationAccount 为只支持FBA authentioncat mode的Site使用。 [Done]
+
+
+if (Config.JobCategory == (int)PlanCategory.ArchiverRestore)
+{
+    overwriteBlob = AveSite.IsNewCreated;
+}

@@ -1,0 +1,93 @@
+﻿/********************************************************************
+ *
+ *  PROPRIETARY and CONFIDENTIAL
+ *
+ *  This file is licensed from, and is a trade secret of:
+ *
+ *                   AvePoint, Inc.
+ *                   525 Washington Blvd, Suite 1400
+ *                   Jersey City, NJ 07310
+ *                   United States of America
+ *                   Telephone: +1-201-793-1111
+ *                   WWW: www.avepoint.com
+ *
+ *  Refer to your License Agreement for restrictions on use,
+ *  duplication, or disclosure.
+ *
+ *  RESTRICTED RIGHTS LEGEND
+ *
+ *  Use, duplication, or disclosure by the Government is
+ *  subject to restrictions as set forth in subdivision
+ *  (c)(1)(ii) of the Rights in Technical Data and Computer
+ *  Software clause at DFARS 252.227-7013 (Oct. 1988) and
+ *  FAR 52.227-19 (C) (June 1987).
+ *
+ *  Copyright © 2017-2026 AvePoint® Inc. All Rights Reserved. 
+ *
+ *  Unpublished - All rights reserved under the copyright laws of the United States.
+ */
+
+
+
+using System;
+using System.Collections.Generic;
+using System.Text;
+using AvePoint.GCommon;
+using System.Threading;
+
+namespace AvePoint.Wrapper.Common
+{
+    public class SafeExecutor
+    {
+        private static AveLogger mLog = AveLogger.GetInstance(typeof(SafeExecutor));
+        private DelegateTask mAction;
+        private DelegateTask mPostAction;              
+
+        public SafeExecutor(DelegateTask action)
+            : this(action, null)
+        {
+        }
+
+        public SafeExecutor(DelegateTask action, DelegateTask postAction)
+        {
+            mAction = action;
+            mPostAction = postAction;
+        }
+
+        public void Execute(object state)
+        {
+            try
+            {
+                mAction();
+            }
+            catch (Exception e)
+            {
+                mLog.Debug("error occurred in safe action, message: {0}, stackTrace: {1}", e.Message, e.StackTrace);
+            }
+            finally
+            {
+                if (mPostAction != null)
+                {
+                    try
+                    {
+                        mPostAction();
+                    }
+                    catch (Exception e)
+                    {
+                        mLog.Debug("error occurred in post action, message: {0}, stackTrace: {1}", e.Message, e.StackTrace);
+                    }
+                }
+            }
+        }
+
+        public static WaitCallback GetExecutor(DelegateTask action)
+        {
+            return new SafeExecutor(action).Execute;
+        }
+
+        public static WaitCallback GetExecutor(DelegateTask action, DelegateTask postAction)
+        {
+            return new SafeExecutor(action, postAction).Execute;
+        }
+    }
+}

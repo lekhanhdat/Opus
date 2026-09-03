@@ -1,0 +1,97 @@
+﻿/********************************************************************
+ *
+ *  PROPRIETARY and CONFIDENTIAL
+ *
+ *  This file is licensed from, and is a trade secret of:
+ *
+ *                   AvePoint, Inc.
+ *                   525 Washington Blvd, Suite 1400
+ *                   Jersey City, NJ 07310
+ *                   United States of America
+ *                   Telephone: +1-201-793-1111
+ *                   WWW: www.avepoint.com
+ *
+ *  Refer to your License Agreement for restrictions on use,
+ *  duplication, or disclosure.
+ *
+ *  RESTRICTED RIGHTS LEGEND
+ *
+ *  Use, duplication, or disclosure by the Government is
+ *  subject to restrictions as set forth in subdivision
+ *  (c)(1)(ii) of the Rights in Technical Data and Computer
+ *  Software clause at DFARS 252.227-7013 (Oct. 1988) and
+ *  FAR 52.227-19 (C) (June 1987).
+ *
+ *  Copyright © 2017-2026 AvePoint® Inc. All Rights Reserved. 
+ *
+ *  Unpublished - All rights reserved under the copyright laws of the United States.
+ */
+
+
+
+
+
+using System.Runtime.Serialization;
+using System.Xml.Serialization;
+using AvePoint.GCommon.Contract.Common;
+
+namespace AvePoint.GCommon.Contract.StorageOptimization.Object
+{
+    [DataContract(Namespace = ContractConstants.Namespace)]
+    public class ProcessingPoolContract
+    {
+        [XmlIgnoreAttribute]
+        [DataMember]
+        public string Id { get; set; }
+        [XmlIgnoreAttribute]
+        [DataMember]
+        public string Name { get; set; }
+        [DataMember]
+        public string Description { get; set; }
+        [XmlIgnoreAttribute]
+        [DataMember]
+        public string FarmId { get; set; }
+        [XmlIgnoreAttribute]
+        [DataMember]
+        public string AgentGroupId { get; set; }
+        [DataMember]
+        public int Numeber { get; set; }
+        [DataMember]
+        public string FarmName { get; set; }
+        [DataMember]
+        public string FarmDisplayName { get; set; }
+        [DataMember]
+        public ProcessingPoolLevel PoolLevel { get; set; }
+    }
+
+    /// <summary>
+    /// Processing Pool级别
+    /// </summary>
+    [DataContract(Namespace = ContractConstants.Namespace)]
+    public enum ProcessingPoolLevel
+    {
+        [EnumMember]
+        User = 0,
+        [EnumMember]
+        Normal = 1,
+        [EnumMember]
+        High = 2
+    }
+
+    /// <summary>
+    /// 前台通过次属性传给后台，后台根据该属性在获取AgentGroup时如何传AgentType
+    /// </summary>
+    [DataContract(Namespace = ContractConstants.Namespace)]
+    public enum ProcessingPoolModule
+    {
+        [EnumMember]
+        None = 0,
+        [EnumMember]
+        Extender = 1,
+        [EnumMember]
+        Archiver = 2,
+        [EnumMember]
+        Connector = 3
+    }
+
+}

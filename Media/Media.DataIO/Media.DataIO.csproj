@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFramework>net10.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<RootNamespace>MediaContract</RootNamespace>
+		<AssemblyName>MediaContract</AssemblyName>
+	</PropertyGroup>
+	<ItemGroup>
+	  <PackageReference Include="AWSSDK.S3" Version="4.0.17.3" />
+	  <PackageReference Include="log4net" Version="3.3.1" />
+	</ItemGroup>
+	<ItemGroup>
+	  <ProjectReference Include="..\..\Common\GlobalCommon\GCommonContract\DocAve.GCommonContract.csproj" />
+	  <ProjectReference Include="..\..\Common\GlobalCommon\GCommonUtility\DocAve.GCommonUtility.csproj" />
+	  <ProjectReference Include="..\..\RACommon.Global\RACommon.Global.csproj" />
+	  <ProjectReference Include="..\ClassicStorageApi\ClassicStorageApi\ClassicStorageApi.csproj" />
+	  <ProjectReference Include="..\metadata\metadata.csproj" />
+	</ItemGroup>
+</Project>

@@ -1,0 +1,6 @@
+# JIRA Configuration
+# Copy this file to jira-config.json and update with your credentials
+# DO NOT commit jira-config.json to version control!
+
+*.json
+jira-config.json

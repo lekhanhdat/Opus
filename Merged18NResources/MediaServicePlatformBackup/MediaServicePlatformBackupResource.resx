@@ -1,0 +1,912 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="PlatformBackupDataWriterCloseLastConnection" xml:space="preserve">
+    <value>It is the last connection.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="PlatformBackupDataWriterCloseStreamError" xml:space="preserve">
+    <value>An error occurred while closing output stream {0}.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="PlatformBackupDataWriterGetDataFileNameContent" xml:space="preserve">
+    <value>Platform backup does not support the selected content type.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="PlatformBackupDataWriterHandleHeaderFileName" xml:space="preserve">
+    <value>The file name: [{0}] contains unformatted stream.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="PlatformBackupDataWriterHandleHeaderHeaderInfo" xml:space="preserve">
+    <value>Header Type: [{0}], Path: [{1}].</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="PlatformBackupDataWriterHandleHeaderXml" xml:space="preserve">
+    <value>Handle Header [{0}].</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="PlatformBackupDataWriterHandletailOffer" xml:space="preserve">
+    <value>Providing a new index infomation, then convert the index.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="PlatformBackupDataWriterHandleTailXml" xml:space="preserve">
+    <value>Handle Tail [{0}].</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="PlatformBackupDataWriterOpenDataWriter" xml:space="preserve">
+    <value>Start opening backup data writer.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="PlatformBackupDataWriterOpenNewIndexService" xml:space="preserve">
+    <value>Start loading a new index service instance.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="PlatformBackupServicePreBackupBegin" xml:space="preserve">
+    <value>Start handling platform backup connection...</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="PlatformBackupServicePreBackupJobInfo" xml:space="preserve">
+    <value>Backup job detail is: [{0}].</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="PlatformBackupServiceSendFileToAgentError" xml:space="preserve">
+    <value>Failed to send file: [{0}] to agent. {1}</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="PlatformIndexGeneratorExecutorGetContentDBIndexGenerateResultDBName" xml:space="preserve">
+    <value>Database Name is: [{0}].</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="PlatformIndexGeneratorExecutorGetInstanceRun" xml:space="preserve">
+    <value>Index generating thread job: [{0}] is running.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="PlatformIndexGeneratorExecutorIndexJobReportNullDir" xml:space="preserve">
+    <value>Invalid job directory.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="PlatformIndexGeneratorExecutorIndexJobReportPath" xml:space="preserve">
+    <value>Index Path: [{0}].</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="PlatformIndexGeneratorExecutorRunError" xml:space="preserve">
+    <value>Generated index failed.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="PlatformIndexGeneratorExecutorRunStop" xml:space="preserve">
+    <value>Index generate thread job: [{0}] stopped.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="PlatformIndexGeneratorExecutorUpdateBackupJobStatusReport" xml:space="preserve">
+    <value>Loaded index job report failed.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="PlatformIndexGeneratorExecutorUpdateBackupJobStatusResult" xml:space="preserve">
+    <value>Index: [{0}] gerenates job results: [{1}].</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="PlatformIndexProcesserForBrowseCommitError" xml:space="preserve">
+    <value>An error occurred while generating Guid database.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="PlatformIndexServiceCloseAndUploadCloseIndex" xml:space="preserve">
+    <value>Index Service has closed.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="PlatformIndexServiceOpenStorageInfo" xml:space="preserve">
+    <value>Storage Information is: [{0}].</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="PlatformIndexServiceOpenUnknownType" xml:space="preserve">
+    <value>Unknown index database type.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="PlatformRestoreStatisticsCalculatorGetRestoreStatisticsError" xml:space="preserve">
+    <value>Cannot load the statistics.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="DataFilteringProcessorInputException" xml:space="preserve">
+    <value>Cannot read due to nothing input previously.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="PlatformDataStreamPlatformDataStreamIndexNull" xml:space="preserve">
+    <value>Cannot find record index.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="PlatformDataStreamRefreshDataStreamDataNotExist" xml:space="preserve">
+    <value>The file [{0}\{1}] dose not exist.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="PlatformDataStreamRefreshDataStreamException" xml:space="preserve">
+    <value>Can not find data in the device.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="PlatformRestoreDataReaderGetFileNameByAveVersionUnknownType" xml:space="preserve">
+    <value>Opening unknown type data block...</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="PlatformRestoreServiceDoRestoreDataNotExist" xml:space="preserve">
+    <value>Cannot find backup data in index database.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="PlatformRestoreServiceGetStreamOpenTypeUnknownType" xml:space="preserve">
+    <value>Unknown version: [{0}].</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="PlatformRestoreServicePostRestoreError" xml:space="preserve">
+    <value>An error occurred while stopping platform restore.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="PlatformBackupDataWriterHandleHeaderUnknownTypeException" xml:space="preserve">
+    <value>Invalid header type for Platform Backup: {0}.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="PlatformRestoreStatisticsCalculatorProcessNodeDtoInternalNotSupportedException" xml:space="preserve">
+    <value>Leaf node cannot be unchecked.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="PlatformIndexGenerateTaskCallNotSupportedException" xml:space="preserve">
+    <value>The type {0} is not supported.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="PlatformRestoreBrowserBrowsePlatformBackupDataError" xml:space="preserve">
+    <value>An error occurred while loading the platform tree, details: {0}.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="PlatformRestoreBrowserCloseEnd" xml:space="preserve">
+    <value>Browse tree node completed.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="PlatformBackupDataWriterCloseGetPerformanceError" xml:space="preserve">
+    <value>An error occurred while getting current job performance: {0}.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="PlatformBackupServiceOpenSendFile" xml:space="preserve">
+    <value>Sending file [{0}] to agent...</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="PlatformRestoreDataReaderDataBlockOpeningBegin" xml:space="preserve">
+    <value>Begin opening stream {0}... The file size is {1}.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="PlatformJobPropertyIndexServiceGetCataLogFileSuccessful" xml:space="preserve">
+    <value>Got catalog successfully.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="PlatformBackupServiceDataWriterClosedError" xml:space="preserve">
+    <value>Updated job performance failed.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="DataCalculateServiceGetDirectorySizeInformation" xml:space="preserve">
+    <value>Calculate the data of {0} completed, data size is {1}.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="PlatformBackupDataCalculatorDispose" xml:space="preserve">
+    <value>Calculation is complete.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="PlatformBackupDataCalculatorProcessException" xml:space="preserve">
+    <value>Calculated data in physical device {0} failed, details: {1}.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="PlatformRestoreDataReaderCloseJobPerformanceError" xml:space="preserve">
+    <value>An error occurred while updating job performance.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="PlatformRestoreServiceOpenJobInfo" xml:space="preserve">
+    <value>Start handling platform restore connection... The job information is {0}.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="PlatformBackupRetentionServiceDeleteError" xml:space="preserve">
+    <value>An error occurred while deleting {0}, details: {1}.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="PlatformBackupRetentionServiceDeleteInfo" xml:space="preserve">
+    <value>Deleted {0} successfully.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="PlatformBackupRetentionServiceDisposeFinishRetention" xml:space="preserve">
+    <value>The retention job is finished, the count of successful jobs is {0}, the count of failed jobs is {1}.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="PlatformBackupRetentionServiceMoveError" xml:space="preserve">
+    <value>An error occurred while moving {0}, details: {1}.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="PlatformBackupRetentionServiceMoveInfo" xml:space="preserve">
+    <value>Moved {0} successfully.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="PlatformBackupRetentionServiceOpenDeviceOpen" xml:space="preserve">
+    <value>Opened device successfully.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="PlatformBackupRetentionServiceProcessExceptionError" xml:space="preserve">
+    <value>An error occurred in the retention job, details: {0}.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="PlatformBackupRetentionServiceRealMoveError" xml:space="preserve">
+    <value>There is no valid device, details: {0}.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="PlatformBackupRetentionServiceRetainStart" xml:space="preserve">
+    <value>Start retaining... the retention rule is {0}.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="PlatformBackupRetentionServiceRetainUnknownFileTypeExceptionRetentionRule" xml:space="preserve">
+    <value>Unknown retention rule: {0}.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="PlatformCheckFullPathServiceCheckError" xml:space="preserve">
+    <value>Failed to get fullpath information.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="PlatformCheckFullPathServiceCheckSuccessful" xml:space="preserve">
+    <value>Successfully gotten all fullpath information.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="PlatformIndexGenerateTaskCallError" xml:space="preserve">
+    <value>An error occurred while generating the task of platform index,  {0}.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="PlatformIndexServiceOpenIndexVolume" xml:space="preserve">
+    <value>Index service has started. Index service is opening the index volume, the volume is: [{0}\{1}], the index type is: [{2}].</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="PlatformIndexGeneratorExecutorRunTimeOut" xml:space="preserve">
+    <value>Executor thread is overtime, the begin time is {0}, and the end time is {1}.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="PlatformBackupRetentionServiceDeleteFileByStorageInfoError" xml:space="preserve">
+    <value>An error occurred while deleting the data, details: {0}.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="PlatformBackupRetentionServiceDeleteFileByStorageInfoInfo" xml:space="preserve">
+    <value>Successfully deleted the data whose storage info is [{0}].</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="PlatformBackupRetentionServiceDeleteMediaDatasFinish" xml:space="preserve">
+    <value>Finished deleting media data from control database.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="PlatformBackupRetentionServiceMoveUpdateMediaData" xml:space="preserve">
+    <value>Finished updating media data to control database.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="PlatformJobPropertyIndexServiceGetDataPrefixNumberError" xml:space="preserve">
+    <value>An error occurred while getting data prefix number.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="PlatformBackupDataWriterCloseIndexStorageInfo" xml:space="preserve">
+    <value>The storage info of index.db is {0}.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="PlatformCheckFullPathServiceProcessExceptionError" xml:space="preserve">
+    <value>An error occurred while checking fullpath, details: {0}.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="PlatformEncryptionInfoServiceProcessExceptionError" xml:space="preserve">
+    <value>An error occurred while getting encryption information, details: {0}.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="PlatformAdvancedSearchIndexServiceGetTableNameByTypeUnknownFileTypeExceptionSPType" xml:space="preserve">
+    <value>Unknown SP type: {0}</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="PlatformAdvancedSearchServiceSearchError" xml:space="preserve">
+    <value>There is something wrong with platform advanced search, details: {0}.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="PlatformAdvanceSearchServiceGetBranchesByFiltersResult" xml:space="preserve">
+    <value>The filter {0} has {1} result(s).</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="PlatformAdvanceSearchServiceRealSearchStart" xml:space="preserve">
+    <value>Starting advanced search on {0}.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="PlatformAdvanceSearchServiceShowResultResult" xml:space="preserve">
+    <value>The filter results are: {0} {1}.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="PlatformAdvanceSearchServicProcessExceptionError" xml:space="preserve">
+    <value>There is something wrong with the platform advanced search, details: {0}.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="PlatformFiltersHandlerGetRealNameUnknownFileTypeExceptionSPType" xml:space="preserve">
+    <value>Unknown SharePoint type {0}.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="PlatformFiltersHandlerValidateByConditionAndRuleUnknownFileTypeExceptionFilterCondition" xml:space="preserve">
+    <value>Unknown condition type {0}.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="PlatformFiltersHandlerValidateByConditionAndRuleUnknownFileTypeExceptionFilterFlag" xml:space="preserve">
+    <value>Unknown rule type {0}.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="PlatformMainIndexGeneratorGenerateMainIndexBegin" xml:space="preserve">
+    <value>Begin generating platform main index from IDX file {0}...</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="PlatformMainIndexGeneratorGenerateMainIndexException" xml:space="preserve">
+    <value>An error occurred while generating platform main index from IDX file, details: {0}.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="PlatformMainIndexGeneratorGenerateMainIndexSucceed" xml:space="preserve">
+    <value>Successfully generated platform main index from IDX file.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="PlatformUpdateCatalogServiceUpdateBegin" xml:space="preserve">
+    <value>Begin updating platform catalog in {0} - {1} ...</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="PlatformUpdateCatalogServiceUpdateException" xml:space="preserve">
+    <value>An error occurred while updating platform catalog, details: {0}.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="PlatformUpdateCatalogServiceUpdateSucceed" xml:space="preserve">
+    <value>Successfully updated platform catalog.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="PlatformDataStreamDeleteEntryCacheFileWarn" xml:space="preserve">
+    <value>Failed to delete file {0}, details: {1}.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="MediaRFileServiceDisposeStreamException" xml:space="preserve">
+    <value>An error occurred while closing the file stream, details: {0}.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="MediaRFileServiceDisposeSystemException" xml:space="preserve">
+    <value>An error occurred while closing the storage system, details: {0}.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="VdbFileMediaServiceStopServiceHostException" xml:space="preserve">
+    <value>An error occurred while closing VDB media service host, details: {0}.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="VdbFileMediaServiceStopServiceMutexException" xml:space="preserve">
+    <value>An error occurred while closing VDB media service mutex, details: {0}.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="PlatformDataStreamRefreshDataStreamOpen" xml:space="preserve">
+    <value>Begin opening stream {0}...</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="PlatformCheckCatalogServiceCheckBegin" xml:space="preserve">
+    <value>Begin checking platform catalog in {0} - {1} ...</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="PlatformCheckCatalogServiceCheckException" xml:space="preserve">
+    <value>An error occurred while checking platform catalog, details: {0}.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="PlatformCheckCatalogServiceCheckSucceed" xml:space="preserve">
+    <value>Successfully checked platform catalog. The result is {0} .</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="PlatformExcuteQueryServiceExcuteBegin" xml:space="preserve">
+    <value>Begin executing platform blob SQL in {0} - {1} ...</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="PlatformExcuteQueryServiceExcuteException" xml:space="preserve">
+    <value>An error occurred while executing platform blob SQL, details: {0}.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="PlatformExcuteQueryServiceExcuteSucceed" xml:space="preserve">
+    <value>Successfully executed platform blob SQL.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="PlatformBackupUpgradeServiceDisposeFinish" xml:space="preserve">
+    <value>Importing platform jobs finished.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="PlatformBackupUpgradeServiceGenerateJobReportError" xml:space="preserve">
+    <value>An error occurred while generating PR import job report, details: {0}.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="PlatformBackupUpgradeServiceOpenBegin" xml:space="preserve">
+    <value>Begin importing platform jobs {0}...</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="PlatformBackupUpgradeServiceProcessExceptionError" xml:space="preserve">
+    <value>An error occurred while importing platform data.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="PlatformBackupDataWriterUpdateSnapMirrorException" xml:space="preserve">
+    <value>An error occurred while updating the snap mirror, details: {0}.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="PlatformBackupDataWriterUpdateSnapMirrorBegin" xml:space="preserve">
+    <value>Begin updating snap mirror...</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="PlatformBackupDataWriterUpdateSnapMirrorEnd" xml:space="preserve">
+    <value>The result of updating snap mirror is {0}.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="PlatformBackupDataWriterCloseLastConnection1" xml:space="preserve">
+    <value>It is the last connection of maintenance job.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="PlatformBackupDataWriterUpdateSnapVaultBegin" xml:space="preserve">
+    <value>Begin updating snap vault...</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="PlatformBackupDataWriterUpdateSnapVaultEnd" xml:space="preserve">
+    <value>The result of updating snap vault is {0}.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="PlatformBackupDataWriterUpdateSnapVaultException" xml:space="preserve">
+    <value>An error occurred while updating the snap vault, details: {0}.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="PlatformBackupDataWriterCloseIndexError" xml:space="preserve">
+    <value>An error occurred while closing the index {0}.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="PlatformUpdateCatalogServiceUpdateCatalogTreeNodeException" xml:space="preserve">
+    <value>This catalog is not correct, and the fullpath is null.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="PlatformBackupDataVerifyServiceDisposeFinish" xml:space="preserve">
+    <value>Verifying data finished.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="PlatformBackupDataVerifyServiceProcessExceptionError" xml:space="preserve">
+    <value>An error occurred while verifying the data, details: {0}.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="PlatformBackupDataVerifyServiceVerifyBegin" xml:space="preserve">
+    <value>Start verifying data in {0}...</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="PlatformBackupDataVerifyServiceVerifyResult" xml:space="preserve">
+    <value>{0} file(s) in {1}. {2} file(s) in {3}.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="PlatformBackupUpgradeBrowseServiceBrowseFinish" xml:space="preserve">
+    <value>Platform import browsing  {0} finished.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="PlatformBackupUpgradeBrowseServiceBrowseRootException" xml:space="preserve">
+    <value>Unknown import data version.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="PlatformBackupUpgradeServiceAssembleControlSiteMasterIndexError" xml:space="preserve">
+    <value>An error occurred while converting index level in upgrading platform job[{0}], details: {1}.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="PlatformBackupUpgradeServiceUpgradeComment" xml:space="preserve">
+    <value>An error occurred while trying to insert data into control table.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="PlatformBackupUpgradeServiceUpgradeError" xml:space="preserve">
+    <value>An error occurred while upgrading platform job[{0}], details: {1}.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="PlatformRestoreDataReaderDataBlockGetSize" xml:space="preserve">
+    <value>The block size of the file {0} is {1}.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="PlatformRestoreDataReaderOpenDataBlockBegin" xml:space="preserve">
+    <value>Begin opening the stream {0}... The file size is {1}.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="PlatformRestoreDataReaderVerifyDataForPRCorrect" xml:space="preserve">
+    <value>The data of item {0} is correct.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="PlatformRestoreDataReaderVerifyDataForPREmpty" xml:space="preserve">
+    <value>The Storage CRC of item {0} is null.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="PlatformRestoreDataReaderVerifyDataForPRIncorrect" xml:space="preserve">
+    <value>The data of item {0} is incorrect.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="VdbFileMediaServiceReadKeepAlive" xml:space="preserve">
+    <value>VDB file service is reading alive message. And the logical name is: {0}.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="PlatformBackupRetentionServiceProcessCustomActionError" xml:space="preserve">
+    <value>An error occurred while processing {0} by the custom action, details: {1}.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="PlatformBackupRetentionServiceProcessCustomActionFailed" xml:space="preserve">
+    <value>An error occurred while processing {0}\{1} by the custom action and the exit code is {2}.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="PlatformBackupRetentionServiceProcessCustomActionFinish" xml:space="preserve">
+    <value>Processing {0}\{1} by the custom action to the data finished.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="PlatformBackupRetentionServiceRetainInDeleteRuleFinish" xml:space="preserve">
+    <value>Scanning the files in the cycle finished and {0} files need to be deleted.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="PlatformBackupRetentionServiceRetainInMoveRuleFinish" xml:space="preserve">
+    <value>Scanning the files in the cycle finished and {0} files need to be moved.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="PlatformBackupRetentionServiceUpdateJobStatusInfoBegin" xml:space="preserve">
+    <value>Starting the job {0}...</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="VdbFileMediaServiceHostStartMediaServiceExists" xml:space="preserve">
+    <value>Other thread is hostting this service.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="VdbFileMediaServiceHostStartMediaServiceExit" xml:space="preserve">
+    <value>VDB media service thread exited. The service type is: {1}. mDeadline &gt; DateTime is: {0}.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="VdbFileMediaServiceHostStartMediaServiceStart" xml:space="preserve">
+    <value>VDB service has started. The service type is: {0}.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="VerifyDataReaderVerifyDataWithStorageCrc32Correct" xml:space="preserve">
+    <value>The data of item {0} is correct.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="VerifyDataReaderVerifyDataWithStorageCrc32Incorrect" xml:space="preserve">
+    <value>The data of item {0} is incorrect.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="PlatformBackupIndexServiceSaveCatalogException" xml:space="preserve">
+    <value>The time stamp {0} of this catalog is older than the current time stamp {1}.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="PlatformIndexGeneratorGetNextIndexTreeNodeException" xml:space="preserve">
+    <value>An error occurred while getting next index tree node, details: {0}.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="PlatformIndexGeneratorLoadListTitleInfoException" xml:space="preserve">
+    <value>An error occurred while generating this index [{0}] from IDX file, details: {1}.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="PlatformIndexGeneratorProcessLineException" xml:space="preserve">
+    <value>An error occurred while initializing site directory information from {0}, details: {1}.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="PlatformIndexGeneratorSaveSiteItemInfoException" xml:space="preserve">
+    <value>An error occurred while generating this index [{0}] from IDX file, details: {1}.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="PlatformBackupRetentionServiceDeleteBlobDataException" xml:space="preserve">
+    <value>An error occurred while deleting the blob data in this job.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="PlatformBackupRetentionServiceDeleteBlobDataSucceed" xml:space="preserve">
+    <value>Successfully deleted blob data in job [{0}].</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="PlatformWfeFolderIndexServiceProcessNodeDtoTypeWFEIndexTypeError" xml:space="preserve">
+    <value>{0} is not a Web-Front-End Servers NodeType."</value>
+    <comment>Added</comment>
+  </data>
+  <data name="PlatformBackupRetentionServiceHandleBlobDataWarn" xml:space="preserve">
+    <value>The blob data size of job {0} is 0.</value>
+    <comment>Added</comment>
+  </data>
+  <data name="PlatformIndexGenerateTaskEndInfo" xml:space="preserve">
+    <value>The storage info of db file {0} is {1}.</value>
+    <comment>Added</comment>
+  </data>
+  <data name="PlatformIndexGeneratorExecutorUpdateBackupJobStatusWarn" xml:space="preserve">
+    <value>There is no idx file need to convert to db.</value>
+    <comment>Added</comment>
+  </data>
+  <data name="PlatformBackupRetentionServiceProcessCustomActionPruningMessageMap" xml:space="preserve">
+    <value>An error occurred in processing custom action with {0} and the exit code is {1}.</value>
+    <comment>Added</comment>
+  </data>
+  <data name="PlatformBackupRetentionServiceProcessGetDataSizeInfo" xml:space="preserve">
+    <value>Finish calculating {0} and size is {1}.</value>
+    <comment>Added</comment>
+  </data>
+  <data name="PlatformBackupRetentionServiceProcessGetDataSizeWarning" xml:space="preserve">
+    <value>An error occurred in calculating data size in {0}, details: {1}.</value>
+    <comment>Added</comment>
+  </data>
+  <data name="PlatformBackupRetentionServiceRetainInMoveRuleRetentionInfo" xml:space="preserve">
+    <value>The destination device does not has enough space to move.</value>
+    <comment>Added</comment>
+  </data>
+  <data name="PlatformInsertSiteMasterIndexCommandErrorMessage" xml:space="preserve">
+    <value>Platform insert site master index failed.</value>
+    <comment>Added</comment>
+  </data>
+  <data name="PlatformInsertSiteMasterIndexCommandSucceedMessage" xml:space="preserve">
+    <value>Platform insert site master index complete.</value>
+    <comment>Added</comment>
+  </data>
+  <data name="PlatformRebuildIndexCommandErrorMessage" xml:space="preserve">
+    <value>Platform rebuild index failed.</value>
+    <comment>Added</comment>
+  </data>
+  <data name="PlatformRebuildIndexCommandExecuteCommand" xml:space="preserve">
+    <value>Rebuild index has an error {0}.</value>
+    <comment>Added</comment>
+  </data>
+  <data name="PlatformRebuildIndexCommandSucceedMessage" xml:space="preserve">
+    <value>Platform rebuild index successfully.</value>
+    <comment>Added</comment>
+  </data>
+  <data name="PlatformBeginGenerateMappingFileInfo" xml:space="preserve">
+    <value>Begin generate mapping file. FarmName:{0}, PlanId:{1}, JobId:{2}.</value>
+    <comment>Added</comment>
+  </data>
+  <data name="PlatformConfuseVSSReaderAndVDIReader" xml:space="preserve">
+    <value>Invalid state for mapping reader. Expected vss reader, but was vdi reader.</value>
+    <comment>Added</comment>
+  </data>
+  <data name="PlatformCreateVirtualStreamFailed" xml:space="preserve">
+    <value>Cannot create virtual stream. FarmName:{0}, PlanId:{1}, FullPath:{2}, Error:{3}</value>
+    <comment>Added</comment>
+  </data>
+  <data name="PlatformDeleteOldMappingFileFailed" xml:space="preserve">
+    <value>Delete file {0} in {1} exception : {2}.</value>
+    <comment>Added</comment>
+  </data>
+  <data name="PlatformFindFileFailed" xml:space="preserve">
+    <value>Cannot find file '{0}\\{1}' in logical device.\r\n{1}.</value>
+    <comment>Added</comment>
+  </data>
+  <data name="PlatformFindMappingFileFailed" xml:space="preserve">
+    <value>Cannot find mapping file for data.Please set attribute 'FailedIfMappingNotExist' to false if you want to generate mapping when it is not exist. AgentHost:{0}, PlanId:{1}, JobId:{2}.</value>
+    <comment>Added</comment>
+  </data>
+  <data name="PlatformFindPartialRangeInBackupDocumentFailed" xml:space="preserve">
+    <value>Cannot find partial range in BackupDocument. PhysicalOffset:{0}</value>
+    <comment>Added</comment>
+  </data>
+  <data name="PlatformGenerateMappingFileFailed" xml:space="preserve">
+    <value>Cannot generate mapping file. Please check server 'Event Viewer' for more information. AgentHost:{0}, PlanId:{1}, JobId:{2}</value>
+    <comment>Added</comment>
+  </data>
+  <data name="PlatformGenerateMappingFileFailedInfo" xml:space="preserve">
+    <value>Cannot generate mapping file for job '{0}'. BackupNode:{1}.</value>
+    <comment>Added</comment>
+  </data>
+  <data name="PlatformGenerateMappingFileFinished" xml:space="preserve">
+    <value>Finish to generate mapping file for job '{0}'. SuccessDBCount:{1}, FailedDBCount:{2}.</value>
+    <comment>Added</comment>
+  </data>
+  <data name="PlatformGetDataLengthNotMatchExpected" xml:space="preserve">
+    <value>The data length should be {0}, but it is {1}.</value>
+    <comment>Added</comment>
+  </data>
+  <data name="PlatformGetTreeNodeFromCatalogFailed" xml:space="preserve">
+    <value>Cannot find tree node '{0}' catalog file '{1}'.</value>
+    <comment>Added</comment>
+  </data>
+  <data name="PlatformGetUnexpectedDataType" xml:space="preserve">
+    <value>Unexpected data type '{0}'. It should be header data type.</value>
+    <comment>Added</comment>
+  </data>
+  <data name="PlatformInitializeFailedBecauseOfBackupMethod" xml:space="preserve">
+    <value>Mapping xml error.</value>
+    <comment>Added</comment>
+  </data>
+  <data name="PlatformMappingReaderDisposeException" xml:space="preserve">
+    <value>Mapping reader dispose exception {0}.</value>
+    <comment>Added</comment>
+  </data>
+  <data name="PlatformParseCatalogFileFailed" xml:space="preserve">
+    <value>Cannot parse catalog file: {0}. Error:{1}</value>
+    <comment>Added</comment>
+  </data>
+  <data name="PlatformPhysicalStreamDisposeException" xml:space="preserve">
+    <value>Physical stream dispose exception {0}.</value>
+    <comment>Added</comment>
+  </data>
+  <data name="PlatformSizeInBackupDocumentNotMatchRealSize" xml:space="preserve">
+    <value>The size in BackupDocument({0}) is not same as real size ({1}).</value>
+    <comment>Added</comment>
+  </data>
+  <data name="PlatformSkipIncrementalMappingGenerate" xml:space="preserve">
+    <value>Backup type of node {0} is incremental, so skip it.</value>
+    <comment>Added</comment>
+  </data>
+  <data name="PlatformUnexpectedStreamEnd" xml:space="preserve">
+    <value>Unexpected end of stream</value>
+    <comment>Added</comment>
+  </data>
+  <data name="PRSNTreeCatalogUtilityAssembleFBAWebAppFBAInfoError" xml:space="preserve">
+    <value>Parse FBA Info error:</value>
+    <comment>Added</comment>
+  </data>
+  <data name="PRSNTreeCatalogUtilityBuildBackupTreeError" xml:space="preserve">
+    <value>Node Name: {0}, error:  {1}.</value>
+    <comment>Added</comment>
+  </data>
+  <data name="PRSNTreeCatalogUtilityConvertSSATypeIdNotSupport" xml:space="preserve">
+    <value>Not support type id:{0}.</value>
+    <comment>Added</comment>
+  </data>
+  <data name="PRSNTreeCatalogUtilityError" xml:space="preserve">
+    <value>Error:{0}, {1}.</value>
+    <comment>Added</comment>
+  </data>
+  <data name="PRSNTreeCatalogUtilityGetNewSSPCatalogFromOldCatalogBegin" xml:space="preserve">
+    <value>Begin convert SSP catalog.</value>
+    <comment>Added</comment>
+  </data>
+  <data name="PRSNTreeCatalogUtilityGetNewSSPCatalogFromOldCatalogConverting" xml:space="preserve">
+    <value>Convert SSP catalog...</value>
+    <comment>Added</comment>
+  </data>
+  <data name="PRSNTreeCatalogUtilityGetNewSSPCatalogFromOldCatalogDone" xml:space="preserve">
+    <value>Convert SSP catalog done.</value>
+    <comment>Added</comment>
+  </data>
+  <data name="PlatformBackupRetentionServiceDeleteDirectory" xml:space="preserve">
+    <value>Begin to delete directory {0}.</value>
+    <comment>Added</comment>
+  </data>
+  <data name="PlatformBackupRetentionServiceOpenBegin" xml:space="preserve">
+    <value>Begin to do PR retention ,the info is {0}.</value>
+    <comment>Added</comment>
+  </data>
+  <data name="PlatformUpgrageHelperInsertMediaDataColumn" xml:space="preserve">
+    <value>Start to insert {0}.</value>
+    <comment>Added</comment>
+  </data>
+  <data name="PlatformUpgrageHelperInsertSqlColumnEnd" xml:space="preserve">
+    <value>End to insert column into control database.</value>
+    <comment>Added</comment>
+  </data>
+  <data name="PlatformUpgrageHelperInsertSqlColumnException" xml:space="preserve">
+    <value>"Parameter:upgradeSubInfo has send a wrong DocAvePlatformProductVersion information"</value>
+    <comment>Added</comment>
+  </data>
+  <data name="PlatformUpgrageHelperInsertSqlColumnStart" xml:space="preserve">
+    <value>Start to insert db file full path into control database.</value>
+    <comment>Added</comment>
+  </data>
+  <data name="PlatformDataStreamDeleteEntryCacheFileBegin" xml:space="preserve">
+    <value>Begin to delete entry list temp file {0}.</value>
+    <comment>Added</comment>
+  </data>
+  <data name="PlatformDataStreamGetStorageStreamBegin" xml:space="preserve">
+    <value>Begin to create entry list temp file, the info is {0}.</value>
+    <comment>Added</comment>
+  </data>
+  <data name="PlatformEncryptionInfoServiceOpenBegin" xml:space="preserve">
+    <value>Begin to get encryption info by {0}.</value>
+    <comment>Added</comment>
+  </data>
+  <data name="PlatformRestoreServiceRestoreWFEDataRestore" xml:space="preserve">
+    <value>Begin restore the data of [{0}].</value>
+    <comment>Added</comment>
+  </data>
+  <data name="PlatformRestoreDataReaderSetFilterStreamBegin" xml:space="preserve">
+    <value>Begin open filter stream for flag {0}.</value>
+    <comment>Added</comment>
+  </data>
+  <data name="PlatformIndexGeneratorExecutorUpdateCatalogForIndexStatusBegin" xml:space="preserve">
+    <value>Begin update catalog for index status.</value>
+    <comment>Added</comment>
+  </data>
+  <data name="PlatformIndexGeneratorExecutorUpdateCatalogForIndexStatusFinished" xml:space="preserve">
+    <value>Updating catalog for index status finished.</value>
+    <comment>Added</comment>
+  </data>
+</root>

@@ -1,0 +1,142 @@
+﻿<?xml version="1.0"?>
+<!--/********************************************************************
+ *
+ *  PROPRIETARY and CONFIDENTIAL
+ *
+ *  This file is licensed from, and is a trade secret of:
+ *
+ *                   AvePoint, Inc.
+ *                   525 Washington Blvd, Suite 1400
+ *                   Jersey City, NJ 07310
+ *                   United States of America
+ *                   Telephone: +1-201-793-1111
+ *                   WWW: www.avepoint.com
+ *
+ *  Refer to your License Agreement for restrictions on use,
+ *  duplication, or disclosure.
+ *
+ *  RESTRICTED RIGHTS LEGEND
+ *
+ *  Use, duplication, or disclosure by the Government is
+ *  subject to restrictions as set forth in subdivision
+ *  (c)(1)(ii) of the Rights in Technical Data and Computer
+ *  Software clause at DFARS 252.227-7013 (Oct. 1988) and
+ *  FAR 52.227-19 (C) (June 1987).
+ *
+ *  Copyright © 2017-2026 AvePoint® Inc. All Rights Reserved. 
+ *
+ *  Unpublished - All rights reserved under the copyright laws of the United States.
+ */-->
+	
+	<!--When editing this file, please make sure the content format is not changed. Changing the content format may cause errors.-->
+ 
+	<!--Some of SharePoint properties can be customized as the SharePointMetadata parameter value in the following format: @Property@-->
+	
+		<!--Use @Title@ to retrieve the object title as the metadata value.-->
+		<!--Use @Name@ to retrieve the object name as the metadata value.-->
+		<!--Use @CreatedTime@ to retrieve the created time of the object as the metadata value. The time is in the time zone of the site collection where the object resides.-->
+		<!--Use @TimeNow@ to retrieve the time when the object is exported into a VEO file. The time is in the time zone of the server where the Archiver job is run.-->
+		<!--Use @ModifiedTime@ to retrieve the last modified time of the object as the metadata value. The time is in the time zone of the site collection where the object resides.-->
+		<!--Use @ID@ to retrieve the object ID as the metadata value.-->
+		<!--Use @ExtensionName@ to retrieve the object extension as the metadata value. The metadata value will be [!ERROR!] when the object is a list or folder.-->
+		<!--Use @FileContent@ to retrieve the object content as the metadata value. The metadata value will be [!ERROR!] when the object is a list or folder.-->
+		<!--Use @CreatedBy@ to retrieve the login user of the user who created the object as the metadata value.-->
+		<!--Use @ContentType@ to retrieve the object content type as the metadata value. The metadata value will be [!ERROR!] when the object is a list or folder.-->
+		<!--Use @ModifiedBy@ to retrieve the login name of the user who last modified the object as the metadata value.The metadata value will be [!ERROR!] when the object is a list.-->
+
+<RecordVEOXML>
+<M1 MetadataName = "VERS Encapsulated Object">
+	<M2 MetadataName = "VEO Format Description" SharePointMetadataAsSource = "false" SharePointMetadata = "" DefaultValue = "Produced according to the Victorian Electronic Records Strategy,
+Version 2.0, 31 July 2003. The structure of this record is
+represented using Extensible Markup Language (XML) 1.0, W3C,
+1998."/>
+	<!--<M3 MetadataName = "Version" DefaultValue = "2.0"/>Only the VERS Standard 2.0 is supported.-->
+	<M4 MetadataName = "Signed Object">
+		<M5 MetadataName = "Object Metadata">
+			<!--<M6 MetadataName = "Object Type" DefaultValue = "Record"/>This XML is used to configure metadata values for VEO files that are exported from SharePoint documents. The DefaultValue cannot be edited.-->
+			<M7 MetadataName = "Object Type Description" SharePointMetadataAsSource = "false" SharePointMetadata = "" DefaultValue = "This object
+contains a record; that is, a collection of related information that must be
+preserved for a period."/>
+			<!--<M8 MetadataName = "ObjectCreationDate" DefaultValue = "DateTimeNow"/>-->
+		</M5>
+		<M9 MetadataName = "Object Content">
+			<M10 MetadataName = "Record">
+				<M11 MetadataName = "Record Metadata">
+					<M12 MetadataName = "Agent">
+						<M13 MetadataName = "Agent Type" SharePointMetadataAsSource = "false" SharePointMetadata = "" DefaultValue = "Registrar"/>
+						<M16 MetadataName = "Corporate Name" SharePointMetadataAsSource = "false" SharePointMetadata = "" DefaultValue = "Your Company"/>
+					</M12>	
+					<M24 MetadataName = "Rights Management">
+						<M25 MetadataName = "Security Classification" SharePointMetadataAsSource = "false" SharePointMetadata = "" DefaultValue = "Unclassified"/>
+					</M24>
+					<M32 MetadataName = "Title">
+						<M33 MetadataName = "Scheme Type" SharePointMetadataAsSource = "false" SharePointMetadata = "" DefaultValue = "Free Text"/>
+						<M34 MetadataName = "Scheme Name" SharePointMetadataAsSource = "false" SharePointMetadata = "" DefaultValue = "None"/>
+						<M35 MetadataName = "Title Words" SharePointMetadataAsSource = "false" SharePointMetadata = "" DefaultValue = "None"/>
+					</M32>
+					<M54 MetadataName = "Date">
+						<M55 MetadataName = "Date/Time Created" SharePointMetadataAsSource = "true" SharePointMetadata = "@CreatedTime@" DefaultValue = ""/>
+						<M56 MetadataName = "Date/Time Transacted" SharePointMetadataAsSource = "true" SharePointMetadata = "@ModifiedTime@" DefaultValue = ""/>
+						<M57 MetadataName = "Date/Time Registered" SharePointMetadataAsSource = "true" SharePointMetadata = "@TimeNow@" DefaultValue = ""/>
+					</M54>
+					<!--<M59 MetadataName = "Aggregation Level" DefaultValue = "Item"/>The DefaultValue cannot be edited.-->
+					<M66 MetadataName = "Management History">
+						<M67 MetadataName = "Management Event">
+							<M68 MetadataName = "Event Date/Time" SharePointMetadataAsSource = "true" SharePointMetadata = "@CreatedTime@" DefaultValue = ""/>
+							<M69 MetadataName = "Event Type" SharePointMetadataAsSource = "true" SharePointMetadata = "@CreatedTime@" DefaultValue = ""/>
+							<M70 MetadataName = "Event Description" SharePointMetadataAsSource = "false" SharePointMetadata = "" DefaultValue = "The specific details of the event."/>	
+						</M67>
+					</M66>
+					<M88 MetadataName = "Disposal">
+						<M89 MetadataName = "Disposal Authorisation" SharePointMetadataAsSource = "false" SharePointMetadata = "" DefaultValue = "No Disposal Coverage"/>
+						<M90 MetadataName = "Sentence" SharePointMetadataAsSource = "false" SharePointMetadata = "" DefaultValue = "Permanent"/>
+					</M88>
+					<M99 MetadataName = "VEO Identifier">
+						<M102 MetadataName = "File Identifier" SharePointMetadataAsSource = "true" SharePointMetadata = "@ID@" DefaultValue = ""/>
+						<M103 MetadataName = "VERS Record Identifier" SharePointMetadataAsSource = "true" SharePointMetadata = "@ID@" DefaultValue = ""/>
+					</M99>
+				</M11>
+			</M10>
+			<M114 MetadataName = "Document">
+				<M115 MetadataName = "Document Metadata">
+					<M116 MetadataName = "Document Agent" SharePointMetadataAsSource = "false" SharePointMetadata = "" DefaultValue = ""/>
+					<M117 MetadataName = "Document Title" SharePointMetadataAsSource = "true" SharePointMetadata = "@Name@" DefaultValue = ""/>
+					<M123 MetadataName = "Document Date" SharePointMetadataAsSource = "true" SharePointMetadata = "@ModifiedTime@" DefaultValue = ""/>
+					<M125 MetadataName = "Document Source" SharePointMetadataAsSource = "false" SharePointMetadata = "" DefaultValue = "@ExtensionName@"/>
+				</M115>
+				<M126 MetadataName = "Encoding">
+					<M127 MetadataName = "Encoding Metadata">
+						<M128 MetadataName = "File Encoding" SharePointMetadataAsSource = "false" SharePointMetadata = "" DefaultValue = "@ExtensionName@"/>
+						<M130 MetadataName = "File Rendering">
+							<M131 MetadataName = "Rendering Text" SharePointMetadataAsSource = "false" SharePointMetadata = "" DefaultValue = "See the contents of the vers:FileEncoding element."/>
+							<M132 MetadataName = "Rendering Keywords" SharePointMetadataAsSource = "false" SharePointMetadata = "" DefaultValue = ""/>
+						</M130>
+					</M127>
+					<M133 MetadataName = "Document Data" SharePointMetadataAsSource = "true" SharePointMetadata = "@FileContent@" DefaultValue = ""/>
+				</M126>
+			</M114>
+			
+		</M9>
+	</M4>
+	<!--<M134 MetadataName = "Signature Block">-->
+		<!--<M135 MetadataName = "Signature Format Description" SharePointMetadataAsSource = "" DefaultValue = ""/>-->
+		<!--<M138 MetadataName = "Signature" SharePointMetadataAsSource = "" DefaultValue = ""/>-->
+		<!--<M139 MetadataName = "Certificate Block">-->
+			<!--<M140 MetadataName = "Certificate" SharePointMetadataAsSource = "" DefaultValue = ""/>-->
+		<!--</M139>-->
+		<!--<M149 MetadataName = "Signature Algorithm">-->
+			<!--<M150 MetadataName = "Signature Algorithm Identifier" SharePointMetadataAsSource = "" DefaultValue = ""/>-->
+		<!--</M149>-->
+	<!--</M134>-->
+	<!--<M152 MetadataName = "Lock Signature Block">-->
+		<!--<M135 MetadataName = "Signature Format Description" SharePointMetadataAsSource = "" DefaultValue = ""/>-->
+		<!--<M138 MetadataName = "Signature" SharePointMetadataAsSource = "" DefaultValue = ""/>-->
+		<!--<M139 MetadataName = "Certificate Block">-->
+			<!--<M140 MetadataName = "Certificate" SharePointMetadataAsSource = "" DefaultValue = ""/>-->
+		<!--</M139>-->
+		<!--<M149 MetadataName = "Signature Algorithm">-->
+			<!--<M150 MetadataName = "Signature Algorithm Identifier" SharePointMetadataAsSource = "" DefaultValue = ""/>-->
+		<!--</M149>-->
+	<!--</M152>-->
+</M1>
+</RecordVEOXML>

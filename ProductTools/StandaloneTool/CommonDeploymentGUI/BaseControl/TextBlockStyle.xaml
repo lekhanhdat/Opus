@@ -1,0 +1,242 @@
+﻿<!--/********************************************************************
+ *
+ *  PROPRIETARY and CONFIDENTIAL
+ *
+ *  This file is licensed from, and is a trade secret of:
+ *
+ *                   AvePoint, Inc.
+ *                   525 Washington Blvd, Suite 1400
+ *                   Jersey City, NJ 07310
+ *                   United States of America
+ *                   Telephone: +1-201-793-1111
+ *                   WWW: www.avepoint.com
+ *
+ *  Refer to your License Agreement for restrictions on use,
+ *  duplication, or disclosure.
+ *
+ *  RESTRICTED RIGHTS LEGEND
+ *
+ *  Use, duplication, or disclosure by the Government is
+ *  subject to restrictions as set forth in subdivision
+ *  (c)(1)(ii) of the Rights in Technical Data and Computer
+ *  Software clause at DFARS 252.227-7013 (Oct. 1988) and
+ *  FAR 52.227-19 (C) (June 1987).
+ *
+ *  Copyright © 2017-2026 AvePoint® Inc. All Rights Reserved. 
+ *
+ *  Unpublished - All rights reserved under the copyright laws of the United States.
+ */-->
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <!-- Resource dictionary entries should be defined here. -->
+
+
+    <!--Window Header-->
+    <!--Segoe UI/Regular/15/White-->
+    <Style x:Key="WindowHeaderTextBlock" TargetType="{x:Type TextBlock}">
+        <Setter Property="TextWrapping" Value="Wrap" />
+        <Setter Property="VerticalAlignment" Value="Top" />
+        <Setter Property="HorizontalAlignment" Value="Left" />
+        <Setter Property="FocusVisualStyle" Value="{x:Null}" />
+        <Setter Property="FontFamily" Value="Segoe UI" />
+        <Setter Property="FontSize" Value="15" />
+        <Setter Property="Foreground" Value="#FFFFFFFF" />
+    </Style>
+
+
+    <!--Welcome Intro-->
+    <!--Segoe UI/Regular/14/#336688-->
+    <Style x:Key="WelcomeIntroTextBlock" TargetType="{x:Type TextBlock}">
+        <Setter Property="TextWrapping" Value="Wrap" />
+        <Setter Property="VerticalAlignment" Value="Top" />
+        <Setter Property="HorizontalAlignment" Value="Center" />
+        <Setter Property="FocusVisualStyle" Value="{x:Null}" />
+        <Setter Property="FontFamily" Value="Segoe UI" />
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="Foreground" Value="#FF336688" />
+    </Style>
+
+
+
+    <!--Page Title-->
+    <!--Segoe UI/18/#333333-->
+    <Style x:Key="PageTitleTextBlock" TargetType="{x:Type TextBlock}">
+        <Setter Property="TextWrapping" Value="Wrap" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="HorizontalAlignment" Value="Left" />
+        <Setter Property="FocusVisualStyle" Value="{x:Null}" />
+        <Setter Property="FontFamily" Value="Segoe UI" />
+        <Setter Property="FontSize" Value="18" />
+        <Setter Property="Foreground" Value="#FF333333" />
+    </Style>
+
+    <!--Page Summary-->
+    <!--Segoe UI/Regular/13/#aaaaaa-->
+    <Style x:Key="PageSummaryTextBlock" TargetType="{x:Type TextBlock}">
+        <Setter Property="TextWrapping" Value="Wrap" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="HorizontalAlignment" Value="Left" />
+        <Setter Property="FocusVisualStyle" Value="{x:Null}" />
+        <Setter Property="FontFamily" Value="Segoe UI" />
+        <Setter Property="FontSize" Value="13" />
+        <!--<Setter Property="FontWeight" Value="Bold" />-->
+        <Setter Property="Foreground" Value="#FFAAAAAA" />
+        <Setter Property="LineHeight" Value="18" />
+    </Style>
+
+    <!--Page SubTitle-->
+    <!--Segoe UI/Bold/13/#333333-->
+    <Style x:Key="PageSubTitleTextBlock" TargetType="{x:Type TextBlock}">
+        <Setter Property="TextWrapping" Value="Wrap" />
+        <Setter Property="VerticalAlignment" Value="Top" />
+        <Setter Property="HorizontalAlignment" Value="Left" />
+        <Setter Property="FocusVisualStyle" Value="{x:Null}" />
+        <Setter Property="FontFamily" Value="Segoe UI" />
+        <Setter Property="FontSize" Value="13" />
+        <Setter Property="FontWeight" Value="Bold" />
+        <Setter Property="Foreground" Value="#FF333333" />
+    </Style>
+
+    <!--Page Description-->
+    <!--Segoe UI/13/#333333-->
+    <Style x:Key="PageDescriptionTextBlock" TargetType="{x:Type TextBlock}">
+        <Setter Property="TextWrapping" Value="Wrap" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="HorizontalAlignment" Value="Left" />
+        <Setter Property="FocusVisualStyle" Value="{x:Null}" />
+        <Setter Property="FontFamily" Value="Segoe UI" />
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="Foreground" Value="#FF888888" />
+        <Setter Property="LineHeight" Value="18" />
+    </Style>
+
+    <Style x:Key="PageDescriptionTextBlockPassphrase" TargetType="{x:Type TextBlock}">
+        <Setter Property="TextWrapping" Value="Wrap" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="HorizontalAlignment" Value="Left" />
+        <Setter Property="FocusVisualStyle" Value="{x:Null}" />
+        <Setter Property="FontFamily" Value="Segoe UI" />
+        <Setter Property="FontSize" Value="13" />
+        <Setter Property="FontStyle" Value="Normal" />
+        <Setter Property="Foreground" Value="#FF1144AA" />
+        <Setter Property="LineHeight" Value="18" />
+        <!--<Setter Property="FontWeight" Value="UltraBold"/>-->
+    </Style>
+
+    <Style x:Key="PageDescriptionTextBlock2" TargetType="{x:Type TextBlock}">
+        <Setter Property="TextWrapping" Value="Wrap" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="HorizontalAlignment" Value="Left" />
+        <Setter Property="FocusVisualStyle" Value="{x:Null}" />
+        <Setter Property="FontFamily" Value="Segoe UI" />
+        <Setter Property="FontSize" Value="13" />
+        <Setter Property="FontStyle" Value="Italic" />
+        <!--<Setter Property="FontWeight" Value="Bold" />-->
+        <Setter Property="Foreground" Value="#FF888888" />
+    </Style>
+
+    <!--Page Intro-->
+    <!--Segoe UI/Regular/13/#333333-->
+    <Style x:Key="PageIntroTextBlock" TargetType="{x:Type TextBlock}">
+        <Setter Property="TextWrapping" Value="Wrap" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="HorizontalAlignment" Value="Left" />
+        <Setter Property="FocusVisualStyle" Value="{x:Null}" />
+        <Setter Property="FontFamily" Value="Segoe UI" />
+        <Setter Property="FontSize" Value="13" />
+        <!--<Setter Property="FontWeight" Value="Bold" />-->
+        <Setter Property="Foreground" Value="#FF333333" />
+        <Setter Property="LineHeight" Value="18" />
+    </Style>
+
+    <!--Review Detail-->
+    <!--Segoe UI/Regular/13/#1144AA-->
+    <Style x:Key="ReviewDetailTextBlock" TargetType="{x:Type TextBlock}">
+        <Setter Property="TextWrapping" Value="Wrap" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="HorizontalAlignment" Value="Left" />
+        <Setter Property="FocusVisualStyle" Value="{x:Null}" />
+        <Setter Property="FontFamily" Value="Segoe UI" />
+        <Setter Property="FontSize" Value="13" />
+        <!--<Setter Property="FontWeight" Value="Bold" />-->
+        <Setter Property="Foreground" Value="#FF1144AA" />
+    </Style>
+
+
+    <!--Check Table Banner-->
+    <!--Segoe UI/Bold/13/#333333-->
+    <Style x:Key="CheckTableBannerTextBlock" TargetType="{x:Type TextBlock}">
+        <Setter Property="TextWrapping" Value="Wrap" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="HorizontalAlignment" Value="Left" />
+        <Setter Property="FocusVisualStyle" Value="{x:Null}" />
+        <Setter Property="Margin" Value="5,0,0,0" />
+        <Setter Property="FontFamily" Value="Segoe UI" />
+        <Setter Property="FontSize" Value="13" />
+        <Setter Property="Margin" Value="5,0,0,0" />
+        <Setter Property="FontWeight" Value="Bold" />
+        <!--<Setter Property="FontStyle" Value="Italic" />-->
+        <Setter Property="Foreground" Value="#FF333333" />
+    </Style>
+
+
+
+    <!--Check Table Intro-->
+    <!--Segoe UI/Regular/13/#333333-->
+    <Style x:Key="CheckTableIntroTextBlock" TargetType="{x:Type TextBlock}">
+        <Setter Property="TextWrapping" Value="Wrap" />
+        <Setter Property="VerticalAlignment" Value="Top" />
+        <Setter Property="HorizontalAlignment" Value="Left" />
+        <Setter Property="Margin" Value="5,0,0,0" />
+        <Setter Property="FocusVisualStyle" Value="{x:Null}" />
+        <Setter Property="FontFamily" Value="Segoe UI" />
+        <Setter Property="FontSize" Value="13" />
+        <!--<Setter Property="FontWeight" Value="Bold" />-->
+        <!--<Setter Property="FontStyle" Value="Italic" />-->
+        <Setter Property="Foreground" Value="#FF333333" />
+    </Style>
+
+    <!--Review Settings-->
+    <!--Segoe UI/Italic/13/#1166AA-->
+    <Style x:Key="ReviewSettingsTextBlock" TargetType="{x:Type TextBlock}">
+        <Setter Property="TextWrapping" Value="Wrap" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="HorizontalAlignment" Value="Left" />
+        <Setter Property="FocusVisualStyle" Value="{x:Null}" />
+        <Setter Property="FontFamily" Value="Segoe UI" />
+        <Setter Property="FontSize" Value="13" />
+        <Setter Property="FontStyle" Value="Italic" />
+        <!--<Setter Property="FontWeight" Value="Bold" />-->
+        <Setter Property="Foreground" Value="#FF1166AA" />
+    </Style>
+
+
+    <!--Popup Intor Title-->
+    <!--Segoe UI/Bold/14/#333333-->
+    <Style x:Key="PopupIntroTitleTextBlock" TargetType="{x:Type TextBlock}">
+        <Setter Property="TextWrapping" Value="Wrap" />
+        <Setter Property="VerticalAlignment" Value="Top" />
+        <Setter Property="HorizontalAlignment" Value="Left" />
+        <Setter Property="FocusVisualStyle" Value="{x:Null}" />
+        <Setter Property="FontFamily" Value="Segoe UI" />
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="FontWeight" Value="Bold" />
+        <!--<Setter Property="FontStyle" Value="Italic" />-->
+        <Setter Property="Foreground" Value="#FF333333" />
+    </Style>
+
+
+    <!--Tool Intor Title-->
+    <!--Segoe UI/Bold/13/#333333-->
+    <Style x:Key="ToolIntroTitleTextBlock" TargetType="{x:Type TextBlock}">
+        <Setter Property="TextWrapping" Value="Wrap" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="HorizontalAlignment" Value="Left" />
+        <Setter Property="FocusVisualStyle" Value="{x:Null}" />
+        <Setter Property="FontFamily" Value="Segoe UI" />
+        <Setter Property="FontSize" Value="13" />
+        <Setter Property="FontWeight" Value="Bold" />
+        <!--<Setter Property="FontStyle" Value="Italic" />-->
+        <Setter Property="Foreground" Value="#FF333333" />
+    </Style>
+</ResourceDictionary>

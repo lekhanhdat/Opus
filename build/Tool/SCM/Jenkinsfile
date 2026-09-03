@@ -1,0 +1,123 @@
+// RECO静态代码检查的项目包括：
+// 1. StaticCodeAnalyis 工具里所有检查项目
+// 2. SonarQube Analysis
+
+
+// Basic Info
+def productName = 'Cloud Records'
+def productKey = 'RECO'
+
+
+// Version
+def productVersion = 'Nov 2019'
+
+
+
+// Workspace
+def buildAgentIP = "10.2.202.200"
+def workspaceDir = "C:\\${productKey}\\CATrunk"
+def codeRelativePath = "SourceCode"
+def codePath = "${workspaceDir}\\${codeRelativePath}"
+def buildPath = "${codePath}\\build"
+def toolRelativePath = "Tool"
+def toolPath = "${workspaceDir}\\${toolRelativePath}"
+def reportRelativePath = "Reports"
+def reportPath = "${workspaceDir}\\${reportRelativePath}"
+def sonarScannerPath = "C:\\SonarQube\\sonar-scanner-msbuild-4.0.2.892\\SonarQube.Scanner.MSBuild.exe"
+def scaProjFile = "${toolPath}\\SCA\\AnalyzerProjectFile.azproj"
+def scaProjFileJS = "${toolPath}\\SCA\\AnalyzerProjectFileJS.azproj"
+
+
+// SVN
+def branchURL = "${g.SVNURL}/reco/trunk"
+def toolURL = "${branchURL}/build/Tool/SCM"
+
+pipeline {
+    agent {
+		node {
+			label "${buildAgentIP}"
+			customWorkspace "${workspaceDir}"
+		}
+	}
+	
+	environment {
+        svnCred = credentials("${g.CRED_SVN}")
+    }
+	
+    stages{
+		
+        stage('# Build') {
+            steps {
+			    //判断下当前的Workspace是否为@2等，如果是则退出Build解决。
+			    script {
+					if ("${workspace}".contains("@"))
+					{
+						error("The current workspace is not ${workspaceDir}.")
+					}
+				}
+				
+				
+				cops()
+				
+					
+				// 更新代码
+				co("${g.CRED_SVN}",["${codeRelativePath}":"${branchURL}@HEAD",
+									"${toolRelativePath}":"${toolURL}@HEAD"])
+	
+	
+				// 删除旧文件
+				bat """
+				if exist ${reportPath} rd /s /q ${reportPath}
+				if exist CloudRecords rd /s /q CloudRecords
+				"""
+				
+				
+				// 执行静态代码检查, 并发布检查结果。不包括JS和CSS文件的非英文字符检查，因为其他文件检查源码所在路径，而JS和CSS非英文字符检查检查包路径。
+				// 检查前先修改静态代码检查配置文件中的Workspace
+				bat(" PowerShell ${toolPath}\\SCA\\ModifySCAConfig.ps1 -workspace ${workspace} -config ${scaProjFile}") // 修改静态代码检查工具配置文件中的Workspace地址。
+				bat("${toolPath}\\SCA\\StaticCodeAnalyzerConsole.exe ${scaProjFile} -all")
+
+				xmltohtml("${reportPath}\\StaticCodeAnalyzerReport.xml", "${toolPath}\\Reports\\StaticAnalysis.xsl", "${reportPath}\\HTML\\CheckReport.html")
+				publishHTML([allowMissing: true, alwaysLinkToLastBuild: false, includes: "CheckReport.html", keepAll: true, reportDir: "${reportRelativePath}\\HTML", reportFiles: "CheckReport.html", reportName: 'Static Code Check Report', reportTitles: ''])
+		   
+						
+				// SonarQube Analysis
+				// 先检查是否有SonarQube MSBuild Scanner在执行，如果有等待执行完毕
+				script {
+					timeout(time: 1, unit: 'HOURS') {
+						bat("PowerShell ${toolPath}\\SonarQube\\CheckScannerProcess.ps1")
+						// 执行SonarQube MSBuild Scanner
+						withSonarQubeEnv('SonarQube 6.0') {
+							dir("${codeRelativePath}"){
+								bat("${sonarScannerPath} begin /k:${productKey} /n:\"${productName}\" /v:\"${productVersion}\"")
+								bat("PowerShell ${buildPath}\\Tool\\Build\\RestoreNuGetPackages.ps1 -nugetPath ${buildPath}\\Tool\\Build\\NuGet.exe -codePath ${codePath} -restorePath ${codePath}\\packages")
+								msbd(14,"${buildPath}\\Build.xml","/t:MainDeploy /p:BuildType=Release;BuildTarget=Rebuild;Platform=\"Any CPU\"")
+								bat("${sonarScannerPath} end")
+							}
+						}
+					}
+				}
+
+
+				// Copy文件用于检查包中的JS和CSS文件的非英文字符
+				msbd(14,"${codePath}\\build\\CopyBinaryList.xml","/t:RevIMMainTarget")
+				bat """
+				if exist ${workspace}\\CloudRecords\\CloudRecordsAgent rd /s /q ${workspace}\\CloudRecords\\CloudRecordsAgent
+				move /y ${codePath}\\build\\RevIMWorker.ScheduleJob ${workspace}\\CloudRecords\\
+				move /y ${codePath}\\build\\RevIMWorker.Timer ${workspace}\\CloudRecords\\
+				move /y ${codePath}\\build\\RevIMWorker.Web ${workspace}\\CloudRecords\\
+				"""
+				
+				// 单独检查JS和CSS文件的非英文字符，并发布检查结果。
+				bat(" PowerShell ${toolPath}\\SCA\\ModifySCAConfig.ps1 -workspace ${workspace} -config ${scaProjFileJS}")
+				bat("${toolPath}\\SCA\\StaticCodeAnalyzerConsole.exe ${scaProjFileJS} -all")
+
+				xmltohtml("${toolPath}\\SCA\\Logs\\StaticCodeAnalyzerConsole.exe.xml", "${toolPath}\\Reports\\BuildLog.xsl", "${reportPath}\\HTML\\BuildLog.html")
+				publishHTML([allowMissing: true, alwaysLinkToLastBuild: false, includes: "BuildLog.html", keepAll: true, reportDir: "${reportRelativePath}\\HTML", reportFiles: "BuildLog.html", reportName: 'Static Code Check Log', reportTitles: ''])
+								
+		   		xmltohtml("${reportPath}\\JSCSSMessyCode\\StaticCodeAnalyzerReport.xml", "${toolPath}\\Reports\\StaticAnalysis.xsl", "${reportPath}\\HTML\\CheckReportJS.html")
+				publishHTML([allowMissing: true, alwaysLinkToLastBuild: false, includes: "CheckReportJS.html", keepAll: true, reportDir: "${reportRelativePath}\\HTML", reportFiles: "CheckReportJS.html", reportName: 'Static Code Check Report (JS and CSS)', reportTitles: ''])
+            }
+        }
+	}
+}

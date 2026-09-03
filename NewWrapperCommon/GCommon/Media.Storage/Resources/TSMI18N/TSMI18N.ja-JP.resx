@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="MediaStorage_TSM_IP_V6_Node_Name_Demo" xml:space="preserve">
+    <value>Knotenname</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_TSM_Node_Name_Demo" xml:space="preserve">
+    <value>Knotenname</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_TSM_Management_Class" xml:space="preserve">
+    <value>Management class</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_TSM_TCP_IP" xml:space="preserve">
+    <value>TCP/IP</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_TSM_Server_Port" xml:space="preserve">
+    <value>Server port</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_TSM_Test_failed" xml:space="preserve">
+    <value>Test failed. Please check the information you entered.</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_TSM_Authentication_failed" xml:space="preserve">
+    <value>Authentication failed.</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_TSM_DataReadFailed" xml:space="preserve">
+    <value>Lesen der Daten fehlgeschlagen, Pfad: {0}.</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_TSM_TSM" xml:space="preserve">
+    <value>TSM</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_TSM_Advanced" xml:space="preserve">
+    <value>Advanced</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_TSM_Communication" xml:space="preserve">
+    <value>Communication</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_TSM_Cannot_connect_to_the_remote_server" xml:space="preserve">
+    <value>Cannot connect to the remote server.</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_TSM_Extended_Parameters" xml:space="preserve">
+    <value>Extended parameters</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_TSM_Server_Address" xml:space="preserve">
+    <value>Server address</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_TSM_TCP_IP_V6" xml:space="preserve">
+    <value>TCP/IP V6</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_TSM_Cannot_find_the_entered_management_class" xml:space="preserve">
+    <value>Cannot find the entered management class: {0}.</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_TSM_Node_Password" xml:space="preserve">
+    <value>Node password</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_TSM_The_entered_node_name_is_incorrect" xml:space="preserve">
+    <value>The entered node name is incorrect.</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_TSM_DataWriteFailed" xml:space="preserve">
+    <value>Schreiben der Daten fehlgeschlagen, Pfad: {0}.</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_TSM_DeviceCanNotConnect" xml:space="preserve">
+    <value>Herstellen einer Verbindung zum physischen Gerät vom TSM fehlgeschlagen, Name: {0}.</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_TSM_DataNotFound" xml:space="preserve">
+    <value>Öffnen der Daten fehlgeschlagen, Pfad: {0}.</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_TSM_Node_Name" xml:space="preserve">
+    <value>Node name</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_TSM_Asnodename" xml:space="preserve">
+    <value>Asnodename:</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_TSM_Client_Node_Proxy" xml:space="preserve">
+    <value>Proxy für Clientknoten</value>
+    <comment>None</comment>
+  </data>
+</root>

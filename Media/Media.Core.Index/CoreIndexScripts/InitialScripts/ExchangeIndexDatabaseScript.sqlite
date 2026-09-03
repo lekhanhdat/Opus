@@ -1,0 +1,207 @@
+-- /********************************************************************
+-- *
+-- *  PROPRIETARY and CONFIDENTIAL
+-- *
+-- *  This file is licensed from, and is a trade secret of:
+-- *
+-- *                   AvePoint, Inc.
+-- *                   525 Washington Blvd, Suite 1400
+-- *                   Jersey City, NJ 07310
+-- *                   United States of America
+-- *                   Telephone: +1-201-793-1111
+-- *                   WWW: www.avepoint.com
+-- *
+-- *  Refer to your License Agreement for restrictions on use,
+-- *  duplication, or disclosure.
+-- *
+-- *  RESTRICTED RIGHTS LEGEND
+-- *
+-- *  Use, duplication, or disclosure by the Government is
+-- *  subject to restrictions as set forth in subdivision
+-- *  (c)(1)(ii) of the Rights in Technical Data and Computer
+-- *  Software clause at DFARS 252.227-7013 (Oct. 1988) and
+-- *  FAR 52.227-19 (C) (June 1987).
+-- *
+-- *  Copyright © 2017-2026 AvePoint® Inc. All Rights Reserved. 
+-- *
+-- *  Unpublished - All rights reserved under the copyright laws of the United States.
+-- */
+CREATE TABLE [tb_agent_index] ( 
+          [COL_JOB_ID] VARCHAR(256) not null, 
+          [COL_LAST_BACKUP_CONTENT] TEXT, 
+		  [COL_TIME_STAMP] VARCHAR(32),
+		  [COL_INDEX_TYPE] VARCHAR(32672),
+		  [COL_STORAGEINFO] TEXT, 
+          [COL_EXTENSION_1] BIGINT,      
+          [COL_EXTENSION_2] VARCHAR(32), 
+          [COL_EXTENSION_3] TEXT,
+		  [COL_CURRENT_JOB_ID] VARCHAR(256)
+		  );
+
+CREATE TABLE [tb_container_index] (
+          [COL_ID] CHAR(36) not null ,
+          [COL_FLAG] BIGINT,
+          [COL_TYPE] INT,
+          [COL_PATH] VARCHAR(256),
+          [COL_NAME] VARCHAR(32672),
+          [COL_PLAN_ID] VARCHAR(256),
+          [COL_JOB_ID] VARCHAR(256),
+          [COL_CYCLE_ID] VARCHAR(256),
+          [COL_JOB_TYPE] VARCHAR(256),
+          [COL_PATH_MD5] CHAR(32),
+          [COL_PARENT_PATH_MD5] CHAR(32),
+		  [COL_BACKUP_TYPE] INT,
+          [COL_BACKUP_TIME] BIGINT,
+		  [COL_DATA_FILE_OFFSET] BIGINT,
+		  [COL_DATA_FILE_LENGTH] BIGINT,		  
+          [COL_DATA_FILE_NUMBER] BIGINT,         
+          [COL_DATA_FILE_PREFIX_NUMBER] BIGINT,      
+          [COL_META_DATA_HEADER_OFFSET] BIGINT,
+		  [COL_CONTENT_OFFSET] BIGINT,
+          [COL_CONTENT_LENGTH] BIGINT,                
+          [COL_CONTENT_DATA_OFFSET] BIGINT,
+		  [COL_CONTENT_DATA_HEADER_OFFSET] BIGINT,
+          [COL_CONTENT_DATA_FILE_NUMBER] BIGINT,
+          [COL_CONTENT_DATA_FILE_PREFIX_NUMBER] BIGINT,
+		  [COL_CONTENT_PAGE_SIZE] BIGINT,
+		  [COL_SEQUENCE] BIGINT,                     
+          [COL_PLATFORM_TYPE] INT,
+          [COL_VERSION] BIGINT,
+		  [COL_ATTRIBUTES] VARCHAR(32762),
+          [COL_STORAG_ACCESSTIERTYPE] INT,
+          [COL_RETENTION_STATUS] INT,
+          [COL_STORAGEINFO] TEXT,        		  		 
+		  [COL_CRC] BIGINT,
+          [COL_STORAGE_CRC32] VARCHAR(32672),
+		  [COL_NODE_TYPE] INT,
+		  [COL_EXTENSION_1] INT,         
+          [COL_EXTENSION_2] BIGINT,                   
+          [COL_EXTENSION_3] VARCHAR(32),       
+          [COL_EXTENSION_4] TEXT,
+		  [COL_SENDER] TEXT,
+		  [COL_DISPLAY_TO] TEXT,
+		  [COL_SEND_DATE] BIGINT,
+		  [COL_HAS_ATTACH] BOOLEAN,
+		  [COL_CATEGORY] TEXT,
+		  [COL_CURRENT_JOB_ID] VARCHAR(256),
+          [COL_STORAGEPOLICYID] VARCHAR(256),
+		  [COL_FILE_EXTENSION_NAME] TEXT
+);
+
+CREATE TABLE [tb_item_index](
+          [COL_ID] CHAR(36) not null ,
+          [COL_FLAG] BIGINT,
+          [COL_TYPE] INT,
+          [COL_PATH] VARCHAR(256),
+          [COL_NAME] VARCHAR(32672),
+          [COL_PLAN_ID] VARCHAR(256),
+          [COL_JOB_ID] VARCHAR(256),
+          [COL_CYCLE_ID] VARCHAR(256),
+          [COL_JOB_TYPE] VARCHAR(256),
+          [COL_PATH_MD5] CHAR(32),
+          [COL_PARENT_PATH_MD5] CHAR(32),
+		  [COL_BACKUP_TYPE] INT,
+          [COL_BACKUP_TIME] BIGINT,
+		  [COL_DATA_FILE_OFFSET] BIGINT,
+		  [COL_DATA_FILE_LENGTH] BIGINT,		  
+          [COL_DATA_FILE_NUMBER] BIGINT,         
+          [COL_DATA_FILE_PREFIX_NUMBER] BIGINT,      
+          [COL_META_DATA_HEADER_OFFSET] BIGINT,
+		  [COL_CONTENT_OFFSET] BIGINT,
+          [COL_CONTENT_LENGTH] BIGINT,                
+          [COL_CONTENT_DATA_OFFSET] BIGINT,
+		  [COL_CONTENT_DATA_HEADER_OFFSET] BIGINT,
+          [COL_CONTENT_DATA_FILE_NUMBER] BIGINT,
+          [COL_CONTENT_DATA_FILE_PREFIX_NUMBER] BIGINT,
+		  [COL_CONTENT_PAGE_SIZE] BIGINT,
+		  [COL_SEQUENCE] BIGINT,                     
+          [COL_PLATFORM_TYPE] INT,
+          [COL_VERSION] BIGINT,
+		  [COL_ATTRIBUTES] VARCHAR(32762),
+          [COL_STORAG_ACCESSTIERTYPE] INT,
+          [COL_RETENTION_STATUS] INT,
+          [COL_STORAGEINFO] TEXT,        		  		 
+		  [COL_CRC] BIGINT,
+          [COL_STORAGE_CRC32] VARCHAR(32672),
+		  [COL_NODE_TYPE] INT,
+		  [COL_EXTENSION_1] INT,        
+          [COL_EXTENSION_2] BIGINT,       
+          [COL_EXTENSION_3] VARCHAR(32),      
+          [COL_EXTENSION_4] TEXT,
+		  [COL_SENDER] TEXT,
+		  [COL_DISPLAY_TO] TEXT,
+		  [COL_SEND_DATE] BIGINT,
+		  [COL_HAS_ATTACH] BOOLEAN,
+		  [COL_CATEGORY] TEXT,
+		  [COL_CURRENT_JOB_ID] VARCHAR(256),
+          [COL_STORAGEPOLICYID] VARCHAR(256),
+		  [COL_FILE_EXTENSION_NAME] TEXT
+);
+
+CREATE TABLE [tb_job_info](
+          [COL_GUID] VARCHAR(36) not null primary key,
+          [COL_JOB_ID] VARCHAR(256),
+          [COL_KEY] VARCHAR(32672),
+          [COL_VALUE] VARCHAR(32672),
+		  [COL_EXTENSION_1] INT,
+          [COL_EXTENSION_2] BIGINT,              
+          [COL_EXTENSION_3] VARCHAR(32),       
+          [COL_EXTENSION_4] TEXT
+);
+
+CREATE TABLE [tb_master_index](
+            [COL_ID] CHAR(36) not null primary key,
+            [COL_PLAN_ID] VARCHAR(256),
+            [COL_CYCLE_ID] VARCHAR(256),
+            [COL_JOB_ID] VARCHAR(256),
+            [COL_LOGICAL_DEVICE_ID] VARCHAR(255),
+            [COL_BACKUP_PLAN_TYPE] INTEGER,
+            [COL_BACKUP_TIME] BIGINT,
+            [COL_USER_ADDRESS] VARCHAR(255),
+            [COL_MAX_DATA_BLOCK_SIZE] INTEGER,
+            [COL_ENCRYPTION_INFO] TEXT,
+			[COL_MODIFY_DATA] INTEGER, 
+			[COL_GROUP_NAME] VARCHAR(32672),
+			[COL_EXTENSION_1] INT,          
+            [COL_EXTENSION_2] BIGINT,                        
+            [COL_EXTENSION_3] VARCHAR(32),
+			[COL_CURRENT_JOB_ID] VARCHAR(256)
+);
+
+CREATE TABLE [tb_datamd5_index](
+          [COL_PLAN_ID] VARCHAR(256),
+          [COL_CYCLE_ID] VARCHAR(256),
+          [COL_JOB_ID] VARCHAR(256),
+          [COL_DATA_NAME] VARCHAR(32672),
+          [COL_DATA_OBJECT_ID] VARCHAR(32672),
+          [COL_DATA_MD5] CHAR(32)
+);
+
+INSERT INTO tb_job_info (COL_GUID, COL_KEY, COL_VALUE) VALUES( 'AAAAAAAA-AAAA-AAAA-AAAA-AAAAAAAAAAAA', 'version','6.0.0.0');
+
+
+CREATE INDEX 
+            IF NOT EXISTS IDX_CONTAINER_PATH_MD5
+            on tb_container_index(COL_PATH_MD5 asc);
+
+CREATE INDEX
+IF NOT EXISTS IDX_ITEM_PATH_MD5
+on tb_item_index(COL_PATH_MD5 asc);
+
+
+CREATE INDEX
+IF NOT EXISTS IDX_CONTAINER_PARENT_PATH_MD5
+on tb_container_index(COL_PARENT_PATH_MD5 asc);
+
+
+CREATE INDEX
+IF NOT EXISTS IDX_ITEM_PARENT_PATH_MD5
+on tb_item_index(COL_PARENT_PATH_MD5 asc);
+
+CREATE INDEX
+IF NOT EXISTS IDX_CONTAINER_PATH
+on tb_container_index(COL_PATH asc);
+
+CREATE INDEX
+IF NOT EXISTS IDX_ITEM_PATH
+on tb_item_index(COL_PATH asc);

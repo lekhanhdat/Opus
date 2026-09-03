@@ -1,0 +1,106 @@
+#createBTContainer {
+  .create-barcode-template-wrapper {
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+
+    .create-barcode-template-label-format,
+    .create-barcode-template-configuration {
+      display: flex;
+      flex-direction: column;
+      background: #fff;
+      border-radius: 8px;
+      border: 1px solid #e8e9ea;
+      padding: 24px;
+    }
+
+    .create-barcode-template-label-format {
+      gap: 24px;
+
+      div {
+        &:first-child {
+          font: normal normal 600 16px "Open Sans", sans-serif;
+          color: #323e4d;
+        }
+      }
+    }
+
+    .create-barcode-template-configuration {
+      .create-barcode-template-configuration-title {
+        font: normal normal 600 16px "Open Sans", sans-serif;
+        color: #323e4d;
+        margin-bottom: 8px;
+      }
+
+      .create-barcode-template-configuration-desc {
+        font: normal normal normal 12px/17px "Open Sans", sans-serif;
+        color: #5d6778;
+      }
+
+      .create-barcode-template-configuration-label {
+        font: normal normal 600 14px "Open Sans", sans-serif;
+        color: #323e4d;
+      }
+
+      .button-icon-part:only-child {
+        font-size: 13px;
+        color: #323e4d;
+      }
+
+      .create-barcode-template-configuration-table-header {
+        display: flex;
+        align-items: center;
+        padding-left: 12px;
+
+        div {
+          &:first-child {
+            width: 30%;
+          }
+
+          &:nth-of-type(2) {
+            width: 20%;
+          }
+        }
+      }
+
+      .create-barcode-template-configuration-table-row {
+        height: 44px;
+        display: flex;
+        align-items: center;
+        background: #f2f3f4 0% 0% no-repeat padding-box;
+        border-radius: 4px;
+        padding-left: 4px;
+        padding-right: 4px;
+
+        .create-barcode-template-configuration-table-row-first {
+          width: 30%;
+        }
+
+        .create-barcode-template-configuration-table-row-second {
+          width: 20%;
+        }
+      }
+
+      .create-barcode-template-configuration-table-add {
+        width: 100%;
+        margin-top: 2px;
+        text-align: center;
+        border: 1px dashed #e8e9ea;
+        font: normal normal 600 13px/40px "Open Sans", sans-serif;
+        color: #323e4d;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 4px;
+        height: 32px;
+      }
+
+      .create-barcode-template-configuration-table-add-icon {
+        display: inline-block;
+        margin-right: 8px;
+      }
+    }
+  }
+}

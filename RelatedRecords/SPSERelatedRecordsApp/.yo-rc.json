@@ -1,0 +1,11 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "version": "1.4.1",
+    "libraryName": "related-records-spse-app",
+    "libraryId": "bbe4056f-0a68-48eb-a2f5-953fa072c563",
+    "environment": "SPSE",
+    "packageManager": "npm",
+    "componentType": "extension",
+    "extensionType": "ListViewCommandSet"
+  }
+}

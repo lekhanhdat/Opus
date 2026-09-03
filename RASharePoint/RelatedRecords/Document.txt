@@ -1,0 +1,2 @@
+﻿由于Browser 和App 相关的功能，与SP 关系比较大，所以暂时保留在SP Dll 中，
+如果以后转成Common 逻辑，可以将功能挪到RACommonUtility 中

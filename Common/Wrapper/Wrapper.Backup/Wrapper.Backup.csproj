@@ -1,0 +1,58 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <OutputType>Library</OutputType>
+    <RootNamespace>AvePoint.Wrapper.Backup</RootNamespace>
+    <AssemblyName>AgentCommonWrapperBackup</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>..\..\..\bin\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <OutputPath>..\..\..\bin\Release\</OutputPath>
+    <DefineConstants>TRACE;CODE_ANALYSIS,PerformaceLog,WrapperTest</DefineConstants>
+    <WarningsAsErrors>0168</WarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>..\..\..\DocaveReference\DocAveStandard.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AutoGenerateBindingRedirects>false</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+	<PropertyGroup>
+		<EnableUnsafeBinaryFormatterSerialization>true</EnableUnsafeBinaryFormatterSerialization>
+	</PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="AveSPMySite.cs" />
+    <Compile Remove="AveSPSocialData.cs" />
+    <Compile Remove="AveSPUserProfile.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Common\GlobalCommon\GCommonContract\DocAve.GCommonContract.csproj" />
+    <ProjectReference Include="..\..\..\Common\GlobalCommon\GCommonUtility\DocAve.GCommonUtility.csproj" />
+    <ProjectReference Include="..\..\..\Common\GlobalCommon\GI18NResources\GI18NResources.csproj" />
+    <ProjectReference Include="..\..\VCService30\CommonUtility30\DocAve.CommonUtility30.csproj" />
+    <ProjectReference Include="..\Wrapper.Common\Wrapper.Common.csproj" />
+    <ProjectReference Include="..\Wrapper.Mapping\Wrapper.Mapping.csproj" />
+    <ProjectReference Include="..\Wrapper.Resource\Wrapper.Resource.csproj" />
+    <ProjectReference Include="..\Wrapper.Workflow\Wrapper.Workflow.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\..\DocaveReference\DocAveStandard.snk">
+      <Link>DocAveStandard.snk</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="log4net" Version="3.3.1" />
+    <PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
+    <PackageReference Include="Microsoft.DotNet.UpgradeAssistant.Extensions.Default.Analyzers" Version="0.4.421302">
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="HSMBackup\" />
+  </ItemGroup>
+</Project>

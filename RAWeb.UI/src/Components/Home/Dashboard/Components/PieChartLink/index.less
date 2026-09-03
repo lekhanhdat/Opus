@@ -1,0 +1,45 @@
+.reco-dashboard-piechart-wrapper {
+    width: 100%;
+    margin-bottom: 16px;
+
+    .reco-dashboard-piechart-inner {
+        width: 100px;
+        height: 100px;
+        margin: 0 auto;
+        position: relative;
+
+        .reco-dashboard-piechart-inner-content {
+            width: 80px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translateX(-50%) translateY(-50%);
+
+            .reco-dashboard-piechart-inner-name {
+                height: 17px;
+                text-align: center;
+                font: normal normal normal 12px/17px "Open Sans", sans-serif;
+                letter-spacing: 0px;
+                color: #323E4D;
+            }
+
+            .reco-dashboard-piechart-inner-value {
+                height: 20px;
+                text-align: center;
+                font: normal normal 600 15px/20px "Open Sans", sans-serif;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                color: #323E4D;
+            }
+        }
+    }
+    .reco-dashboard-value-link-noClick{
+      text-decoration: none;
+      color: #3A444E !important;
+      cursor:default;    
+    }
+    .highlight {
+      color: #0072D0;
+    }
+}

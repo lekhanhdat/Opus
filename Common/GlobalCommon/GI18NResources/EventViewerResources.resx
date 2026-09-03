@@ -1,0 +1,2692 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ContextKey_Authentication_DomainServer" xml:space="preserve">
+    <value>Domain Server: </value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextKey_Authentication_LoginAddress" xml:space="preserve">
+    <value>Login Address: </value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextKey_Authentication_LoginTime" xml:space="preserve">
+    <value>Login Time: </value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextKey_Authentication_LoginType" xml:space="preserve">
+    <value>Login Type: </value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextKey_Authentication_LogoffTime" xml:space="preserve">
+    <value>Logoff Time: </value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextKey_Authentication_MaximumUserSessionCount" xml:space="preserve">
+    <value>Maximum User Session Count​: </value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextKey_Authentication_OperatingUserName" xml:space="preserve">
+    <value>Operating User Name: </value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextKey_Authentication_SessionStartTime" xml:space="preserve">
+    <value>Session Start Time: </value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextKey_Authentication_UserName" xml:space="preserve">
+    <value>Username:</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextKey_Common_Cause" xml:space="preserve">
+    <value>Cause:</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextKey_Common_MoreInformation" xml:space="preserve">
+    <value>More Information:</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextKey_Common_OperationType" xml:space="preserve">
+    <value>Operation Type: </value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextKey_Communication_DestinationAddress" xml:space="preserve">
+    <value>Destination Address:</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextKey_Communication_RequestMessage" xml:space="preserve">
+    <value>Request Message: </value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextKey_Communication_SourceAddress" xml:space="preserve">
+    <value>Source Address:</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextKey_Communication_Timeout" xml:space="preserve">
+    <value>Timeout (Second):</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextKey_Configuration_CurrentTime" xml:space="preserve">
+    <value>Current Time:</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextKey_Configuration_NodeName" xml:space="preserve">
+    <value>Node Name: </value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextKey_Configuration_PlanID" xml:space="preserve">
+    <value>Plan ID: </value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextKey_Configuration_PlanName" xml:space="preserve">
+    <value>Plan Name: </value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextKey_Configuration_PlanType" xml:space="preserve">
+    <value>Plan Type: </value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextKey_Configuration_ProcessingPoolName" xml:space="preserve">
+    <value>Processing Pool Name:</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextKey_Configuration_ProfileName" xml:space="preserve">
+    <value>Profile Name: </value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextKey_Configuration_ProfileType" xml:space="preserve">
+    <value>Profile Type: </value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextKey_Configuration_ScopeName" xml:space="preserve">
+    <value>Scope Name:</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextKey_Configuration_SettingType" xml:space="preserve">
+    <value>Setting Type: </value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextKey_Configuration_StartTime" xml:space="preserve">
+    <value>Start Time:</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextKey_Database_DatabaseInstance" xml:space="preserve">
+    <value>Database Instance: </value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextKey_Database_DatabaseName" xml:space="preserve">
+    <value>Database Name: </value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextKey_Database_DatabaseType" xml:space="preserve">
+    <value>Database Type: </value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextKey_Driver_DriverName" xml:space="preserve">
+    <value>Driver Name: </value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextKey_File_FileName" xml:space="preserve">
+    <value>Filename: </value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextKey_File_FilePath" xml:space="preserve">
+    <value>File Path: </value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextKey_File_FileSize" xml:space="preserve">
+    <value>File Size:</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextKey_File_FileType" xml:space="preserve">
+    <value>File Type:</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextKey_Job_AgentGroup" xml:space="preserve">
+    <value>Agent Group:</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextKey_Job_FinalJobType" xml:space="preserve">
+    <value>Final Job Type: </value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextKey_Job_JobID" xml:space="preserve">
+    <value>Job ID:</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextKey_Job_JobLimit" xml:space="preserve">
+    <value>Job Limit: </value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextKey_Job_JobReport" xml:space="preserve">
+    <value>Job Report: </value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextKey_Job_LastUpdateTime" xml:space="preserve">
+    <value>Last Update Time:</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextKey_Job_LogicalDevice" xml:space="preserve">
+    <value>Logical Device: </value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextKey_Job_MediaService" xml:space="preserve">
+    <value>Media Service: </value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextKey_Job_OriginalJobType" xml:space="preserve">
+    <value>Original Job Type: </value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextKey_Job_PhysicalDevice" xml:space="preserve">
+    <value>Physical Device:</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextKey_Job_ProtectionGUID" xml:space="preserve">
+    <value>Protection GUID: </value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextKey_Job_RunningJobID" xml:space="preserve">
+    <value>Running Job ID: </value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextKey_Job_ScanJobID" xml:space="preserve">
+    <value>Scan Job ID:</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextKey_Job_SecurityProfileGUID" xml:space="preserve">
+    <value>Security Profile GUID: </value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextKey_Job_StoragePolicy" xml:space="preserve">
+    <value>Storage Policy: </value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextKey_License_HostAddress" xml:space="preserve">
+    <value>Host Address: </value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextKey_License_LicenseAddress" xml:space="preserve">
+    <value>License Address: </value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextKey_Packaging_PackageType" xml:space="preserve">
+    <value>Package Type:</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextKey_Process_CommandName" xml:space="preserve">
+    <value>Command Name: </value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextKey_Process_ErrorMessage" xml:space="preserve">
+    <value>Error Message:</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextKey_Process_Parameter" xml:space="preserve">
+    <value>Parameter: </value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextKey_Process_ProcessName" xml:space="preserve">
+    <value>Process Name: </value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextKey_Service_ManagerAddress" xml:space="preserve">
+    <value>Manager Address: </value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextKey_Service_ManagerPort" xml:space="preserve">
+    <value>Manager Port:</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextKey_Service_ServiceAddress" xml:space="preserve">
+    <value>Service Address: </value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextKey_Service_ServicePort" xml:space="preserve">
+    <value>Service Port: </value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextKey_Service_ServiceType" xml:space="preserve">
+    <value>Service Type: </value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextKey_SharePoint_BlobName" xml:space="preserve">
+    <value>BLOB Name:</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextKey_SharePoint_ColumnTitle" xml:space="preserve">
+    <value>Column Title: </value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextKey_SharePoint_ConflictedLoginName" xml:space="preserve">
+    <value>Conflicted Login Name:</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextKey_SharePoint_ContentDatabaseName" xml:space="preserve">
+    <value>Content Database Name: </value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextKey_SharePoint_ContentTypeName" xml:space="preserve">
+    <value>Content Type Name:</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextKey_SharePoint_CreateTime" xml:space="preserve">
+    <value>Create Time: </value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextKey_SharePoint_DatabaseName" xml:space="preserve">
+    <value>Database Name:</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextKey_SharePoint_DatabaseType" xml:space="preserve">
+    <value>Database Type:</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextKey_SharePoint_DependencyTitle" xml:space="preserve">
+    <value>Dependency Title: </value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextKey_SharePoint_DependencyType" xml:space="preserve">
+    <value>Dependency Type: </value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextKey_SharePoint_DestinationPath" xml:space="preserve">
+    <value>Destination Path:</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextKey_SharePoint_DocumentName" xml:space="preserve">
+    <value>Document Name: </value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextKey_SharePoint_ExpectedLoginName" xml:space="preserve">
+    <value>Expected Login Name:</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextKey_SharePoint_FarmName" xml:space="preserve">
+    <value>Farm Name:</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextKey_SharePoint_FeatureID" xml:space="preserve">
+    <value>Feature ID:</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextKey_SharePoint_FeatureScope" xml:space="preserve">
+    <value>Feature Scope:</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextKey_SharePoint_IndexName" xml:space="preserve">
+    <value>Index Name: </value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextKey_SharePoint_ItemName" xml:space="preserve">
+    <value>Item Name:</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextKey_SharePoint_ItemURL" xml:space="preserve">
+    <value>Item URL: </value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextKey_SharePoint_ListID" xml:space="preserve">
+    <value>List ID: </value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextKey_SharePoint_ListTitle" xml:space="preserve">
+    <value>List Title:</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextKey_SharePoint_PropertyName" xml:space="preserve">
+    <value>Property Name: </value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextKey_SharePoint_ScopeURL" xml:space="preserve">
+    <value>Scope URL: </value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextKey_SharePoint_SiteCollectionURL" xml:space="preserve">
+    <value>Site Collection URL: </value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextKey_SharePoint_SiteURL" xml:space="preserve">
+    <value>Site URL:</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextKey_SharePoint_SolutionName" xml:space="preserve">
+    <value>Solution Name: </value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextKey_SharePoint_SourcePath" xml:space="preserve">
+    <value>Source Path:</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextKey_SharePoint_StsadmCommand" xml:space="preserve">
+    <value>Stsadm Command:</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextKey_SharePoint_StsadmMessage" xml:space="preserve">
+    <value>Stsadm Message:</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextKey_SharePoint_TermGroupName" xml:space="preserve">
+    <value>Term Group Name: </value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextKey_SharePoint_TermSetName" xml:space="preserve">
+    <value>Term Set Name:</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextKey_SharePoint_UserID" xml:space="preserve">
+    <value>User ID: </value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextKey_SharePoint_WebApplicationURL" xml:space="preserve">
+    <value>Web Application URL: </value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextKey_SharePoint_WebPartDisplayName" xml:space="preserve">
+    <value>Web Part Display Name: </value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextKey_SharePoint_WebPartType" xml:space="preserve">
+    <value>Web Part Type: </value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextKey_SharePoint_WorkflowDefinationName" xml:space="preserve">
+    <value>Workflow Definition Name: </value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextKey_Snapshot_AgentName" xml:space="preserve">
+    <value>Agent Name: </value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextKey_Snapshot_CurrentSnapshotCount" xml:space="preserve">
+    <value>Current Snapshot Count:</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextKey_Snapshot_MaxSnapshotCount" xml:space="preserve">
+    <value>Max Snapshot Count:</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextKey_Snapshot_VolumeName" xml:space="preserve">
+    <value>Volume Name: </value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextKey_Socket_Address" xml:space="preserve">
+    <value>Address:  </value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextKey_Socket_IP" xml:space="preserve">
+    <value>IP: </value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextKey_Socket_Port" xml:space="preserve">
+    <value>Port:</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextKey_Storage_CurrentFreeSpace" xml:space="preserve">
+    <value>Current Free Space (MB):</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextKey_Storage_Path" xml:space="preserve">
+    <value>Path: </value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextKey_Storage_RequiredFreeSpace" xml:space="preserve">
+    <value>Required Free Space (MB):</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextKey_Storage_StorageType" xml:space="preserve">
+    <value>Storage Type:</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextKey_Update_HostfixName" xml:space="preserve">
+    <value>Hostfix Name: </value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_Authentication_LoginType_ActiveDirectoryIntegration" xml:space="preserve">
+    <value>Active Directory Integration</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_Authentication_LoginType_ADFSIntegration" xml:space="preserve">
+    <value>ADFS Integration</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_Authentication_LoginType_LocalSystem" xml:space="preserve">
+    <value>Local System</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_Authentication_LoginType_WindowsIntegration" xml:space="preserve">
+    <value>Windows Integration</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_Configuration_Plan_PlanType_ADM_Administrator" xml:space="preserve">
+    <value>Administrator</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_Configuration_Plan_PlanType_ADM_ContentManager" xml:space="preserve">
+    <value>Content Manager</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_Configuration_Plan_PlanType_ADM_DeploymentManager" xml:space="preserve">
+    <value>Deployment Manager</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_Configuration_Plan_PlanType_ADM_Replicator" xml:space="preserve">
+    <value>Replicator</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_Configuration_Plan_PlanType_CPL_Vault" xml:space="preserve">
+    <value>Vault</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_Configuration_Plan_PlanType_DP_GranularBackup" xml:space="preserve">
+    <value>Granular Backup</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_Configuration_Plan_PlanType_DP_PlatformBackup" xml:space="preserve">
+    <value>Platform Backup</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_Configuration_Plan_PlanType_MIG_eRoomMigration" xml:space="preserve">
+    <value>eRoom Migration</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_Configuration_Plan_PlanType_MIG_ExchangePublicFolderMigration" xml:space="preserve">
+    <value>Exchange Public Folder Migration</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_Configuration_Plan_PlanType_MIG_FileSystemMigration" xml:space="preserve">
+    <value>File System Migration</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_Configuration_Plan_PlanType_MIG_LiveLinkMigration" xml:space="preserve">
+    <value>Livelink Migration</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_Configuration_Plan_PlanType_MIG_LotusNotesMigration" xml:space="preserve">
+    <value>Lotus Notes Migration</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_Configuration_Plan_PlanType_MIG_SP2007ToSP2010Migration" xml:space="preserve">
+    <value>SP2007 To SP2010 Migration</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_Configuration_Profile_OperationType_Activate" xml:space="preserve">
+    <value>Activate</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_Configuration_Profile_OperationType_Deactivate" xml:space="preserve">
+    <value>Deactivate</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_Configuration_Profile_OperationType_Disabled" xml:space="preserve">
+    <value>Disabled</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_Configuration_Profile_OperationType_Enabled" xml:space="preserve">
+    <value>Enabled</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_Configuration_Profile_OperationType_Export" xml:space="preserve">
+    <value>Export</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_Configuration_Profile_OperationType_Import" xml:space="preserve">
+    <value>Import</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_Configuration_Profile_ProfileType_ADM_Replicator_ProfileSettings" xml:space="preserve">
+    <value>Profile Settings</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_Configuration_Profile_ProfileType_ControlPanel_AccountManager_Group" xml:space="preserve">
+    <value>Group</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_Configuration_Profile_ProfileType_ControlPanel_AccountManager_Permission" xml:space="preserve">
+    <value>Permission</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_Configuration_Profile_ProfileType_ControlPanel_AccountManager_User" xml:space="preserve">
+    <value>User</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_Configuration_Profile_ProfileType_ControlPanel_AgentGroups" xml:space="preserve">
+    <value>Agent Groups</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_Configuration_Profile_ProfileType_ControlPanel_AuthenticationManager_ADIntegration" xml:space="preserve">
+    <value>AD Integration</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_Configuration_Profile_ProfileType_ControlPanel_CentralDatabase" xml:space="preserve">
+    <value>Central Database</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_Configuration_Profile_ProfileType_ControlPanel_ColumnMapping" xml:space="preserve">
+    <value>Column Mapping</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_Configuration_Profile_ProfileType_ControlPanel_ContentTypeMapping" xml:space="preserve">
+    <value>Content Type Mapping</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_Configuration_Profile_ProfileType_ControlPanel_DomainMapping" xml:space="preserve">
+    <value>Domain Mapping</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_Configuration_Profile_ProfileType_ControlPanel_ExportLocation" xml:space="preserve">
+    <value>Export Location</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_Configuration_Profile_ProfileType_ControlPanel_FilterPolicy" xml:space="preserve">
+    <value>Filter Policy</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_Configuration_Profile_ProfileType_ControlPanel_GroupMapping" xml:space="preserve">
+    <value>Group Mapping</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_Configuration_Profile_ProfileType_ControlPanel_IndexManager" xml:space="preserve">
+    <value>Index Manager</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_Configuration_Profile_ProfileType_ControlPanel_LanguageMapping" xml:space="preserve">
+    <value>Language Mapping</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_Configuration_Profile_ProfileType_ControlPanel_LogicalDevice" xml:space="preserve">
+    <value>Logical Device</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_Configuration_Profile_ProfileType_ControlPanel_PhysicalDevice" xml:space="preserve">
+    <value>Physical Device</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_Configuration_Profile_ProfileType_ControlPanel_SecurityProfile" xml:space="preserve">
+    <value>Security Profile</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_Configuration_Profile_ProfileType_ControlPanel_SharePointSites" xml:space="preserve">
+    <value>SharePoint Sites</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_Configuration_Profile_ProfileType_ControlPanel_SharePointSites_SiteCollection" xml:space="preserve">
+    <value>SharePoint Sites - Manage Site Collection</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_Configuration_Profile_ProfileType_ControlPanel_StoragePolicy" xml:space="preserve">
+    <value>Storage Policy</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_Configuration_Profile_ProfileType_ControlPanel_TemplateMapping" xml:space="preserve">
+    <value>Template Mapping</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_Configuration_Profile_ProfileType_ControlPanel_UserMapping" xml:space="preserve">
+    <value>User Mapping</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_Configuration_Profile_ProfileType_ControlPanel_UserNotificationSettings_IncomingEmailSettings" xml:space="preserve">
+    <value>Receive E-mail Settings</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_Configuration_Profile_ProfileType_DP_GranularBackup_PredefinedScheme" xml:space="preserve">
+    <value>Predefined Scheme</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_Configuration_Profile_ProfileType_PlanGroup" xml:space="preserve">
+    <value>Plan Group</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_Configuration_Profile_ProfileType_RC_ReportCenterProfile" xml:space="preserve">
+    <value>Report Center Profile</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_Configuration_Profile_ProfileType_SO_Archiver_Profile" xml:space="preserve">
+    <value>Archiver Profile</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_Configuration_Profile_ProfileType_SO_Archiver_Rule" xml:space="preserve">
+    <value>Archiver Rule</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_Configuration_Profile_ProfileType_SO_RealtimeStorageManager_Rule" xml:space="preserve">
+    <value>Realtime Storage Manager Rule</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_Configuration_Profile_ProfileType_SO_ScheduledStorageManager_Profile" xml:space="preserve">
+    <value>Scheduled Storage Manager Profile</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_Configuration_Profile_ProfileType_SO_ScheduledStorageManager_Rule" xml:space="preserve">
+    <value>Scheduled Storage Manager Rule</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_Configuration_Setting_OperationType_Disabled" xml:space="preserve">
+    <value>Disabled</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_Configuration_Setting_OperationType_Enabled" xml:space="preserve">
+    <value>Enabled</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_Configuration_Setting_SettingType_ControlPanel_AdvancedSettings" xml:space="preserve">
+    <value>Advanced Settings</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_Configuration_Setting_SettingType_ControlPanel_AgentMonitor_ConfigureAgentServiceSetting" xml:space="preserve">
+    <value>Configure Agent Service Setting</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_Configuration_Setting_SettingType_ControlPanel_AuthenticationManager" xml:space="preserve">
+    <value>Authentication Manager</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_Configuration_Setting_SettingType_ControlPanel_AutoSupportSetting" xml:space="preserve">
+    <value>Auto Support Setting</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_Configuration_Setting_SettingType_ControlPanel_GeneralSettings" xml:space="preserve">
+    <value>General Settings</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_Configuration_Setting_SettingType_ControlPanel_JobPruning" xml:space="preserve">
+    <value>Job Pruning</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_Configuration_Setting_SettingType_ControlPanel_LicenseManager" xml:space="preserve">
+    <value>License Manager</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_Configuration_Setting_SettingType_ControlPanel_LogManager" xml:space="preserve">
+    <value>Log Manager</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_Configuration_Setting_SettingType_ControlPanel_ManagerMonitor_ConfigureMediaServiceSetting" xml:space="preserve">
+    <value>Configure Media Service Setting</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_Configuration_Setting_SettingType_ControlPanel_SecuritySettings" xml:space="preserve">
+    <value>Security Settings</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_Configuration_Setting_SettingType_ControlPanel_SecuritySettings_SecurityInformation_ManagePassphrase" xml:space="preserve">
+    <value>Manage Passphrase</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_Configuration_Setting_SettingType_ControlPanel_UpdateManager" xml:space="preserve">
+    <value>Update Manager</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_Configuration_Setting_SettingType_ControlPanel_UserNotificationSettings_OutgoingEmailSettings" xml:space="preserve">
+    <value>Send E-mail Settings</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_Configuration_Setting_SettingType_JobMonitor_ReportLocation" xml:space="preserve">
+    <value>Report Location</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_Configuration_Setting_SettingType_SO_Inherit" xml:space="preserve">
+    <value>Inherit</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_Configuration_Setting_SettingType_SO_StopInherit" xml:space="preserve">
+    <value>Stop Inheriting</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_Database_DatabaseType_AuditorDatabase" xml:space="preserve">
+    <value>Auditor Database</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_Database_DatabaseType_ComplianceDatabase" xml:space="preserve">
+    <value>Compliance Database</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_Database_DatabaseType_ControlDatabase" xml:space="preserve">
+    <value>Control Database</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_Database_DatabaseType_MigrationDatabase" xml:space="preserve">
+    <value>Migration Database</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_Database_DatabaseType_ReplicatorDatabase" xml:space="preserve">
+    <value>Replicator Database</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_Database_DatabaseType_ReportDatabase" xml:space="preserve">
+    <value>Report Database</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_Database_DatabaseType_StubDatabase" xml:space="preserve">
+    <value>Stub Database</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_Database_DatabaseType_TempDatabase" xml:space="preserve">
+    <value>Temp Database</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_Database_OperationType_Backup" xml:space="preserve">
+    <value>Backup</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_Database_OperationType_Clone" xml:space="preserve">
+    <value>Clone</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_Database_OperationType_Commit" xml:space="preserve">
+    <value>Commit</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_Database_OperationType_Configure" xml:space="preserve">
+    <value>Configure</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_Database_OperationType_Connect" xml:space="preserve">
+    <value>Connect</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_Database_OperationType_Create" xml:space="preserve">
+    <value>Create</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_Database_OperationType_Initialize" xml:space="preserve">
+    <value>Initialize</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_Database_OperationType_Mount" xml:space="preserve">
+    <value>Mount</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_Database_OperationType_Restore" xml:space="preserve">
+    <value>Restore</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_Database_OperationType_Unmount" xml:space="preserve">
+    <value>Unmount</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_Database_OperationType_Upgrade" xml:space="preserve">
+    <value>Upgrade</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_Driver_OperationType_Mount" xml:space="preserve">
+    <value>Mount</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_Driver_OperationType_Unmount" xml:space="preserve">
+    <value>Unmount</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_Job_JobReport_OperationType_Download" xml:space="preserve">
+    <value>Download</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_Job_JobReport_OperationType_Initialize" xml:space="preserve">
+    <value>Initialize</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_Job_JobReport_OperationType_Merge" xml:space="preserve">
+    <value>Merge</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_Job_JobReport_OperationType_Receive" xml:space="preserve">
+    <value>Receive</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_Job_JobReport_OperationType_Send" xml:space="preserve">
+    <value>Send</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_Packaging_PackageType_AgentPackage" xml:space="preserve">
+    <value>Agent Package</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_Packaging_PackageType_ManagerPackage" xml:space="preserve">
+    <value>Manager Package</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_Service_OperationType_Active" xml:space="preserve">
+    <value>Active</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_Service_OperationType_CheckStatus" xml:space="preserve">
+    <value>Check Status</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_Service_OperationType_Inactive" xml:space="preserve">
+    <value>Inactive</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_Service_OperationType_Register" xml:space="preserve">
+    <value>Register</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_Service_OperationType_Uninstall" xml:space="preserve">
+    <value>Uninstall</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_Service_ServiceType_DocAveAgentService" xml:space="preserve">
+    <value>Agent Service</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_Service_ServiceType_DocAveControlService" xml:space="preserve">
+    <value>Control Service</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_Service_ServiceType_DocAveMediaService" xml:space="preserve">
+    <value>Media Service</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_Service_ServiceType_DocAveReportService" xml:space="preserve">
+    <value>Report Service</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_Service_ServiceType_DocAveTimerService" xml:space="preserve">
+    <value>Timer Service</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_Service_ServiceType_FASTSearchBrowserEngine" xml:space="preserve">
+    <value>FAST Search Browser Engine</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_Service_ServiceType_FASTSearchMonitoring" xml:space="preserve">
+    <value>FAST Search Monitoring</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_Service_ServiceType_FASTSearchSAMAdmin" xml:space="preserve">
+    <value>FAST Search SAM Admin</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_Service_ServiceType_FASTSearchSAMWorker" xml:space="preserve">
+    <value>FAST Search SAM Worker</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_Service_ServiceType_FASTSearchService" xml:space="preserve">
+    <value>FAST Search Service</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_Service_ServiceType_ForefrontIdentityManagerService" xml:space="preserve">
+    <value>Forefront Identity Manager Service</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_Service_ServiceType_ForefrontIdentityManagerSynchronizationService" xml:space="preserve">
+    <value>Forefront Identity Manager Synchronization Service</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_Service_ServiceType_IISAdminService" xml:space="preserve">
+    <value>IIS Admin Service</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_Service_ServiceType_NetTcpPortSharingService" xml:space="preserve">
+    <value>Net.Tcp Port Sharing Service</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_Service_ServiceType_QRProxyService" xml:space="preserve">
+    <value>QR Proxy Service</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_Service_ServiceType_SharePoint2010Administration" xml:space="preserve">
+    <value>SharePoint 2010 Administration</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_Service_ServiceType_SharePoint2010Timer" xml:space="preserve">
+    <value>SharePoint 2010 Timer</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_Service_ServiceType_SharePoint2010Tracing" xml:space="preserve">
+    <value>SharePoint 2010 Tracing</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_Service_ServiceType_SharePoint2010UserCodeHost" xml:space="preserve">
+    <value>SharePoint 2010 User Code Host</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_Service_ServiceType_SharePoint2010VSSWriter" xml:space="preserve">
+    <value>SharePoint 2010 VSS Writer</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_Service_ServiceType_SharePointFoundationSearchV4" xml:space="preserve">
+    <value>SharePoint Foundation Search V4</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_Service_ServiceType_SharePointServerSearch14" xml:space="preserve">
+    <value>SharePoint Server Search 14</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_Service_ServiceType_SQLServerVSSWriter" xml:space="preserve">
+    <value>SQL Server VSS Writer</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_Service_ServiceType_VolumeShadowCopy" xml:space="preserve">
+    <value>Volume Shadow Copy</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_Service_ServiceType_WebAnalyticsService" xml:space="preserve">
+    <value>Web Analytics Service</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_SharePoint_Database_DatabaseType_ConfigDatabase" xml:space="preserve">
+    <value>Configure Database</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_SharePoint_Database_DatabaseType_CustomizeDatabase" xml:space="preserve">
+    <value>Customized Database</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_SharePoint_Database_DatabaseType_SearchDatabase" xml:space="preserve">
+    <value>Search Database</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_SharePoint_Database_DatabaseType_ServiceDatabase" xml:space="preserve">
+    <value>Service Database</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_SharePoint_ObjectType_Item" xml:space="preserve">
+    <value>Item</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_SharePoint_ObjectType_List" xml:space="preserve">
+    <value>List</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_SharePoint_ObjectType_Site" xml:space="preserve">
+    <value>Site</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_SharePoint_ObjectType_SiteCollection" xml:space="preserve">
+    <value>Site Collection</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_SharePoint_Solution_OperationType_Add" xml:space="preserve">
+    <value>Add</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_SharePoint_Solution_OperationType_Deploy" xml:space="preserve">
+    <value>Deploy</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_SharePoint_Solution_OperationType_Remove" xml:space="preserve">
+    <value>Remove</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_SharePoint_Solution_OperationType_Retract" xml:space="preserve">
+    <value>Retract</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_SharePoint_Solution_OperationType_Upgrade" xml:space="preserve">
+    <value>Upgrade</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_Snapshot_OperationType_Delete" xml:space="preserve">
+    <value>Delete</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_Snapshot_OperationType_Import" xml:space="preserve">
+    <value>Import</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_Snapshot_OperationType_Mask" xml:space="preserve">
+    <value>Mask</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_Snapshot_OperationType_Update" xml:space="preserve">
+    <value>Update</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_Storage_StorageType_Amazon" xml:space="preserve">
+    <value>Amazon</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_Storage_StorageType_Atmos" xml:space="preserve">
+    <value>Atmos</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_Storage_StorageType_ATT" xml:space="preserve">
+    <value>AT&amp;T</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_Storage_StorageType_Azure" xml:space="preserve">
+    <value>Azure</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_Storage_StorageType_Cloud" xml:space="preserve">
+    <value>Cloud</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_Storage_StorageType_DELLDXStorage" xml:space="preserve">
+    <value>DELL DX Storage</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_Storage_StorageType_EMCCentera" xml:space="preserve">
+    <value>EMC Centera</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_Storage_StorageType_FileSystem" xml:space="preserve">
+    <value>File System</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_Storage_StorageType_FTP" xml:space="preserve">
+    <value>FTP</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_Storage_StorageType_HCP" xml:space="preserve">
+    <value>HCP</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_Storage_StorageType_NetApp" xml:space="preserve">
+    <value>NetApp</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_Storage_StorageType_Rackspace" xml:space="preserve">
+    <value>Rackspace</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_Storage_StorageType_TSM" xml:space="preserve">
+    <value>TSM</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventId_Authentication_AutoLogoffSuccessfullyEventMessage" xml:space="preserve">
+    <value>2001</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventId_Authentication_ForceLogoffSuccessfullyEventMessage" xml:space="preserve">
+    <value>2002</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventId_Authentication_LoginFailedEventMessage" xml:space="preserve">
+    <value>2003</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventId_Authentication_LoginSuccessfullyEventMessage" xml:space="preserve">
+    <value>2004</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventId_Authentication_ManualLogoffSuccessfullyEventMessage" xml:space="preserve">
+    <value>2005</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventID_Authentication_ValidateAccountFailedEventMessage" xml:space="preserve">
+    <value>2006</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventId_Communication_ConnectToServiceFailedEventMessage" xml:space="preserve">
+    <value>7702</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventId_Communication_DataTransferFailedEventMessage" xml:space="preserve">
+    <value>7703</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventId_Communication_HandleRequestFailedEventMessage" xml:space="preserve">
+    <value>7701</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventID_Communication_ReceiveDataFailedEventMessage" xml:space="preserve">
+    <value>7704</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventID_Communication_SendDataFailedEventMessage" xml:space="preserve">
+    <value>7705</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventId_Configuration_Plan_AddPlanFailedEventMessage" xml:space="preserve">
+    <value>4401</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventId_Configuration_Plan_AddPlanSuccessfullyEventMessage" xml:space="preserve">
+    <value>4402</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventId_Configuration_Plan_DeletePlanFailedEventMessage" xml:space="preserve">
+    <value>4403</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventId_Configuration_Plan_DeletePlanSuccessfullyEventMessage" xml:space="preserve">
+    <value>4404</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventId_Configuration_Plan_ModifyPlanFailedEventMessage" xml:space="preserve">
+    <value>4405</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventId_Configuration_Plan_ModifyPlanSuccessfullyEventMessage" xml:space="preserve">
+    <value>4406</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventId_Configuration_Profile_AddProfileFailedEventMessage" xml:space="preserve">
+    <value>4501</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventId_Configuration_Profile_AddProfileSuccessfullyEventMessage" xml:space="preserve">
+    <value>4502</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventId_Configuration_Profile_DeleteProfileFailedEventMessage" xml:space="preserve">
+    <value>4503</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventId_Configuration_Profile_DeleteProfileSuccessfullyEventMessage" xml:space="preserve">
+    <value>4504</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventId_Configuration_Profile_ModifyProfileFailedEventMessage" xml:space="preserve">
+    <value>4505</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventId_Configuration_Profile_ModifyProfileSuccessfullyEventMessage" xml:space="preserve">
+    <value>4506</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventId_Configuration_Profile_OperateProfileFailedEventMessage" xml:space="preserve">
+    <value>4609</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventId_Configuration_Profile_OperateProfileSuccessfullyEventMessage" xml:space="preserve">
+    <value>4610</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventId_Configuration_Setting_AddSettingFailedEventMessage" xml:space="preserve">
+    <value>4601</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventId_Configuration_Setting_AddSettingSuccessfullyEventMessage" xml:space="preserve">
+    <value>4602</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventId_Configuration_Setting_DeleteSettingFailedEventMessage" xml:space="preserve">
+    <value>4603</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventId_Configuration_Setting_DeleteSettingSuccessfullyEventMessage" xml:space="preserve">
+    <value>4604</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventId_Configuration_Setting_ModifySettingFailedEventMessage" xml:space="preserve">
+    <value>4605</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventId_Configuration_Setting_ModifySettingSuccessfullyEventMessage" xml:space="preserve">
+    <value>4606</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventId_Configuration_Setting_OperateSettingFailedEventMessage" xml:space="preserve">
+    <value>4607</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventId_Configuration_Setting_OperateSettingSuccessfullyEventMessage" xml:space="preserve">
+    <value>4608</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventId_Database_AddDatabaseFailedEventMessage" xml:space="preserve">
+    <value>8401</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventId_Database_AddDatabaseSuccessfullyEventMessage" xml:space="preserve">
+    <value>8402</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventId_Database_DeleteDatabaseFailedEventMessage" xml:space="preserve">
+    <value>8403</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventId_Database_DeleteDatabaseSuccessfullyEventMessage" xml:space="preserve">
+    <value>8404</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventId_Database_ModifyDatabaseFailedEventMessage" xml:space="preserve">
+    <value>8405</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventId_Database_ModifyDatabaseSuccessfullyEventMessage" xml:space="preserve">
+    <value>8406</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventId_Database_OperateDatabaseFailedEventMessage" xml:space="preserve">
+    <value>8407</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventId_Database_OperateDatabaseSuccessfullyEventMessage" xml:space="preserve">
+    <value>8408</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventId_Driver_OperateDriverFailedEventMessage" xml:space="preserve">
+    <value>8001</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventId_Driver_OperateDriverSuccessfullyEventMessage" xml:space="preserve">
+    <value>8002</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventId_File_ReadFailedEventMessage" xml:space="preserve">
+    <value>8302</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventId_File_WriteFailedEventMessage" xml:space="preserve">
+    <value>8301</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventId_IIS_StartIISServiceFailedEventMessage" xml:space="preserve">
+    <value>2301</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventId_IIS_StartIISServiceSuccessfullyEventMessage" xml:space="preserve">
+    <value>2302</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventId_IIS_StopIISServiceFailedEventMessage" xml:space="preserve">
+    <value>2303</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventId_IIS_StopIISServiceSuccessfullyEventMessage" xml:space="preserve">
+    <value>2304</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventId_Job_CompletedEventMessage" xml:space="preserve">
+    <value>2401</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventId_Job_CompletedWithExceptionEventMessage" xml:space="preserve">
+    <value>2402</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventId_Job_ConvertJobTypeSuccessfullyEventMessage" xml:space="preserve">
+    <value>2412</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventId_Job_DeletedJobFailedEventMessage" xml:space="preserve">
+    <value>2403</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventId_Job_DeletedJobSuccessfullyEventMessage" xml:space="preserve">
+    <value>2404</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventId_Job_FailedEventMessage" xml:space="preserve">
+    <value>2405</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventId_Job_JobReport_OperateJobReportFailedEventMessage" xml:space="preserve">
+    <value>2406</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventId_Job_JobReport_OperateJobReportSuccessfullyEventMessage" xml:space="preserve">
+    <value>2411</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventId_Job_PausedEventMessage" xml:space="preserve">
+    <value>2410</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventId_Job_SkippedEventMessage" xml:space="preserve">
+    <value>2407</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventId_Job_StartedEventMessage" xml:space="preserve">
+    <value>2408</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventId_Job_StoppedEventMessage" xml:space="preserve">
+    <value>2409</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventId_License_ApplyLicenseFailedEventMessage" xml:space="preserve">
+    <value>2102</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventId_License_ApplyLicenseSuccessfullyEventMessage" xml:space="preserve">
+    <value>2103</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventId_License_LoadLicenseFailedEventMessage" xml:space="preserve">
+    <value>2101</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventId_Packaging_InstallationStartEventMessage" xml:space="preserve">
+    <value>9401</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventId_Packaging_InstallPackageFailedEventMessage" xml:space="preserve">
+    <value>9402</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventId_Packaging_InstallPackageSuccessfullyEventMessage" xml:space="preserve">
+    <value>9403</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventId_Packaging_UninstallationStartEventMessage" xml:space="preserve">
+    <value>9404</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventId_Packaging_UninstallPackageFailedEventMessage" xml:space="preserve">
+    <value>9405</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventId_Packaging_UninstallPackageSuccessfullyEventMessage" xml:space="preserve">
+    <value>9406</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventId_Process_CommandStartEventMessage" xml:space="preserve">
+    <value>8106</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventId_Process_InvokeCommandFailedEventMessage" xml:space="preserve">
+    <value>8101</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventId_Process_InvokeCommandSuccessfullyEventMessage" xml:space="preserve">
+    <value>8103</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventId_Process_InvokeProcessFailedEventMessage" xml:space="preserve">
+    <value>8102</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventId_Process_InvokeProcessSuccessfullyEventMessage" xml:space="preserve">
+    <value>8104</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventId_Process_ProcessStartEventMessage" xml:space="preserve">
+    <value>8105</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventId_Service_AddServiceFailedEventMessage" xml:space="preserve">
+    <value>5401</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventId_Service_AddServiceSuccessfullyEventMessage" xml:space="preserve">
+    <value>5402</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventId_Service_DeleteServiceFailedEventMessage" xml:space="preserve">
+    <value>5403</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventId_Service_DeleteServiceSuccessfullyEventMessage" xml:space="preserve">
+    <value>5404</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventId_Service_ExitedAbnormallyEventMessage" xml:space="preserve">
+    <value>5408</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventId_Service_ModifyServiceFailedEventMessage" xml:space="preserve">
+    <value>5405</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventId_Service_ModifyServiceSuccessfullyEventMessage" xml:space="preserve">
+    <value>5406</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventId_Service_OperateServiceFailedEventMessage" xml:space="preserve">
+    <value>5407</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventId_Service_OperateServiceSuccessfullyEventMessage" xml:space="preserve">
+    <value>5413</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventId_Service_RuntimeErrorEventMessage" xml:space="preserve">
+    <value>5409</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventId_Service_StartedFailedEventMessage" xml:space="preserve">
+    <value>5410</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventId_Service_StartedSuccessfullyEventMessage" xml:space="preserve">
+    <value>5411</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventId_Service_StoppedFailedEventMessage" xml:space="preserve">
+    <value>5414</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventId_Service_StoppedSuccessfullyEventMessage" xml:space="preserve">
+    <value>5412</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventId_SharePoint_ActivateFeatureFailedEventMessage" xml:space="preserve">
+    <value>5501</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventId_SharePoint_BackupAudienceMappingFailedEventMessage" xml:space="preserve">
+    <value>5539</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventId_SharePoint_BackupDocumentTagFailedEventMessage" xml:space="preserve">
+    <value>5502</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventId_SharePoint_BackupItemFailedEventMessage" xml:space="preserve">
+    <value>5503</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventId_SharePoint_BackupListFailedEventMessage" xml:space="preserve">
+    <value>5504</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventId_SharePoint_BackupMetadataServiceFailedEventMessage" xml:space="preserve">
+    <value>5505</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventId_SharePoint_BackupSiteCollectionFailedEventMessage" xml:space="preserve">
+    <value>5506</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventId_SharePoint_BackupUserProfileFailedEventMessage" xml:space="preserve">
+    <value>5507</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventId_SharePoint_BackupWebFailedEventMessage" xml:space="preserve">
+    <value>5508</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventId_SharePoint_Blob_BackupBlobFailedEventMessage" xml:space="preserve">
+    <value>5528</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventId_SharePoint_Blob_EnabledEBSFailedEventMessage" xml:space="preserve">
+    <value>5537</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventId_SharePoint_Blob_EnabledEBSSuccessfullyEventMessage" xml:space="preserve">
+    <value>5538</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventId_SharePoint_Blob_EnabledRBSFailedEventMessage" xml:space="preserve">
+    <value>5535</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventId_SharePoint_Blob_EnabledRBSSuccessfullyEventMessage" xml:space="preserve">
+    <value>5536</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventId_SharePoint_Blob_RestoreBlobFailedEventMessage" xml:space="preserve">
+    <value>5529</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventId_SharePoint_Common_BrowseSharePointFailedEventMessage" xml:space="preserve">
+    <value>5532</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventId_SharePoint_Common_DiscoverSharePointFailedEventMessage" xml:space="preserve">
+    <value>5534</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventId_SharePoint_ContentDatabase_BackupContentDatabaseFailedEventMessage" xml:space="preserve">
+    <value>5524</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventId_SharePoint_ContentDatabase_RestoreContentDatabaseFailedEventMessage" xml:space="preserve">
+    <value>5525</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventId_SharePoint_Database_BackupDatabaseFailedEventMessage" xml:space="preserve">
+    <value>5526</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventId_SharePoint_Database_RestoreDatabaseFailedEventMessage" xml:space="preserve">
+    <value>5527</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventId_SharePoint_Index_BackupIndexFailedEventMessage" xml:space="preserve">
+    <value>5530</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventId_SharePoint_Index_RestoreIndexFailedEventMessage" xml:space="preserve">
+    <value>5531</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventId_SharePoint_List_SyncListFailedEventMessage" xml:space="preserve">
+    <value>5533</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventId_SharePoint_RestoreAlertFailedEventMessage" xml:space="preserve">
+    <value>5509</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventId_SharePoint_RestoreAudienceMappingFailedEventMessage" xml:space="preserve">
+    <value>5541</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventId_SharePoint_RestoreColumnFailedEventMessage" xml:space="preserve">
+    <value>5540</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventId_SharePoint_RestoreContentTypeFailedEventMessage" xml:space="preserve">
+    <value>5510</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventId_SharePoint_RestoreDocumentTagFailedEventMessage" xml:space="preserve">
+    <value>5511</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventId_SharePoint_RestoreItemFailedEventMessage" xml:space="preserve">
+    <value>5512</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventId_SharePoint_RestoreItemPropertyFailedEventMessage" xml:space="preserve">
+    <value>5543</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventId_SharePoint_RestoreListFailedEventMessage" xml:space="preserve">
+    <value>5513</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventId_SharePoint_RestoreMetadataServiceFailedEventMessage" xml:space="preserve">
+    <value>5514</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventId_SharePoint_RestorePermissionFailedEventMessage" xml:space="preserve">
+    <value>5515</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventId_SharePoint_RestoreSiteCollectionFailedEventMessage" xml:space="preserve">
+    <value>5516</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventId_SharePoint_RestoreUserFailedEventMessage" xml:space="preserve">
+    <value>5517</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventId_SharePoint_RestoreUserProfileFailedEventMessage" xml:space="preserve">
+    <value>5518</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventId_SharePoint_RestoreWebFailedEventMessage" xml:space="preserve">
+    <value>5519</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventId_SharePoint_RestoreWebPartFailedEventMessage" xml:space="preserve">
+    <value>5542</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventId_SharePoint_RestoreWorkflowInstanceFailedEventMessage" xml:space="preserve">
+    <value>5520</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventId_SharePoint_Solution_OperateSolutionFailedEventMessage" xml:space="preserve">
+    <value>5521</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventId_SharePoint_Solution_OperateSolutionSuccessfullyEventMessage" xml:space="preserve">
+    <value>5522</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventId_SharePoint_UploadDocumentFailedEventMessage" xml:space="preserve">
+    <value>5523</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventId_Snapshot_OperateSnapMirrorFailedEventMessage" xml:space="preserve">
+    <value>8201</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventId_Snapshot_OperateSnapMirrorSuccessfullyEventMessage" xml:space="preserve">
+    <value>8202</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventId_Snapshot_OperateSnapshotFailedEventMessage" xml:space="preserve">
+    <value>8205</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventId_Snapshot_OperateSnapshotSuccessfullyEventMessage" xml:space="preserve">
+    <value>8206</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventId_Snapshot_OperateSnapVaultFailedEventMessage" xml:space="preserve">
+    <value>8203</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventId_Snapshot_OperateSnapVaultSuccessfullyEventMessage" xml:space="preserve">
+    <value>8204</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventId_Storage_ReadFailedEventMessage" xml:space="preserve">
+    <value>2201</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventId_Storage_VerifyFailedEventMessage" xml:space="preserve">
+    <value>2202</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventId_Storage_VerifySuccessfullyEventMessage" xml:space="preserve">
+    <value>2204</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventId_Storage_WriteFailedEventMessage" xml:space="preserve">
+    <value>2203</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventId_Update_InstallHotfixFailedEventMessage" xml:space="preserve">
+    <value>7501</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventId_Update_InstallHotfixSuccessfullyEventMessage" xml:space="preserve">
+    <value>7502</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventId_Update_UninstallHotfixFailedEventMessage" xml:space="preserve">
+    <value>7503</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventId_Update_UninstallHotfixSuccessfullyEventMessage" xml:space="preserve">
+    <value>7504</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventMsg_Authentication_AutoLogoffSuccessfullyEventMessage" xml:space="preserve">
+    <value>Automatic logoff successful.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventMsg_Authentication_ForceLogoffSuccessfullyEventMessage" xml:space="preserve">
+    <value>Forced logoff successful.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventMsg_Authentication_LoginFailedEventMessage" xml:space="preserve">
+    <value>Failed to log in.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventMsg_Authentication_LoginSuccessfullyEventMessage" xml:space="preserve">
+    <value>Successfully logged in.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventMsg_Authentication_ManualLogoffSuccessfullyEventMessage" xml:space="preserve">
+    <value>Successfully logged off. </value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventMsg_Authentication_ValidateAccountFailedEventMessage" xml:space="preserve">
+    <value>Failed to validate the account.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventMsg_Communication_ConnectToServiceFailedEventMessage" xml:space="preserve">
+    <value>Failed to connect to the service.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventMsg_Communication_DataTransferFailedEventMessage" xml:space="preserve">
+    <value>Failed to transfer the data.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventMsg_Communication_HandleRequestFailedEventMessage" xml:space="preserve">
+    <value>Failed to handle the request.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventMsg_Communication_ReceiveDataFailedEventMessage" xml:space="preserve">
+    <value>Failed to receive the data.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventMsg_Communication_SendDataFailedEventMessage" xml:space="preserve">
+    <value>Failed to send the data.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventMsg_Configuration_Plan_AddPlanFailedEventMessage" xml:space="preserve">
+    <value>Failed to add the plan.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventMsg_Configuration_Plan_AddPlanSuccessfullyEventMessage" xml:space="preserve">
+    <value>Successfully added the plan.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventMsg_Configuration_Plan_DeletePlanFailedEventMessage" xml:space="preserve">
+    <value>Failed to delete the plan.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventMsg_Configuration_Plan_DeletePlanSuccessfullyEventMessage" xml:space="preserve">
+    <value>Successfully deleted the plan.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventMsg_Configuration_Plan_ModifyPlanFailedEventMessage" xml:space="preserve">
+    <value>Failed to modify the plan.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventMsg_Configuration_Plan_ModifyPlanSuccessfullyEventMessage" xml:space="preserve">
+    <value>Successfully modifed the plan.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventMsg_Configuration_Profile_AddProfileFailedEventMessage" xml:space="preserve">
+    <value>Failed to add the profile.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventMsg_Configuration_Profile_AddProfileSuccessfullyEventMessage" xml:space="preserve">
+    <value>Successfully added profile.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventMsg_Configuration_Profile_DeleteProfileFailedEventMessage" xml:space="preserve">
+    <value>Failed to delete the profile.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventMsg_Configuration_Profile_DeleteProfileSuccessfullyEventMessage" xml:space="preserve">
+    <value>Successfully deleted the profile.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventMsg_Configuration_Profile_ModifyProfileFailedEventMessage" xml:space="preserve">
+    <value>Failed to modify the profile.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventMsg_Configuration_Profile_ModifyProfileSuccessfullyEventMessage" xml:space="preserve">
+    <value>Successfully modified the profile. </value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventMsg_Configuration_Profile_OperateProfileFailedEventMessage" xml:space="preserve">
+    <value>Failed to operate the profile.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventMsg_Configuration_Profile_OperateProfileSuccessfullyEventMessage" xml:space="preserve">
+    <value>Successfully to operate the profile.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventMsg_Configuration_Setting_AddSettingFailedEventMessage" xml:space="preserve">
+    <value>Failed to add the setting.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventMsg_Configuration_Setting_AddSettingSuccessfullyEventMessage" xml:space="preserve">
+    <value>Successfully added the setting .</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventMsg_Configuration_Setting_DeleteSettingFailedEventMessage" xml:space="preserve">
+    <value>Failed to delete the setting.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventMsg_Configuration_Setting_DeleteSettingSuccessfullyEventMessage" xml:space="preserve">
+    <value>Successfully deleted the setting.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventMsg_Configuration_Setting_ModifySettingFailedEventMessage" xml:space="preserve">
+    <value>Failed to modify the setting.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventMsg_Configuration_Setting_ModifySettingSuccessfullyEventMessage" xml:space="preserve">
+    <value>Successfully modified the setting.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventMsg_Configuration_Setting_OperateSettingFailedEventMessage" xml:space="preserve">
+    <value>Failed to operate the setting.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventMsg_Configuration_Setting_OperateSettingSuccessfullyEventMessage" xml:space="preserve">
+    <value>Successfully operated the setting.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventMsg_Database_AddDatabaseFailedEventMessage" xml:space="preserve">
+    <value>Failed to add the database.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventMsg_Database_AddDatabaseSuccessfullyEventMessage" xml:space="preserve">
+    <value>Successfully added the database.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventMsg_Database_DeleteDatabaseFailedEventMessage" xml:space="preserve">
+    <value>Failed to delete the database.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventMsg_Database_DeleteDatabaseSuccessfullyEventMessage" xml:space="preserve">
+    <value>Successfully deleted the database.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventMsg_Database_ModifyDatabaseFailedEventMessage" xml:space="preserve">
+    <value>Failed to modify the database.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventMsg_Database_ModifyDatabaseSuccessfullyEventMessage" xml:space="preserve">
+    <value>Successfully modified the database.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventMsg_Database_OperateDatabaseFailedEventMessage" xml:space="preserve">
+    <value>Failed to operate the database.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventMsg_Database_OperateDatabaseSuccessfullyEventMessage" xml:space="preserve">
+    <value>Successfully operated the database.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventMsg_Driver_OperateDriverFailedEventMessage" xml:space="preserve">
+    <value>Failed to operate the driver. </value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventMsg_Driver_OperateDriverSuccessfullyEventMessage" xml:space="preserve">
+    <value>Successfully operated the driver.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventMsg_File_ReadFailedEventMessage" xml:space="preserve">
+    <value>Failed to read data from the file.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventMsg_File_WriteFailedEventMessage" xml:space="preserve">
+    <value>Failed to write data to the file.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventMsg_IIS_StartIISServiceFailedEventMessage" xml:space="preserve">
+    <value>Failed to start the IIS service.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventMsg_IIS_StartIISServiceSuccessfullyEventMessage" xml:space="preserve">
+    <value>Successfully started the IIS service.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventMsg_IIS_StopIISServiceFailedEventMessage" xml:space="preserve">
+    <value>Failed to stop the IIS service.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventMsg_IIS_StopIISServiceSuccessfullyEventMessage" xml:space="preserve">
+    <value>Successfully stopped the IIS service.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventMsg_Job_CompletedEventMessage" xml:space="preserve">
+    <value>The job completed.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventMsg_Job_CompletedWithExceptionEventMessage" xml:space="preserve">
+    <value>The job completed with exception.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventMsg_Job_ConvertJobTypeSuccessfullyEventMessage" xml:space="preserve">
+    <value>Successfully converted the job type.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventMsg_Job_DeletedJobFailedEventMessage" xml:space="preserve">
+    <value>Failed to delete the job.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventMsg_Job_DeletedJobSuccessfullyEventMessage" xml:space="preserve">
+    <value>Successfully deleted the job.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventMsg_Job_FailedEventMessage" xml:space="preserve">
+    <value>The job failed.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventMsg_Job_JobReport_OperateJobReportFailedEventMessage" xml:space="preserve">
+    <value>Failed to operate the job report.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventMsg_Job_JobReport_OperateJobReportSuccessfullyEventMessage" xml:space="preserve">
+    <value>Successfully operated the job report.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventMsg_Job_PausedEventMessage" xml:space="preserve">
+    <value>The job is paused.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventMsg_Job_SkippedEventMessage" xml:space="preserve">
+    <value>The job is skipped.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventMsg_Job_StartedEventMessage" xml:space="preserve">
+    <value>The job is started.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventMsg_Job_StoppedEventMessage" xml:space="preserve">
+    <value>The job is stopped.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventMsg_License_ApplyLicenseFailedEventMessage" xml:space="preserve">
+    <value>Failed to apply the license.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventMsg_License_ApplyLicenseSuccessfullyEventMessage" xml:space="preserve">
+    <value>Successfully applied the license.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventMsg_License_LoadLicenseFailedEventMessage" xml:space="preserve">
+    <value>Failed to load the license.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventMsg_Packaging_InstallationStartEventMessage" xml:space="preserve">
+    <value>The installation is started.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventMsg_Packaging_InstallPackageFailedEventMessage" xml:space="preserve">
+    <value>Failed to install the package.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventMsg_Packaging_InstallPackageSuccessfullyEventMessage" xml:space="preserve">
+    <value>Successfully install the package.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventMsg_Packaging_UninstallationStartEventMessage" xml:space="preserve">
+    <value>The uninstallation is started.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventMsg_Packaging_UninstallPackageFailedEventMessage" xml:space="preserve">
+    <value>Failed to uninstall the package.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventMsg_Packaging_UninstallPackageSuccessfullyEventMessage" xml:space="preserve">
+    <value>Successfully uninstall the package.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventMsg_Process_CommandStartEventMessage" xml:space="preserve">
+    <value>The command is started.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventMsg_Process_InvokeCommandFailedEventMessage" xml:space="preserve">
+    <value>Failed to execute the command.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventMsg_Process_InvokeCommandSuccessfullyEventMessage" xml:space="preserve">
+    <value>Successfully executed the command.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventMsg_Process_InvokeProcessFailedEventMessage" xml:space="preserve">
+    <value>Failed to execute the process. </value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventMsg_Process_InvokeProcessSuccessfullyEventMessage" xml:space="preserve">
+    <value>Successfully executed the process.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventMsg_Process_ProcessStartEventMessage" xml:space="preserve">
+    <value>The process is started.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventMsg_Service_AddServiceFailedEventMessage" xml:space="preserve">
+    <value>Failed to add the service.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventMsg_Service_AddServiceSuccessfullyEventMessage" xml:space="preserve">
+    <value>Successfully added the service.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventMsg_Service_DeleteServiceFailedEventMessage" xml:space="preserve">
+    <value>Failed to delete the service.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventMsg_Service_DeleteServiceSuccessfullyEventMessage" xml:space="preserve">
+    <value>Successfully deleted the service.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventMsg_Service_ExitedAbnormallyEventMessage" xml:space="preserve">
+    <value>The service exited abnormally. </value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventMsg_Service_ModifyServiceFailedEventMessage" xml:space="preserve">
+    <value>Failed to modify the service.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventMsg_Service_ModifyServiceSuccessfullyEventMessage" xml:space="preserve">
+    <value>Successfully modified the service.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventMsg_Service_OperateServiceFailedEventMessage" xml:space="preserve">
+    <value>Failed to operate the service.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventMsg_Service_OperateServiceSuccessfullyEventMessage" xml:space="preserve">
+    <value>Successfully operated the service.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventMsg_Service_RuntimeErrorEventMessage" xml:space="preserve">
+    <value>An error occurred while the service was running. </value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventMsg_Service_StartedFailedEventMessage" xml:space="preserve">
+    <value>Failed to start the service.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventMsg_Service_StartedSuccessfullyEventMessage" xml:space="preserve">
+    <value>Successfully started the service.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventMsg_Service_StoppedFailedEventMessage" xml:space="preserve">
+    <value>Failed to stop the service.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventMsg_Service_StoppedSuccessfullyEventMessage" xml:space="preserve">
+    <value>Successfully stopped the service.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventMsg_SharePoint_ActivateFeatureFailedEventMessage" xml:space="preserve">
+    <value>Failed to activate the feature.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventMsg_SharePoint_BackupAudienceMappingFailedEventMessage" xml:space="preserve">
+    <value>Failed to backup the audience mapping.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventMsg_SharePoint_BackupDocumentTagFailedEventMessage" xml:space="preserve">
+    <value>Failed to back up the document tag.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventMsg_SharePoint_BackupItemFailedEventMessage" xml:space="preserve">
+    <value>Failed to back up the item.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventMsg_SharePoint_BackupListFailedEventMessage" xml:space="preserve">
+    <value>Failed to back up the list.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventMsg_SharePoint_BackupMetadataServiceFailedEventMessage" xml:space="preserve">
+    <value>Failed to back up the Managed Metadata Service.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventMsg_SharePoint_BackupSiteCollectionFailedEventMessage" xml:space="preserve">
+    <value>Failed to back up the site collection.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventMsg_SharePoint_BackupUserProfileFailedEventMessage" xml:space="preserve">
+    <value>Failed to back up the user profile.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventMsg_SharePoint_BackupWebFailedEventMessage" xml:space="preserve">
+    <value>Failed to back up the site.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventMsg_SharePoint_Blob_BackupBlobFailedEventMessage" xml:space="preserve">
+    <value>Failed to back up the BLOB information.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventMsg_SharePoint_Blob_EnabledEBSFailedEventMessage" xml:space="preserve">
+    <value>Failed to enable EBS.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventMsg_SharePoint_Blob_EnabledEBSSuccessfullyEventMessage" xml:space="preserve">
+    <value>Successfully enabled EBS.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventMsg_SharePoint_Blob_EnabledRBSFailedEventMessage" xml:space="preserve">
+    <value>Failed to enable RBS.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventMsg_SharePoint_Blob_EnabledRBSSuccessfullyEventMessage" xml:space="preserve">
+    <value>Successfully enabled RBS.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventMsg_SharePoint_Blob_RestoreBlobFailedEventMessage" xml:space="preserve">
+    <value>Failed to restore the BLOB information.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventMsg_SharePoint_Common_BrowseSharePointFailedEventMessage" xml:space="preserve">
+    <value>Failed to browse the SharePoint data.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventMsg_SharePoint_Common_DiscoverSharePointFailedEventMessage" xml:space="preserve">
+    <value>Failed to discover the SharePoint information.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventMsg_SharePoint_ContentDatabase_BackupContentDatabaseFailedEventMessage" xml:space="preserve">
+    <value>Failed to back up the content database.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventMsg_SharePoint_ContentDatabase_RestoreContentDatabaseFailedEventMessage" xml:space="preserve">
+    <value>Failed to restore the content database.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventMsg_SharePoint_Database_BackupDatabaseFailedEventMessage" xml:space="preserve">
+    <value>Failed to back up the database.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventMsg_SharePoint_Database_RestoreDatabaseFailedEventMessage" xml:space="preserve">
+    <value>Failed to restore the database.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventMsg_SharePoint_Index_BackupIndexFailedEventMessage" xml:space="preserve">
+    <value>Failed to back up the index.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventMsg_SharePoint_Index_RestoreIndexFailedEventMessage" xml:space="preserve">
+    <value>Failed to restore the index.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventMsg_SharePoint_List_SyncListFailedEventMessage" xml:space="preserve">
+    <value>Failed to synchronise the list.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventMsg_SharePoint_RestoreAlertFailedEventMessage" xml:space="preserve">
+    <value>Failed to restore the alert. </value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventMsg_SharePoint_RestoreAudienceMappingFailedEventMessage" xml:space="preserve">
+    <value>Failed to restore the audience mapping.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventMsg_SharePoint_RestoreColumnFailedEventMessage" xml:space="preserve">
+    <value>Failed to restore the column.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventMsg_SharePoint_RestoreContentTypeFailedEventMessage" xml:space="preserve">
+    <value>Failed to restore the content type.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventMsg_SharePoint_RestoreDocumentTagFailedEventMessage" xml:space="preserve">
+    <value>Failed to restore the document tag.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventMsg_SharePoint_RestoreItemFailedEventMessage" xml:space="preserve">
+    <value>Failed to restore the item.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventMsg_SharePoint_RestoreItemPropertyFailedEventMessage" xml:space="preserve">
+    <value>Failed to restore the item property.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventMsg_SharePoint_RestoreListFailedEventMessage" xml:space="preserve">
+    <value>Failed to restore the list.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventMsg_SharePoint_RestoreMetadataServiceFailedEventMessage" xml:space="preserve">
+    <value>Failed to restore the Managed Metadata Service.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventMsg_SharePoint_RestorePermissionFailedEventMessage" xml:space="preserve">
+    <value>Failed to restore the permission.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventMsg_SharePoint_RestoreSiteCollectionFailedEventMessage" xml:space="preserve">
+    <value>Failed to restore the site collection.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventMsg_SharePoint_RestoreUserFailedEventMessage" xml:space="preserve">
+    <value>Failed to restore the user.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventMsg_SharePoint_RestoreUserProfileFailedEventMessage" xml:space="preserve">
+    <value>Failed to restore the user profile.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventMsg_SharePoint_RestoreWebFailedEventMessage" xml:space="preserve">
+    <value>Failed to restore the site.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventMsg_SharePoint_RestoreWebPartFailedEventMessage" xml:space="preserve">
+    <value>Failed to restore the web part.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventMsg_SharePoint_RestoreWorkflowInstanceFailedEventMessage" xml:space="preserve">
+    <value>Failed to restore the workflow instance.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventMsg_SharePoint_Solution_OperateSolutionFailedEventMessage" xml:space="preserve">
+    <value>Failed to operate the solution.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventMsg_SharePoint_Solution_OperateSolutionSuccessfullyEventMessage" xml:space="preserve">
+    <value>Successfully operated the solution.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventMsg_SharePoint_UploadDocumentFailedEventMessage" xml:space="preserve">
+    <value>Failed to upload the document.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventMsg_Snapshot_OperateSnapMirrorFailedEventMessage" xml:space="preserve">
+    <value>Failed to operate the snap mirror.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventMsg_Snapshot_OperateSnapMirrorSuccessfullyEventMessage" xml:space="preserve">
+    <value>Successfully operated the snap mirror.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventMsg_Snapshot_OperateSnapshotFailedEventMessage" xml:space="preserve">
+    <value>Failed to operate the snapshot.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventMsg_Snapshot_OperateSnapshotSuccessfullyEventMessage" xml:space="preserve">
+    <value>Successfully operated the snapshot.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventMsg_Snapshot_OperateSnapVaultFailedEventMessage" xml:space="preserve">
+    <value>Failed to operate the snap vault.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventMsg_Snapshot_OperateSnapVaultSuccessfullyEventMessage" xml:space="preserve">
+    <value>Successfully operated the snap vault.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventMsg_Storage_ReadFailedEventMessage" xml:space="preserve">
+    <value>Failed to read data from the storage system.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventMsg_Storage_VerifyFailedEventMessage" xml:space="preserve">
+    <value>Failed to verify the settings for connecting to the storage system.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventMsg_Storage_VerifySuccessfullyEventMessage" xml:space="preserve">
+    <value>Successfully verified the settings for connecting the storage system.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventMsg_Storage_WriteFailedEventMessage" xml:space="preserve">
+    <value>Failed to write data to the storage system.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventMsg_Update_InstallHotfixFailedEventMessage" xml:space="preserve">
+    <value>Failed to install the hotfix.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventMsg_Update_InstallHotfixSuccessfullyEventMessage" xml:space="preserve">
+    <value>Successfully installed the hotfix.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventMsg_Update_UninstallHotfixFailedEventMessage" xml:space="preserve">
+    <value>Failed to uninstall the hotfix.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="EventMsg_Update_UninstallHotfixSuccessfullyEventMessage" xml:space="preserve">
+    <value>Successfully uninstalled the hotfix.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ExceptionCause_Authentication_ConnectToDomainServerFailedException" xml:space="preserve">
+    <value>Failed to connect to the Domain Server.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ExceptionCause_Authentication_DeactivatedUserException" xml:space="preserve">
+    <value>The login user has been deactivated.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ExceptionCause_Authentication_ExceededMaximumUserSessionException" xml:space="preserve">
+    <value>The current user's session count has exceeded the maximum allowable limit.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ExceptionCause_Authentication_ForbiddenIPException" xml:space="preserve">
+    <value>This IP address has been blocked.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ExceptionCause_Authentication_IncorrectUserNameOrPasswordException" xml:space="preserve">
+    <value>The username or password is incorrect.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ExceptionCause_Authentication_UserNotAddInAccountManagerException" xml:space="preserve">
+    <value>The login user does not exist.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ExceptionCause_Communication_EmptyRequestMessageException" xml:space="preserve">
+    <value>The request message is empty.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ExceptionCause_Communication_SessionTimeoutException" xml:space="preserve">
+    <value>The network connection timed out.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ExceptionCause_Configuration_DuplicatedProfileNameException" xml:space="preserve">
+    <value>The profile name already exists.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ExceptionCause_Configuration_ExpiredStartTimeException" xml:space="preserve">
+    <value>The start time cannot be earlier than the current time.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ExceptionCause_Configuration_GetResponseFromServiceFailedException" xml:space="preserve">
+    <value>Failed to get a response from the service.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ExceptionCause_Configuration_ProcessingPoolNotFoundException" xml:space="preserve">
+    <value>Cannot find the specified processing pool.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ExceptionCause_Configuration_ProfileBeingUsedByNodeException" xml:space="preserve">
+    <value>The profile has been applied to the following nodes.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ExceptionCause_Configuration_ProfileBeingUsedByRunningJobException" xml:space="preserve">
+    <value>The profile is currently being used by the following running job(s).</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ExceptionCause_Database_ExistedErrorInSMSQLException" xml:space="preserve">
+    <value>An error occurred in SMSQL.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ExceptionCause_Job_CompletedWithExceptionException" xml:space="preserve">
+    <value>Please refer to the job report for more details.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ExceptionCause_Job_ConnectToAgentServiceFailedException" xml:space="preserve">
+    <value>An error occurred while connecting to the Agent Service.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ExceptionCause_Job_ConnectToMediaServiceFailedException" xml:space="preserve">
+    <value>An error occurred while connecting to the Media Service.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ExceptionCause_Job_ContentDatabaseOfflineException" xml:space="preserve">
+    <value>The content database of the Web application is offline.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ExceptionCause_Job_ExistedPausedJobException" xml:space="preserve">
+    <value>There is a paused job in this plan.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ExceptionCause_Job_ExistedRunningJobException" xml:space="preserve">
+    <value>There is another running job of this plan.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ExceptionCause_Job_ExistedRunningJobInScopeException" xml:space="preserve">
+    <value>There is a running job in the plan scope.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ExceptionCause_Job_FailedException" xml:space="preserve">
+    <value>Please refer to the job report for more details.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ExceptionCause_Job_JobLimitationException" xml:space="preserve">
+    <value>The number of jobs has reached the agent's maximum number.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ExceptionCause_Job_LoadSecurityProfileFailedException" xml:space="preserve">
+    <value>Failed to load the security profile.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ExceptionCause_Job_NoAvailableAgentException" xml:space="preserve">
+    <value>There is not an available agent.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ExceptionCause_Job_NoAvailableAgentInFarmException" xml:space="preserve">
+    <value>There are no available agents in the farm.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ExceptionCause_Job_NoAvailableAgentInNoneSPEnvironmentException" xml:space="preserve">
+    <value>There are no available agents in the environment that do not install SharePoint.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ExceptionCause_Job_NoAvailableDeviceException" xml:space="preserve">
+    <value>There is not an available physical device.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ExceptionCause_Job_NoAvailableMappingException" xml:space="preserve">
+    <value>There is no available mapping to run the job.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ExceptionCause_Job_NoAvailableMediaException" xml:space="preserve">
+    <value>There is not an available Media Service.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ExceptionCause_Job_NoAvailablePlanException" xml:space="preserve">
+    <value>Cannot find the plan related to the job.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ExceptionCause_Job_NoAvailableSiteCollectionException" xml:space="preserve">
+    <value>There is no site collection under the Web application that you want to back up.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ExceptionCause_Job_NoAvailableStoragePolicyException" xml:space="preserve">
+    <value>There is not an available storage policy.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ExceptionCause_Job_NoEnoughContentDatabasePermissionException" xml:space="preserve">
+    <value>The user does not have access to this content database.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ExceptionCause_Job_NoEnoughFreeSpaceException" xml:space="preserve">
+    <value>There is not enough free space in the physical device for this storage policy.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ExceptionCause_Job_NoEnoughWebApplicationPermissionException" xml:space="preserve">
+    <value>The user does not have Full Control permission.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ExceptionCause_Job_NoFarmAdministratorPermissionException" xml:space="preserve">
+    <value>The user is not a farm administrator.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ExceptionCause_Job_NoUpdateException" xml:space="preserve">
+    <value>The job progress has not been updated for a while in the backend. </value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ExceptionCause_Job_ScanJobFailedException" xml:space="preserve">
+    <value>The scan job failed.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ExceptionCause_Job_SendRequestFailedException" xml:space="preserve">
+    <value>The server failed to send a job request to the agent.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ExceptionCause_Job_SomeRemoteSiteCollectionLicenseExpiredException" xml:space="preserve">
+    <value>There is no license, or the license is invalid.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ExceptionCause_Job_TimerServiceDownException" xml:space="preserve">
+    <value>The Timer Service is down.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ExceptionCause_Job_TSMLicenseExpiredException" xml:space="preserve">
+    <value>The TSM license has expired.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ExceptionCause_License_DecryptionException" xml:space="preserve">
+    <value>Failed to decrypt the license file.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ExceptionCause_License_IllegalLicenseException" xml:space="preserve">
+    <value>The license file is invalid.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ExceptionCause_License_IncorrectFormatException" xml:space="preserve">
+    <value>The license file's format is not correct.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ExceptionCause_License_IPMismatchException" xml:space="preserve">
+    <value>The IP assigned to the license does not match the current server's IP.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ExceptionCause_License_LicenseNotFoundException" xml:space="preserve">
+    <value>Cannot find the license file.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ExceptionCause_Process_ExistedErrorMessageWhenExecuteCommandException" xml:space="preserve">
+    <value>An error occurred while executing the command.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ExceptionCause_Service_MasterKeyNotFoundException" xml:space="preserve">
+    <value>Cannot find the master key in the registry.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ExceptionCause_SharePoint_ExecuteStsadmFailedException" xml:space="preserve">
+    <value>An error occurred while executing the command with STSADM.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ExceptionCause_SharePoint_ExistedErrorInMediaServiceException" xml:space="preserve">
+    <value>An error occurred while restoring the BLOB information using Media Service.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ExceptionCause_SharePoint_FeatureNotFoundException" xml:space="preserve">
+    <value>The feature has not been installed in the destination.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ExceptionCause_SharePoint_ManagedPathNotFoundException" xml:space="preserve">
+    <value>The site collection cannot be created; make sure the managed path exists in the destination.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ExceptionCause_SharePoint_NoAvailableUserCodeServiceException" xml:space="preserve">
+    <value>The User Code Service is not started on the destination.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ExceptionCause_SharePoint_NoAvailableWebApplicationServiceException" xml:space="preserve">
+    <value>The Web Application Service is not started on the destination.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ExceptionCause_SharePoint_RuleFileNotFoundException" xml:space="preserve">
+    <value>Cannot find the ExtenderRules.xml file.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ExceptionCause_SharePoint_TermSetNotFoundException" xml:space="preserve">
+    <value>Cannot find the Term Set that connects with Metadata Column.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ExceptionCause_SharePoint_UserAlreadyMappedException" xml:space="preserve">
+    <value>The source user cannot be mapped because the place holder has already been configured in the User Mapping, and the source user has already been mapped to a non-existent destination user.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ExceptionCause_SharePoint_UserNotFoundException" xml:space="preserve">
+    <value>Cannot find the specified user.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ExceptionCause_SharePoint_UserProfileInaccessibleException" xml:space="preserve">
+    <value>The current user does not have enough permissions for the User Profile Service.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ExceptionCause_SharePoint_WorkflowDefinitionNotFoundException" xml:space="preserve">
+    <value>The workflow definition cannot be found in the destination.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ExceptionCause_Snapshot_SnapshotNotFoundException" xml:space="preserve">
+    <value>Cannot find the snapshot.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ExceptionCause_Storage_IncorrectUserNameOrPasswordException" xml:space="preserve">
+    <value>The username or password entered is incorrect.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ExceptionCause_Storage_NoEnoughFreeSpaceException" xml:space="preserve">
+    <value>There is not enough free space on the storage system.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ExceptionCause_Storage_PathNotFoundException" xml:space="preserve">
+    <value>The UNC Path is invalid.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ExceptionCause_Storage_UnauthorizedAccessException" xml:space="preserve">
+    <value>The current user does not have enough permissions to the specified UNC path.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextKey_SharePoint_ObjectName" xml:space="preserve">
+    <value>Object Name: </value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextKey_SharePoint_ObjectType" xml:space="preserve">
+    <value>Object Type: </value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ExceptionCause_SharePoint_ConfigurationConflictException" xml:space="preserve">
+    <value>The properties of the columns or content types between the source and destination do not match.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ExceptionCause_Job_GetResponseTimeoutException" xml:space="preserve">
+    <value>Getting response time out.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextKey_SharePoint_FolderURL" xml:space="preserve">
+    <value>Folder URL: </value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextKey_SharePoint_ItemID" xml:space="preserve">
+    <value>Item ID: </value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_SharePoint_ObjectType_Column" xml:space="preserve">
+    <value>Column</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ContextValue_SharePoint_ObjectType_ContentType" xml:space="preserve">
+    <value>Content Type</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ExceptionCause_Database_InvalidServerStateException" xml:space="preserve">
+    <value>The Index Server status is abnormal.</value>
+    <comment>Approved I18N</comment>
+  </data>
+  <data name="ExceptionCause_SharePoint_ItemTypeConflictException" xml:space="preserve">
+    <value>The Item ID in the source and the Folder ID on the destination are the same.</value>
+    <comment>Approved I18N</comment>
+  </data>
+</root>

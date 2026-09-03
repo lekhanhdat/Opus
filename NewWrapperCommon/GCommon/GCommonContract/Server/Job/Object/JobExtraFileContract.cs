@@ -1,0 +1,75 @@
+﻿/********************************************************************
+ *
+ *  PROPRIETARY and CONFIDENTIAL
+ *
+ *  This file is licensed from, and is a trade secret of:
+ *
+ *                   AvePoint, Inc.
+ *                   525 Washington Blvd, Suite 1400
+ *                   Jersey City, NJ 07310
+ *                   United States of America
+ *                   Telephone: +1-201-793-1111
+ *                   WWW: www.avepoint.com
+ *
+ *  Refer to your License Agreement for restrictions on use,
+ *  duplication, or disclosure.
+ *
+ *  RESTRICTED RIGHTS LEGEND
+ *
+ *  Use, duplication, or disclosure by the Government is
+ *  subject to restrictions as set forth in subdivision
+ *  (c)(1)(ii) of the Rights in Technical Data and Computer
+ *  Software clause at DFARS 252.227-7013 (Oct. 1988) and
+ *  FAR 52.227-19 (C) (June 1987).
+ *
+ *  Copyright © 2017-2026 AvePoint® Inc. All Rights Reserved. 
+ *
+ *  Unpublished - All rights reserved under the copyright laws of the United States.
+ */
+
+
+
+
+namespace AvePoint.GCommon.Contract.Server.Job.Object
+{
+    #region = using block =
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Text;
+    using System.Runtime.Serialization;
+    using AvePoint.GCommon.Contract.Common;
+    using System.Data.Common;
+    #endregion
+
+    [DataContract(Namespace = ContractConstants.Namespace)]
+    public class JobExtraFile
+    {
+        [DataMember]
+        public String FileName { get; set; }
+
+        [DataMember]
+        public List<String> FileLines { get; set; }
+
+        [DataMember]
+        public String JobId { get; set; }
+        /// <summary>
+        /// 0:content;1:header;
+        /// </summary>
+        [DataMember]
+        public int RowType { get; set; }
+        /// <summary>
+        /// 用于download使用时，Manager端使用
+        /// </summary>
+        public List<FileContentLine> FileContentLines { get; set; }
+    }
+    /// <summary> 每一行report的内容和类型 </summary>
+    public class FileContentLine
+    {
+        public String FileLine { get; set; }
+        /// <summary>
+        /// 0:content;1:header;
+        /// </summary>
+        public int RowType { get; set; }
+    }
+}

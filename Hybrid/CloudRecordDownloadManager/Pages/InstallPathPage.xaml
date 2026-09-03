@@ -1,0 +1,144 @@
+<!--/********************************************************************
+ *
+ *  PROPRIETARY and CONFIDENTIAL
+ *
+ *  This file is licensed from, and is a trade secret of:
+ *
+ *                   AvePoint, Inc.
+ *                   525 Washington Blvd, Suite 1400
+ *                   Jersey City, NJ 07310
+ *                   United States of America
+ *                   Telephone: +1-201-793-1111
+ *                   WWW: www.avepoint.com
+ *
+ *  Refer to your License Agreement for restrictions on use,
+ *  duplication, or disclosure.
+ *
+ *  RESTRICTED RIGHTS LEGEND
+ *
+ *  Use, duplication, or disclosure by the Government is
+ *  subject to restrictions as set forth in subdivision
+ *  (c)(1)(ii) of the Rights in Technical Data and Computer
+ *  Software clause at DFARS 252.227-7013 (Oct. 1988) and
+ *  FAR 52.227-19 (C) (June 1987).
+ *
+ *  Copyright © 2017-2026 AvePoint® Inc. All Rights Reserved. 
+ *
+ *  Unpublished - All rights reserved under the copyright laws of the United States.
+ */-->
+<local:BasePage x:Class="CloudRecordDownloadManager.Pages.InstallPathPage"
+                  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                  xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                  xmlns:local="clr-namespace:CloudRecordDownloadManager.Pages"
+                  xmlns:res="clr-namespace:CloudRecordDownloadManager.Properties"
+                  mc:Ignorable="d">
+    <Page.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="../Resources/Styles/Style.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Page.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="312" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="25" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.Background>
+                <ImageBrush x:Name="BackgroundImage" ImageSource="../Resources/Images/bg.png" />
+            </Grid.Background>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="33" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="24" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="40" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="2*" />
+            </Grid.ColumnDefinitions>
+            <TextBlock Grid.Row="1" Grid.Column="1"
+                       Margin="16, 0"
+                       Text="{x:Static res:I18N.key_51c5bc50_e7f7_4309_8720_3f5d49a26e94}"
+                       TextWrapping="WrapWithOverflow"
+                       TextAlignment="Left"
+                       LineHeight="19"
+                       FontFamily="Segoe UI"
+                       FontSize="16"
+                       FontWeight="SemiBold"
+                       Foreground="#333333" />
+            <Grid Grid.Row="3" Grid.Column="1" Margin="16, 0" Background="White">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="10" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="10" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="16" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="5" />
+                    <RowDefinition Height="25" />
+                    <RowDefinition Height="5" />
+                    <RowDefinition Height="25" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <TextBlock Grid.Row="1" Grid.Column="1"
+                           Text="{x:Static res:I18N.key_c3402428_52ee_4a95_a4f3_da7693c8624d}"
+                           TextWrapping="WrapWithOverflow"
+                           TextAlignment="Left"
+                           LineHeight="16"
+                           FontFamily="Segoe UI"
+                           FontSize="12"
+                           Foreground="#333333" />
+                <TextBox Grid.Row="3" Grid.Column="1"
+                         Height="25"
+                         VerticalContentAlignment="Center"
+                         x:Name="PathInput" />
+                <Button Grid.Row="5" Grid.Column="1" HorizontalAlignment="Left"
+                        Style="{StaticResource ActionButton}"
+                        Content="{x:Static res:I18N.key_8b71ed7f_af35_4151_942c_7e1c756eda41}"
+                        Click="FolderAction" />
+            </Grid>
+        </Grid>
+        <Grid Grid.Row="1" Margin="0, 0, 6, 0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.5" />
+                <RowDefinition Height="1.5" />
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0" Background="#A0A0A0" Margin="0, 0, 1, 0" />
+            <Grid Grid.Row="1" Background="White" />
+        </Grid>
+        <Grid Grid.Row="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="4" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="10" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="16" />
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="1"
+                    Style="{StaticResource ActionButton}"
+                    Content="{x:Static res:I18N.key_6066fb46_a878_4d44_b3df_6c10942e8fda}"
+                    Click="BackAction" />
+            <Button Grid.Column="3"
+                    Style="{StaticResource ActionButton}"
+                    Content="{x:Static res:I18N.key_bc00875b_d1cd_47e1_8e6a_508c871a82ad}"
+                    IsDefault="True"
+                    Click="NextAction" />
+            <Button Grid.Column="5"
+                    Style="{StaticResource ActionButton}"
+                    Content="{x:Static res:I18N.key_456a1568_4227_4e55_ad7c_87e0d4085535}"
+                    Click="CloseAction" />
+        </Grid>
+    </Grid>
+</local:BasePage>

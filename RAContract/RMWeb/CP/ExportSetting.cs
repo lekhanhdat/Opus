@@ -1,0 +1,80 @@
+﻿/********************************************************************
+ *
+ *  PROPRIETARY and CONFIDENTIAL
+ *
+ *  This file is licensed from, and is a trade secret of:
+ *
+ *                   AvePoint, Inc.
+ *                   525 Washington Blvd, Suite 1400
+ *                   Jersey City, NJ 07310
+ *                   United States of America
+ *                   Telephone: +1-201-793-1111
+ *                   WWW: www.avepoint.com
+ *
+ *  Refer to your License Agreement for restrictions on use,
+ *  duplication, or disclosure.
+ *
+ *  RESTRICTED RIGHTS LEGEND
+ *
+ *  Use, duplication, or disclosure by the Government is
+ *  subject to restrictions as set forth in subdivision
+ *  (c)(1)(ii) of the Rights in Technical Data and Computer
+ *  Software clause at DFARS 252.227-7013 (Oct. 1988) and
+ *  FAR 52.227-19 (C) (June 1987).
+ *
+ *  Copyright © 2017-2026 AvePoint® Inc. All Rights Reserved. 
+ *
+ *  Unpublished - All rights reserved under the copyright laws of the United States.
+ */
+using AvePoint.GCommon.Contract.Storage.Entity;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Runtime.Serialization;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace AvePoint.RA.Contract.RMWeb.CP
+{
+    public class ExportSetting
+    {
+        public bool IsActive { get; set; }
+        public string  FileName{ get; set; }
+        public string FileSize{ get; set; }
+
+        public ExportSettingType ExportSettingType { get; set; }
+
+    }
+
+    public enum ExportSettingType {
+        VEO = 0,
+        NAA = 1,
+        NARA = 2
+    }
+
+    public class ExportSettingEx
+    {
+        public List<ExportSetting> Settings { get; set; }
+        public bool EncryptionEnabled { get; set; }
+        public string EncryptionKey { get; set; }   
+        public bool ExportNARADataChecksumEnabled { get; set; }
+        public string ExportNARAPublicKey { get; set; }   
+        public List<StorageIdAndName> StorageInfo { get; set; }//It is used for the front end display drop-down box
+        public string CurrentExportLocationId { get; set; }//Used to display the current Settings for export location
+        public string ExportVEOPublicKey { get; set; }
+        public bool HasUpgradeVEOV3 { get; set; }
+        public bool HasVEOV3Permission { get; set; }
+    }
+    
+    [DataContract]
+    public class StorageInfoExportSetting
+    {
+        [DataMember]
+        public string CurrentExportLocationId { get; set; }//Used to display the current Settings for export location
+        
+        [DataMember]
+        public List<StorageIdAndName> StorageInfo { get; set; } = [];//It is used for the front end display drop-down box
+    }
+
+
+}

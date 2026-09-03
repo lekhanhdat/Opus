@@ -1,0 +1,140 @@
+.reco-discovery-projection {
+  .reco-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .reco-title {
+    font: bold 14px Open Sans;
+    color: #323e4d;
+    margin-bottom: 16px;
+  }
+
+  .reco-storage-growth {
+    display: grid;
+    grid-template-columns: 600px 1px calc(100% - 600px - 1px - 64px);
+    column-gap: 32px;
+    border-bottom: 1px solid #e7eaeb;
+    margin-bottom: 24px;
+
+    .reco-direction-split-line {
+      background-color: #e7eaeb;
+    }
+  }
+
+  .reco-storage-others {
+    margin: auto 0;
+  }
+
+  .reco-discovery-other-info {
+    .reco-item-info {
+      padding: 16px 0;
+      border-bottom: 1px solid #e7eaeb;
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      .reco-item-title {
+        font: normal normal 600 14px Open Sans;
+        letter-spacing: -0.21px;
+        color: #293037;
+        margin-bottom: 8px;
+      }
+
+      .reco-item-content {
+        display: flex;
+        align-items: center;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      .reco-highlight-content {
+        font: normal normal 600 24px Open Sans;
+        letter-spacing: -0.36px;
+        color: #fea43e;
+        margin:0 8px;
+      }
+
+      .reco-usual-content {
+        max-width: calc(100% - 72px);
+        font: normal normal normal 14px Open Sans;
+        letter-spacing: -0.21px;
+        color: #293037;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+  }
+
+  .reco-projection-line-chart {
+    .reco-date-picker {
+      margin-bottom: 8px;
+    }
+
+    .reco-description {
+      margin-bottom: 24px;
+
+      .reco-desc-paragraph {
+        font: normal normal normal 14px/19px Open Sans;
+        letter-spacing: -0.21px;
+        color: #323e4d;
+      }
+
+      .reco-desc-paragraph-highlight {
+        font: italic normal 600 14px/19px Open Sans;
+        letter-spacing: -0.21px;
+        color: #00a84e;
+        margin: 0 4px;
+      }
+    }
+  }
+}
+
+.reco-projection-panel {
+  .reco-panel-item {
+    margin-bottom: 24px;
+
+    .reco-title {
+      font: normal normal 600 14px Open Sans;
+      letter-spacing: -0.21px;
+      color: #323e4d;
+      margin-bottom: 4px;
+    }
+
+    .reco-title-font {
+      font: normal normal 600 14px Open Sans;
+      letter-spacing: -0.21px;
+      color: #323e4d;
+    }
+
+    .reco-title-bottom {
+      margin-bottom: 8px;
+    }
+
+    .reco-description {
+      font: italic normal normal 14px Open Sans;
+      letter-spacing: -0.21px;
+      color: #707174;
+      margin-bottom: 4px;
+    }
+
+    .reco-content {
+      display: flex;
+      align-items: center;
+
+      .reco-input {
+        margin-right: 8px;
+      }
+
+      .reco-input-desc {
+        font: normal normal normal 14px Open Sans;
+        letter-spacing: -0.21px;
+        color: #323e4d;
+      }
+    }
+  }
+}

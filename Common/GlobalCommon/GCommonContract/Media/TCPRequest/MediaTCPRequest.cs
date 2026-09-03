@@ -1,0 +1,73 @@
+﻿/********************************************************************
+ *
+ *  PROPRIETARY and CONFIDENTIAL
+ *
+ *  This file is licensed from, and is a trade secret of:
+ *
+ *                   AvePoint, Inc.
+ *                   525 Washington Blvd, Suite 1400
+ *                   Jersey City, NJ 07310
+ *                   United States of America
+ *                   Telephone: +1-201-793-1111
+ *                   WWW: www.avepoint.com
+ *
+ *  Refer to your License Agreement for restrictions on use,
+ *  duplication, or disclosure.
+ *
+ *  RESTRICTED RIGHTS LEGEND
+ *
+ *  Use, duplication, or disclosure by the Government is
+ *  subject to restrictions as set forth in subdivision
+ *  (c)(1)(ii) of the Rights in Technical Data and Computer
+ *  Software clause at DFARS 252.227-7013 (Oct. 1988) and
+ *  FAR 52.227-19 (C) (June 1987).
+ *
+ *  Copyright © 2017-2026 AvePoint® Inc. All Rights Reserved. 
+ *
+ *  Unpublished - All rights reserved under the copyright laws of the United States.
+ */
+
+
+
+
+namespace AvePoint.GCommon.Contract.Media.TCPRequest
+{
+    #region using directives
+    using System;
+    using System.Runtime.Serialization;
+    using AvePoint.GCommon.Contract.Common;
+    using AvePoint.GCommon.Contract.Server.ControlPanel.Cryptography;
+    using AvePoint.RA.Contract.JobMonitor;
+    using Server.ControlPanel.Cryptography.Wrapper;
+    #endregion
+
+    /// <summary>
+    /// A tcp quest object is used to identify the agent request
+    /// to media service
+    /// </summary>
+    [DataContract(Namespace = ContractConstants.Namespace)]
+    public class MediaTCPRequest
+    {
+        [DataMember]
+        public String JobId { get; set; }
+
+        [DataMember]
+        public JobType JobType { get; set; }
+
+        [DataMember]
+        public DataEncryptionInfo EncryptionInfo { get; set; }
+
+        /// <summary>
+        /// Used to encrypt\decrypt index file. It can also be used to encrypt\decrypt file whoes lifecycle is the whole backup cycle
+        /// </summary>
+        [DataMember]
+        public DataEncryptionInfoWrapper IndexEncryptionInfoWrapper { get; set; }
+
+        public override String ToString()
+        {
+            return String.Format("Media TCP Request: Job Id: {0}, Encryption Info: {1}",
+                this.JobId,
+                this.EncryptionInfo);
+        }
+    }
+}

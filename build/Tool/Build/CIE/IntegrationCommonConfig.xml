@@ -1,0 +1,81 @@
+﻿<configurations>
+  <Public>
+    <versionfile>SourceCode\build\version.xml</versionfile>
+  </Public>
+  
+  <!--#Region: 同步Binary List DB配置-->
+  <option type="SyncBinaryList" name="sync">
+    <isSync>true</isSync>
+    <localDBName>Tool\BinaryList.db</localDBName>
+    <structure>
+      <column>id</column>
+	  <column>list_id</column>
+      <column>list_name</column>
+      <column>filename</column>   
+	  <column>location_in_package</column>
+      <column>file_version</column>
+      <column>license_agreement_name</column>
+	  <column>reused</column>
+    </structure>
+    <queryconfigs>
+      <list name="Binary">
+        <![CDATA[
+          select id as 'id',
+				list_id as 'list_id',
+				'Binary' as 'list_name',
+				column1 as 'filename',
+				column17 as 'location_in_package',
+				NULL as 'file_version',
+				NULL as 'license_agreement_name',
+				column26 as 'reused'
+          from AllData 
+          where list_id='239'
+          and is_current='1'
+		  ]]>
+	  </list>
+      <list name="Third">
+      <![CDATA[
+          select id as 'id',
+				list_id as 'list_id',
+				'Third' as 'list_name',
+				column1 as 'filename',
+				column19 as 'location_in_package',
+				column3 as 'file_version',
+				column8 as 'license_agreement_name',
+				NULL as 'reused'
+          from AllData 
+          where list_id='238'
+          and is_current='1'
+		  and column23 like '%Approved%'
+      ]]>
+    </list>
+    </queryconfigs>
+    <binarylistconfigs>
+      <server>scmdb.avepoint.net</server>
+      <dbname>PackagingData</dbname>
+      <user>sa</user>
+      <password>SLfEzz1e6k8IB8NLjQPQpg==</password>
+      <failover></failover>
+    </binarylistconfigs>
+	<mangohubdatabase>
+      <server>scmdb.avepoint.net</server>
+      <dbname>MangoHub</dbname>
+      <username>sa</username>
+      <password>SLfEzz1e6k8IB8NLjQPQpg==</password>
+      <failover></failover>
+	</mangohubdatabase>
+
+  </option>
+  <!--#End Region: 同步Binary List DB配置-->
+  <option type="JiraWorkflow" name="ReadyforQA">
+    <jira>
+      <url>https://jira.avepoint.net</url>
+      <username>yksun</username>
+      <password>Q3wj7mGMYk1N8SlViOIgww==</password>
+    </jira>
+    <filter type="id" exporterror="aa" exportexcel="">
+      <![CDATA[65401]]>
+    </filter>
+    <issue destination="Ready for QA"/>
+  </option>
+</configurations>

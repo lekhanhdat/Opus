@@ -1,0 +1,102 @@
+﻿<!--/********************************************************************
+ *
+ *  PROPRIETARY and CONFIDENTIAL
+ *
+ *  This file is licensed from, and is a trade secret of:
+ *
+ *                   AvePoint, Inc.
+ *                   525 Washington Blvd, Suite 1400
+ *                   Jersey City, NJ 07310
+ *                   United States of America
+ *                   Telephone: +1-201-793-1111
+ *                   WWW: www.avepoint.com
+ *
+ *  Refer to your License Agreement for restrictions on use,
+ *  duplication, or disclosure.
+ *
+ *  RESTRICTED RIGHTS LEGEND
+ *
+ *  Use, duplication, or disclosure by the Government is
+ *  subject to restrictions as set forth in subdivision
+ *  (c)(1)(ii) of the Rights in Technical Data and Computer
+ *  Software clause at DFARS 252.227-7013 (Oct. 1988) and
+ *  FAR 52.227-19 (C) (June 1987).
+ *
+ *  Copyright © 2017-2026 AvePoint® Inc. All Rights Reserved. 
+ *
+ *  Unpublished - All rights reserved under the copyright laws of the United States.
+ */-->
+<ResourceDictionary x:Class="AvePoint.CallAssist.CommonDeploymentGUI.BaseWindow"
+                    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:local="clr-namespace:AvePoint.Deployment.CommonGUI">
+
+  <ResourceDictionary.MergedDictionaries>
+    <ResourceDictionary Source="WinButtonStyle.xaml" />
+    <ResourceDictionary Source="ResizeGrip.xaml" />
+  </ResourceDictionary.MergedDictionaries>
+
+  <!--Main Style-->
+  <ControlTemplate x:Key="BaseWindowControlTemplate" TargetType="{x:Type local:BaseWindow}">
+    <Border Margin="0" Padding="15">
+      <!--Main Border with Background -->
+      <Grid Margin="0">
+         <Border Background="#FF1188EE"  Margin="0">
+                    <Border.Effect>
+                        <DropShadowEffect ShadowDepth="0" BlurRadius="15" Color="#002266" Opacity="0.5"/>
+                    </Border.Effect>
+         </Border>
+
+      <!--Title Text-->
+        <TextBlock Margin="50,17,0,0" TextWrapping="Wrap" Text="{TemplateBinding TitleText}" VerticalAlignment="Top"
+                   FontFamily="Montserrat" FontSize="14" FontWeight="SemiBold" Foreground="#FFFFFFFF">
+          <!--<TextBlock.Effect>
+						<BlurEffect Radius="6"/>
+					</TextBlock.Effect>-->
+        </TextBlock>
+      
+
+     <!--fi-page-->
+        <Border>
+          <Border.Triggers></Border.Triggers>
+          <Image HorizontalAlignment="Left" Height="32" Width="32" Margin="12,9,6,10" Source="{TemplateBinding TitleImg}"
+                 Stretch="Fill" VerticalAlignment="Top" />
+        </Border>
+
+        <Grid>
+          <DockPanel VerticalAlignment="Top" LastChildFill="false" Margin="0" Height="auto" x:Name="borderTitle"
+                     Background="Transparent">
+            <StackPanel DockPanel.Dock="Right" Orientation="Horizontal" Margin="8,8,13,8">
+              <Button IsTabStop="False" FocusVisualStyle="{x:Null}" Content="Min" x:Name="btnMin"
+                      HorizontalAlignment="Left" Height="21" Width="21" Margin="1,1,4,1" VerticalAlignment="Top"
+                      Template="{StaticResource win_btn_mini}" />
+              <Button IsTabStop="False" FocusVisualStyle="{x:Null}" Content="Close" x:Name="btnClose"
+                      HorizontalAlignment="Left" Height="21" Width="21" Margin="1" VerticalAlignment="Top"
+                      Template="{StaticResource win_btn_close}" />
+            </StackPanel>
+          </DockPanel>
+          <AdornerDecorator>
+            <ContentPresenter />
+          </AdornerDecorator>
+        </Grid>
+
+        <ResizeGrip x:Name="WindowResizeGrip" HorizontalAlignment="Right" VerticalAlignment="Bottom" Visibility="Collapsed"
+                    IsTabStop="false" />
+      </Grid>
+    </Border>
+    <ControlTemplate.Triggers>
+      <Trigger Property="ResizeMode" Value="CanResizeWithGrip">
+        <Setter TargetName="WindowResizeGrip" Property="Visibility" Value="Visible" />
+      </Trigger>
+    
+    </ControlTemplate.Triggers>
+  </ControlTemplate>
+
+  <Style x:Key="BaseWindowStyle" TargetType="{x:Type local:BaseWindow}">
+    <Setter Property="SnapsToDevicePixels" Value="true" />
+    <Setter Property="Template" Value="{StaticResource BaseWindowControlTemplate}" />
+    <Setter Property="AllowsTransparency" Value="True" />
+    <Setter Property="WindowStyle" Value="None" />
+
+    </Style>
+
+</ResourceDictionary>

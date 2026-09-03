@@ -1,0 +1,79 @@
+﻿/********************************************************************
+ *
+ *  PROPRIETARY and CONFIDENTIAL
+ *
+ *  This file is licensed from, and is a trade secret of:
+ *
+ *                   AvePoint, Inc.
+ *                   525 Washington Blvd, Suite 1400
+ *                   Jersey City, NJ 07310
+ *                   United States of America
+ *                   Telephone: +1-201-793-1111
+ *                   WWW: www.avepoint.com
+ *
+ *  Refer to your License Agreement for restrictions on use,
+ *  duplication, or disclosure.
+ *
+ *  RESTRICTED RIGHTS LEGEND
+ *
+ *  Use, duplication, or disclosure by the Government is
+ *  subject to restrictions as set forth in subdivision
+ *  (c)(1)(ii) of the Rights in Technical Data and Computer
+ *  Software clause at DFARS 252.227-7013 (Oct. 1988) and
+ *  FAR 52.227-19 (C) (June 1987).
+ *
+ *  Copyright © 2017-2026 AvePoint® Inc. All Rights Reserved. 
+ *
+ *  Unpublished - All rights reserved under the copyright laws of the United States.
+ */
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using Microsoft.SharePoint.Administration;
+using AvePoint.Wrapper.Common.Office;
+using AvePoint.Wrapper.Common;
+
+namespace AvePoint.ObjectModel.Server19.Office
+{
+    class AveOWebAnalyticsServiceApplication : AveIisWebServiceApplication, IAveOWebAnalyticsServiceApplication
+    {
+        private object mWebAnalyticsServiceApplication;
+        private List<IAveDatabase> mDatabases;
+
+        public AveOWebAnalyticsServiceApplication(object webAnalyticsServiceApplication)
+            : base((SPIisWebServiceApplication)webAnalyticsServiceApplication)
+        {
+            mWebAnalyticsServiceApplication = webAnalyticsServiceApplication;
+        }
+
+        public List<IAveDatabase> Databases
+        {
+            get
+            {
+                if (mDatabases == null)
+                {
+                    List<SPDatabase> databases = (List<SPDatabase>)AveAssemblyUtility.GetPropertyValue(mWebAnalyticsServiceApplication, "Databases");
+                    if (databases != null)
+                    {
+                        mDatabases = new List<IAveDatabase>();
+                        foreach (SPDatabase db in databases)
+                        {
+                            if (db != null)
+                            {
+                                mDatabases.Add(new AveDatabase(db));
+                            }
+                            else
+                            {
+                                mDatabases.Add(null);
+                            }
+                        }
+                    }
+                }
+                return mDatabases;
+            }
+        }
+    }
+}

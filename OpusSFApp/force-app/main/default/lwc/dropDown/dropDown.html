@@ -1,0 +1,14 @@
+<!--Covered by AvePoint copyright and license agreement-->
+<template>
+    <div class={dropdownButtonClass} onclick={toggleDropdown} tabindex="0" onkeydown={handleToggleKeyDown} lwc:ref="dropdownButton" role="button">
+        <slot name="button"></slot> <!-- Slot for the dropdown button -->
+    </div>
+    <template if:true={dropdownOpen}>
+        <div class={dropdownMenuClass} id="dropdown-menu" onclick={handleMenuClick} tabindex="0" onkeydown={handleKeyDown} lwc:ref="dropdownMenu" role="menu">
+            <!-- <template if:true={customclass}>
+                <div class="arrow-point-to-dropdown"></div>
+            </template> -->
+            <slot name="menu"></slot> <!-- Slot for the dropdown menu content -->
+        </div>
+    </template>
+</template>

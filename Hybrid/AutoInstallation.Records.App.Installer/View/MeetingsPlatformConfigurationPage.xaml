@@ -1,0 +1,110 @@
+﻿<!--/********************************************************************
+ *
+ *  PROPRIETARY and CONFIDENTIAL
+ *
+ *  This file is licensed from, and is a trade secret of:
+ *
+ *                   AvePoint, Inc.
+ *                   525 Washington Blvd, Suite 1400
+ *                   Jersey City, NJ 07310
+ *                   United States of America
+ *                   Telephone: +1-201-793-1111
+ *                   WWW: www.avepoint.com
+ *
+ *  Refer to your License Agreement for restrictions on use,
+ *  duplication, or disclosure.
+ *
+ *  RESTRICTED RIGHTS LEGEND
+ *
+ *  Use, duplication, or disclosure by the Government is
+ *  subject to restrictions as set forth in subdivision
+ *  (c)(1)(ii) of the Rights in Technical Data and Computer
+ *  Software clause at DFARS 252.227-7013 (Oct. 1988) and
+ *  FAR 52.227-19 (C) (June 1987).
+ *
+ *  Copyright © 2017-2026 AvePoint® Inc. All Rights Reserved. 
+ *
+ *  Unpublished - All rights reserved under the copyright laws of the United States.
+ */-->
+
+
+
+
+
+<Page x:Class="AvePoint.Deployment.CommonInstallation.View.MeetingsPlatformConfigurationPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:src="clr-namespace:AvePoint.Deployment.CommonGUI;assembly=CommonDeploymentGUI" 
+      mc:Ignorable="d" 
+      d:DesignHeight="466" d:DesignWidth="466"
+	Title="MeetingsAppInformationConfigPage">
+
+    <Grid>
+        <Grid Margin="20">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <TextBlock Grid.Row="0" Text="{Binding Source='Key_PlatformServerAddress',Converter={StaticResource MessageI18N},ConverterParameter='MeetingsAppInstallation'}"/>
+            <TextBlock Grid.Row="1"
+                       Margin="5,5,0,5"
+                       Foreground="Gray"
+                       FontSize="10"
+                       HorizontalAlignment="Stretch" d:LayoutOverrides="Width"
+                       TextWrapping="Wrap"
+                       Text="{Binding Source='Key_TAG_AppID',Converter={StaticResource MessageI18N},ConverterParameter='MeetingsAppInstallation'}"
+            />
+            <src:TextBoxEx Grid.Row="2" 
+                           Margin="0,3,0,0" 
+                           Text="{Binding AppID}" 
+                           Width="350" 
+                           HorizontalAlignment="Left" 
+                           IsEnabled="false"
+                           ErrorMsg="{Binding APPIDMsg}"/>
+
+            <TextBlock 
+                Grid.Row="3" 
+                Margin="0,12,0,0" 
+                Text="{Binding Source='Key_AppSecret',Converter={StaticResource MessageI18N},ConverterParameter='MeetingsAppInstallation'}"/>
+            <TextBlock Grid.Row="4"
+                       Margin="5,5,0,5"
+                       Foreground="Gray"
+                       FontSize="10"
+                       HorizontalAlignment="Stretch" d:LayoutOverrides="Width"
+                       TextWrapping="Wrap"
+                       Text="{Binding Source='Key_TAG_AppSecret',Converter={StaticResource MessageI18N},ConverterParameter='MeetingsAppInstallation'}"
+            />
+            <src:TextBoxEx 
+                Grid.Row="5" 
+                Margin="0,3,0,0" 
+                Text="{Binding AppSecret}" 
+                Width="350" 
+                HorizontalAlignment="Left" 
+                IsEnabled="false"
+                ErrorMsg="{Binding AppSecretMsg}"/>
+
+ 
+        </Grid>
+        <StackPanel Margin="1,1,1,1"
+                    Background="#50333333"
+                    Visibility="{Binding IsAppConfig, ConverterParameter=true, Converter={StaticResource BooleanToVisibilityConverter}}"
+                    IsVisibleChanged="StackPanel_IsVisibleChanged"
+                    />
+        <src:GifImage Margin="1,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Center" Source="/MeetingsAppInstallation;component/Images/loading_60x60.gif" Width="60" Height="60"
+                   Visibility="{Binding IsAppConfig, ConverterParameter=true, Converter={StaticResource BooleanToVisibilityConverter}}"
+                   />
+    </Grid>
+</Page>

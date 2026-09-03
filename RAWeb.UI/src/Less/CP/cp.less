@@ -1,0 +1,88 @@
+﻿/*Covered by AvePoint copyright and license agreement*/
+/* Code Review Whole File */
+#rmCPMain {
+  width: calc(100% + 46px);
+  float: left;
+
+  .ra-cp-cell {
+    display: inline-block;
+    min-width: 240px;
+    height: 153px;
+    margin-right: 16px;
+    margin-bottom: 16px;
+    border: 1px solid #dae0e2;
+    border-radius: 8px;
+    background: #ffffff;
+    opacity: 1;
+    overflow: hidden;
+    text-decoration: none;
+  }
+  .ra-cp-cell-header-center {
+    display: flex;
+    width: 100%;
+    height: 56px;
+    padding-top: 16px;
+    text-align: left;
+    align-items: center;
+  }
+  .ra-cp-cell-header-top {
+    display: inline-block;
+    padding-top: 16px;
+    vertical-align: top;
+  }
+  .ra-cp-cell-header-icon {
+    display: flex;
+    height: 40px;
+    width: 40px;
+    margin-left: 16px;
+    border-radius: 20%;
+    background-color: #0072D0;
+    vertical-align: top;
+    color: #FFFFFF;
+    justify-content: center;
+    align-items: center;
+
+    .fia-connecter::before{
+        color: #FFFFFF !important;
+    }
+  }
+
+  .ra-cp-cell-header-name {
+    display: inline-block;
+    width: 70%;
+    margin-left: 8px;
+    font: normal normal bold 13px/18px "Open Sans", sans-serif;
+    letter-spacing: 0px;
+    color: #27313c;
+    opacity: 1;
+    vertical-align: top;
+  }
+
+  .ra-cp-cell-line {
+    float: left;
+    width: 208px;
+    height: 1px;
+    max-width: 300px;
+    margin-top: 16px;
+    margin-left: 16px;
+    background: #e6e7e8;
+    opacity: 1;
+  }
+
+  .ra-cp-cell-body-desc {
+    display: -webkit-box;
+    width: 208px;
+    height: 54px;
+    margin-left: 16px;
+    margin-top: 29px;
+    text-align: left;
+    font: normal normal normal 13px/18px "Open Sans", sans-serif;
+    letter-spacing: 0px;
+    color: #868f96;
+    opacity: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+  }
+}

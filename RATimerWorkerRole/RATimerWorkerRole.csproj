@@ -1,0 +1,129 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <AutoUnifyAssemblyReferences>false</AutoUnifyAssemblyReferences>
+    <OutputType>Exe</OutputType>
+  </PropertyGroup>
+  <!--<PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <SelfContained>true</SelfContained>
+    <RuntimeIdentifier>linux-musl-x64</RuntimeIdentifier>
+    --><!-- Set the RID for your production environment --><!--
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <SelfContained>false</SelfContained>
+    --><!-- Set the RID for your production environment --><!--
+  </PropertyGroup>-->
+
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <OutputPath>..\bin\Release\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>..\DocaveReference\DocAveStandard.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+	<PropertyGroup>
+		<EnableUnsafeBinaryFormatterSerialization>true</EnableUnsafeBinaryFormatterSerialization>
+	</PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="appsettings.json" />
+    <None Remove="Config\Castle\ServiceCastle.config" />
+    <None Remove="TimerLog4net.config" />
+    <None Remove="TimerLog4net.dev.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\RACommon\ServiceVersion\ServiceVersion.config">
+      <Link>Config\ServiceVersion\ServiceVersion.config</Link>
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\RAWeb\Config\NAA Configuration File.zip">
+      <Link>Config\NAA Configuration File.zip</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\RAWeb\Config\NARA Configuration File.zip">
+      <Link>Config\NARA Configuration File.zip</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\RAWeb\Config\VEO Configuration Files.zip">
+      <Link>Config\VEO Configuration Files.zip</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="appsettings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TimerLog4net.dev.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="TimerLog4net.config">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Update="Config\Castle\TimerCastle.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Dockerfile">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Common\GlobalCommon\GCommonContract\DocAve.GCommonContract.csproj" />
+    <ProjectReference Include="..\Common\GlobalCommon\GCommonUtility\DocAve.GCommonUtility.csproj" />
+    <ProjectReference Include="..\RACommon.Global\RACommon.Global.csproj" />
+    <ProjectReference Include="..\RACommon\RACommon.csproj" />
+    <ProjectReference Include="..\RAContract.Global\RAContract.Global.csproj" />
+    <ProjectReference Include="..\RAContract\RAContract.csproj" />
+    <ProjectReference Include="..\RADB\RADB.csproj" />
+    <ProjectReference Include="..\RAI18N\RAI18N.csproj" />
+    <ProjectReference Include="..\RAService\RAService.csproj" />
+  </ItemGroup>
+	<ItemGroup Condition="'$(Configuration)' == 'Debug'">
+		<ProjectReference Include="..\RADBInitializationUpgrade\RADBInitializationUpgrade.csproj" />
+	</ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="AWSSDK.S3" Version="4.0.17.3" />
+    <PackageReference Include="Cloud.Sdk.Data.Dal" Version="6.10.16" />
+    <PackageReference Include="Cloud.Sdk.LAL.PlatformSS" Version="6.10.16" />
+    <PackageReference Include="log4net" Version="3.3.1" />
+    <PackageReference Include="Microsoft.Azure.Amqp" Version="2.7.0" />
+    <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="6.1.4" />
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="10.0.2" />
+    <PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
+    <PackageReference Include="Microsoft.DotNet.UpgradeAssistant.Extensions.Default.Analyzers" Version="0.4.421302">
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="System.Data.SqlClient" Version="4.9.0" />
+    <PackageReference Include="System.Dynamic.Runtime" Version="4.3.0" />
+    <PackageReference Include="System.Linq.Queryable" Version="4.3.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Castle.Windsor" Version="6.0.0" />
+    <PackageReference Include="Microsoft.Bcl.AsyncInterfaces" Version="10.0.11" />
+    <PackageReference Include="System.Private.Uri" Version="4.3.2" />
+    <PackageReference Include="System.Text.RegularExpressions" Version="4.3.1" />
+    <PackageReference Include="util.ai.text.extractor" Version="6.10.11" />
+    <PackageReference Include="util.upgrade" Version="4.12.7" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Config\Castle\ServiceCastle.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+	<ItemGroup>
+		<Content Include="Config\emailVelocityTemplate\TemplateEmailNotificationHtml.cshtml">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+	</ItemGroup>
+  <Target Condition="'$(Configuration)' == 'Debug'" Name="CopyAppSettings" BeforeTargets="PrepareForBuild">
+    <Copy SourceFiles="$(ProjectDir)..\build\AppConfig\appsettings.json" DestinationFolder="$(ProjectDir)" />
+  </Target>
+</Project>

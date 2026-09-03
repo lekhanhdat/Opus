@@ -1,0 +1,77 @@
+.reco-multi-geo-settings {
+
+    .reco-multi-geo-content {
+        position: relative;
+        width: 100%;
+        padding: 24px;
+        border: 1px solid #e7eaeb;
+        border-radius: 8px;
+        background: #ffffff;
+
+        .reco-multi-geo-toggle {
+            display: flex;
+            align-items: center;
+
+            .multi-geo-status {
+                margin: 0 12px;
+                font-size: 14px;
+                font-weight: 500;
+                transition: color 0.3s ease;
+            }
+        }
+
+        .DC-and-IP {
+            margin-top: 16px;
+
+            .description {
+                display: flex;
+                align-items: center;
+                margin-bottom: 8px;
+        
+                p {
+                    margin: 0;
+                }
+        
+                .desc-col {
+                    &:first-child {
+                        flex: 0 0 20%;
+                        font-weight: 600;
+                        color: #333;
+                    }
+        
+                    &:last-child {
+                        flex: 1 1 80%;
+                        padding-left: 10px;
+                        color: #333;
+                    }
+                }
+            }
+        
+            .input-group {
+                display: flex;
+                align-items: flex-start;
+                gap: 10px;
+                min-height: 50px;
+                margin-bottom: 8px;
+        
+                .dc-input {
+                    flex: 0 0 20%;
+                }
+        
+                .ip-input {
+                    flex: 1 1 80%;
+                }
+
+                .error-message {
+                    position: absolute;
+                    color: red;
+                    font-size: 12px;
+                }
+            }
+        
+            .actions {
+                margin-top: 12px;
+            }
+        }
+    }
+}

@@ -1,0 +1,47 @@
+﻿@*Covered by AvePoint copyright and license agreement*@
+@*Code Review Whole File*@
+@using AvePoint.RA.I18N.Core;
+@using AvePoint.RA.Web.Models.Home
+@using AvePoint.RA.Web.Extentions.Util
+@using Microsoft.AspNetCore.Html
+@model List<RMSystemModule>
+@{
+    ViewBag.Title = I18NEntity.GetString("RM_Home_PageTitle");
+}
+<link href="~/Content/Home/home.css" rel="stylesheet" />
+
+@*<div id="rmGreetings">
+    @Html.I18N("RM_Home_Greetings")
+</div>*@
+<div id="rmModules">
+    <div id="rmInnerModules">
+        <script nonce="@ViewBag.Nonce" src="~/Scripts/Home/home.js"></script>
+        @foreach (var item in Model)
+        {
+            <div class="rm-home-module">
+                <div class="rm-home-module-head">
+                    <div class="rm-home-module-icon @item.iconClass"></div>
+                    <div class="rm-home-moudule-title" title="@item.title" tabindex="0">
+                        @item.title
+                    </div>
+                </div>
+                <div class="rm-home-moudule-description"  title="@item.description"  tabindex="0">
+                    @item.description
+                </div>
+                <div class="rm-home-moudule-links">
+                    @foreach (var subLink in @item.links)
+                {
+                        <div class="rm-home-moudule-link">
+                            <div class="rm-home-moudule-link-icon"></div>
+                            <a class="rm-home-moudule-link-a" href="@subLink.href" target="@subLink.target">
+                                @subLink.text
+                            </a>
+                        </div>
+                    }
+                </div>
+            </div>
+        }
+        <div style="clear:both;"></div>
+    </div>
+    <div style="clear:both"></div>
+</div>

@@ -1,0 +1,45 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+	<PropertyGroup>
+		<EnableUnsafeBinaryFormatterSerialization>true</EnableUnsafeBinaryFormatterSerialization>
+	</PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Aspose.Email" Version="26.5.0" />
+    <PackageReference Include="AWSSDK.S3" Version="4.0.17.3" />
+    <PackageReference Include="log4net" Version="3.3.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Common\Wrapper\Wrapper.Backup\Wrapper.Backup.csproj" />
+    <ProjectReference Include="..\Common\Wrapper\Wrapper.Common\Wrapper.Common.csproj" />
+    <ProjectReference Include="..\GCommon.Media.StorageService\GCommon.Media.StorageService.csproj" />
+    <ProjectReference Include="..\Media\ClassicStorageApi\ClassicStorageApi\ClassicStorageApi.csproj" />
+    <ProjectReference Include="..\Media\Media.Service.ApplicationModel\Media.Service.ApplicationModel.csproj" />
+    <ProjectReference Include="..\Merged18NResources\Merged18NResources.csproj" />
+	<ProjectReference Include="..\RACommonUtility\RACommonUtility.csproj" />
+    <ProjectReference Include="..\RADB\RADB.csproj" />
+    <ProjectReference Include="..\RAExchangeBackupUtility\RAExchangeBackupUtility.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>

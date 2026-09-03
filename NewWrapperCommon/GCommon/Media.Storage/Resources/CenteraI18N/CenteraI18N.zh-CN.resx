@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="MediaStorage_Centera_Location_Username_Demo" xml:space="preserve">
+    <value>Domäne\Benutzername</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Centera_Name_Demo" xml:space="preserve">
+    <value>Benutzername</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Centera_Authentication" xml:space="preserve">
+    <value>Authentifizierung</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Centera_EMC_Centera" xml:space="preserve">
+    <value>EMC Centera</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Centera_Secret" xml:space="preserve">
+    <value>Geheimnis</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Centera_PEA_files_Authentication" xml:space="preserve">
+    <value>Authentifizierung der PEA-Dateien</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Centera_Location_Password" xml:space="preserve">
+    <value>Kennwort des Speicherorts</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Centera_DataWriteFailed" xml:space="preserve">
+    <value>Schreiben von BLOB fehlgeschlagen, Pfad: {0}.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Centera_Cannot_connect_to_any_application_pool" xml:space="preserve">
+    <value>Keine Verbindung zu beliebigem Anwendungspool möglich. Bitte überprüfen Sie Ihre LAN-Verbindungen und Servereinstellungen.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Centera_DataNotFound" xml:space="preserve">
+    <value>Öffnen von BLOB fehlgeschlagen, Name: {0}.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Centera_PEA_file_Location" xml:space="preserve">
+    <value>Speicherort der PEA-Datei</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Centera_Name" xml:space="preserve">
+    <value>Name</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Centera_Does_not_have_delete_permission" xml:space="preserve">
+    <value>Test fehlgeschlagen. Der angegebene Benutzer verfügt über keine Berechtigung zum Löschen des eingegebenen Pfades.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Centera_Name_Secret_Authentication" xml:space="preserve">
+    <value>Name/Geheimnis_Authentifizierung</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Centera_DeviceCanNotConnect" xml:space="preserve">
+    <value>Herstellen einer Verbindung zum physischen Gerät von EMC Centera fehlgeschlagen, Name: {0}.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Centera_Test_failed" xml:space="preserve">
+    <value>Test fehlgeschlagen. Bitte überprüfen Sie die eingegebenen Informationen.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Centera_No_PEA_file_found" xml:space="preserve">
+    <value>Es wurde keine PEA-Datei gefunden. Bitte überprüfen Sie den eingegebenen Dateipfad.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Centera_Authentication_failed" xml:space="preserve">
+    <value>Die Authentifizierung ist fehlgeschlagen.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Centera_Location_Username" xml:space="preserve">
+    <value>Benutzername des Speicherorts</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Centera_Centera_Cluster_Address" xml:space="preserve">
+    <value>Cluster-Aderesse von Centera</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Centera_DataReadFailed" xml:space="preserve">
+    <value>Lesen von BLOB fehlgeschlagen, Name: {0}.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Centera_Advanced" xml:space="preserve">
+    <value>Erweitert</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Centera_Extended_parameters" xml:space="preserve">
+    <value>Erweiterte Parameter</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Centera_Retention_Failed" xml:space="preserve">
+    <value>Kann die Daten nicht löschen. Die Daten können der Aufbewahrungseinstellung des physischen Geräts entsprechen und müssen entsprechend dieser Einstellung beibehalten werden.</value>
+    <comment>Approved</comment>
+  </data>
+</root>

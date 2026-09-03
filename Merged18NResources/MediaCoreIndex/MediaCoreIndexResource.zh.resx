@@ -1,0 +1,276 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="IndexDatabaseSynchronizerIndexDatabaseDownLoadResultBegin" xml:space="preserve">
+    <value>Prepare to download index file: [{0}].</value>
+    <comment>None</comment>
+  </data>
+  <data name="IndexDatabaseSynchronizerIndexDatabaseDownLoadResultFileNotFoundException" xml:space="preserve">
+    <value>Cannot find {0} in logical device.</value>
+    <comment>None</comment>
+  </data>
+  <data name="IndexDataBaseSyncListenerUploadIndexBegin" xml:space="preserve">
+    <value>Prepare to upload index file: [{0}], physical device location is: {1}, index volume is: {2}.</value>
+    <comment>None</comment>
+  </data>
+  <data name="IndexCacheManagerDeleteCachedIndexResult" xml:space="preserve">
+    <value>Prepare to delete index [{0}] in media cache path [{1}].</value>
+    <comment>None</comment>
+  </data>
+  <data name="IndexCacheManagerDownloadFromRealXSystemBegin" xml:space="preserve">
+    <value>Start downloading index database [{0}] in [{1}]...</value>
+    <comment>None</comment>
+  </data>
+  <data name="IndexCacheManagerDownLoadIndexResult" xml:space="preserve">
+    <value>Downloading result of index [{0}] is [{1}].</value>
+    <comment>None</comment>
+  </data>
+  <data name="IndexCacheManagerMakeSureCacheHaveEnoughSpaceBeforeDownloadNoEnoughSpaceException" xml:space="preserve">
+    <value>All physical devices in this media cache do not have enough free space.</value>
+    <comment>None</comment>
+  </data>
+  <data name="IndexCacheManagerMakeSureCacheHaveEnoughSpaceBeforeDownloadSucceed" xml:space="preserve">
+    <value>An available media cache has been found, path: [{0}].</value>
+    <comment>None</comment>
+  </data>
+  <data name="IndexCacheManagerMakeSureCacheHaveEnoughSpaceBeforeDownloadWarn" xml:space="preserve">
+    <value>All indices have been deleted, this media cache [{0}] may not have enough free space for next job, details: [{1}].</value>
+    <comment>None</comment>
+  </data>
+  <data name="IndexCacheManagerQueryLastModifyTimeFromControlError" xml:space="preserve">
+    <value>An error occurred while querying the last modified time from control, details: [{0}].</value>
+    <comment>None</comment>
+  </data>
+  <data name="IndexCacheManagerQueryLastModifyTimeFromControlNotContainKey" xml:space="preserve">
+    <value>Control does not contain the key [{0}].</value>
+    <comment>None</comment>
+  </data>
+  <data name="IndexCacheManagerQueryLastModifyTimeFromControlWarn" xml:space="preserve">
+    <value>Multiple modified time are queried.</value>
+    <comment>None</comment>
+  </data>
+  <data name="IndexCacheManagerSaveIndexFileNameAndLastModifyTimeToControlError" xml:space="preserve">
+    <value>An error occurred while saving index file name and last modified time to control, details: [{0}].</value>
+    <comment>None</comment>
+  </data>
+  <data name="IndexCacheManagerUploadIndexBegin" xml:space="preserve">
+    <value>The uploaded index [{0}] is in [{1}], the lock string is [{2}].</value>
+    <comment>None</comment>
+  </data>
+  <data name="IndexCacheManagerUploadIndexFileInfo" xml:space="preserve">
+    <value>File information [{0}] has been gotten.</value>
+    <comment>None</comment>
+  </data>
+  <data name="IndexCacheManagerUploadToRealXSystemBegin" xml:space="preserve">
+    <value>Prepare to upload index database [{0}] in [{1}].</value>
+    <comment>None</comment>
+  </data>
+  <data name="IndexCacheManagerUploadToRealXSystemEnd" xml:space="preserve">
+    <value>Uploading index db  [{0}] in [{1}] finished.</value>
+    <comment>None</comment>
+  </data>
+  <data name="IndexCacheManagerUploadToRealXSystemError" xml:space="preserve">
+    <value>An error occurred while unloading index [{0}].</value>
+    <comment>None</comment>
+  </data>
+  <data name="IndexDatabasePropertiesManagerParseDBPropertiesError" xml:space="preserve">
+    <value>An error occurred while parsing database properties file [line : {0}], details: [{1}].</value>
+    <comment>None</comment>
+  </data>
+  <data name="IndexDatabasePropertiesManagerSaveDBPropertiesError" xml:space="preserve">
+    <value>An error occurred while saving database properties, details: [{0}].</value>
+    <comment>None</comment>
+  </data>
+  <data name="IndexProcessorInnerOpenUseDBCurrentCatalog" xml:space="preserve">
+    <value>Current catalog is [{0}].</value>
+    <comment>None</comment>
+  </data>
+  <data name="IndexDatabaseHelperGenerateInsertCmdExceptionMapTableAttributeNotSpecified" xml:space="preserve">
+    <value>MapTable attribute is not specified for the class: [{0}].</value>
+    <comment>None</comment>
+  </data>
+  <data name="IndexDatabaseSynchronizerIndexDatabaseDownLoadResultIndexInfo" xml:space="preserve">
+    <value>Index volume is: {0}, database name is: {1}, physical device location is: {2}.</value>
+    <comment>None</comment>
+  </data>
+  <data name="ConnectionLockAddCancelLock" xml:space="preserve">
+    <value>The lock whose type is {0} is cancelled.</value>
+    <comment>None</comment>
+  </data>
+  <data name="ConnectionLockAddRemoveLockOfDeadThread" xml:space="preserve">
+    <value>The connection lock is removed since thread is not alive. Lock details: [{0}]</value>
+    <comment>None</comment>
+  </data>
+  <data name="ConnectionLockAddWaitingLock" xml:space="preserve">
+    <value>The lock whose type is {0} is waiting...</value>
+    <comment>None</comment>
+  </data>
+  <data name="ConnectionLockAddWaitingLockAwake" xml:space="preserve">
+    <value>The lock whose type is {0} is awake.</value>
+    <comment>None</comment>
+  </data>
+  <data name="ConnectionLockShowCurrentLocksAllLocks" xml:space="preserve">
+    <value>Current lock details: {0}</value>
+    <comment>None</comment>
+  </data>
+  <data name="IndexDeviceValidateManagerMoveToError" xml:space="preserve">
+    <value>An error occurred while moving the index {0}.</value>
+    <comment>None</comment>
+  </data>
+  <data name="IndexDeviceValidateManagerValidateBegin" xml:space="preserve">
+    <value>Begin validating index device...</value>
+    <comment>None</comment>
+  </data>
+  <data name="IndexDeviceValidateManagerValidateSucceed" xml:space="preserve">
+    <value>Successully validated the index device, index location is: {0}.</value>
+    <comment>None</comment>
+  </data>
+  <data name="IndexDatabaseHelperCloseException" xml:space="preserve">
+    <value>An error occurred while closing the index database, details: [{0}].</value>
+    <comment>None</comment>
+  </data>
+  <data name="IndexDatabaseVersionManagerGetVersion" xml:space="preserve">
+    <value>An error occurred while getting the index version, details: [{0}].</value>
+    <comment>None</comment>
+  </data>
+  <data name="IndexDeviceValidateManagerGetMaxFreeSizeSystemSize" xml:space="preserve">
+    <value>The free space of the physical device {0} is {1} byte(s).</value>
+    <comment>None</comment>
+  </data>
+  <data name="IndexCacheManagerUploadToRealXSystemOpen" xml:space="preserve">
+    <value>Begin open stream for upload index, the info is {0}.</value>
+    <comment>None</comment>
+  </data>
+  <data name="IndexCacheRetentionManagerMakeSureCacheHaveEnoughSpaceBeforeDownloadException" xml:space="preserve">
+    <value>Get the info of index.db failed by {0}.</value>
+    <comment>None</comment>
+  </data>
+  <data name="IndexCacheManagerDownloadFromRealXSystemOpen" xml:space="preserve">
+    <value>Begin open stream for download index, the info is {0}.</value>
+    <comment>None</comment>
+  </data>
+  <data name="IndexCacheRetentionManagerDeleteCachedIndexWarn" xml:space="preserve">
+    <value>An error occurred while deleting index :{0}, details:{1}.</value>
+    <comment>None</comment>
+  </data>
+  <data name="CannotProcessArchivedBlobException" xml:space="preserve">
+    <value>The archived BLOB data on the Media service failed to be processed. Contact AvePoint Support to restore the data.</value>
+    <comment>Approved</comment>
+  </data>
+</root>

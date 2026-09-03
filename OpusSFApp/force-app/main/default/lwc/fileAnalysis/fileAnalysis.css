@@ -1,0 +1,35 @@
+/*Covered by AvePoint copyright and license agreement*/
+.file-analysis-card-container-title {
+    font-size: 14px;
+}
+
+.file-analysis-container {
+    padding: 0 16px;
+}
+
+/* .gadget-toolbar {
+    width: 100%;
+    display: inline-flex;
+    margin-bottom: 15px;
+}
+.object-selection {
+    width: 400px;
+} */
+
+.chart-zone {
+    margin-top: 32px;
+    display: inline-flex;
+    width: 100%;
+}
+.file-treemap-chart{
+    width: 30%;
+}
+.file-bar-chart {
+    width: 70%;
+}
+
+.chart-title {
+    color: #323e4d;
+    font-weight: 700;
+    font-size: 14px;
+}

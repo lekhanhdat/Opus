@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net10.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<AssemblyName>MediaServiceArchiverBackup</AssemblyName>
+	</PropertyGroup>
+	<PropertyGroup>
+		<EnableUnsafeBinaryFormatterSerialization>true</EnableUnsafeBinaryFormatterSerialization>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<Compile Include="..\..\RAManualApproval\Converters\RMArchiverItemConverter.cs" Link="Retention\RMArchiverItemConverter.cs" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <PackageReference Include="AWSSDK.S3" Version="4.0.17.3" />
+	  <PackageReference Include="log4net" Version="3.3.1" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\..\Common\MediaStorage\Media.StorageApi\Media.StorageApi.csproj" />
+		<ProjectReference Include="..\..\Merged18NResources\Merged18NResources.csproj" />
+		<ProjectReference Include="..\..\RACommonUtility\RACommonUtility.csproj" />
+		<ProjectReference Include="..\..\RADB\RADB.csproj" />
+		<ProjectReference Include="..\..\RAManualApprovalCommon\RAManualApprovalCommon.csproj" />
+		<ProjectReference Include="..\Media.Core.Index\Media.Core.Index.csproj" />
+		<ProjectReference Include="..\Media.Core.IO\Media.Core.IO.csproj" />
+		<ProjectReference Include="..\Media.Service.ApplicationModel\Media.Service.ApplicationModel.csproj" />
+	</ItemGroup>
+
+</Project>

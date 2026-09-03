@@ -1,0 +1,43 @@
+﻿/********************************************************************
+ *
+ *  PROPRIETARY and CONFIDENTIAL
+ *
+ *  This file is licensed from, and is a trade secret of:
+ *
+ *                   AvePoint, Inc.
+ *                   Harborside Financial Center
+ *                   9th Fl.   Plaza Ten
+ *                   Jersey City, NJ 07311
+ *                   United States of America
+ *                   Telephone: +1-800-661-6588
+ *                   WWW: www.avepoint.com
+ *
+ *  Refer to your License Agreement for restrictions on use,
+ *  duplication, or disclosure.
+ *
+ *  RESTRICTED RIGHTS LEGEND
+ *
+ *  Use, duplication, or disclosure by the Government is
+ *  subject to restrictions as set forth in subdivision
+ *  (c)(1)(ii) of the Rights in Technical Data and Computer
+ *  Software clause at DFARS 252.227-7013 (Oct. 1988) and
+ *  FAR 52.227-19 (C) (June 1987).
+ *
+ *  Copyright © 2013-2018 AvePoint® Inc. All Rights Reserved. 
+ *
+ *  Unpublished - All rights reserved under the copyright laws of the United States.
+ */
+
+MQ Service在默认Binding（netTcpBinding）下已经支持One Way Connection环境。不需要做其他设置。
+如果更改Binding为basicHttpBinding，则需要进行如下配置：
+1.	在Agent Bin中找到配置文件CommonDataTransfer.config;
+2.	定位到<dataTransfer Binding="netTcpBinding" UriSchema="net.tcp";
+3.	修改Binding属性为basicHttpBinding，同时将UriSchema修改为http;
+4.	定位到<mq IsOneWayConnection="False";
+5.	将IsOneWayConnection修改为True。
+
+Tips: 
+1.	以上步骤修改完成后，在host mq service的进程log中，会有一个ServiceHost Open的错误异常，这是由于basicHttpBinding不支持双工模块造成。请忽略此异常。
+2.	此配置文件需要在源端和目的端修改。
+3.	修改了此配置文件的Agent与其他Agent之间的通信都会应用此配置，因此请注意将所有关联到的Agent的配置文件同时进行相应修改。
+4.	一般环境下Binding支持basicHttpBinding、netTcpBinding和wsDualHttpBinding三种。但是在One Way Connection环境下仅支持basicHttpBinding和netTcpBinding两种。

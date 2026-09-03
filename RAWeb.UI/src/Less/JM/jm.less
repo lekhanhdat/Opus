@@ -1,0 +1,173 @@
+﻿#rmJobMonitor, #raJobDetailModule, #rmPlanDetails{
+  .ra-pager{
+      height: auto;
+  }
+
+  .aui-table{
+    box-shadow: none
+  }
+
+  .jm-detail-list div{
+    padding-left: 0;
+    padding-right: 0;
+  }
+  
+  .jm-detail-title{
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 16px
+  }
+  
+  .jm-detail-label{
+    font-size: 13px;
+    padding: 8px 0 8px 8px !important;
+    background-color: #f2f3f4;
+  }
+  
+  .jm-detail-value{
+    padding: 8px 24px 8px 8px !important;
+    font-size: 13px;
+    font-weight: 600;
+  }
+  
+  .jm-detail-list .row{
+     margin: 0;
+  }
+  
+  .jm-detail-cell{
+    margin-bottom: 2px;
+  }
+
+  /*REGION JM-SETTING CLASSES */
+  .jm-setting-section{
+    display: flex;
+    font-size: 13px;
+    font-weight: 600;
+  }
+
+  .jm-setting-label{
+    background-color: #f2f3f4;
+    padding: 16px !important;
+    width: calc((2/12 * 100%) + var(--scrollbar-w)) ;
+  }
+
+  .jm-setting-list-value{
+    max-height: 400px; 
+    overflow-y: auto;
+    scrollbar-color: var(--focusable-border) transparent;
+    :last-child{
+      padding-bottom: 0;
+    }
+  }
+
+  .jm-setting-value{
+    p{
+      padding: 0 0 0 16px;
+      margin: 0;
+    }
+    padding-bottom: 8px;
+  }
+
+  .jm-setting-scrollbar-controller{
+    width: calc((2/12 * 100%) + 16px);
+  }
+
+  @media (max-width:992px) {
+    .jm-setting-list-value{
+      padding-top: 4px;
+    }
+    .jm-setting-section{
+      flex-direction: column;
+    }
+    .jm-setting-label{
+      width: 100%;
+      height: fit-content;
+    }
+  }
+  /*ENDREGION JM-SETTING CLASSES */
+
+  .jm-locations-combobox{
+    margin-left: 26px;
+  }
+
+  .ra-filter-btn{
+    position: fixed;
+    top: 25px;
+    right: 60px;
+  }
+
+  #crm-menu{
+    display: flex;
+    column-gap: 8px;
+    margin: 0;
+  }
+
+  .jm-sosummary-count {
+    font-weight: bold;
+    color: #323E4D;
+  }
+
+  // so summary中覆盖expander样式
+  .aui-expander {
+    box-shadow: none;
+    border-radius: 8px !important;
+  }
+
+  .aui-expander-title {
+    box-shadow: none;
+    border-radius: 8px !important;
+    background: #fff;
+  }
+
+  .aui-expander-panel>div {
+    padding: 0;
+  }
+
+  .aui-expander-expand {
+    .aui-expander-title {
+      border-radius: 8px 8px 0 0 !important
+    }
+  }
+
+  .aui-expander-title-template {
+    .aui-expander-title-font {
+      font-size: 16px;
+      font-weight: 600;
+    }
+  }
+
+  .jm-tab-header-wrapper {
+    padding: 24px 24px 0;
+  }
+}
+
+#raJobDetailModule, #rmPlanDetails{
+  margin-bottom: 48px;
+}
+
+.jm-footer{
+  width: 100%;
+  height: 48px;
+  line-height: 48px;
+  background: #fff;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 50;
+}
+
+.jm-footer-btn{
+  position: absolute;
+  right: 30px;
+}
+
+.ra-filter-clearbtn{
+  position: fixed;
+  top:25px;
+  right:60px;
+}
+
+.jm-locations-combobox{
+  margin-left: 26px;
+  margin-top: 4px;
+}

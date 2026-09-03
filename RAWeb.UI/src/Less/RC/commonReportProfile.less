@@ -1,0 +1,334 @@
+#raTermUsageReportProfile,
+#raAvailiableSpaceReportProfile,
+#raCreationAndDestructionReportProfile,
+#raDueDisposalReportProfile {
+  .introduction {
+    height: calc(100% - 24px);
+    padding: 32px;
+    background-color: #f1f1f1;
+  }
+
+  .introduction-title {
+    margin-bottom: 24px;
+    font-weight: bold;
+    font-size: 16px;
+  }
+
+  .introduction-headline {
+    margin-left: -24px;
+    margin-bottom: 16px;
+    width: calc(100% + 48px);
+    height: 1px;
+    background-color: #fff;
+  }
+
+  .introduction-content {
+    font-size: 14px;
+    color: #707070;
+  }
+
+  .tree-searchbox {
+    margin-top: 16px;
+    margin-bottom: 16px;
+  }
+
+  .tree-container {
+    min-height: 200px;
+  }
+
+  .ra-section {
+    overflow: auto;
+  }
+}
+
+#raTermUsageReportProfile {
+  .ra-tree-page {
+    padding-right: 30px;
+  }
+}
+
+.reco-report-profile-wrapper {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-rows: auto minmax(330px, auto) 1fr 66px;
+  grid-template-columns: 100%;
+
+  .reco-report-profile-header-message {
+    margin-bottom: 24px;
+  }
+
+  .reco-report-profile-card {
+    width: 100%;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #DAE0E2;
+    border-radius: 8px;
+    padding: 24px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    margin-bottom: 16px;
+
+    .reco-report-profile-form {
+      width: 100%;
+      height: 100%;
+      padding-right: 68px;
+
+      .reco-report-profile-form-item {
+        margin-bottom: 24px;
+      }
+
+      .reco-report-profile-form-item:last-child {
+        margin-bottom: 0;
+      }
+
+      .reco-report-profile-datarange-selector {
+        margin-top: 8px;
+      }
+
+      .reco-report-profile-time-frame {
+        .aui-radio-group {
+          display: flex;
+          flex-direction: column;
+          gap: 8px;
+        }
+
+        .reco-report-profile-time-frame-picker {
+          margin: 8px 0 0 34px;
+        }
+      }
+
+      .reco-report-profile-input-desc {
+        display: block;
+        margin-top: 8px;
+        height: 17px;
+        font: normal normal normal 12px/17px "Open Sans", sans-serif;        
+        color: #5D6778;
+      }
+
+      .reco-report-profile-input-title-require,
+      .reco-report-profile-input-title {
+        display: inline-block;
+        height: 18px;
+        font: normal normal 600 13px/18px "Open Sans", sans-serif;
+        color: #323E4D;
+        margin-bottom: 8px;
+        position: relative;
+      }
+
+      .reco-report-profile-input-title-require::after {
+        content: "*";
+        position: absolute;
+        right: -8px;
+        top: 0;
+        font: normal normal 600 13px "Open Sans", sans-serif;
+        color: #FF4444;
+      }
+    }
+
+    .reco-report-profile-tips {
+      width: 100%;
+      height: 100%;
+      padding-left: 24px;
+      position: relative;
+
+      .reco-report-profile-tips-pic {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 233px;
+        height: 155px;
+        background-image: url("/Images/RC/report_info.png");
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+      }
+
+      .reco-report-profile-tips-header {
+        height: 40px;
+        margin-bottom: 16px;
+        display: flex;
+        align-items: center;
+      }
+
+      .reco-report-profile-tips-icon {
+        width: 40px;
+        height: 100%;
+        background: #F2F3F4;
+        border-radius: 4px;
+        font-size: 20px;
+        margin-right: 8px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .reco-report-profile-tips-header-title {
+        font: normal normal 600 13px "Open Sans", sans-serif;
+        color: #323E4D;
+      }
+
+      .reco-report-profile-tips-content {
+        width: 100%;
+        font: normal normal normal 13px "Open Sans", sans-serif;
+        color: #323E4D;
+      }
+    }
+
+    .reco-report-profile-tips::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 1px;
+      background: #E7EAEB;
+    }
+  }
+
+  .reco-report-profile-tree-card {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    padding: 24px 24px 24px 2px;
+    position: relative;
+    background: #FFFFFF;
+    border: 1px solid #DAE0E2;
+    border-radius: 8px;
+  }
+
+  .reco-report-profile-scope-card,
+  .reco-report-profile-tree-single-card {
+    width: 100%;
+    padding: 24px 24px 24px 2px;
+    position: relative;
+    background: #FFFFFF;
+    border: 1px solid #DAE0E2;
+    border-radius: 8px;
+    display: grid;
+    grid-template-rows: auto 1fr;
+  }
+
+  .reco-report-profile-tree-wrapper{
+    width: 100%;
+    padding: 24px 24px 24px 24px;
+    position: relative;
+    background: #FFFFFF;
+    border: 1px solid #DAE0E2;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+
+  .reco-report-profile-tree-left {
+    overflow: auto;
+    padding-right: 40px;
+    display: grid;
+    grid-template-rows: auto 1fr;
+  }
+
+  .reco-report-profile-tree-right {
+    overflow: auto;
+    padding-left: 25px;
+    display: grid;
+    grid-template-rows: auto 1fr;
+  }
+
+  .reco-report-profile-tree-right-nonpadding {
+      padding-left: none;
+  }
+
+  .reco-report-profile-tree-search-item {
+    padding-left: 21px;
+
+    .aui-widget-wcr {
+      display: block !important;
+      inline-size: unset !important;
+    }
+  }
+
+  .reco-report-profile-tree-input-title {
+    font: normal normal 600 13px/18px "Open Sans", sans-serif;
+    color: #323E4D;
+    margin-bottom: 8px;
+  }
+
+  .reco-report-profile-tree-search-message {
+    margin-top: 8px;
+  }
+
+  .reco-report-profile-tree {
+    margin-top: 8px;
+    overflow: auto;
+  }
+
+  .reco-report-profile-tree-card::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 0;
+    height: 100%;
+    width: 1px;
+    background: #E7EAEB;
+  }
+
+  .reco-report-profile-actions {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 66px;
+    padding-right: 40px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px -1px 0px #DAE0E2;
+    column-gap: 8px;
+  }
+
+  .reco-report-profile-scope-title {
+    display: inline-block;
+    height: 18px;
+    font: normal normal 600 13px/18px "Open Sans", sans-serif;
+    color: #323E4D;
+    position: relative;
+  }
+
+  .reco-report-profile-scope {
+    overflow: auto;
+    margin-left: 21px;
+    margin-right: 40px;
+    display: grid;
+    grid-template-rows: auto 1fr;
+  }
+
+  .reco-report-profile-scope-lastdiv,
+  .reco-report-profile-scope-div {
+    margin-bottom: 24px;
+  }
+
+  .reco-report-profile-scope-btm {
+    margin-bottom: 24px;
+  }
+
+  .reco-report-profile-scope-radio {
+    text-align: left;
+    font: normal normal normal 13px/18px "Open Sans", sans-serif;
+    letter-spacing: 0px;
+    color: #27313C;
+    margin: 8px 0;
+  }
+
+  .reco-report-profile-scope-div::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    height: 1px;
+    width: 100%;
+    background: #E7EAEB;
+  }
+
+}

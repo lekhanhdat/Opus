@@ -1,0 +1,357 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AddListToDictionaryError" xml:space="preserve">
+    <value>An error occurred while adding list to dictionary .Message:{0}.</value>
+  </data>
+  <data name="AddtionalNodeCreateError" xml:space="preserve">
+    <value>An error occurred while created addtional node for workflow, message:{0}.</value>
+  </data>
+  <data name="AddWorkFlowToPageError" xml:space="preserve">
+    <value>An error occurred while adding workflow to page .Message:{0}.</value>
+  </data>
+  <data name="CacheDataError" xml:space="preserve">
+    <value>An error occurred while caching data for workflow. Error massage:{0}.</value>
+  </data>
+  <data name="CallMethodError" xml:space="preserve">
+    <value>An error occurred while calling method. message:{0}.</value>
+  </data>
+  <data name="ChangeNodeValueError" xml:space="preserve">
+    <value>An error occurred while changing node value.Message:{0}.</value>
+  </data>
+  <data name="CheckOutFileError" xml:space="preserve">
+    <value>An error occurred while checking out file .Message:{0}.</value>
+  </data>
+  <data name="CompareAssociationUnitError" xml:space="preserve">
+    <value>An error occurred while comparing association unit .Message:{0}.</value>
+  </data>
+  <data name="ConfigFileLoadError" xml:space="preserve">
+    <value>An error occurred while loading configuration file for workflow, message:{0}.</value>
+  </data>
+  <data name="ConfigurationUpdateError" xml:space="preserve">
+    <value>Update workflow configuration error. Message:{0}.</value>
+  </data>
+  <data name="ConvertObjectToListError" xml:space="preserve">
+    <value>An error occurred while converting objcet to list.Message:{0}.</value>
+  </data>
+  <data name="DefaultContentApprovalIdSetError" xml:space="preserve">
+    <value>An error occurred while setting default content approval workflow id, message:{0}.</value>
+  </data>
+  <data name="ExcyteDeSerializeError" xml:space="preserve">
+    <value>An error occurred while excuting deserializing .Message:{0}.</value>
+  </data>
+  <data name="FieldCreatedFailed" xml:space="preserve">
+    <value>Create SPField failed, message:{0}.</value>
+  </data>
+  <data name="FindEnumTypeFaild" xml:space="preserve">
+    <value>Cannot find enum type as we known. Message:{0}.</value>
+  </data>
+  <data name="FindSiteOwnerFaild" xml:space="preserve">
+    <value>Cannot find the site owner.Message:{0}.</value>
+  </data>
+  <data name="FixUpReferenceError" xml:space="preserve">
+    <value>An error occurred while fixing up reference. message:{0}.</value>
+  </data>
+  <data name="GenerateSPFileUnitError" xml:space="preserve">
+    <value>Generate spfile unit error, message:{0}.</value>
+  </data>
+  <data name="GetDurationError" xml:space="preserve">
+    <value>An error occurred while getting duration. message:{0}.</value>
+  </data>
+  <data name="GetFieldsSchemaXMLError" xml:space="preserve">
+    <value>Get fields schema xml,field name:{0},  message:{1}.</value>
+  </data>
+  <data name="GetFileByNameError" xml:space="preserve">
+    <value>An error occurred while getting file by name .Message:{0}.</value>
+  </data>
+  <data name="GetFolderFromParentError" xml:space="preserve">
+    <value>An error occurred while getting folder from parnet .Message:{0}.</value>
+  </data>
+  <data name="GetItemByUniqueIdError" xml:space="preserve">
+    <value>An error occurred while getting item by unique id .Message:{0}.</value>
+  </data>
+  <data name="GetListByIdError" xml:space="preserve">
+    <value>An error occurred while getting list by id .Message:{0}.</value>
+  </data>
+  <data name="GetLoginNameByIdError" xml:space="preserve">
+    <value>An error occurred while getting login name by id.Message:{0}.</value>
+  </data>
+  <data name="GetObjectTypeError" xml:space="preserve">
+    <value>An error occurred while getting object type. message:{0}.</value>
+  </data>
+  <data name="GetPricipalFromWebError" xml:space="preserve">
+    <value>An error occurred while getting pricipal from web.Message:{0}.</value>
+  </data>
+  <data name="GetStatusFieldSchemaError" xml:space="preserve">
+    <value>An error occurred while getting status field schema.Message:{0}.</value>
+  </data>
+  <data name="GetWorkflowAssociationDataError" xml:space="preserve">
+    <value>An error occurred while getting workflow association data   .Message:{0}.</value>
+  </data>
+  <data name="GuidMappingFixingUpError" xml:space="preserve">
+    <value>An error occurred while fixing up guid mapping, message:{0}.</value>
+  </data>
+  <data name="LanguageMappingError" xml:space="preserve">
+    <value>An error occurred while mapping language for workflow. Error massage:{0}.</value>
+  </data>
+  <data name="LoadAssemblyError" xml:space="preserve">
+    <value>An error occurred while loading assemby  message:{0}.</value>
+  </data>
+  <data name="LoadXmlContentError" xml:space="preserve">
+    <value>An error occurred while loading xml content, message:{0}.</value>
+  </data>
+  <data name="MappingLanguageError" xml:space="preserve">
+    <value>An error occurred while mapping language for workflow, message:{0}.</value>
+  </data>
+  <data name="MappingUserError" xml:space="preserve">
+    <value>An error occurred while mapping user for workflow. Error massage:{0}.</value>
+  </data>
+  <data name="NintexDBLoadAssemblyError" xml:space="preserve">
+    <value>Constructor error when load assembly for nintex database. Error message:{0}.</value>
+  </data>
+  <data name="NintexReplaceUserError" xml:space="preserve">
+    <value>Replace user error in nintex workflow. Error:{0}</value>
+  </data>
+  <data name="PermissionUnitLoadError" xml:space="preserve">
+    <value>Load permission unit error while serializing data. Error massage:{0}.</value>
+  </data>
+  <data name="PermissionUnitSaveError" xml:space="preserve">
+    <value>Save permission unit error while serializing data. Error massage:{0}.</value>
+  </data>
+  <data name="PostActionError" xml:space="preserve">
+    <value>An error occurred while doing post action for workflow. Error massage:{0}.</value>
+  </data>
+  <data name="RecalculateRunningInstanceCountError" xml:space="preserve">
+    <value>An error occurred while recalculating running instance count .Message:{0}.</value>
+  </data>
+  <data name="ReloadParentItemError" xml:space="preserve">
+    <value>An error occurred while reloading parent item.Message:{0}.</value>
+  </data>
+  <data name="ReplaceDependencyObjectValueError" xml:space="preserve">
+    <value>An error occurred while replacing dependency object value.Message:{0}.</value>
+  </data>
+  <data name="ReplaceUserForFeedbackError" xml:space="preserve">
+    <value>An error occurred while replacing user for feed back.Message:{0}.</value>
+  </data>
+  <data name="ReplaceUserForSP2010Error" xml:space="preserve">
+    <value>An error occurred while replacing user for sharepoint 2010.Message:{0}.</value>
+  </data>
+  <data name="ReplaceUserForTreeStateError" xml:space="preserve">
+    <value>An error occurred while replacing user for tree state.Message:{0}.</value>
+  </data>
+  <data name="ResetDurationError" xml:space="preserve">
+    <value>An error occurred while resetting duration. message:{0}.</value>
+  </data>
+  <data name="RestoreFileError" xml:space="preserve">
+    <value>An error occurred while restore file .Message:{0}.</value>
+  </data>
+  <data name="ResotreWFSubItemError" xml:space="preserve">
+    <value>An error occurred while restoring workflow sub item  .Message:{0}.</value>
+  </data>
+  <data name="RestoreAssocialUnitError" xml:space="preserve">
+    <value>An error occurred while restore associal unit  .Message:{0}.</value>
+  </data>
+  <data name="RestoreCustomDataError" xml:space="preserve">
+    <value>An error occurred while restoring custom data for workflow, message:{0}.</value>
+  </data>
+  <data name="RuntimeLoadMappingError" xml:space="preserve">
+    <value>Load mapping for workflow error. Error message:{0}.</value>
+  </data>
+  <data name="SetItemUniqueIdError" xml:space="preserve">
+    <value>An error occurred while setting unique id .Message:{0}.</value>
+  </data>
+  <data name="SetListWFIdError" xml:space="preserve">
+    <value>An error occurred while setting list workflow id .Message:{0}.</value>
+  </data>
+  <data name="SqlConnInitError" xml:space="preserve">
+    <value>An error occurred while connecting to sql database, message:{0}.</value>
+  </data>
+  <data name="StatusColumnGetorAddError" xml:space="preserve">
+    <value>An error occurred while getting or adding status column, column name:{0},  message:{1}.</value>
+  </data>
+  <data name="StatusFieldNameIsAvailble" xml:space="preserve">
+    <value>An error occurred while checking status field name, message:{0}.</value>
+  </data>
+  <data name="StatusFieldSetError" xml:space="preserve">
+    <value>Set status field error.Field internal name:{0}, message:{1}.</value>
+  </data>
+  <data name="SubListInfoGetError" xml:space="preserve">
+    <value>An error occurred while getting sub list information. Message:{0}.</value>
+  </data>
+  <data name="UpdateAssociationNameError" xml:space="preserve">
+    <value>An error occurred while updating association name.Message:{0}.</value>
+  </data>
+  <data name="UpdateConfigrationTimeError" xml:space="preserve">
+    <value>An error occurred while updating configration .Message:{0}.</value>
+  </data>
+  <data name="UpdateListError" xml:space="preserve">
+    <value>An error occurred while updating list .Message:{0}.</value>
+  </data>
+  <data name="UpdateModifyTimeError" xml:space="preserve">
+    <value>An error occurred while updating modify time error.Message:{0}.</value>
+  </data>
+  <data name="UpdateStatusFieldNameError" xml:space="preserve">
+    <value>An error occurred while updating status field name.Message:{0}.</value>
+  </data>
+  <data name="UserReplaceError" xml:space="preserve">
+    <value>An error occurred while replacing user for workflow.Message:{0}.</value>
+  </data>
+  <data name="WebUrlGetFailed" xml:space="preserve">
+    <value>Cannot Get web url .Message:{0}.</value>
+  </data>
+  <data name="WriteToFileError" xml:space="preserve">
+    <value>An error occurred while writing to file .Message:{0}.</value>
+  </data>
+  <data name="UpdateCreatedTime" xml:space="preserve">
+    <value>An error occurred while update created time .Message:{0}.</value>
+  </data>
+  <data name="GetItemAttributeError" xml:space="preserve">
+    <value>An error occurred while getting  item attribute  .Message:{0}.</value>
+  </data>
+  <data name="SetItemAttributeError" xml:space="preserve">
+    <value>An error occurred while setting  item attribute  .Message:{0}.</value>
+  </data>
+  <data name="ConnectDataBaseError" xml:space="preserve">
+    <value>An error occurred while connecting database .Message:{0}.</value>
+  </data>
+  <data name="GetWorkflowFieldTypeError" xml:space="preserve">
+    <value>An error occurred while getting workflow field type .Message:{0}.</value>
+  </data>
+  <data name="CreateWorkflowListError" xml:space="preserve">
+    <value>An error occurred while creating list for workflow.List:{0} .Message:{0}.</value>
+  </data>
+  <data name="RestoreWFInError" xml:space="preserve">
+    <value>An error occurred while restoring workflow instance.</value>
+  </data>
+  <data name="RestoreWFInUnexpectError" xml:space="preserve">
+    <value>An error occurred while restoring workflow instance.</value>
+  </data>
+  <data name="RestoreWFWithoutPermission" xml:space="preserve">
+    <value>The user does not have the permission of the workflow.</value>
+  </data>
+  <data name="WFDeConflictError" xml:space="preserve">
+    <value>The workflow definition you want to restore conflicts with the existing one in the destination.</value>
+  </data>
+  <data name="WFDeNameOrTemplateConflictError" xml:space="preserve">
+    <value>Workflow definition name conflict with destination, and template is different.It will be skipped.</value>
+  </data>
+  <data name="WFDeUnexpectError" xml:space="preserve">
+    <value>An error occurred while restoring workflow definition.</value>
+  </data>
+</root>

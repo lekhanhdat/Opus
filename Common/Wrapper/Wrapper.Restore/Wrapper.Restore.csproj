@@ -1,0 +1,72 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <OutputType>Library</OutputType>
+    <RootNamespace>AvePoint.Wrapper.Restore</RootNamespace>
+    <AssemblyName>AgentCommonWrapperRestore</AssemblyName>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>..\..\..\bin\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>..\..\..\bin\Release\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>..\..\..\DocaveReference\DocAveStandard.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+	<PropertyGroup>
+		<EnableUnsafeBinaryFormatterSerialization>true</EnableUnsafeBinaryFormatterSerialization>
+	</PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Common\GlobalCommon\GCommonContract\DocAve.GCommonContract.csproj" />
+    <ProjectReference Include="..\..\..\Common\GlobalCommon\GCommonUtility\DocAve.GCommonUtility.csproj" />
+    <ProjectReference Include="..\..\..\Common\GlobalCommon\GI18NResources\GI18NResources.csproj" />
+    <ProjectReference Include="..\..\VCService30\CommonUtility30\DocAve.CommonUtility30.csproj" />
+    <ProjectReference Include="..\Wrapper.Common\Wrapper.Common.csproj" />
+    <ProjectReference Include="..\Wrapper.Mapping\Wrapper.Mapping.csproj" />
+    <ProjectReference Include="..\Wrapper.Resource\Wrapper.Resource.csproj" />
+    <ProjectReference Include="..\Wrapper.Workflow\Wrapper.Workflow.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\..\DocaveReference\DocAveStandard.snk">
+      <Link>DocAveStandard.snk</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="log4net" Version="3.3.1" />
+    <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
+    <PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="10.0.2" />
+    <PackageReference Include="System.ServiceModel.Duplex" Version="6.0.0" />
+    <PackageReference Include="System.ServiceModel.NetTcp" Version="8.1.2" />
+    <PackageReference Include="System.ServiceModel.Federation" Version="8.1.2" />
+    <PackageReference Include="Microsoft.DotNet.UpgradeAssistant.Extensions.Default.Analyzers" Version="0.4.421302">
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="System.Dynamic.Runtime" Version="4.3.0" />
+    <PackageReference Include="System.Linq.Queryable" Version="4.3.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Data.Services.Client" Version="5.8.5" />
+    <PackageReference Include="Microsoft.Graph" Version="5.98.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.4" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="8.19.1" />
+    <PackageReference Include="System.Security.Cryptography.Algorithms" Version="4.3.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="AveSPMySite.cs" />
+    <Compile Remove="AveSPSocialData.cs" />
+    <Compile Remove="AveSPUserProfile.cs" />
+    <Compile Remove="AveSPWebPart.cs" />
+    <Compile Remove="AveTaxonomyGroup.cs" />
+    <Compile Remove="AveTaxonomyUserMapping.cs" />
+    <Compile Remove="AveTerm.cs" />
+    <Compile Remove="AveTermSet.cs" />
+    <Compile Remove="AveTermStore.cs" />
+    <Compile Remove="Core\UserData\ClientSidePageHeaderProcessor.cs" />
+  </ItemGroup>
+</Project>

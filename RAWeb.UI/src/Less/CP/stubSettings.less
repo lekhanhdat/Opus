@@ -1,0 +1,76 @@
+#raStubSettingsManagement {
+  .ra-main-navbar {
+    #crm-menu {
+      display: flex;
+      column-gap: 8px;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+}
+
+#stubSettingsPanel {
+    .ra-stubPanel-content {
+        margin-bottom: 24px;
+        font-size: 13px;
+    }
+
+    .ra-stubPanel-title {
+        font: normal normal 600 13px/18px "Open Sans", sans-serif;
+        color: #323E4D;
+        margin-bottom: 8px;
+        display: inline-block;
+    }
+
+    .ra-stubPanel-tag {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .ra-stubPanel-validation-msg {
+      margin-top: 8px;
+      font: normal normal normal 13px/18px "Open Sans", sans-serif;
+      color: #cc0000;
+    }
+
+    #add-tag-container {
+        position: relative;
+        text-align: center;
+
+        #add_tag {
+            cursor: pointer;
+            display: flex;
+            height: 18px;
+            line-height: 18px;
+            text-align: center;
+        }
+    
+        #add_options {
+            position: absolute;
+            z-index: 100;
+            top: 26px;
+            right: 0;
+            outline: 0;
+            text-align: left;
+            border-radius: var(--radius-s);
+            box-shadow: var(--shadow-size-m) var(--shadow-color);
+        }
+    
+        #add_tag_icon {
+            display: inline-block;
+            line-height: 18px;
+
+            >div {
+                line-height: 18px;
+            }
+        }
+
+        #add_tag-down {
+            line-height: 18px;
+        }
+    
+        #add_tag_text {
+            margin: 0 8px;
+        }
+    }
+}

@@ -1,0 +1,504 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ExchangeBackupDataWriterAfterDataBlockCommitFinishCommit" xml:space="preserve">
+    <value>Committing indexes to device finished.</value>
+    <comment>Added</comment>
+  </data>
+  <data name="ExchangeBackupDataWriterGetDataFileNameUnknownFileTypeExceptionUnknownDataType" xml:space="preserve">
+    <value>Unknown file type {0}</value>
+    <comment>Added</comment>
+  </data>
+  <data name="ExchangeBackupDataWriterHandleHeaderHandle" xml:space="preserve">
+    <value>Start backing up the data of [{0}]...</value>
+    <comment>Added</comment>
+  </data>
+  <data name="ExchangeBackupDataWriterHandleTailBackupType" xml:space="preserve">
+    <value>Handle tail : backup type is [{0}].</value>
+    <comment>Added</comment>
+  </data>
+  <data name="ExchangeBackupDataWriterHandleTailTailXml" xml:space="preserve">
+    <value>Handle tail : [{0}].</value>
+    <comment>Added</comment>
+  </data>
+  <data name="ExchangeBackupDataWriterInsertSiteMasterIndexFinishInsert" xml:space="preserve">
+    <value>Inserting site master index finished, user address is [{0}].</value>
+    <comment>Added</comment>
+  </data>
+  <data name="ExchangeBackupDataWriterInsertSiteMasterIndexInsertErro" xml:space="preserve">
+    <value>Inserting site master index completed with exception, details: [{0}].</value>
+    <comment>Added</comment>
+  </data>
+  <data name="ExchangeBackupDataWriterOpenDataWriterOpen" xml:space="preserve">
+    <value>Start opening exchange backup data writer...</value>
+    <comment>Added</comment>
+  </data>
+  <data name="ExchangeBackupDataWriterOpenDeviceOpen" xml:space="preserve">
+    <value>Initiated and opened logical device and cache successfully.</value>
+    <comment>Added</comment>
+  </data>
+  <data name="ExchangeBackUpDataWriteropenIndexOpen" xml:space="preserve">
+    <value>Opened index service successfully.</value>
+    <comment>Added</comment>
+  </data>
+  <data name="ExchangeBackUpDataWriterOpenOutputStreamOpen" xml:space="preserve">
+    <value>Opened output stream successfully.</value>
+    <comment>Added</comment>
+  </data>
+  <data name="ExchangeIndexServiceOpenFinishOpen" xml:space="preserve">
+    <value>Open index service successfully.</value>
+    <comment>Added</comment>
+  </data>
+  <data name="ExchangeIndexServiceOpenIndexProcessorOpen" xml:space="preserve">
+    <value>Start opening index processor...</value>
+    <comment>Added</comment>
+  </data>
+  <data name="ExchangeIndexServiceOpenIndexServiceOpen" xml:space="preserve">
+    <value>Begin opening index service...</value>
+    <comment>Added</comment>
+  </data>
+  <data name="ExchangeIndexServiceOpenNonLocal" xml:space="preserve">
+    <value>Index service is working on non-local system.</value>
+    <comment>Added</comment>
+  </data>
+  <data name="ExchangeIndexServiceOpenWarn" xml:space="preserve">
+    <value>Index {0} was not found. Changing index name to index.db, details: {1}.</value>
+    <comment>Added</comment>
+  </data>
+  <data name="ExchangeOnlineHandleHeaderHeaderXml" xml:space="preserve">
+    <value>Handle header [{0}].</value>
+    <comment>Added</comment>
+  </data>
+  <data name="ExchangeBackupDataWriterDisposeCloseDataWriter" xml:space="preserve">
+    <value>Closed data writer successfully.</value>
+    <comment>Added</comment>
+  </data>
+  <data name="ExchangeBackupDataWriterInsertSiteMasterIndexInsertError" xml:space="preserve">
+    <value>Inserting site master index completed with exception, details: [{0}].</value>
+    <comment>Added</comment>
+  </data>
+  <data name="ExchangeBackupDataWriterInsertControlSiteInfoStartInsert" xml:space="preserve">
+    <value>Start inserting site master and sub index into control site master index.</value>
+    <comment>Added</comment>
+  </data>
+  <data name="ExchangeBackupServiceOpenJobStart" xml:space="preserve">
+    <value>Starting exchange backup job. {0}</value>
+    <comment>Added</comment>
+  </data>
+  <data name="ExchangeIndexServiceCommitDBInfo" xml:space="preserve">
+    <value>Start committing database {0}...</value>
+    <comment>Added</comment>
+  </data>
+  <data name="ExchangeBackupDataWriterCommitAgentIndexToDBFinishCommit" xml:space="preserve">
+    <value>Committing agent index to database finished.</value>
+    <comment>Added</comment>
+  </data>
+  <data name="ExchangeBackupDataWriterOpenAgentIndexStreamOpenStream" xml:space="preserve">
+    <value>Start opening agent index stream... header path: [{0}].</value>
+    <comment>Added</comment>
+  </data>
+  <data name="ExchangeBackupDataWriterParserAgentIndexBeginParse" xml:space="preserve">
+    <value>Begin parsing agent index...</value>
+    <comment>Added</comment>
+  </data>
+  <data name="ExchangeBackupDataWriterParserAgentIndexIncorrectFileExceptionAgentIndexIncorrect" xml:space="preserve">
+    <value>Agent index is not correct.</value>
+    <comment>Added</comment>
+  </data>
+  <data name="ExchangeBackupDataWriterGetAgentIndexCount" xml:space="preserve">
+    <value>Getting agent index {0}...</value>
+    <comment>Added</comment>
+  </data>
+  <data name="ExchangeBackupDataWriterGetAgentIndexNull" xml:space="preserve">
+    <value>The obtained agent index is null or the count is 0.</value>
+    <comment>Added</comment>
+  </data>
+  <data name="ExchangeBackupServiceSendLastIndexDetail" xml:space="preserve">
+    <value>LastFullBackup: {0} {1}, LastBackup: {2}.</value>
+    <comment>Added</comment>
+  </data>
+  <data name="ExchangeBackupServiceSendLastIndexNoSend" xml:space="preserve">
+    <value>Job ID is [{0}], last index does not need to sent.</value>
+    <comment>Added</comment>
+  </data>
+  <data name="ExchangeBackupServiceSendLastIndexStart" xml:space="preserve">
+    <value>Start sending index file to the agent...</value>
+    <comment>Added</comment>
+  </data>
+  <data name="ExchangeBackupDataWriterUpdateControlSiteInfoUpdateControl" xml:space="preserve">
+    <value>Control site master index is updated successfully: job ID is [{0}].</value>
+    <comment>Added</comment>
+  </data>
+  <data name="ExchangeBackupDataWriterUpdateControlSiteInfoUpdateError" xml:space="preserve">
+    <value>An error occurred while updating control site master index, details: {0}.</value>
+    <comment>Added</comment>
+  </data>
+  <data name="ExchangeBrowserServiceBrowseBeginBrowse" xml:space="preserve">
+    <value>Begin browseing node {0}.</value>
+    <comment>Added</comment>
+  </data>
+  <data name="ExchangeBrowserServiceDisposeFinish" xml:space="preserve">
+    <value>Exchange browse tree finish.</value>
+    <comment>Added</comment>
+  </data>
+  <data name="ExchangeBrowserServiceProcessExceptionError" xml:space="preserve">
+    <value>An error occurred while loading exchange restore tree. details {0}.</value>
+    <comment>Added</comment>
+  </data>
+  <data name="ExchangeRestoreServiceCloseFinish" xml:space="preserve">
+    <value>The exchange restore job finished.</value>
+    <comment>Added</comment>
+  </data>
+  <data name="ExchangeRestoreServiceExchangeIndexHandledHandledFinish" xml:space="preserve">
+    <value>Begin sending file header to agent {0}.</value>
+    <comment>Added</comment>
+  </data>
+  <data name="ExchangeRestoreServiceExchangeIndexHandledSendData" xml:space="preserve">
+    <value>Start to restore data {0}.</value>
+    <comment>Added</comment>
+  </data>
+  <data name="ExchangeRestoreServiceExchangeIndexHandledSendDataError" xml:space="preserve">
+    <value>An error occurred while restoring the current item {0}.</value>
+    <comment>Added</comment>
+  </data>
+  <data name="ExchangeRestoreServiceOpenCalculateTotleItemNumDataCount" xml:space="preserve">
+    <value>The item count need to restore is {0}.</value>
+    <comment>Added</comment>
+  </data>
+  <data name="ExchangeRestoreServiceOpenCalculateTotleItemNumStartCalculate" xml:space="preserve">
+    <value>Start to calculate the total data count need to restore.</value>
+    <comment>Added</comment>
+  </data>
+  <data name="ExchangeRestoreServiceOpenJobInfo" xml:space="preserve">
+    <value>The exchange restore job begin, the job info is {0}.</value>
+    <comment>Added</comment>
+  </data>
+  <data name="ExchangeRestoreServiceOpenPreRestoreInitTree" xml:space="preserve">
+    <value>The restore tree is {0} {1}.</value>
+    <comment>Added</comment>
+  </data>
+  <data name="ExchangeRestoreServiceRestoreNeedStop" xml:space="preserve">
+    <value>The restore job need to stop.</value>
+    <comment>Added</comment>
+  </data>
+  <data name="ExchangeBackupRetentionServiceDisposeFinished" xml:space="preserve">
+    <value>The retention job finished.</value>
+    <comment>Added</comment>
+  </data>
+  <data name="ExchangeBackupRetentionServiceOpenStart" xml:space="preserve">
+    <value>Successfully started retention job [{0}] and opened the logical device.</value>
+    <comment>Added</comment>
+  </data>
+  <data name="ExchangeBackupRetentionServiceOpenStorageInfoCount" xml:space="preserve">
+    <value>The count of the storage info is [{0}].</value>
+    <comment>Added</comment>
+  </data>
+  <data name="ExchangeBackupRetentionServiceProcessExceptionError" xml:space="preserve">
+    <value>An error occurred while doing the retention job, details: {0}.</value>
+    <comment>Added</comment>
+  </data>
+  <data name="ExchangeBackupRetentionServiceRetainEntireCycleDataOpenIndex" xml:space="preserve">
+    <value>Successfully opened [{0}].</value>
+    <comment>Added</comment>
+  </data>
+  <data name="ExchangeBackupRetentionServiceRetainEntireCycleDataStartDelete" xml:space="preserve">
+    <value>Begin deleting data in [{0}]...</value>
+    <comment>Added</comment>
+  </data>
+  <data name="ExchangeBackupRetentionServiceRetainFullBackupDataOpenIndex" xml:space="preserve">
+    <value>Successfully open index [{0}].</value>
+    <comment>Added</comment>
+  </data>
+  <data name="ExchangeBackupRetentionServiceRetainFullBackupDataStartDelete" xml:space="preserve">
+    <value>Begin deleting data in [{0}]...</value>
+    <comment>Added</comment>
+  </data>
+  <data name="ExchangeBackupRetentionServiceRetainResult" xml:space="preserve">
+    <value>The count of successful jobs is {0}. The count of failed jobs is {1}. And this retention job result is [{2}].</value>
+    <comment>Added</comment>
+  </data>
+  <data name="ExchangeBackupRetentionServiceRetainStart" xml:space="preserve">
+    <value>Start retaining exchange data by {0} rule...</value>
+    <comment>Added</comment>
+  </data>
+  <data name="ExchangeBackupRetentionServiceRetainUnknownFileTypeExceptionUnknownRetentionRule" xml:space="preserve">
+    <value>Unknown retention rule: {0}</value>
+    <comment>Added</comment>
+  </data>
+  <data name="ExchangeRestoreDataReaderDataBlockGetSizeBlockSize" xml:space="preserve">
+    <value>The file size of {0} is {1}.</value>
+    <comment>Added</comment>
+  </data>
+  <data name="ExchangeRestoreDataReaderDataBlockGetSizeGetError" xml:space="preserve">
+    <value>Can't get file size of {0}.</value>
+    <comment>Added</comment>
+  </data>
+  <data name="ExchangeRestoreDataReaderOpenDataBlockBegin" xml:space="preserve">
+    <value>Begin open stream {0}, this file size is {1}.</value>
+    <comment>Added</comment>
+  </data>
+  <data name="ExchangeRestoreTreeHandlerProcessNodeDtoInternalBegin" xml:space="preserve">
+    <value>Begin processing current node {0}.</value>
+    <comment>Added</comment>
+  </data>
+  <data name="ExchangeRestoreTreeHandlerProcessSelectedItemsBegin" xml:space="preserve">
+    <value>Begin processing selected items of {0}.</value>
+    <comment>Added</comment>
+  </data>
+  <data name="ExchangeRestoreTreeHandlerProcessSubContainersBegin" xml:space="preserve">
+    <value>Begin processing sub containders of {0}.</value>
+    <comment>Added</comment>
+  </data>
+  <data name="ExchangeRestoreTreeHandlerProcessSubDataBegin" xml:space="preserve">
+    <value>Begin processing sub data of {0}.</value>
+    <comment>Added</comment>
+  </data>
+  <data name="ExchangeRestoreTreeHandlerProcessSubItemsBegin" xml:space="preserve">
+    <value>Begin processing sub items of {0}.</value>
+    <comment>Added</comment>
+  </data>
+  <data name="ExchangeRestoreTreeHandlerProcessUnSelectedItemsBegin" xml:space="preserve">
+    <value>Begin processing un selected items of {0}.</value>
+    <comment>Added</comment>
+  </data>
+  <data name="ExchangeRestoreStatisticsCalculatorOpenGetRestoreStatisticsStart" xml:space="preserve">
+    <value>Start calculating restore statistics...</value>
+    <comment>Added</comment>
+  </data>
+  <data name="ExchangeRestoreStatisticsCalculatorOpenGetRestoreStatisticsCutTree" xml:space="preserve">
+    <value>The restore tree after cutting : {0}{1}.</value>
+    <comment>Added</comment>
+  </data>
+  <data name="ExchangeRestoreStatisticsCalculatorOpenGetRestoreStatisticsInitTree" xml:space="preserve">
+    <value>Init tree : {0}{1}.</value>
+    <comment>Added</comment>
+  </data>
+  <data name="ExchangeRestoreStatisticsCalculatorExchangeIndexHandledUnknownType" xml:space="preserve">
+    <value>Unknown index type : {0}.</value>
+    <comment>Added</comment>
+  </data>
+  <data name="ExchangeRestoreStatisticsCalculatorCalculateResult" xml:space="preserve">
+    <value>The calculated result is {0}.</value>
+    <comment>Added</comment>
+  </data>
+  <data name="ExchangeRestoreStatisticsCalculatorProcessExceptionGetRestoreStatisticsError" xml:space="preserve">
+    <value>An error occurred while calculating restore statistics: {0}.</value>
+    <comment>Added</comment>
+  </data>
+  <data name="ExchangeAdvancedSearchServiceProcessExceptionTreeModeError" xml:space="preserve">
+    <value>Advanced search error : {0}.</value>
+    <comment>Added</comment>
+  </data>
+  <data name="ExchangeAdvancedSearchServiceSearchMailboxError" xml:space="preserve">
+    <value>An error occurred while searching mailbox {0},{1}.</value>
+    <comment>Added</comment>
+  </data>
+  <data name="ExchangeContainerAndItemIndexServiceSearchStartExecutingStructuredQueryLanguage" xml:space="preserve">
+    <value>Start executing structured query language: [{0}], and parameters is {1}.</value>
+    <comment>Added</comment>
+  </data>
+  <data name="ExchangeBackupRetentionServiceMoveEntireCycleDataError" xml:space="preserve">
+    <value>An error occurred while copying the data, details: {0}.</value>
+    <comment>Added</comment>
+  </data>
+  <data name="ExchangeBackupRetentionServiceDeleteDataByStorageInfoProgress" xml:space="preserve">
+    <value>{0} blocks need to be removed and now {1} blocks have been removed.</value>
+    <comment>Added</comment>
+  </data>
+  <data name="ExchangeBackupRetentionServiceDeleteDataError" xml:space="preserve">
+    <value>An error occurred in deleting job: {0}, details: {1}.</value>
+    <comment>Added</comment>
+  </data>
+  <data name="ExchangeBackupRetentionServiceDeleteDataFileInfo" xml:space="preserve">
+    <value>Successfully deleted the file [{0}].</value>
+    <comment>Added</comment>
+  </data>
+  <data name="ExchangeBackupRetentionServiceDeleteDataInfo" xml:space="preserve">
+    <value>The job [{0}] has been deleted successfully.</value>
+    <comment>Added</comment>
+  </data>
+  <data name="ExchangeBackupRetentionServiceDeleteDataProgress" xml:space="preserve">
+    <value>{0} blocks need to be removed and now {1} blocks have been removed.</value>
+    <comment>Added</comment>
+  </data>
+  <data name="ExchangeBackupRetentionServiceDeleteFileByStorageInfoError" xml:space="preserve">
+    <value>An error occurred while deleting the data, details: {0}.</value>
+    <comment>Added</comment>
+  </data>
+  <data name="ExchangeBackupRetentionServiceDeleteFileByStorageInfoInfo" xml:space="preserve">
+    <value>Successfully deleted the data whose storage info is [{0}].</value>
+    <comment>Added</comment>
+  </data>
+  <data name="ExchangeBackupRetentionServiceDeleteIndexError" xml:space="preserve">
+    <value>An error occurred while deleting the index {0}, details: {1}.</value>
+    <comment>Added</comment>
+  </data>
+  <data name="ExchangeBackupRetentionServiceDeleteIndexInfo" xml:space="preserve">
+    <value>Successfully deleted the database {0} in {1}.</value>
+    <comment>Added</comment>
+  </data>
+  <data name="ExchangeBackupRetentionServiceDeleteMediaDatasFinish" xml:space="preserve">
+    <value>Finished deleting media data from the control database.</value>
+    <comment>Added</comment>
+  </data>
+  <data name="ExchangeBackupRetentionServiceExcuteCustomActionError" xml:space="preserve">
+    <value>An error occurred in processing custom action with {0}\{1} and the exit code is {2}.</value>
+    <comment>Added</comment>
+  </data>
+  <data name="ExchangeBackupRetentionServiceGetDataSizeInfo" xml:space="preserve">
+    <value>Finish calculating {0} and size is {1}.</value>
+    <comment>Added</comment>
+  </data>
+  <data name="ExchangeBackupRetentionServiceGetDataSizeWarn" xml:space="preserve">
+    <value>An error occurred in calculating data size in {0}, details: {1}.</value>
+    <comment>Added</comment>
+  </data>
+  <data name="ExchangeBackupRetentionServiceMoveDataInfo" xml:space="preserve">
+    <value>Successfully copied the file [{0}].</value>
+    <comment>Added</comment>
+  </data>
+  <data name="ExchangeBackupRetentionServiceMoveDataJobInfo" xml:space="preserve">
+    <value>Successfully moved the job [{0}].</value>
+    <comment>Added</comment>
+  </data>
+  <data name="ExchangeBackupRetentionServiceMoveIndexInfo" xml:space="preserve">
+    <value>The database [{0}] has been moved successfully.</value>
+    <comment>Added</comment>
+  </data>
+  <data name="ExchangeBackupRetentionServiceMoveIndexUpdateMediaData" xml:space="preserve">
+    <value>Finished updating media data to control database.</value>
+    <comment>Added</comment>
+  </data>
+  <data name="ExchangeBackupRetentionServiceProcessCustomActionError" xml:space="preserve">
+    <value>An error occurred while processing {0} by the custom action, details: {1}.</value>
+    <comment>Added</comment>
+  </data>
+  <data name="ExchangeBackupRetentionServiceProcessCustomActionFinishProcess" xml:space="preserve">
+    <value>Processing {0}\{1} by the custom action to the data finished.</value>
+    <comment>Added</comment>
+  </data>
+  <data name="ExchangeBackupRetentionServiceRealMoveInvalidDevice" xml:space="preserve">
+    <value>Current storage system is not valid,details : {0}.</value>
+    <comment>Added</comment>
+  </data>
+  <data name="ExchangeAdvancedSearchServiceSearchMailBoxTreeNodeStartSearch" xml:space="preserve">
+    <value>Starting exchange advance search,details: {0}.</value>
+    <comment>Added</comment>
+  </data>
+</root>

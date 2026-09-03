@@ -1,0 +1,71 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <AssemblyName>MediaCommon</AssemblyName>
+  </PropertyGroup>
+	<PropertyGroup>
+		<EnableUnsafeBinaryFormatterSerialization>true</EnableUnsafeBinaryFormatterSerialization>
+	</PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AWSSDK.S3" Version="4.0.17.3" />
+    <PackageReference Include="Azure.Storage.Blobs" Version="12.27.0" />
+    <PackageReference Include="Castle.Windsor" Version="6.0.0" />
+    <PackageReference Include="log4net" Version="3.3.1" />
+    <PackageReference Include="util.database" Version="5.4.6" PrivateAssets="analyzers" />
+  </ItemGroup>
+  <ItemGroup>
+    <HarpyFiles Remove="EnumConverter.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Common\GlobalCommon\GCommonContract\DocAve.GCommonContract.csproj" />
+    <ProjectReference Include="..\..\Common\GlobalCommon\GCommonNetWork\GCommonNetwork.csproj" />
+    <ProjectReference Include="..\..\Merged18NResources\Merged18NResources.csproj" />
+    <ProjectReference Include="..\..\RACommon.Global\RACommon.Global.csproj" />
+    <ProjectReference Include="..\..\RACommon\RACommon.csproj" />
+    <ProjectReference Include="..\ClassicStorageApi\ClassicStorageApi\ClassicStorageApi.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <HarpyFiles Remove="SafeDictionary.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="SDS-SEE.exml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+	<Target Condition="'$(Configuration)' == 'Release' And '$(PublishDir)' != '' And '$(OutputPath)' != ''" Name="CopyLib" AfterTargets="Build">
+		<ItemGroup>
+			<LibFiles Include="$(OutputPath)\lib\**" />
+		</ItemGroup>
+		<Copy SourceFiles="@(LibFiles)" DestinationFiles="@(LibFiles -> '$(PublishDir)\lib\%(RecursiveDir)%(Filename)%(Extension)')" />
+	</Target>
+  <PropertyGroup Condition="'$(Configuration)'!='DEBUG'">
+    <CopyBadgeCoreFiles Condition="'$(CopyBadgeCoreFiles)' == ''">false</CopyBadgeCoreFiles>
+    <CopyHarpyLibraryFiles Condition="'$(CopyHarpyLibraryFiles)' == ''">false</CopyHarpyLibraryFiles>
+  </PropertyGroup>
+  <Target Name="PostCopyHarpyCoreFilesAfterBuild" AfterTargets="Build">
+    <ItemGroup>
+      <HarpyPackageCoreFiles Include="$(TargetDir)lib\Harpy1.0\Harpy.dll" />
+    </ItemGroup>
+    <Copy SourceFiles="@(HarpyPackageCoreFiles)" DestinationFolder="$(TargetDir)" SkipUnchangedFiles="false" Condition="Exists(@(HarpyPackageCoreFiles))" />
+    <Copy SourceFiles="@(HarpyPackageCoreFiles)" DestinationFolder="$(PublishDir)" SkipUnchangedFiles="false" Condition="Exists(@(HarpyPackageCoreFiles))" />
+  </Target>
+  <Target Name="PostCopyHarpyLibraryFilesAfterPublishDebug" AfterTargets="Build">
+    <ItemGroup>
+      <HarpyPackageLibraryFiles Include="$(TargetDir)lib\**\*" />
+    </ItemGroup>
+    <Copy SourceFiles="@(HarpyPackageLibraryFiles)" DestinationFolder="$(PublishDir)\lib\%(RecursiveDir)" SkipUnchangedFiles="false" Condition="Exists(@(HarpyPackageLibraryFiles))" />
+  </Target>
+  <ItemGroup>
+    <EmbeddedResource Include="SDS-SEE.exml">
+      <LogicalName>SDS-SEE.exml</LogicalName>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>

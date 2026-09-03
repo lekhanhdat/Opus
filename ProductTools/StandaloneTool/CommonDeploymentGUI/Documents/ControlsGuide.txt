@@ -1,0 +1,35 @@
+﻿#ScrollViewer:
+
+<ScrollViewer HorizontalScrollBarVisibility="Disabled"  VerticalScrollBarVisibility="Auto">
+横向设置为Disabled，避免横向出现滚动条(默认设置)时页面位移。
+纵向设置为Auto，可以在不需要滚动条时隐藏。
+
+#WaterMarkTextBox
+Tag属性的值表示WaterMark字样
+
+
+#TextBox
+在XAML中，声明命名空间
+xmlns:src="clr-namespace:AvePoint.CallAssist.CommonDeploymentGUI;assembly=AvePoint.CallAssist.CommonDeploymentGUI"
+如果TextBox需要有Error Message，可以将控件声明的TextBox更换成src:TextBoxEx
+在属性中，添加ShowMsgOnBottom="True"，并通过逻辑修改此控件的ErrorMsg属性值即可
+
+#ErrorMsg添加步骤
+1.在Model中添加相关的Property，如Username对应UsernameErrorMsg，并声明绑定
+2.View中，Username对应的TextBox中添加ErrorMsg属性和ShowMsgOnBottom="True"
+3.在ViewModel中，检查方法中修改UsernameErrorMsg属性
+
+
+
+#TextBlock
+将原有的Label空间尽量改成TextBlock(高效率)，将TextBlock的颜色属性单独提取出在DefaultStyle中。
+
+
+#MessageBox
+ BaseMessage.Show(new BaseMessageConfig {
+                FormText = "Form Title",
+                ContentTitle = "Content Title",
+                ContentSummary = "Content Summary",
+                MessageType = MessageType.OKCancel,
+                MessageIconType = MessageIconType.Exit
+            });

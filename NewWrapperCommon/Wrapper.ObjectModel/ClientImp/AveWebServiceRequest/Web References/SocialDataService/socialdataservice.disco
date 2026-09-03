@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<discovery xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/disco/">
+  <contractRef ref="http://avepoint-bic:8080/_vti_bin/socialdataservice.asmx?wsdl" docRef="http://avepoint-bic:8080/_vti_bin/socialdataservice.asmx" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
+  <soap address="http://avepoint-bic:8080/_vti_bin/socialdataservice.asmx" xmlns:q1="http://microsoft.com/webservices/SharePointPortalServer/SocialDataService" binding="q1:SocialDataServiceSoap" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+</discovery>

@@ -1,0 +1,92 @@
+/*Covered by AvePoint copyright and license agreement*/
+.selection-zone {
+    min-width: 322px;
+    height: auto;
+    padding: 5px 0;
+    white-space: nowrap;
+}
+.selection-search-box {
+    padding: 0 5px 5px 5px;
+}
+.selection-content {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding: 5px 0 5px 10px;
+    max-height: 300px;
+}
+.slds-scrollable_y {
+    scrollbar-width: thin;
+    margin-right: 5px;
+}
+.selection-item {
+    padding: 8px 3px;
+    border-radius: 4px;
+}
+
+.selection-item:hover {
+    background-color: #f3f3f3;
+}
+.slds-input-auto {
+    width: 100% !important;
+    border: 1px solid black;
+    padding-left: 10px;
+    background-color: #fff;
+    border-radius: 4px;
+}
+
+.group-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    background-color: #EAECEF;
+    margin-top: 2px;
+}
+
+.custom-icon {
+    font-weight: bold;
+    filter: brightness(0) saturate(100%) invert(0%) sepia(0%) saturate(7500%) hue-rotate(0deg) brightness(0%) contrast(100%);
+}
+
+.icon-container {
+    position: relative;
+}
+
+.down-icon {
+    right: 8px;
+}
+
+.clear-icon {
+    position: absolute !important;
+    right: 8px;
+    top: 50%;
+    display: none;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.icon-container:hover {
+    cursor: pointer;
+}
+
+.icon-container:hover .clear-icon {
+    display: flex !important;
+}
+
+.icon-container:hover .down-icon {
+    visibility: hidden;
+}
+
+.selection-actions {
+    position: sticky;
+    bottom: 0;
+    display: flex;
+    justify-content: flex-end;
+    column-gap: 4px;
+}
+
+.footer-button {
+    min-width: 80px;
+    font-weight: 600;
+    font-size: 14px;
+}

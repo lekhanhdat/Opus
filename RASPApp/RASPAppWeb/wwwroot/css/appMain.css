@@ -1,0 +1,116 @@
+﻿/*Covered by AvePoint copyright and license agreement*/
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+div, p, span {
+    margin: 0;
+    padding: 0;
+}
+
+#header {
+    font-size: 36px;
+    font-family: 'Segoe UI', sans-serif;
+    color: #555555;
+    margin: 0 auto;
+    height: 80px;
+    padding-top: 70px;
+    text-align: center;
+}
+
+#divPage {
+    background: #808080;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+#divContent {
+    background: #ffffff;
+    margin: 0 auto;
+    height: 450px;
+    width: 750px;
+    position: relative;
+}
+
+#topDiv {
+}
+
+#appIcon1 {
+    background-image: url('../Images/APP-icon1.png');
+    height: 70px;
+    width: 70px;
+    position: absolute;
+    left: 30px;
+    top: 60px;
+}
+
+#appDeploy {
+    position: absolute;
+    left: 125px;
+    top: 60px;
+}
+
+.appDivTile {
+    font-size: 24px;
+    font-family: 'Segoe UI', sans-serif;
+    color: #555555;
+}
+
+.appDivDes {
+    font-size: 14px;
+    font-family: 'Segoe UI', sans-serif;
+    color: #717274;
+}
+
+#appDeployDes {
+    position: absolute;
+    left: 125px;
+    top: 100px;
+}
+
+#appIcon2 {
+    background-image: url('../Images/APP-icon2.png');
+    height: 70px;
+    width: 70px;
+    position: absolute;
+    left: 300px;
+    top: 310px;
+}
+
+#appInstall {
+    position: absolute;
+    left: 390px;
+    top: 310px;
+}
+
+#appInstallDes {
+    position: absolute;
+    left: 390px;
+    top: 350px;
+}
+
+#guideDiv {
+    height: 70px;
+    margin-top: 90px;
+    text-align: center;
+}
+
+    #guideDiv > div {
+        display: inline-block;
+    }
+
+#guideLink {
+    font-size: 18px;
+    font-family: 'Segoe UI', sans-serif;
+    color: #407fe8;
+}
+
+#guideDes {
+    font-size: 18px;
+    font-family: 'Segoe UI', sans-serif;
+    color: #555555;
+}

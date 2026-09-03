@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RuleSet Name="Wrapper Rules" Description=" " ToolsVersion="10.0">
+  <RuleHintPaths>
+    <Path>..\RolesSet</Path>
+  </RuleHintPaths>
+  <Include Path="minimumrecommendedrules.ruleset" Action="Default" />
+  <Rules AnalyzerId="Microsoft.Analyzers.ManagedCodeAnalysis" RuleNamespace="Microsoft.Rules.Managed">
+    <Rule Id="C100013" Action="Error" />
+  </Rules>
+</RuleSet>

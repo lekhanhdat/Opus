@@ -1,0 +1,83 @@
+{
+  "root": true,
+  "env": {
+    "browser": true,
+    "es6": true,
+    "node": true,
+    "commonjs": true
+  },
+  "globals": {
+    "$$": "readonly",
+    "$": "readonly",
+    "R": "readonly",
+    "$g": "readonly",
+    "RM": "writable",
+    "RMResx": "readonly",
+    "React": "readonly",
+    "ReactDOM": "readonly",
+    "fetchUtility": "readonly"
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended"
+  ],
+  "settings": {
+    "react": {
+      "createClass": "createReactClass",
+      "pragma": "React",
+      "version": "detect"
+    }
+  },
+  "parserOptions": {
+    "ecmaFeatures": {
+      "experimentalObjectRestSpread": true,
+      "jsx": true,
+      "arrowFunctions": true,
+      "classes": true,
+      "modules": true,
+      "defaultParams": true
+    },
+    "ecmaVersion": 6,
+    "sourceType": "module"
+  },
+  "parser": "babel-eslint",
+  "plugins": [
+    "react"
+  ],
+  "rules": {
+    "indent": [
+      "error",
+      4,
+      {
+        "SwitchCase": 1,
+        "VariableDeclarator": "first",
+        "MemberExpression": 1,
+        "ArrayExpression": 1,
+        "CallExpression": { "arguments": 1 }
+      }
+    ],
+    "semi": [ "error", "always" ],
+    "no-unused-vars": [
+      "error",
+      {
+        "vars": "local",
+        "args": "none"
+      }
+    ],
+    "react/jsx-no-undef": [
+      "error",
+      { "allowGlobals": true }
+    ],
+    "no-empty": [
+      "error",
+      { "allowEmptyCatch": true }
+    ],
+    "react/prop-types": [
+      "error",
+      {
+        "ignore": [ "history" ],
+        "skipUndeclared": true
+      }
+    ]
+  }
+}

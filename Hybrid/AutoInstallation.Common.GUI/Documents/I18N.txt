@@ -1,0 +1,25 @@
+﻿搭建方法：
+
+搭建时，首先在I18N目录下创建名为：
+ProjectName.resx
+ProjectName.zh-CN.resx
+ProjectName.ja-JP.resx
+ProjectName.de-DE.resx
+等几个国际化文件，并且在这个文件夹下处理I18NEntity.cs
+
+I18NEntity.cs继承I18NUtility和IValueConverter类
+
+在声明ResourceMgr = new ResourceManager("DocAve6ManagerInstallation.I18N.DocAve6ManagerInstallation", Assembly.GetExecutingAssembly()); 
+其中"DocAve6ManagerInstallation.I18N.DocAve6ManagerInstallation"为命名空间+I18N+工程名的组合。
+
+在工程的App.xaml中，声明命名空间：xmlns:LocalI18N="clr-namespace:DocAve6ManagerInstallation"
+并且在Recourses中声明<LocalI18N:I18NEntity x:Key="AveMessageI18N" />，其中AveMessageI18N为固定字段
+
+
+使用方法：(以下字段用来替换原Code中的String部分)
+
+在XAML文件中加入词条：
+{Binding Source='DocAve v6 Manager for SharePoint -- Installation Wizard',Converter={StaticResource AveMessageI18N},ConverterParameter='DocAve6ManagerInstallation'}
+
+在CS文件中加入词条：
+I18NEntity.Get("DocAve6ManagerInstallation", "HelloWorld")

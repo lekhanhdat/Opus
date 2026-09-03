@@ -1,0 +1,314 @@
+﻿/********************************************************************
+ *
+ *  PROPRIETARY and CONFIDENTIAL
+ *
+ *  This file is licensed from, and is a trade secret of:
+ *
+ *                   AvePoint, Inc.
+ *                   Harborside Financial Center
+ *                   9th Fl.   Plaza Ten
+ *                   Jersey City, NJ 07311
+ *                   United States of America
+ *                   Telephone: +1-800-661-6588
+ *                   WWW: www.avepoint.com
+ *
+ *  Refer to your License Agreement for restrictions on use,
+ *  duplication, or disclosure.
+ *
+ *  RESTRICTED RIGHTS LEGEND
+ *
+ *  Use, duplication, or disclosure by the Government is
+ *  subject to restrictions as set forth in subdivision
+ *  (c)(1)(ii) of the Rights in Technical Data and Computer
+ *  Software clause at DFARS 252.227-7013 (Oct. 1988) and
+ *  FAR 52.227-19 (C) (June 1987).
+ *
+ *  Copyright © 2013-2017 AvePoint® Inc. All Rights Reserved. 
+ *
+ *  Unpublished - All rights reserved under the copyright laws of the United States.
+ *  $Revision:  $
+ *  $Author:  $        
+ *  $Date:  $
+ */
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using AvePoint.Wrapper.Common;
+
+namespace AvePoint.ObjectModel.Common
+{
+    using DicType = Dictionary<string, object>;
+    class AveFolder : AveClientObject, IAveFolder
+    {
+        private IAveRequest mRequest;
+        private IAveWeb mParentWeb;
+        private IAveList mParentList;
+        private bool mFilesLoaded;
+        private bool mFoldersLoaded;
+        private int mItemCount;
+        private bool mExists;
+       
+        public AveFolder(IAveRequest request, IAveList parentList, AveFolder parentFolder, string serverRelativeUrl)
+        {
+            mRequest = request;
+            mParentWeb = parentList.ParentWeb;
+            mParentList = parentList;
+            mFilesLoaded = false;
+            mFoldersLoaded = false;
+            mExists = false;
+            mItemCount = 0;
+            base.DataCache.PropertiesCache.Add("ParentWeb", mParentWeb);
+            base.DataCache.PropertiesCache.Add("ParentFolder", parentFolder);
+            base.DataCache.PropertiesCache.Add("ServerRelativeUrl", serverRelativeUrl.TrimEnd('/'));
+            string folderUrl = serverRelativeUrl.Substring( parentList.ParentWebUrl.TrimEnd('/').Length );
+            //folderUrl.TrimEnd('/').TrimStart('/')
+            AveCamlQuery camQuery = AveCamlQuery.CreateAllItemsQuery();
+            DicType folderProperties = mRequest.GetFolderItems(mParentWeb.Id.ToString(), parentList.Title.ToString(), mParentWeb.Url, camQuery);
+
+            //if ( folderProperties == null )
+            //{
+            //    mExists = false;
+            //    return;
+            //}
+            //else
+            //{
+            //    mExists = true;
+            //}
+
+            string folderName = serverRelativeUrl.Substring(serverRelativeUrl.TrimEnd('/').LastIndexOf('/') + 1);
+            folderProperties.Add("Name", folderName.TrimEnd('/'));
+            base.DataCache.AddPropertyies(folderProperties);
+        }
+
+        #region IAveFolder Members
+
+        public IAveFileCollection Files
+        {
+            get {
+                if ( mExists == true )
+                {
+                    if (mFilesLoaded == false)
+                    {
+                        AveFileCollection files = new AveFileCollection();
+                        foreach (KeyValuePair<string, object> dataPair in base.DataCache.GetProperty<DicType>("Files"))
+                        {
+                            string fileServerUrl = this.mParentWeb.ServerRelativeUrl.TrimEnd('/') + "/" + dataPair.Key;
+                            DateTime time = (DateTime)dataPair.Value;
+                            try
+                            {
+                                AveFile file = new AveFile(mRequest, this.mParentWeb, fileServerUrl, this.mParentList.Title);
+                                if (file.Exists == false)
+                                {
+                                    //throw new Exception("not exist");
+                                    continue;
+                                }
+                                files.Add(file);
+                                mItemCount++;
+                            }
+                            catch (Exception e)
+                            {
+                                //generic list doesn't have document files etc.
+                            }
+                        }
+                        base.DataCache.PropertiesCache.Remove("Files");
+                        base.DataCache.PropertiesCache.Add("Files", files);
+                        mFilesLoaded = true;
+                    }
+                    return base.DataCache.GetProperty<IAveFileCollection>("Files"); 
+                }
+                else
+                {
+                    throw new Exception("object is not exsit");
+                }
+                
+            }
+        }
+
+        public IAveFolderCollection Folders
+        {
+            get { 
+                if ( mExists == true)
+                {
+                    if (mFoldersLoaded == false)
+                    {
+                        AveFolderCollection folders = new AveFolderCollection();
+                        foreach (KeyValuePair<string, object> dataPair in base.DataCache.GetProperty<DicType>("Folders"))
+                        {
+                            try
+                            {
+                                //
+                                string serverRelativeUrl = this.mParentWeb.ServerRelativeUrl.TrimEnd('/') + "/" + dataPair.Key.ToString();
+                                AveFolder folder = new AveFolder(mRequest, this.mParentList, this, serverRelativeUrl);
+                                folders.Add(folder);
+                                mItemCount++;
+                            }
+                            catch (Exception e)
+                            {
+
+                            }
+                        }
+                        base.DataCache.PropertiesCache.Remove("Folders");
+                        base.DataCache.PropertiesCache.Add("Folders", folders);
+                        mFoldersLoaded = true;
+                    }
+                    return base.DataCache.GetProperty<IAveFolderCollection>("Folders"); 
+                }
+                else
+                {
+                    throw new Exception("object is not exist");
+                }
+            }
+        }
+
+        public int ItemCount
+        {
+            get {
+                if ( mExists == true )
+                {
+                    return mItemCount;
+                }
+                else
+                {
+                    throw new Exception("object is not exist");
+                }
+            }
+        }
+
+        public string Name
+        {
+            get {
+                if ( mExists == true )
+                {
+                    return base.DataCache.GetProperty<string>("Name");
+                }
+                else
+                {
+                    throw new Exception("object is not exist");
+                }
+            }
+        }
+
+        public IAveFolder ParentFolder
+        {
+            get {
+                //
+                if ( mExists == true )
+                {
+                    return base.DataCache.GetProperty<IAveFolder>("ParentFolder"); 
+                }
+                else
+                {
+                    throw new Exception("object is not exist");
+                }
+            }
+        }
+
+        public System.Collections.Hashtable Properties
+        {
+            get { throw new NotImplementedException(); }
+        }
+
+        public string ServerRelativeUrl
+        {
+            get {
+                //
+                if ( mExists == true)
+                {
+                    return base.DataCache.GetProperty<string>("ServerRelativeUrl");
+                }
+                else
+                {
+                    throw new Exception("object is not exist");
+                }
+            }
+        }
+
+        public string WelcomePage
+        {
+            get
+            {
+                throw new NotImplementedException();
+            }
+            set
+            {
+                throw new NotImplementedException();
+            }
+        }
+
+        public string Url
+        {
+            get { throw new NotImplementedException(); }
+        }
+
+        public IAveWeb ParentWeb
+        {
+            get {
+                //
+                if ( mExists == true)
+                {
+                    return base.DataCache.GetProperty<IAveWeb>("ParentWeb");
+                }
+                else
+                {
+                    throw new Exception("object is not exist");
+                }
+            }
+        }
+
+        public bool Exists
+        {
+            get {
+                return mExists;
+            }
+        }
+
+        public IAveListItem Item
+        {
+            get { throw new NotImplementedException(); }
+        }
+
+        public Guid ParentListId
+        {
+            get { throw new NotImplementedException(); }
+        }
+
+        public IAveFolderCollection SubFolders
+        {
+            get { throw new NotImplementedException(); }
+        }
+
+        public Guid UniqueId
+        {
+            get { throw new NotImplementedException(); }
+        }
+
+        public void Delete()
+        {
+            throw new NotImplementedException();
+        }
+
+        public IList<IAveContentType> UniqueContentTypeOrder 
+        {
+            get { throw new NotImplementedException(); }
+            set { throw new NotImplementedException(); }
+        }
+
+        public void Update()
+        {
+            throw new NotImplementedException();
+        }
+
+        public object SPFolder
+        {
+            get { throw new NotImplementedException(); }
+        }
+
+        public void MoveTo(string newUrl)
+        {
+            throw new NotImplementedException();
+        }
+
+        #endregion
+    }
+}

@@ -1,0 +1,559 @@
+<div id="UxCamlContainer">
+<div>
+  <input type="radio" id="UxBuilder" name="InputMode" checked="checked" /><label for="UxBuilder">Query builder</label>
+  <input type="radio" id="UxEditor" name="InputMode" /><label for="UxEditor">CAML editor</label>
+</div>
+<div id="UxBuilderContainer">
+  <hr style="border:0; border-bottom:1px dotted #d8d8d8;height:0;margin-top:1em;" />
+  <div style="margin-top:1em;margin-bottom:0.3em;font-weight:bold;">Scope:</div>
+  <div><input type="checkbox" id="UxIncludeSubfolders" /><label for="UxIncludeSubfolders" style="margin-right:0.3em;">Include items in subfolders</label></div>
+  <div><input type="checkbox" id="UxIncludeFolders" /><label for="UxIncludeFolders" style="margin-right:0.3em;">Include folders</label></div>
+  <hr style="border:0; border-bottom:1px dotted #d8d8d8;height:0;margin-top:1em;" />
+  <div style="margin-top:1em;margin-bottom:0.3em;font-weight:bold;">Filters:</div>
+  <div><input type="radio" id="UxNoFilter" name="InputFilterMode" checked="checked" /><label for="UxNoFilter">Update all list items permission</label></div>
+  <div><input type="radio" id="UxUseFilter" name="InputFilterMode" /><label for="UxUseFilter">Update items only when the following is true:</label></div>
+  <div id="UxFilterBuilder" style="display:none;">
+    <div id="UxFilterInputs"></div>
+    <div style="margin-top:1em;"><a href="#" id="UxAddFilter" style="margin-left:180px;"><img src="../images/Plus.png" border="0" /> Add filter rule</a></div>
+  </div>
+</div>
+<div id="UxEditorContainer" style="display:none;"><textarea style="width:450px;height:200px;" class="ms-inputuserfield"></textarea></div>
+</div>
+<script type="text/javascript">
+(function () {
+    var inputSelector = function () {
+
+        var initialized = false,
+            $builder = NWL$('#UxBuilder'),
+            $editor = NWL$('#UxEditor'),
+            $includeSubfolders = NWL$('#UxIncludeSubfolders'),
+            $includeFolders = NWL$('#UxIncludeFolders'),
+            $camlTextArea = NWL$('#UxEditorContainer textarea'),
+            caml = null,
+            filterIdx = -1,
+            firstFilterHasField = false,
+            changesMadeInEditor = false,
+            webUtility = (function (undefined) {
+                var $codec = NWL$('<div />');
+
+                return {
+                    htmlDecode: function (htmlString) {
+                        if (htmlString === undefined || htmlString === null || htmlString === '') {
+                            return htmlString;
+                        }
+
+                        return $codec.html(htmlString).text();
+                    },
+                    htmlEncode: function (textString) {
+                        if (textString === undefined || textString === null || textString === '') {
+                            return textString;
+                        }
+
+                        return $codec.text(textString).html();
+                    }
+                };
+            }());
+
+        function validateXml(value, errorMessage) {
+            if (errorMessage === undefined || errorMessage === null) {
+                errorMessage = 'Invalid XML entered.';
+            }
+
+            if (window.DOMParser) {
+                var parser = new DOMParser();
+                try {
+                    parser.parseFromString(value, 'text/xml');
+                }
+                catch (e) {
+                    alert(errorMessage);
+                    return false;
+                }
+            }
+            else {
+                var tempXml = new ActiveXObject('Microsoft.XMLDOM');
+                tempXml.async = false;
+                if (!tempXml.loadXML(value)) {
+                    alert(errorMessage);
+                    tempXml = null;
+                    return false;
+                }
+
+                tempXml = null;
+            }
+
+            return true;
+        }
+
+        function createXmlDocument(xmlString) {
+            var xmlDoc = null;
+            if (window.DOMParser) {
+                var parser = new DOMParser();
+                try {
+                    xmlDoc = parser.parseFromString(xmlString, 'text/xml');
+                }
+                catch (e) {
+                    return null;
+                }
+            }
+            else if (window.ActiveXObject) {
+                xmlDoc = new ActiveXObject('Microsoft.XMLDOM');
+                xmlDoc.async = false;
+                xmlDoc.loadXML(xmlString);
+                if (xmlDoc.parseError.errorCode != 0) {
+                    xmlDoc = null;
+                }
+            }
+
+            return xmlDoc;
+        }
+
+        function getXmlString(xmlDoc) {
+            if (window.XMLSerializer) {
+                var serializer = new XMLSerializer();
+                return serializer.serializeToString(xmlDoc);
+            }
+            else {
+                return xmlDoc.xml || '';
+            }
+        }
+
+        function stringLeft(txt, numOfChar) {
+            return txt.substring(0, numOfChar);
+        }
+
+        function stringRight(txt, numOfChar) {
+            return txt.substring(txt.length - numOfChar, txt.length);
+        }
+
+        function getNewFilterHtml(filterNum) {
+            var whenColumnLabel = 'Update the items when column',
+                imgTag = '',
+                logicalOperatorTags = '';
+
+            if (filterNum !== 0) {
+                whenColumnLabel = 'When column:';
+                imgTag = '<img class="removeReferenceButton nwl-delete" style="border:0;cursor:pointer;" title="Delete" alt="Delete" src="../images/Delete.gif" />';
+                logicalOperatorTags = [
+                    '<div><div style="text-align:center;width:335px;">',
+                    '<input id="UxFilterAnd' + filterNum + '" type="radio" name="InputFilterLogic' + filterNum + '" checked="checked" /><label for="UxFilterAnd' + filterNum + '">And</label>',
+                    '<input id="UxFilterOr' + filterNum + '" type="radio" name="InputFilterLogic' + filterNum + '" /><label for="UxFilterOr' + filterNum + '">Or</label>',
+                    '</div></div>'].join('');
+            }
+
+            return [
+                '<div id="UxFilter' + filterNum + '" class="nwl-filter" style="margin-top:1em;" data-nwl-filteridx="' + filterNum + '">',
+                logicalOperatorTags,
+                '<div>' + whenColumnLabel + imgTag + '</div>',
+                '<div style="margin-top:0.3em" class="nwl-filterFieldContainer"></div>',
+                '<div style="margin-top:0.3em"><select class="ms-inputuserfield nwl-filterOperator" style="width:339px;">',
+                '<option value="Eq">is equal to</option>',
+                '<option value="Neq">is not equal to</option>',
+                '<option value="Gt">is greater than</option>',
+                '<option value="Lt">is less than</option>',
+                '<option value="Geq">is greater than or equal to</option>',
+                '<option value="Leq">is less than or equal to</option>',
+                '<option value="IsNull">is null</option>',
+                '<option value="IsNotNull">is not null</option>',
+                '<option value="BeginsWith">begins with</option>',
+                '<option value="Contains">contains</option>',
+                '</select></div>',
+                '<div style="margin-top:0.3em" class="nwl-filterValueContainer"></div>',
+                '</div>'].join('');
+        }
+
+        function getComparisonNode(context, operator, field, value) {
+            switch(operator) {
+                case 'IsNull':
+                    return NWL$('<IsNull />', context).append(NWL$('<FieldRef />', context).attr('Name', field));
+                case 'IsNotNull':
+                    return NWL$('<IsNotNull />', context).append(NWL$('<FieldRef />', context).attr('Name', field));
+                default:
+                    return NWL$('<' + operator + ' />', context).
+                        append(NWL$('<FieldRef />', context).attr('Name', field)).
+                        append(NWL$('<Value />', context).attr('Type', 'Text').text(value));
+            }
+        }
+
+        function buildCamlText() {
+            caml = createXmlDocument('<View />');
+            var $caml = NWL$('*:not(* *)', caml);
+            $caml.append(NWL$('<Query />', caml));
+            
+            
+            if ($includeSubfolders.get(0).checked) {
+                if ($includeFolders.get(0).checked) {
+                    $caml.attr('Scope', 'RecursiveAll');
+                } else {
+                    $caml.attr('Scope', 'Recursive');
+                }
+            } else {
+                if ($includeFolders.get(0).checked) {
+                    $caml.removeAttr('Scope');
+                } else {
+                    $caml.attr('Scope', 'FilesOnly');
+                }
+            }
+
+            if (NWL$('#UxNoFilter').get(0).checked) {
+                return getXmlString(caml);
+            }
+
+            var $filters = NWL$('#UxFilterInputs div.nwl-filter');
+            var $where = NWL$('<Where />', caml);
+            $filters.each(function (idx, el) {
+                var filterIdx = NWL$(el).attr("data-nwl-filteridx");
+                var field = webUtility.htmlDecode(getRTEValue('UxFilterField' + filterIdx));
+                if (field === '') {
+                    return;
+                }
+
+                var operator = NWL$('select.nwl-filterOperator', el).val();
+                var value = webUtility.htmlDecode(getRTEValue('UxFilterValue' + filterIdx));
+                var $operator = getComparisonNode(caml, operator, field, value);
+                if (filterIdx == 0) {
+                    $where.append($operator);
+                }
+                else {
+                    var logicTag = '<And />';
+                    if (NWL$('#UxFilterOr' + filterIdx).get(0).checked) {
+                        logicTag = '<Or />';
+                    }
+
+                    $where.append($operator).children().wrapAll(logicTag);
+                }
+            });
+
+            if ($where.children().length > 0) {
+                $caml.children('Query').append($where);
+            }
+
+            return getXmlString(caml);
+        }
+
+        function setFilter(filterNum, field, value, comparisonOperator, logicalOperator) {
+            var $filter = NWL$('#UxFilter' + filterNum);
+            setRTEValue('UxFilterField' + filterNum, webUtility.htmlEncode(field));
+            setRTEValue('UxFilterValue' + filterNum, webUtility.htmlEncode(value));
+
+            if (filterNum === 0 && field != '') {
+                firstFilterHasField = true;
+            }
+
+            if (typeof comparisonOperator === 'undefined' || comparisonOperator === null || comparisonOperator === '') {
+                comparisonOperator = NWL$('option.first', this).val();
+            }
+
+            $filter.find('select.nwl-filterOperator').val(comparisonOperator).change();
+
+            if (typeof logicalOperator === 'undefined' || logicalOperator === null || logicalOperator === '') {
+                return;
+            }
+
+            if (logicalOperator == 'Or') {
+                $filter.find('input#UxFilterOr' + filterNum).attr('checked', 'checked');
+                return;
+            }
+        }
+
+        function resetBuilder() {
+            filterIdx = -1;
+            firstFilterHasField = false;
+            $includeSubfolders.removeAttr('checked');
+            $includeFolders.removeAttr('checked');
+            NWL$('#UxFilterInputs div.nwl-filter').remove();
+            addFilter();
+        }
+
+        function operatorSelectOnChange(e) {
+            var evt = e || event;
+            var tg = evt.target || evt.srcElement;
+            var $operator = NWL$(tg);
+            switch ($operator.val()) {
+                case 'IsNull':
+                    $operator.parent().parent().find('div.nwl-filterValueContainer').hide();
+                    break;
+                case 'IsNotNull':
+                    $operator.parent().parent().find('div.nwl-filterValueContainer').hide();
+                    break;
+                default:
+                    $operator.parent().parent().find('div.nwl-filterValueContainer').show();
+                    break;
+            }
+        }
+
+        function addFilter() {
+            var currentIdx = ++filterIdx;
+            var fieldRte = cloneRTE(txtHiddenTextInputId, 'UxFilterField' + currentIdx);
+            NWL$(fieldRte).find('.ms-inputuserfield').css('width', '335px');
+            var valueRte = cloneRTE(txtHiddenTextInputId, 'UxFilterValue' + currentIdx);
+            NWL$(valueRte).find('.ms-inputuserfield').css('width', '335px');
+            NWL$('#UxFilterInputs').
+                append(getNewFilterHtml(currentIdx)).
+                find('#UxFilter' + currentIdx + ' div.nwl-filterFieldContainer').
+                append(fieldRte).
+                end().
+                find('#UxFilter' + currentIdx + ' div.nwl-filterValueContainer').
+                append(valueRte).
+                end().
+                find('#UxFilter' + currentIdx + ' select.nwl-filterOperator').each(function() {
+                    this.onchange = operatorSelectOnChange;
+                });
+
+            return false;
+        }
+
+        function removeFilter() {
+            NWL$(this).parent().parent().remove();
+        }
+
+        function isLogical(operator) {
+            return operator == 'And' || operator == 'Or';
+        }
+
+        function populateFilterBuilder(field, value, comparisonOperator, logicalOperator) {
+            if (filterIdx == 0 && !firstFilterHasField) {
+                setFilter(0, field, value, comparisonOperator);
+                return;
+            }
+
+            addFilter();
+            setFilter(filterIdx, field, value, comparisonOperator, logicalOperator);
+        }
+
+        function processOperatorNode(idx, el) {
+            var operator = el.nodeName;
+            var $operator = NWL$(el);
+            if (isLogical(operator)) {
+                $operator.children().each(processOperatorNode);
+                return;
+            }
+
+            var logicalOperator = $operator.parent().get(0).nodeName;
+            var field = $operator.children('FieldRef[Name]').attr('Name');
+            if (typeof field === 'undefined') {
+                return;
+            }
+            var value = $operator.children('Value').text();
+            if (typeof value === 'undefined') {
+                value = '';
+            }
+            if (logicalOperator == 'Where') {
+                populateFilterBuilder(field, value, operator);
+                return;
+            }
+
+            populateFilterBuilder(field, value, operator, logicalOperator);
+        }
+
+        function populateBuilder(camlText) {
+            resetBuilder();
+            caml = createXmlDocument(camlText);
+            
+            var $caml = NWL$('View:not(View View)', caml);
+            if ($caml.get(0)) {
+                var scope = $caml.attr('Scope');
+                switch (scope) {
+                    case 'FilesOnly':
+                        $includeSubfolders.removeAttr('checked');
+                        $includeFolders.removeAttr('checked');
+                        break;
+                    case 'Recursive':
+                        $includeSubfolders.attr('checked', 'checked');
+                        $includeFolders.removeAttr('checked');
+                        break;
+                    case 'RecursiveAll':
+                        $includeSubfolders.attr('checked', 'checked');
+                        $includeFolders.attr('checked', 'checked');
+                        break;
+                    default:
+                        $includeSubfolders.removeAttr('checked');
+                        $includeFolders.attr('checked', 'checked');
+                        break;
+                }
+            }
+            
+            var $where = NWL$('View > Query > Where', caml);
+            if ($where.length === 0) {
+                NWL$('#UxNoFilter').attr('checked', 'checked');
+                hideFilterBuilder();
+                return;
+            }
+
+            NWL$('#UxUseFilter').attr('checked', 'checked');
+            showFilterBuilder();
+            $where.children().each(processOperatorNode);
+        }
+
+        function showBuilder() {
+            NWL$("#UxBuilderContainer").show();
+            NWL$("#UxEditorContainer").hide();
+        }
+
+        function showEditor() {
+            NWL$("#UxBuilderContainer").hide();
+            NWL$("#UxEditorContainer").show();
+        }
+
+        function hideFilterBuilder() {
+            NWL$('#UxFilterBuilder').hide();
+        }
+
+        function showFilterBuilder() {
+            NWL$('#UxFilterBuilder').show();
+        }
+
+        function isXmlRootEquals(nodeName, xmlToCheck) {
+            var xdoc = createXmlDocument(xmlToCheck);
+            if (xdoc) {
+                return xdoc.documentElement.nodeName == nodeName;
+            }
+
+            return false;
+        }
+
+        function convertSelectorToCaml(selectorValue) {
+            var selectorXml = createXmlDocument(selectorValue);
+            if (selectorXml) {
+                var $selector = NWL$('Selector', selectorXml);
+                if ($selector.length === 0) {
+                    return selectorValue;
+                }
+
+                var field = $selector.attr('Field');
+                var value = $selector.attr('Value');
+                var camlXmlDoc = createXmlDocument("<View />");
+                var $caml = NWL$('*:not(* *)', camlXmlDoc);
+                $caml.append(NWL$('<Query />', camlXmlDoc));
+                var $where = NWL$('<Where />', camlXmlDoc);
+                var $operator = getComparisonNode(camlXmlDoc, 'Eq', field, value);
+                $where.append($operator);
+                $caml.children('Query').append($where);
+                return FormatXmlString(getXmlString(camlXmlDoc));
+            }
+
+            return;
+        }
+
+        function loadValue(valueToLoad) {
+            if (typeof valueToLoad === 'undefined' || valueToLoad === null || valueToLoad === '') {
+                return;
+            }
+
+            var inputMode = stringLeft(valueToLoad, 1);
+            if (inputMode === '<') {
+                if (isXmlRootEquals('Selector', valueToLoad)) {
+                    valueToLoad = '0' + convertSelectorToCaml(valueToLoad);
+                    inputMode = '0';
+                }
+                else {
+                    valueToLoad = '1' + valueToLoad;
+                    inputMode = '1';
+                    changesMadeInEditor = true;
+                }
+            }
+
+            var camlText = stringRight(valueToLoad, valueToLoad.length - 1);
+            if (isXmlRootEquals('Query', camlText)) {
+                camlText = '<View>' + camlText + '</View>';
+            }
+
+            if (inputMode === '0') {
+                populateBuilder(camlText);
+                showBuilder();
+                return;
+            }
+
+            $camlTextArea.val(camlText);
+            $editor.attr('checked', 'checked');
+            showEditor();
+        }
+
+        function getValueToSave() {
+            if ($builder.get(0).checked) {
+                return '0' + buildCamlText();
+            }
+
+            var camlValue = $camlTextArea.val();
+            validateXml(camlValue, 'The CAML is not a valid XML. Please ensure the CAML is valid before publishing and running the workflow.');
+            return '1' + camlValue;
+        }
+
+        function uxBuilderOnChange(e) {
+            if (!e.target.checked) {
+                return false;
+            }
+
+            if (changesMadeInEditor && !confirm('Changes made in the CAML Editor may be lost if you switch to the Builder mode. Do you wish to proceed?')) {
+                $editor.attr('checked', 'checked');
+                return false;
+            }
+
+            var camlText = $camlTextArea.val();
+            if (!validateXml(camlText)) {
+                $editor.attr('checked', 'checked');
+                return false;
+            }
+
+            populateBuilder(camlText);
+            showBuilder();
+        }
+
+        function uxEditorOnChange(e) {
+            if (!e.target.checked) {
+                return false;
+            }
+
+            $camlTextArea.val(FormatXmlString(buildCamlText()));
+            showEditor();
+            changesMadeInEditor = false;
+        }
+
+        function uxNoFilterOnChange(e) {
+            if (!e.target.checked) {
+                return false;
+            }
+
+            hideFilterBuilder();
+        }
+
+        function uxUseFilterOnChange(e) {
+            if (!e.target.checked) {
+                return false;
+            }
+
+            showFilterBuilder();
+        }
+
+        function camlTextAreaOnChange(e) {
+            changesMadeInEditor = true;
+        }
+
+        function init() {
+            $builder.change(uxBuilderOnChange);
+            $editor.change(uxEditorOnChange);
+            NWL$('#UxNoFilter').change(uxNoFilterOnChange);
+            NWL$('#UxUseFilter').change(uxUseFilterOnChange);
+            NWL$('#UxAddFilter').click(addFilter);
+            NWL$('#UxFilterInputs img.nwl-delete').live('click', removeFilter);
+            addFilter();
+            $camlTextArea.change(camlTextAreaOnChange);
+            initialized = true;
+        }
+
+        return {
+            load: function (valueToLoad) {
+                if (!initialized) {
+                    init();
+                }
+
+                loadValue(valueToLoad);
+            },
+            save: function () {
+                return getValueToSave();
+            }
+        };
+    } ();
+
+    NWL.Designer.DisplayExpression.add('InputSelector', inputSelector.load, inputSelector.save);
+})();
+</script>

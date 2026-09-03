@@ -1,0 +1,95 @@
+﻿/********************************************************************
+ *
+ *  PROPRIETARY and CONFIDENTIAL
+ *
+ *  This file is licensed from, and is a trade secret of:
+ *
+ *                   AvePoint, Inc.
+ *                   525 Washington Blvd, Suite 1400
+ *                   Jersey City, NJ 07310
+ *                   United States of America
+ *                   Telephone: +1-201-793-1111
+ *                   WWW: www.avepoint.com
+ *
+ *  Refer to your License Agreement for restrictions on use,
+ *  duplication, or disclosure.
+ *
+ *  RESTRICTED RIGHTS LEGEND
+ *
+ *  Use, duplication, or disclosure by the Government is
+ *  subject to restrictions as set forth in subdivision
+ *  (c)(1)(ii) of the Rights in Technical Data and Computer
+ *  Software clause at DFARS 252.227-7013 (Oct. 1988) and
+ *  FAR 52.227-19 (C) (June 1987).
+ *
+ *  Copyright © 2017-2026 AvePoint® Inc. All Rights Reserved. 
+ *
+ *  Unpublished - All rights reserved under the copyright laws of the United States.
+ */
+
+
+
+
+namespace System
+{
+    #region using directives
+    using AvePoint.GCommon.Contract.CodeReview;
+    #endregion
+
+    ///<Summary>
+    /// Extended the System.DateTime structure
+    ///</Summary>
+    #region CodeReview
+
+    [AveCodeReview(
+    "2011/12/23",
+    "yhzhang@avepoint.com",
+    "yhzhang@avepoint.com",
+    new string[] { },
+    null,
+    true)]
+    #endregion
+
+    public static class DateTimeExtension
+    {
+        /// <summary>
+        /// convert a date time to java time in long
+        /// </summary>
+        /// <param name="dateTime">date time</param>
+        /// <returns>the java date time in long type</returns>
+        public static Int64 DotNetToJavaTime(this DateTime dateTime)
+        {
+            return dateTime.Ticks.DotNetToJavaTime();
+        }
+
+        /// <summary>
+        /// convert a date time to java time in long
+        /// </summary>
+        /// <param name="dateTime">date time</param>
+        /// <returns>the java date time in long type</returns>
+        public static Int64 ToJavaTime(this DateTime dateTime)
+        {
+            return dateTime.Ticks.DotNetToJavaTime();
+        }
+
+        /// <summary>
+        /// Unix time is offset second of 1970, 1, 1, 0, 0, 0
+        /// </summary>
+        /// <param name="timeInLong"></param>
+        /// <returns></returns>
+        public static Int64 ToUnixTime(this DateTime dateTime)
+        {
+            return dateTime.Ticks.DotNetToJavaTime() / 1000L;
+        }
+
+        /// <summary>
+        /// Unix time is offset second of 1970, 1, 1, 0, 0, 0
+        /// </summary>
+        /// <param name="timeInLong"></param>
+        /// <returns></returns>
+        public static Int64 ToWindowsFileTime(this DateTime dateTime)
+        {
+            return dateTime.ToFileTimeUtc();
+        }
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "dotnet.defaultSolution": "RAOnline.DEV.sln",
+    "csharp.format.enable": true,
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": true,
+    "editor.formatOnType": true,
+    "editor.formatOnSaveMode": "modifications",
+    "dotnet.server.useOmnisharp": true,
+    "omnisharp.enableAsyncCompletion": true,
+    "omnisharp.enableMsBuildLoadProjectsOnDemand": true,
+    "csharp.debug.requireExactSource": false,
+    "dotnet.formatting.organizeImportsOnFormat": true,
+}

@@ -1,0 +1,200 @@
+stages:
+  - pre-build
+
+all-build:
+  stage: pre-build
+  image: clouddevops.azurecr.io/buildbox:10-latest
+  tags:
+    - linux-devops-docker-build
+  only:
+    variables:
+      - $CI_SERVER_HOST == "git.avepoint.net" && $CI_PIPELINE_SOURCE == "push"
+  script:
+    - cd ./RAWeb.UI
+    - npm install --registry=https://${PROGET_SERVER_HOST}/npm/npm.org
+    - gulp BuildOnly
+    - cd ..
+    - dotnet restore --no-cache  ./RAOnline.Build.sln --source https://${PROGET_SERVER_HOST}/nuget/nuget.org/v3/index.json --source https://${PROGET_SERVER_HOST}/nuget/AvePoint/v3/index.json
+    - dotnet build --no-restore ./RAOnline.Build.sln /t:Rebuild /p:Configuration=Release,PlatformTarget=AnyCPU /clp:ErrorsOnly
+
+
+hybridagentservice-build:
+  stage: pre-build
+  image:  clouddevops.azurecr.io/winbuildbox:10-latest
+  script:
+    - nuget.exe restore .\RAAgent.sln -DirectDownload -source https://$PROGET_SERVER_HOST/nuget/NuGet.org/v3/index.json -source https://$PROGET_SERVER_HOST/nuget/AvePoint/v3/index.json
+    - MSBuild.exe .\CICD\Hybrid\HybridAgentServiceBuild.xml /t:MainDeploy /verbosity:Quiet /clp:ErrorsOnly
+  rules:
+    - if: '$CI_SERVER_HOST == "git.avepoint.net" && $CI_PIPELINE_SOURCE == "merge_request_event"'
+      changes:
+        - NewWrapperCommon/**/*
+        - RAAgentContract/**/*
+        - RAAgentCore/**/*
+        - RAAgentWorker/**/*
+        - RecordsAgentCommonUtility/**/*
+    - if: '$CI_SERVER_HOST == "git.avepoint.net" && $CI_PIPELINE_SOURCE == "push" && $CI_OPEN_MERGE_REQUESTS'
+      changes:
+        - NewWrapperCommon/**/*
+        - RAAgentContract/**/*
+        - RAAgentCore/**/*
+        - RAAgentWorker/**/*
+        - RecordsAgentCommonUtility/**/*
+    - when: never
+  tags:
+    - windows-devops-docker-build
+
+
+exporttool-build:
+  stage: pre-build
+  image:  clouddevops.azurecr.io/winbuildbox:10-latest
+  script:
+    - dotnet restore --no-cache .\Tool.Build.sln --source "https://proget.avepoint.net/nuget/NuGet.org" --source "https://proget.avepoint.net/nuget/AvePoint"
+    - dotnet build .\Tool.Build.sln /t:Rebuild /p:Configuration=Release,PlatformTarget=AnyCPU --no-restore /clp:ErrorsOnly
+  rules:
+    - if: '$CI_SERVER_HOST == "git.avepoint.net" && $CI_PIPELINE_SOURCE == "merge_request_event"'
+      changes:
+        - ProductTools/StandaloneTool/**/*
+    - if: '$CI_SERVER_HOST == "git.avepoint.net" && $CI_PIPELINE_SOURCE == "push" && $CI_OPEN_MERGE_REQUESTS'
+      changes:
+        - ProductTools/StandaloneTool/**/*
+    - when: never
+  tags:
+    - windows-devops-docker-build
+
+sonar:
+  stage: pre-build
+  image: clouddevops.azurecr.io/buildbox:10-latest
+  script:
+    - dotnet-sonarscanner begin /k:RECO /d:sonar.host.url=https://sonar.avepoint.net /d:sonar.token=$sonarToken /d:sonar.dependencyCheck.htmlReportPath=$CI_PROJECT_DIR/dependency-check-report.html /d:sonar.dependencyCheck.jsonReportPath=$CI_PROJECT_DIR/dependency-check-report.json /d:sonar.scanner.socketTimeout=1200 /d:sonar.scanner.responseTimeout=1200  /d:sonar.scanner.connectTimeout=1200
+    - cd ./RAWeb.UI
+    - npm install --registry=https://${PROGET_SERVER_HOST}/npm/npm.org
+    - gulp BuildOnly
+    - cd ..
+    - dotnet restore --no-cache  ./RAOnline.Build.sln --source https://${PROGET_SERVER_HOST}/nuget/nuget.org/v3/index.json --source https://${PROGET_SERVER_HOST}/nuget/AvePoint/v3/index.json
+    - dotnet build --no-restore ./RAOnline.Build.sln /t:Rebuild /p:Configuration=Release,PlatformTarget=AnyCPU /clp:ErrorsOnly
+    - dependency-check.sh --project "RECO" -s ./ -o ./ -f HTML -f JSON --retireJsUrl https://vuln-db-mirror.avepoint.net/jsrepository.json --nvdDatafeed https://vuln-db-mirror.avepoint.net/nvdcve-{0}.json.gz --suppression https://autotestreports.blob.core.windows.net/dependency-check-suppress/common/suppression.xml --suppression https://autotestreports.blob.core.windows.net/dependency-check-suppress/records/reco/suppression.xml  --hostedSuppressionsUrl https://vuln-db-mirror.avepoint.net/publishedSuppressions.xml  --kevURL https://vuln-db-mirror.avepoint.net/known_exploited_vulnerabilities.json
+    - dotnet-sonarscanner end /d:sonar.token=$sonarToken
+    - chmod 777 /usr/share/jira/dependencycheckjira.py
+    - python3 /usr/share/jira/dependencycheckjira.py --jsonpath "$CI_PROJECT_DIR/dependency-check-report.json" --sonarurl "https://sonar.avepoint.net/dashboard?id=RECO" --jiraurl "https://jira.avepoint.net" --jiratoken "$DEVOPS_JIRA_TOKEN" --assignee "Caly.Hou" --fixversion "$AUTO_JIRA_ISSUE_FIX_VERSION" --project "RECO"
+    - mkdir ./dependency
+    - zip ./dependency/dependency-check-server-`date "+%Y%m%d"`.zip $CI_PROJECT_DIR/dependency-check*
+    - azcopy cp "./dependency/dependency-check-server-`date "+%Y%m%d"`.zip" "https://autotestreports.blob.core.windows.net/dependency-check/RECO/dependency-check-server-`date "+%Y%m%d"`.zip?${REPORT_STORAGE_SATOKEN}"
+    - echo "https://autotestreports.blob.core.windows.net/dependency-check/RECO/dependency-check-server-`date "+%Y%m%d"`.zip"
+  after_script:
+    - (if [ "$CI_SERVER_HOST" = "git.avepoint.net" ] && [ "$CI_JOB_STATUS" != "success" ]; then echo "job failed" ; cd $CI_PROJECT_DIR; chmod 777 /usr/share/post/post_teams_workflow.py; python3 /usr/share/post/post_teams_workflow.py --type sonar --message RECO $CI_JOB_STATUS $CI_JOB_URL ; fi)
+  only:
+    refs:
+      - /^(master|devops-)/
+      - schedules
+    variables:
+      - $CI_Sonar_Schedule == "daily"
+  tags:
+    - linux-devops-docker-build
+
+
+hybridagentservice-sonar:
+  stage: pre-build
+  image:  clouddevops.azurecr.io/winbuildbox:10-latest
+  only:
+    refs:
+      - /^(master|devops-)/
+      - schedules
+    variables:
+      - $CI_Sonar_Schedule_hybridagentservice == "daily"
+  tags:
+    - windows-devops-docker-build
+  script:
+    - echo $CI_PROJECT_DIR
+    - $HTML_Path = $CI_PROJECT_DIR+'\dependency-check-report.html'
+    - $JSON_Path = $CI_PROJECT_DIR+'\dependency-check-report.json'
+    - SonarScanner.MSBuild.exe begin /k:reco_hybridagent  /d:sonar.host.url=https://sonar.avepoint.net /d:sonar.token=$sonarToken /d:sonar.dependencyCheck.htmlReportPath=$HTML_Path /d:sonar.dependencyCheck.jsonReportPath=$JSON_Path /d:sonar.scanner.socketTimeout=1200 /d:sonar.scanner.responseTimeout=1200  /d:sonar.scanner.connectTimeout=1200
+    - nuget.exe restore .\RAAgent.sln -source "https://$PROGET_SERVER_HOST/NuGet/NuGet.org" -source "https://$PROGET_SERVER_HOST/NuGet/AvePoint"
+    - MSBuild.exe .\CICD\Hybrid\HybridAgentServiceBuild.xml /t:MainDeploy /verbosity:Quiet /clp:ErrorsOnly
+    - dependency-check.bat --project reco_hybridagent  -s .\ -o . -f HTML -f JSON --retireJsUrl https://vuln-db-mirror.avepoint.net/jsrepository.json --nvdDatafeed "https://vuln-db-mirror.avepoint.net/nvdcve-{0}.json.gz" --suppression https://autotestreports.blob.core.windows.net/dependency-check-suppress/common/suppression.xml --suppression https://autotestreports.blob.core.windows.net/dependency-check-suppress/records/reco/hybridagent/suppression.xml --hostedSuppressionsUrl https://vuln-db-mirror.avepoint.net/publishedSuppressions.xml --kevURL https://vuln-db-mirror.avepoint.net/known_exploited_vulnerabilities.json --exclude "**/Packages/Microsoft.Identity.Client.4.74.1/**" --exclude "**/Microsoft.Identity.Client.aar" --exclude "**/Microsoft.Identity.Client.*.nupkg"
+    - SonarScanner.MSBuild.exe end /d:sonar.token=$sonarToken
+    - $filename='dependency-check-hybridagent-'+(Get-Date).ToString('yyyyMMdd')
+    - Compress-Archive .\dependency-check-report* -DestinationPath .\$filename.zip
+    - azcopy.exe cp ".\$filename.zip" "https://autotestreports.blob.core.windows.net/dependency-check/RECO/$filename.zip?${REPORT_STORAGE_SATOKEN}"
+    - $zipURL = "https://autotestreports.blob.core.windows.net/dependency-check/RECO/$filename.zip?${REPORT_STORAGE_SATOKEN}"
+    - Write-Host "$zipURL"
+    - python.exe C:\scripts\dependencycheckjira\dependencycheckjira.py -j "$CI_PROJECT_DIR\dependency-check-report.json" -s "https://sonar.avepoint.net/dashboard?id=reco_hybridagent" -u "https://jira.avepoint.net" -t $DEVOPS_JIRA_TOKEN -a "Caly.Hou" -f "$AUTO_JIRA_ISSUE_FIX_VERSION" -p "RECO"  --sh "Opus-hybridagent"
+  after_script:
+    - if ( $CI_JOB_STATUS -ne "success" -and $CI_SERVER_HOST -ne "gitlab.avepoint.net" ){
+      cd $CI_PROJECT_DIR;
+      python.exe C:\scripts\post_teams_workflow.py --type sonar --message RECO-Hybridagentservice $CI_JOB_STATUS $CI_JOB_URL}
+
+
+exporttool-sonar:
+  stage: pre-build
+  image:  clouddevops.azurecr.io/winbuildbox:10-latest
+  only:
+    refs:
+      - /^(master|devops-)/
+      - schedules
+    variables:
+      - $CI_Sonar_Schedule_exporttool == "daily"
+  tags:
+    - windows-devops-docker-build
+  script:
+    - echo $CI_PROJECT_DIR
+    - $HTML_Path = $CI_PROJECT_DIR+'\dependency-check-report.html'
+    - $JSON_Path = $CI_PROJECT_DIR+'\dependency-check-report.json'
+    - SonarScanner.MSBuild.exe begin /k:reco_exporttool  /d:sonar.host.url=https://sonar.avepoint.net /d:sonar.token=$sonarToken /d:sonar.dependencyCheck.htmlReportPath=$HTML_Path /d:sonar.dependencyCheck.jsonReportPath=$JSON_Path /d:sonar.scanner.socketTimeout=1200 /d:sonar.scanner.responseTimeout=1200  /d:sonar.scanner.connectTimeout=1200
+    - dotnet restore --no-cache .\Tool.Build.sln --source "https://proget.avepoint.net/nuget/NuGet.org" --source "https://proget.avepoint.net/nuget/AvePoint"
+    - dotnet build .\Tool.Build.sln /t:Rebuild /p:Configuration=Release,PlatformTarget=AnyCPU --no-restore /clp:ErrorsOnly
+    - dependency-check.bat --project reco_exporttool  -s .\ -o . -f HTML -f JSON --retireJsUrl https://vuln-db-mirror.avepoint.net/jsrepository.json --nvdDatafeed "https://vuln-db-mirror.avepoint.net/nvdcve-{0}.json.gz" --suppression https://autotestreports.blob.core.windows.net/dependency-check-suppress/common/suppression.xml --suppression https://autotestreports.blob.core.windows.net/dependency-check-suppress/records/reco/exporttool/suppression.xml --hostedSuppressionsUrl https://vuln-db-mirror.avepoint.net/publishedSuppressions.xml --kevURL https://vuln-db-mirror.avepoint.net/known_exploited_vulnerabilities.json
+    - SonarScanner.MSBuild.exe end /d:sonar.token=$sonarToken
+    - $filename='dependency-check-exporttool-'+(Get-Date).ToString('yyyyMMdd')
+    - Compress-Archive .\dependency-check-report* -DestinationPath .\$filename.zip
+    - azcopy.exe cp ".\$filename.zip" "https://autotestreports.blob.core.windows.net/dependency-check/RECO/$filename.zip?${REPORT_STORAGE_SATOKEN}"
+    - $zipURL = "https://autotestreports.blob.core.windows.net/dependency-check/RECO/$filename.zip?${REPORT_STORAGE_SATOKEN}"
+    - Write-Host "$zipURL"
+    - python.exe C:\scripts\dependencycheckjira\dependencycheckjira.py -j "$CI_PROJECT_DIR\dependency-check-report.json" -s "https://sonar.avepoint.net/dashboard?id=reco_exporttool" -u "https://jira.avepoint.net" -t $DEVOPS_JIRA_TOKEN -a "Caly.Hou" -f "$AUTO_JIRA_ISSUE_FIX_VERSION" -p RECO   --sh "Opus-exporttool"
+  after_script:
+    - if ( $CI_JOB_STATUS -ne "success" -and $CI_SERVER_HOST -ne "gitlab.avepoint.net" ){
+      cd $CI_PROJECT_DIR;
+      python.exe C:\scripts\post_teams_workflow.py --type sonar --message RECO-exporttool $CI_JOB_STATUS $CI_JOB_URL}
+
+
+review:
+  stage: pre-build
+  image: clouddevops.azurecr.io/buildbox:10-latest
+  tags:
+    - linux-devops-docker-build
+  script:
+    - |
+      #!/bin/bash
+      comments=$(curl --header "PRIVATE-TOKEN: $AZURE_OPENAI_SHARPEYE_TOKEN" "https://git.avepoint.net/api/v4/projects/$CI_PROJECT_ID/merge_requests/$CI_MERGE_REQUEST_IID/notes")
+      if echo $comments | grep -q "\"username\":\"$AZURE_OPENAI_SHARPEYE_NAME\""; then
+          echo "This MR has already been reviewed, it will not be reviewed again. skip."
+          exit 0
+      else
+          echo "User $USERNAME has not commented. Proceeding with datagen."
+          datagen cr --summarize --git-token $AZURE_OPENAI_SHARPEYE_TOKEN --project-id $CI_PROJECT_ID --pipeline-id $CI_PIPELINE_ID --llm-endpoint $AZURE_OPENAI_ENDPOINT --llm-deployment-name $AZURE_OPENAI_DEPLOYMENT_NAME --llm-key $AZURE_OPENAI_API_KEY
+      fi
+  rules:
+    - if: '$CI_PIPELINE_SOURCE == "merge_request_event" && $CI_MERGE_REQUEST_TITLE !~ $IGNORE_PATTERN && $CI_MERGE_REQUEST_SOURCE_BRANCH_NAME !~ $IGNORE_PATTERN && $AZURE_OPENAI_SHARPEYE_SKIP == null'
+
+
+sonar-dataextraction:
+  stage: pre-build
+  image: clouddevops.azurecr.io/buildbox:10-latest
+  script:
+    - sonar-scanner -Dsonar.python.version=3.12 -Dsonar.projectKey=Reco_Dataextraction -Dsonar.sources=$CI_PROJECT_DIR/MachineLearning  -Dsonar.sonar.host.url=https://sonar.avepoint.net -Dsonar.token=$sonarToken -Dsonar.dependencyCheck.htmlReportPath=$CI_PROJECT_DIR/MachineLearning/dependency-check-report.html -Dsonar.dependencyCheck.jsonReportPath=$CI_PROJECT_DIR/MachineLearning/dependency-check-report.json
+    - dependency-check.sh --project "Reco_Dataextraction" -s $CI_PROJECT_DIR/MachineLearning -o $CI_PROJECT_DIR/MachineLearning -f HTML -f JSON --retireJsUrl https://vuln-db-mirror.avepoint.net/jsrepository.json --nvdDatafeed https://vuln-db-mirror.avepoint.net/nvdcve-{0}.json.gz --suppression https://autotestreports.blob.core.windows.net/dependency-check-suppress/common/suppression.xml --suppression https://autotestreports.blob.core.windows.net/dependency-check-suppress/records/reco/suppression.xml  --hostedSuppressionsUrl https://vuln-db-mirror.avepoint.net/publishedSuppressions.xml  --kevURL https://vuln-db-mirror.avepoint.net/known_exploited_vulnerabilities.json
+    - chmod 777 /usr/share/jira/dependencycheckjira.py
+    - python3 /usr/share/jira/dependencycheckjira.py --jsonpath "$CI_PROJECT_DIR/MachineLearning/dependency-check-report.json" --sonarurl "https://sonar.avepoint.net/dashboard?id=Reco_Dataextraction" --jiraurl "https://jira.avepoint.net" --jiratoken "$DEVOPS_JIRA_TOKEN" --assignee "jack.wang" --fixversion "$AUTO_JIRA_ISSUE_FIX_VERSION" --project "RECO" --sh "Opus-Dataextraction"
+    - mkdir ./dependency
+    - zip ./dependency/dependency-check-dataextraction-`date "+%Y%m%d"`.zip $CI_PROJECT_DIR/MachineLearning/dependency-check*
+    - azcopy cp "./dependency/dependency-check-dataextraction-`date "+%Y%m%d"`.zip" "https://autotestreports.blob.core.windows.net/dependency-check/RECO/dependency-check-dataextraction-`date "+%Y%m%d"`.zip?${REPORT_STORAGE_SATOKEN}"
+    - echo "https://autotestreports.blob.core.windows.net/dependency-check/RECO/dependency-check-dataextraction-`date "+%Y%m%d"`.zip"
+  after_script:
+    - (if [ "$CI_SERVER_HOST" = "git.avepoint.net" ] && [ "$CI_JOB_STATUS" != "success" ]; then echo "job failed" ; cd $CI_PROJECT_DIR; chmod 777 /usr/share/post/post_teams_workflow.py; python3 /usr/share/post/post_teams_workflow.py --type sonar --message RECO-Dataextraction $CI_JOB_STATUS $CI_JOB_URL ; fi)
+  only:
+    refs:
+      - /^(master|devops-)/
+      - schedules
+    variables:
+      - $CI_Sonar_Schedule == "daily"
+  tags:
+    - linux-devops-docker-build

@@ -1,0 +1,872 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="StorageOptimization13_SOARArchiverDeletionCheckWebStubInfo" xml:space="preserve">
+    <value>An error occurred while checking web stub info.</value>
+  </data>
+  <data name="StorageOptimization13_SOARArchiverDeletionCreateAttachmentStubOrDelete" xml:space="preserve">
+    <value>An error occurred while deleting attachment.</value>
+  </data>
+  <data name="StorageOptimization13_SOARArchiverDeletionDeleteAllListItems" xml:space="preserve">
+    <value>An error occurred while deleting all list items.</value>
+  </data>
+  <data name="StorageOptimization13_SOARArchiverDeletionDeleteAttachment" xml:space="preserve">
+    <value>An error occurred while deleting attachment: {0} error message: {1}</value>
+  </data>
+  <data name="StorageOptimization13_SOARArchiverDeletionDeleteDocumentCheckconfig" xml:space="preserve">
+    <value>An error occurred while checking configuration file.</value>
+  </data>
+  <data name="StorageOptimization13_SOARArchiverDeletionDeleteDocumentDelDoc" xml:space="preserve">
+    <value>Deleted document {0} successfully.</value>
+  </data>
+  <data name="StorageOptimization13_SOARArchiverDeletionDeleteDocumentOccurred" xml:space="preserve">
+    <value>An error occurred while deleting document {0}\r\n. {1}</value>
+  </data>
+  <data name="StorageOptimization13_SOARArchiverDeletionDeleteDocumentVersion" xml:space="preserve">
+    <value>An error occurred while deleting document version. {0}</value>
+  </data>
+  <data name="StorageOptimization13_SOARArchiverDeletionDeleteDocVersionDeleteDocVersion" xml:space="preserve">
+    <value>An error occurred while deleting document version.</value>
+  </data>
+  <data name="StorageOptimization13_SOARArchiverDeletionDeleteDocVersionfromBegining" xml:space="preserve">
+    <value>An error occurred while deleting document version from the beginning.</value>
+  </data>
+  <data name="StorageOptimization13_SOARArchiverDeletionDeleteDocVersionhappen" xml:space="preserve">
+    <value>An error occurred while deleting document version.</value>
+  </data>
+  <data name="StorageOptimization13_SOARArchiverDeletionDeleteItemInListAndFolder" xml:space="preserve">
+    <value>An error occurred while deleting item in list and folder.</value>
+  </data>
+  <data name="StorageOptimization13_SOARArchiverDeletionDeleteList" xml:space="preserve">
+    <value>An error occurred while deleting list: {0} error message: {1}</value>
+  </data>
+  <data name="StorageOptimization13_SOARArchiverDeletionDeleteListItemCreateliststub" xml:space="preserve">
+    <value>An error occurred while deleting list item. {0}</value>
+  </data>
+  <data name="StorageOptimization13_SOARArchiverDeletionDeleteListItemDELETE" xml:space="preserve">
+    <value>An error occurred while deleting all document streams in deleting item.</value>
+  </data>
+  <data name="StorageOptimization13_SOARArchiverDeletionDeleteListItemreaddata" xml:space="preserve">
+    <value>An error occurred while reading data from all lists.</value>
+  </data>
+  <data name="StorageOptimization13_SOARArchiverDeletionDeleteListItemVersionDelete" xml:space="preserve">
+    <value>An error occurred while deleting item version.</value>
+  </data>
+  <data name="StorageOptimization13_SOARArchiverDeletionDeleteListItemVersionReaddata" xml:space="preserve">
+    <value>An error occurred while reading data from all lists in the method of deleting list item version. {0}</value>
+  </data>
+  <data name="StorageOptimization13_SOARArchiverDeletionDeleteNavigation" xml:space="preserve">
+    <value>An error occurred while deleting navigation.</value>
+  </data>
+  <data name="StorageOptimization13_SOARArchiverDeletionDeleteSite" xml:space="preserve">
+    <value>An error occurred while deleting site.</value>
+  </data>
+  <data name="StorageOptimization13_SOARArchiverDeletionDeleteWeb" xml:space="preserve">
+    <value>An error occurred while deleting Web. {0}</value>
+  </data>
+  <data name="StorageOptimization13_SOARArchiverDeletionGetAttaUserDataInfo" xml:space="preserve">
+    <value>An error occurred while getting attachment user data info.</value>
+  </data>
+  <data name="StorageOptimization13_SOARArchiverDeletionGetCurrentItem" xml:space="preserve">
+    <value>The current item is null.</value>
+  </data>
+  <data name="StorageOptimization13_SOARArchiverDeletionGetListDescription" xml:space="preserve">
+    <value>Getting list description.</value>
+  </data>
+  <data name="StorageOptimization13_SOARArchiverDeletionGetUserDataInfocolsesql" xml:space="preserve">
+    <value>Closed connection data reader failed.</value>
+  </data>
+  <data name="StorageOptimization13_SOARArchiverDeletionGetUserDataInfogetuser" xml:space="preserve">
+    <value>An error occurred while getting user data info.</value>
+  </data>
+  <data name="StorageOptimization13_SOARArchiverDeletionHandleResponseMessageerror" xml:space="preserve">
+    <value>An error occurred while handling response message. {0}</value>
+  </data>
+  <data name="StorageOptimization13_SOARArchiverDeletionHandleResponseMessageReceive" xml:space="preserve">
+    <value>Receive media confirmation {0}.</value>
+  </data>
+  <data name="StorageOptimization13_SOARArchiverDeletionInitList" xml:space="preserve">
+    <value>An error occurred while initializing list.</value>
+  </data>
+  <data name="StorageOptimization13_SOARArchiverDeletionInitWeb" xml:space="preserve">
+    <value>An error occurred while initializing Web.</value>
+  </data>
+  <data name="StorageOptimization13_SOARBackupDiscoverNodeWorkerInitContainerLevelNodeWithRule" xml:space="preserve">
+    <value>An exception occurred while checking container: {0}</value>
+  </data>
+  <data name="StorageOptimization13_SOARBackupImpsBackupList" xml:space="preserve">
+    <value>Start list backup {0}...</value>
+  </data>
+  <data name="StorageOptimization13_SOARBackupImpsBackupMyList" xml:space="preserve">
+    <value>Start my list backup...</value>
+  </data>
+  <data name="StorageOptimization13_SOARBackupImpsFolderBackupbackup" xml:space="preserve">
+    <value>Start folder backup...</value>
+  </data>
+  <data name="StorageOptimization13_SOARBackupImpsItemBackupbackup" xml:space="preserve">
+    <value>Start item backup {0}...</value>
+  </data>
+  <data name="StorageOptimization13_SOARBackupImpsItemBackupException" xml:space="preserve">
+    <value>StorageOptimization_SOARBackupImpsItemBackupException</value>
+  </data>
+  <data name="StorageOptimization13_SOARBackupImpsSiteCollectionBackupbackup" xml:space="preserve">
+    <value>Start site collection backup...</value>
+  </data>
+  <data name="StorageOptimization13_SOARBackupImpsWebBackupbackup" xml:space="preserve">
+    <value>Start web backup...</value>
+  </data>
+  <data name="StorageOptimization13_SOARBackupMainBackuperrorinbackup" xml:space="preserve">
+    <value>An error occurred while backing up. {0}</value>
+  </data>
+  <data name="StorageOptimization13_SOARBackupMainBackuperroringetrule" xml:space="preserve">
+    <value>An error occurred while getting rule: {0}</value>
+  </data>
+  <data name="StorageOptimization13_SOARBackupMainBackuprulecount" xml:space="preserve">
+    <value>Rule count: {0}.</value>
+  </data>
+  <data name="StorageOptimization13_SOARBackupMainBackupsendclose" xml:space="preserve">
+    <value>An error occurred while sending close message to media. {0}</value>
+  </data>
+  <data name="StorageOptimization13_SOARBackupMainDeleteApproveDB" xml:space="preserve">
+    <value>An error occurred while deleting approve data file, because it may be used.</value>
+  </data>
+  <data name="StorageOptimization13_SOARCLReaderDiscoverNode" xml:space="preserve">
+    <value>An error occurred while discovering object: {0}</value>
+  </data>
+  <data name="StorageOptimization13_SOARResponseHandleProcessMessageNotImplementedException" xml:space="preserve">
+    <value>StorageOptimization_SOARResponseHandleProcessMessageNotImplementedException</value>
+  </data>
+  <data name="StorageOptimization13_SOARResponseHandleSaveXmlHeader" xml:space="preserve">
+    <value>An error occurred while handling response message in Xml header. {0}</value>
+  </data>
+  <data name="StorageOptimization13_SOARScanCaculateSiteListCount" xml:space="preserve">
+    <value>An unexpected error occurred while processing site collection node.</value>
+  </data>
+  <data name="StorageOptimization13_SOARScanCaculateWebListCount" xml:space="preserve">
+    <value>An unexpected error occurred while processing Web node.</value>
+  </data>
+  <data name="StorageOptimization13_SOARScanDiscoverNodeWorkerException" xml:space="preserve">
+    <value>The query type is unknown.</value>
+  </data>
+  <data name="StorageOptimization13_SOARScanDiscoverNodeWorkerInitContainerLevelNodeWithRule" xml:space="preserve">
+    <value>An error occurred while checking criteria at the container level.</value>
+  </data>
+  <data name="StorageOptimization13_SOARScanDiscoverNodeWorkerInitItemLevelNodeWithRule" xml:space="preserve">
+    <value>StorageOptimization_SOARScanDiscoverNodeWorkerInitItemLevelNodeWithRule</value>
+  </data>
+  <data name="StorageOptimization13_SOARScanProcessFolder" xml:space="preserve">
+    <value>An unexpected error occurred while processing folder node.</value>
+  </data>
+  <data name="StorageOptimization13_SOARScanProcessList" xml:space="preserve">
+    <value>An unexpected error occurred while processing list node.</value>
+  </data>
+  <data name="StorageOptimization13_SOARScanProcessSite" xml:space="preserve">
+    <value>An unexpected error occurred while processing site collection node.</value>
+  </data>
+  <data name="StorageOptimization13_SOARScanProcessSiteSPObjectNotFoundException" xml:space="preserve">
+    <value>Site collection is null. Maybe it does not exist in current SharePoint environment.</value>
+  </data>
+  <data name="StorageOptimization13_SOARScanProcessWebProcressSubWeb" xml:space="preserve">
+    <value>An exception occurred while processing subweb.</value>
+  </data>
+  <data name="StorageOptimization13_SOARScanProcessWebSPObjectNotFoundException" xml:space="preserve">
+    <value>StorageOptimization_SOARScanProcessWebSPObjectNotFoundException</value>
+  </data>
+  <data name="StorageOptimization13_SOARScanProcessWebWeb" xml:space="preserve">
+    <value>An unexpected error occurred while processing web node.</value>
+  </data>
+  <data name="StorageOptimization13_SOARScanScanException" xml:space="preserve">
+    <value>The level is unknown.</value>
+  </data>
+  <data name="StorageOptimization13_SOARScanScanProcess" xml:space="preserve">
+    <value>Processed one node of the current schedule failed due to a fatal exception.</value>
+  </data>
+  <data name="StorageOptimization13_SOARScanScanspecified" xml:space="preserve">
+    <value>The specified node cannot be found in the SharePoint environment.</value>
+  </data>
+  <data name="StorageOptimization13_SOARScheduleStatusManagerEnsureScheduleStatusScheduleManualStoppedException" xml:space="preserve">
+    <value>The current schedule is stopped.</value>
+  </data>
+  <data name="StorageOptimization13_SOARSOArchiverSchedulePerformScheduleJob" xml:space="preserve">
+    <value>Start {0} {1}</value>
+  </data>
+  <data name="StorageOptimization13_SOARSOArchiverScheduleScanerror" xml:space="preserve">
+    <value>An error occurred while scanning. {0}</value>
+  </data>
+  <data name="StorageOptimization13_SOARSOArchiverScheduleScanException" xml:space="preserve">
+    <value>An exception occurred while scanning node: {0}. Exception: {1}</value>
+  </data>
+  <data name="StorageOptimization13_SOARArchiverDeletionDeleteDocumentSystemFolder" xml:space="preserve">
+    <value>This is an item of System Folder and does not need to be deleted.</value>
+  </data>
+  <data name="StorageOptimization13_SOARArchiverDeletionDeleteListsucceed" xml:space="preserve">
+    <value>Deleted list {0} successfully.</value>
+  </data>
+  <data name="StorageOptimization13_SOARArchiverDeletionDeleteSitesucceed" xml:space="preserve">
+    <value>Deleted site {0} successfully.</value>
+  </data>
+  <data name="StorageOptimization13_SOARArchiverDeletionDeleteWebsucceed" xml:space="preserve">
+    <value>Deleted web {0} successfully.</value>
+  </data>
+  <data name="StorageOptimization13_SOARSPObjectLockedException" xml:space="preserve">
+    <value>StorageOptimization_SOARSPObjectLockedException</value>
+  </data>
+  <data name="StorageOptimization13_SOARSPObjectReadOnlyException" xml:space="preserve">
+    <value>StorageOptimization_SOARSPObjectReadOnlyException</value>
+  </data>
+  <data name="StorageOptimization13_SOARArchiverDeletionDeleteListItemdebug" xml:space="preserve">
+    <value>No attachment.</value>
+  </data>
+  <data name="StorageOptimization13_SOARArchiverDeletionDeleteListItemsucceed" xml:space="preserve">
+    <value>Deleted the item {0}  successfully.</value>
+  </data>
+  <data name="StorageOptimization13_SOARBackupImpsSiteCollectionBackupArchiveLevel" xml:space="preserve">
+    <value>Start sending the job progress...Archiver level: {0}</value>
+  </data>
+  <data name="StorageOptimization13_SOARBackupMainBackupsendend" xml:space="preserve">
+    <value>send close message to media. {0}</value>
+  </data>
+  <data name="StorageOptimization13_SOARScanProcessListCollectionError" xml:space="preserve">
+    <value>An error occurred while processing list: {0}. Exception:  {1}</value>
+  </data>
+  <data name="StorageOptimization13_SOARArchiverDeletionDeleteAttachmentsucceed" xml:space="preserve">
+    <value>Deleted attachment {0} successfully.</value>
+  </data>
+  <data name="StorageOptimization13_SOARBackupMainBackupGetApprovalReportFileError" xml:space="preserve">
+    <value>An error occurred while receiving data.</value>
+  </data>
+  <data name="StorageOptimization13_SOARScanProcessAttachmentsError" xml:space="preserve">
+    <value>An error occurred while processing attachments.</value>
+  </data>
+  <data name="StorageOptimization13_SOARScanProcessItemsAndFoldersError" xml:space="preserve">
+    <value>An error occurred while processing items and subfolders.</value>
+  </data>
+  <data name="StorageOptimization13_SOARScanProcessItemVersionsError" xml:space="preserve">
+    <value>An error occurred while processing versions.</value>
+  </data>
+  <data name="StorageOptimization13_SOARBackupMainAddBackupCommonsItemComments" xml:space="preserve">
+    <value>StorageOptimization_SOARBackupMainAddBackupCommonsItemComments</value>
+  </data>
+  <data name="StorageOptimization13_SOARBackupMainAddBackupCommonsListComments" xml:space="preserve">
+    <value>StorageOptimization_SOARBackupMainAddBackupCommonsListComments</value>
+  </data>
+  <data name="StorageOptimization13_SOARBackupMainAddBackupCommonsSiteCollectionComments" xml:space="preserve">
+    <value>StorageOptimization_SOARBackupMainAddBackupCommonsSiteCollectionComments</value>
+  </data>
+  <data name="StorageOptimization13_SOARBackupMainAddBackupCommonsSiteComments" xml:space="preserve">
+    <value>StorageOptimization_SOARBackupMainAddBackupCommonsSiteComments</value>
+  </data>
+  <data name="StorageOptimization13_SOARSOArchiverScheduleScancommonts" xml:space="preserve">
+    <value>StorageOptimization_SOARSOArchiverScheduleScancommonts</value>
+  </data>
+  <data name="StorageOptimization13_SOARArchiveDeletionDeleteDocumentErrorInDocument" xml:space="preserve">
+    <value>An error occurred while deleting document.</value>
+  </data>
+  <data name="StorageOptimization13_SOARArchiverDeletionDeleteDocumentError" xml:space="preserve">
+    <value>An error occurred while deleting document. {0}</value>
+  </data>
+  <data name="StorageOptimization13_SOARArchiverDeletionDeleteDocumentException" xml:space="preserve">
+    <value>An error occurred while discarding checked out document: {0}. Exception :{1}</value>
+  </data>
+  <data name="StorageOptimization13_SOARArchiverDeletionDeleteDocumentVersionDeletionSuccessfull" xml:space="preserve">
+    <value>Deleted the document version successfully.</value>
+  </data>
+  <data name="StorageOptimization13_SOARArchiverDeletionRealDeleteAttachmentInfo" xml:space="preserve">
+    <value>Deleted the attachment {0} successfully.</value>
+  </data>
+  <data name="StorageOptimization13_SOARBackupImpsBackupDocumentOrDocumentVersionInfo" xml:space="preserve">
+    <value>Send backup tail to media: {0}.</value>
+  </data>
+  <data name="StorageOptimization13_SOARBackupImpsBackupInfo" xml:space="preserve">
+    <value>Send backup tail to media :{0}.</value>
+  </data>
+  <data name="StorageOptimization13_SOARBackupImpsBackupMyListWarn" xml:space="preserve">
+    <value>An error occurred while backing up mylist.</value>
+  </data>
+  <data name="StorageOptimization13_SOARBackupMainBackupBeginSend" xml:space="preserve">
+    <value>Start sending close to Media.</value>
+  </data>
+  <data name="StorageOptimization13_SOARBackupMainBackupException" xml:space="preserve">
+    <value>An error occurred while backing up.</value>
+  </data>
+  <data name="StorageOptimization13_SOARBackupMainBackupWarn" xml:space="preserve">
+    <value>Failed to get approval report file.</value>
+  </data>
+  <data name="StorageOptimization13_SOARBackupMainGetApprovalReportFileDataReceiver" xml:space="preserve">
+    <value>An error occurred while receiving the data.</value>
+  </data>
+  <data name="StorageOptimization13_SOARBackupMainGetApprovalReportFileException" xml:space="preserve">
+    <value>An error occurred while getting approval report file.</value>
+  </data>
+  <data name="StorageOptimization13_SOARScanDiscoverNodeWorkerIsSystemListWarn" xml:space="preserve">
+    <value>Skip scanning the external list.</value>
+  </data>
+  <data name="StorageOptimization13_SOARSOArchiverScheduleBackupError" xml:space="preserve">
+    <value>An error occurred while diposing backup. {0}</value>
+  </data>
+  <data name="StorageOptimization13_SOARSOArchiverSchedulePerformScheduleJobInfo" xml:space="preserve">
+    <value>Performed the schedule iob ended.</value>
+  </data>
+  <data name="StorageOptimization13_SOARSOArchiverScheduleScanDisposeSuccessfully" xml:space="preserve">
+    <value>Storage Optimization Archiver Schedule: Disposed in scan successfully.</value>
+  </data>
+  <data name="StorageOptimization13_SOARBackupMainBackupErrorInMedia" xml:space="preserve">
+    <value>StorageOptimization_SOARBackupMainBackupErrorInMedia</value>
+  </data>
+  <data name="StorageOptimization13_SOAREndUserGetFeatureStatusException" xml:space="preserve">
+    <value>An error occurred while get feature status:</value>
+  </data>
+  <data name="StorageOptimization13_SOAREndUserGetFeatureStatusWebappException" xml:space="preserve">
+    <value>An error occurred while getting the feature status of the web application {0}:</value>
+  </data>
+  <data name="StorageOptimization13_SOAREndUserInstallFeatureException" xml:space="preserve">
+    <value>An error occurred while processing the web application {0}:</value>
+  </data>
+  <data name="StorageOptimization13_SOARArchiverDeletionDeleteDocumentdelete" xml:space="preserve">
+    <value>The document {0} has been deleted.</value>
+  </data>
+  <data name="StorageOptimization13_SOARArchiverDeletionDeleteDocumentModified" xml:space="preserve">
+    <value>StorageOptimization_SOARArchiverDeletionDeleteDocumentModified</value>
+  </data>
+  <data name="StorageOptimization13_SOARArchiverDeletionDeleteDocumentVersiondelete" xml:space="preserve">
+    <value>The document {0} has been deleted.</value>
+  </data>
+  <data name="StorageOptimization13_SOARArchiverDeletionDeleteDocumentversionfailed" xml:space="preserve">
+    <value>StorageOptimization_SOARArchiverDeletionDeleteDocumentversionfailed</value>
+  </data>
+  <data name="StorageOptimization13_SOARArchiverDeletionDeleteDocumentVersionModified" xml:space="preserve">
+    <value>StorageOptimization_SOARArchiverDeletionDeleteDocumentVersionModified</value>
+  </data>
+  <data name="StorageOptimization13_SOARArchiverDeletionDeleteListCannotDelete" xml:space="preserve">
+    <value>StorageOptimization_SOARArchiverDeletionDeleteListCannotDelete</value>
+  </data>
+  <data name="StorageOptimization13_SOARArchiverDeletionDeleteListItemAttachment" xml:space="preserve">
+    <value>Some attachments cannot be deleted.</value>
+  </data>
+  <data name="StorageOptimization13_SOARArchiverDeletionDeleteListItemCannotDelete" xml:space="preserve">
+    <value>StorageOptimization_SOARArchiverDeletionDeleteListItemCannotDelete</value>
+  </data>
+  <data name="StorageOptimization13_SOARArchiverDeletionDeleteListItemItemVersion" xml:space="preserve">
+    <value>StorageOptimization_SOARArchiverDeletionDeleteListItemItemVersion</value>
+  </data>
+  <data name="StorageOptimization13_SOARArchiverDeletionDeleteListItemModified" xml:space="preserve">
+    <value>StorageOptimization_SOARArchiverDeletionDeleteListItemModified</value>
+  </data>
+  <data name="StorageOptimization13_SOARArchiverDeletionDeleteListItemVersionModified" xml:space="preserve">
+    <value>StorageOptimization_SOARArchiverDeletionDeleteListItemVersionModified</value>
+  </data>
+  <data name="StorageOptimization13_SOARArchiverDeletionDeleteSiteList" xml:space="preserve">
+    <value>StorageOptimization_SOARArchiverDeletionDeleteSiteList</value>
+  </data>
+  <data name="StorageOptimization13_SOARArchiverDeletionDeleteSiteWeb" xml:space="preserve">
+    <value>StorageOptimization_SOARArchiverDeletionDeleteSiteWeb</value>
+  </data>
+  <data name="StorageOptimization13_SOARArchiverDeletionEnableListAlerts" xml:space="preserve">
+    <value>An exception occurred while enabling list alert: {0}</value>
+  </data>
+  <data name="StorageOptimization13_SOARArchiverDeletionGetWorkFlowTaskItem" xml:space="preserve">
+    <value>An error occurred while getting the Work Flow item in the list. Error:</value>
+  </data>
+  <data name="StorageOptimization13_SOARArchiverDeletionStopListAlerts" xml:space="preserve">
+    <value>An exception occurred while stopping the list alerts: {0}</value>
+  </data>
+  <data name="StorageOptimization13_SOARResponseHandleProcessor" xml:space="preserve">
+    <value>An error occurred while starting the deletion.</value>
+  </data>
+  <data name="StorageOptimization13_SOARCOMArchiverReportDtoAddDeletionCommonsItem" xml:space="preserve">
+    <value>StorageOptimization_SOARCOMArchiverReportDtoAddDeletionCommonsItem</value>
+  </data>
+  <data name="StorageOptimization13_SOARCOMArchiverReportDtoAddDeletionCommonsList" xml:space="preserve">
+    <value>StorageOptimization_SOARCOMArchiverReportDtoAddDeletionCommonsList</value>
+  </data>
+  <data name="StorageOptimization13_SOARCOMArchiverReportDtoAddDeletionCommonsSite" xml:space="preserve">
+    <value>StorageOptimization_SOARCOMArchiverReportDtoAddDeletionCommonsSite</value>
+  </data>
+  <data name="StorageOptimization13_SOARCOMArchiverReportDtoAddDeletionCommonsSiteCollection" xml:space="preserve">
+    <value>StorageOptimization_SOARCOMArchiverReportDtoAddDeletionCommonsSiteCollection</value>
+  </data>
+  <data name="StorageOptimization13_SOARCOMCheckRuleManagementCriteria" xml:space="preserve">
+    <value>An error occurred whiel checking the criteria.</value>
+  </data>
+  <data name="StorageOptimization13_SOARCOMCustomContainersFetchNext" xml:space="preserve">
+    <value>An error occurred while fetching node:</value>
+  </data>
+  <data name="StorageOptimization13_SOARCOMJobProgressDtoProcessThread" xml:space="preserve">
+    <value>An error occurred while sending process.</value>
+  </data>
+  <data name="StorageOptimization13_SOARCOMJobProgressDtoProcessThreadSendJobProcess" xml:space="preserve">
+    <value>Sent the job process {0} successfully.</value>
+  </data>
+  <data name="StorageOptimization13_SOARCOMJobProgressDtoProcessThreadSendJobStatus" xml:space="preserve">
+    <value>Sent the status {0} successfully.</value>
+  </data>
+  <data name="StorageOptimization13_SOARCOMPCContainerConsumeObjectDisposedException" xml:space="preserve">
+    <value>"PCContainer", "The consuming process has been stopped."</value>
+  </data>
+  <data name="StorageOptimization13_SOARCOMPCContainerConsumeSynchronizationLockException" xml:space="preserve">
+    <value>Consumer gets an object from an empty container.</value>
+  </data>
+  <data name="StorageOptimization13_SOARCOMPCContainerProduceObjectDisposedException" xml:space="preserve">
+    <value>StorageOptimization_SOARCOMPCContainerProduceObjectDisposedException</value>
+  </data>
+  <data name="StorageOptimization13_SOARCOMPCContainerProduceSynchronizationLockException" xml:space="preserve">
+    <value>StorageOptimization_SOARCOMPCContainerProduceSynchronizationLockException</value>
+  </data>
+  <data name="StorageOptimization13_SOARCOMRuleManagementCheckCriteriaException" xml:space="preserve">
+    <value>Checked expression failed. Expression:</value>
+  </data>
+  <data name="StorageOptimization13_SOARCOMScheduleLanguageMappingScheduleLanguageMappingFileNotFoundException" xml:space="preserve">
+    <value>StorageOptimization_SOARCOMScheduleLanguageMappingScheduleLanguageMappingFileNotFoundException</value>
+  </data>
+  <data name="StorageOptimization13_SOARCOMScheduleRulesAttachmentImpInitAPIVariablesValue" xml:space="preserve">
+    <value>SharePoint Web cannot be null because the API's invocation is required.</value>
+  </data>
+  <data name="StorageOptimization13_SOARCOMScheduleRulesImpDocumentInitAPIVariablesValue" xml:space="preserve">
+    <value>SharePoint list item cannot be opened for doc {0} and web {1}.</value>
+  </data>
+  <data name="StorageOptimization13_SOARCOMScheduleRulesImpDocumentInitException" xml:space="preserve">
+    <value>SharePoint list item cannot be opened for doc {0} and web {1}.</value>
+  </data>
+  <data name="StorageOptimization13_SOARCOMScheduleRulesImpDocumentOpenListItemExceptionSPWeb" xml:space="preserve">
+    <value>SharePoint Web cannot be null because the API's invocation is required.</value>
+  </data>
+  <data name="StorageOptimization13_SOARCOMScheduleRulesImpDocumentOpenSPFile" xml:space="preserve">
+    <value>An error occurred whiel opening the file with special user token. Exception Details: {0}</value>
+  </data>
+  <data name="StorageOptimization13_SOARCOMScheduleRulesImpDocumentVersionInitElementaryInfoException" xml:space="preserve">
+    <value>The target table value is invalid {0}.</value>
+  </data>
+  <data name="StorageOptimization13_SOARCOMScheduleRulesImpInitItemVersionAPIVariablesValueException" xml:space="preserve">
+    <value>SharePoint list item cannot be opened for doc {0} and web {1}.</value>
+  </data>
+  <data name="StorageOptimization13_SOARCOMScheduleRulesImpItemInitAPIVariablesValueException" xml:space="preserve">
+    <value>SharePoint list item cannot be opened for doc {0} and web {1}.</value>
+  </data>
+  <data name="StorageOptimization13_SOARCOMScheduleRulesImpItemInitException" xml:space="preserve">
+    <value>SharePoint list item cannot be opened for doc {0} and web {1}.</value>
+  </data>
+  <data name="StorageOptimization13_SOARCOMScheduleRulesImpItemOpenListItemExceptionSPList" xml:space="preserve">
+    <value>SharePoint list item cannot be opened.</value>
+  </data>
+  <data name="StorageOptimization13_SOARCOMScheduleRulesImpItemOpenListItemExceptionSPWeb" xml:space="preserve">
+    <value>SharePoint Web cannot be null because the API's invocation is required.</value>
+  </data>
+  <data name="StorageOptimization13_SOARCOMScheduleRulesImpItemOpenSPFile" xml:space="preserve">
+    <value>An error occurred whiel opening file with special user token. Exception Details: {0}</value>
+  </data>
+  <data name="StorageOptimization13_SOARCOMScheduleRulesImpItemVersionInitElementaryInfoException" xml:space="preserve">
+    <value>The target table value {0} is invalid.</value>
+  </data>
+  <data name="StorageOptimization13_SOARCOMScheduleRulesImpItemVersionOpenListItemExceptionSPList" xml:space="preserve">
+    <value>SharePoint list item cannot be opened.</value>
+  </data>
+  <data name="StorageOptimization13_SOARCOMScheduleRulesImpItemVersionOpenListItemExceptionSPWeb" xml:space="preserve">
+    <value>SharePoint Web cannot be null because the API's invocation is required.</value>
+  </data>
+  <data name="StorageOptimization13_SOARCOMScheduleRulesImpItemVersionOpenListItemOpenSPFile" xml:space="preserve">
+    <value>An error occurred whiel opening file with special user token. Exception Details: {0}</value>
+  </data>
+  <data name="StorageOptimization13_SOARCOMScheduleRulesImpItemVersionOpenSPFile" xml:space="preserve">
+    <value>An error occurred whiel opening file with special user token. Exception Details: {0}</value>
+  </data>
+  <data name="StorageOptimization13_SOARCOMScheduleRulesImpObtainColumnsInfoSPObjectNotFoundException" xml:space="preserve">
+    <value>Got field of item {0} failed. Column name: {1}</value>
+  </data>
+  <data name="StorageOptimization13_SOARCOMScheduleRulesImpOpenListItemExceptionSPListItem" xml:space="preserve">
+    <value>SharePoint list item cannot be opened.</value>
+  </data>
+  <data name="StorageOptimization13_SOCOMMONApprovalReportDtoApprovalReportDtoBeginInit" xml:space="preserve">
+    <value>Approval report init.</value>
+  </data>
+  <data name="StorageOptimization13_SOCOMMONApprovalReportDtoSendApproveDetailBeginSend" xml:space="preserve">
+    <value>Send approve detail begin.</value>
+  </data>
+  <data name="StorageOptimization13_SOCOMMONApprovalReportDtoSendApproveDetailSendSuccessull" xml:space="preserve">
+    <value>Successfully sent the approved detail.</value>
+  </data>
+  <data name="StorageOptimization13_SOCOMMONJobProgressDtoDispose" xml:space="preserve">
+    <value>An error occurred while the job progress dispose.</value>
+  </data>
+  <data name="StorageOptimization13_SOARSOArchiveBackupStop" xml:space="preserve">
+    <value>Backup stopped.</value>
+  </data>
+  <data name="StorageOptimization13_SOARSOArchiverAddInformationError" xml:space="preserve">
+    <value>An error occurred while adding fulltext information. {0}</value>
+  </data>
+  <data name="StorageOptimization13_SOARSOArchiverBackupEnd" xml:space="preserve">
+    <value>Backing up finished.</value>
+  </data>
+  <data name="StorageOptimization13_SOARSOArchiverBackupStart" xml:space="preserve">
+    <value>Begin backing up.</value>
+  </data>
+  <data name="StorageOptimization13_SOARSOArchiverBeforeTail" xml:space="preserve">
+    <value>Begin sending the tail: {0}.</value>
+  </data>
+  <data name="StorageOptimization13_SOARSOArchiverConnectControl" xml:space="preserve">
+    <value>Cannot connect to the control.</value>
+  </data>
+  <data name="StorageOptimization13_SOARSOArchiverDataReceiverError" xml:space="preserve">
+    <value>There is something wrong with the data receiver.</value>
+  </data>
+  <data name="StorageOptimization13_SOARSOArchiverGetApproveDBError" xml:space="preserve">
+    <value>Cannot get the approved database.</value>
+  </data>
+  <data name="StorageOptimization13_SOARSOArchiverScanEnd" xml:space="preserve">
+    <value>End scan</value>
+  </data>
+  <data name="StorageOptimization13_SOARSOArchiverScanStart" xml:space="preserve">
+    <value>start scan</value>
+  </data>
+  <data name="StorageOptimization13_SOARSOArchiverStructError" xml:space="preserve">
+    <value>An error occurred while structuring the tail.</value>
+  </data>
+  <data name="StorageOptimization13_SOARSOArchiveAddNewQueue" xml:space="preserve">
+    <value>The rule name adds to a new queue. {0}</value>
+  </data>
+  <data name="StorageOptimization13_SOARSOArchiveAddTempQueue" xml:space="preserve">
+    <value>The rule name adds to a temp queue. {0}</value>
+  </data>
+  <data name="StorageOptimization13_SOARSOArchiveBackupError" xml:space="preserve">
+    <value>There is something wrong with the backup. {0}</value>
+  </data>
+  <data name="StorageOptimization13_SOARSOArchiveMergeJobError" xml:space="preserve">
+    <value>An error occurred while getting Enduser Archive merge job, details: {0}.</value>
+  </data>
+  <data name="StorageOptimization13_SOARSOArchiverCalculateCountSuccess" xml:space="preserve">
+    <value>Successfully calculated the web and the list count: {0}.</value>
+  </data>
+  <data name="StorageOptimization13_SOARSOArchiverCheckRecordError" xml:space="preserve">
+    <value>An error occurred while checking the record. {0}</value>
+  </data>
+  <data name="StorageOptimization13_SOARSOArchiverGetSubSiteListCountError" xml:space="preserve">
+    <value>An error occurred while getting the subsite list count. {0}</value>
+  </data>
+  <data name="StorageOptimization13_SOARSOArchiverGetSubWebListCountError" xml:space="preserve">
+    <value>An error occurred while getting the subweb list count. {0}</value>
+  </data>
+  <data name="StorageOptimization13_SOARSOArchiverScanStopped" xml:space="preserve">
+    <value>Stopped scanning.</value>
+  </data>
+  <data name="StorageOptimization13_SOARSOArchiverSendJobProcessFailed" xml:space="preserve">
+    <value>Failed to send the job process.</value>
+  </data>
+  <data name="StorageOptimization13_SOARSOArchiverUnknownJobType" xml:space="preserve">
+    <value>Unknown job type.</value>
+  </data>
+  <data name="StorageOptimization13_SOARSOBackupErrorComment" xml:space="preserve">
+    <value>StorageOptimization_SOARSOBackupErrorComment</value>
+  </data>
+  <data name="StorageOptimization13_SOARSODeletionErrorComment" xml:space="preserve">
+    <value>StorageOptimization_SOARSODeletionErrorComment</value>
+  </data>
+  <data name="StorageOptimization13_SOARCLReaderDiscoverError" xml:space="preserve">
+    <value>StorageOptimization_SOARCLReaderDiscoverError</value>
+  </data>
+  <data name="StorageOptimization13_SOARSOArchiverRuleIsNotAvailable" xml:space="preserve">
+    <value>StorageOptimization_SOARSOArchiverRuleIsNotAvailable</value>
+  </data>
+  <data name="StorageOptimization13_SOARSOArchiverDatabaseError" xml:space="preserve">
+    <value>StorageOptimization_SOARSOArchiverDatabaseError</value>
+  </data>
+  <data name="StorageOptimization13_SOAREndUserInstallWebappFeatureException" xml:space="preserve">
+    <value>An error occurred while processing the error page feature {0}:</value>
+  </data>
+  <data name="StorageOptimization13_SOARSOArchiverCheckConfigFile" xml:space="preserve">
+    <value>An error occured while analysis configfile:</value>
+  </data>
+  <data name="StorageOptimization13_SOARSOArchiverGetSiteFeatureState" xml:space="preserve">
+    <value>GetFeatureState() error:</value>
+  </data>
+  <data name="StorageOptimization13_SOARSOArchiverGetWebAppFeatureState" xml:space="preserve">
+    <value>GetWebAppFeatureState() error:</value>
+  </data>
+  <data name="StorageOptimization13_SOARSOArchiverTestEnd" xml:space="preserve">
+    <value>End Archvier Test Run Job.</value>
+  </data>
+  <data name="StorageOptimization13_SOARSOArchiverTestGetUserInfo" xml:space="preserve">
+    <value>GetUserInfo() error in test run job: {0}</value>
+  </data>
+  <data name="StorageOptimization13_SOARSOArchiverTestGetVersionInfo" xml:space="preserve">
+    <value>GetVersionEditorInfo() error in test run job: {0}</value>
+  </data>
+  <data name="StorageOptimization13_SOARSOArchiverTestStart" xml:space="preserve">
+    <value>Begin Archiver Test Run Job.</value>
+  </data>
+  <data name="StorageOptimization13_SOARSOVaultBefArFailedError" xml:space="preserve">
+    <value>StorageOptimization_SOARSOVaultBefArFailedError</value>
+  </data>
+  <data name="StorageOptimization13_SOARSOVaultBefArFailedError4EXO" xml:space="preserve">
+    <value>StorageOptimization_SOARSOVaultBefArFailedError4EXO</value>
+  </data>
+  <data name="StorageOptimization13_SOARSOVaultBefArFailedErrorLog" xml:space="preserve">
+    <value>Vault Before Archive failed. Path is {0}</value>
+  </data>
+  <data name="StorageOptimization13_SOARSOVaultBefArReturnNull" xml:space="preserve">
+    <value>StorageOptimization_SOARSOVaultBefArReturnNull</value>
+  </data>
+  <data name="StorageOptimization13_SOARSOVaultBefArReturnNullLog" xml:space="preserve">
+    <value>Get Vault State is null.Path is {0}</value>
+  </data>
+  <data name="StorageOptimization13_SOARSOVaultBefArServiceErrorMessage" xml:space="preserve">
+    <value>StorageOptimization_SOARSOVaultBefArServiceErrorMessage</value>
+  </data>
+  <data name="StorageOptimization13_SOARBackupMainAddVaultCommonsItemComments" xml:space="preserve">
+    <value>StorageOptimization_SOARBackupMainAddVaultCommonsItemComments</value>
+  </data>
+  <data name="StorageOptimization13_SOARBackupMainAddVaultCommonsListComments" xml:space="preserve">
+    <value>StorageOptimization_SOARBackupMainAddVaultCommonsListComments</value>
+  </data>
+  <data name="StorageOptimization13_SOARBackupMainAddVaultCommonsSiteCollectionComments" xml:space="preserve">
+    <value>StorageOptimization_SOARBackupMainAddVaultCommonsSiteCollectionComments</value>
+  </data>
+  <data name="StorageOptimization13_SOARBackupMainAddVaultCommonsSiteComments" xml:space="preserve">
+    <value>StorageOptimization_SOARBackupMainAddVaultCommonsSiteComments</value>
+  </data>
+  <data name="StorageOptimization13_SOARSOVaultErrorComment" xml:space="preserve">
+    <value>StorageOptimization_SOARSOVaultErrorComment</value>
+  </data>
+  <data name="StorageOptimization13_SOARBackupMainBackupErrorInMediaSQLiteException" xml:space="preserve">
+    <value>StorageOptimization_SOARBackupMainBackupErrorInMediaSQLiteException</value>
+  </data>
+  <data name="StorageOptimization13_SOCGBackupTableNotFoundError" xml:space="preserve">
+    <value>StorageOptimization_SOCGBackupTableNotFoundError</value>
+  </data>
+  <data name="DPM_MEDIAPHYSICALDEVICESPACEERROR" xml:space="preserve">
+    <value>DPM_MEDIAPHYSICALDEVICESPACEERROR</value>
+  </data>
+  <data name="StorageOptimization13_SOARArchiverDeletionDeleteTaskItemWithSubTask" xml:space="preserve">
+    <value>StorageOptimization_SOARArchiverDeletionDeleteTaskItemWithSubTask</value>
+  </data>
+  <data name="StorageOptimization13_SOARArchiverKeepDataInPlaceRecordsManagementFeatureNotInstalled" xml:space="preserve">
+    <value>StorageOptimization_SOARArchiverKeepDataInPlaceRecordsManagementFeatureNotInstalled</value>
+  </data>
+  <data name="StorageOptimization13_SOARSOScanRMSourceContainDestinationError" xml:space="preserve">
+    <value>Cannot execute this library because this is the destination library.</value>
+  </data>
+  <data name="StorageOptimization13_SOARSOScanRMSourceIsDestinationError" xml:space="preserve">
+    <value>The destination shouldn't be the parent of the source scope or the source itself.</value>
+  </data>
+  <data name="StorageOptimization13_SOARSORecordManagerErrorComment" xml:space="preserve">
+    <value>StorageOptimization13_SOARSORecordManagerErrorComment</value>
+  </data>
+  <data name="StorageOptimization13_SOARSORecordManagerLibraryNotExist" xml:space="preserve">
+    <value>StorageOptimization13_SOARSORecordManagerLibraryNotExist</value>
+  </data>
+  <data name="StorageOptimization13_SOARArchiverDeletionDeleteWebList" xml:space="preserve">
+    <value>StorageOptimization_SOARArchiverDeletionDeleteWebList</value>
+  </data>
+  <data name="StorageOptimization13_SOARSOSkipLargerFile" xml:space="preserve">
+    <value>StorageOptimization_SOARSOSkipLargerFile</value>
+  </data>
+  <data name="StorageOptimization13_SOARSOArchiveIsSystemObject" xml:space="preserve">
+    <value>StorageOptimization_SOARSOArchiveIsSystemObject</value>
+  </data>
+  <data name="SO_RevIMDisposalStub_en_us" xml:space="preserve">
+    <value>&lt;%--Covered by AvePoint copyright and license agreement--%&gt;
+&lt;%@ Assembly Name="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"%&gt; 
+&lt;%@ Page Language="C#" Inherits="Microsoft.SharePoint.WebPartPages.WikiEditPage" MasterPageFile="~masterurl/default.master" MainContentID="PlaceHolderMain" %&gt; 
+&lt;%@ Import Namespace="Microsoft.SharePoint.WebPartPages" %&gt; 
+&lt;%@ Register Tagprefix="SharePoint" Namespace="Microsoft.SharePoint.WebControls" Assembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" %&gt; 
+&lt;%@ Register Tagprefix="Utilities" Namespace="Microsoft.SharePoint.Utilities" Assembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" %&gt; 
+&lt;%@ Import Namespace="Microsoft.SharePoint" %&gt; 
+&lt;%@ Assembly Name="Microsoft.Web.CommandUI, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" %&gt;
+
+&lt;asp:Content ContentPlaceHolderId="PlaceHolderAdditionalPageHead" runat="server"&gt;
+    &lt;%--&lt;meta charset="UTF-8"&gt;--%&gt;
+    &lt;style type="text/css"&gt;
+        .ms-cui-topBar2,#s4-titlerow,#titlerow,#sideNavBox,#pageContentTitle,#notificationArea,#pageStatusBar{
+            display:none !important;
+        }
+        #contentBox {
+            margin-right: auto;
+            margin-left: auto;
+            text-align: center;
+            font-family: 'Segoe UI', sans-serif;
+		    font-size: 28px;
+		    line-height: 42px;
+            height:100%;
+        }
+        #contentRow {
+            padding-top:0px;
+            height:100%;
+        }
+        #DeltaPlaceHolderMain {
+            height:100%;
+        }
+        #s4-bodyContainer {
+            height: calc(100% - 35px);
+        }
+        .custom-placeHolder {
+            height: calc(100% / 3);
+        }
+    &lt;/style&gt;
+&lt;/asp:Content&gt;
+&lt;asp:Content ContentPlaceHolderId="PlaceHolderMain" runat="server"&gt;
+    &lt;div class="custom-placeHolder"&gt;&lt;/div&gt;
+    &lt;div&gt;This document has been disposed of.&lt;/div&gt;
+    &lt;div&gt;Please contact your RM Team for more details.&lt;/div&gt;
+&lt;/asp:Content&gt;</value>
+  </data>
+  <data name="SO_RevIMDisposalStub_ja_jp" xml:space="preserve">
+    <value>&lt;%--Covered by AvePoint copyright and license agreement--%&gt;
+&lt;%@ Assembly Name="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"%&gt; 
+&lt;%@ Page Language="C#" Inherits="Microsoft.SharePoint.WebPartPages.WikiEditPage" MasterPageFile="~masterurl/default.master" MainContentID="PlaceHolderMain" %&gt; 
+&lt;%@ Import Namespace="Microsoft.SharePoint.WebPartPages" %&gt; 
+&lt;%@ Register Tagprefix="SharePoint" Namespace="Microsoft.SharePoint.WebControls" Assembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" %&gt; 
+&lt;%@ Register Tagprefix="Utilities" Namespace="Microsoft.SharePoint.Utilities" Assembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" %&gt; 
+&lt;%@ Import Namespace="Microsoft.SharePoint" %&gt; 
+&lt;%@ Assembly Name="Microsoft.Web.CommandUI, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" %&gt;
+
+&lt;asp:Content ContentPlaceHolderId="PlaceHolderAdditionalPageHead" runat="server"&gt;
+    &lt;%--&lt;meta charset="UTF-8"&gt;--%&gt;
+    &lt;style type="text/css"&gt;
+        .ms-cui-topBar2,#s4-titlerow,#titlerow,#sideNavBox,#pageContentTitle,#notificationArea,#pageStatusBar{
+            display:none !important;
+        }
+        #contentBox {
+            margin-right: auto;
+            margin-left: auto;
+            text-align: center;
+            font-family: 'Segoe UI', sans-serif;
+		    font-size: 28px;
+		    line-height: 42px;
+            height:100%;
+        }
+        #contentRow {
+            padding-top:0px;
+            height:100%;
+        }
+        #DeltaPlaceHolderMain {
+            height:100%;
+        }
+        #s4-bodyContainer {
+            height: calc(100% - 35px);
+        }
+        .custom-placeHolder {
+            height: calc(100% / 3);
+        }
+    &lt;/style&gt;
+&lt;/asp:Content&gt;
+&lt;asp:Content ContentPlaceHolderId="PlaceHolderMain" runat="server"&gt;
+    &lt;div class="custom-placeHolder"&gt;&lt;/div&gt;
+    &lt;div&gt;このドキュメントは処分されました。&lt;/div&gt;
+    &lt;div&gt;詳細については、RM (レコード マネージャー) チームまでお問い合わせください。&lt;/div&gt;
+&lt;/asp:Content&gt;</value>
+  </data>
+</root>

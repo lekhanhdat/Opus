@@ -1,0 +1,105 @@
+﻿<!--/********************************************************************
+ *
+ *  PROPRIETARY and CONFIDENTIAL
+ *
+ *  This file is licensed from, and is a trade secret of:
+ *
+ *                   AvePoint, Inc.
+ *                   525 Washington Blvd, Suite 1400
+ *                   Jersey City, NJ 07310
+ *                   United States of America
+ *                   Telephone: +1-201-793-1111
+ *                   WWW: www.avepoint.com
+ *
+ *  Refer to your License Agreement for restrictions on use,
+ *  duplication, or disclosure.
+ *
+ *  RESTRICTED RIGHTS LEGEND
+ *
+ *  Use, duplication, or disclosure by the Government is
+ *  subject to restrictions as set forth in subdivision
+ *  (c)(1)(ii) of the Rights in Technical Data and Computer
+ *  Software clause at DFARS 252.227-7013 (Oct. 1988) and
+ *  FAR 52.227-19 (C) (June 1987).
+ *
+ *  Copyright © 2017-2026 AvePoint® Inc. All Rights Reserved. 
+ *
+ *  Unpublished - All rights reserved under the copyright laws of the United States.
+ */-->
+
+
+
+<!--<FieldMappings>
+  <FieldMapping>
+    <Condition>
+      <SiteCondition>
+        <ConditionRule type="url" condition="is|isnot|contains|notcontains" value="" relation="and|or"></ConditionRule>
+        <ConditionRule type="listcontenttype" condition="contains" value="" relation="and|or"></ConditionRule>
+      </SiteCondition>
+      <ListCondition>
+        <ConditionRule type="templateid" condition="contains|equals" value="" relation="and|or"></ConditionRule>
+        <ConditionRule type="listtitle" condition="contains|equals" value="" relation="and|or"></ConditionRule>
+        <ConditionRule type="sitecontenttype" condition="contains" value="" relation="and|or"></ConditionRule>
+      </ListCondition>
+      <ItemCondition>
+        <ConditionRule type="name" condition="contains" value="" relation="and|or"></ConditionRule>
+      </ItemCondition>
+    </Condition>
+    <Mappings>
+      <Mapping type="SameType|ChangeToMetadata|ChangeToDestination|ChangeToLookup" sourceName="" sourceDisplayName="" destinationName="" destinationDisplayName="">
+        for SameType&ChangeToDestination, no additional setting
+        <setting></setting>
+        for ChangeToMetadata
+        <Setting termSetPath="" allowMultiValue="" separateChar=""></Setting>
+        for ChangeToLookup
+        <Setting listTitle="" columnName="" allowMultiValue="" SeparateChar=""></Setting>
+        <ValueMappings>
+          <ValueMapping sourceValue="" destinationValue=""></ValueMapping>
+        </ValueMappings>
+      </Mapping>
+    </Mappings>
+  </FieldMapping>
+</FieldMappings>-->
+
+<FieldMappings>
+  <FieldMapping>
+    <Condition>
+      <SiteCondition>
+        <ConditionRule type="url" condition="contains" value="sites" relation="and"></ConditionRule>
+        <ConditionRule type="sitecontenttype" condition="contains" value="document" relation="or"></ConditionRule>
+      </SiteCondition>
+      <ListCondition>
+        <ConditionRule type="templateid" condition="contains" value="1" relation="and"></ConditionRule>
+        <ConditionRule type="listtitle" condition="contains" value="list" relation="and"></ConditionRule>
+        <ConditionRule type="listcontenttype" condition="contains" value="item" relation="or"></ConditionRule>
+      </ListCondition>
+      <ItemCondition>
+        <ConditionRule type="name" condition="contains" value="1" relation="or"></ConditionRule>
+      </ItemCondition>
+    </Condition>
+    <Mappings>
+      <Mapping type="SameType" sourceName="single001" sourceDisplayName="single001" destinationName="destination-single001" destinationDisplayName="destination-single001">
+        <ValueMappings>
+          <ValueMapping sourceValue="111" destinationValue="destination-111"></ValueMapping>
+        </ValueMappings>
+      </Mapping>
+      <Mapping type="ChangeToMetadata" sourceName="maptomms" sourceDisplayName="maptomms" destinationName="destination-maptomms" destinationDisplayName="destination-maptomms">
+        <Setting termSetPath="group 001;termset 001" allowMultiValue="false" separateChar=";"></Setting>
+        <ValueMappings>
+          <ValueMapping sourceValue="abc" destinationValue="term1"></ValueMapping>
+        </ValueMappings>
+      </Mapping>
+      <Mapping type="ChangeToDes" sourceName="maptodestination" sourceDisplayName="maptodestination" destinationName="destination-maptodestination" destinationDisplayName="destination-maptodestination">
+        <ValueMappings>
+          <ValueMapping sourceValue="sourcevalue" destinationValue="destinationvalue"></ValueMapping>
+        </ValueMappings>
+      </Mapping>
+      <Mapping type="ChangeToLookUp" sourceName="maptolookup" sourceDisplayName="maptolookup" destinationName="destination-maptolookup" destinationDisplayName="destination-maptolookup">
+        <Setting listTitle="Announcements" columnName="Title" allowMultiValue="false" SeparateChar=";"></Setting>
+        <ValueMappings>
+          <ValueMapping sourceValue="123" destinationValue="123"></ValueMapping>
+        </ValueMappings>
+      </Mapping>
+    </Mappings>
+  </FieldMapping>
+</FieldMappings>

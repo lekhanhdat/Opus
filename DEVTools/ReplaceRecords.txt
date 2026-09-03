@@ -1,0 +1,31 @@
+@echo off
+title Records Auto Replace
+color A
+echo %date% %time%
+
+set source=D:\Records\OnlineTrunk
+set dest=D:\Records\OnlineTrunk\RACloud\csx\Debug\roles\RAScheduleJobWorkerRole\approot
+
+set msbuild2017=C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\MSBuild\15.0\Bin
+set svn=C:\Program Files\TortoiseSVN\bin
+
+echo.
+echo =================Start to update the code from svn===========
+"%svn%\TortoiseProc.exe" /command:update /path:"%source%" /closeonend:2
+"%svn%\SubWCRev.exe" "%source%" -f
+echo.
+echo =================Start to build======================
+"%msbuild2017%\msbuild" "%source%\RACloud.sln"  /p:BuildType=Debug;BuildTarget=Build;Platform="Any CPU" /clp:ErrorsOnly;NoItemAndPropertyList /m
+"%msbuild2017%\msbuild" "%source%\RAScheduleJob.sln"  /p:BuildType=Debug;BuildTarget=Build;Platform="Any CPU" /clp:ErrorsOnly;NoItemAndPropertyList /m 
+"%msbuild2017%\msbuild" "%source%\RecordsAutomation.sln"  /p:BuildType=Debug;BuildTarget=Build;Platform="Any CPU" /clp:ErrorsOnly;NoItemAndPropertyList /m 
+echo.
+echo =================Stop RecordsTimerService===============
+::taskkill /im "RecordsTimerService.exe" /f /t
+echo.
+echo =================Start to copy files====================
+xcopy "%source%\RAScheduleJob\bin\*.dll" "%dest%\RecordsWeb\bin\" /d:05-10-2019 /q /y /S
+xcopy "%source%\RAScheduleJob\bin\*.exe" "%dest%\RecordsWeb\bin\" /d:05-10-2019 /q /y /S
+echo.
+echo =================Start RecordsTimerService===============
+::sc start "Records Timer Service"
+echo. & pause

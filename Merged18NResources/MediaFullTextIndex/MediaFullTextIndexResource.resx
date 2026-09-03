@@ -1,0 +1,680 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AbstractFullTextIndexServiceUpdateIndexJobDetailsConnectToControl" xml:space="preserve">
+    <value>Begin connecting to control service host {0}, port: {1}...</value>
+    <comment>sli Verified</comment>
+  </data>
+  <data name="AbstractFullTextIndexServiceUpdateIndexJobDetailsWarn" xml:space="preserve">
+    <value>Cannot update job details.</value>
+    <comment>sli Verified</comment>
+  </data>
+  <data name="AbstractFullTextIndexServiceUpdateIndexJobSummarysConnectToControl" xml:space="preserve">
+    <value>Begin connecting to control service host {0}, port: {1}...</value>
+    <comment>sli Verified</comment>
+  </data>
+  <data name="AbstractFullTextIndexServiceUpdateIndexJobSummarysWarn" xml:space="preserve">
+    <value>Cannot update job details.</value>
+    <comment>sli Verified</comment>
+  </data>
+  <data name="ArchiverFullTextIndexMergeIndexFetchMergeIndexCreateIndexPath" xml:space="preserve">
+    <value>Begin creating the merge index path {0}...</value>
+    <comment>sli Verified</comment>
+  </data>
+  <data name="ArchiverFullTextIndexMergeIndexFetchMergeIndexInfo" xml:space="preserve">
+    <value>Begin fetching merge index path {0}... Existed Index: {1} Total Free Space: {2} Available Space: {3}.</value>
+    <comment>sli Verified</comment>
+  </data>
+  <data name="ArchiverFullTextIndexMergeIndexFetchMergeIndexNoValidIndexPath" xml:space="preserve">
+    <value>Cannot find available indexes in the path {0}. The path is unused.</value>
+    <comment>sli Verified</comment>
+  </data>
+  <data name="ArchiverFullTextIndexMergeIndexFetchMergeIndexNoValidStorageSystem" xml:space="preserve">
+    <value>Cannot find a valid storage system.</value>
+    <comment>sli Verified</comment>
+  </data>
+  <data name="ArchiverFullTextIndexMergeIndexIsSpaceAvailableInfo" xml:space="preserve">
+    <value>The current index system: {0}. Total free space: {1},  threshold space: {2}, threshold space unit: {3}.</value>
+    <comment>sli Verified</comment>
+  </data>
+  <data name="ArchiverFullTextIndexMergeIndexMergeIndexesDirectoryNotFound" xml:space="preserve">
+    <value>Cannot get the merge index work directory.</value>
+    <comment>sli Verified</comment>
+  </data>
+  <data name="ArchiverFullTextIndexMergeIndexMergeIndexesIndexNotFound" xml:space="preserve">
+    <value>The index does not exist, path: {0}.</value>
+    <comment>sli Verified</comment>
+  </data>
+  <data name="ArchiverFullTextIndexSearchServiceBuildDataTimeTypeItemUnknownTimeType" xml:space="preserve">
+    <value>Unknown time type.</value>
+    <comment>sli Verified</comment>
+  </data>
+  <data name="ArchiverFullTextIndexSearchServiceBuildKeywordQueryItemException" xml:space="preserve">
+    <value>Search Index: Convert team query to query.</value>
+    <comment>sli Verified</comment>
+  </data>
+  <data name="ArchiverFullTextIndexSearchServiceBuildNumberTypeItemUnknownNumberType" xml:space="preserve">
+    <value>Unknown number type.</value>
+    <comment>sli Verified</comment>
+  </data>
+  <data name="ArchiverFullTextIndexSearchServiceBuildScopeQueryItemFarmNameEmpty" xml:space="preserve">
+    <value>The farm name cannot be empty.</value>
+    <comment>sli Verified</comment>
+  </data>
+  <data name="ArchiverFullTextIndexSearchServiceBuildStringTypeItemUnknownStringType" xml:space="preserve">
+    <value>Unknown string type.</value>
+    <comment>sli Verified</comment>
+  </data>
+  <data name="ArchiverFullTextIndexSearchServiceBuildUnionQueryItemUnknownOperationType" xml:space="preserve">
+    <value>Unknown operation type.</value>
+    <comment>sli Verified</comment>
+  </data>
+  <data name="ArchiverFullTextIndexSearchServiceBuildValueTypeItemUnknownValueType" xml:space="preserve">
+    <value>Unknown value type.</value>
+    <comment>sli Verified</comment>
+  </data>
+  <data name="ArchiverFullTextIndexSearchServiceDeleteIndexBegin" xml:space="preserve">
+    <value>DeleteIndexes: Delete indexes from [{0}].</value>
+    <comment>sli Verified</comment>
+  </data>
+  <data name="ArchiverFullTextIndexSearchServiceDeleteIndexEnd" xml:space="preserve">
+    <value>DeleteIndexes: Count: {0} Path: {1}.</value>
+    <comment>sli Verified</comment>
+  </data>
+  <data name="ArchiverFullTextIndexSearchServiceDeleteIndexPathNotFound" xml:space="preserve">
+    <value>Cannot find the index path.</value>
+    <comment>sli Verified</comment>
+  </data>
+  <data name="ArchiverFullTextIndexSearchServiceDeleteIndexQueryDetails" xml:space="preserve">
+    <value>Query item: [{0}].</value>
+    <comment>sli Verified</comment>
+  </data>
+  <data name="ArchiverFullTextIndexSearchServiceDeleteIndexQueryNoResult" xml:space="preserve">
+    <value>No results are available.</value>
+    <comment>sli Verified</comment>
+  </data>
+  <data name="ArchiverFullTextIndexSearchServiceDeleteIndexQueryResult" xml:space="preserve">
+    <value>Query result count is {0}.</value>
+    <comment>sli Verified</comment>
+  </data>
+  <data name="ArchiverFullTextIndexSearchServiceGetFieldNameFieldNameEmpty" xml:space="preserve">
+    <value>The field name is null.</value>
+    <comment>sli Verified</comment>
+  </data>
+  <data name="ArchiverFullTextIndexSearchServiceParsePathInfoBegin" xml:space="preserve">
+    <value>SearchIndex: Collecting index data...</value>
+    <comment>sli Verified</comment>
+  </data>
+  <data name="ArchiverFullTextIndexSearchServiceParsePathInfoEnd" xml:space="preserve">
+    <value>SearchIndex: Index path is [{0}].</value>
+    <comment>sli Verified</comment>
+  </data>
+  <data name="ArchiverFullTextIndexSearchServiceParseQueryItemBegin" xml:space="preserve">
+    <value>SearchIndex: Parsing query item...</value>
+    <comment>sli Verified</comment>
+  </data>
+  <data name="ArchiverFullTextIndexSearchServiceParseQueryItemKeywordEmpty" xml:space="preserve">
+    <value>Search value cannot be empty.</value>
+    <comment>sli Verified</comment>
+  </data>
+  <data name="FsDirectoryOpenInputFileNotFound" xml:space="preserve">
+    <value>The file {0} cannot be found. It will be generated while indexing.</value>
+    <comment>sli Verified</comment>
+  </data>
+  <data name="FullTextIndexBootstrapHandleIndexRequestThreadingUnknownJobType" xml:space="preserve">
+    <value>Unknown job type.</value>
+    <comment>sli Verified</comment>
+  </data>
+  <data name="FullTextIndexBootstrapMainBegin" xml:space="preserve">
+    <value>Begin processing  fulltext index...</value>
+    <comment>sli Verified</comment>
+  </data>
+  <data name="FullTextIndexBootstrapMainEnd" xml:space="preserve">
+    <value>Processing fulltext index finished.</value>
+    <comment>sli Verified</comment>
+  </data>
+  <data name="FullTextIndexBootstrapRunIndexJob" xml:space="preserve">
+    <value>Job thread {0} is running...</value>
+    <comment>sli Verified</comment>
+  </data>
+  <data name="FullTextIndexBuilderCheckValidationJobEmpty" xml:space="preserve">
+    <value>The index job is null.</value>
+    <comment>sli Verified</comment>
+  </data>
+  <data name="FullTextIndexBuilderCheckValidationMediaEmpty" xml:space="preserve">
+    <value>The media info is null.</value>
+    <comment>sli Verified</comment>
+  </data>
+  <data name="FullTextIndexBuilderCheckValidationSearchDeviceEmpty" xml:space="preserve">
+    <value>The search device is null.</value>
+    <comment>sli Verified</comment>
+  </data>
+  <data name="FullTextIndexBuilderDoIndexBegin" xml:space="preserve">
+    <value>Begin index job {0} on backup job {1} in path {2}.</value>
+    <comment>sli Verified</comment>
+  </data>
+  <data name="FullTextIndexBuilderDoIndexEnd" xml:space="preserve">
+    <value>Processing  fulltext index finished.</value>
+    <comment>sli Verified</comment>
+  </data>
+  <data name="FullTextIndexBuilderDoIndexFinish" xml:space="preserve">
+    <value>Successfully finished and optimized the index job.</value>
+    <comment>sli Verified</comment>
+  </data>
+  <data name="FullTextIndexBuilderHandleIndexRequestBegin" xml:space="preserve">
+    <value>IndexJob: {0}.</value>
+    <comment>sli Verified</comment>
+  </data>
+  <data name="FullTextIndexBuilderHandleIndexRequestEnd" xml:space="preserve">
+    <value>IndexJob: Job Status: {0}, Item Count: {1}, Item Total Size(KB): {2}, Index Total Size(KB): {3}.</value>
+    <comment>sli Verified</comment>
+  </data>
+  <data name="FullTextIndexBuilderHandleIndexRequestItemTotalCount" xml:space="preserve">
+    <value>IndexJob: Item Total Count: {0}</value>
+    <comment>sli Verified</comment>
+  </data>
+  <data name="FullTextIndexBuilderHandleIndexRequestNoData" xml:space="preserve">
+    <value>No data is available.</value>
+    <comment>sli Verified</comment>
+  </data>
+  <data name="FullTextIndexBuilderInitIFilterStatus" xml:space="preserve">
+    <value>IndexJob: IFilter: {0}.</value>
+    <comment>sli Verified</comment>
+  </data>
+  <data name="FullTextIndexBuilderOpenFileReceiverBegin" xml:space="preserve">
+    <value>Begin sending request...</value>
+    <comment>sli Verified</comment>
+  </data>
+  <data name="FullTextIndexBuilderOpenFileReceiverEnd" xml:space="preserve">
+    <value>Sending request finished.</value>
+    <comment>sli Verified</comment>
+  </data>
+  <data name="FullTextIndexBuilderOpenFileReceiverReceiverData" xml:space="preserve">
+    <value>Trying to receive backup data from media {0}...</value>
+    <comment>sli Verified</comment>
+  </data>
+  <data name="FullTextIndexBuilderOpenFileReceiverReceiverException" xml:space="preserve">
+    <value>An error occurred while attemptting to access the media host {0}, details: {1}.</value>
+    <comment>sli Verified</comment>
+  </data>
+  <data name="FullTextIndexBuilderOpenFileReceiverReceiverResult" xml:space="preserve">
+    <value>The open result of file receiver is {0}.</value>
+    <comment>sli Verified</comment>
+  </data>
+  <data name="FullTextIndexBuilderOpenIndexSystemBegin" xml:space="preserve">
+    <value>Begin opening search device... The name is: {0}.</value>
+    <comment>sli Verified</comment>
+  </data>
+  <data name="FullTextIndexBuilderOpenIndexSystemEnd" xml:space="preserve">
+    <value>Opening search device completed.</value>
+    <comment>sli Verified</comment>
+  </data>
+  <data name="FullTextIndexBuilderOpenIndexSystemIndexSystemEmpty" xml:space="preserve">
+    <value>Cannot open index working system.</value>
+    <comment>sli Verified</comment>
+  </data>
+  <data name="FullTextIndexBuilderParseMetaDataBegin" xml:space="preserve">
+    <value>Begin indexing item {0}... The type is: {1}.</value>
+    <comment>sli Verified</comment>
+  </data>
+  <data name="FullTextIndexBuilderRunErrorMsg" xml:space="preserve">
+    <value>An error occurred while acquiring {0} data from media.</value>
+    <comment>sli Verified</comment>
+  </data>
+  <data name="FullTextIndexBuilderRunException" xml:space="preserve">
+    <value>An error occurred while attemptting to parse the index data, datails: {0}.</value>
+    <comment>sli Verified</comment>
+  </data>
+  <data name="FullTextIndexBuilderRunProgress" xml:space="preserve">
+    <value>Index progress: {1}/{0}</value>
+    <comment>sli Verified</comment>
+  </data>
+  <data name="FullTextIndexBuilderRunWarnMsg" xml:space="preserve">
+    <value>An error occurred while indexing the item {0}, details: {1}.</value>
+    <comment>sli Verified</comment>
+  </data>
+  <data name="FullTextIndexBuilderSkippedIndexedQuery" xml:space="preserve">
+    <value>Query index item is {0}, the count is: {1}.</value>
+    <comment>sli Verified</comment>
+  </data>
+  <data name="FullTextIndexBuilderSkippedIndexedSkipped" xml:space="preserve">
+    <value>Skipped index item is {0}, the count is: {1}.</value>
+    <comment>sli Verified</comment>
+  </data>
+  <data name="FullTextIndexConvertResultArchiverSearchResultConvertNoResult" xml:space="preserve">
+    <value>SearchIndex: No results are available.</value>
+    <comment>sli Verified</comment>
+  </data>
+  <data name="FullTextIndexConvertResultArchiverSearchResultConvertQueryIndexCount" xml:space="preserve">
+    <value>SearchIndex: Query index count is [{0}/{1}].</value>
+    <comment>sli Verified</comment>
+  </data>
+  <data name="FullTextIndexHelpMonitorStart" xml:space="preserve">
+    <value>{0} started at  {1}.</value>
+    <comment>sli Verified</comment>
+  </data>
+  <data name="FullTextIndexHelpMonitorStop" xml:space="preserve">
+    <value>{0} finished at {1}. The elapsed total time: {2}.</value>
+    <comment>sli Verified</comment>
+  </data>
+  <data name="FullTextIndexJobControlFillIndexJobDetailsWarn" xml:space="preserve">
+    <value>An error occurred while updating the index report to Control.</value>
+    <comment>sli Verified</comment>
+  </data>
+  <data name="FullTextIndexJobControlQueryIndexJobStatusCurrentStatus" xml:space="preserve">
+    <value>The status of the current index job {0} is {1}.</value>
+    <comment>sli Verified</comment>
+  </data>
+  <data name="FullTextIndexJobControlQueryIndexJobStatusErrorException" xml:space="preserve">
+    <value>An error occurred while attemptting to query job status {0}, details: {1}.</value>
+    <comment>sli Verified</comment>
+  </data>
+  <data name="FullTextIndexJobControlQueryIndexJobStatusSleep" xml:space="preserve">
+    <value>Sleep for a while and query the job status again, then send it to the control {0}, the job id is: {1}.</value>
+    <comment>sli Verified</comment>
+  </data>
+  <data name="FullTextIndexJobControlQueryIndexJobStatusSleepStatus" xml:space="preserve">
+    <value>Query job status: Sleep for a while and query the job status, then send it to the control {0}. The job id is: {1}, the status is: {2}.</value>
+    <comment>sli Verified</comment>
+  </data>
+  <data name="FullTextIndexJobControlSendIndexJobDetailsFinish" xml:space="preserve">
+    <value>Updating the details of job {0} finished.</value>
+    <comment>sli Verified</comment>
+  </data>
+  <data name="FullTextIndexJobControlSendIndexJobSummaryFinish" xml:space="preserve">
+    <value>Updating the report of job {0} finished, detail count: [{1}], summary count: [{2}].</value>
+    <comment>sli Verified</comment>
+  </data>
+  <data name="FullTextIndexJobControlUpdateProgressWithinPolicyException" xml:space="preserve">
+    <value>An error occurred while updating the index progress.</value>
+    <comment>sli Verified</comment>
+  </data>
+  <data name="FullTextIndexSearchBuilderBuildIndexSystemIndexDeviceNotFound" xml:space="preserve">
+    <value>Cannot find the index device. Name: {0} Device Name: {1}</value>
+    <comment>sli Verified</comment>
+  </data>
+  <data name="FullTextIndexSearchBuilderCheckValidationJobEmpty" xml:space="preserve">
+    <value>The search job is null.</value>
+    <comment>sli Verified</comment>
+  </data>
+  <data name="FullTextIndexSearchBuilderDoSearchBegin" xml:space="preserve">
+    <value>Search Index: Query syntax {0}.</value>
+    <comment>sli Verified</comment>
+  </data>
+  <data name="FullTextIndexSearchBuilderGetPageQueryResultsBegin" xml:space="preserve">
+    <value>Search Index: Index path [{0}].</value>
+    <comment>sli Verified</comment>
+  </data>
+  <data name="FullTextIndexSearchBuilderGetPageQueryResultsPathNotFound" xml:space="preserve">
+    <value>Cannot find any indexes in this path. Please ensure that the following index profiles have been indexed successfully, details: {0}.</value>
+    <comment>sli Verified</comment>
+  </data>
+  <data name="FullTextIndexSearchBuilderInfo" xml:space="preserve">
+    <value>Search Index: Search job [{0}].</value>
+    <comment>sli Verified</comment>
+  </data>
+  <data name="FullTextIndexSQLiteLockTryToLock" xml:space="preserve">
+    <value>Begin trying to obtain the lock... Name: {0} Deadline: {1}</value>
+    <comment>sli Verified</comment>
+  </data>
+  <data name="FullTextIndexSQLiteLockLockError" xml:space="preserve">
+    <value>An error occurred while attemptting to obtain lock {0}, details: {1}.</value>
+    <comment>sli Verified</comment>
+  </data>
+  <data name="FullTextIndexSQLiteLockSleepTryAgain" xml:space="preserve">
+    <value>Sleep for a while and try again to obtain lock, the lock name is: {0}.</value>
+    <comment>sli Verified</comment>
+  </data>
+  <data name="FullTextIndexSQLiteLockLockSuccessful" xml:space="preserve">
+    <value>Successfully obtained the lock. Name: {0}.</value>
+    <comment>sli Verified</comment>
+  </data>
+  <data name="AveIndexActionDeleteIndexsPathEmpty" xml:space="preserve">
+    <value>IndexPathInfo is null.</value>
+    <comment>sli Verified</comment>
+  </data>
+  <data name="AveIndexWriteDeleteDocuments" xml:space="preserve">
+    <value>Begin deleting index in path {1}. The count is: {0}.</value>
+    <comment>sli Verified</comment>
+  </data>
+  <data name="IndexMergerMergeInfo" xml:space="preserve">
+    <value>MergeIndex: Begin merging index to [{0}]...</value>
+    <comment>sli Verified</comment>
+  </data>
+  <data name="IndexMergerMergeDeleteSrcIndex" xml:space="preserve">
+    <value>Begin deleting the source index {0}...</value>
+    <comment>sli Verified</comment>
+  </data>
+  <data name="AbstractConvertorConvertCopyAttributeEnd" xml:space="preserve">
+    <value>Successfully copied the attributes of file: {0}.</value>
+    <comment>sli Verified</comment>
+  </data>
+  <data name="AbstractConvertorConvertFileEmpty" xml:space="preserve">
+    <value>The size of the converted file {0} is 0 KB. Please check if the source file size is 0 KB.</value>
+    <comment>sli Verified</comment>
+  </data>
+  <data name="AbstractConvertorConvertFileSuccessful" xml:space="preserve">
+    <value>Successfully converted file: {0}.</value>
+    <comment>sli Verified</comment>
+  </data>
+  <data name="FileOptimizateCheckDocumentListDeleteFileException" xml:space="preserve">
+    <value>Cannot delete the file, details: {0}.</value>
+    <comment>sli Verified</comment>
+  </data>
+  <data name="FileOptimizateSplitFileNameAnalyzedFailed" xml:space="preserve">
+    <value>Failed to analyze the file name which is in the folder temp, details: {0}.</value>
+    <comment>sli Verified</comment>
+  </data>
+  <data name="FileOptimizateSplitFileReadTempFileException" xml:space="preserve">
+    <value>Cannot read the temp file, details: {0}.</value>
+    <comment>sli Verified</comment>
+  </data>
+  <data name="FileOptimizateSplitFileSplitFailed" xml:space="preserve">
+    <value>Failed to split the file, details: {0}.</value>
+    <comment>sli Verified</comment>
+  </data>
+  <data name="FilterLoaderInitIFilterInitFailed" xml:space="preserve">
+    <value>Failed to initialize, returncodes: {0}.</value>
+    <comment>sli Verified</comment>
+  </data>
+  <data name="FilterLoaderLoadIFilterFromIPersistFileNotImplemented" xml:space="preserve">
+    <value>IPersistFile is not implemented by the current interface.</value>
+    <comment>sli Verified</comment>
+  </data>
+  <data name="FilterReaderBlockSizeOutOfRange" xml:space="preserve">
+    <value>The block size is out of range.</value>
+    <comment>sli Verified</comment>
+  </data>
+  <data name="FilterReaderFileNameEmpty" xml:space="preserve">
+    <value>The file name is null.</value>
+    <comment>sli Verified</comment>
+  </data>
+  <data name="FilterReaderPeekIFilterEmpty" xml:space="preserve">
+    <value>Failed to initialize the internal filter, file extension: [{0}].</value>
+    <comment>sli Verified</comment>
+  </data>
+  <data name="FilterReaderReadIFilterEmpty" xml:space="preserve">
+    <value>Failed to initialize the internal filter, file extension: [{0}].</value>
+    <comment>sli Verified</comment>
+  </data>
+  <data name="FilterReaderReadIFilterImplAccessFailed" xml:space="preserve">
+    <value>Cannot access the object.</value>
+    <comment>sli Verified</comment>
+  </data>
+  <data name="FilterReaderReadIFilterImplPasswordFailed" xml:space="preserve">
+    <value>Cannot access the object. The object has password protection.</value>
+    <comment>sli Verified</comment>
+  </data>
+  <data name="FilterReaderReadIFilterImplReturnCodeError" xml:space="preserve">
+    <value>An error occurred while getting the text by the current filter.</value>
+    <comment>sli Verified</comment>
+  </data>
+  <data name="IndexWriteProviderCreateNewIndexWriterDirectoryNotFound" xml:space="preserve">
+    <value>Cannot obtain the index directory.</value>
+    <comment>sli Verified</comment>
+  </data>
+  <data name="IndexWriteProviderCreateNewIndexWriterEnd" xml:space="preserve">
+    <value>Successfully generated the new index which writes to the index path [{0}].</value>
+    <comment>sli Verified</comment>
+  </data>
+  <data name="AvePageQueryGetResultsQueryResult" xml:space="preserve">
+    <value>Query result: [{0}].</value>
+    <comment>sli Verified</comment>
+  </data>
+  <data name="AvePageQueryGetResultsQuerySort" xml:space="preserve">
+    <value>Query sort: {0}.</value>
+    <comment>sli Verified</comment>
+  </data>
+  <data name="AveQueryGetHitsTotalHits" xml:space="preserve">
+    <value>Totalhits: {0}.</value>
+    <comment>sli Verified</comment>
+  </data>
+  <data name="AveQueryGetPageDocumentsDocsNumber" xml:space="preserve">
+    <value>Docs Number: {0}.</value>
+    <comment>sli Verified</comment>
+  </data>
+  <data name="AveQueryGetQueryResultsCount" xml:space="preserve">
+    <value>Getquery got {0} results.</value>
+    <comment>sli Verified</comment>
+  </data>
+  <data name="AveQueryGetQueryResultsDetails" xml:space="preserve">
+    <value>Getquery got ({0} ,{1}) [{2}/{3}] results.</value>
+    <comment>sli Verified</comment>
+  </data>
+  <data name="DateTimeFieldUtilsCreateNumericFieldParseError" xml:space="preserve">
+    <value>Cannot parse numeric type, field: {0}, value: {1}.</value>
+    <comment>sli Verified</comment>
+  </data>
+  <data name="DateTimeFieldUtilsCreateNumericRangeQueryParseError" xml:space="preserve">
+    <value>Cannot parse numeric range query, field: {0}, lowervalue: {1}, uppervalue: {2}.</value>
+    <comment>sli Verified</comment>
+  </data>
+  <data name="IndexReaderPoolCheckIn" xml:space="preserve">
+    <value>CheckIn: {0}|{1}</value>
+    <comment>sli Verified</comment>
+  </data>
+  <data name="IndexReaderPoolCheckInObjectPoolExist" xml:space="preserve">
+    <value>Object pool contains the index reader proxy {1}. The type is {0}.</value>
+    <comment>sli Verified</comment>
+  </data>
+  <data name="IndexReaderPoolCheckOut" xml:space="preserve">
+    <value>CheckOut: {0}</value>
+    <comment>sli Verified</comment>
+  </data>
+  <data name="IndexReaderPoolInterRemove" xml:space="preserve">
+    <value>Index reader pool has inter removed the index reader {0}. </value>
+    <comment>sli Verified</comment>
+  </data>
+  <data name="IndexReaderPoolRemove" xml:space="preserve">
+    <value>Index reader pool has removed {0} index readers.</value>
+    <comment>sli Verified</comment>
+  </data>
+  <data name="IndexReaderPoolReopen" xml:space="preserve">
+    <value>Reopened the index reader proxy: {0}.</value>
+    <comment>sli Verified</comment>
+  </data>
+  <data name="IndexReaderProxyCloseBegin" xml:space="preserve">
+    <value>Begin returning the index reader proxy to pool {0}... The ref count is: {1}.</value>
+    <comment>sli Verified</comment>
+  </data>
+  <data name="IndexReaderProxyCloseFinal" xml:space="preserve">
+    <value>The final close of index reader {0}.</value>
+    <comment>sli Verified</comment>
+  </data>
+  <data name="IndexReaderProxyFinalClose" xml:space="preserve">
+    <value>The final close of index reader {0}.</value>
+    <comment>sli Verified</comment>
+  </data>
+  <data name="IndexReaderProxyGetIndexReader" xml:space="preserve">
+    <value>Begin creating proxy object {0}...</value>
+    <comment>sli Verified</comment>
+  </data>
+  <data name="IndexWriterPoolCheckIn" xml:space="preserve">
+    <value>CheckIn: {0}|{1}.</value>
+    <comment>sli Verified</comment>
+  </data>
+  <data name="IndexWriterPoolCheckInObjectPoolExist" xml:space="preserve">
+    <value>The object pool has {0} index objects. </value>
+    <comment>sli Verified</comment>
+  </data>
+  <data name="IndexWriterPoolCheckInReturnIndexPathType" xml:space="preserve">
+    <value>Begin returning {0} to IndexWriterPool...</value>
+    <comment>sli Verified</comment>
+  </data>
+  <data name="IndexWriterPoolInterRemove" xml:space="preserve">
+    <value>IndexWriterPool has closed {0} IndexWriterProxies. </value>
+    <comment>sli Verified</comment>
+  </data>
+  <data name="IndexWriterPoolRemove" xml:space="preserve">
+    <value>IndexWriterPool has removed {0} IndexWriters.</value>
+    <comment>sli Verified</comment>
+  </data>
+  <data name="IndexWriterProxyGetProxy" xml:space="preserve">
+    <value>Begin creating proxy object {0}...</value>
+    <comment>sli Verified</comment>
+  </data>
+  <data name="NonTxtFileConvertorManagerGetTxtDocumentNotSupport" xml:space="preserve">
+    <value>Creating an index with the type {0} is unsupported.</value>
+    <comment>sli Verified</comment>
+  </data>
+  <data name="AveSimpleLockFactoryClearLockDeleteError" xml:space="preserve">
+    <value>Cannot delete the lock {0}.</value>
+    <comment>sli Verified</comment>
+  </data>
+  <data name="FilterLoaderLoadIFilterFromIPersistFileIFilterEmpty" xml:space="preserve">
+    <value>IFilter is null.</value>
+    <comment>sli Verified</comment>
+  </data>
+  <data name="FsLockFactorySetLockDirOnlyOnce" xml:space="preserve">
+    <value>You can set the lock directory for this factory only once.</value>
+    <comment>sli Verified</comment>
+  </data>
+  <data name="SimpleLockObtainCreateError" xml:space="preserve">
+    <value>Cannot create the directory {0}.</value>
+    <comment>sli Verified</comment>
+  </data>
+  <data name="SimpleLockObtainLockDirError" xml:space="preserve">
+    <value>An error occurred while searching for the regular file in directory {0}.</value>
+    <comment>sli Verified</comment>
+  </data>
+  <data name="SimpleLockReleaseDeleteError" xml:space="preserve">
+    <value>Failed to delete {0}.</value>
+    <comment>sli Verified</comment>
+  </data>
+  <data name="NonTxtFileConvertorManagerGetTxtDocumentByIFilterBegin" xml:space="preserve">
+    <value>Begin doing full text index with IFilter...</value>
+    <comment>sli Verified</comment>
+  </data>
+  <data name="NonTxtFileConvertorManagerGetTxtDocumentByIFilterWarn" xml:space="preserve">
+    <value>An error occurred while retrying the full text index with the original method, details: {0}.</value>
+    <comment>sli Verified</comment>
+  </data>
+  <data name="FilterUtilLoadIFilterFailed" xml:space="preserve">
+    <value>Failed to initialize the IFilter, details: {0}.</value>
+    <comment>sli Verified</comment>
+  </data>
+  <data name="FullTextIndexBuilderHandleIndexAnErrorOccuredWhenMergeIndex" xml:space="preserve">
+    <value>An error occurred while merging the index.</value>
+    <comment>ywang Verified</comment>
+  </data>
+  <data name="FullTextIndexBuilderParseMetaDataReceiveAttributeData" xml:space="preserve">
+    <value>Received attribute data: {0}.</value>
+    <comment>sli Verified</comment>
+  </data>
+</root>

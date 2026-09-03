@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="APPINSTALLATION_MESSAGE_SINGLEINSTANCEERROR" xml:space="preserve">
+    <value>The Cloud Agent Configuration Tool is already running.</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="COMMON_BTN_BROWSE" xml:space="preserve">
+    <value>Browse</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="COMMON_Key_ToolRunAdmin" xml:space="preserve">
+    <value>The user running the tool must be a member of the local Administrators group.</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="ConfigurationTool_Key_GUI_Configuration_File" xml:space="preserve">
+    <value>Configuration file:</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="ConfigurationTool_Key_GUI_Installation_Code" xml:space="preserve">
+    <value>Installation code:</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="ConfigurationTool_Key_GUI_Agent_Action_Close" xml:space="preserve">
+    <value>Close</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="ConfigurationTool_Key_GUI_Agent_Action_Finish" xml:space="preserve">
+    <value>Finish</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="ConfigurationTool_Key_GUI_Agent_Action_Next" xml:space="preserve">
+    <value>Next</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="ConfigurationTool_Key_GUI_Agent_Action_Previous" xml:space="preserve">
+    <value>Back</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="ConfigurationTool_Key_GUI_Agent_Service_Account" xml:space="preserve">
+    <value>Agent account name:</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="ConfigurationTool_Key_GUI_Agent_Service_Account_Password" xml:space="preserve">
+    <value>Agent account password:</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="ConfigurationTool_Key_GUI_Agent_Configuration" xml:space="preserve">
+    <value>Agent configuration</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="ConfigurationTool_Key_GUI_Configuration_File_Already_Used" xml:space="preserve">
+    <value>The configuration file is already in use by another agent.</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="ConfigurationTool_Key_GUI_Configuration_File_Not_Exists" xml:space="preserve">
+    <value>The configuration file does not exist.</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="ConfigurationTool_Key_GUI_Configuration_File_Save_Failed" xml:space="preserve">
+    <value>Failed to save the configuration file and installation code. Please refer to the log files for details.</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="ConfigurationTool_Key_GUI_Configuration_File_Scope_Invalid" xml:space="preserve">
+    <value>Make sure the API app created in AvePoint Online Services has the required permissions. Client ID:{0}Required permissions:{1}</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="ConfigurationTool_Key_GUI_Enter_Installation_Code" xml:space="preserve">
+    <value>Please enter the installation code.</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="ConfigurationTool_Key_GUI_Installation_Code_Or_File_Invalid" xml:space="preserve">
+    <value>The configuration file is invalid or the installation code is incorrect.</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="ConfigurationTool_Key_GUI_Select_Configuration_File" xml:space="preserve">
+    <value>Please select the configuration file.</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="ConfigurationTool_Key_GUI_Change_Service_Account_Failed" xml:space="preserve">
+    <value>Failed to change the service account. Please refer to the log files for details.</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="ConfigurationTool_Key_GUI_Change_Service_Account_Failed_With_Return_Code" xml:space="preserve">
+    <value>Failed to change the service account. Error code: {0}. Please refer to {1} for details.</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="ConfigurationTool_Key_GUI_Enter_Service_Account_Name" xml:space="preserve">
+    <value>Please enter the username in the format of domain\username.</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="ConfigurationTool_Key_GUI_Enter_Service_Account_Password" xml:space="preserve">
+    <value>Please enter the password.</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="ConfigurationTool_Key_GUI_Start_Service_Failed" xml:space="preserve">
+    <value>Failed to start the agent service. Make sure the password is correct and the agent account has the 'Log on as a service' permission.</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="ConfigurationTool_Key_GUI_Configuration_File_Check_Failed" xml:space="preserve">
+    <value>Failed to validate the configuration file and installation code. Please refer to the log files for details.</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="ConfigurationTool_Key_GUI_Change_Service_Account_Invalid_Account" xml:space="preserve">
+    <value>Cannot find the agent account. Make sure the username is correct.</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="ConfigurationTool_Key_GUI_Configuration_Complete" xml:space="preserve">
+    <value>Configuration is completed.</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="ConfigurationTool_Key_GUI_Configuration_File_Keep_Existing" xml:space="preserve">
+    <value>Keep using the existing configuration file</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="ConfigurationTool_Key_GUI_Exisitng_Configuration_Invalid" xml:space="preserve">
+    <value>Cannot find the configuration file or it is invalid.</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="ConfigurationTool_Key_GUI_Agent_Service_Account_Water_Mark" xml:space="preserve">
+    <value>Domain\Username</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="ConfigurationTool_Key_GUI_App_Title" xml:space="preserve">
+    <value>Cloud Agent Configuration Tool</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="ConfigurationTool_Key_GUI_Proxy_Host" xml:space="preserve">
+    <value>Proxy host:</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="ConfigurationTool_Key_GUI_Proxy_Password" xml:space="preserve">
+    <value>Password:</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="ConfigurationTool_Key_GUI_Proxy_Port" xml:space="preserve">
+    <value>Proxy port:</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="ConfigurationTool_Key_GUI_Proxy_UserName" xml:space="preserve">
+    <value>Username:</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="ConfigurationTool_Key_GUI_Proxy_Using_Proxy" xml:space="preserve">
+    <value>Use a proxy server</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="ConfigurationTool_Key_GUI_Enter_Valid_Proxy_Host" xml:space="preserve">
+    <value>Please enter a valid proxy host.</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="ConfigurationTool_Key_GUI_Enter_Valid_Proxy_Port" xml:space="preserve">
+    <value>Please enter a valid port number.</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="ConfigurationTool_Key_GUI_Test_Proxy_Failed" xml:space="preserve">
+    <value>Failed to connect to the proxy server. Check the entered information and try again.</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="ConfigurationTool_Key_GUI_License_Expired" xml:space="preserve">
+    <value>Your subscription for AvePoint Opus has expired. Please contact your administrator for help.</value>
+    <comment>Resolved</comment>
+  </data>
+</root>

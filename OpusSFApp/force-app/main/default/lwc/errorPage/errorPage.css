@@ -1,0 +1,34 @@
+/*Covered by AvePoint copyright and license agreement*/
+.no-license-page {
+    background-color: #F3F3F3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    border-radius: 8px;
+}
+
+.app {
+    height: 84vh;
+}
+
+.widget {
+    height: 320px;
+}
+
+.no-license-page >div {
+    font-size: 22px;
+}
+
+.no-license-page >span {
+    font-size: 14px;
+}
+
+.no-license-avatar {
+    width: 100px;
+    height: 100px;
+    background-size: contain; 
+    background-repeat: no-repeat;
+    background-image: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20height%3D%2248px%22%20viewBox%3D%220%20-960%20960%20960%22%20width%3D%2248px%22%20fill%3D%22%235f6368%22%3E%3Cpath%20d%3D%22M626-533q22.5%200%2038.25-15.75T680-587q0-22.5-15.75-38.25T626-641q-22.5%200-38.25%2015.75T572-587q0%2022.5%2015.75%2038.25T626-533Zm-292%200q22.5%200%2038.25-15.75T388-587q0-22.5-15.75-38.25T334-641q-22.5%200-38.25%2015.75T280-587q0%2022.5%2015.75%2038.25T334-533Zm146.17%20116Q413-417%20358.5-379.5T278-280h53q22-42%2062.17-65%2040.18-23%2087.5-23%2047.33%200%2086.83%2023.5T630-280h52q-25-63-79.83-100-54.82-37-122-37ZM480-80q-83%200-156-31.5T197-197q-54-54-85.5-127T80-480q0-83%2031.5-156T197-763q54-54%20127-85.5T480-880q83%200%20156%2031.5T763-763q54%2054%2085.5%20127T880-480q0%2083-31.5%20156T763-197q-54%2054-127%2085.5T480-80Zm0-400Zm0%20340q142.38%200%20241.19-98.81Q820-337.63%20820-480q0-142.38-98.81-241.19T480-820q-142.37%200-241.19%2098.81Q140-622.38%20140-480q0%20142.37%2098.81%20241.19Q337.63-140%20480-140Z%22%2F%3E%3C%2Fsvg%3E');
+}

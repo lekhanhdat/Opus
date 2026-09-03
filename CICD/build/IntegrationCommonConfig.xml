@@ -1,0 +1,22 @@
+<configurations>
+
+	<option type="ChangeVersion" name="modifyAssemblyInfoVersion">
+		<wildcard isXml="false">AssemblyInfo.cs</wildcard>
+		<objectXPath>
+			AssemblyFileVersion\(\"(\d+|.+)\"\)];AssemblyInformationalVersion\(\"(\d+|.+)\"\)]
+		</objectXPath>
+		<versionMask>0.0.0.*</versionMask>
+		<item type="Folder" source="\"/>
+	</option>
+	
+	<option type="ChangeVersion" name="modifyRcFileVersion">
+		<wildcard isXml="false">*.rc</wildcard>
+		<objectXPath>
+			FILEVERSION\s+(\d+|.+)$;PRODUCTVERSION\s+(\d+|.+)$;VALUE \"FileVersion\"\,\ "(\d+|.+)\";VALUE \"ProductVersion\"\,\ "(\d+|.+)\"
+		</objectXPath>
+		<versionMask>0.0.0.*</versionMask>
+		<item type="Folder" source="\"/>
+	</option>
+  
+
+</configurations>

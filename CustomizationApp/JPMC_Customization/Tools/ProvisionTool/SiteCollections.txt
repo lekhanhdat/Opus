@@ -1,0 +1,2 @@
+https://contoso.sharepoint.com/sites/targetsite1
+https://contoso.sharepoint.com/sites/targetsite2

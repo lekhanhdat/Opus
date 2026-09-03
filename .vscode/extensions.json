@@ -1,0 +1,14 @@
+{
+    "recommendations": [
+        "ms-dotnettools.csharp",
+        "fudge.auto-using",
+        "ms-dotnettools.vscode-dotnet-runtime",
+        "adrianwilczynski.namespace",
+        "jongrant.csharpsortusings",
+        "k--kato.docomment",
+        "jmrog.vscode-nuget-package-manager",
+        "ms-vscode.vs-keybindings",
+        "vscode-icons-team.vscode-icons",
+        "fernandoescolar.vscode-solution-explorer"
+    ]
+}

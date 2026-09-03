@@ -1,0 +1,12 @@
+﻿QueryService Query语句命名规范（包括Field，Property,Method）
+1.FunctionName(有意义的命名，最好可以标明语句具体的作用)_ActionType(Select,Update,Delete or Insert)_TableNames(如果是多个Table,Table间以下划线分隔开，存储过程与Table遵守一样的规范)
+2.特殊case:TableName或存储过程Name带下划线，在此处进行记录
+GetLanguage_Select_proc_ECM_GetSessionData  Select  proc,with "_"
+proc_ECM_GetGroups							Select  proc,with "_"
+proc_ECM_GetChanges							Select  proc,with "_"
+proc_InsertEventReceiver				    Insert  proc,with "_"
+
+sp_helpfile
+xp_FixedDrives
+sp_SpaceUsed
+rbs_internal_blobs                          Select  stub table name

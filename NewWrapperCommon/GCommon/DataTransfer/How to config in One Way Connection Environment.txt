@@ -1,0 +1,62 @@
+﻿/********************************************************************
+ *
+ *  PROPRIETARY and CONFIDENTIAL
+ *
+ *  This file is licensed from, and is a trade secret of:
+ *
+ *                   AvePoint, Inc.
+ *                   3 Second Street, Suite 803
+ *                   Jersey City, NJ 07311
+ *                   United States of America
+ *                   Telephone: +1-800-661-6588
+ *                   WWW: www.avepoint.com
+ *
+ *  Refer to your License Agreement for restrictions on use,
+ *  duplication, or disclosure.
+ *
+ *  RESTRICTED RIGHTS LEGEND
+ *
+ *  Use, duplication, or disclosure by the Government is
+ *  subject to restrictions as set forth in subdivision
+ *  (c)(1)(ii) of the Rights in Technical Data and Computer
+ *  Software clause at DFARS 252.227-7013 (Oct. 1988) and
+ *  FAR 52.227-19 (C) (June 1987).
+ *
+ *  Copyright © 2001-2011 AvePoint® Inc. All Rights Reserved. 
+ *
+ *  Unpublished - All rights reserved under the copyright laws of the United States.
+ *  $Revision: 306823 $
+ *  $Author: gqsun $        
+ *  $Date: 2014-11-03 13:36:35 +0800 (Mon, 03 Nov 2014) $
+ */
+
+MQ Service在默认Binding（netTcpBinding）下已经支持One Way Connection环境。不需要做其他设置。
+如果更改Binding为basicHttpBinding，则需要进行如下配置：
+1.	在Agent Bin中找到配置文件CommonDataTransfer.config;
+2.	定位到<dataTransfer Binding="netTcpBinding" UriSchema="net.tcp";
+3.	修改Binding属性为basicHttpBinding，同时将UriSchema修改为http;
+4.	定位到<mq IsOneWayConnection="False";
+5.	将IsOneWayConnection修改为True。
+
+Tips: 
+1.	以上步骤修改完成后，在host mq service的进程log中，会有一个ServiceHost Open的错误异常，这是由于basicHttpBinding不支持双工模块造成。请忽略此异常。
+2.	此配置文件需要在源端和目的端修改。
+3.	修改了此配置文件的Agent与其他Agent之间的通信都会应用此配置，因此请注意将所有关联到的Agent的配置文件同时进行相应修改。
+4.	一般环境下Binding支持basicHttpBinding、netTcpBinding和wsDualHttpBinding三种。但是在One Way Connection环境下仅支持basicHttpBinding和netTcpBinding两种。
+
+
+
+
+Stream Mode下断网测试逻辑
+
+WCF-InProcess
+
+WCF断网，原端WCF可以抛出异常进行重连，但是目的端需要等待WCF无法读取数据或者外围线程abort才可以继续重连，一般需要两分钟
+InProcess断网，原端目的端会立刻抛出异常，联网后重连就可以正常工作
+
+
+InProcess-WCF
+
+InProcess断网 WCF端需要监听n分钟没有接受数据，主动断开连接，并向原端请求重连，重连的时候强行关闭WCF端发送数据线程确保重连
+
+WCF断网，WCF会立即抛出异常。联网之后重连service，终止WCF发送线程

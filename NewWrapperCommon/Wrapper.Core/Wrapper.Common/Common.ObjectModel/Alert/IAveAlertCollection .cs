@@ -1,0 +1,71 @@
+﻿/********************************************************************
+ *
+ *  PROPRIETARY and CONFIDENTIAL
+ *
+ *  This file is licensed from, and is a trade secret of:
+ *
+ *                   AvePoint, Inc.
+ *                   525 Washington Blvd, Suite 1400
+ *                   Jersey City, NJ 07310
+ *                   United States of America
+ *                   Telephone: +1-201-793-1111
+ *                   WWW: www.avepoint.com
+ *
+ *  Refer to your License Agreement for restrictions on use,
+ *  duplication, or disclosure.
+ *
+ *  RESTRICTED RIGHTS LEGEND
+ *
+ *  Use, duplication, or disclosure by the Government is
+ *  subject to restrictions as set forth in subdivision
+ *  (c)(1)(ii) of the Rights in Technical Data and Computer
+ *  Software clause at DFARS 252.227-7013 (Oct. 1988) and
+ *  FAR 52.227-19 (C) (June 1987).
+ *
+ *  Copyright © 2017-2026 AvePoint® Inc. All Rights Reserved. 
+ *
+ *  Unpublished - All rights reserved under the copyright laws of the United States.
+ */
+
+
+
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Text;
+
+namespace AvePoint.Wrapper.Common
+{
+    public interface IAveAlertCollection : ICollection, IEnumerable, IEnumerable<IAveAlert>
+    {
+        IAveAlert this[Guid alertId] { get; }
+        IAveAlert this[int index] { get; }
+        IAveWeb Web { get; }
+        List<Dictionary<string, object>> GetImmedSubscriptions(Guid siteId, Guid webId, Guid listId, int itemRowId, AveSPAlertHostType hostType);
+        List<Dictionary<string, object>> GetScheddSubscriptions(Guid siteId, Guid webId, Guid listId, int itemRowId, AveSPAlertHostType hostType);
+        IAveAlert Add();
+        Guid Add(IAveListItem listItem, AveEventType eventType, AveAlertFrequency alertFrequency);
+        Guid Add(IAveList list, AveEventType eventType, AveAlertFrequency alertFrequency);
+        
+        /// <summary>
+        /// 添加Alert，不会发送邮件
+        /// </summary>
+        /// <param name="listItem"></param>
+        /// <param name="eventType"></param>
+        /// <param name="alertFrequency"></param>
+        /// <returns></returns>
+        Guid AddAlert(IAveListItem listItem, AveEventType eventType, AveAlertFrequency alertFrequency);
+        /// <summary>
+        /// 添加Alert，不会发送邮件
+        /// </summary>
+        /// <param name="list"></param>
+        /// <param name="eventType"></param>
+        /// <param name="alertFrequency"></param>
+        /// <returns></returns>
+        Guid AddAlert(IAveList list, AveEventType eventType, AveAlertFrequency alertFrequency);
+        void Delete(Guid idAlert);
+        void Delete(int index);
+        Guid AddAlert(IAveListItem listItem, Dictionary<string, object> data);
+        Guid AddAlert(IAveList list, Dictionary<string, object> data);
+    }
+}

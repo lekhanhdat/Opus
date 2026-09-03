@@ -1,0 +1,42 @@
+﻿/********************************************************************
+ *
+ *  PROPRIETARY and CONFIDENTIAL
+ *
+ *  This file is licensed from, and is a trade secret of:
+ *
+ *                   AvePoint, Inc.
+ *                   525 Washington Blvd, Suite 1400
+ *                   Jersey City, NJ 07310
+ *                   United States of America
+ *                   Telephone: +1-201-793-1111
+ *                   WWW: www.avepoint.com
+ *
+ *  Refer to your License Agreement for restrictions on use,
+ *  duplication, or disclosure.
+ *
+ *  RESTRICTED RIGHTS LEGEND
+ *
+ *  Use, duplication, or disclosure by the Government is
+ *  subject to restrictions as set forth in subdivision
+ *  (c)(1)(ii) of the Rights in Technical Data and Computer
+ *  Software clause at DFARS 252.227-7013 (Oct. 1988) and
+ *  FAR 52.227-19 (C) (June 1987).
+ *
+ *  Copyright © 2017-2026 AvePoint® Inc. All Rights Reserved. 
+ *
+ *  Unpublished - All rights reserved under the copyright laws of the United States.
+ */
+
+
+namespace AvePoint.GCommon.Contract.Server.Common.RunOnce
+{
+    /// <summary>
+    /// 本接口主要用于数据升级，而且是偏重于大量的数据
+    /// 由于升级大量数据时不能将服务启动的进程阻塞，所以该方法会异步执行
+    /// 鉴于升级大数据都会消耗比较大的系统资源，本方法不提供重试功能
+    /// </summary>
+    public interface IRunOnceUpdateService
+    {
+        void ExecuteRunOnce();
+    }
+}

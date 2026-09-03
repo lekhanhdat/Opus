@@ -1,0 +1,154 @@
+{
+  "ListNode": {
+    "FullPath": "https://test.sharepoint.com/sites/test/Shared Documents",
+    "Title": "Shared Documents",
+    "Name": "Shared Documents",
+    "ID": "c1234567-0001-0001-0001-000000000001",
+    "SPNodeLevel": "List",
+    "CacheNodeType": 1000,
+    "SiteUrl": "https://test.sharepoint.com/sites/test",
+    "WebId": "c1234567-0002-0002-0002-000000000002",
+    "ListId": "c1234567-0003-0003-0003-000000000003"
+  },
+  "FolderNode": {
+    "FullPath": "https://test.sharepoint.com/sites/test/Shared Documents/Archive",
+    "Title": "Archive",
+    "Name": "Archive",
+    "ID": "c1234567-0004-0004-0004-000000000004",
+    "SPNodeLevel": "Folder",
+    "CacheNodeType": 1002,
+    "SiteUrl": "https://test.sharepoint.com/sites/test",
+    "WebId": "c1234567-0002-0002-0002-000000000002",
+    "ListId": "c1234567-0003-0003-0003-000000000003"
+  },
+  "Rules": [
+    {
+      "Id": "1",
+      "Name": "Match All Documents",
+      "Type": "ADMIN",
+      "PolicyLevel": 64,
+      "Filters": [
+        { "SequenceNo": 1, "Level": 64, "RuleType": 8, "Condition": 8, "Value1": "*" }
+      ]
+    },
+    {
+      "Id": "2",
+      "Name": "Match All Folders",
+      "Type": "ADMIN",
+      "PolicyLevel": 16,
+      "Filters": [
+        { "SequenceNo": 1, "Level": 16, "RuleType": 8, "Condition": 8, "Value1": "*" }
+      ]
+    }
+  ],
+  "Items": [
+    {
+      "DocID": "d1234567-0001-0001-0001-000000000001",
+      "FullUrl": "https://test.sharepoint.com/sites/test/Shared Documents/Archive/RootItem.docx",
+      "LeafName": "RootItem.docx",
+      "ID": 1,
+      "Uiversion": 512,
+      "Title": "Root Level Document",
+      "FileSize": 10240,
+      "ItemType": "DOCUMENT",
+      "Attachments": [],
+      "Versions": [
+        { "Uiversion": 512 }
+      ]
+    }
+  ],
+  "Folders": [
+    {
+      "UniqueId": "d1234567-0010-0010-0010-000000000010",
+      "FullUrl": "https://test.sharepoint.com/sites/test/Shared Documents/Archive/2024",
+      "ItemName": "2024",
+      "ID": 10,
+      "Uiversion": 1024,
+      "Attachments": [
+        {
+          "Name": "FolderReadme.txt",
+          "Url": "https://test.sharepoint.com/sites/test/Shared Documents/Archive/2024/Attachments/FolderReadme.txt"
+        }
+      ],
+      "Versions": [
+        { "Uiversion": 512 },
+        { "Uiversion": 1024 }
+      ],
+      "SubItems": [
+        {
+          "DocID": "d1234567-0011-0011-0011-000000000011",
+          "FullUrl": "https://test.sharepoint.com/sites/test/Shared Documents/Archive/2024/Jan-Report.xlsx",
+          "LeafName": "Jan-Report.xlsx",
+          "ID": 11,
+          "Uiversion": 1024,
+          "Title": "January Report",
+          "FileSize": 204800,
+          "ItemType": "DOCUMENT",
+          "Attachments": [
+            {
+              "Name": "DataSource.csv",
+              "Url": "https://test.sharepoint.com/sites/test/Shared Documents/Archive/2024/Attachments/11/DataSource.csv"
+            }
+          ],
+          "Versions": [
+            { "Uiversion": 512 },
+            { "Uiversion": 1024 }
+          ]
+        },
+        {
+          "DocID": "d1234567-0012-0012-0012-000000000012",
+          "FullUrl": "https://test.sharepoint.com/sites/test/Shared Documents/Archive/2024/Feb-Report.xlsx",
+          "LeafName": "Feb-Report.xlsx",
+          "ID": 12,
+          "Uiversion": 512,
+          "Title": "February Report",
+          "FileSize": 153600,
+          "ItemType": "DOCUMENT",
+          "Attachments": [],
+          "Versions": [
+            { "Uiversion": 512 }
+          ]
+        }
+      ],
+      "SubFolders": [
+        {
+          "UniqueId": "d1234567-0020-0020-0020-000000000020",
+          "FullUrl": "https://test.sharepoint.com/sites/test/Shared Documents/Archive/2024/Q1",
+          "ItemName": "Q1",
+          "ID": 20,
+          "Uiversion": 0,
+          "Attachments": [],
+          "Versions": [],
+          "SubItems": [
+            {
+              "DocID": "d1234567-0021-0021-0021-000000000021",
+              "FullUrl": "https://test.sharepoint.com/sites/test/Shared Documents/Archive/2024/Q1/Summary.pdf",
+              "LeafName": "Summary.pdf",
+              "ID": 21,
+              "Uiversion": 2048,
+              "Title": "Q1 Summary",
+              "FileSize": 512000,
+              "ItemType": "DOCUMENT",
+              "Attachments": [],
+              "Versions": [
+                { "Uiversion": 512 },
+                { "Uiversion": 1024 },
+                { "Uiversion": 1536 },
+                { "Uiversion": 2048 }
+              ]
+            }
+          ],
+          "SubFolders": []
+        }
+      ]
+    }
+  ],
+  "Expected": {
+    "ShouldThrowException": false,
+    "ExpectedProcessedItemsCount": 4,
+    "ExpectedProcessedFoldersCount": 2,
+    "ExpectedProcessedVersionsCount": 5,
+    "ExpectedProcessedAttachmentsCount": 2,
+    "ExpectedExceptionsCaughtCount": 0
+  }
+}

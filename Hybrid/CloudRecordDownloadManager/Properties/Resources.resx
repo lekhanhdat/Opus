@@ -1,0 +1,233 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="key_c30d0ab9_367b_44e7_b8b1_a62d7b0e6479" xml:space="preserve">
+    <value>DEMONSTRATION SOFTWARE LICENSE AGREEMENT
+
+This Demonstration Software License Agreement (the “Agreement”) is made by and between AvePoint, Inc., a Delaware company, with offices at 525 Washington Boulevard, Suite 1400, Jersey City, NJ 07310 (“AvePoint”), and the company or entity using certain of AvePoint’s Licensed Property (“Customer”) for the limited purpose of using certain software for testing purposes during a limited Demonstration Period. This Agreement is effective immediately upon delivery of the Licensed Property (the “Effective Date”).
+
+WHEREAS, AvePoint has developed and is the owner of an extensive platform of products (the Software, as defined below);
+WHEREAS, Customer desires a non-exclusive limited Demonstration License to use the Software for a limited period of time; and
+WHEREAS, AvePoint is willing to grant such a Demonstration License on the terms and conditions set forth below.  
+NOW, THEREFORE, in consideration of the foregoing and of the mutual promises contained in this Agreement, AvePoint and Customer agree as follows:
+
+1. DEFINITIONS
+For purposes of this Agreement, 
+
+1.1 “Affiliate” shall mean, with respect to any person, any other person that controls or is controlled by or under common control with such Person; provided, that a person shall be deemed to be an Affiliate only so long as such control exists.  For the purposes of this definition, “person” means any individual, corporation, partnership, or limited liability company; and “control,” when used with respect to any Person, means ownership of at least fifty percent (50%) of the voting stock, shares or other equity interest in the controlled Person and possession of the power to direct or cause the direction of the management and policies of the controlled Person.  
+
+1.2 “Authorized User” or "User" shall mean:
+            (a) a direct user of the Demonstration Licensed Property, including but not limited to Customer’s employees; or
+            (b) Customer's consultants who have agreed to maintain the Demonstration Licensed Property in confidence and use it only for the benefit of Customer.
+
+1.3 “Demonstration Licensed Property” shall mean the portion of the Software and the Documentation to which Customer has received a Demonstration License.
+
+1.4 “Demonstration Period” means the period of time from the Effective Date and continuing until the conclusion of thirty (30) days following the Effective Date unless either a) sooner terminated by AvePoint in its sole discretion or b) extended in writing by AvePoint.
+
+1.5 “Documentation” shall mean the end user documentation delivered with the Software.
+
+1.6 “Internal Use” means use of the Demonstration Licensed Property by employees of Customer in Customer’s internal operations but does not include access of the Demonstration Licensed Property by, or use of the Demonstration Licensed Property in the provisions of services to, Customer’s clients or customers.  Internal Use also includes use of the Demonstration Licensed Property by contractors of Customer, including contractors providing outsourcing or hosting services, as long as Customer assumes full responsibility for the compliance with this Agreement in such use. Use of the Demonstration Licensed Property (or any part thereof) for the benefit of others, whether by means of a software as a service offering, service bureau application, application service provider, outsourcing or other means of providing service to any third party shall not be considered Internal Use.
+
+1.7 “Server” means each single instance of an operating system, whether physically installed on a computer or within a virtualized environment. 
+
+1.8 “SharePoint Server” means the total count of configured and installed Servers (whether physical or virtual) including number of Servers dedicated in a services farm, “application servers” dedicated to SharePoint services, or web-front-end servers.  
+
+1.9 “Software” shall mean the object code (machine readable) version of any computer programs offered by AvePoint and any ancillary data files, modules, libraries, tutorial or demonstration programs or other components and copies of any of the foregoing or portions thereof.  
+
+2. GRANT OF DEMONSTRATION LICENSE 
+2.1 Grant; Limitations.  In consideration of the use of the Demonstration License and subject to the observance by Customer of the terms and conditions of this Agreement, AvePoint hereby grants to Customer and Customer hereby accepts a limited, non-exclusive, non-transferable (except as set forth in Section 11.5) Demonstration License to use the Demonstration Licensed Property solely for Customer’s Internal Use testing purposes and solely during the Demonstration Period and in accordance with the following limitations as set forth below (the “Demonstration License”):  
+(a) Licensed per SharePoint Server: one Demonstration License per Server in each SharePoint environment in which the Demonstration Licensed Property is run; 
+(b) Licensed per Usage: the Demonstration License granted hereunder is based on the number, size or amount of data processed by the Demonstration Licensed Property and is limited to the amount specified by AvePoint; 
+(c) Licensed per User: one Demonstration License per User per time period as specified by AvePoint;
+(d) Licensed per Named Domain: one Demonstration License per specific domain name ("Named Domain") as specified by AvePoint; and 
+(e) for Demonstration Licensed Property that is classified as part of the DocAve Software Platform, one Demonstration License per DocAve Manager and per Media Services used, where such usage is limited to the amount specified on the applicable invoice by AvePoint.
+
+2.2 Demonstration License Restrictions.  Any use of the Demonstration Licensed Property not expressly permitted by this Agreement is prohibited.  Without limiting the generality of the foregoing, Customer shall not: 
+(a) permit persons other than Authorized Users to access or use the Demonstration Licensed Property (or any part thereof); or
+(b) remove or modify any program markings or any notice of AvePoint or its licensors’ proprietary rights; or
+(c) cause or permit reverse engineering (unless required by law for interoperability), disassembly or decompilation of the programs; or
+(d) use the Demonstration Licensed Property (or any part thereof) in breach of any applicable laws or regulations.
+
+2.3 No Copies.  The Demonstration Licensed Property may not be copied or duplicated by Customer, in whole or in part, except with the written permission of AvePoint. Customer shall not conceal, remove or alter any title, trademark, copyright, proprietary or restricted rights notices incorporated in the Demonstration Licensed Property (or any part thereof).  The original and all copies of the Software which are made or used by or in the possession of Customer shall be and shall remain the property of AvePoint.
+
+2.4 No Other Demonstration License.  Except as expressly set forth in this Agreement, no other demonstration license is granted and none shall be deemed granted by implication, estoppel or otherwise.
+
+2.5 Delivery.  Unless otherwise requested by Customer, AvePoint shall provide an electronic link to make available to Customer the Demonstration Licensed Property by electronic download and a license key to activate the Demonstration Licensed Property. 
+
+2.6 Services.  AvePoint is under no obligation to provide any services to Customer with respect to the Demonstration Licensed Property (including, without limitation, any installation of the Software or Demonstration Licensed Property, training or maintenance).  
+
+2.7 Audit.  AvePoint may, with reasonable notice and at any time during reasonable business hours, either on its own or through its duly authorized representative, conduct an audit of the use by Customer of the Demonstration License to ensure that Customer is complying with the terms of this Agreement.
+
+3. PROPERTY RIGHTS; PROHIBITIONS AS TO DEMONSTRATION LICENSED PROPERTY
+3.1 Property Rights.  AvePoint or its licensors retain all ownership and intellectual property rights to the Software and Demonstration Licensed Property.  Third party technology that may be appropriate or necessary for use with the Demonstration Licensed Property is specified in the Documentation.  Such third party technology is licensed to you under the terms of the third party technology license agreement specified in the program documentation and not under the terms of this Agreement.
+
+3.2 Trade Secrets.  Customer agrees that the Software and all associated trade secrets, including but not limited to the Demonstration Licensed Property, its configurations, architecture, communications and performance benchmarks, are the exclusive property of AvePoint.  Customer agrees not to disclose, disseminate, transmit via any medium whatsoever, or make available the Software, Demonstration Licensed Property or any associated trade secrets to any third party without AvePoint’s prior written consent.  
+
+4. NO WARRANTY AND DISCLAIMER
+THE SOFTWARE, INCLUDING WITHOUT LIMITATION THE DEMONSTRATION LICENSED PROPERTY, IS PROVIDED TO CUSTOMER ON AN “AS IS” “WHERE IS” BASIS WITHOUT WARRANTY AND CUSTOMER’S USE THEREOF IS AT ITS OWN RISK.  AVEPOINT DOES NOT MAKE, AND HEREBY SPECIFICALLY DISCLAIMS, AND CUSTOMER RELEASES AND WAIVES, ANY AND ALL WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING, WITHOUT LIMITATION, WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR USE AND PURPOSE, NON-INFRINGEMENT, TITLE, OR ANY WARRANTY ARISING UNDER STATUTE OR OTHERWISE IN LAW OR FROM A COURSE OF DEALING, COURSE OF PERFORMANCE, USAGE OR TRADE PRACTICE.  WITHOUT LIMITING THE GENERALITY OF THE FOREGOING, AVEPOINT DOES NOT WARRANT THAT THE DEMONSTRATION LICENSED PROPERTY WILL MEET CUSTOMER’S REQUIREMENTS, WILL OPERATE IN ANY COMBINATION THAT MAY BE SELECTED FOR USE BY CUSTOMER OR IN COMBINATION WITH OTHER SOFTWARE BEYOND MICROSOFT SHAREPOINT, OR WILL OPERATE UNINTERRUPTED OR ERROR FREE.  FURTHERMORE, AVEPOINT DOES NOT WARRANT THAT ANY SOFTWARE ERRORS, DEFECTS OR INEFFICIENCIES WILL BE CORRECTED, NOR DOES AVEPOINT ASSUME ANY LIABILITY FOR FAILURE TO CORRECT ANY SUCH ERROR, DEFECT OR INEFFICIENCY.  AVEPOINT MAKES NO WARRANTY, AND CUSTOMER ASSUMES THE ENTIRE RISK, AS TO THE INTEGRITY OF ANY DATA AND THE RESULTS, CAPABILITIES, SUITABILITY, USE, NON-USE OR PERFORMANCE OF THE DEMONSTRATION LICENSED PROPERTY.  IN NO EVENT SHALL AVEPOINT BE LIABLE TO CUSTOMER FOR ANY DAMAGES RESULTING FROM OR RELATED TO THE USE OR PERFORMANCE OF THE DEMONSTRATION LICENSED PROPERTY.
+
+5. LIMITATION OF LIABILITY
+EXCEPT AS PROVIDED IN SECTION 6 HEREOF, UNDER NO CIRCUMSTANCES SHALL AVEPOINT BE LIABLE FOR ANY DIRECT DAMAGES SUFFERED BY CUSTOMER AS A RESULT OF THIS AGREEMENT. EXCEPT AS PROVIDED FOR IN SECTION 6 HEREOF, UNDER NO CIRCUMSTANCES SHALL AVEPOINT BE LIABLE FOR ANY INDIRECT, SPECIAL, INCIDENTAL, EXEMPLARY, PUNITIVE OR CONSEQUENTIAL DAMAGES SUFFERED BY CUSTOMER, ANY PARTY CLAIMING ON BEHALF OF OR THROUGH CUSTOMER, OR ANY OTHER THIRD PARTY RESULTING FROM OR ARISING OUT OF OR RELATED TO THIS AGREEMENT, ANY ADDENDUM HERETO OR THE PERFORMANCE OR BREACH THEREOF, INCLUDING WITHOUT LIMITATION, DAMAGES FOR LOSS OF BUSINESS OR PROFITS, BUSINESS INTERRUPTION, DAMAGE OR LOSS OR DESTRUCTION OF DATA OR LOSS OF USE OF THE DEMONSTRATION LICENSED PROPERTY, EVEN IF CUSTOMER HAS BEEN PREVIOUSLY ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.  IN NO EVENT SHALL AVEPOINT HAVE ANY LIABILITY TO CUSTOMER IN EXCESS OF THE AMOUNTS PAID BY CUSTOMER TO AVEPOINT UNDER THIS AGREEMENT OR ANY ADDENDUM HERETO.
+
+6. INDEMNITY
+AvePoint will, defend Customer from and against any claim or action commenced by a third party alleging that the Demonstration Licensed Property, when used in accordance with the terms of this Agreement, infringes any patent, copyright or trademark, or is a misappropriation of a trade secret, and AvePoint will indemnify Customer from any costs (including reasonable attorneys’ fees) associated with the defense or settlement of and/or damages finally awarded against Customer in any such claim.  If such a claim is made or appears likely to be made, AvePoint, at its option, shall have the right to either (i) procure for the Customer the right to continue to use the Licensed Property, (ii) modify or replace the Demonstration Licensed Property so that it is no longer infringing (in a manner that substantially retains its functionality and quality), or (iii) require Customer to terminate the use of and return the Demonstration Licensed Property.  Notwithstanding the foregoing, AvePoint shall have no liability to Customer if the infringement results from use of the Demonstration Licensed Property in combination with software not provided by AvePoint or from modifications made by AvePoint to conform to specifications provided by Customer.  The indemnification obligations in this section are subject to:  (i) notification in writing of any claim (provided that Customer’s failure to provide reasonable written notice shall only relieve AvePoint of its indemnification obligations hereunder to the extent such failure materially limits or prejudices AvePoint’s ability to defend or settle such claim); (ii) the transfer of sole control of the defense and any related settlement negotiations to AvePoint; and (iii) Customer’s cooperation, at AvePoint’s expense, in the defense of such claim.  THIS SECTION STATES CUSTOMER’S SOLE AND EXCLUSIVE REMEDIES FOR INFRINGEMENT OR CLAIMS ALLEGING INFRINGEMENT.  
+
+7. TERM AND TERMINATION
+Term.  This Agreement shall remain in full force and effect from the Effective Date until the expiration of the Demonstration Period unless terminated pursuant to this Section.
+
+7.1 Termination of Demonstration License.  This Agreement and the Demonstration License and other rights granted hereunder may be terminated immediately by AvePoint at any time and for any reason or it not terminated or extended in writing by AvePoint past the Demonstration Period, it shall automatically terminate at the end of the Demonstration Period.
+
+7.2 Effect of Termination of Demonstration License.  Immediately upon any termination, cancellation or expiration of this Agreement or of any Demonstration License granted hereunder for any reason:
+(a) all rights and Demonstration Licenses granted to Customer under this Agreement shall cease and terminate and Customer shall have no right thereafter to use, and shall cease the use of, the Demonstration Licensed Property or any portion thereof; and
+(b) Customer shall return the Demonstration Licensed Property (including all copies thereof) to AvePoint.
+
+7.3 Survival Provisions of the Agreement.  The provisions of Section 3 through 10 of this Agreement shall survive the termination, cancellation or expiration of this Agreement for any reason.
+
+8. FORCE MAJEURE
+Neither party shall be liable to the other party for any delay or failure in the performance of its obligations under this Agreement otherwise if such delay or failure arises from any cause or causes beyond the control of such party including, without limitation, labor shortages or disputes, strikes, other labor or industrial disturbances, delays in transportation, acts of God, floods, lightning, fire, epidemic, shortages of materials, rationing, utility or communication failures, earthquakes, casualty, war, acts of the public enemy, an act of civil or military authority, sabotage, explosives, riots, insurrections, embargoes, blockades, actions, restrictions, regulations or orders of any government, agency or subdivision thereof, or failure of suppliers. 
+
+9. EXPORT REGULATIONS; U.S. GOVERNMENT RESTRICTIONS
+Customer acknowledges that the Demonstration Licensed Property may be subject to United States export laws, statutes and regulations and to export laws, statutes and regulations of other countries, and that Customer will at all times comply with the provisions of such laws, statutes and regulations including obtaining any necessary or required licenses.  Customer shall not export or re-export or otherwise transmit, directly or indirectly, the Demonstration Licensed Property or any direct products thereof into, or use the Demonstration Licensed Property or any direct products thereof in, any country prohibited or restricted under United States export laws, statutes or regulations or any other applicable laws.
+
+10. MISCELLANEOUS PROVISIONS
+10.1 Binding Effect.  This Agreement and all of the provisions hereof shall be binding upon and shall inure to the benefit of the parties hereto and their respective successors and permitted assigns.
+
+10.2 Amendment.  This Agreement may be amended only by a writing duly executed by the authorized representatives of the parties hereto which makes specific reference to this Agreement.
+
+10.3 Notices.  All notices, requests, demands, consents, authorizations, claims, and other communications (each a “Notice”) hereunder must be in writing and sent to the other party by overnight delivery.  Any Notice shall be deemed duly given one (1) business day following the date sent when sent by overnight delivery.  No party may send any Notice to the intended recipient using any other means. Notices to AvePoint shall be sent to AvePoint, Inc., Harborside Financial Center, Plaza 10, 3 Second Street, 9th Floor, Jersey City, New Jersey 07311, Attn:  General Counsel. Unless otherwise specified by Customer in writing, Notices to Customer shall be sent to the registered agent of the Customer in the jurisdiction in which the Customer is organized or incorporated.  Any party may change the address to which Notices are to be delivered by giving the other parties Notice in the manner herein set forth.
+
+10.4 Governing Law.  The validity and construction of this Agreement and all matters pertaining thereto are to be determined in accordance with the laws of the Commonwealth of Virginia, without reference to the conflicts of laws provisions thereof.  Customer agrees that any proceedings related to this Agreement, including any suit filed against AvePoint, shall be brought in the Courts of the Commonwealth of Virginia located in the City of Richmond, Virginia.  Customer waives any objections to personal jurisdiction and venue to that forum.  The parties specifically direct and agree that the CISG (UN-Convention on Contracts for the International Sale of Goods) and the Uniform Computer Information Transactions Act (UCITA) are specifically excluded and neither shall apply to this Agreement or to the performance hereof by the parties hereto.
+
+10.5 Assignment.  Customer may not, directly or indirectly, sell, assign, sublicense, lease, rent, distribute, or otherwise transfer the Demonstration License, the Demonstration Licensed Property, or any rights therein, or any rights or obligations under this Agreement, to any other person or entity, unless Customer first obtains the written consent of AvePoint, except in conjunction with the sale of all or substantially all of the stock or assets of Customer.    
+
+10.6 Waiver.  No party to this Agreement shall be deemed to have waived any of its rights, powers or remedies under this Agreement unless such waiver is expressly set forth in a writing signed by the waiving party.  No written waiver of any provision of this Agreement shall be deemed to be, or shall constitute, (i) a waiver of any other provision of this Agreement, whether or not similar, or (ii) a continuing or subsequent waiver of the same or another provision of this Agreement.  The failure of either party to enforce at any time any of the provisions of this Agreement, or the failure to require at any time performance by the other party of any of the provisions of this Agreement, will in no way be construed to be a present or future waiver of any such provisions, or in any way affect the validity of either party to enforce each and every such provision thereafter.
+
+10.7 Captions.  The captions and headings of Sections and subsections contained in this Agreement are provided for convenience of reference only and shall not be considered a part hereof for purposes of interpreting this Agreement, and, way the meaning or intent of this Agreement or any of its terms or provisions.
+
+10.8 Severability.  If any Section or other provision of this Agreement, or the application of such Section or provision, is held invalid, then the remainder of this Agreement, and the application of such Section or provision to persons or circumstances other than those with respect to which it is held invalid, shall not in any way be affected or impaired thereby.  In the event that any provision of this Agreement becomes or is declared by a court of competent jurisdiction or panel of arbitrators to be illegal, unenforceable or void, this Agreement shall continue in full force and effect without said provision.  The parties agree to negotiate in good faith a substitute valid and enforceable provision that most nearly effects the parties’ intent and to be bound by the mutually agreed substitute provision.
+
+10.9 Counterparts.  This Agreement may be executed in one or more counterparts, each of which shall be deemed an original but all of which together will constitute one and the same instrument.
+
+10.10 Remedies.  All remedies shall be cumulative and not alternative and in addition to all other rights and remedies available in law and in equity.
+
+10.11 Attorney’s Fees.  Customer agrees to pay any costs incurred by AvePoint in enforcing any provision of this Agreement in the event of the initiation of any legal action or proceedings for such purpose, including but not limited to all court costs and reasonable attorney’s fees, which costs shall bear interest at the rate of 1½% per month from the date of judgment.
+
+10.12 Entire Agreement.  This Agreement and any additional addendums or amendments hereto, constitutes the entire agreement between the parties hereto pertaining to the subject matter hereof, and supersedes, supplants, and renders null and void any and all prior and contemporaneous negotiations, discussions, proposals, agreements, understandings, representations or communications, oral or written, of the parties hereto with respect to the subject matter hereof.   No purchase order terms or conditions of the Customer shall be deemed to modify this Agreement.  There are no representations, agreements, arrangements or understandings, oral or written, between the parties hereto relating to the subject matter of the Agreement which are not fully expressed herein.</value>
+  </data>
+</root>

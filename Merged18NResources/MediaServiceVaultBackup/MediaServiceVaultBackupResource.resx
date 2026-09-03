@@ -1,0 +1,228 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="VaultBackupDataWriterAssembleIndexHeaderError" xml:space="preserve">
+    <value>The unsupported header's type is {0}.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="VaultBackupDataWriterCloseSuccessfully" xml:space="preserve">
+    <value>Successfully closed the data writer.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="VaultBackupDataWriterGetDataFileNameUnknownFileTypeException" xml:space="preserve">
+    <value>The data block has been changed to the unknown file type {0}.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="VaultBackupDataWriterHandleHeaderBegin" xml:space="preserve">
+    <value>Handle header: {0}.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="VaultBackupDataWriterHandleHeaderInfo" xml:space="preserve">
+    <value>Begin handling header whose type is {0}... The path is {1}.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="VaultBackupDataWriterHandleTailHandle" xml:space="preserve">
+    <value>Handle tail: {0}.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="VaultBackupDataWriterOpenBegin" xml:space="preserve">
+    <value>Begin opening archive backup data writer....</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="VaultBackupServiceOpenBegin" xml:space="preserve">
+    <value>Starting vault backup job...</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="VaultBackupServiceOpenEnd" xml:space="preserve">
+    <value>Successfully finished the pretreatment of the backup.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="VaultIndexServiceCloseEnd" xml:space="preserve">
+    <value>Successfully closed the index service.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="VaultIndexServiceOpenBegin" xml:space="preserve">
+    <value>Begin opening index service....</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="VaultIndexServiceOpenEnd" xml:space="preserve">
+    <value>Successfully opened the index service.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="VaultMergeIndexServiceGenerateJobReportError" xml:space="preserve">
+    <value>Failed to generate the job report, details: {0}.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="VaultMergeIndexServiceGenerateJobReportFinished" xml:space="preserve">
+    <value>Finished generating the archiver data upgrade job report.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="VaultMergeIndexServiceInsertIntoMainIndexBodyBegin" xml:space="preserve">
+    <value>Begin inserting data into table {0}...</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="VaultMergeIndexServiceInsertIntoMainIndexBodyEnd" xml:space="preserve">
+    <value>Inserting data into table {0} completed.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="VaultMergeIndexServiceInsertIntoMainIndexHeadBegin" xml:space="preserve">
+    <value>Begin inserting data into table {0}...</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="VaultMergeIndexServiceMergeIndexCount" xml:space="preserve">
+    <value>{0} pieces of records need to be inserted.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="VaultMergeIndexServiceMergeIndexEnd" xml:space="preserve">
+    <value>Successfully merged index.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="VaultMergeIndexServiceOpenBegin" xml:space="preserve">
+    <value>Begin merging index...</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="VaultMergeIndexServiceOpenOpenIndexLogicalDeviceSuccessfully" xml:space="preserve">
+    <value>Successfully opened index logical device.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="VaultMergeIndexServiceProcessExceptionError" xml:space="preserve">
+    <value>Failed to merge index, details: {0}.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="VaultMergeIndexServiceUpdateJobStatusAndControlTableError" xml:space="preserve">
+    <value>Failed to update job status and control table, details: {0}.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="VautBackupBrowserServiceBrowseNextLevelInfo" xml:space="preserve">
+    <value>Begin browsing the tree under the node {0}...</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="VautBackupBrowserServiceGenerateItemDetailContent" xml:space="preserve">
+    <value>The details of current item are: [{0}].</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="VautBackupBrowserServiceOpenBegin" xml:space="preserve">
+    <value>Start browsing vault tree...</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="VautBackupBrowserServiceProcessExceptionError" xml:space="preserve">
+    <value>An error occurred while loading the vault tree, details: {0}.</value>
+    <comment>Verified</comment>
+  </data>
+</root>

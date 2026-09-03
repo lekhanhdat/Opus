@@ -1,0 +1,82 @@
+﻿/********************************************************************
+ *
+ *  PROPRIETARY and CONFIDENTIAL
+ *
+ *  This file is licensed from, and is a trade secret of:
+ *
+ *                   AvePoint, Inc.
+ *                   525 Washington Blvd, Suite 1400
+ *                   Jersey City, NJ 07310
+ *                   United States of America
+ *                   Telephone: +1-201-793-1111
+ *                   WWW: www.avepoint.com
+ *
+ *  Refer to your License Agreement for restrictions on use,
+ *  duplication, or disclosure.
+ *
+ *  RESTRICTED RIGHTS LEGEND
+ *
+ *  Use, duplication, or disclosure by the Government is
+ *  subject to restrictions as set forth in subdivision
+ *  (c)(1)(ii) of the Rights in Technical Data and Computer
+ *  Software clause at DFARS 252.227-7013 (Oct. 1988) and
+ *  FAR 52.227-19 (C) (June 1987).
+ *
+ *  Copyright © 2017-2026 AvePoint® Inc. All Rights Reserved. 
+ *
+ *  Unpublished - All rights reserved under the copyright laws of the United States.
+ */
+
+
+
+
+namespace AvePoint.ObjectModel.Common
+{
+    #region using directives
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Text;
+    using AvePoint.Wrapper.Common;
+    #endregion
+
+    internal class AveUserSerializer : IAveUserSerializer
+    {
+        private AveSite m_Site;
+
+        public AveUserSerializer(AveSite site)
+        {
+            m_Site = site;
+        }
+
+        public AveUserInfo GetObjectData(int principalId)
+        {
+            foreach (AveUser user in m_Site.RootWeb.SiteUsers)
+            {
+                if (user.ID == principalId)
+                {
+                    AveUserInfo userInfo = new AveUserInfo();
+                    userInfo.ID = user.ID;
+                    userInfo.Email = user.Email;
+                    userInfo.Login = user.LoginName;
+                    userInfo.DomainGroup = user.IsDomainGroup;
+                    userInfo.Title = user.Name;
+                    userInfo.SiteAdmin = user.IsSiteAdmin;
+                    userInfo.Notes = user.Notes;
+                    return userInfo;
+                }
+            }
+            return null;
+        }
+
+        public AveUserInfo GetObjectData()
+        {
+            throw new NotImplementedException();
+        }
+
+        public object SetObjectData(object obj)
+        {
+            throw new NotImplementedException();
+        }
+    }
+}

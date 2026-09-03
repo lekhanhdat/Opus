@@ -1,0 +1,193 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<!--/********************************************************************
+ *
+ *  PROPRIETARY and CONFIDENTIAL
+ *
+ *  This file is licensed from, and is a trade secret of:
+ *
+ *                   AvePoint, Inc.
+ *                   525 Washington Blvd, Suite 1400
+ *                   Jersey City, NJ 07310
+ *                   United States of America
+ *                   Telephone: +1-201-793-1111
+ *                   WWW: www.avepoint.com
+ *
+ *  Refer to your License Agreement for restrictions on use,
+ *  duplication, or disclosure.
+ *
+ *  RESTRICTED RIGHTS LEGEND
+ *
+ *  Use, duplication, or disclosure by the Government is
+ *  subject to restrictions as set forth in subdivision
+ *  (c)(1)(ii) of the Rights in Technical Data and Computer
+ *  Software clause at DFARS 252.227-7013 (Oct. 1988) and
+ *  FAR 52.227-19 (C) (June 1987).
+ *
+ *  Copyright © 2017-2026 AvePoint® Inc. All Rights Reserved. 
+ *
+ *  Unpublished - All rights reserved under the copyright laws of the United States.
+ */-->
+	<!--When editing this file, please make sure the content format is not changed. Changing the content format may cause errors.-->
+	<!--Some of SharePoint properties can be customized as the SharePointMetadata parameter value in the following format: @Property@-->
+
+	<!--Use @Title@ to retrieve the object title as the metadata value.-->
+	<!--Use @Name@ to retrieve the object name as the metadata value.-->
+	<!--Use @CreatedTime@ to retrieve the created time of the object as the metadata value. The time is in the time zone of the site collection where the object resides.-->
+	<!--Use @TimeNow@ to retrieve the time when the object is exported into a VEO file. The time is in the time zone of the server where the Archiver job is run.-->
+	<!--Use @UniqueId@ to retrieve the object UniqueId as the metadata value.-->
+	<!--Use @Type@ to retrieve the object type as the metadata value.-->
+	<!--Use @Version@ to retrieve the object version as the metadata value.-->
+	<!--Use @Size@ to retrieve the object size as the metadata value.-->
+	<!--Use @Url@ to retrieve the object Url as the metadata value.-->
+	<!--Use @FileContent@ to retrieve the object content as the metadata value.-->
+	<!--Use @NewGuid@ to generate new Id with Guid format by using Guid.NewGuid().-->
+<VEOContentXML>
+	<M1 MetadataName = "VEOContent">
+		<!--<M2 MetadataName = "Version" SharePointMetadataAsSource = "false" SharePointMetadata = "" DefaultValue = "3.0" /> only the vers standard 3.0 is supported.-->
+		<!--<M3 MetadataName = "HashFunctionAlgorithm" SharePointMetadataAsSource = "false" SharePointMetadata = "" DefaultValue = "SHA-512" />only the hash algorithm SHA-512 with rsa is supported.-->
+		<M4 metadataname = "InfomationObject">
+			<!--<M5 MetadataName = "InformationObjectType"  SharePointMetadataAsSource = "false" SharePointMetadata = "" DefaultValue = "" /> This element cannot be edited.-->
+			<!--<M6 MetadataName = "InformationObjectDepth" SharePointMetadataAsSource = "false" SharePointMetadata = "" DefaultValue = "" /> This element cannot be edited.-->
+			<M7 MetadataName = "MetadataPackage">
+				<!--<M8 MetadataName = "MetadataSchemaIdentifier" SharePointMetadataAsSource = "false" SharePointMetadata = "" DefaultValue = "http://prov.vic.gov.au/vers/schema/ANZS5478" />  This element cannot be edited.-->
+				<!--<M9 MetadataName = "MetadataSyntaxIdentifier" SharePointMetadataAsSource = "false" SharePointMetadata = "" DefaultValue = "http://www.w3.org/1999/02/22-rdf-syntax-ns" />  This element cannot be edited.-->
+				<M10 MetadataName = "RDF">
+					<M90 MetadataName ="Description">
+						<M11 MetadataName = "Record">
+							<!--<M12 MetadataName="EntityType" SharePointMetadataAsSource = "false" SharePointMetadata = "" DefaultValue = "Record" />The DefaultValue cannot be edited.-->
+							<M13 MetadataName="Category" SharePointMetadataAsSource = "false" SharePointMetadata = "" DefaultValue = "Item" />
+							<M14 MetadataName="Identifier">
+								<M15 MetadataName="IdentifierString" SharePointMetadataAsSource = "true" SharePointMetadata = "@UniqueId@" DefaultValue = "" />
+								<M16 MetadataName="IdentifierScheme" SharePointMetadataAsSource = "false" SharePointMetadata = "" DefaultValue = "" />
+							</M14>
+							<M17 MetadataName="Name" >
+								<M18 MetadataName="NameWords" SharePointMetadataAsSource = "true" SharePointMetadata = "@Name@" DefaultValue = "" />
+								<M19 MetadataName="NameScheme" SharePointMetadataAsSource = "false" SharePointMetadata = "" DefaultValue = "" />
+							</M17>
+							<M20 MetadataName="DateRange">
+								<M21 MetadataName="StartDate" SharePointMetadataAsSource = "true" SharePointMetadata = "@CreatedTime@" DefaultValue = "" />
+								<M22 MetadataName="EndDate" SharePointMetadataAsSource = "false" SharePointMetadata = "" DefaultValue = "" />
+							</M20>
+							<M23 MetadataName="Description" SharePointMetadataAsSource = "false" SharePointMetadata = "" DefaultValue = "" />
+							<M24 MetadataName="Jurisdiction" SharePointMetadataAsSource = "false" SharePointMetadata = "" DefaultValue = "" />
+							<M25 MetadataName="SecurityClassification" SharePointMetadataAsSource = "false" SharePointMetadata = "" DefaultValue = "Unclassified" />
+
+							<M26 MetadataName="SecurityCaveat">
+								<M27 MetadataName="CaveatText" SharePointMetadataAsSource = "false" SharePointMetadata = "" DefaultValue = "" />
+								<M28 MetadataName="CaveatCategory" SharePointMetadataAsSource = "false" SharePointMetadata = "" DefaultValue = "" />
+							</M26>
+							<M29 MetadataName="Rights">
+								<M30 MetadataName="RightsStatement" SharePointMetadataAsSource = "false" SharePointMetadata = "" DefaultValue = "" />
+								<M31 MetadataName="RightsType" SharePointMetadataAsSource = "false" SharePointMetadata = "" DefaultValue = "" />
+								<M32 MetadataName="RightsStatus" SharePointMetadataAsSource = "false" SharePointMetadata = "" DefaultValue = "" />
+							</M29>
+							<M33 MetadataName="Language" SharePointMetadataAsSource = "false" SharePointMetadata = "" DefaultValue = "en-AU" />
+							<M34 MetadataName="Coverage">
+								<M35 MetadataName="JurisdictionalCoverage" SharePointMetadataAsSource = "false" SharePointMetadata = "" DefaultValue = "" />
+								<M36 MetadataName="TemporalCoverage" SharePointMetadataAsSource = "false" SharePointMetadata = "" DefaultValue = "" />
+								<M37 MetadataName="SpatialCoverage" SharePointMetadataAsSource = "false" SharePointMetadata = "" DefaultValue = "" />
+							</M34>
+							<M38 MetadataName="Keyword">
+								<M39 MetadataName="KeywordTerm" SharePointMetadataAsSource = "false" SharePointMetadata = "" DefaultValue = "" />
+								<M40 MetadataName="KeywordID" SharePointMetadataAsSource = "false" SharePointMetadata = "" DefaultValue = "" />
+								<M41 MetadataName="KeywordScheme" SharePointMetadataAsSource = "false" SharePointMetadata = "" DefaultValue = "" />
+								<M42 MetadataName="KeywordSchemeType" SharePointMetadataAsSource = "false" SharePointMetadata = "" DefaultValue = "" />
+							</M38>
+							<M43 MetadataName="Disposal">
+								<M44 MetadataName="RetentionAndDisposalAuthority" SharePointMetadataAsSource = "false" SharePointMetadata = "" DefaultValue = "No Disposal Coverage" />
+								<M45 MetadataName="DisposalClassID" SharePointMetadataAsSource = "false" SharePointMetadata = "" DefaultValue = "" />
+								<M46 MetadataName="DisposalAction" SharePointMetadataAsSource = "false" SharePointMetadata = "" DefaultValue = "" />
+								<M47 MetadataName="DisposalTriggerDate" SharePointMetadataAsSource = "false" SharePointMetadata = "" DefaultValue = "" />
+								<M48 MetadataName="DisposalActionDue" SharePointMetadataAsSource = "false" SharePointMetadata = "" DefaultValue = "" />
+							</M43>
+							<M49 MetadataName="Format">
+								<M50 MetadataName="FormatName" SharePointMetadataAsSource = "true" SharePointMetadata = "@Type@" DefaultValue = "" />
+								<M51 MetadataName="FormatVersion" SharePointMetadataAsSource = "true" SharePointMetadata = "@Version@" DefaultValue = "1.0" />
+								<M52 MetadataName="CreatingApplicationName" SharePointMetadataAsSource = "false" SharePointMetadata = "" DefaultValue = "" />
+								<M53 MetadataName="CreatingApplicationVersion" SharePointMetadataAsSource = "false" SharePointMetadata = "" DefaultValue = "" />
+								<M54 MetadataName="FormatRegistry" SharePointMetadataAsSource = "false" SharePointMetadata = "" DefaultValue = "" />
+								<M55 MetadataName="FormatRegistryID" SharePointMetadataAsSource = "false" SharePointMetadata = "" DefaultValue = "" />
+							</M49>
+							<M56 MetadataName="Extent">
+								<M57 MetadataName="PhysicalDimensions" SharePointMetadataAsSource = "false" SharePointMetadata = "" DefaultValue = "" />
+								<M58 MetadataName="LogicalSize" SharePointMetadataAsSource = "true" SharePointMetadata = "@Size@" DefaultValue = "" />
+								<M59 MetadataName="Quantity" SharePointMetadataAsSource = "false" SharePointMetadata = "" DefaultValue = "1" />
+								<M60 MetadataName="Units" SharePointMetadataAsSource = "false" SharePointMetadata = "" DefaultValue = "KB" />
+							</M56>
+							<M61 MetadataName="Medium" SharePointMetadataAsSource = "false" SharePointMetadata = "" DefaultValue = "" />
+							<M62 MetadataName="IntegrityCheck">
+								<M63 MetadataName="HashFunctionName" SharePointMetadataAsSource = "false" SharePointMetadata = "" DefaultValue = "SHA-512" />
+								<!--<M64 MetadataName="MessageDigest" SharePointMetadataAsSource = "false" SharePointMetadata = "" DefaultValue = "" />-->
+							</M62>
+							<M65 MetadataName="Location" SharePointMetadataAsSource = "true" SharePointMetadata = "@Url@" DefaultValue = "" />
+							<M66 MetadataName="DocumentForm" SharePointMetadataAsSource = "false" SharePointMetadata = "" DefaultValue = "" />
+							<M67 MetadataName="Precedence" SharePointMetadataAsSource = "false" SharePointMetadata = "" DefaultValue = "" />
+							<M73 MetadataName="Relationship">
+								<!--<M12 MetadataName="EntityType" SharePointMetadataAsSource = "false" SharePointMetadata = "" DefaultValue = "Relationship" /> This element cannot be edited.-->
+								<M13 MetadataName="Category" SharePointMetadataAsSource = "false" SharePointMetadata = "" DefaultValue = "Recordkeeping Event" />
+								<M14 MetadataName="Identifier">
+									<M15 MetadataName="IdentifierString" SharePointMetadataAsSource = "false" SharePointMetadata = "" DefaultValue = "@NewGuid@" />
+									<M16 MetadataName="IdentifierScheme" SharePointMetadataAsSource = "false" SharePointMetadata = "" DefaultValue = "System Assigned" />
+								</M14>
+								<M17 MetadataName="Name">
+									<M18 MetadataName="NameWords" SharePointMetadataAsSource = "false" SharePointMetadata = "" DefaultValue = "Created By" />
+									<M19 MetadataName="NameScheme" SharePointMetadataAsSource = "false" SharePointMetadata = "" DefaultValue = "" />
+								</M17>
+								<M20 MetadataName="DateRange">
+									<M21 MetadataName="StartDate" SharePointMetadataAsSource = "false" SharePointMetadata = "" DefaultValue = "@TimeNow@" />
+									<M22 MetadataName="EndDate" SharePointMetadataAsSource = "false" SharePointMetadata = "" DefaultValue = "" />
+								</M20>
+								<M23 MetadataName="Description" SharePointMetadataAsSource = "false" SharePointMetadata = "" DefaultValue = "" />
+								<M74 MetadataName="RelatedEntity">
+									<M75 MetadataName="AssignedEntityID" SharePointMetadataAsSource = "false" SharePointMetadata = "" DefaultValue = "" /> <!--Only use AssignedEntityID or Agent entity below.-->
+									<M76 MetadataName="AssignedEntityIDScheme" SharePointMetadataAsSource = "false" SharePointMetadata = "" DefaultValue = "" /> <!--Only fill if use AssignedEntityID.-->
+									<M77 MetadataName="RelationshipRole" SharePointMetadataAsSource = "false" SharePointMetadata = "" DefaultValue = "2" /> 
+									<M78 MetadataName="Agent">
+										<!--<M12 MetadataName="EntityType" SharePointMetadataAsSource = "false" SharePointMetadata = "" DefaultValue = "" /> This element cannot be edited.-->
+										<M13 MetadataName="Category" SharePointMetadataAsSource = "false" SharePointMetadata = "" DefaultValue = "Organisation" />
+										<M14 MetadataName="Identifier">
+											<M15 MetadataName="IdentifierString" SharePointMetadataAsSource = "false" SharePointMetadata = "" DefaultValue = "4939" />
+											<M16 MetadataName="IdentifierScheme" SharePointMetadataAsSource = "false" SharePointMetadata = "" DefaultValue = "" />
+										</M14>
+										<M17 MetadataName="Name">
+											<M18 MetadataName="NameWords" SharePointMetadataAsSource = "false" SharePointMetadata = "" DefaultValue = "Your Company" />
+											<M19 MetadataName="NameScheme" SharePointMetadataAsSource = "false" SharePointMetadata = "" DefaultValue = "" />
+										</M17>
+										<M20 MetadataName="DateRange">
+											<M21 MetadataName="StartDate" SharePointMetadataAsSource = "false" SharePointMetadata = "" DefaultValue = "@TimeNow@" />
+											<M22 MetadataName="EndDate" SharePointMetadataAsSource = "false" SharePointMetadata = "" DefaultValue = "" />
+										</M20>
+										<M23 MetadataName="Description" SharePointMetadataAsSource = "false" SharePointMetadata = "" DefaultValue = "" />
+										<M24 MetadataName="Jurisdiction" SharePointMetadataAsSource = "false" SharePointMetadata = "" DefaultValue = "AU" />
+										<M80 MetadataName="Permissions">
+											<M81 MetadataName="PermissionText" SharePointMetadataAsSource = "false" SharePointMetadata = "" DefaultValue = ""/>
+											<M82 MetadataName="PermissionType" SharePointMetadataAsSource = "false" SharePointMetadata = "" DefaultValue = ""/>
+										</M80>
+										<M83 MetadataName="Contact">
+											<M84 MetadataName="ContactDetails" SharePointMetadataAsSource = "false" SharePointMetadata = "" DefaultValue = "" />
+											<M85 MetadataName="ContactType" SharePointMetadataAsSource = "false" SharePointMetadata = "" DefaultValue = "" />
+										</M83>
+										<M79 MetadataName="Position" SharePointMetadataAsSource = "false" SharePointMetadata = "" DefaultValue = "" />
+										<M33 MetadataName="Language" SharePointMetadataAsSource = "false" SharePointMetadata = "" DefaultValue = "en-AU" />
+									</M78>
+								</M74>
+								<M86 MetadataName="ChangeHistory">
+									<M87 MetadataName="PropertyName" SharePointMetadataAsSource = "false" SharePointMetadata = "" DefaultValue = "" />
+									<M88 MetadataName="PriorValue" SharePointMetadataAsSource = "false" SharePointMetadata = "" DefaultValue = "" />
+									<M89 MetadataName="RelationshipID" SharePointMetadataAsSource = "false" SharePointMetadata = "" DefaultValue = "" />
+								</M86>
+							</M73>
+						</M11>
+					</M90>
+				</M10>
+			</M7>
+			<M68 MetadataName = "InformationPiece">
+				<M69 MetadataName= "Label" SharePointMetadataAsSource = "false" SharePointMetadata = "" DefaultValue = "@Title@" />
+				<M70 MetadataName= "ContentFile">
+					<!--<M71 MetadataName= "PathName" SharePointMetadataAsSource = "false" SharePointMetadata = "" DefaultValue = "" /> This element cannot be edited.-->
+					<!--<M72 MetadataName= "HashValue" SharePointMetadataAsSource = "true" SharePointMetadata = "@FileContent@" DefaultValue = "" /> This element cannot be edited.-->
+				</M70>
+			</M68>
+		</M4>
+	</M1>
+</VEOContentXML>

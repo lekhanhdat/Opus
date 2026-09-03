@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="MediaStorage_Box_EnableAsUser" xml:space="preserve">
+    <value>As-User aktivieren</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_Box_Extended_parameters" xml:space="preserve">
+    <value>Erweiterte Parameter</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_Box_Advanced" xml:space="preserve">
+    <value>Erweitert</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_Box_AsUser" xml:space="preserve">
+    <value>E-Mail-Adresse von As-User</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_Box_ClientID" xml:space="preserve">
+    <value>Client-ID</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_Box_Config_Password" xml:space="preserve">
+    <value>Kennwort</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_Box_ClientSecret" xml:space="preserve">
+    <value>Clientgeheimnis</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_Box_RefreshToken" xml:space="preserve">
+    <value>Aktualisierungstoken</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_Box_Config_Location" xml:space="preserve">
+    <value>Tokenspeicherort</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_Box_Config_Username" xml:space="preserve">
+    <value>Benutzername</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_Box_Box" xml:space="preserve">
+    <value>Kästchen</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_Box_RootFolderName" xml:space="preserve">
+    <value>Root Folder Name</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_Box_BoxAPIKey" xml:space="preserve">
+    <value>Box API-Schlüssel</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_Box_BoxAuthToken" xml:space="preserve">
+    <value>Auth Token</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_Box_Customized_Application" xml:space="preserve">
+    <value>Meine Clientinformationen verwenden</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_Box_Default_Application" xml:space="preserve">
+    <value>Die von DocAve bereitgestellten Clientinformationen verwenden</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_Box_Retrieve_Token" xml:space="preserve">
+    <value>Token abrufen</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_Box_ConfigPathNotAvailable" xml:space="preserve">
+    <value>Kann nicht auf den Token-Speicherort zugreifen. Bitte überprüfen Sie die Anmeldeinformationen und den Verbindungsstatus und versuchen Sie es erneut.</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_Box_EmailAddress" xml:space="preserve">
+    <value>E-Mail-Adresse</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_Box_Email_format_not_correct" xml:space="preserve">
+    <value>Bitte geben Sie die E-Mail-Adresse in diesem Format ein: jemand@example.com.</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_Box_Please_enter_the_username_in_the_format_domain_username" xml:space="preserve">
+    <value>Bitte geben Sie den Benutzernamen in diesem Format ein: Domäne\Benutzername oder Benutzername@Domäne.com</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_Box_The_path_format_is_not_correct" xml:space="preserve">
+    <value>Bitte geben Sie den Pfad in diesem Format ein: \\server\c$\data oder \\server\shared folder</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_Box_RootFolderNotExist" xml:space="preserve">
+    <value>Der Stammordner ist nicht vorhanden.</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_Box_RootFolderName_Can_Not_Exceed_10_Level" xml:space="preserve">
+    <value>Das Format des Stammordnernamens ist inkorrekt.</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_Box_RootFolderName_Demo" xml:space="preserve">
+    <value>Geben Sie einen Schrägstrich (/) oder einen Ordnernamen ein. Ein Schrägstrich (/) stellt dar, dass alle Dateien im Box-Konto mit der SharePoint-Bibliothek verbunden werden.</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_Connector_Box_Advanced" xml:space="preserve">
+    <value>Erweitert</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_Connector_Box_AsUser" xml:space="preserve">
+    <value>E-Mail-Adresse von As-User</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_Connector_Box_Config_Location" xml:space="preserve">
+    <value>Tokenspeicherort</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_Connector_Box_Config_Password" xml:space="preserve">
+    <value>Kennwort</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_Connector_Box_Config_Username" xml:space="preserve">
+    <value>Benutzername</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_Connector_Box_Customized_Application" xml:space="preserve">
+    <value>Meine Clientinformationen verwenden</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_Connector_Box_Default_Application" xml:space="preserve">
+    <value>Die von DocAve bereitgestellten Clientinformationen verwenden</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_Connector_Box_EmailAddress" xml:space="preserve">
+    <value>E-Mail-Adresse</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_Connector_Box_Email_format_not_correct" xml:space="preserve">
+    <value>Bitte geben Sie die E-Mail-Adresse in diesem Format ein: jemand@example.com.</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_Connector_Box_EnableAsUser" xml:space="preserve">
+    <value>As-User aktivieren</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_Connector_Box_Extended_parameters" xml:space="preserve">
+    <value>Erweiterte Parameter</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_Connector_Box_Please_enter_the_username_in_the_format_domain_username" xml:space="preserve">
+    <value>Bitte geben Sie den Benutzernamen in diesem Format ein: Domäne\Benutzername oder Benutzername@Domäne.com</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_Connector_Box_Retrieve_Token" xml:space="preserve">
+    <value>Token abrufen</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_Connector_Box_RootFolderName" xml:space="preserve">
+    <value>Stammordnername</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_Connector_Box_RootFolderName_Can_Not_Exceed_10_Level" xml:space="preserve">
+    <value>Das Format des Stammordnernamens ist inkorrekt.</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_Connector_Box_The_path_format_is_not_correct" xml:space="preserve">
+    <value>Bitte geben Sie den Pfad in diesem Format ein: \\server\c$\data oder \\server\shared folder</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_Connector_Box_RootFolderName_Demo" xml:space="preserve">
+    <value>Geben Sie einen Ordnernamen ein. Einer Schrägstrich (/) kann auch eingegeben werden, damit die Verbindung zwischen dem Stammordner des Box-Kontos mit allen ihren Dateien und der SharePoint-Bibliothek hergestellt werden kann.</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_Box_TokenNotExist" xml:space="preserve">
+    <value>Kann die Tokendatei unter dem angegebenen Speicherort nicht finden.</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_Box_Proxy" xml:space="preserve">
+    <value>Proxyeinstellungen</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_Box_Proxy_Host" xml:space="preserve">
+    <value>Proxy-Host</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_Box_Proxy_Password" xml:space="preserve">
+    <value>Kennwort</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_Box_Proxy_Port" xml:space="preserve">
+    <value>Proxy-Port</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_Box_Proxy_Username" xml:space="preserve">
+    <value>Benutzername</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_Connector_Box_Proxy" xml:space="preserve">
+    <value>Proxyeinstellungen</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_Connector_Box_Proxy_Host" xml:space="preserve">
+    <value>Proxy-Host</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_Connector_Box_Proxy_Password" xml:space="preserve">
+    <value>Kennwort</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_Connector_Box_Proxy_Port" xml:space="preserve">
+    <value>Proxy-Port</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_Connector_Box_Proxy_Username" xml:space="preserve">
+    <value>Benutzername</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_Connector_Box_Must_be_a_number_between_0_and_65535" xml:space="preserve">
+    <value>Bitte geben Sie eine ganze Zahl zwischen 0 und 65535 ein.</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_Box_Test_failed" xml:space="preserve">
+    <value>Validierungstest fehlgeschlagen. Bitte überprüfen Sie die eingegebenen Informationen und versuchen Sie es erneut.</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_Box_Proxy_Authentication_Filed" xml:space="preserve">
+    <value>Bitte überprüfen Sie Ihren Proxybenutzernamen und -kennwort und geben Sie sie korrekt ein.</value>
+    <comment>None</comment>
+  </data>
+</root>

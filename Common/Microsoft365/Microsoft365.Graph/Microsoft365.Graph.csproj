@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net10.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+	</PropertyGroup>
+
+	<ItemGroup>
+    <PackageReference Include="log4net" Version="3.3.1" />
+    <PackageReference Include="Microsoft.Graph" Version="5.105.0" />
+		<PackageReference Include="Microsoft.Graph.Beta" Version="5.105.0-preview" />
+	</ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\Common\Microsoft365.Common.csproj" />
+	</ItemGroup>
+</Project>

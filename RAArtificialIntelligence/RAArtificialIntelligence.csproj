@@ -1,0 +1,34 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>..\DocaveReference\DocAveStandard.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+	<PropertyGroup>
+		<EnableUnsafeBinaryFormatterSerialization>true</EnableUnsafeBinaryFormatterSerialization>
+	</PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AWSSDK.S3" Version="4.0.17.3" />
+    <PackageReference Include="log4net" Version="3.3.1" />
+    <PackageReference Include="util.ai.text.extractor" Version="6.10.11" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Common\GlobalCommon\GCommonUtility\DocAve.GCommonUtility.csproj" />
+    <ProjectReference Include="..\Common\Wrapper\Wrapper.Backup\Wrapper.Backup.csproj" />
+    <ProjectReference Include="..\RACommonUtility\RACommonUtility.csproj" />
+    <ProjectReference Include="..\RACommon\RACommon.csproj" />
+    <ProjectReference Include="..\RAContract.Global\RAContract.Global.csproj" />
+    <ProjectReference Include="..\RADB\RADB.csproj" />
+    <ProjectReference Include="..\RAManualApproval\RAManualApproval.csproj" />
+    <ProjectReference Include="..\RAService\RAService.csproj" />
+    <ProjectReference Include="..\RASharePoint\RASharePoint.csproj" />
+  </ItemGroup>
+
+</Project>

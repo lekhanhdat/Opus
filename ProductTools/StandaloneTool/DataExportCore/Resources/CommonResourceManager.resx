@@ -1,0 +1,557 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="SATool_AccessPointEmptyMsg" xml:space="preserve">
+    <value>Enter the access point to proceed.</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="SATool_AccessPointTitle" xml:space="preserve">
+    <value>Access point</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="SATool_AccountKeyEmptyMsg" xml:space="preserve">
+    <value>Enter the account key to proceed.</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="SATool_AccountKeyTitle" xml:space="preserve">
+    <value>Account key</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="SATool_AccountNameEmptyMsg" xml:space="preserve">
+    <value>Enter the account name to proceed.</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="SATool_AccountNameTitle" xml:space="preserve">
+    <value>Account name</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="SATool_AzureErrorMsg" xml:space="preserve">
+    <value>An error occurred while validating the information. Please check the storage information and try again.</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="SATool_BackBtnText" xml:space="preserve">
+    <value>Back</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="SATool_ExportDataLocationTitle" xml:space="preserve">
+    <value>Export data from AvePoint storage</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="SATool_ExportDataLocation_FirstDesc" xml:space="preserve">
+    <value>You are using AvePoint storage in Opus. You need to submit a request to AvePoint to export the data to your own storage first.</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="SATool_ExportDataLocation_SecondDesc" xml:space="preserve">
+    <value>After exporting the data to your own storage, configure the storage information below to point to where you want to export the archived data.</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="SATool_ExportDataLocation_SkipRestoreAvePointStorageData" xml:space="preserve">
+    <value>I do not want to export archived data from AvePoint storage at this time</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="SATool_SkipExportContentFileInAPStorage" xml:space="preserve">
+    <value>You have chosen not to export archived data from AvePoint storage to your own storage.</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="SATool_BackupJobIndexTitle" xml:space="preserve">
+    <value>Index file</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="SATool_BrowseButtonTitle" xml:space="preserve">
+    <value>Browse</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="SATool_SearchWatermark" xml:space="preserve">
+    <value>Search</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="SATool_NoDataFound" xml:space="preserve">
+    <value>No results found. Please adjust your search criteria and try again.</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="SATool_CloseAppMsg" xml:space="preserve">
+    <value>You are about to exit the window. Are you sure you want to proceed?</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="SATool_Completed" xml:space="preserve">
+    <value>Completed</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="SATool_CompletedPercentage" xml:space="preserve">
+    <value>% completed</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="SATool_ContainerNameEmptyMsg" xml:space="preserve">
+    <value>Enter the container name to proceed.</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="SATool_ContainerNameTitle" xml:space="preserve">
+    <value>Container name</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="SATool_DataTypeTitle" xml:space="preserve">
+    <value>Data type</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="SATool_DecryptAndExportBackupData" xml:space="preserve">
+    <value>Decrypt and export archived data</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="SATool_DecryptionPassword" xml:space="preserve">
+    <value>Encryption key</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="SATool_DecryptionPwdDesc" xml:space="preserve">
+    <value>Enter the encryption key copied from the Opus &gt; Global storage settings &gt; Export archive index interface.</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="SATool_EncryptionFilePathEmptyMsg" xml:space="preserve">
+    <value>Browse the index file to proceed.</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="SATool_EncryptionFilePathInvalidMsg" xml:space="preserve">
+    <value>The value is invalid.</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="SATool_EncryptionFileContentInvalidMsg" xml:space="preserve">
+    <value>The file content is invalid.</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="SATool_EncryptionPwdIncorrectMsg" xml:space="preserve">
+    <value>The encryption key is incorrect.</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="SATool_ExportingDataText" xml:space="preserve">
+    <value>Exporting data…</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="SATool_ExportLocationErrorMsg" xml:space="preserve">
+    <value>The export location is invalid.</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="SATool_ExportLocationPageTitle" xml:space="preserve">
+    <value>Select export location</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="SATool_ExportPathText" xml:space="preserve">
+    <value>Export to ({0})</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="SATool_Failed" xml:space="preserve">
+    <value>Failed</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="SATool_FinishedWithException" xml:space="preserve">
+    <value>Finished with exception</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="SATool_FinishPageTitle" xml:space="preserve">
+    <value>Complete</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="SATool_FirstPage" xml:space="preserve">
+    <value>First page</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="SATool_ForDetailsText" xml:space="preserve">
+    <value> for details.</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="SATool_GoToPage" xml:space="preserve">
+    <value>Go</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="SATool_HostEmptyMsg" xml:space="preserve">
+    <value>Enter a host to proceed.</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="SATool_HostErrorMsg" xml:space="preserve">
+    <value>An error occurred while connecting to the host. Please check your storage information and try again.</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="SATool_NetShareErrorMsg" xml:space="preserve">
+    <value>An error occurred while connecting to the location. Please check your location information and try again.</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="SATool_NetSharePathInvalidMsg" xml:space="preserve">
+    <value>The path is invalid.</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="SATool_SftpAuthenErrorMsg" xml:space="preserve">
+    <value>The username or password is invalid. Please check your storage information and try again.</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="SATool_HostTitle" xml:space="preserve">
+    <value>Host</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="SATool_ImportEncryptionKeyPageDesc" xml:space="preserve">
+    <value>The encryption key needs to be copied from the Opus interface. You can contact your AvePoint representative for assistance. This key is used to decrypt and export your archived data.</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="SATool_ImportEncryptionKeyPageTitle" xml:space="preserve">
+    <value>Import encryption key</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="SATool_LastPage" xml:space="preserve">
+    <value>Last page</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="SATool_ReportDetail" xml:space="preserve">
+    <value>reports</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="SATool_ReportHeader_DataType" xml:space="preserve">
+    <value>Data type</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="SATool_ReportHeader_ObjectLevel" xml:space="preserve">
+    <value>Object level</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="SATool_ReportHeader_Name" xml:space="preserve">
+    <value>Name</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="SATool_ReportHeader_SourceURL" xml:space="preserve">
+    <value>Source location</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="SATool_ReportHeader_TargeURL" xml:space="preserve">
+    <value>Destination location</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="SATool_ReportHeader_ObjectSize" xml:space="preserve">
+    <value>Object size ({0})</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="SATool_ReportHeader_Status" xml:space="preserve">
+    <value>Status</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="SATool_ReportHeader_Comment" xml:space="preserve">
+    <value>Comment</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="SATool_ReportHeader_Destination" xml:space="preserve">
+    <value>Destination location</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="SATool_Report_Name" xml:space="preserve">
+    <value>Report</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="SATool_ReportSummary_Name" xml:space="preserve">
+    <value>Summary_Report</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="SATool_MailboxConfigTitle" xml:space="preserve">
+    <value>Select data to export</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="SATool_MailboxTitle" xml:space="preserve">
+    <value>Mailbox</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="SATool_NextBtnText" xml:space="preserve">
+    <value>Next</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="SATool_ExportBtnText" xml:space="preserve">
+    <value>Export</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="SATool_ExportPromptMsg" xml:space="preserve">
+    <value>You are about to export the archived data to the specified location. Are you sure you want to proceed?</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="SATool_NextPage" xml:space="preserve">
+    <value>Next</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="SATool_OneDriveTitle" xml:space="preserve">
+    <value>OneDrive</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="SATool_PasswordEmptyMsg" xml:space="preserve">
+    <value>Enter a password to proceed.</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="SATool_PasswordTitle" xml:space="preserve">
+    <value>Password</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="SATool_PortEmptyMsg" xml:space="preserve">
+    <value>Enter a port to proceed.</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="SATool_PortErrorMsg" xml:space="preserve">
+    <value>The port is invalid.</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="SATool_PortTitle" xml:space="preserve">
+    <value>Port</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="SATool_PrevPage" xml:space="preserve">
+    <value>Previous</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="SATool_ProcessPageDefaultTitle" xml:space="preserve">
+    <value>Export data</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="SATool_RootFolderTitle" xml:space="preserve">
+    <value>Root folder</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="SATool_SftpFolderInvalidMsg" xml:space="preserve">
+    <value>The folder path is invalid.</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="SATool_SftpDefaultFolder" xml:space="preserve">
+    <value>C:\Users\[Username]</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="SATool_SelectLocationTitle" xml:space="preserve">
+    <value>Location</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="SATool_SelectModulePageTitle" xml:space="preserve">
+    <value>What would you like to do?</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="SATool_ShowRows" xml:space="preserve">
+    <value>Show rows</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="SATool_SiteCollectionURLTitle" xml:space="preserve">
+    <value>Site collection URL</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="SATool_TeamsAndGroupTitle" xml:space="preserve">
+    <value>Teams &amp; Groups</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="SATool_StorageTypeTitle" xml:space="preserve">
+    <value>Storage type</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="SATool_TotalSizeTextFinishPage" xml:space="preserve">
+    <value>Total size</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="SATool_UsernameEmptyMsg" xml:space="preserve">
+    <value>Enter a username to proceed.</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="SATool_UsernameTitle" xml:space="preserve">
+    <value>Username</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="SATool_ViewText" xml:space="preserve">
+    <value>View </value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="SATool_ObjectLevel_App" xml:space="preserve">
+    <value>App</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="SATool_ObjectLevel_Attachment" xml:space="preserve">
+    <value>Attachment</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="SATool_ObjectLevel_Document" xml:space="preserve">
+    <value>Document/Email</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="SATool_ObjectLevel_DocumentVersion" xml:space="preserve">
+    <value>Document version</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="SATool_ObjectLevel_Folder" xml:space="preserve">
+    <value>Folder / Physical folder</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="SATool_ObjectLevel_Item" xml:space="preserve">
+    <value>Item</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="SATool_ObjectLevel_ItemVersion" xml:space="preserve">
+    <value>Item version</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="SATool_ObjectLevel_List" xml:space="preserve">
+    <value>List / Library / Physical box</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="SATool_ObjectLevel_None" xml:space="preserve">
+    <value>None</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="SATool_ObjectLevel_Site" xml:space="preserve">
+    <value>Site</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="SATool_ObjectLevel_SiteCollection" xml:space="preserve">
+    <value>Site collection</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="SATool_ObjectLevel_ExchangeMailBox" xml:space="preserve">
+    <value>Mail box</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="SATool_ObjectLevel_ExchangeMail" xml:space="preserve">
+    <value>Email</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="SATool_ObjectLevel_TeamsChannel" xml:space="preserve">
+    <value>Channel</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="SATool_ObjectLevel_Conversation" xml:space="preserve">
+    <value>Conversation</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="SATool_ObjectLevel_Calendar" xml:space="preserve">
+    <value>Calendars</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="SATool_ObjectLevel_Teams" xml:space="preserve">
+    <value>Team/Group</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="SATool_Folder_Conversation" xml:space="preserve">
+    <value>Conversations</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="SATool_ExportPath_SiteCollections" xml:space="preserve">
+    <value>SharePoint_Site_Collections</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="SATool_ExportPath_ChannelConversations" xml:space="preserve">
+    <value>Channel_Conversations</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="SATool_ExportPath_GroupMailBoxes" xml:space="preserve">
+    <value>Group_Mailboxes</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="SATool_PathTitle" xml:space="preserve">
+    <value>Path</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="SATool_PrivateKeyFileTitle" xml:space="preserve">
+    <value>Private key file</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="SATool_PrivateKeyPasswordTitle" xml:space="preserve">
+    <value>Private key password</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="SATool_OpenIndexDBError" xml:space="preserve">
+    <value>Failed to access the index file.</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="SATool_ExportItemUnexpectedError" xml:space="preserve">
+    <value>An error occurred.</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="SATool_ConversationDontArchiverBefore" xml:space="preserve">
+    <value>This conversation has not been archived before.</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="SATool_MailBoxDontArchiverBefore" xml:space="preserve">
+    <value>This mailbox has not been archived before.</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="SATool_ContentFileNotFoundError" xml:space="preserve">
+    <value>Failed to find the archived data "{0}" from the archival storage.</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="SATool_SubJobNotFoundError" xml:space="preserve">
+    <value>The information for this item does not exist in the database.</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="SATool_DataEncryptionInfoNotFoundError" xml:space="preserve">
+    <value>Cannot find the data encryption information in the job "{0}" for this item.</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="SATool_CannotOpenDeviceError" xml:space="preserve">
+    <value>Failed to access the storage. ID: {0}; type: {1}.</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="SATool_DeviceNotFoundError" xml:space="preserve">
+    <value>Failed to find the storage. ID: {0}.</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="SATool_DataType_SharePointOnline" xml:space="preserve">
+    <value>SharePoint Online</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="SATool_DataType_OneDrive" xml:space="preserve">
+    <value>OneDrive</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="SATool_DataType_Teams" xml:space="preserve">
+    <value>Teams &amp; Groups</value>
+    <comment>Resolved</comment>
+  </data>
+</root>

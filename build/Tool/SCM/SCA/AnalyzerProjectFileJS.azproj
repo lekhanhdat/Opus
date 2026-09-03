@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<Project xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <GlobalConfig IsUpdate="true" CodePath="${workspace}\SourceCode" BuildXmlPath="${workspace}\SourceCode\build\Build.xml" BuildTargets="MainDeploy" PropertySetting="BuildType=Release;BuildTarget=Rebuild;Platform=Any CPU" ReportPath="${workspace}\Reports\JSCSSMessyCode" />
+  <DatabaseSettingsInfo IsSharePointAPI="false" IsNetwork="true">
+    <DatabaseServer Value="scmdb.avepoint.net" />
+    <Failover Value="" />
+    <DatabaseName Value="PackagingData" />
+    <Username Value="sa" />
+    <Password Value="SLfEzz1e6k8IB8NLjQPQpg==" />
+  </DatabaseSettingsInfo>
+  <BuildConfig IsCheck="false" WebURL="" ListTitle="" Password="" User="" CamlQuery="" FileNameColumn="" PlatformColumn="" SqlQuery="">
+    <WhiteList />
+    <MultiPlatformList />
+  </BuildConfig>
+  <ReferenceFilesSettings IsCheck="false" WebURL="" ListTitle="" Password="" User="" CamlQuery="" FileNameColumn="" GACWebURL="" GACListTitle="" GACFileNameColumn="" SqlQuery="">
+    <WhiteList />
+  </ReferenceFilesSettings>
+  <ProjectInSolution IsCheck="false">
+    <WhiteList />
+  </ProjectInSolution>
+  <ProjectSettings IsCheck="false">
+    <DebugType IsCheck="false" CheckValue="pdbonly" />
+    <Optimize IsCheck="false" CheckValue="true" />
+    <OutputPath IsCheck="false">
+      <OutputList>
+        <PathItem Output="" />
+      </OutputList>
+    </OutputPath>
+    <WhiteList />
+  </ProjectSettings>
+  <ThirdDllReferences IsCheck="false">
+    <CheckItems>
+      <CheckItem Value="">
+        <CheckList />
+      </CheckItem>
+    </CheckItems>
+    <WhiteList />
+    <BlackList />
+  </ThirdDllReferences>
+  <CheckUnitTest IsCheck="false">
+    <SearchCondition />
+    <WhiteList />
+  </CheckUnitTest>
+  <FrameworkVersion IsCheck="false" FrameworkVersionUpperLimit="">
+    <WhiteList />
+  </FrameworkVersion>
+  <MessyCode IsCheck="true" CheckFolder="${workspace}\CloudRecords" ThreadCount="4">
+    <CheckFileTypeItems>
+      <CheckFileTypeItem FileType="*.css" FilterNote="No" />
+      <CheckFileTypeItem FileType="*.js" FilterNote="No" />
+    </CheckFileTypeItems>
+    <WhiteList>
+      <ExceptItem Value="\RevIMWorker.Web\aui\" />
+      <ExceptItem Value="\RevIMWorker.Web\Scripts\3rd\" />
+      <ExceptItem Value="\RevIMWorker.Web\Content\3rd\" />
+    </WhiteList>
+  </MessyCode>
+</Project>

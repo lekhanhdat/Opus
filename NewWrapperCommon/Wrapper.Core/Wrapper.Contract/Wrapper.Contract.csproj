@@ -1,0 +1,353 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B6805753-B35A-4DF5-A3A4-27E6868DEE09}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AvePoint.Wrapper.Core</RootNamespace>
+    <AssemblyName>AgentCommonWrapperContract</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\bin\Agent\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>..\Wrapper.Common\RolesSet\WrapperRuleSet.ruleset</CodeAnalysisRuleSet>
+    <DocumentationFile>
+    </DocumentationFile>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\bin\Agent\Release\</OutputPath>
+    <DefineConstants>TRACE;CODE_ANALYSIS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>DocAveStandard.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'DebugWithCodeAnaylysis|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\DebugWithCodeAnaylysis\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>..\..\..\bin\Debug\AgentCommonWrapperContract.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>..\Wrapper.Common\RolesSet\WrapperRuleSet.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'DebugWithoutUnitTest|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\DebugWithoutUnitTest\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>..\Wrapper.Common\RolesSet\WrapperRuleSet.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\NativeAPIAttribute.cs" />
+    <Compile Include="Common\WrapperLogger.cs" />
+    <Compile Include="Common\Constants.cs" />
+    <Compile Include="Common\Func.cs" />
+    <Compile Include="Common\IO365Authentication.cs" />
+    <Compile Include="Common\O365AccountInfo.cs" />
+    <Compile Include="Common\O365AuthenticationMode.cs" />
+    <Compile Include="Common\SPUserLoginNameDecoder.cs" />
+    <Compile Include="Common\WrapperConfig.cs" />
+    <Compile Include="Common\WrapperEnv.cs" />
+    <Compile Include="Common\WrapperErrorCode.cs" />
+    <Compile Include="Common\WrapperException.cs" />
+    <Compile Include="Common\WrapperResource.cs" />
+    <Compile Include="Common\WrapperResourceKey.cs" />
+    <Compile Include="Common\WrapperSPEnv.cs" />
+    <Compile Include="Common\WrapperSPMode.cs" />
+    <Compile Include="Common\WrapperStopWatcher.cs" />
+    <None Include="app.config" />
+    <None Include="DocAveStandard.snk" />
+    <None Include="FeatureTODO.txt" />
+    <Compile Include="Internal\IWrapperDeploymentAPI.cs" />
+    <Compile Include="Internal\Restore\IImportObjectManager.cs" />
+    <Compile Include="Internal\Restore\IImportPostAction.cs" />
+    <Compile Include="Internal\Restore\IWebImport.cs" />
+    <Compile Include="Internal\Restore\PersonalSiteCreationParameters.cs" />
+    <Compile Include="Internal\Restore\IFileImport.cs" />
+    <Compile Include="Internal\Restore\IListImport.cs" />
+    <Compile Include="Internal\Restore\ISiteImport.cs" />
+    <Compile Include="Internal\Restore\SiteCreationParameters.cs" />
+    <Compile Include="Internal\Restore\WebCreationParameters.cs" />
+    <Compile Include="IOC\InstanceNode.cs" />
+    <Compile Include="IOC\O365AuthenticationNode.cs" />
+    <Compile Include="IOC\DeploymentNode.cs" />
+    <Compile Include="IOC\SPAPINode.cs" />
+    <Compile Include="IOC\WrapperSectionHandler.cs" />
+    <Compile Include="IOC\WrapperCore.cs" />
+    <Compile Include="Pending\AveBackupOMFactory.cs" />
+    <Compile Include="Pending\AveContractOMFactory.cs" />
+    <Compile Include="Pending\AveDiscoveryOMFactory.cs" />
+    <Compile Include="Pending\AveRestoreOMFactory.cs" />
+    <Compile Include="Pending\Contract.Backup\IAveSPAppManager.cs" />
+    <Compile Include="Pending\Contract.Backup\IAveSPAttachment.cs" />
+    <Compile Include="Pending\Contract.Backup\IAveSPContentTypeHub.cs" />
+    <Compile Include="Pending\Contract.Backup\IAveSPDoc.cs" />
+    <Compile Include="Pending\Contract.Backup\IAveSPFolder.cs" />
+    <Compile Include="Pending\Contract.Backup\IAveSPGlobalConfiguration.cs" />
+    <Compile Include="Pending\Contract.Backup\IAveSPItem.cs" />
+    <Compile Include="Pending\Contract.Backup\IAveSPList.cs" />
+    <Compile Include="Pending\Contract.Backup\IAveSPListItem.cs" />
+    <Compile Include="Pending\Contract.Backup\IAveSPMySite.cs" />
+    <Compile Include="Pending\Contract.Backup\IAveSPSite.cs" />
+    <Compile Include="Pending\Contract.Backup\IAveSPWeb.cs" />
+    <Compile Include="Pending\Contract.Backup\IAveSPWebApp.cs" />
+    <Compile Include="Pending\Contract.Backup\IAveTaxonomyGroup.cs" />
+    <Compile Include="Pending\Contract.Backup\IAveSPTerm.cs" />
+    <Compile Include="Pending\Contract.Backup\IAveSPTermSet.cs" />
+    <Compile Include="Pending\Contract.Backup\IAveSPTermStore.cs" />
+    <Compile Include="Pending\Contract.Discovery\Filter\FilterAnalyser.cs" />
+    <Compile Include="Pending\Contract.Discovery\Filter\IAveDiscoverFilterUtility.cs" />
+    <Compile Include="Pending\Contract.Discovery\IAveDiscoverWebApp.cs" />
+    <Compile Include="Pending\Contract.Restore\AveCommonRestoreCofiguraion.cs" />
+    <Compile Include="Pending\Contract.Discovery\Filter\FilterResultMode.cs" />
+    <Compile Include="Pending\Contract.Discovery\Filter\IAveDiscoverFilterBase.cs" />
+    <Compile Include="Pending\Contract.Discovery\IAveDiscoverFolder.cs" />
+    <Compile Include="Pending\Contract.Discovery\IAveDiscoverItem.cs" />
+    <Compile Include="Pending\Contract.Discovery\IAveDiscoverList.cs" />
+    <Compile Include="Pending\Contract.Discovery\IAveDiscoverObjectInfo.cs" />
+    <Compile Include="Pending\Contract.Discovery\IAveDiscoverSite.cs" />
+    <Compile Include="Pending\Contract.Discovery\IAveDiscoverWeb.cs" />
+    <Compile Include="Pending\Contract.Restore\AvePublishing.cs" />
+    <Compile Include="Pending\Contract.Restore\AveRestoreOption.cs" />
+    <Compile Include="Pending\Contract.Restore\AveSecurityMapping.cs" />
+    <Compile Include="Pending\Contract.Restore\AveTaxonomyUserMapping.cs" />
+    <Compile Include="Pending\Contract.Restore\BehaviorController\IWrapperBusinessBehavior.cs" />
+    <Compile Include="Pending\Contract.Restore\ContentType\AveContenntTypeRestoreOption.cs" />
+    <Compile Include="Pending\Contract.Restore\ContentType\AveContentTypeHelper.cs" />
+    <Compile Include="Pending\Contract.Restore\ContentType\IAveSPContentTypeCollection.cs" />
+    <Compile Include="Pending\Contract.Restore\ContentType\IAveSPCTHubContentTypeCollection.cs" />
+    <Compile Include="Pending\Contract.Restore\Field\AveFieldRestoreOption.cs" />
+    <Compile Include="Pending\Contract.Restore\Field\AveXmlField.cs" />
+    <Compile Include="Pending\Contract.Restore\Field\IAveSPFieldCollection.cs" />
+    <Compile Include="Pending\Contract.Restore\Field\LookupItemValue.cs" />
+    <Compile Include="Pending\Contract.Restore\IAveAudienceManager.cs" />
+    <Compile Include="Pending\Contract.Restore\IAveDocumentTagging.cs" />
+    <Compile Include="Pending\Contract.Restore\IAveMetadataService.cs" />
+    <Compile Include="Pending\Contract.Restore\IAveObjectFeature.cs" />
+    <Compile Include="Pending\Contract.Restore\IAveObjectSecurity.cs" />
+    <Compile Include="Pending\Contract.Restore\IAvePostAction.cs" />
+    <Compile Include="Pending\Contract.Restore\IAveSPAlert.cs" />
+    <Compile Include="Pending\Contract.Restore\IAveSPAppManager.cs" />
+    <Compile Include="Pending\Contract.Restore\IAveSPAttachment.cs" />
+    <Compile Include="Pending\Contract.Restore\IAveSPDoc.cs" />
+    <Compile Include="Pending\Contract.Restore\IAveSPEventReceiver.cs" />
+    <Compile Include="Pending\Contract.Restore\IAveSPFeature.cs" />
+    <Compile Include="Pending\Contract.Restore\IAveSPFolder.cs" />
+    <Compile Include="Pending\Contract.Restore\IAveSPItem.cs" />
+    <Compile Include="Pending\Contract.Restore\IAveSPList.cs" />
+    <Compile Include="Pending\Contract.Restore\IAveSPListItem.cs" />
+    <Compile Include="Pending\Contract.Restore\IAveSPMembers.cs" />
+    <Compile Include="Pending\Contract.Restore\IAveSPMySite.cs" />
+    <Compile Include="Pending\Contract.Restore\IAveSPNavigation.cs" />
+    <Compile Include="Pending\Contract.Restore\IAveSPSearch.cs" />
+    <Compile Include="Pending\Contract.Restore\IAveSPSearchKeywords.cs" />
+    <Compile Include="Pending\Contract.Restore\IAveSPSearchScope.cs" />
+    <Compile Include="Pending\Contract.Restore\IAveSPSite.cs" />
+    <Compile Include="Pending\Contract.Restore\IAveSPSocialComment.cs" />
+    <Compile Include="Pending\Contract.Restore\IAveSPSocialFeed.cs" />
+    <Compile Include="Pending\Contract.Restore\IAveSPSocialTag.cs" />
+    <Compile Include="Pending\Contract.Restore\IAveSPUserProfile.cs" />
+    <Compile Include="Pending\Contract.Restore\IAveSPView.cs" />
+    <Compile Include="Pending\Contract.Restore\IAveSPWeb.cs" />
+    <Compile Include="Pending\Contract.Restore\IAveSPWebApp.cs" />
+    <Compile Include="Pending\Contract.Restore\IAveSPWebAppPathManager.cs" />
+    <Compile Include="Pending\Contract.Restore\IAveSPWebAppPolicyManager.cs" />
+    <Compile Include="Pending\Contract.Restore\IAveSPWebAppPolicyRoleManager.cs" />
+    <Compile Include="Pending\Contract.Restore\IAveSPWebAppPropertyManager.cs" />
+    <Compile Include="Pending\Contract.Restore\IAveSPWebPartManager.cs" />
+    <Compile Include="Pending\Contract.Restore\IAveTaxonomyGroup.cs" />
+    <Compile Include="Pending\Contract.Restore\IAveTerm.cs" />
+    <Compile Include="Pending\Contract.Restore\IAveTermSet.cs" />
+    <Compile Include="Pending\Contract.Restore\IAveTermStore.cs" />
+    <Compile Include="Pending\Contract.Restore\IItemMetadata.cs" />
+    <Compile Include="Pending\Contract.Restore\IRestoreableObject.cs" />
+    <Compile Include="Pending\Contract.Restore\ListRestoreOption.cs" />
+    <Compile Include="Pending\Contract.Restore\Workflow\AveWorkflowRestoreOption.cs" />
+    <Compile Include="Pending\Contract.Restore\Workflow\IWFConflictResolution.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SPAPI\ISPAPIUtility.cs" />
+    <Compile Include="SPBackupDto\SPAlertsDto.cs" />
+    <Compile Include="SPBackupDto\SPItemMetadataDto.cs" />
+    <Compile Include="SPBackupDto\SPRoleAssignmentsDto.cs" />
+    <Compile Include="SPBackupDto\SPSocialDto.cs" />
+    <Compile Include="SPBackupDto\SPWorkflowDto.cs" />
+    <Compile Include="SPBackup\ISPAlertExport.cs" />
+    <Compile Include="SPBackup\ISPAttachmentExport.cs" />
+    <Compile Include="SPBackup\ISPFolderExport.cs" />
+    <Compile Include="SPBackup\ISPRoleAssignmentsExport.cs" />
+    <Compile Include="SPBackup\ISPSocialExport.cs" />
+    <Compile Include="SPBackup\ISPWorkflowExport.cs" />
+    <Compile Include="SPBackup\SPBackupOptions.cs" />
+    <Compile Include="SPBackup\SPItemMetadataBackupOption.cs" />
+    <Compile Include="SPBackup\SPRoleAssignmentsBakupOption.cs" />
+    <Compile Include="SPBackup\SPWorkflowBackupOption.cs" />
+    <Compile Include="SPBackup\ISPBackupAPI.cs" />
+    <Compile Include="SPBackup\ISPFileExport.cs" />
+    <Compile Include="SPBackup\ISPItemExport.cs" />
+    <Compile Include="SPBackup\ISPListExport.cs" />
+    <Compile Include="SPBackup\ISPSiteExport.cs" />
+    <Compile Include="SPBackup\ISPWebExport.cs" />
+    <Compile Include="SPRestore\Attachment\ISPAttachmentImport.cs" />
+    <Compile Include="SPRestore\CommonRestoreOption.cs" />
+    <Compile Include="SPRestore\File\ISPFileRestoreProfiler.cs" />
+    <Compile Include="SPRestore\ListItem\ISPListItemImport.cs" />
+    <Compile Include="SPRestore\ISPImportProfiler.cs" />
+    <Compile Include="SPRestore\Mapping\BuiltInLanguageMapping.cs" />
+    <Compile Include="SPRestore\Mapping\BuiltInTemplateMapping.cs" />
+    <Compile Include="SPRestore\Mapping\BuiltInUserMapping.cs" />
+    <Compile Include="SPRestore\Mapping\ContentTypeMapping\BuiltinContentTypeMapping.cs" />
+    <Compile Include="SPRestore\Mapping\ContentTypeMapping\ContentTypeMappingInfo.cs" />
+    <Compile Include="SPRestore\Mapping\ContentTypeMapping\DynamicContentTypeMapping.cs" />
+    <Compile Include="SPRestore\Mapping\ContentTypeMapping\IContentTypeMapping.cs" />
+    <Compile Include="SPRestore\Mapping\ContentTypeMapping\SPContentTypeInfo.cs" />
+    <Compile Include="SPRestore\Mapping\FieldMapping\BuiltinFieldMappingParameterConverter.cs" />
+    <Compile Include="SPRestore\Mapping\FieldMapping\MappingCondition.cs" />
+    <Compile Include="SPRestore\Mapping\FieldMapping\BuiltinFieldMapping.cs" />
+    <Compile Include="SPRestore\Mapping\FieldMapping\MappingConditionChecker.cs" />
+    <Compile Include="SPRestore\Mapping\FieldMapping\DynamicFieldMapping.cs" />
+    <Compile Include="SPRestore\Mapping\FieldMapping\ExcelFieldMapping.cs" />
+    <Compile Include="SPRestore\Mapping\FieldMapping\FieldMappingInfo.cs" />
+    <Compile Include="SPRestore\Mapping\FieldMapping\MappingConditionInfo.cs" />
+    <Compile Include="SPRestore\Mapping\FieldMapping\SPFieldInfo.cs" />
+    <Compile Include="SPRestore\Mapping\FieldMapping\IFieldMapping.cs" />
+    <Compile Include="SPRestore\Mapping\FieldMapping\SPFieldValueInfo.cs" />
+    <Compile Include="SPRestore\Mapping\ILanguageMapping.cs" />
+    <Compile Include="SPRestore\Mapping\ITemplateMapping.cs" />
+    <Compile Include="SPRestore\Mapping\IUserMapping.cs" />
+    <Compile Include="SPRestore\Mapping\WrapperMappingExtensions.cs" />
+    <Compile Include="SPRestore\MMSRestoreOption.cs" />
+    <Compile Include="SPRestore\RestoreActionExecutor.cs" />
+    <Compile Include="SPRestore\SecurityRestoreOption.cs" />
+    <Compile Include="SPRestore\WFRestoreOption.cs" />
+    <Compile Include="SPRestore\RestoreStreamExtensions.cs" />
+    <Compile Include="SPRestore\ISPRestoreAPI.cs" />
+    <Compile Include="SPRestore\File\ISPFileImport.cs" />
+    <Compile Include="SPRestore\Folder\ISPFolderImport.cs" />
+    <Compile Include="SPRestore\Item\ISPItemImport.cs" />
+    <Compile Include="SPRestore\List\ISPListImport.cs" />
+    <Compile Include="SPRestore\Site\ISPSiteImportProfiler.cs" />
+    <Compile Include="SPRestore\Site\ISPSiteImport.cs" />
+    <Compile Include="SPRestore\Site\SPSiteRestoreOption.cs" />
+    <Compile Include="SPRestore\Web\ISPWebImport.cs" />
+    <Compile Include="SPRestore\Item\SPItemRestoreOption.cs" />
+    <Compile Include="SPRestore\File\SPFileRestoreReport.cs" />
+    <Compile Include="SPRestore\Item\SPItemConflictCheckOption.cs" />
+    <Compile Include="SPRestore\Item\SPItemRestoreAction.cs" />
+    <Compile Include="SPRestore\List\SPListRestoreOption.cs" />
+    <Compile Include="SPRestore\Report\MetadataRestoreDetail.cs" />
+    <Compile Include="SPRestore\Report\MetadataRestoreReport.cs" />
+    <Compile Include="SPRestore\Report\WrapperRestoreStatus.cs" />
+    <Compile Include="SPRestore\Web\SPWebRestoreOption.cs" />
+    <Compile Include="Util\CommitCalculator.cs" />
+    <Compile Include="Util\WrapperUtil.cs" />
+    <Compile Include="Util\XmlExtension.cs" />
+    <Compile Include="WrapperFactory.cs" />
+    <None Include="AgentCommonWrapperCoreConfiguration.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="AgentCommonWrapperCore.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="SPDiscovery\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\GCommon\GCommonContract\DocAve.GCommonContract.csproj">
+      <Project>{361F3C7C-ABBF-42D5-975A-65E4E9866068}</Project>
+      <Name>DocAve.GCommonContract</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\GCommon\GCommonUtility\DocAve.GCommonUtility.csproj">
+      <Project>{7151E862-A761-4A90-ACE6-37D7442047A6}</Project>
+      <Name>DocAve.GCommonUtility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\GCommon\CommonUtility30\DocAve.CommonUtility30.csproj">
+      <Project>{ABF32DB9-9D2A-4F78-96B5-E2B1FAC08658}</Project>
+      <Name>DocAve.CommonUtility30</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Wrapper.Common\Wrapper.Common.csproj">
+      <Project>{9380e15e-5f69-4f2c-889f-e04756f6ccca}</Project>
+      <Name>Wrapper.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Wrapper.CustomUtility\Wrapper.CustomUtility.csproj">
+      <Project>{5FF18312-8DA2-4ABF-BC20-805A18065DB6}</Project>
+      <Name>Wrapper.CustomUtility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Wrapper.Resource\Wrapper.Resource.csproj">
+      <Project>{F977BD26-9DD0-4B6D-95DA-58096DCA1913}</Project>
+      <Name>Wrapper.Resource</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Wrapper.BusinessLayer\Wrapper.SPService\Wrapper.SPService.csproj">
+      <Project>{565E234A-0C73-4B6C-B6BD-D0D20F53FF63}</Project>
+      <Name>Wrapper.SPService</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="SPRestore\Site\_siteRestore.txt" />
+    <None Include="SPRestore\Mapping\Mapping.txt" />
+    <None Include="SPRestore\_Restore.txt" />
+    <Content Include="SPBackup\_backup.txt" />
+    <None Include="TODO.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\AgentCommonWrapperCore.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

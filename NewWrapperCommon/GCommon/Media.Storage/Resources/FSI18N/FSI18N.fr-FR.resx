@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="MediaStorage_FS_Username_Demo" xml:space="preserve">
+    <value>Domäne\Benutzername oder Benutzername@Domäne.com</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_FS_The_UNC_Path_cannot_be_empty" xml:space="preserve">
+    <value>Bitte geben Sie einen Wert ein.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Connector_FS_Username_Demo" xml:space="preserve">
+    <value>Domäne\Benutzername oder Benutzername@Domäne.com</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Connector_FS_UNC_Path" xml:space="preserve">
+    <value>UNC-Pfad</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_FS_UNC_Path" xml:space="preserve">
+    <value>UNC-Pfad</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Connector_FS_Path_Demo" xml:space="preserve">
+    <value>Beispiel: \\server\c$\data oder \\server\shared folder</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Connector_FS_Advanced" xml:space="preserve">
+    <value>Erweitert</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Connector_FS_The_UNC_path_cannot_contain_a_forward_slash" xml:space="preserve">
+    <value>Der UNC-Pfad darf keinen Schrägstrich (/) enthalten.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Connector_FS_Username" xml:space="preserve">
+    <value>Benutzername</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Connector_FS_WMS_Configure_Description" xml:space="preserve">
+    <value>Geben Sie die detaillierten Informationen für den Speicherort an.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Connector_FS_Publishing_Point_Name" xml:space="preserve">
+    <value>Publishingpoint-Name</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Connector_FS_Password" xml:space="preserve">
+    <value>Kennwort</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Connector_FS_Extended_parameters" xml:space="preserve">
+    <value>Erweiterte Parameter</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Connector_FS_The_path_format_is_not_correct" xml:space="preserve">
+    <value>Ungültiges Pfadformat. Bitte geben Sie ein Anderes ein.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Connector_FS_Net_Share_with_WMS" xml:space="preserve">
+    <value>Netzwerkfreigabe mit WMS</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Connector_FS_The_UNC_path_cannot_exceed_200_characters" xml:space="preserve">
+    <value>Der UNC-Pfad darf maximal 200 Zeichen enthalten.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Connector_FS_Configure_your_net_share_path_username_and_password" xml:space="preserve">
+    <value>Geben Sie den Netzwerkfreigabe-Pfad, Benutzernamen und das Kennwort an.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Connector_FS_WMS_Server_Name" xml:space="preserve">
+    <value>Namen für WMS-Server</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Connector_FS_Net_Share" xml:space="preserve">
+    <value>Netzwerkfreigabe</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_FS_Please_enter_the_username_in_the_format_domain_username" xml:space="preserve">
+    <value>Bitte geben Sie den Benutzernamen in diesem Format ein: Domäne\Benutzername oder Benutzername@Domäne.com</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Connector_FS_Please_enter_the_username_in_the_format_domain_username" xml:space="preserve">
+    <value>Bitte geben Sie den Benutzernamen in diesem Format ein: Domäne\Benutzername oder Benutzername@Domäne.com</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_FS_WMS_Server_Name" xml:space="preserve">
+    <value>WMS-Servername</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_FS_UserLocked" xml:space="preserve">
+    <value>Der Validierungstest ist fehlgeschlagen. Das angegebene Konto wurde gesperrt.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_FS_The_path_format_is_not_correct" xml:space="preserve">
+    <value>Ungültiges Pfadformat. Bitte geben Sie ein Anderes ein.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_FS_Test_failed" xml:space="preserve">
+    <value>Test fehlgeschlagen. Bitte überprüfen Sie die eingegebenen Informationen.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_FS_Authentication_failed" xml:space="preserve">
+    <value>Die Authentifizierung ist fehlgeschlagen.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_FS_The_UNC_path_cannot_exceed_200_characters" xml:space="preserve">
+    <value>Der UNC-Pfad darf maximal 200 Zeichen enthalten.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_FS_Configure_your_net_share_path_username_and_password" xml:space="preserve">
+    <value>Geben Sie den Netzwerkfreigabe-Pfad, Benutzernamen und das Kennwort an.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_FS_Publishing_Point_Name" xml:space="preserve">
+    <value>Publishingpoint-Name</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_FS_Password" xml:space="preserve">
+    <value>Kennwort</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_FS_Does_not_have_delete_permission" xml:space="preserve">
+    <value>Test fehlgeschlagen. Der angegebene Benutzer verfügt über keine Berechtigung zum Löschen des eingegebenen Pfades.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_FS_Net_Share_with_WMS" xml:space="preserve">
+    <value>Netzwerkfreigabe mit WMS</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_FS_Username" xml:space="preserve">
+    <value>Benutzername</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_FS_The_UNC_Path_cannot_be_found" xml:space="preserve">
+    <value>Der UNC-Pfad kann nicht gefunden werden.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_FS_Net_Share" xml:space="preserve">
+    <value>Netzwerkfreigabe</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_FS_WMS_Configure_Description" xml:space="preserve">
+    <value>Geben Sie detaillierte Informationen für den Speicherort an.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_FS_The_UNC_path_cannot_contain_a_forward_slash" xml:space="preserve">
+    <value>Der UNC-Pfad darf keinen Schrägstrich (/) enthalten.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_FS_DataWriteFailed" xml:space="preserve">
+    <value>Schreiben der Daten fehlgeschlagen, Pfad: {0}.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_FS_AccessDenied" xml:space="preserve">
+    <value>Der Zugriff auf {0} wird verweigert. Bitte überprüfen Sie, ob der eingegebene Benutzername und das Kennwort korrekt oder die Berechtigung ausreichend ist.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_FS_Extended_parameters" xml:space="preserve">
+    <value>Erweiterte Parameter</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_FS_Advanced" xml:space="preserve">
+    <value>Erweitert</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_FS_DataNotFound" xml:space="preserve">
+    <value>Öffnen der Daten fehlgeschlagen, Pfad: {0}.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_FS_Account_Profile" xml:space="preserve">
+    <value>Verwaltetes Kontoprofil angeben</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Connector_NFS_Net_Share" xml:space="preserve">
+    <value>Netzwerkdateisystem</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Connector_FS_IBM_Storwize_Family" xml:space="preserve">
+    <value>IBM Storwize Family</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_FS_IBM_Storwize_Family" xml:space="preserve">
+    <value>IBM Storwize Family</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Connector_NFS_Path_Demo" xml:space="preserve">
+    <value>\\server\shared folder</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_NFS_Account_Profile" xml:space="preserve">
+    <value>Verwaltetes Kontoprofil angeben</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_NFS_Advanced" xml:space="preserve">
+    <value>Erweitert</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_NFS_Extended_parameters" xml:space="preserve">
+    <value>Erweiterte Parameter</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_NFS_Net_Share" xml:space="preserve">
+    <value>NFS</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_NFS_The_path_format_is_not_correct" xml:space="preserve">
+    <value>Ungültiges Pfadformat. Bitte geben Sie ein Anderes ein.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_NFS_The_UNC_Path_cannot_be_empty" xml:space="preserve">
+    <value>Bitte geben Sie einen Wert ein.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_NFS_The_UNC_path_cannot_contain_a_forward_slash" xml:space="preserve">
+    <value>Der UNC-Pfad kann einen Schrägstrich (/) nicht enthalten.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_NFS_The_UNC_path_cannot_exceed_200_characters" xml:space="preserve">
+    <value>Der UNC-Pfad kann 200 Zeichen nicht überschreiten.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_NFS_UNC_Path" xml:space="preserve">
+    <value>UNC-Pfad</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Connector_NFS_Path_Demo_Description" xml:space="preserve">
+    <value>\\server\shared folder (Hinweis: Unix-Pfadformat wird nicht unterstützt)</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_FS_WMS_The_Publishing_Point_Name_Can_Not_Content_Forbidden_Character" xml:space="preserve">
+    <value>Der Publishingpoint-Name darf keines der folgenden Zeichen enthalten: ( &lt; &gt; \ ? % &amp; ' # " { } | ^ [ ] * )</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_FS_System_Profile" xml:space="preserve">
+    <value>Profil des Speichersystems</value>
+    <comment>Approved</comment>
+  </data>
+</root>

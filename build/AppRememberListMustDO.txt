@@ -1,0 +1,25 @@
+*******************************************************************************************
+
+app domain: eugovrecords.avepointonlineservices.com
+app url   : https://eugovrecords.avepointonlineservices.com/
+
+• Friendly name:AvePoint Cloud Records Gov
+• Start date:9/15/2018
+• Expiration date:9/15/2019
+• Client ID:f5e3f540-a0a0-459e-af0d-64292ba7f6a3
+• Client secret:n9RDgsjiKLCtSlpqec6DEolaS4PDDj3F+7DX0RFJrGM=
+• Client ID and secret availability:General or Education
+
+**********************************************************************************************
+
+
+app domain: recordsapp.avepointonlineservices.com
+app url   : https://recordsapp.avepointonlineservices.com/
+• Friendly name:AvePoint Cloud Records
+• Start date:9/15/2018
+• Expiration date:9/15/2019
+• Client ID:3358c97d-bc1c-4b21-b179-1bd0a640cc6e
+• Client secret:iNB6KeTaxTHzkP67oQnNHzfsboMmejg5BjbGJTJcSgw=
+• Client ID and secret availability:General or Education
+
+***********************************************************************************************

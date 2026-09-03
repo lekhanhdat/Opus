@@ -1,0 +1,51 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <RootNamespace>AvePoint.RA.Browser</RootNamespace>
+    <AssemblyName>RecordsBrowser</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>..\RAApi.Web\bin\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+  </PropertyGroup>
+	<PropertyGroup>
+		<EnableUnsafeBinaryFormatterSerialization>true</EnableUnsafeBinaryFormatterSerialization>
+	</PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Common\GlobalCommon\GCommonContract\DocAve.GCommonContract.csproj" />
+    <ProjectReference Include="..\Common\GlobalCommon\GCommonUtility\DocAve.GCommonUtility.csproj" />
+    <ProjectReference Include="..\Common\SPAPIWrapper\AveObjectModel.Client\AveObjectModel.Common\AveObjectModel.Common.csproj" />
+    <ProjectReference Include="..\Common\VCService30\CommonUtility30\DocAve.CommonUtility30.csproj" />
+    <ProjectReference Include="..\Common\Wrapper\Wrapper.Common\Wrapper.Common.csproj" />
+    <ProjectReference Include="..\RACommon.Global\RACommon.Global.csproj" />
+    <ProjectReference Include="..\RACommonUtility\RACommonUtility.csproj" />
+    <ProjectReference Include="..\RACommon\RACommon.csproj" />
+    <ProjectReference Include="..\RAContract.Global\RAContract.Global.csproj" />
+    <ProjectReference Include="..\RAContract\RAContract.csproj" />
+    <ProjectReference Include="..\RADataBroker\RADataBroker.csproj" />
+    <ProjectReference Include="..\RADB\RADB.csproj" />
+    <ProjectReference Include="..\RASharePoint\RASharePoint.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="AWSSDK.S3" Version="4.0.17.3" />
+    <PackageReference Include="log4net" Version="3.3.1" />
+    <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
+    <PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0" />
+    <PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
+    <PackageReference Include="Microsoft.DotNet.UpgradeAssistant.Extensions.Default.Analyzers" Version="0.4.421302">
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Castle.Windsor" Version="6.0.0" />
+    <PackageReference Include="EntityFramework" Version="6.5.1" />
+    <PackageReference Include="util.ai.text.extractor" Version="6.10.11" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Service\Impl\SPTreeService.cs" />
+  </ItemGroup>
+
+</Project>

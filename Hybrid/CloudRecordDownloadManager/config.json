@@ -1,0 +1,8 @@
+{
+    "PackageUrl": "https://recologreport.blob.core.windows.net/recodspackage/CloudAgentInstaller.msi",
+    "PatchUrl": "https://recologreport.blob.core.windows.net/recodspackage/CloudAgentInstaller_Upgrade.msp",
+    "AgentInfoUrl": "https://recologreport.blob.core.windows.net/recodspackage/CloudAgentInstaller_Info.json",
+    "MemoryLimit": "1",
+    "DiskFreeSpaceLimit": "5",
+    "DotNetFrameworkVersion": "V4_8"
+}

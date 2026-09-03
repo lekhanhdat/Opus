@@ -1,0 +1,225 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="DefaultIocContainerManagerCurrentDomainAssemblyResolveWarning" xml:space="preserve">
+    <value>Cannot resolve assembly [{0}] by default.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="DefaultIocContainerManagerLoadContainerBeginDataService" xml:space="preserve">
+    <value>Starting media data service...</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="DefaultIocContainerManagerLoadContainerError" xml:space="preserve">
+    <value>Started Media data service failed:{0}</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="DefaultIocContainerManagerLoadContainerIntegrateMicroKernel" xml:space="preserve">
+    <value>Begin integrating Windsor container to MicroKernel framework...</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="DefaultIocContainerManagerLoadContainerIntegrateWcf" xml:space="preserve">
+    <value>Begin integrating Windsor container and WCF framework...</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="DefaultIocContainerManagerLoadContainerMediaStartSuccessfully" xml:space="preserve">
+    <value>Started Media service successfully.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="DefaultIocContainerManagerLoadContainerMicroKernelServiceFailed" xml:space="preserve">
+    <value>Started Media MicroKernel service failed:{0}</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="DefaultIocContainerManagerLoadContainerRegisterServiceFailed" xml:space="preserve">
+    <value>Started Media register service failed:{0}</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="DefaultIocContainerManagerLoadContainerStartWindorContainer" xml:space="preserve">
+    <value>Starting Windsor container...</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="DefaultIocContainerManagerLoadContainertMediaServiceStatusStarting" xml:space="preserve">
+    <value>Begin starting media register service...</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="DefaultIocContainerManagerMediaServiceStatusTrackerManagerFailedEventMessage" xml:space="preserve">
+    <value>Started Media service failed. Error code: {0}</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="DefaultIocContainerManagerMediaServiceStatusTrackerManagerFailedTerminateMedia" xml:space="preserve">
+    <value>The Media windows service has a critical error and is forcing to be terminated.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="DefaultIocContainerManagerMediaServiceStatusTrackerManagerFailedTerminateMediaError" xml:space="preserve">
+    <value>The media windows service is failed to be terminated, reason: [{0}].</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="DefaultIocContainerManagerMediaServiceStatusTrackerManagerStartedMediaServerDetail" xml:space="preserve">
+    <value>Media Server details:
+   Control Server Address: {0}  
+   Control Server Port: {1}  
+   Media Server Name: {2}  
+   Media Server HostOrIp Address: {3}  
+   Media Server Control Port: {4}  
+   Media Server Data Port: {5}  
+   Media Server Platform: {6}  
+   Media Server Version: {7}  
+   Media Server CLR Version: {8}  
+   Media Server Machine Name: {9}  
+   Media Server Processor Count: {10} 
+   Media Server Current Time: {11} 
+   Media Server Current Time Zone: {12}</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="IocContainerGarbageCollectorCollectPerThreadLifestyleManagerCachedInstancesException" xml:space="preserve">
+    <value>An error occurred while collecting the garbage: {0}.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="MediaEnvironmentCheckTcpPortIsAvaliableArgumentOutOfRangeExceptionTcpPort" xml:space="preserve">
+    <value>TCP port should be a number between 1024 and 65535.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="MediaFileTransferSendFilesArgumentNullExceptionSendingFileList" xml:space="preserve">
+    <value>Sending file list is null or empty.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="MediaFileTransferSendFilesWarn" xml:space="preserve">
+    <value>An error occurred while sending files: {0}.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="MediaMicroKernelHostStartClosed" xml:space="preserve">
+    <value>The Media MicroKernel host service whose type is {0} is closed successfully.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="MediaMicroKernelHostStartClosing" xml:space="preserve">
+    <value>The Media MicroKernel host service whose type is {0} is beginning to close.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="MediaMicroKernelHostStartFaulted" xml:space="preserve">
+    <value>The Media MicroKernel host service whose type is {0} occurs an error.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="MediaMicroKernelHostStartOpened" xml:space="preserve">
+    <value>The Media MicroKernel host service whose type is {0} is successfully started at Address: {1}.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="MediaMicroKernelHostStartOpening" xml:space="preserve">
+    <value>The Media MicroKernel host service whose type is {0} is starting at Address: {1}.</value>
+    <comment>Verified</comment>
+  </data>
+</root>

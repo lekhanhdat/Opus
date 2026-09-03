@@ -1,0 +1,26 @@
+<!--Covered by AvePoint copyright and license agreement-->
+<template>
+    <lightning-card>
+        <h3 slot="title" class="summary-card-container-title">
+            {translation.summaryTitle}
+        </h3>
+        <template for:each={summaries} for:item="summary">
+            <div key={summary.id} class="summary-section">
+                <h3 class="summary-title">{summary.title}</h3>
+                <div class={summary.listClass}>
+                    <template for:each={summary.items} for:item="item">
+                        <div key={item.id} class={summary.itemClass}>
+                            <div class="summary-card-item">
+                                <p class="card-name">{item.name}</p>
+                                <div class="card-value-unit">
+                                    <p class="card-value" data-id={item.id} title={item.tooltipText}>{item.value}</p>
+                                    <p class="card-unit">{item.unit}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </template>
+                </div>
+            </div>
+        </template>
+    </lightning-card>
+</template>

@@ -1,0 +1,102 @@
+﻿/********************************************************************
+ *
+ *  PROPRIETARY and CONFIDENTIAL
+ *
+ *  This file is licensed from, and is a trade secret of:
+ *
+ *                   AvePoint, Inc.
+ *                   525 Washington Blvd, Suite 1400
+ *                   Jersey City, NJ 07310
+ *                   United States of America
+ *                   Telephone: +1-201-793-1111
+ *                   WWW: www.avepoint.com
+ *
+ *  Refer to your License Agreement for restrictions on use,
+ *  duplication, or disclosure.
+ *
+ *  RESTRICTED RIGHTS LEGEND
+ *
+ *  Use, duplication, or disclosure by the Government is
+ *  subject to restrictions as set forth in subdivision
+ *  (c)(1)(ii) of the Rights in Technical Data and Computer
+ *  Software clause at DFARS 252.227-7013 (Oct. 1988) and
+ *  FAR 52.227-19 (C) (June 1987).
+ *
+ *  Copyright © 2017-2026 AvePoint® Inc. All Rights Reserved. 
+ *
+ *  Unpublished - All rights reserved under the copyright laws of the United States.
+ */
+using System;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using AvePoint.RA.Contract.Explorer;
+
+namespace AvePoint.RA.DB.Model
+{
+    public class CommonSiteMasterIndex : BaseModel
+    {
+        [Key]
+        [Column(TypeName = "nvarchar")]//64
+        public string Id { get; set; }
+
+        [Column(TypeName = "bigint")]
+        public long ArchiverTime { get; set; }
+
+        [Column(TypeName = "nvarchar")]//255
+        public string JobId { get; set; }
+
+        [Column(TypeName = "nvarchar")]//400
+        public string SiteURL { get; set; }
+
+        [Column(TypeName = "nvarchar")]//64
+        public string StorageId { get; set; }
+
+        [Column(TypeName = "nvarchar")]//64
+        public string IndexStorageId { get; set; }
+
+        [Column(TypeName = "nvarchar")]//64
+        public string SiteGroupId { get; set; }
+
+        [Column(TypeName = "nvarchar")]//64
+        public string TeamId { get; set; }
+
+        [Column(TypeName = "nvarchar")]//64
+        public string SiteId { get; set; }
+
+        [Column(TypeName = "int")]
+        public int SPVersion { get; set; }
+
+        [Column(TypeName = "int")]
+        [Index(name: "IX_ArchiverSiteMasterIndex_MergeIndexState_DuplicateStatus", Order = 1)]
+        public int MergeIndexState { get; set; }
+
+        [Column(TypeName = "int")]
+        public int JobState { get; set; }
+
+        [Column(TypeName = "nvarchar")]//255
+        public string StorageInfo { get; set; }
+
+        [Column(TypeName = "nvarchar(MAX)")]//max
+        [MaxLength]
+        public string Extension { get; set; }
+        [Column(TypeName = "int")]
+        public int Flag { get; set; }
+
+        [Column(TypeName = "bit")]
+        public bool? DAOMigrated { get; set; }
+
+        [Column(TypeName = "int")]
+        public int BackupFileType { get; set; }
+
+        [Column(TypeName = "int")]
+        [Index(name: "IX_ArchiverSiteMasterIndex_MergeIndexState_DuplicateStatus", Order = 2)]
+        public int DuplicateStatus { get; set; }
+
+        [Column(TypeName = "int")]
+        public int DataType { get; set; }
+
+        [Column(TypeName = "nvarchar")]
+        [MaxLength(64)]
+        public string? O365TenantId { get; set; }
+    }
+}

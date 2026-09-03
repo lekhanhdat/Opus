@@ -1,0 +1,356 @@
+/*Covered by AvePoint copyright and license agreement*/
+/* Code Review Whole File */
+#raTermUsageReportProfile {
+  .ra-ruleusage-description {
+    font-size: 14px;
+    margin-bottom: 16px;
+  }
+
+  .ra-ruleusage-selrule {
+    display: inline-block;
+    font-size: 14px;
+    color: #1c1c1c;
+    vertical-align: middle;
+    line-height: 28px;
+  }
+
+  #RURCombobox {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 10px;
+    //height: 28px;
+    border-color: #585858;
+    color: #aaa;
+  }
+
+  .ra-ruleusage-term-search-box {
+    height: auto;
+    overflow: hidden;
+    padding: 20px 0 10px;
+  }
+
+  .ra-ruleusage-content {
+    width: 100%;
+    padding-bottom: 5px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .ra-ruleusage-content::after {
+    content: "";
+    clear: both;
+  }
+
+  .ra-ruleusage-left-rule-title {
+    height: 32px;
+    background: #0079DD;
+    font-size: 14px;
+    line-height: 30px;
+    font-family: "Segoe UI", sans-serif;
+    color: #fff;
+    text-indent: 10px;
+    font-weight: 600;
+  }
+
+  #ra-ruleusage-left-rule-content {
+    padding: 15px;
+    overflow-x: hidden;
+    height: 438px;
+  }
+
+  #ra-ruleusage-left-rule-content h2 {
+    font-size: 14px;
+    color: #1c1c1c;
+    font-weight: 600;
+  }
+
+  #ra-ruleusage-left-rule-content div {
+    font-size: 14px;
+    padding: 10px 25px 15px;
+    color: #585858;
+    line-height: 16px;
+    max-width: 450px;
+    word-wrap: break-word;
+    word-break: normal;
+  }
+
+  .ra-ruleusage-term-page-box {
+    width: 100%;
+    clear: both;
+    overflow: hidden;
+    padding-bottom: 5px;
+  }
+
+  #RURTermPage {
+    float: right;
+  }
+
+  .aui-datagrid-content {
+    position: relative;
+  }
+
+  .ra-ruleusage-export {
+    float: left;
+    font-size: 0;
+    z-index: 1;
+    margin-top: 25px;
+    cursor: pointer;
+  }
+
+  .ra-ruleusage-export:focus {
+    outline: lightblue Solid 2px;
+  }
+
+  .ra-ruleusage-export span {
+    display: inline-block;
+    font-size: 14px;
+    color: #1c1c1c;
+    font-family: "Segoe UI", sans-serif;
+    line-height: 18px;
+    vertical-align: middle;
+    cursor: pointer;
+  }
+
+  .ra-ruleusage-export-icon {
+    background: url('/Images/Base/action_button.png') -234px -178px no-repeat;
+    width: 18px;
+    height: 18px;
+    margin-right: 8px;
+  }
+
+  .ra-ruleusage-export.disabled .ra-ruleusage-export-icon {
+    background-position: -252px -178px;
+    cursor: default;
+  }
+
+  .ra-ruleusage-export.disabled span {
+    cursor: default;
+  }
+
+  .ra-ruleusage-export:hover span {
+    text-decoration: underline;
+  }
+
+  .ra-ruleusage-export.disabled:hover span {
+    text-decoration: none;
+  }
+
+
+  .ra-ruleusage-rule-select button span {
+    font-size: 14px;
+  }
+
+
+  #ra-ruleusage-right-term .ra-grid-footer {
+    padding-bottom: 40px;
+    overflow: hidden;
+    background: none;
+  }
+
+  #ra-ruleusage-right-term .ra-grid-count,
+  #ra-ruleusage-right-term .ra-pager-size {
+    display: none !important;
+  }
+
+
+  #rd_tabContainer {
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+  }
+
+  #fsSourcePanle,
+  #spSourcePanle {
+    margin-left: 25px !important;
+    margin-top: -12px !important;
+  }
+
+  .ra-popup-detail-content-key {
+    display: inline-block;
+    width: 230px;
+    padding-bottom: 15px;
+    vertical-align: top;
+    font-family: "Segoe UI", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #1c1c1c;
+  }
+
+  .ra-popup-detail-content-value {
+    font-size: 14px;
+    padding: 5px 20px 15px;
+    color: #585858;
+    line-height: 16px;
+    max-width: 190px;
+    word-wrap: break-word;
+    word-break: normal;
+  }
+
+  #dialog-content {
+    padding: 15px;
+    overflow-y: auto;
+    height: 600px;
+  }
+
+
+  .ra-grid-footer {
+    position: absolute;
+    right: 8px;
+    bottom: 8px;
+    width: 300px;
+  }
+}
+
+.reco-rule-usage-report-wrapper {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-rows: auto auto 1fr;
+  grid-template-columns: 100%;
+  row-gap: 16px;
+
+  .reco-rule-usage-report-card,
+  .reco-rule-usage-report-content-card {
+    width: 100%;
+    background: #FFFFFF;
+    border: 1px solid #DAE0E2;
+    border-radius: 8px;
+    padding: 24px;
+  }
+
+  .reco-rule-usage-report-card {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+  }
+
+  .reco-rule-usage-report-content-card {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    position: relative;
+  }
+
+  .reco-rule-usage-report-content-card::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    height: 100%;
+    width: 1px;
+    background: #E7EAEB;
+  }
+
+  .reco-rule-usage-report-header-message {
+    margin-bottom: 24px;
+  }
+
+  .reco-rule-usage-report-form {
+    padding-right: 40px;
+
+    .reco-rule-usage-selector-title {
+      font: normal normal 600 14px/19px "Open Sans", sans-serif;
+      color: #323E4D;
+      margin-bottom: 8px;
+    }
+
+    .reco-rule-usage-selector {
+      margin-bottom: 24px;
+
+      .aui-combobox {
+        width: 100% !important;
+      }
+    }
+
+    .reco-rule-usage-report-search-btn {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+
+  .reco-rule-usage-report-tips {
+    padding-left: 24px;
+    position: relative;
+
+    .reco-rule-usage-report-tips-header {
+      height: 40px;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+    }
+
+    .reco-rule-usage-report-tips-icon {
+      width: 40px;
+      height: 100%;
+      background: #F2F3F4;
+      border-radius: 4px;
+      font-size: 20px;
+      margin-right: 8px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .reco-rule-usage-report-tips-header-title {
+      font: normal normal 600 13px "Open Sans", sans-serif;
+      color: #323E4D;
+    }
+
+    .reco-rule-usage-report-tips-content {
+      width: 100%;
+      font: normal normal normal 13px "Open Sans", sans-serif;
+      color: #323E4D;
+    }
+  }
+
+  .reco-rule-usage-report-tips::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 1px;
+    background: #E7EAEB;
+  }
+
+  .reco-rule-usage-report-detail {
+    padding-right: 24px;
+
+    .reco-rule-usage-report-desc {
+      font: normal normal normal 13px "Open Sans", sans-serif;
+      color: #323E4D;
+      margin-bottom: 24px;
+    }
+  }
+
+  .reco-rule-usage-report-associated {
+    padding-left: 24px;
+
+    .reco-rule-usage-report-search {
+      margin-bottom: 16px;
+
+      .aui-searchbox {
+        width: 100% !important;
+        max-width: 380px !important;
+      }
+    }
+  }
+
+  .reco-rule-usage-report-content-title {
+    font: normal normal 600 14px/19px "Open Sans", sans-serif;
+    color: #323E4D;
+    margin-bottom: 16px;
+  }
+
+  .reco-rule-usage-report-table-footer {
+    margin-top: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  #reco-rule-usage-report-table #raRuleUsageReportTable {
+    box-shadow: none;
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "AvePoint Opus Related Records",
+    "id": "bbe4056f-0a68-48eb-a2f5-953fa072c563",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": false,
+    "supportedLocales": ["en-US"],
+    "features": [
+      {
+        "title": "Related Records Command Set",
+        "description": "Enables viewing and managing related records for list items and documents.",
+        "id": "b77081f4-283f-4a03-9f27-38bb3ffaf6d6",
+        "version": "1.0.0.0",
+        "assets": {
+          "elementManifests": [
+            "elements.xml"
+          ],
+          "elementFiles": [
+            "elements.xml"
+          ]
+        }
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/related-records-spse-app.sppkg"
+  }
+}

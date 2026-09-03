@@ -1,0 +1,748 @@
+#raRecordsExplorer {
+  .row-md, .row-xs {
+    margin-right: -16px;
+  }
+
+  .col-md-4 {
+    width: 40%;
+  }
+
+  .col-md-8 {
+    width: 60%;
+  }
+
+  .container-fluid {
+    padding-left: 0;
+    padding-right: 4px;
+  }
+
+  .aui-messagebar {
+    margin-bottom: 24px;
+  }
+
+  #raExplorerTree, #raTermViewTree {
+    display: flex;
+    flex-direction: column;
+    // height: calc(100vh - 293px);
+    padding: 16px;
+    
+    .ra-treeview {
+      // height: 0;
+      overflow: auto;
+      // flex: 1 1 auto;
+      height: 100%;
+      min-height: 310px;
+    }
+  }
+
+  .left-tree {
+    position: absolute;
+    width: 100%;
+    height: calc(100% - 90px);
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  .view-mode-container {
+    padding: 16px;
+    border-bottom: 1px solid #DAE0E2;
+  }
+
+  .recordsExplorer_info {
+    padding: 24px;
+    margin-bottom: 16px;
+    border: 1px solid #DAE0E2;
+    border-radius: 8px;
+    background-color: #fff;
+  }
+
+  #recordsExplorer_pie_info {
+    padding: 24px;
+    border: 1px solid #DAE0E2;
+    border-radius: 8px;
+    background-color: #fff;
+    flex: 1;
+  }
+
+  .raPhyObjInfoContainer {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    .ra-table-pager-counter {
+        position: absolute;
+        bottom: -35px;
+      }
+    
+      .ra-table-pager-counter > a{
+          margin-left: 8px;
+      }
+  }
+
+  #phyObjTable {
+    position: relative;
+  }
+
+  .hold-btns-group {
+    position: relative;
+    display: inline-block;
+    margin-left: 10px;
+
+    .icon-mix {
+      position: absolute;
+      left: 15px;
+      top: 10px;
+      font-size: 8px;
+      z-index: 1;
+    }
+  }
+
+  .main-navbar {
+    margin-bottom: 16px;
+    overflow: hidden;
+    // padding: 0 10px;
+    .nav-btn {
+      background-color: #fafafa;
+      font-size: 14px;
+    }
+  }
+
+  .navbar-left {
+    float: left;
+    #crm-menu {
+      margin: 0;
+      display: flex;
+      column-gap: 8px;
+    }
+  }
+
+  .navbar-right {
+    float: right;
+    #crm-menu {
+      margin: 0;
+      display: flex;
+      flex-direction: row-reverse;
+      column-gap: 8px;
+    }
+  }
+
+  .main-content {
+    .ra-section {
+      padding-top: 24px;
+    }
+
+    .barcode-content {
+      margin-top: 20px;
+      margin-left: 16px;
+    }
+
+    .barcode-img-div {
+      display: inline-block;
+      /*min-height:100px;*/
+    }
+
+    .barcodeImg {
+      /*height: 117px;*/
+    }
+
+    .barcode-print {
+      float: right;
+      vertical-align: top;
+    }
+  }
+
+  .children-content {
+    min-height: 200px;
+    margin-bottom: 0;
+    padding-top: 24px;
+    border: 1px solid #DAE0E2;
+    border-radius: 8px;
+    background-color: #fff;
+    flex: 1;
+
+    .table-content {
+      width: 100%;
+      overflow: hidden;
+      padding: 0 24px;
+    }
+
+    .table-pager {
+      float: right;
+      // padding: 5px 24px;
+      height: 35px;
+    }
+    .ra-section-head{
+      padding: 0 24px 24px 24px;
+      border-bottom: 1px solid #E7EAEB;
+    }
+  }
+
+  .capacity-unit {
+    font-size: 12px;
+    color: #666;
+    margin-left: 1px
+  }
+
+  .children-navbar {
+    padding-left: 24px;
+    padding-right: 24px; 
+    margin-top: 24px;
+    margin-bottom: 16px;
+    height: 34px;
+
+    .iconBtns {
+      display: inline-block;
+    }
+
+    .tableHeaderBtnGroup {
+      display: inline-block;
+      margin-left: 10px;
+    }
+
+    .searchbox {
+      float: right;
+      margin-left: 16px;
+    }
+
+    .filterSpliter {
+      float: right;
+      height: 34px;
+      width: 1px;
+      border-left: 1px solid;
+      border-color: #ddd;
+      margin-left: 16px;
+    }
+
+    .new-button {
+      margin-left: 5px;
+      float: right;
+    }
+  }
+
+  #crm-menu{
+    display: flex;
+    column-gap: 8px;
+  }
+
+  .button-gap {
+    display: flex;
+    column-gap: 8px;
+    margin-bottom: 16px;
+  }
+
+  .navbar-buttons {
+    padding-left: 24px;
+    padding-right: 24px; 
+  }
+
+  .explorer-tree-section {
+    padding: 16px;
+    margin-bottom: 24px;
+  }
+
+  .ra-tree-status {
+    position: relative;
+    float: right;
+    height: 25px;
+
+    .ra-tree-status-trigger {
+      position: absolute;
+      top: 6px;
+      left: -54px;
+      text-decoration: underline;
+      font: italic normal normal 13px/19px "Open Sans", sans-serif;
+      color: #0072D0;
+      cursor: pointer;
+    }
+
+    .ra-tree-status-list {
+      position: absolute;
+      z-index: 9999;
+      top: 15px;
+      right: 0;
+      text-align: left;
+      padding: 10px 16px 5px 16px;
+      min-width: 280px;
+    }
+
+    .ra-tree-status-item {
+      display: flex;
+      margin-bottom: 8px;
+      align-items: center;
+    }
+
+    .ra-tree-status-color {
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 4px;
+      width: 5px;
+      height: 5px;
+      background-color: red;
+      -moz-border-radius: 2.5px;
+      -webkit-border-radius: 2.5px;
+      border-radius: 2.5px;
+    }
+
+    .ra-tree-status-icon {
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 4px;
+      width: 12px;
+      height: 12px;
+      //font-size: 8px;
+      text-align: center;
+      //background-color: red;
+      //-moz-border-radius: 6px;
+      //-webkit-border-radius: 6px;
+      //border-radius: 6px;
+    }
+  }
+}
+
+#importSettingPanel {
+  .ra-explorer-import {
+    margin-top: 24px;
+  }
+
+  .ra-explorer-import-uniqueid {
+    margin-bottom: 8px;
+    font: normal normal 600 14px/19px "Open Sans", sans-serif;
+    color: #323E4D;
+  }
+}
+
+#downloadTemplatePanel {
+  .ra-explorer-download {
+    margin-bottom: 24px;
+  }
+
+  .ra-explorer-download-span {
+    font: normal normal normal 14px/19px "Open Sans", sans-serif;
+    color: #323E4D;
+  }
+
+  .ra-explorer-templateTitle {
+    margin-bottom: 8px;
+    font: normal normal 600 13px/18px "Open Sans", sans-serif;
+    color: #323E4D;
+  }
+}
+
+.phyhold-dialog-removehold-label {
+  margin-bottom: 24px;
+  color: #707070;
+}
+
+.hold-dialog-removehold-tip {
+  margin-bottom: 16px;
+}
+
+.hold-dialog-removehold-details {
+  font: normal normal 600 14px/19px "Open Sans", sans-serif;
+  color: #323E4D;
+  margin-bottom: 4px;
+}
+
+.hold-dialog-removehold-list {
+  max-height: 130px;
+  overflow: auto;
+}
+
+.hold-dialog-removehold-item {
+  margin-bottom: 8px;
+  font: normal normal normal 14px/19px "Open Sans", sans-serif;
+  color: #323E4D;
+}
+
+.phyhold-expander {
+  .phyhold-expander-label {
+    color: #707070;
+
+  }
+
+  .phyhold-expander-list {
+    max-height: 300px;
+    overflow: auto;
+    color: #707070;
+  }
+
+  .phyhold-expander-item {
+    margin-bottom: 16px;
+  }
+}
+
+.hold-dialog-remove-hold-list-label {
+  font: normal normal 600 13px/18px "Open Sans", sans-serif;
+  color: #323E4D;
+}
+
+.hold-remove-list {
+  margin-top: 8px;
+  font: normal normal normal 13px/18px "Open Sans", sans-serif;
+  color: #27313C;
+}
+
+.phyobj-form {
+  .phyobj-category {
+    margin-bottom: 32px;
+  }
+
+  .class-selector {
+    position: relative;
+    width: 300px;
+    height: 38px;
+    border: 1px solid #585858;
+    background-color: #fff;
+  }
+
+  .class-selector-value {
+    height: 100%;
+    line-height: 36px;
+    padding-left: 8px;
+    padding-right: 32px;
+  }
+
+  .class-selector-icon {
+    position: absolute;
+    right: 8px;
+    top: 11px;
+    font-size: 16px;
+  }
+
+  .permission-introduce{
+    color: #4C5966;
+  }
+
+  .permission-inheritance-btn{
+      margin: 16px 0 8px 0;
+  }
+
+  .inherit-parent-text{
+    font: italic normal normal 14px/18px "Open Sans", sans-serif;
+    color: #4C5966;
+  }
+}
+
+.aui-richcombobox-popup {
+  z-index: 1001 !important;
+}
+
+.aui-datepicker-popup.aui-popup {
+  z-index: 1001 !important;
+}
+
+
+.ra-validation-text {
+  font-size: 14px;
+  color: red;
+}
+
+.barcode-dialog {
+  height: 100%;
+
+  .dialog-btns {
+    position: absolute;
+    right: 32px;
+    bottom: 0;
+    text-align: right;
+  }
+}
+
+#raPhyObjectManagePermission {
+  .aui-messagebar {
+    margin: 0 0 15px 0 !important;
+  }
+
+  .manage-permission-header {
+    font-size: 14px;
+  }
+
+  .inheritance-introduce {
+    color: #27313C;
+    font-size: 14px;
+    margin-bottom: 16px;
+  }
+
+  .user-content-left {
+    float: left;
+  }
+
+  .user-content-right {
+    float: right;
+  }
+
+  .search-users-title {
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: #4C5966;
+  }
+
+  .search-users-content {
+    padding: 8px 8px 8px 0;
+    overflow: hidden;
+  }
+
+  .user-content {
+    margin-top: 16px;
+  }
+
+  .inherit-parent-text{
+    font: italic normal normal 14px/18px "Open Sans", sans-serif;
+    color: #4C5966;
+  }
+
+  .user-content-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: #4C5966;
+  }
+
+  .user-plus-btn {
+    float: right;
+    height: 40px;
+    line-height: 34px;
+
+    .button-bald{
+      width: 14px;
+      height: 34px;
+      border: 0;
+      margin: 0 6px;
+    }
+  }
+
+  .user-list {
+    margin-top: 9px;
+    padding: 0 12px;
+    overflow: hidden;
+  }
+
+  .user-list-info {
+    overflow: hidden;
+    color: #27313C;
+    padding: 10px 0px;
+    border-bottom: 1px solid #eee;
+  }
+
+  .user-list-info-name{
+    color: #27313C;
+    font-weight: 600;
+  }
+
+  .user-list-info-email {
+    color: #868F96
+  }
+
+  .user-list-left {
+    float: left;
+  }
+
+  .user-list-right {
+    float: right;
+    line-height: 40px;
+  }
+
+  .dividing_line {
+    width: 100%;
+    height: 1px;
+    border-bottom: 1px solid #eee;
+    margin: 16px 0;
+  }
+
+  #conflict_setting_container{
+    margin-top: 10px;
+    font-weight: 400;
+
+    .section-title{
+      margin-top: 24px;
+      font-size: 14px;
+      font-weight: 600;
+      color: #4C5966;
+    }
+  
+    .section-desc{
+      margin-top: 4px;
+      margin-bottom: 16px;
+      font-size: 14px;
+      color: #4C5966;
+    }
+
+    .aui-radio{
+      color: #27313C;
+      font-weight: normal;
+    }
+  }
+}
+
+/********************Print内容的样式需要单独定义****Begin**********************/
+.barcode-print-content {
+  min-width: 454px;
+}
+
+.barcode-print-row {
+  margin-bottom: 10px;
+}
+
+.barcode-print-label {
+  display: inline-block;
+  width: 80px;
+  vertical-align: top;
+  font-weight: 600;
+  // font-size: 13px;
+}
+
+.barcode-print-value {
+  display: inline-block;
+  margin-left: 9px;
+  // font-size: 14px;
+}
+
+@page {
+  size: A4 portrait;
+  margin-top:50pt;
+}
+
+@media print {
+  .barcode-print-content {
+    font-size: 16pt;
+  }
+
+  .barcode-print-label {
+    width: 200pt;
+  }
+}
+
+/*********************Print样式*****************End*************************/
+
+//panel内容不是本页面子元素,单独写在外层
+#explorerLoanRequest, #explorerPhyHoldForm {
+  padding-bottom: 250px !important;
+}
+
+#exportBarcodesContainer {
+  #export-barcodes-dialog {
+
+    .radio-title {
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .radio-content {
+      margin: 22px 0 0 10px;
+    }
+
+    .location-radio {
+      margin-top: 12px;
+    }
+
+    .browser-radio-content,
+    .location-radio-label,
+    .location-radio-combobox,
+    .location-radio-popover {
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    .location-radio-combobox {
+      margin-left: 4px;
+    }
+
+    .no-select-location-valid {
+      margin-top: 5px;
+      margin-left: 92px;
+    }
+
+    .aui-messagebar {
+      margin: 0 0 15px 0;
+    }
+  }
+}
+
+#raPhyBarcodePrintDlg{
+    .barcodeImg {
+      position: relative;
+      left: 4px;
+    }
+}
+
+.phy-head {
+    font-size: 16px;
+    font-weight: normal;
+    font-style: italic;
+    letter-spacing: 0.27px;
+    color: #4C5966;
+    opacity: 1;
+}
+
+.ra-explorer-main-container {
+  width: 100%;
+  height: calc(100% - 8px);
+  display: grid;
+  grid-template-rows: auto 1fr;
+  grid-template-columns: 100%;
+  //margin-bottom: 40px;
+}
+
+.rm-tm-content-main {
+  display: flex;
+  gap: 16px;
+}
+
+.rm-tm-content-left {
+  position: relative;
+  height: 100%;
+  width: 40%;
+  border: 1px solid #DAE0E2;
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+.rm-tm-content-right {
+  width: 60%;
+  min-width: 600px;
+}
+
+#bulkUpdateFormPanel {
+  #explorerBulkUpdateForm {
+    .ra-form-checkbox {
+      margin-bottom: 8px;
+      text-align: left;
+      color: #323E4D;
+
+      .aui-choice-content {
+        font: normal normal 600 13px/18px "Open Sans", sans-serif;
+      }
+    }
+  }
+}
+
+#raExportRecordsDialogContent {
+  .ra-export-msg {
+    margin-bottom: 24px;
+    font: normal normal normal 14px/19px "Open Sans", sans-serif;
+    color: #323E4D;
+  }
+
+  .ra-export-template-title {
+    margin-bottom: 8px;
+    font: normal normal 600 13px/18px "Open Sans", sans-serif;
+    color: #323E4D;
+  }
+}
+
+.reco-audit-cell-item {
+  margin-bottom: 4px;
+}
+
+.reco-audit-cell-title {
+  font: normal normal 600 14px "Open Sans", sans-serif;
+  color: #323E4D;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.reco-audit-cell-value {
+  font: normal normal normal 14px "Open Sans", sans-serif;
+  color: #323E4D;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}

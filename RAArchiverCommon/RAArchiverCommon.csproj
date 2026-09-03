@@ -1,0 +1,35 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+	<PropertyGroup>
+		<EnableUnsafeBinaryFormatterSerialization>true</EnableUnsafeBinaryFormatterSerialization>
+	</PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Common\M365Wrapper\WrapperBackup\M365.Wrapper.Backup.csproj" />
+    <ProjectReference Include="..\Common\Wrapper\Wrapper.Backup\Wrapper.Backup.csproj" />
+    <ProjectReference Include="..\Common\Wrapper\Wrapper.Common\Wrapper.Common.csproj" />
+    <ProjectReference Include="..\Common\Wrapper\Wrapper.Discovery\Wrapper.Discovery.csproj" />
+    <ProjectReference Include="..\Common\Wrapper\Wrapper.Restore\Wrapper.Restore.csproj" />
+    <ProjectReference Include="..\Media\Media.Service.ArchiverBackup\Media.Service.ArchiverBackup.csproj" />
+    <ProjectReference Include="..\Media\Media.Service.DomainModel\Media.Service.DomainModel.csproj" />
+    <ProjectReference Include="..\Merged18NResources\Merged18NResources.csproj" />
+    <ProjectReference Include="..\RACommon.Global\RACommon.Global.csproj" />
+    <ProjectReference Include="..\RACommonUtility\RACommonUtility.csproj" />
+    <ProjectReference Include="..\RACommon\RACommon.csproj" />
+    <ProjectReference Include="..\RAContract\RAContract.csproj" />
+    <ProjectReference Include="..\RADB\RADB.csproj" />
+    <ProjectReference Include="..\RAManualApprovalCommon\RAManualApprovalCommon.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AWSSDK.S3" Version="4.0.17.3" />
+    <PackageReference Include="DataOrchestration.Tag.Sdk" Version="1.1.69" />
+    <PackageReference Include="log4net" Version="3.3.1" />
+  </ItemGroup>
+
+</Project>

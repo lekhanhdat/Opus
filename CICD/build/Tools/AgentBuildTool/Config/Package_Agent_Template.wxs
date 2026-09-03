@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!--According to the input parameters to determine the installation path-->
+<?if $(var.Platform) = x64 ?>
+<?define Win64 = "yes" ?>
+<?define PlatformProgramFilesFolder = "ProgramFiles64Folder" ?>
+<?else ?>
+<?define Win64 = "no" ?>
+<?define PlatformProgramFilesFolder = "ProgramFilesFolder" ?>
+<?endif ?>
+<?define AppFolderName = "AvePoint"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi" xmlns:difx="http://schemas.microsoft.com/wix/DifxAppExtension" xmlns:netfx="http://schemas.microsoft.com/wix/NetFxExtension">
+  <Product Id="{3}" Name="AvePoint Cloud Agent Service" Language="1033" Version="$(var.Version)" Manufacturer="AvePoint" UpgradeCode="DF5D64B0-C0C8-99C3-8650-031A7B9ADE3A">
+    <Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine" />
+    <MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed." />
+    <!-- Specifies the cabto save the file. CompressionLevel specifies the compression type. When EmbedCab is yes, it will push the cab into the msi package. -->
+    <Media Id="1" Cabinet="RTM.cab" EmbedCab="yes" CompressionLevel="high" />
+    <!-- <PropertyRef Id="WIX_IS_NETFRAMEWORK_46_OR_LATER_INSTALLED" /> -->
+    <!-- <Condition Message="AvePoint Cloud Agent Service requires .NET Framework 4.6 or higher."> -->
+    <!-- <![CDATA[Installed OR WIX_IS_NETFRAMEWORK_46_OR_LATER_INSTALLED]]> -->
+    <!-- </Condition> -->
+    <FeatureRef Id="ProductFeature" />
+    <!-- remove the repaire&uninstall buttons on software panel -->
+    <Property Id="ARPNOREPAIR" Value="yes" Secure="yes" />
+    <!-- <Property Id="ARPNOREMOVE" Value="yes" Secure="yes" /> -->
+    <!-- Lic file -->
+    <!-- <WixVariable Id="WixUILicenseRtf" Value="license.rtf" /> -->
+    <!-- Override Installation project picture -->
+    <WixVariable Id="WixUIBannerBmp" Overridable="yes" Value="imgs/WinUIBannerBmp.bmp" />
+    <WixVariable Id="WixUIDialogBmp" Overridable="yes" Value="imgs/WinUIDialogBmp.bmp" />
+    <UI>
+      <!-- Installation style -->
+      <Property Id="WIXUI_INSTALLDIR" Value="INSTALLFOLDER" />
+      <UIRef Id="WixUI_InstallDir" />
+      <!-- Skip license dialog -->
+      <Publish Dialog="WelcomeDlg" Control="Next" Event="NewDialog" Value="LicenseAgreementDlg" Order="2">
+        1
+      </Publish>
+      <Publish Dialog="LicenseAgreementDlg" Control="Back" Event="NewDialog" Value="InstallDirDlg">
+        1
+      </Publish>
+
+      <Publish Dialog="InstallDirDlg" Control="Back" Event="NewDialog" Value="WelcomeDlg" Order="2">
+        1
+      </Publish>
+      <Publish Dialog="ExitDialog" Control="Finish" Event="DoAction" Value="LaunchApplicationAction">
+        1
+      </Publish>
+    </UI>
+    <!-- Specified icon file -->
+    <Icon Id="icon.ico" SourceFile="app.ico" />
+    <Property Id="ARPPRODUCTICON" Value="icon.ico" />
+  </Product>
+  <Fragment>
+    <Feature Id="ProductFeature" Title="Setup" Level="1">
+      <!-- All Component and ComponentGroups executed during installation -->
+      <ComponentGroupRef Id="FileComponents" />
+      <ComponentGroupRef Id="ServiceComponents" />
+      <ComponentRef Id="ApplicationShortcut" />
+    </Feature>
+  </Fragment>
+  <Fragment>
+    <Directory Id="TARGETDIR" Name="SourceDir">
+      <Directory Id="$(var.PlatformProgramFilesFolder)">
+        <Directory Id="INSTALLFOLDER" Name="$(var.AppFolderName)">
+          <Directory Id="WorkingFolder">
+            <Directory Id="ApplicationWorkingFolder" Name="app" />
+          </Directory>
+        </Directory>
+      </Directory>
+      <Directory Id="ProgramMenuFolder">
+        <Directory Id="ApplicationProgramsFolder" Name="$(var.AppFolderName)" />
+      </Directory>
+      <Directory Id="DesktopFolder" Name="Desktop" />
+    </Directory>
+  </Fragment>
+  <Fragment>
+    <Property Id="WixShellExecTarget" Value="[#{1}]" />
+    <Property Id="LICSOURCEDIRECTORY" Value="$(var.Type)\Cloud\Agent\lic" />
+    <CustomAction Id="LaunchApplicationAction" BinaryKey="WixCA" DllEntry="WixShellExec" Impersonate="yes" />
+  </Fragment>
+  <Fragment>
+    <DirectoryRef Id="ApplicationProgramsFolder">
+      <Component Id="ApplicationShortcut" Guid="6EC4A3C2-147D-41C4-BC14-814EEAC48C37">
+        <!-- Shortcut node's Name property, indicating the name of the shortcut -->
+        <Shortcut Id="ApplicationStartMenuShortcut" Name="Cloud Agent Configuration Tool" Description="Cloud Agent Configuration Tool" Target="[INSTALLFOLDER]\Cloud\Agent\bin\CloudAgentConfigurationTool.exe" WorkingDirectory="INSTALLFOLDER" />
+        <RemoveFolder Id="ApplicationProgramsFolder" On="uninstall" />
+        <!-- Registry does not have to be added for test items -->
+        <RegistryValue Root="HKCU" Key="Software\[Manufacturer]\[ProductName]" Name="installed" Type="integer" Value="1" KeyPath="yes" />
+      </Component>
+    </DirectoryRef>
+  </Fragment>
+  <Fragment>
+    <ComponentGroup Id="ServiceComponents">
+      <!-- install Service -->
+      <Component Id="HybridAgentServiceComponent" Directory="{2}" Guid="B5F0C012-49D6-4C63-AFCA-0CE6C24C6E7D" DiskId="1">
+        <File Id="GuardAgent" Source="$(var.Type)\Cloud\Agent\bin\CloudAgentService.exe" />
+        <File Id="GuardAgentConfig" Source="$(var.Type)\Cloud\Agent\bin\CloudAgentService.exe.config" />
+        <ServiceInstall Id="CloudRecordsAgentServiceInstall" Type="ownProcess" Name="AvePointCloudAgentService" DisplayName="AvePoint Cloud Agent Service" Description="AvePoint Cloud Agent Service" Start="auto" ErrorControl="normal" />
+        <!-- Tell WiX to start the Service -->
+        <ServiceControl Id="StartServiceServiceControl" Stop="both" Remove="uninstall" Name="AvePointCloudAgentService" Wait="yes" />
+        <RemoveFile Id="ALLFILES2" Name="*.*" On="uninstall" />
+      </Component>
+    </ComponentGroup>
+  </Fragment>
+  <!-- The following is the automatically generated node for heat -->{0}
+</Wix>

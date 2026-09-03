@@ -1,0 +1,434 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--/********************************************************************
+ *
+ *  PROPRIETARY and CONFIDENTIAL
+ *
+ *  This file is licensed from, and is a trade secret of:
+ *
+ *                   AvePoint, Inc.
+ *                   525 Washington Blvd, Suite 1400
+ *                   Jersey City, NJ 07310
+ *                   United States of America
+ *                   Telephone: +1-201-793-1111
+ *                   WWW: www.avepoint.com
+ *
+ *  Refer to your License Agreement for restrictions on use,
+ *  duplication, or disclosure.
+ *
+ *  RESTRICTED RIGHTS LEGEND
+ *
+ *  Use, duplication, or disclosure by the Government is
+ *  subject to restrictions as set forth in subdivision
+ *  (c)(1)(ii) of the Rights in Technical Data and Computer
+ *  Software clause at DFARS 252.227-7013 (Oct. 1988) and
+ *  FAR 52.227-19 (C) (June 1987).
+ *
+ *  Copyright © 2017-2026 AvePoint® Inc. All Rights Reserved. 
+ *
+ *  Unpublished - All rights reserved under the copyright laws of the United States.
+ */-->
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://schemas.microsoft.com/office/infopath/2007/formsServices" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://schemas.microsoft.com/office/infopath/2007/formsServices" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Forms Service</wsdl:documentation>
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/office/infopath/2007/formsServices">
+      <s:element name="BrowserEnableUserFormTemplate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="formTemplateLocation" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BrowserEnableUserFormTemplateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BrowserEnableUserFormTemplateResult" type="tns:MessagesResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="MessagesResponse">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Messages" type="tns:Messages" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Messages">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Message" nillable="true" type="tns:Message" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Message">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ShortMessage" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DetailedMessage" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SourceLocation" type="tns:SourceLocation" />
+        </s:sequence>
+        <s:attribute name="Id" type="s:int" use="required" />
+        <s:attribute name="Type" type="tns:MessageType" use="required" />
+        <s:attribute name="Feature" type="tns:Feature" use="required" />
+        <s:attribute name="Category" type="tns:Category" use="required" />
+      </s:complexType>
+      <s:complexType name="SourceLocation">
+        <s:attribute name="ControlId" type="s:string" />
+        <s:attribute name="FileName" type="s:string" />
+        <s:attribute name="LineNumber" type="s:int" />
+        <s:attribute name="LinePosition" type="s:int" />
+      </s:complexType>
+      <s:simpleType name="MessageType">
+        <s:restriction base="s:string">
+          <s:enumeration value="Error" />
+          <s:enumeration value="Information" />
+          <s:enumeration value="Warning" />
+        </s:restriction>
+      </s:simpleType>
+      <s:simpleType name="Feature">
+        <s:restriction base="s:string">
+          <s:enumeration value="GenericXsf" />
+          <s:enumeration value="XsfSchema" />
+          <s:enumeration value="GenericXsl" />
+          <s:enumeration value="GenericXPath" />
+          <s:enumeration value="TemplateXml" />
+          <s:enumeration value="Layout" />
+          <s:enumeration value="Controls" />
+          <s:enumeration value="BusinessLogic" />
+          <s:enumeration value="Calculations" />
+          <s:enumeration value="Validation" />
+          <s:enumeration value="DigitalSignatures" />
+          <s:enumeration value="DataAdapters" />
+          <s:enumeration value="Submit" />
+          <s:enumeration value="Views" />
+          <s:enumeration value="Rules" />
+          <s:enumeration value="ConditionalFormatting" />
+          <s:enumeration value="VersionUpgrade" />
+        </s:restriction>
+      </s:simpleType>
+      <s:simpleType name="UserSolutionActivationStatus">
+        <s:restriction base="s:string">
+          <s:enumeration value="ActivationAllowed" />
+          <s:enumeration value="ActivationDenied" />
+          <s:enumeration value="UserCodeServiceNotAvailable" />
+          <s:enumeration value="ServiceQuotaExceeded" />
+          <s:enumeration value="InsufficientUserPermissions" />
+        </s:restriction>
+      </s:simpleType>
+      <s:simpleType name="Category">
+        <s:restriction base="s:string">
+          <s:enumeration value="BrowserOptimization" />
+          <s:enumeration value="BrowserCompatibility" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="DesignCheckFormTemplate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="lcid" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="base64FormTemplate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="applicationId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DesignCheckFormTemplateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DesignCheckFormTemplateResult" type="tns:DesignCheckerInformation" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetFormsForListItem">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="lcid" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="base64FormTemplate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="applicationId" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="listGuid" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="contentTypeId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetFormsForListItemResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetFormsForListItemResult" type="tns:DesignCheckerInformation" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetListFormLocation">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="lcid" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="listGuid" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="contentTypeId" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="checkDesignPermissions" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="checkCustomFormEnabled" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetListFormLocationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetListFormLocationResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetSchemaChangesForList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="lcid" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="listGuid" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="contentTypeId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="newFields">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="updateFields">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="deleteFields">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetSchemaChangesForListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetSchemaChangesForListResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUserCodeDeploymentDependencies">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="siteCollectionLocation" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUserCodeDeploymentDependenciesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetUserCodeDeploymentDependenciesResult" type="tns:UserSolutionActivationStatus" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="DesignCheckerInformation">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ApplicationId" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Lcid" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Categories" type="tns:Categories" />
+          <s:element minOccurs="0" maxOccurs="1" name="Messages" type="tns:Messages" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Categories">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Category" nillable="true" type="tns:CategoryType" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CategoryType">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Id" type="tns:Category" />
+          <s:element minOccurs="0" maxOccurs="1" name="Label" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="HideWarningsByDefault" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="BrowserEnableUserFormTemplateSoapIn">
+    <wsdl:part name="parameters" element="tns:BrowserEnableUserFormTemplate" />
+  </wsdl:message>
+  <wsdl:message name="BrowserEnableUserFormTemplateSoapOut">
+    <wsdl:part name="parameters" element="tns:BrowserEnableUserFormTemplateResponse" />
+  </wsdl:message>
+  <wsdl:message name="DesignCheckFormTemplateSoapIn">
+    <wsdl:part name="parameters" element="tns:DesignCheckFormTemplate" />
+  </wsdl:message>
+  <wsdl:message name="DesignCheckFormTemplateSoapOut">
+    <wsdl:part name="parameters" element="tns:DesignCheckFormTemplateResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetFormsForListItemSoapIn">
+    <wsdl:part name="parameters" element="tns:SetFormsForListItem" />
+  </wsdl:message>
+  <wsdl:message name="SetFormsForListItemSoapOut">
+    <wsdl:part name="parameters" element="tns:SetFormsForListItemResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUserCodeDeploymentDependenciesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUserCodeDeploymentDependencies" />
+  </wsdl:message>
+  <wsdl:message name="GetUserCodeDeploymentDependenciesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUserCodeDeploymentDependenciesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetListFormLocationSoapIn">
+    <wsdl:part name="parameters" element="tns:GetListFormLocation" />
+  </wsdl:message>
+  <wsdl:message name="GetListFormLocationSoapOut">
+    <wsdl:part name="parameters" element="tns:GetListFormLocationResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetSchemaChangesForListSoapIn">
+    <wsdl:part name="parameters" element="tns:SetSchemaChangesForList" />
+  </wsdl:message>
+  <wsdl:message name="SetSchemaChangesForListSoapOut">
+    <wsdl:part name="parameters" element="tns:SetSchemaChangesForListResponse" />
+  </wsdl:message>
+  <wsdl:portType name="FormsServicesWebServiceSoap">
+    <wsdl:operation name="BrowserEnableUserFormTemplate">
+      <wsdl:input message="tns:BrowserEnableUserFormTemplateSoapIn" />
+      <wsdl:output message="tns:BrowserEnableUserFormTemplateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DesignCheckFormTemplate">
+      <wsdl:input message="tns:DesignCheckFormTemplateSoapIn" />
+      <wsdl:output message="tns:DesignCheckFormTemplateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetFormsForListItem">
+      <wsdl:input message="tns:SetFormsForListItemSoapIn" />
+      <wsdl:output message="tns:SetFormsForListItemSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetListFormLocation">
+      <wsdl:input message="tns:GetListFormLocationSoapIn" />
+      <wsdl:output message="tns:GetListFormLocationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetSchemaChangesForList">
+      <wsdl:input message="tns:SetSchemaChangesForListSoapIn" />
+      <wsdl:output message="tns:SetSchemaChangesForListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserCodeDeploymentDependencies">
+      <wsdl:input message="tns:GetUserCodeDeploymentDependenciesSoapIn" />
+      <wsdl:output message="tns:GetUserCodeDeploymentDependenciesSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="FormsServicesWebServiceSoap" type="tns:FormsServicesWebServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="BrowserEnableUserFormTemplate">
+      <soap:operation soapAction="http://schemas.microsoft.com/office/infopath/2007/formsServices/BrowserEnableUserFormTemplate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DesignCheckFormTemplate">
+      <soap:operation soapAction="http://schemas.microsoft.com/office/infopath/2007/formsServices/DesignCheckFormTemplate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetFormsForListItem">
+      <soap:operation soapAction="http://schemas.microsoft.com/office/infopath/2007/formsServices/SetFormsForListItem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListFormLocation">
+      <soap:operation soapAction="http://schemas.microsoft.com/office/infopath/2007/formsServices/GetListFormLocation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetSchemaChangesForList">
+      <soap:operation soapAction="http://schemas.microsoft.com/office/infopath/2007/formsServices/SetSchemaChangesForList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserCodeDeploymentDependencies">
+      <soap:operation soapAction="http://schemas.microsoft.com/office/infopath/2007/formsServices/GetUserCodeDeploymentDependencies" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="FormsServicesWebServiceSoap12" type="tns:FormsServicesWebServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="BrowserEnableUserFormTemplate">
+      <soap12:operation soapAction="http://schemas.microsoft.com/office/infopath/2007/formsServices/BrowserEnableUserFormTemplate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DesignCheckFormTemplate">
+      <soap12:operation soapAction="http://schemas.microsoft.com/office/infopath/2007/formsServices/DesignCheckFormTemplate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetFormsForListItem">
+      <soap12:operation soapAction="http://schemas.microsoft.com/office/infopath/2007/formsServices/SetFormsForListItem" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListFormLocation">
+      <soap12:operation soapAction="http://schemas.microsoft.com/office/infopath/2007/formsServices/GetListFormLocation" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetSchemaChangesForList">
+      <soap12:operation soapAction="http://schemas.microsoft.com/office/infopath/2007/formsServices/SetSchemaChangesForList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserCodeDeploymentDependencies">
+      <soap12:operation soapAction="http://schemas.microsoft.com/office/infopath/2007/formsServices/GetUserCodeDeploymentDependencies" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="FormsServicesWebService">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Forms Service</wsdl:documentation>
+    <wsdl:port name="FormsServicesWebServiceSoap" binding="tns:FormsServicesWebServiceSoap">
+      <soap:address location="http://localhost/_vti_bin/FormsServices.asmx" />
+    </wsdl:port>
+    <wsdl:port name="FormsServicesWebServiceSoap12" binding="tns:FormsServicesWebServiceSoap12">
+      <soap12:address location="http://localhost/_vti_bin/FormsServices.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

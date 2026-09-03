@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<config>
+  <files>
+    <!--extension为要检查的文件扩展名, 使用通配符, type为xml的文件转换之后会对其进行Xml Load校验并修改xml头中的encoding值;ischeck为是否检查的开关, true或者false-->
+    <file extension="*.cs" type="text" ischeck="true"/>
+    <file extension="*.xml" type="xml" ischeck="true"/>
+    <file extension="*.config" type="xml" ischeck="true"/>
+    <file extension="*.cpp" type="text" ischeck="false"/>
+  </files>
+</config>

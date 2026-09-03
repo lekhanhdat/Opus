@@ -1,0 +1,64 @@
+﻿-- /********************************************************************
+-- *
+-- *  PROPRIETARY and CONFIDENTIAL
+-- *
+-- *  This file is licensed from, and is a trade secret of:
+-- *
+-- *                   AvePoint, Inc.
+-- *                   525 Washington Blvd, Suite 1400
+-- *                   Jersey City, NJ 07310
+-- *                   United States of America
+-- *                   Telephone: +1-201-793-1111
+-- *                   WWW: www.avepoint.com
+-- *
+-- *  Refer to your License Agreement for restrictions on use,
+-- *  duplication, or disclosure.
+-- *
+-- *  RESTRICTED RIGHTS LEGEND
+-- *
+-- *  Use, duplication, or disclosure by the Government is
+-- *  subject to restrictions as set forth in subdivision
+-- *  (c)(1)(ii) of the Rights in Technical Data and Computer
+-- *  Software clause at DFARS 252.227-7013 (Oct. 1988) and
+-- *  FAR 52.227-19 (C) (June 1987).
+-- *
+-- *  Copyright © 2017-2026 AvePoint® Inc. All Rights Reserved. 
+-- *
+-- *  Unpublished - All rights reserved under the copyright laws of the United States.
+-- */
+CREATE TABLE tb_head_index(COL_ID CHAR(36) NOT NULL,
+                   COL_FLAG BIGINT default 0,
+                   COL_CRC BIGINT, 
+                   COL_JOBID CHAR(36), 
+                   COL_SOLUTION_NAME VARCHAR(255), 
+                   COL_DISPLAY_NAME VARCHAR(255), 
+                   COL_VERSION CHAR(10), 
+                   COL_DATA_VERSION INT, 
+                   COL_PATH VARCHAR(255), 
+                   COL_LCID INT, 
+                   COL_CONTAINSWEBAPPLICATIONRESOURCE CHAR(5),
+                   COL_CONTAINSGLOBALASSEMBLY CHAR(5), 
+                   COL_CONTAINSCODEACCESSSECURITYPOLICY CHAR(5), 
+                   COL_DEPLOYMENTSERVERTYPE VARCHAR(255), 
+                   COL_CREATEDTIME BIGINT, 
+                   COL_LOGICDEVICEID VARCHAR(255), 
+                   COL_FILE_OFFSET BIGINT, 
+                   COL_FILE_LENGTH BIGINT, 
+                   COL_EXTENSION_1 INT, 
+                   COL_EXTENSION_2 INT, 
+                   COL_EXTENSION_3 INT, 
+                   COL_EXTENSION_4 BIGINT, 
+                   COL_EXTENSION_5 BIGINT, 
+                   COL_EXTENSION_6 VARCHAR(32672), 
+                   COL_EXTENSION_7 VARCHAR(32672), 
+                   COL_EXTENSION_8 VARCHAR(32672), 
+                   COL_EXTENSION_9 TEXT, 
+                   COL_EXTENSION_10 TEXT,
+                   COL_DESCRIPTION VARCHAR(300) default '', 
+                   COL_SOLUTION_CONTENT BLOB);
+
+CREATE TABLE tb_job_info(COL_GUID VARCHAR(36) NOT NULL PRIMARY KEY, 
+                  COL_KEY VARCHAR(32672), 
+                  COL_VALUE VARCHAR(32672));
+
+INSERT INTO tb_job_info (COL_GUID, COL_KEY, COL_VALUE) VALUES( 'AAAAAAAA-AAAA-AAAA-AAAA-AAAAAAAAAAAA', 'version','6.0.0.0');

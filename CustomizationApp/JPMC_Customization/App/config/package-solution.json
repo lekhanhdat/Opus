@@ -1,0 +1,60 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "opus-customization-client-side-solution",
+    "id": "c37dbed4-2e50-4c0f-93b4-8c6cf114155a",
+    "version": "1.0.0.10",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "webApiPermissionRequests": [
+      {
+        "resource": "Microsoft Graph",
+        "scope": "User.Read"
+      },
+      {
+        "resource": "Microsoft Graph",
+        "scope": "TermStore.Read.All"
+      },
+      {
+        "resource": "c4763714-72c1-4746-a68e-a17bcf7ad292",
+        "scope": "opus_user_impersonation"
+      }
+    ],
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.18.2"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "opus-customization"
+      },
+      "longDescription": {
+        "default": "opus-customization"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "Opus customization",
+        "description": "Deploys Opus customization",
+        "id": "b68c53ab-55d1-4974-b69e-0f7e16ae511d",
+        "version": "1.0.0.0",
+        "assets": {
+          "elementManifests": [
+            "elements.xml",
+            "ClientSideInstance.xml"
+          ]
+        }
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/opus-customization.sppkg"
+  }
+}

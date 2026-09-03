@@ -1,0 +1,39 @@
+Dell Products LP grants to you ("Licensee") a non-transferable, nonexclusive
+license to use, perform, reproduce and display this program ("LT") in source
+code form and to compile the code with Licensee's own code (collectively the
+"Resulting Code") for the purposes of enhancing the interoperability of
+Licensee's software with Dell's DX Object Storage Platform and to compile the
+Resulting Code into object code form and to use, perform, reproduce, and
+display the Resulting Code internally. Licensee may not reverse engineer,
+disassemble, decompile, translate, modify or otherwise attempt to discern the
+source code of the LT, except and only to the extent that such activity is
+expressly permitted by applicable law or any licenses provided with LT
+notwithstanding this limitation.  No trademarks, patents, copyrights, trade
+secret, mask work, or other rights are granted by Dell to Licensee by this
+agreement except as noted herein.
+
+The LT is the copyrighted work of Dell or a third-party vendor supplying the
+file and is protected by United States and other applicable copyright laws
+and international treaties.  Licensee shall not remove, deface, obscure or
+modify, but shall retain, reproduce, and apply any copyright notices and/or
+any other of Dell's proprietary rights notices contained on or in the LT.
+
+Dell is not obligated to provide any support, maintenance or updates to
+Licensee for the LT.  LT IS PROVIDED "AS IS," WITH NO WARRANTIES, EXPRESS OR
+IMPLIED. DELL EXPRESSLY DISCLAIMS ANY WARRANTIES OF MERCHANTABILITY, FITNESS
+FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT.  LICENSEE WILL USE THE LT AT
+ITS OWN RISK.  DELL SHALL NOT BE LIABLE TO LICENSEE FOR ANY DIRECT OR
+INDIRECT DAMAGES INCURRED IN USING THE LT.  Licensee agrees that it will use
+the LT in accordance with applicable law, including but not limited to any
+restrictions on export by U.S. law or the laws of the jurisdiction in which
+the LT was obtained.
+
+IN NO EVENT WILL DELL BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL OR
+CONSEQUENTIAL DAMAGES, NOR FOR ANY LOST REVENUE, LOST PROFITS, LOSS OF USE,
+LOSS OF DATA, OR LOSS OF BUSINESS (WHETHER DIRECT OR INDIRECT), WHETHER BASED
+ON CONTRACT OR OTHER THEORY, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH
+DAMAGES.
+
+Dell shall have the right to terminate any licenses granted herein at any
+time.  The terms set forth in this agreement shall govern unless superseded
+by a license agreement signed by Licensee and Dell.

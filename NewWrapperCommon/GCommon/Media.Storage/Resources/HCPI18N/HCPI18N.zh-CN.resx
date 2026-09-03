@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="MediaStorage_HCP_Cannot_Contain_Periods_Or_Slash" xml:space="preserve">
+    <value>Dieser Wert darf keine Punkte (.) oder Schrägstriche (/ \) enthalten. Bitte geben Sie einen Anderen ein.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Connector_HCP_Extended_Parameters" xml:space="preserve">
+    <value>Erweiterte Parameter</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Connector_HCP_Secondary_Namespace_Address_Optional" xml:space="preserve">
+    <value>Sekundäre Namespace-Adresse (optional)</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Connector_HCP_HCP_Configure_Description" xml:space="preserve">
+    <value>Geben Sie die detaillierten Informationen für den Speicherort an.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Connector_HCP_Advanced" xml:space="preserve">
+    <value>Erweitert</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Connector_HCP_Password" xml:space="preserve">
+    <value>Kennwort</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Connector_HCP_Root_Folder" xml:space="preserve">
+    <value>Stammordner</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Connector_HCP_Primary_Namespace_Address" xml:space="preserve">
+    <value>Primäre Namespace-Adresse</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Connector_HCP_HDS_Hitachi_Content_Platform" xml:space="preserve">
+    <value>HDS Hitachi Content Platform</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Connector_HCP_Username" xml:space="preserve">
+    <value>Benutzername</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_HCP_Advanced" xml:space="preserve">
+    <value>Erweitert</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_HCP_Cannot_connect_to_the_remote_server" xml:space="preserve">
+    <value>Keine Verbindung zum Remoteserver möglich.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_HCP_HCP_Configure_Description" xml:space="preserve">
+    <value>Geben Sie detaillierte Informationen für den Speicherort an.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_HCP_Password" xml:space="preserve">
+    <value>Kennwort</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_HCP_Secondary_Namespace_Address_Optional" xml:space="preserve">
+    <value>Sekundäre Namespace-Adresse (optional)</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_HCP_Primary_Namespace_Address" xml:space="preserve">
+    <value>Primäre Namespace-Adresse</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_HCP_HDS_Hitachi_Content_Platform" xml:space="preserve">
+    <value>HDS Hitachi Content Platform</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_HCP_Extended_Parameters" xml:space="preserve">
+    <value>Erweiterte Parameter</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_HCP_Root_Folder" xml:space="preserve">
+    <value>Stammordner</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_HCP_Authentication_failed" xml:space="preserve">
+    <value>Die Authentifizierung ist fehlgeschlagen.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_HCP_Username" xml:space="preserve">
+    <value>Benutzername</value>
+    <comment>Approved</comment>
+  </data>
+</root>

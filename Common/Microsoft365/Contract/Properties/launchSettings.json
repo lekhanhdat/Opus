@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Microsoft365.Contract": {
+      "commandName": "Project",
+      "remoteDebugEnabled": false
+    }
+  }
+}

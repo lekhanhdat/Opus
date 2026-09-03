@@ -1,0 +1,13 @@
+{
+  "profiles": {
+    "RAWeb": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "hotReloadEnabled": false,
+      "applicationUrl": "https://127.0.0.1:443",
+      "dotnetRunMessages": true
+    }
+  }
+}

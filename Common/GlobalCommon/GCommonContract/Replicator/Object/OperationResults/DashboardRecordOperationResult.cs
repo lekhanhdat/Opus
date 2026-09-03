@@ -1,0 +1,67 @@
+﻿/********************************************************************
+ *
+ *  PROPRIETARY and CONFIDENTIAL
+ *
+ *  This file is licensed from, and is a trade secret of:
+ *
+ *                   AvePoint, Inc.
+ *                   525 Washington Blvd, Suite 1400
+ *                   Jersey City, NJ 07310
+ *                   United States of America
+ *                   Telephone: +1-201-793-1111
+ *                   WWW: www.avepoint.com
+ *
+ *  Refer to your License Agreement for restrictions on use,
+ *  duplication, or disclosure.
+ *
+ *  RESTRICTED RIGHTS LEGEND
+ *
+ *  Use, duplication, or disclosure by the Government is
+ *  subject to restrictions as set forth in subdivision
+ *  (c)(1)(ii) of the Rights in Technical Data and Computer
+ *  Software clause at DFARS 252.227-7013 (Oct. 1988) and
+ *  FAR 52.227-19 (C) (June 1987).
+ *
+ *  Copyright © 2017-2026 AvePoint® Inc. All Rights Reserved. 
+ *
+ *  Unpublished - All rights reserved under the copyright laws of the United States.
+ */
+using AvePoint.GCommon.Contract.Common;
+using AvePoint.GCommon.Contract.Replicator.Object.ViewModels;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Runtime.Serialization;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace AvePoint.GCommon.Contract.Replicator.Object.OperationResults
+{
+    [DataContract(Namespace = ContractConstants.Namespace)]
+    public class DashboardRecordOperationResult : ReplicatorOperationResult
+    {
+        public DashboardRecordOperationResult()
+            : base(false, null)
+        {
+
+        }
+
+        public DashboardRecordOperationResult(bool hasError, ReplicatorOperationResultError exception)
+            : base(hasError, exception)
+        {
+
+        }
+
+        public static DashboardRecordOperationResult Empty = new DashboardRecordOperationResult();
+
+        [DataMember]
+        public List<ReplicatorDashboardRecord> Records { get; set; }
+
+        [DataMember]
+        public string DownloadFileFullPath { get; set; }
+
+        [DataMember]
+        public int TotleCount { get; set; }
+
+    }
+}

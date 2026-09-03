@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--/********************************************************************
+ *
+ *  PROPRIETARY and CONFIDENTIAL
+ *
+ *  This file is licensed from, and is a trade secret of:
+ *
+ *                   AvePoint, Inc.
+ *                   525 Washington Blvd, Suite 1400
+ *                   Jersey City, NJ 07310
+ *                   United States of America
+ *                   Telephone: +1-201-793-1111
+ *                   WWW: www.avepoint.com
+ *
+ *  Refer to your License Agreement for restrictions on use,
+ *  duplication, or disclosure.
+ *
+ *  RESTRICTED RIGHTS LEGEND
+ *
+ *  Use, duplication, or disclosure by the Government is
+ *  subject to restrictions as set forth in subdivision
+ *  (c)(1)(ii) of the Rights in Technical Data and Computer
+ *  Software clause at DFARS 252.227-7013 (Oct. 1988) and
+ *  FAR 52.227-19 (C) (June 1987).
+ *
+ *  Copyright © 2017-2026 AvePoint® Inc. All Rights Reserved. 
+ *
+ *  Unpublished - All rights reserved under the copyright laws of the United States.
+ */-->
+<ServiceConfiguration serviceName="RAWeb.Azure" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceConfiguration" osFamily="5" osVersion="*" schemaVersion="2015-04.2.6">
+  <Role name="RAWeb">
+    <Instances count="1" />
+    <ConfigurationSettings>
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="UseDevelopmentStorage=true" />
+      <Setting name="JobQueueConnectionString" value="" />
+      <Setting name="LogStorage" value="" />
+      <Setting name="RealTimeQueueName" value="" />
+      <Setting name="JobQueueName" value="JobQueue" />
+      <Setting name="LogContainerName" value="joblogs" />
+      <Setting name="ReportStorage" value="" />
+      <Setting name="ReportFolder" value="C:\RECO_Reports" />
+      <Setting name="LogKeepDays" value="7" />
+      <Setting name="TenantDBTier" value="S0" />
+      <Setting name="JobLimitCount" value="4" />
+      <Setting name="RevIMHoldPhysicalLibraryName" value="Records Repository" />
+      <Setting name="RevIMHomeLocationName" value="Home Location" />
+      <Setting name="AppUrl" value="https://www.RevIM.com" />
+      <Setting name="ForwardToReportCenter" value="" />
+      <Setting name="RedirectAosLoginUrl" value="" />
+      <Setting name="ReportContainerName" value="jobreports" />
+      <Setting name="ConfigDatabaseConnection" value="" />
+      <Setting name="PortalApiUrl" value="" />
+      <Setting name="ControlServiceAddress" value="" />
+      <Setting name="CertificateThumbprint" value="958B6B5093959E9B3886BC19D5B10A19C417973D"/>
+      <Setting name="NotificationSetting" value="" />
+      <Setting name="ClientId" value=""/>
+      <Setting name="ClientSecret" value=""/>
+      <Setting name="CosmosDBURI" value=""/>
+      <Setting name="CosmosDBSecret" value=""/>
+      <Setting name="OCCertThumbprint" value=""/>
+      <Setting name="AzureTableConnection" value=""/>
+    </ConfigurationSettings>
+    <Certificates>
+      <Certificate name="Web" thumbprint="958B6B5093959E9B3886BC19D5B10A19C417973D" thumbprintAlgorithm="sha1" />
+      <Certificate name="CloudRecords Application" thumbprint="958B6B5093959E9B3886BC19D5B10A19C417973D" thumbprintAlgorithm="sha1" />
+      <Certificate name="DocAveOnline Application" thumbprint="DC895545B9271DDA56ADF6E7AC82E6CFDB457850" thumbprintAlgorithm="sha1" />
+      <Certificate name="Listener Wcf" thumbprint="D9CC5C50CEC068500233D370CDA18E4536750EC6" thumbprintAlgorithm="sha1" />
+      <Certificate name="Office Connector" thumbprint="833E7D9269BD23A47916D5A1EEE07FF8CBFCB2C2" thumbprintAlgorithm="sha1" />
+    </Certificates>
+    
+  </Role>
+  <Role name="RATimerWorkerRole">
+    <Instances count="1" />
+    <ConfigurationSettings>
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="UseDevelopmentStorage=true" />
+      <Setting name="JobQueueName" value="JobQueue" />
+      <Setting name="COPQueueName" value="CopQueue"/>
+      <Setting name="COPApiUrl" value=""/>
+      <Setting name="ReportFolder" value="C:\RECO_Reports" />
+      <Setting name="JobQueueConnectionString" value="" />
+      <Setting name="ConfigDatabaseConnection" value="" />
+      <Setting name="PortalApiUrl" value="" />
+      <Setting name="ControlServiceAddress" value="" />
+      <Setting name="JobLimitCount" value="4" />
+      <Setting name="LogStorage" value="" />
+      <Setting name="LogContainerName" value="joblogs" />
+      <Setting name="CertificateThumbprint" value="958B6B5093959E9B3886BC19D5B10A19C417973D"/>
+      <Setting name="PortalTopicConnectionstring" value=""/>
+      <Setting name="PortalSubscriptionName" value="aostestqueue" />
+      <Setting name="PortalTopicName" value="aostesttopic" />
+      <Setting name="NodeCountInSubJob" value=""/>
+      <Setting name="SubJobCountInMainJob" value=""/>
+      <Setting name="SubJobCountForCustomer" value="" />
+      <Setting name="ReportContainerName" value="jobreports" />
+      <Setting name="ReportStorage" value="" />
+      <Setting name="CosmosDBURI" value=""/>
+      <Setting name="CosmosDBSecret" value=""/>
+    </ConfigurationSettings>
+    <Certificates>
+      <Certificate name="CloudRecords Application" thumbprint="958B6B5093959E9B3886BC19D5B10A19C417973D" thumbprintAlgorithm="sha1" />
+      <Certificate name="DocAveOnline Application" thumbprint="DC895545B9271DDA56ADF6E7AC82E6CFDB457850" thumbprintAlgorithm="sha1" />
+    </Certificates>
+  </Role>
+</ServiceConfiguration>

@@ -1,0 +1,215 @@
+﻿/********************************************************************
+ *
+ *  PROPRIETARY and CONFIDENTIAL
+ *
+ *  This file is licensed from, and is a trade secret of:
+ *
+ *                   AvePoint, Inc.
+ *                   525 Washington Blvd, Suite 1400
+ *                   Jersey City, NJ 07310
+ *                   United States of America
+ *                   Telephone: +1-201-793-1111
+ *                   WWW: www.avepoint.com
+ *
+ *  Refer to your License Agreement for restrictions on use,
+ *  duplication, or disclosure.
+ *
+ *  RESTRICTED RIGHTS LEGEND
+ *
+ *  Use, duplication, or disclosure by the Government is
+ *  subject to restrictions as set forth in subdivision
+ *  (c)(1)(ii) of the Rights in Technical Data and Computer
+ *  Software clause at DFARS 252.227-7013 (Oct. 1988) and
+ *  FAR 52.227-19 (C) (June 1987).
+ *
+ *  Copyright © 2017-2026 AvePoint® Inc. All Rights Reserved. 
+ *
+ *  Unpublished - All rights reserved under the copyright laws of the United States.
+ */
+using System;
+using System.Diagnostics.CodeAnalysis;
+using System.IO;
+using System.Net;
+using AvePoint.GCommon.Utility.I18N;
+using AvePoint.Media.Storage.Cloud.Common;
+using AvePoint.Media.Storage.Util;
+
+namespace AvePoint.Media.Storage.Cloud.Amazon
+{
+    class AmazonUploadStream : HttpUploadStream
+    {
+        private StorageLogger logger = StorageLogger.GetInstance(typeof(AmazonUploadStream));
+        public AbstractHttpClient HttpClient { set; get; }
+        public AmazonOpenParameter AmazonOpenParameter { set; get; }
+        private long length;
+        public override long Length { get { return length; } }
+        private MySHA256 sha256 = new MySHA256();
+        private MemoryStream mStream = null;
+        public AmazonUploadStream(HttpWebRequest request, AmazonOpenParameter openParameter)
+        {
+            AmazonOpenParameter = openParameter;
+            if (request == null)
+            {
+                return;
+            }
+            this.HttpWebRequest = request;
+            mStream = new MemoryStream(5 * 1024 * 1024);
+        }
+
+        public override void Write(byte[] buffer, int offset, int count)
+        {
+            try
+            {
+                long startTicks = DateTime.UtcNow.Ticks;
+                mStream.Write(buffer, offset, count);
+                length += count - offset;
+                System.IncreaseTotalWriteTicks(DateTime.UtcNow.Ticks - startTicks);
+                System.IncreaseTotalWriteBytes(count);
+                if (AmazonOpenParameter.SignatureVersion == 4)
+                {
+                    sha256.AddByte(buffer, offset, count);
+                }
+            }
+            catch (Exception e)
+            {
+                SetEventTaskInfo(System);
+                //EventIds.Storage.WriteFailedEventMessage writeFailedEventMessage = new EventIds.Storage.WriteFailedEventMessage(this.HttpWebRequest.RequestUri.AbsoluteUri, EventTaskMessage, e);
+                //this.Logger.Log(EventSources.DocAveStorageAPIService, EventTaskCategory, writeFailedEventMessage);
+                logger.Error("Write file {0} failed, error message: {1},{2}", this.HttpWebRequest.RequestUri.AbsoluteUri.ToString(), e.Message, e);
+                throw new RetryableException(e.Message, e);
+            }
+        }
+
+        public override StorageResult Commit(bool closeParent)
+        {
+            return Commit();
+        }
+
+        [SuppressMessage("FxCopCustomRules", "C100007:SpellCheckStringValues", MessageId = "X-Amz-Content-SHA")]
+        public override StorageResult Commit()
+        {
+            if (!IsCommited)
+            {
+                try
+                {
+                    IsCommited = true;
+
+                    HttpWebRequest.AllowWriteStreamBuffering = false;
+                    HttpWebRequest.AllowAutoRedirect = false;
+                    HttpWebRequest.Timeout = 0x7ffffffe; //never timeout
+
+                    StorageResult rs = new StorageResult();
+                    rs.PdId = System.SystemID;
+                    logger.Info($"AmazonOpenParameter.SignatureVersion {AmazonOpenParameter.SignatureVersion}");
+                    if (AmazonOpenParameter.SignatureVersion == 4)
+                    {
+                        logger.Info($"sha256 is null? {sha256 == null}");
+                        byte[] hashByte = sha256.GetHash();
+                        string hashStr = CryptoUtil.ToHex(hashByte, true);
+                        HttpWebRequest.Headers.Add("X-Amz-Content-SHA256", hashStr);
+                    }
+                    AmazonUtils.AddAuthorization(HttpWebRequest, AmazonOpenParameter.UserName, AmazonOpenParameter.Password, AmazonOpenParameter.SignatureVersion, AmazonOpenParameter.Region);
+
+                    using (Stream reqStream = HttpWebRequest.GetRequestStream())
+                    {
+                        byte[] tempBuffer = new byte[65536];
+                        mStream.Position = 0;
+                        while (true)
+                        {
+                            int len = mStream.Read(tempBuffer, 0, tempBuffer.Length);
+                            if (len <= 0)
+                                break;
+                            reqStream.Write(tempBuffer, 0, len);
+
+                        }
+                        mStream.Close();
+                        mStream = null;
+                    }
+
+                    using (HttpWebResponse resp = HttpWebRequest.GetResponse() as HttpWebResponse)
+                    {
+                        if (resp == null || (resp.StatusCode != HttpStatusCode.Created && resp.StatusCode != HttpStatusCode.OK))
+                        {
+                            throw new Exception("Create object failed. object : " + HttpWebRequest.RequestUri);
+                        }
+                        if (Info != null)
+                        {
+                            System.AddMetadata(Info);
+                        }
+                        if (HttpClient != null)
+                        {
+                            HttpClient.CalcDataFlow(HttpWebRequest, resp);
+                        }
+                    }
+                    return rs;
+                }
+                catch (WebException we)
+                {
+                    if (we.Status == WebExceptionStatus.ConnectionClosed || we.Status == WebExceptionStatus.ConnectFailure || we.Status == WebExceptionStatus.NameResolutionFailure || we.Status == WebExceptionStatus.Timeout)
+                    {
+                        logger.Info("this exception is a connection fail exception:" + we.Message);
+                        throw new RetryableException(we.Message, we);
+                    }
+                    else if (we.Status == WebExceptionStatus.ProtocolError)
+                    {
+                        using (HttpWebResponse response = we.Response as HttpWebResponse)
+                        {
+                            HttpStatusCode code = response.StatusCode;
+                            if (code == HttpStatusCode.InternalServerError || code == HttpStatusCode.RequestTimeout || code == HttpStatusCode.ServiceUnavailable)
+                            {
+                                throw new RetryableException(we.Message, we);
+                            }
+                        }
+                    }
+                    SetEventTaskInfo(System);
+                    EventIds.Storage.WriteFailedEventMessage writeFailedEventMessage = new EventIds.Storage.WriteFailedEventMessage(this.HttpWebRequest.RequestUri.AbsoluteUri, EventTaskMessage, we);
+                    logger.Log(EventSources.DocAveStorageAPIService, EventTaskCategory, writeFailedEventMessage);
+                    throw;
+                }
+            }
+            return null;
+        }
+
+        public override void ClosedUnmoral()
+        {
+
+            if (HttpWebRequest != null)
+            {
+                if (InnerStream != null)
+                {
+                    InnerStream.Close();
+                    InnerStream = null;
+                }
+                HttpWebRequest.Abort();
+            }
+        }
+
+        public override XURIResult GetURI()
+        {
+            if (this.URI == null)
+            {
+                this.URI = new XURIResult();
+            }
+            this.URI.SdType = 4;
+            this.URI.SysId = System.SystemID;
+            this.URI.SInfo = Info.Clone();
+            return this.URI;
+        }
+
+        public override void Close()
+        {
+            if (!IsCommited)
+            {
+                Commit();
+            }
+        }
+
+        public override void Abort()
+        {
+            if (HttpWebRequest != null)
+            {
+                HttpWebRequest.Abort();
+            }
+        }
+    }
+}

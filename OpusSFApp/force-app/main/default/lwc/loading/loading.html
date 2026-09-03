@@ -1,0 +1,9 @@
+<!--Covered by AvePoint copyright and license agreement-->
+<template>
+    <div class="overlay" if:true={isLoading}>
+        <div class="spinner-container">
+            <lightning-spinner alternative-text="Loading..." size="medium"></lightning-spinner>
+            <p class="loading-text">{translation.loading}</p>
+        </div>
+    </div>
+</template>

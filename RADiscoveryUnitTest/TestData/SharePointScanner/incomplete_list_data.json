@@ -1,0 +1,67 @@
+{
+  "ListNode": {
+    "FullPath": "https://test.sharepoint.com/sites/test/Lists/TestList",
+    "Title": "TestList",
+    "Name": "TestList",
+    "ID": "12345678-1234-1234-1234-123456789012",
+    "SPNodeLevel": "List",
+    "CacheNodeType": 1000,
+    "SiteUrl": "https://test.sharepoint.com/sites/test",
+    "WebId": "22345678-1234-1234-1234-123456789012",
+    "ListId": "32345678-1234-1234-1234-123456789012"
+  },
+  "FolderNode": {
+    "FullPath": "https://test.sharepoint.com/sites/test/Lists/TestList/IncompleteFolder",
+    "Title": "IncompleteFolder",
+    "Name": "IncompleteFolder",
+    "ID": "42345678-1234-1234-1234-123456789012",
+    "SPNodeLevel": "Folder",
+    "CacheNodeType": 1002,
+    "SiteUrl": "https://test.sharepoint.com/sites/test",
+    "WebId": "22345678-1234-1234-1234-123456789012",
+    "ListId": "32345678-1234-1234-1234-123456789012"
+  },
+  "Rules": [
+    {
+      "Id": "1",
+      "Name": "Match All Documents",
+      "Type": "ADMIN",
+      "PolicyLevel": 64,
+      "Filters": [
+        {
+          "SequenceNo": 1,
+          "Level": 64,
+          "RuleType": 8,
+          "Condition": 8,
+          "Value1": "*"
+        }
+      ]
+    },
+    {
+      "Id": "2",
+      "Name": "Match All Folders",
+      "Type": "ADMIN",
+      "PolicyLevel": 16,
+      "Filters": [
+        {
+          "SequenceNo": 1,
+          "Level": 16,
+          "RuleType": 8,
+          "Condition": 8,
+          "Value1": "*"
+        }
+      ]
+    }
+  ],
+  "Items": [],
+  "Folders": [],
+  "Expected": {
+    "ShouldThrowException": false,
+    "ExceptionType": null,
+    "ExceptionMessage": null,
+    "ExpectedProcessedItemsCount": 0,
+    "ExpectedProcessedFoldersCount": 0,
+    "ExpectedReportedPaths": [],
+    "ShouldReportFailure": false
+  }
+}

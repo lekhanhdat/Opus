@@ -1,0 +1,1032 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\Packages\EntityFramework.6.5.1\build\EntityFramework.props" Condition="Exists('..\Packages\EntityFramework.6.5.1\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C00F69B1-9949-495F-93C8-7A92CACA40CB}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>RAFileSystem</RootNamespace>
+    <AssemblyName>RecordsAgentWorker</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>false</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+    <LangVersion>8.0</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\bin\Agent\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\bin\Agent\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>DocAveStandard.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AlphaFS, Version=2.2.0.0, Culture=neutral, PublicKeyToken=4d31a58f7d7ad5c9, processorArchitecture=MSIL">
+      <HintPath>..\Packages\AlphaFS.2.2.6\lib\net452\AlphaFS.dll</HintPath>
+    </Reference>
+    <Reference Include="Azure.Core, Version=1.50.0.0, Culture=neutral, PublicKeyToken=92742159e12e44c8, processorArchitecture=MSIL">
+      <HintPath>..\Packages\Azure.Core.1.50.0\lib\net472\Azure.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Azure.Core.Amqp, Version=1.3.1.0, Culture=neutral, PublicKeyToken=92742159e12e44c8, processorArchitecture=MSIL">
+      <HintPath>..\Packages\Azure.Core.Amqp.1.3.1\lib\netstandard2.0\Azure.Core.Amqp.dll</HintPath>
+    </Reference>
+    <Reference Include="Azure.Data.Tables, Version=12.11.0.0, Culture=neutral, PublicKeyToken=92742159e12e44c8, processorArchitecture=MSIL">
+      <HintPath>..\Packages\Azure.Data.Tables.12.11.0\lib\netstandard2.0\Azure.Data.Tables.dll</HintPath>
+    </Reference>
+    <Reference Include="Azure.Identity, Version=1.17.1.0, Culture=neutral, PublicKeyToken=92742159e12e44c8, processorArchitecture=MSIL">
+      <HintPath>..\Packages\Azure.Identity.1.17.1\lib\netstandard2.0\Azure.Identity.dll</HintPath>
+    </Reference>
+    <Reference Include="Azure.Messaging.EventHubs, Version=5.12.2.0, Culture=neutral, PublicKeyToken=92742159e12e44c8, processorArchitecture=MSIL">
+      <HintPath>..\Packages\Azure.Messaging.EventHubs.5.12.2\lib\netstandard2.0\Azure.Messaging.EventHubs.dll</HintPath>
+    </Reference>
+    <Reference Include="Azure.Messaging.ServiceBus, Version=7.20.1.0, Culture=neutral, PublicKeyToken=92742159e12e44c8, processorArchitecture=MSIL">
+      <HintPath>..\Packages\Azure.Messaging.ServiceBus.7.20.1\lib\netstandard2.0\Azure.Messaging.ServiceBus.dll</HintPath>
+    </Reference>
+    <Reference Include="Azure.ResourceManager, Version=1.13.2.0, Culture=neutral, PublicKeyToken=92742159e12e44c8, processorArchitecture=MSIL">
+      <HintPath>..\Packages\Azure.ResourceManager.1.13.2\lib\netstandard2.0\Azure.ResourceManager.dll</HintPath>
+    </Reference>
+    <Reference Include="Azure.Security.KeyVault.Keys, Version=4.8.0.0, Culture=neutral, PublicKeyToken=92742159e12e44c8, processorArchitecture=MSIL">
+      <HintPath>..\Packages\Azure.Security.KeyVault.Keys.4.8.0\lib\netstandard2.0\Azure.Security.KeyVault.Keys.dll</HintPath>
+    </Reference>
+    <Reference Include="Azure.Security.KeyVault.Secrets, Version=4.8.0.0, Culture=neutral, PublicKeyToken=92742159e12e44c8, processorArchitecture=MSIL">
+      <HintPath>..\Packages\Azure.Security.KeyVault.Secrets.4.8.0\lib\netstandard2.0\Azure.Security.KeyVault.Secrets.dll</HintPath>
+    </Reference>
+    <Reference Include="Azure.Storage.Blobs, Version=12.25.0.0, Culture=neutral, PublicKeyToken=92742159e12e44c8, processorArchitecture=MSIL">
+      <HintPath>..\Packages\Azure.Storage.Blobs.12.25.0\lib\netstandard2.0\Azure.Storage.Blobs.dll</HintPath>
+    </Reference>
+    <Reference Include="Azure.Storage.Blobs.Batch, Version=12.22.0.0, Culture=neutral, PublicKeyToken=92742159e12e44c8, processorArchitecture=MSIL">
+      <HintPath>..\Packages\Azure.Storage.Blobs.Batch.12.22.0\lib\netstandard2.0\Azure.Storage.Blobs.Batch.dll</HintPath>
+    </Reference>
+    <Reference Include="Azure.Storage.Common, Version=12.26.0.0, Culture=neutral, PublicKeyToken=92742159e12e44c8, processorArchitecture=MSIL">
+      <HintPath>..\Packages\Azure.Storage.Common.12.26.0\lib\netstandard2.0\Azure.Storage.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Azure.Storage.Files.Shares, Version=12.25.0.0, Culture=neutral, PublicKeyToken=92742159e12e44c8, processorArchitecture=MSIL">
+      <HintPath>..\Packages\Azure.Storage.Files.Shares.12.25.0\lib\netstandard2.0\Azure.Storage.Files.Shares.dll</HintPath>
+    </Reference>
+    <Reference Include="DnsClient, Version=1.8.0.0, Culture=neutral, PublicKeyToken=4574bb5573c51424, processorArchitecture=MSIL">
+      <HintPath>..\Packages\DnsClient.1.8.0\lib\net472\DnsClient.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\Packages\EntityFramework.6.5.1\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\Packages\EntityFramework.6.5.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Hardware.Info, Version=101.1.0.1, Culture=neutral, PublicKeyToken=3130d442e696f124, processorArchitecture=MSIL">
+      <HintPath>..\Packages\Hardware.Info.101.1.0.1\lib\netstandard2.0\Hardware.Info.dll</HintPath>
+    </Reference>
+    <Reference Include="LiteDB, Version=5.0.21.0, Culture=neutral, PublicKeyToken=4ee40123013c9f27, processorArchitecture=MSIL">
+      <HintPath>..\Packages\LiteDB.5.0.21\lib\net45\LiteDB.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=3.3.1.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\Packages\log4net.3.3.1\lib\net462\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Azure.Amqp, Version=2.7.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\Packages\Microsoft.Azure.Amqp.2.7.0\lib\net45\Microsoft.Azure.Amqp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=10.0.0.11, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\Packages\Microsoft.Bcl.AsyncInterfaces.10.0.11\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.Cryptography, Version=10.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\Packages\Microsoft.Bcl.Cryptography.10.0.2\lib\net462\Microsoft.Bcl.Cryptography.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.Memory, Version=10.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\Packages\Microsoft.Bcl.Memory.10.0.4\lib\net462\Microsoft.Bcl.Memory.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.TimeProvider, Version=10.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\Packages\Microsoft.Bcl.TimeProvider.10.0.2\lib\net462\Microsoft.Bcl.TimeProvider.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.SqlClient, Version=6.0.0.0, Culture=neutral, PublicKeyToken=23ec7fc2d6eaa4a5, processorArchitecture=MSIL">
+      <HintPath>..\Packages\Microsoft.Data.SqlClient.6.1.4\lib\net462\Microsoft.Data.SqlClient.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Caching.Abstractions, Version=10.0.0.2, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\Packages\Microsoft.Extensions.Caching.Abstractions.10.0.2\lib\net462\Microsoft.Extensions.Caching.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Caching.Memory, Version=10.0.0.2, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\Packages\Microsoft.Extensions.Caching.Memory.10.0.2\lib\net462\Microsoft.Extensions.Caching.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration, Version=10.0.0.2, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\Packages\Microsoft.Extensions.Configuration.10.0.2\lib\net462\Microsoft.Extensions.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.Abstractions, Version=10.0.0.2, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\Packages\Microsoft.Extensions.Configuration.Abstractions.10.0.2\lib\net462\Microsoft.Extensions.Configuration.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.Binder, Version=10.0.0.2, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\Packages\Microsoft.Extensions.Configuration.Binder.10.0.2\lib\net462\Microsoft.Extensions.Configuration.Binder.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.EnvironmentVariables, Version=10.0.0.2, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\Packages\Microsoft.Extensions.Configuration.EnvironmentVariables.10.0.2\lib\net462\Microsoft.Extensions.Configuration.EnvironmentVariables.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.FileExtensions, Version=10.0.0.2, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\Packages\Microsoft.Extensions.Configuration.FileExtensions.10.0.2\lib\net462\Microsoft.Extensions.Configuration.FileExtensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.Json, Version=10.0.0.2, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\Packages\Microsoft.Extensions.Configuration.Json.10.0.2\lib\net462\Microsoft.Extensions.Configuration.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.UserSecrets, Version=10.0.0.2, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\Packages\Microsoft.Extensions.Configuration.UserSecrets.10.0.2\lib\net462\Microsoft.Extensions.Configuration.UserSecrets.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection, Version=10.0.0.2, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\Packages\Microsoft.Extensions.DependencyInjection.10.0.2\lib\net462\Microsoft.Extensions.DependencyInjection.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions, Version=10.0.0.2, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\Packages\Microsoft.Extensions.DependencyInjection.Abstractions.10.0.2\lib\net462\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Diagnostics.Abstractions, Version=10.0.0.2, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\Packages\Microsoft.Extensions.Diagnostics.Abstractions.10.0.2\lib\net462\Microsoft.Extensions.Diagnostics.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.FileProviders.Abstractions, Version=10.0.0.2, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\Packages\Microsoft.Extensions.FileProviders.Abstractions.10.0.2\lib\net462\Microsoft.Extensions.FileProviders.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.FileProviders.Physical, Version=10.0.0.2, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\Packages\Microsoft.Extensions.FileProviders.Physical.10.0.2\lib\net462\Microsoft.Extensions.FileProviders.Physical.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.FileSystemGlobbing, Version=10.0.0.2, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\Packages\Microsoft.Extensions.FileSystemGlobbing.10.0.2\lib\net462\Microsoft.Extensions.FileSystemGlobbing.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Hosting.Abstractions, Version=10.0.0.2, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\Packages\Microsoft.Extensions.Hosting.Abstractions.10.0.2\lib\net462\Microsoft.Extensions.Hosting.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging, Version=10.0.0.2, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\Packages\Microsoft.Extensions.Logging.10.0.2\lib\net462\Microsoft.Extensions.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging.Abstractions, Version=10.0.0.2, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\Packages\Microsoft.Extensions.Logging.Abstractions.10.0.2\lib\net462\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Options, Version=10.0.0.2, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\Packages\Microsoft.Extensions.Options.10.0.2\lib\net462\Microsoft.Extensions.Options.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Primitives, Version=10.0.0.2, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\Packages\Microsoft.Extensions.Primitives.10.0.2\lib\net462\Microsoft.Extensions.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Identity.Abstractions, Version=10.0.0.0, Culture=neutral, PublicKeyToken=0a613f4dd989e8ae, processorArchitecture=MSIL">
+      <HintPath>..\Packages\Microsoft.Identity.Abstractions.10.0.0\lib\net462\Microsoft.Identity.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Identity.Client, Version=4.81.0.0, Culture=neutral, PublicKeyToken=0a613f4dd989e8ae, processorArchitecture=MSIL">
+      <HintPath>..\Packages\Microsoft.Identity.Client.4.81.0\lib\net472\Microsoft.Identity.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Identity.Client.Extensions.Msal, Version=4.81.0.0, Culture=neutral, PublicKeyToken=0a613f4dd989e8ae, processorArchitecture=MSIL">
+      <HintPath>..\Packages\Microsoft.Identity.Client.Extensions.Msal.4.81.0\lib\netstandard2.0\Microsoft.Identity.Client.Extensions.Msal.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Abstractions, Version=8.15.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\Packages\Microsoft.IdentityModel.Abstractions.8.15.0\lib\net472\Microsoft.IdentityModel.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.JsonWebTokens, Version=8.15.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\Packages\Microsoft.IdentityModel.JsonWebTokens.8.15.0\lib\net472\Microsoft.IdentityModel.JsonWebTokens.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Logging, Version=8.15.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\Packages\Microsoft.IdentityModel.Logging.8.15.0\lib\net472\Microsoft.IdentityModel.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Protocols, Version=8.15.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\Packages\Microsoft.IdentityModel.Protocols.8.15.0\lib\net472\Microsoft.IdentityModel.Protocols.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Protocols.OpenIdConnect, Version=8.15.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\Packages\Microsoft.IdentityModel.Protocols.OpenIdConnect.8.15.0\lib\net472\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Tokens, Version=8.15.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\Packages\Microsoft.IdentityModel.Tokens.8.15.0\lib\net472\Microsoft.IdentityModel.Tokens.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Client.Policy, Version=16.1.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\Packages\Microsoft.SharePointOnline.CSOM.16.1.26712.12000\lib\net45\Microsoft.Office.Client.Policy.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Client.TranslationServices, Version=16.1.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\Packages\Microsoft.SharePointOnline.CSOM.16.1.26712.12000\lib\net45\Microsoft.Office.Client.TranslationServices.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.SharePoint.Tools, Version=16.1.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\Packages\Microsoft.SharePointOnline.CSOM.16.1.26712.12000\lib\net45\Microsoft.Office.SharePoint.Tools.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Online.SharePoint.Client.Tenant, Version=16.1.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\Packages\Microsoft.SharePointOnline.CSOM.16.1.26712.12000\lib\net45\Microsoft.Online.SharePoint.Client.Tenant.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ProjectServer.Client, Version=16.1.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\Packages\Microsoft.SharePointOnline.CSOM.16.1.26712.12000\lib\net45\Microsoft.ProjectServer.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Client, Version=16.1.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\Packages\Microsoft.SharePointOnline.CSOM.16.1.26712.12000\lib\net45\Microsoft.SharePoint.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Client.DocumentManagement, Version=16.1.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\Packages\Microsoft.SharePointOnline.CSOM.16.1.26712.12000\lib\net45\Microsoft.SharePoint.Client.DocumentManagement.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Client.Publishing, Version=16.1.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\Packages\Microsoft.SharePointOnline.CSOM.16.1.26712.12000\lib\net45\Microsoft.SharePoint.Client.Publishing.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Client.Runtime, Version=16.1.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\Packages\Microsoft.SharePointOnline.CSOM.16.1.26712.12000\lib\net45\Microsoft.SharePoint.Client.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Client.Search, Version=16.1.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\Packages\Microsoft.SharePointOnline.CSOM.16.1.26712.12000\lib\net45\Microsoft.SharePoint.Client.Search.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Client.Search.Applications, Version=16.1.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\Packages\Microsoft.SharePointOnline.CSOM.16.1.26712.12000\lib\net45\Microsoft.SharePoint.Client.Search.Applications.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Client.ServerRuntime, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\Packages\Microsoft.SharePoint.Client.ServerRuntime.16.0.4297.1000\lib\Microsoft.SharePoint.Client.ServerRuntime.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Client.Taxonomy, Version=16.1.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\Packages\Microsoft.SharePointOnline.CSOM.16.1.26712.12000\lib\net45\Microsoft.SharePoint.Client.Taxonomy.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Client.UserProfiles, Version=16.1.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\Packages\Microsoft.SharePointOnline.CSOM.16.1.26712.12000\lib\net45\Microsoft.SharePoint.Client.UserProfiles.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Client.WorkflowServices, Version=16.1.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\Packages\Microsoft.SharePointOnline.CSOM.16.1.26712.12000\lib\net45\Microsoft.SharePoint.Client.WorkflowServices.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Win32.Registry, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\Packages\Microsoft.Win32.Registry.5.0.0\lib\net461\Microsoft.Win32.Registry.dll</HintPath>
+    </Reference>
+    <Reference Include="MurmurHash, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\Packages\murmurhash.1.0.3\lib\net45\MurmurHash.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\Packages\Newtonsoft.Json.13.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NVelocity, Version=1.0.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <HintPath>..\Packages\NVelocity.1.2.0\lib\netstandard2.0\NVelocity.dll</HintPath>
+    </Reference>
+    <Reference Include="Pipelines.Sockets.Unofficial, Version=1.0.0.0, Culture=neutral, PublicKeyToken=42ea0a778e13fbe2, processorArchitecture=MSIL">
+      <HintPath>..\Packages\Pipelines.Sockets.Unofficial.2.2.8\lib\net472\Pipelines.Sockets.Unofficial.dll</HintPath>
+    </Reference>
+    <Reference Include="Polly, Version=8.0.0.0, Culture=neutral, PublicKeyToken=c8a3ffc3f8f825cc, processorArchitecture=MSIL">
+      <HintPath>..\Packages\Polly.8.6.5\lib\net472\Polly.dll</HintPath>
+    </Reference>
+    <Reference Include="Polly.Core, Version=8.0.0.0, Culture=neutral, PublicKeyToken=c8a3ffc3f8f825cc, processorArchitecture=MSIL">
+      <HintPath>..\Packages\Polly.Core.8.6.5\lib\net472\Polly.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="protobuf-net, Version=3.0.0.0, Culture=neutral, PublicKeyToken=257b51d87d2e4d67, processorArchitecture=MSIL">
+      <HintPath>..\Packages\protobuf-net.3.2.56\lib\net462\protobuf-net.dll</HintPath>
+    </Reference>
+    <Reference Include="protobuf-net.Core, Version=3.0.0.0, Culture=neutral, PublicKeyToken=257b51d87d2e4d67, processorArchitecture=MSIL">
+      <HintPath>..\Packages\protobuf-net.Core.3.2.56\lib\net462\protobuf-net.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.5.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\Packages\System.Buffers.4.6.1\lib\net462\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ClientModel, Version=1.9.0.0, Culture=neutral, PublicKeyToken=92742159e12e44c8, processorArchitecture=MSIL">
+      <HintPath>..\Packages\System.ClientModel.1.9.0\lib\netstandard2.0\System.ClientModel.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Collections.Immutable, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\Packages\System.Collections.Immutable.8.0.0\lib\net462\System.Collections.Immutable.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Annotations, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\Packages\System.ComponentModel.Annotations.5.0.0\lib\net461\System.ComponentModel.Annotations.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.ConfigurationManager, Version=10.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\Packages\System.Configuration.ConfigurationManager.10.0.2\lib\net462\System.Configuration.ConfigurationManager.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Common, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\Packages\System.Data.Common.4.3.0\lib\net451\System.Data.Common.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Data.SQLite, Version=1.0.119.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\Packages\System.Data.SQLite.AvePoint.1.0.119.2\lib\netstandard2.0\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=10.0.0.3, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\Packages\System.Diagnostics.DiagnosticSource.10.0.3\lib\net462\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Diagnostics.PerformanceCounter, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\Packages\System.Diagnostics.PerformanceCounter.8.0.0\lib\net462\System.Diagnostics.PerformanceCounter.dll</HintPath>
+    </Reference>
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Formats.Asn1, Version=10.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\Packages\System.Formats.Asn1.10.0.2\lib\net462\System.Formats.Asn1.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IdentityModel" />
+    <Reference Include="System.IdentityModel.Tokens.Jwt, Version=8.15.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\Packages\System.IdentityModel.Tokens.Jwt.8.15.0\lib\net472\System.IdentityModel.Tokens.Jwt.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Compression, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\Packages\System.IO.Compression.4.3.0\lib\net46\System.IO.Compression.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.IO.FileSystem.AccessControl, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\Packages\System.IO.FileSystem.AccessControl.5.0.0\lib\net461\System.IO.FileSystem.AccessControl.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Hashing, Version=10.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\Packages\System.IO.Hashing.10.0.2\lib\net462\System.IO.Hashing.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Pipelines, Version=10.0.0.10, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\Packages\System.IO.Pipelines.10.0.10\lib\net462\System.IO.Pipelines.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Management" />
+    <Reference Include="System.Memory, Version=4.0.5.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\Packages\System.Memory.4.6.3\lib\net462\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Memory.Data, Version=10.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\Packages\System.Memory.Data.10.0.2\lib\net462\System.Memory.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.6.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\Packages\System.Numerics.Vectors.4.6.1\lib\net462\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reflection.TypeExtensions, Version=4.1.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\Packages\System.Reflection.TypeExtensions.4.7.0\lib\net461\System.Reflection.TypeExtensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime" />
+    <Reference Include="System.Runtime.Caching" />
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\Packages\System.Runtime.CompilerServices.Unsafe.6.1.2\lib\net462\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\Packages\System.Runtime.InteropServices.RuntimeInformation.4.3.0\lib\net45\System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Security.AccessControl, Version=6.0.0.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\Packages\System.Security.AccessControl.6.0.1\lib\net461\System.Security.AccessControl.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Pkcs, Version=10.0.0.2, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\Packages\System.Security.Cryptography.Pkcs.10.0.2\lib\net462\System.Security.Cryptography.Pkcs.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.ProtectedData, Version=10.0.0.2, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\Packages\System.Security.Cryptography.ProtectedData.10.0.2\lib\net462\System.Security.Cryptography.ProtectedData.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Permissions, Version=10.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\Packages\System.Security.Permissions.10.0.2\lib\net462\System.Security.Permissions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Principal.Windows, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\Packages\System.Security.Principal.Windows.5.0.0\lib\net461\System.Security.Principal.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Text.Encodings.Web, Version=10.0.0.10, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\Packages\System.Text.Encodings.Web.10.0.10\lib\net462\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json, Version=10.0.0.10, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\Packages\System.Text.Json.10.0.10\lib\net462\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.RegularExpressions, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\Packages\System.Text.RegularExpressions.4.3.1\lib\net463\System.Text.RegularExpressions.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Threading.Channels, Version=10.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\Packages\System.Threading.Channels.10.0.2\lib\net462\System.Threading.Channels.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Dataflow, Version=10.0.0.10, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\Packages\System.Threading.Tasks.Dataflow.10.0.10\lib\net462\System.Threading.Tasks.Dataflow.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.4.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\Packages\System.Threading.Tasks.Extensions.4.6.3\lib\net462\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FileSystem\BaseProcessor\FSJobProcessorContext.cs" />
+    <Compile Include="FileSystem\BaseProcessor\FSProcessorWorker.cs" />
+    <Compile Include="FileSystem\BaseProcessor\FSSkipJobException.cs" />
+    <Compile Include="FileSystem\BaseProcessor\IFSExecutionStrategy.cs" />
+    <Compile Include="FileSystem\BulkProcessing\BatchController.cs" />
+    <Compile Include="FileSystem\BulkProcessing\BatchReportPoller.cs" />
+    <Compile Include="FileSystem\Common\ArchiverCommonStaticMethod.cs" />
+    <Compile Include="FileSystem\Common\AveCrc64.cs" />
+    <Compile Include="FileSystem\Common\BackgroundSettings.cs" />
+    <Compile Include="FileSystem\Common\DtoConverter.cs" />
+    <Compile Include="FileSystem\Common\Extension\BackupCloseInfo.cs" />
+    <Compile Include="FileSystem\Common\Extension\DictionaryExtension.cs" />
+    <Compile Include="FileSystem\Common\Extension\ExceptionExtension.cs" />
+    <Compile Include="FileSystem\Common\Extension\ObjectExtension.cs" />
+    <Compile Include="FileSystem\DataIngestion\RMDataIngestionPersistor.cs" />
+    <Compile Include="FileSystem\Common\IndexConstants.cs" />
+    <Compile Include="FileSystem\Common\RecordsEnv.cs" />
+    <Compile Include="FileSystem\Common\RMDataIngestMessageExtensionManager.cs" />
+    <Compile Include="FileSystem\Common\SecurityUtils.cs" />
+    <Compile Include="FileSystem\Common\ServiceConstants.cs" />
+    <Compile Include="FileSystem\DataIngestion\RMDataIngestionDataCollector.cs" />
+    <Compile Include="FileSystem\DataIngestion\RMDataIngestionExecutionResultCollector.cs" />
+    <Compile Include="FileSystem\DataIngestion\V2\RMDataIngestionCollector.cs" />
+    <Compile Include="FileSystem\DataIngestion\V2\RMDataIngestionDataWriter.cs" />
+    <Compile Include="FileSystem\DataSync\Analyzer\DataSyncAnalyzerThread.cs" />
+    <Compile Include="FileSystem\Common\FSObjectAnalyzer.cs" />
+    <Compile Include="FileSystem\DataSync\DAL\DataSyncRecordsSerializer.cs" />
+    <Compile Include="FileSystem\Common\FSJobConfigHandler.cs" />
+    <Compile Include="FileSystem\Common\FSJobCache.cs" />
+    <Compile Include="FileSystem\DataSync\Utils\FileTypeDescriptionResolver.cs" />
+    <Compile Include="FileSystem\DataSync\V2\FSJobCacheV2.cs" />
+    <Compile Include="FileSystem\DataSync\V2\FSUniqueIdAssigner.cs" />
+    <Compile Include="FileSystem\DataSync\DataSyncExecutionStrategies\DataSyncExecutionStrategyV1.cs" />
+    <Compile Include="FileSystem\DataSync\DataSyncExecutionStrategies\DataSyncExecutionStrategyV2.cs" />
+    <Compile Include="FileSystem\DataSync\FSDataCollector.cs" />
+    <Compile Include="FileSystem\Common\FSIncJobController.cs" />
+    <Compile Include="FileSystem\DataSync\FSDataSyncProcessorWorker.cs" />
+    <Compile Include="FileSystem\DataSync\FSDiscover.cs" />
+    <Compile Include="FileSystem\DataSync\Utils\FSDataSyncJobContext.cs" />
+    <Compile Include="FileSystem\DataSync\Utils\ThreadCounter.cs" />
+    <Compile Include="FileSystem\DataSync\V2\Channel\FSChannelExtensions.cs" />
+    <Compile Include="FileSystem\DataSync\V2\Workers\FSReportWorker.cs" />
+    <Compile Include="FileSystem\Discovery\Tags\FileShareTagProcessor.cs" />
+    <Compile Include="FileSystem\Discovery\Tags\Analyzer\BuildIn\FileShareDocumentSizeRangeTagAnalyzer.cs" />
+    <Compile Include="FileSystem\Discovery\Tags\Analyzer\BuildIn\FileShareDocumentWithoutModifiedInTagAnalyzer.cs" />
+    <Compile Include="FileSystem\Discovery\Tags\Analyzer\BuildIn\FileShareBuildInRotRuleContainerTagAnalyzer.cs" />
+    <Compile Include="FileSystem\Discovery\Tags\Analyzer\BuildIn\FileShareBuildInTagAnalyzer.cs" />
+    <Compile Include="FileSystem\Discovery\Tags\Analyzer\FileShareDocumentTagAnalyzer.cs" />
+    <Compile Include="FileSystem\Discovery\Tags\Analyzer\FileShareTagAnalyzer.cs" />
+    <Compile Include="FileSystem\Discovery\Tags\Condition\ArrayConditionHandler.cs" />
+    <Compile Include="FileSystem\Discovery\Tags\Condition\BooleanConditionHandler.cs" />
+    <Compile Include="FileSystem\Discovery\Tags\Condition\ConditionHandler.cs" />
+    <Compile Include="FileSystem\Discovery\Tags\Condition\DataTimeConditionHandler.cs" />
+    <Compile Include="FileSystem\Discovery\Tags\Condition\FileSizeConditionHandler.cs" />
+    <Compile Include="FileSystem\Discovery\Tags\Condition\TextConditionHandler.cs" />
+    <Compile Include="FileSystem\Discovery\Tags\Contract\AnalyseMethod.cs" />
+    <Compile Include="FileSystem\Discovery\Tags\Contract\BuildInRuleInfo.cs" />
+    <Compile Include="FileSystem\Discovery\Tags\Contract\BuildInRuleType.cs" />
+    <Compile Include="FileSystem\Discovery\Tags\Contract\ConditionCategory.cs" />
+    <Compile Include="FileSystem\Discovery\Tags\Contract\ConditionInfo.cs" />
+    <Compile Include="FileSystem\Discovery\Tags\Contract\ConditionLogicTypes.cs" />
+    <Compile Include="FileSystem\Discovery\Tags\Contract\CriteriaInfo.cs" />
+    <Compile Include="FileSystem\Discovery\Tags\Contract\CriteriaLogicType.cs" />
+    <Compile Include="FileSystem\Discovery\Tags\Contract\CriteriaTypes.cs" />
+    <Compile Include="FileSystem\Discovery\Tags\Contract\DateConditionInfo.cs" />
+    <Compile Include="FileSystem\Discovery\Tags\Contract\DuplicateConditionInfo.cs" />
+    <Compile Include="FileSystem\Discovery\Tags\Contract\FileSizeConditionInfo.cs" />
+    <Compile Include="FileSystem\Discovery\Tags\Contract\RuleInfo.cs" />
+    <Compile Include="FileSystem\Discovery\Tags\Contract\TagInfo.cs" />
+    <Compile Include="FileSystem\Discovery\V1\Analyzer\FSTagRuleConstants.cs" />
+    <Compile Include="FileSystem\Discovery\V1\Analyzer\FSDiscoveryDataAnalyzer.cs" />
+    <Compile Include="FileSystem\Discovery\V1\Analyzer\FSDiscoveryTagRuleService.cs" />
+    <Compile Include="FileSystem\Discovery\V1\FSDiscoveryProcessor.cs" />
+    <Compile Include="FileSystem\Discovery\V1\Model\FSDiscoveryAnalyzedConnectionDataInfo.cs" />
+    <Compile Include="FileSystem\Discovery\V1\Model\FSDiscoveryAnalyzedDataAggregationInfo.cs" />
+    <Compile Include="FileSystem\Discovery\V1\Model\FSDiscoveryAnalyzedDataInfo.cs" />
+    <Compile Include="FileSystem\Discovery\V1\Model\FSDiscoveryTagRuleInfo.cs" />
+    <Compile Include="FileSystem\Discovery\V1\Worker\FSDiscoveryDataConsumer.cs" />
+    <Compile Include="FileSystem\Discovery\V1\Worker\FSDiscoveryDataProducer.cs" />
+    <Compile Include="FileSystem\Discovery\V1\Worker\FSDiscoveryDataQueue.cs" />
+    <Compile Include="FileSystem\Discovery\V1\Worker\IFSDiscoveryDataProcessor.cs" />
+    <Compile Include="FileSystem\Disposal.NewLogic\DisposalDataUpdaterV2.cs" />
+    <Compile Include="FileSystem\Disposal.NewLogic\DisposalDiscoverV2.cs" />
+    <Compile Include="FileSystem\Disposal.NewLogic\DisposalWorkerV2.cs" />
+    <Compile Include="FileSystem\Disposal.NewLogic\FSDataDisposalV2.cs" />
+    <Compile Include="FileSystem\Disposal.NewLogic\Utils\DisposalFilterHelper.cs" />
+    <Compile Include="FileSystem\Disposal.NewLogic\V3\Channel\FSDisposalChannelProvider.cs" />
+    <Compile Include="FileSystem\Disposal.NewLogic\V3\Services\DisposalDtoFactory.cs" />
+    <Compile Include="FileSystem\Disposal.NewLogic\V3\Services\DisposalFileAnalyzer.cs" />
+    <Compile Include="FileSystem\Disposal.NewLogic\V3\Services\DisposalReportService.cs" />
+    <Compile Include="FileSystem\Disposal.NewLogic\V3\Services\DisposalRuleUtility.cs" />
+    <Compile Include="FileSystem\Disposal.NewLogic\V3\Services\FileMetadataExtractor.cs" />
+    <Compile Include="FileSystem\Disposal.NewLogic\V3\Workers\DisposalCosmosReceiverWorkerV3.cs" />
+    <Compile Include="FileSystem\Disposal.NewLogic\V3\Workers\DisposalCosmosSenderWorkerV3.cs" />
+    <Compile Include="FileSystem\Disposal.NewLogic\V3\Workers\DisposalDiscoveryWorkerV3.cs" />
+    <Compile Include="FileSystem\Disposal.NewLogic\V3\Workers\DisposalReportWorkerV3.cs" />
+    <Compile Include="FileSystem\Disposal.NewLogic\V3\Workers\DisposalUpdaterWorkerV3.cs" />
+    <Compile Include="FileSystem\Disposal.NewLogic\V3\Workers\DisposalWorkerV3.cs" />
+    <Compile Include="FileSystem\Disposal.NewLogic\V3\Workers\IFSDisposalWorker.cs" />
+    <Compile Include="FileSystem\Disposal\DisposalDataUpdater.cs" />
+    <Compile Include="FileSystem\Disposal\DisposalDiscover.cs" />
+    <Compile Include="FileSystem\Disposal\DisposalExecutionStrategies\BaseDisposalExecutionStrategy.cs" />
+    <Compile Include="FileSystem\Disposal\DisposalExecutionStrategies\DisposalExecutionStrategyV1.cs" />
+    <Compile Include="FileSystem\Disposal\DisposalExecutionStrategies\DisposalExecutionStrategyV2.cs" />
+    <Compile Include="FileSystem\Disposal\DisposalExecutionStrategies\DisposalExecutionStrategyV3.cs" />
+    <Compile Include="FileSystem\Disposal\DisposalWorker.cs" />
+    <Compile Include="FileSystem\Disposal\FolderSizeUpdateTracker.cs" />
+    <Compile Include="FileSystem\Disposal\FSDataDisposal.cs" />
+    <Compile Include="FileSystem\Disposal\FSDisposalProcessorWorker.cs" />
+    <Compile Include="FileSystem\Disposal\SqliteDB\FileSystemLiteDBWrapper.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\ApplicationModelServiceBase.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\ArchiverRestoreFilter.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\Attribute\TableAttribute.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\BrowseInfo\ArchiverBrowseInfo.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\BrowseInfo\GranularBrowseInfo.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\Cache\CacheService.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\Cache\CacheSettingDtoExtension.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\Cache\ICacheService.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\CoreIndexEntity\IndexDeviceValidateParameter.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\CoreIndex\CoreIndexCommon\ArchiveIndexInfo.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\CoreIndex\IntentionImp\ConstructorInvokerCache.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\CoreIndex\IntentionImp\ConstructorInvokerFactory.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\CoreIndex\CoreIndexCommon\ArchiverJobInfoIndex.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\CoreIndex\CoreIndexCommon\ArchiverSiteConfiguraionIndex.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\CoreIndex\CoreIndexCommon\ConnectionLock.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\CoreIndex\CoreIndexCommon\ConnectionLockManager.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\CoreIndex\CoreIndexCommon\ConnectionLockType.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\CoreIndex\CoreIndexCommon\IndexDatabaseHelper.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\CoreIndex\CoreIndexCommon\IndexDatabaseOperationLock.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\CoreIndex\CoreIndexIntentionImpl\IndexCacheManager.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\CoreIndex\CoreIndexIntentionImpl\IndexCacheRetentionManager.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\CoreIndex\CoreIndexIntentionImpl\IndexDatabasePropertiesManager.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\CoreIndex\CoreIndexIntentionImpl\IndexDatabaseScriptGenerator.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\CoreIndex\CoreIndexIntentionImpl\IndexDatabaseSynchronizer.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\CoreIndex\CoreIndexIntentionImpl\IndexDatabaseUpgradeManager.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\CoreIndex\CoreIndexIntentionImpl\IndexDatabaseVersionManager.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\CoreIndex\CoreIndexIntentionImpl\IndexDeleteProcessor.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\CoreIndex\CoreIndexIntentionImpl\IndexDeviceValidateManager.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\CoreIndex\CoreIndexIntentionImpl\IndexProcessor.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\CoreIndex\CoreIndexIntention\IIndexCacheManager.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\CoreIndex\CoreIndexIntention\IIndexCacheRetentionManager.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\CoreIndex\CoreIndexIntention\IIndexDatabaseScriptGenerator.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\CoreIndex\CoreIndexIntention\IIndexDatabaseSynchronizer.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\CoreIndex\CoreIndexIntention\IIndexDatabaseUpgradeManager.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\CoreIndex\CoreIndexIntention\IIndexDatabaseVersionManager.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\CoreIndex\CoreIndexIntention\IIndexDeviceValidateManager.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\CoreIndex\CoreIndexIntention\IIndexProcessor.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\CoreIndex\Encryption\IndexDecryptedStream.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\CoreIndex\Encryption\IndexEncryptionManager.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\CoreIndex\Encryption\IndexFileHeader.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\CoreIndex\Extension.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\CoreIndex\IntentionImp\FastReflectionCache.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\CoreIndex\IntentionImp\FastReflectionCaches.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\CoreIndex\IntentionImp\FastReflectionExtension.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\CoreIndex\IntentionImp\FastReflectionFactories.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\CoreIndex\IntentionImp\FieldAccessorCache.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\CoreIndex\IntentionImp\FieldAccessorFactory.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\CoreIndex\IntentionImp\MethodInvoker.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\CoreIndex\IntentionImp\PropertyAccessor.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\CoreIndex\Intention\IConstructorInvoker.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\CoreIndex\Intention\IFastReflectionCache.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\CoreIndex\Intention\IFastReflectionFactory.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\CoreIndex\Intention\IFieldAccessor.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\CoreIndex\Intention\IMethodInvoker.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\CoreIndex\Intention\IPropertyAccessor.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\CoreIndex\IntentionImp\MethodInvokerCache.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\CoreIndex\IntentionImp\MethodInvokerFactory.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\CoreIndex\IntentionImp\PropertyAccessorCache.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\CoreIndex\IntentionImp\PropertyAccessorFactory.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\DatabaseUtility.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\DeviceManager\IntentionImpl\DeviceAccess.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\DeviceManager\IntentionImpl\StorageDeviceManager.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\DeviceManager\IntentionImpl\XFactoryCommon.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\DeviceManager\Intention\IStorageDeviceManager.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\Encryption\IntentionImpl\EncryptionInfoManager.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\Encryption\Intention\IEncryptionInfoManager.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\Entity\BlockHeader.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\Entity\DataHeader.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\Entity\IOConstants.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\Entity\RebuildIndexInfo.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\Enum\FileType.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\Enum\OutputStreamLevel.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\Enum\ReadingState.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\Enum\TreeMode.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\Enum\WritingState.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\FSArchiverBackupJob.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\ConnectionBackup.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\FSArchiveFileSender.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\FSArchiverBackupRequest.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\FSBackupDataWriter.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\FSBackupImps.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\FSBackupSender.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\FSDocumentBackupImps.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\FSFolderBackup.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\FSIndex\ArchiverBasicIndex.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\FSIndex\ArchiverBodyIndex.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\FSIndex\ArchiverHeadIndex.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\FSIndex\ArchiverIndexInfo.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\FSIndex\ArchiverIndexServiceOpenParameter.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\FSIndex\ArchiverSiteMasterIndex.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\FSIndex\IIndexable.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\FSIndex\IIndexService.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\FSIndex\IndexBase.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\FSIndex\IndexProcessorParameter.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\FSIndex\IndexServiceOpenParameter.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\FSIndex\Index\ArchiverIndexMutex.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\FSIndex\Index\ArchiverIndexProcessor.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\FSIndex\Index\ArchiverIndexProcessorParameter.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\FSIndex\Index\ArchiverIndexService.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\FSIndex\Index\IndexCacheManagerParameter.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\FSIndex\Index\IndexDatabaseDownLoadResult.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\FSIndex\Index\IndexDatabaseInfo.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\FSIndex\Index\IndexService\FunctionIndexServiceIntentionImpl\ArchiverAdvancedSearchIndexService.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\FSIndex\Index\IndexService\FunctionIndexServiceIntentionImpl\ArchiverBackupIndexService.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\FSIndex\Index\IndexService\FunctionIndexServiceIntentionImpl\ArchiverBrowserIndexService.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\FSIndex\Index\IndexService\FunctionIndexServiceIntentionImpl\ArchiverFullTextIndexIndexService.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\FSIndex\Index\IndexService\FunctionIndexServiceIntentionImpl\ArchiverIndexServiceBase.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\FSIndex\Index\IndexService\FunctionIndexServiceIntentionImpl\ArchiverRestoreIndexService.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\FSIndex\Index\IndexService\FunctionIndexServiceIntentionImpl\ArchiverRetentionIndexService.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\FSIndex\Index\IndexService\FunctionIndexServiceIntentionImpl\ErrorPageCheckIndexService.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\FSIndex\Index\IndexService\FunctionIndexServiceIntention\IArchiverAdvancedSearchIndexService.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\FSIndex\Index\IndexService\FunctionIndexServiceIntention\IArchiverBackupIndexService.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\FSIndex\Index\IndexService\FunctionIndexServiceIntention\IArchiverBrowserIndexService.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\FSIndex\Index\IndexService\FunctionIndexServiceIntention\IArchiverFullTextIndexIndexService.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\FSIndex\Index\IndexService\FunctionIndexServiceIntention\IArchiverRestoreIndexService.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\FSIndex\Index\IndexService\FunctionIndexServiceIntention\IArchiverRetentionIndexService.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\FSIndex\Index\IndexService\FunctionIndexServiceIntention\IErrorPageCheckIndexService.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\FSIndex\Index\IndexService\TableIndexServiceIntentionImpl\ArchiverHeadAndBodyIndexService.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\FSIndex\Index\IndexService\TableIndexServiceIntentionImpl\ArchiverJobInfoIndexService.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\FSIndex\Index\IndexService\TableIndexServiceIntentionImpl\ArchiverSiteConfigurationIndexService.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\FSIndex\Index\IndexService\TableIndexServiceIntentionImpl\ArchiverSiteMasterIndexService.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\FSIndex\Index\IndexService\TableIndexServiceIntentionImpl\ArchiverTableIndexServiceBase.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\FSIndex\Index\IndexService\TableIndexServiceIntention\IArchiverHeadAndBodyIndexService.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\FSIndex\Index\IndexService\TableIndexServiceIntention\IArchiverJobInfoIndexService.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\FSIndex\Index\IndexService\TableIndexServiceIntention\IArchiverSiteConfigurationIndexService.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\FSIndex\Index\IndexService\TableIndexServiceIntention\IArchiverSiteInfoIndexService.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\FSIndex\Index\IndexService\TableIndexServiceIntention\IArchiverSiteMasterIndexService.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\FSItemBackup.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\FSObjectBackup.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\FSToFSDocumentMoveTo.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\IFSBackupDataWriter.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\Input\CompressedFormatedInputStream.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\Input\DataReaderUtility.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\Input\EncryptedFormatedInputStream.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\Input\FilterGeneralInputStream.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\Input\FormatedInputStream.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\Input\IMediaGeneralInputStream.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\Input\InputStreamFactory.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\Input\IRebuildIndexInputStream.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\Input\RebuildIndexInputStream.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\IOIntention\IInputDataListener.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\IOIntention\IOutputDataListener.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\IOIntention\IRebuildIndexInputDataListener.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\IOIntention\IXConverter.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\MediaArchiverFileHeader.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\MergeIndex\ArchiverMediaCenter.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\MergeIndex\ArchiverMergeIndexJobHandler.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\MergeIndex\IMergeIndexService.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\MergeIndex\IntentionImp\MergeIndexSubJobInfo.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\MergeIndex\Intention\IMergeIndexService.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\MergeIndex\Intention\IMergeIndexSubJobInfo.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\MergeIndex\MergeIndexJobInfo.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\MergeIndex\MergeIndexJobState.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\MergeIndex\MergeIndexService.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\MergeIndex\MergeIndexServiceBase.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\OutPut\BackupJobBase.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\OutPut\CompressedFormatedOutputStream.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\OutPut\EncryptedFormatedOutputStream.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\OutPut\EncryptedFormatedOutputStreamUtility.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\OutPut\FilterGeneralOutputStream.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\OutPut\FormatedOutputStream.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\OutPut\IGeneralOutputStream.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\OutPut\IndexRebuildableOutputStream.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\OutPut\IOutputDataHandler.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\OutPut\OutputDataListener.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\OutPut\OutputDataListenerOpenParameter.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\OutPut\OutputStreamFactory.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\OutPut\UnformattedOutputStream.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\Param\DataBlockOpenOutParam.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\Param\DataBlockOpenParam.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\Param\OpenInputStreamParameter.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\Param\OpenOutputStreamParameter.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\Param\OpenOutputStreamParameterEx.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\Param\OpenRebuildIndexInputStreamParameter.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\Storage\StorageDeviceDto.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\Storage\StorageInfoBuilder\ArchiverStorageInfoMetaDataBuilder.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\Storage\StorageInfoBuilder\IStorageInfoMetaDataBuilder.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\Storage\StorageInfoBuilder\StorageInfoMetaDataBuilderAttribute.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\Storage\StorageInfoBuilder\StorageInfoMetaDataBuilderBase.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\Toolkit\DirectoryUtility.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\Toolkit\FileUtility.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\Toolkit\ResourceUtility.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\Toolkit\StreamUtility.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\UpgradeScript\UpgradeConfigurationSection.csd.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\VolumeGenerator\ArchiverVolumeGenerator.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\VolumeGenerator\ArchiverVolumeGeneratorBase.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\VolumeGenerator\IVolumeGenerator.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\VolumeGenerator\VolumeGeneratorBase.cs" />
+    <Compile Include="FileSystem\FileSystem.Backup\VolumeGenerator\VolumeParameter.cs" />
+    <Compile Include="FileSystem\FileSystem.Collector\Collectors\FileSystemFileCollector.cs" />
+    <Compile Include="FileSystem\FileSystem.Collector\Collectors\FileSystemFolderCollector.cs" />
+    <Compile Include="FileSystem\FileSystem.Collector\FileSystemCollectionFolder.cs" />
+    <Compile Include="FileSystem\FileSystem.Collector\FileSystemCollector.cs" />
+    <Compile Include="FileSystem\FileSystem.Collector\FilterImplement\FileSystemDisposalFilter.cs" />
+    <Compile Include="FileSystem\FileSystem.Collector\Utils\FileSystemCollectorException.cs" />
+    <Compile Include="FileSystem\FileSystem.Collector\WorkerPool\FileSystemWorkerPoolController.cs" />
+    <Compile Include="FileSystem\FileSystem.Collector\FilterImplement\FileSystemFilterDefault.cs" />
+    <Compile Include="FileSystem\FileSystem.Collector\FilterInterfaces\IFileSystemFilter.cs" />
+    <Compile Include="FileSystem\FileSystem.Collector\WorkerPool\FileSystemWorkerPoolMonitor.cs" />
+    <Compile Include="FileSystem\FileSystem.Restore\BackupDataSearchContract.cs" />
+    <Compile Include="FileSystem\FileSystem.Restore\Common\ArchiverRestoreJob.cs" />
+    <Compile Include="FileSystem\FileSystem.Restore\Common\FSRestoreJob.cs" />
+    <Compile Include="FileSystem\FileSystem.Restore\Common\RestoreJobBase.cs" />
+    <Compile Include="FileSystem\FileSystem.Restore\FSRestoreMain.cs" />
+    <Compile Include="FileSystem\FileSystem.Restore\FSRestoreWorker.cs" />
+    <Compile Include="FileSystem\FileSystem.Restore\IntentionImp\ArchiveDownloadStream.cs" />
+    <Compile Include="FileSystem\FileSystem.Restore\IntentionImp\ArchiverFileSender.cs" />
+    <Compile Include="FileSystem\FileSystem.Restore\IntentionImp\ArchiverRestoreDataBlock.cs" />
+    <Compile Include="FileSystem\FileSystem.Restore\IntentionImp\ArchiverRestoreDataBlockManger.cs" />
+    <Compile Include="FileSystem\FileSystem.Restore\IntentionImp\ArchiverRestoreDataReader.cs" />
+    <Compile Include="FileSystem\FileSystem.Restore\IntentionImp\FileNameGeneratorBase.cs" />
+    <Compile Include="FileSystem\FileSystem.Restore\IntentionImp\FileNameGeneratorFactory.cs" />
+    <Compile Include="FileSystem\FileSystem.Restore\IntentionImp\FileNameParameter.cs" />
+    <Compile Include="FileSystem\FileSystem.Restore\Intention\ArchiverFileNameGenerator.cs" />
+    <Compile Include="FileSystem\FileSystem.Restore\Intention\DataReaderBase.cs" />
+    <Compile Include="FileSystem\FileSystem.Restore\Intention\IArchiverRestoreDataBlockManager.cs" />
+    <Compile Include="FileSystem\FileSystem.Restore\Intention\IDataReader.cs" />
+    <Compile Include="FileSystem\FileSystem.Restore\Intention\IFileNameGenerator.cs" />
+    <Compile Include="FileSystem\FileSystem.Restore\Intention\IFileNameGeneratorFactory.cs" />
+    <Compile Include="FileSystem\FileSystem.Restore\Intention\IMediaFileSender.cs" />
+    <Compile Include="FileSystem\FileSystem.Restore\SiteCollectionNodesInfo.cs" />
+    <Compile Include="FileSystem\FileSystem.Retain\Common\ArchiverPruningJob.cs" />
+    <Compile Include="FileSystem\FileSystem.Retain\Common\ArchiverRetentionInfo.cs" />
+    <Compile Include="FileSystem\FileSystem.Retain\Common\ArchiverRetentionResult.cs" />
+    <Compile Include="FileSystem\FileSystem.Retain\Common\RetentionRule.cs" />
+    <Compile Include="FileSystem\FileSystem.Retain\FSRetainActionWorker.cs" />
+    <Compile Include="FileSystem\FileSystem.Retain\FSRetainMain.cs" />
+    <Compile Include="FileSystem\FileSystem.Retain\FSRetainWorker.cs" />
+    <Compile Include="FileSystem\DataSync\V2\Channel\FSDataSyncChannelProvider.cs" />
+    <Compile Include="FileSystem\DataSync\V2\ConfigUtils.cs" />
+    <Compile Include="FileSystem\DataSync\V2\FSDataCollectorV2.cs" />
+    <Compile Include="FileSystem\DataSync\V2\Workers\IFSDataSyncWorker.cs" />
+    <Compile Include="FileSystem\DataSync\V2\Workers\FSAnalysisWorker.cs" />
+    <Compile Include="FileSystem\DataSync\V2\Workers\FSDiscoveryWorker.cs" />
+    <Compile Include="FileSystem\DataSync\V2\Workers\FSPersistWorker.cs" />
+    <Compile Include="FileSystem\Jpmc.DataSync\Assembly\RMFileSystemMetadataAssembler.cs" />
+    <Compile Include="FileSystem\Jpmc.DataSync\Auditing\RMFileSystemAuditProcessor.cs" />
+    <Compile Include="FileSystem\Jpmc.DataSync\Classification\RMFileSystemClassCodeProcessor.cs" />
+    <Compile Include="FileSystem\Jpmc.DataSync\Identification\RMFileSystemUniqueIdProcessor.cs" />
+    <Compile Include="FileSystem\Jpmc.DataSync\Infrastructure\Concurrency\RMFileSystemConcurrentHashSet.cs" />
+    <Compile Include="FileSystem\Jpmc.DataSync\Models\RMFileSystemClassCodeInfo.cs" />
+    <Compile Include="FileSystem\Jpmc.DataSync\Models\RMFileSystemItemMetadata.cs" />
+    <Compile Include="FileSystem\Jpmc.DataSync\Models\RMFileSystemJobExecutionInfo.cs" />
+    <Compile Include="FileSystem\Jpmc.DataSync\Infrastructure\Concurrency\RMFileSystemConcurrencyExtension.cs" />
+    <Compile Include="FileSystem\Jpmc.DataSync\Infrastructure\Concurrency\RMFileSystemConcurrencyLimiter.cs" />
+    <Compile Include="FileSystem\Jpmc.DataSync\Orchestration\RMFileSystemDataSyncEngine.cs" />
+    <Compile Include="FileSystem\Jpmc.DataSync\Orchestration\RMFileSystemDataSyncEngineRunner.cs" />
+    <Compile Include="FileSystem\Jpmc.DataSync\Recovery\RMFileSystemRecoveryProcessor.cs" />
+    <Compile Include="FileSystem\Jpmc.DataSync\Scanning\RMFileSystemFileScanner.cs" />
+    <Compile Include="FileSystem\Jpmc.DataSync\Scanning\RMFileSystemDirectoryScanner.cs" />
+    <Compile Include="FileSystem\Jpmc.DataSync\Tracking\RMFileSystemJobProgressTracker.cs" />
+    <Compile Include="FileSystem\Report\FSContentDueReportWorker.cs" />
+    <Compile Include="FileSystem\Report\FSCreationReportWorker.cs" />
+    <Compile Include="FileSystem\Utils\AzureUtil.cs" />
+    <Compile Include="FileSystem\Utils\ConnectionBuilder.cs" />
+    <Compile Include="FileSystem\Utils\LocalCache.cs" />
+    <Compile Include="FileSystem\Utils\RegexHelper.cs" />
+    <Compile Include="FileSystem\Utils\StorageUtil.cs" />
+    <Compile Include="FileSystem\Utils\UtilForStorage.cs" />
+    <Compile Include="FSServiceLocator.cs" />
+    <Compile Include="IScheduleJobWorker.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="FileSystem\Stubs\FSConnectionGroupsStub.cs" />
+    <Compile Include="FileSystem\Stubs\FSConnectionGroupStub.cs" />
+    <Compile Include="FileSystem\Stubs\FSConnectionStub.cs" />
+    <Compile Include="FileSystem\Stubs\FSFileStub.cs" />
+    <Compile Include="FileSystem\Stubs\FSFolderStub.cs" />
+    <Compile Include="FileSystem\Stubs\Stub.cs" />
+    <Compile Include="FileSystem\Stubs\StubStatus.cs" />
+    <Compile Include="FileSystem\Utils\DataMemberAttribute.cs" />
+    <Compile Include="FileSystem\Utils\ExternalUtil.cs" />
+    <Compile Include="FileSystem\Utils\FSPropertiesMapping.cs" />
+    <Compile Include="FileSystem\Utils\GeneralSettingConfig.cs" />
+    <Compile Include="FileSystem\Utils\Snowflake.cs" />
+    <Compile Include="FileSystem\Utils\TimeSettingUtil.cs" />
+    <Compile Include="SharePoint\Common\ActionUtility.cs" />
+    <Compile Include="SharePoint\Common\CAMLHelper\CAML\Base\BaseElement.cs" />
+    <Compile Include="SharePoint\Common\CAMLHelper\CAML\CAMLManager.cs" />
+    <Compile Include="SharePoint\Common\CAMLHelper\CAML\OrderBy.cs" />
+    <Compile Include="SharePoint\Common\CAMLHelper\CAML\Query.cs" />
+    <Compile Include="SharePoint\Common\CAMLHelper\CAML\QueryCondition.cs" />
+    <Compile Include="SharePoint\Common\CAMLHelper\CAML\QueryGroup.cs" />
+    <Compile Include="SharePoint\Common\CAMLHelper\CAML\Types.cs" />
+    <Compile Include="SharePoint\Common\CAMLHelper\CAML\ViewFields.cs" />
+    <Compile Include="SharePoint\Common\CAMLHelper\Exceptions\BaseException.cs" />
+    <Compile Include="SharePoint\Common\CAMLHelper\Exceptions\InvalidFieldValueException.cs" />
+    <Compile Include="SharePoint\Common\CAMLHelper\Exceptions\InvalidGuidForFieldException.cs" />
+    <Compile Include="SharePoint\Common\CAMLHelper\General\Helper.cs" />
+    <Compile Include="SharePoint\Common\CAMLHelper\General\QueryConditionFactory.cs" />
+    <Compile Include="SharePoint\Common\CAMLHelper\General\QueryGroupFactory.cs" />
+    <Compile Include="SharePoint\Common\CommonUtility.cs" />
+    <Compile Include="SharePoint\Common\DtoConverter.cs" />
+    <Compile Include="SharePoint\Common\RMRelatedItemInfo.cs" />
+    <Compile Include="SharePoint\Common\SPQueryInfo.cs" />
+    <Compile Include="SharePoint\Common\SPTreeNodeManagement.cs" />
+    <Compile Include="SharePoint\Common\Threads\AveTenantTasks.cs" />
+    <Compile Include="SharePoint\Common\Threads\AveThread.cs" />
+    <Compile Include="SharePoint\Common\Threads\AveThreadPool.cs" />
+    <Compile Include="SharePoint\Common\Threads\TenantContext.cs" />
+    <Compile Include="SharePoint\Common\Util.cs" />
+    <Compile Include="SharePoint\Discover\RuleManagement.cs" />
+    <Compile Include="SharePoint\EnforceRuleAction\Base\BaseActionProcessor.cs" />
+    <Compile Include="SharePoint\EnforceRuleAction\LeaveStub\IOutputOrInputStreamWrapper.cs" />
+    <Compile Include="SharePoint\EnforceRuleAction\LeaveStub\Stub.Backup\OnPremSPLeaveStubDocExport.cs" />
+    <Compile Include="SharePoint\EnforceRuleAction\LeaveStub\Stub.Backup\OnPremSPLeaveStubFileSender.cs" />
+    <Compile Include="SharePoint\EnforceRuleAction\LeaveStub\Stub.Cache\OnPremSPLeaveStubWrapperAveObjectInfo.cs" />
+    <Compile Include="SharePoint\EnforceRuleAction\LeaveStub\Stub.Cache\OnPremSPLeaveStubWrapperIAveObjectCache.cs" />
+    <Compile Include="SharePoint\EnforceRuleAction\LeaveStub\Stub.Cache\OnPremSPLeaveStubWrapperBackupCache.cs" />
+    <Compile Include="SharePoint\EnforceRuleAction\LeaveStub\Stub.Cache\OnPremSPLeaveStubWrapperRestoreCache.cs" />
+    <Compile Include="SharePoint\EnforceRuleAction\LeaveStub\Stub.Common\OnPremSPLeaveStubUtility.cs" />
+    <Compile Include="SharePoint\EnforceRuleAction\LeaveStub\Stub.Common\SkipException.cs" />
+    <Compile Include="SharePoint\EnforceRuleAction\LeaveStub\Stub.Related\OnPremSPLeaveStubRelatedRecordsUtility.cs" />
+    <Compile Include="SharePoint\EnforceRuleAction\LeaveStub\Stub.Restore\OnPremSPLeaveStubDocImport.cs" />
+    <Compile Include="SharePoint\EnforceRuleAction\LeaveStub\Stub.Restore\OnPremSPLeaveStubDocRestore.cs" />
+    <Compile Include="SharePoint\EnforceRuleAction\LeaveStub\Stub.Restore\OnPremSPLeaveStubFileReceiver.cs" />
+    <Compile Include="SharePoint\EnforceRuleAction\SPEnforceRuleAction\BaseSPEnforceRuleActionProcessor.cs" />
+    <Compile Include="SharePoint\EnforceRuleAction\SPEnforceRuleAction\SPEnforceRuleActionProcessorByQuery.cs" />
+    <Compile Include="SharePoint\EnforceRuleAction\SPEnforceRuleAction\SPEnforceRuleActionWorker.cs" />
+    <Compile Include="SharePoint\ExplorerSync\Cache\DataSyncJobCache.cs" />
+    <Compile Include="SharePoint\ExplorerSync\Cache\RMExplorerBoardCache.cs" />
+    <Compile Include="SharePoint\ExplorerSync\Cache\RMSPExplorerDataCache.cs" />
+    <Compile Include="SharePoint\ExplorerSync\Modes\RMSPSyncItem.cs" />
+    <Compile Include="SharePoint\ExplorerSync\RMSPExplorerBase.cs" />
+    <Compile Include="SharePoint\ExplorerSync\RMSPExplorerProcessor.cs" />
+    <Compile Include="SharePoint\ExplorerSync\Utils\RMSPRuleChecker.cs" />
+    <Compile Include="SharePoint\ExplorerSync\Utils\RuleHelper.cs" />
+    <Compile Include="SharePoint\Extension\AveListItemExtension.cs" />
+    <Compile Include="SharePoint\Extension\AveSiteExtension.cs" />
+    <Compile Include="SharePoint\Extension\ClientContextExtension.cs" />
+    <Compile Include="SharePoint\GlobalSearch\Action\DeclareAction.cs" />
+    <Compile Include="SharePoint\GlobalSearch\Action\ReclassifyAction.cs" />
+    <Compile Include="SharePoint\GlobalSearch\Dicover\GlobalSearchCache.cs" />
+    <Compile Include="SharePoint\GlobalSearch\Dicover\GlobalSearchDiscover.cs" />
+    <Compile Include="SharePoint\GlobalSearch\GlobalSearch.cs" />
+    <Compile Include="SharePoint\GlobalSearch\IGlobalSearchAction.cs" />
+    <Compile Include="SharePoint\RMSharePointColumn\Base\BaseSPSettingProcessor.cs" />
+    <Compile Include="SharePoint\RMSharePointColumn\RMSettingProcessor.cs" />
+    <Compile Include="SharePoint\RMSharePointColumn\RMSPSettingFullProcessor.cs" />
+    <Compile Include="SharePoint\RMSharePointColumn\RMSPSettingsUtility.cs" />
+    <Compile Include="SharePoint\RMSharePointTaxnomy\RMSharePointTaxnomy.cs" />
+    <Compile Include="SharePoint\RMSharePointTaxnomy\RMSyncTermProcessor.cs" />
+    <Compile Include="SharePoint\ScanLocalNode\Browser\TreeBrowser.cs" />
+    <Compile Include="SharePoint\ScanLocalNode\ScanLocalNode.cs" />
+    <Compile Include="SharePoint\SPObjDiscover\DiscoverImpl\RMSPDiscoverHelper.cs" />
+    <Compile Include="SharePoint\SPObjDiscover\DiscoverImpl\RMSPFullDiscover.cs" />
+    <Compile Include="SharePoint\SPObjDiscover\DiscoverImpl\RMSPIncrementalDiscover.cs" />
+    <Compile Include="SharePoint\SPObjDiscover\ISPDiscover.cs" />
+    <Compile Include="SharePoint\SPObjDiscover\ISPDiscoverHelper.cs" />
+    <Compile Include="SharePoint\SPObjDiscover\Models\RMDiscoverItem.cs" />
+    <Compile Include="SharePoint\SPObjDiscover\RMSPDiscoverBase.cs" />
+    <Compile Include="SharePoint\SPObjDiscover\RMSPDiscoverFactory.cs" />
+    <Compile Include="SharePoint\SPObjDiscover\SPDicoverCache.cs" />
+    <Compile Include="SharePoint\UniqueIdSetting\Base\BaseUniqueIdSettingProcessor.cs" />
+    <Compile Include="SharePoint\UniqueIdSetting\SPUniqueIdSettingWorker.cs" />
+    <Compile Include="SharePoint\UniqueIdSetting\UniqueIdSettingFullProcessor.cs" />
+    <Compile Include="SharePoint\UniqueIdSetting\UniqueIdSettingInrementalProcessor.cs" />
+    <Compile Include="SharePoint\Util\RMDtoConverter.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Config\DesignLists\DesignLists.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="FileSystem\FileSystem.Backup\CoreIndex\CoreIndexScripts\ArchiverIndexDatabaseScript.sqlite" />
+    <None Include="FSLog4net.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="App.config" />
+    <None Include="AppConfig\AppSettings.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Config\recotest.pfx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DocAveStandard.snk" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Config\AgentCommonRecordsDisposalStub.aspx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Config\FilePropertiesMapping_EN.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Config\FSArchiverStub.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\NewWrapperCommon\GCommon\GCommonContract\DocAve.GCommonContract.csproj">
+      <Project>{361f3c7c-abbf-42d5-975a-65e4e9866068}</Project>
+      <Name>DocAve.GCommonContract</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NewWrapperCommon\GCommon\GCommonFileReceiver\GCommonFileReceiver.csproj">
+      <Project>{1f76a416-ed79-4a0e-8079-8308e44ee98f}</Project>
+      <Name>GCommonFileReceiver</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NewWrapperCommon\GCommon\GCommonFileSender\GCommonFileSender.csproj">
+      <Project>{284a9db0-5ad7-49a0-aa73-fd5ee781b813}</Project>
+      <Name>GCommonFileSender</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NewWrapperCommon\GCommon\GCommonNetWork\GCommonNetwork.csproj">
+      <Project>{590c8b1e-d973-4cf4-a142-b475131ec4b5}</Project>
+      <Name>GCommonNetwork</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NewWrapperCommon\GCommon\GCommonUtility\DocAve.GCommonUtility.csproj">
+      <Project>{7151e862-a761-4a90-ace6-37d7442047a6}</Project>
+      <Name>DocAve.GCommonUtility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NewWrapperCommon\GCommon\Media.Storage\Media.Storage.csproj">
+      <Project>{3180ae0e-d8e3-4b4d-903b-4af57d16caf5}</Project>
+      <Name>Media.Storage</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NewWrapperCommon\GCommon\CommonUtility30\DocAve.CommonUtility30.csproj">
+      <Project>{abf32db9-9d2a-4f78-96b5-e2b1fac08658}</Project>
+      <Name>DocAve.CommonUtility30</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Hybrid\Hybrid.Contract\Hybrid.Contract.csproj">
+      <Project>{58bc837e-2fd3-4acc-9f0f-86680b1c8150}</Project>
+      <Name>Hybrid.Contract</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Hybrid\Hybrid.Utility\Hybrid.Utility.csproj">
+      <Project>{b391ba26-90a9-49c2-9576-2e959d14ad0a}</Project>
+      <Name>Hybrid.Utility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NewWrapperCommon\Wrapper.BusinessLayer\Wrapper.Backup\Wrapper.Backup.csproj">
+      <Project>{2e3693a2-f00e-4bfa-b87f-23f25787cdf7}</Project>
+      <Name>Wrapper.Backup</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NewWrapperCommon\Wrapper.BusinessLayer\Wrapper.Discovery\Wrapper.Discovery.csproj">
+      <Project>{9f1fbcbc-8542-437f-9a4e-a09912909185}</Project>
+      <Name>Wrapper.Discovery</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NewWrapperCommon\Wrapper.BusinessLayer\Wrapper.Restore\Wrapper.Restore.csproj">
+      <Project>{e3f69123-5f54-44e0-9457-c002607469f7}</Project>
+      <Name>Wrapper.Restore</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NewWrapperCommon\Wrapper.BusinessLayer\Wrapper.Workflow\Wrapper.Workflow.csproj">
+      <Project>{11e9ffed-19e5-4fc9-b1c7-703a6afef4f7}</Project>
+      <Name>Wrapper.Workflow</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NewWrapperCommon\Wrapper.Core\Wrapper.Common\Wrapper.Common.csproj">
+      <Project>{9380e15e-5f69-4f2c-889f-e04756f6ccca}</Project>
+      <Name>Wrapper.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NewWrapperCommon\Wrapper.Core\Wrapper.Contract\Wrapper.Contract.csproj">
+      <Project>{b6805753-b35a-4df5-a3a4-27e6868dee09}</Project>
+      <Name>Wrapper.Contract</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NewWrapperCommon\Wrapper.Core\Wrapper.CustomUtility\Wrapper.CustomUtility.csproj">
+      <Project>{5ff18312-8da2-4abf-bc20-805a18065db6}</Project>
+      <Name>Wrapper.CustomUtility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RAAgentContract\RecordsAgentContract.csproj">
+      <Project>{f64e4daf-c2f2-4b36-8b10-aa056b2963a5}</Project>
+      <Name>RecordsAgentContract</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RAApi.Contract\RAApi.Contract.csproj">
+      <Project>{71b29ab0-8723-4073-b3e3-491e084ca8ca}</Project>
+      <Name>RAApi.Contract</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RACommon.Global\RACommon.Global.csproj">
+      <Project>{c463f6eb-0f6f-465e-9275-ea24b404ed95}</Project>
+      <Name>RACommon.Global</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RAContract.Global\RAContract.Global.csproj">
+      <Project>{B5AA0AD7-D3AD-401B-B76D-99FF30CF256D}</Project>
+      <Name>RAContract.Global</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RAAgentCore\RecordsAgentCore.csproj">
+      <Project>{299b387b-5a22-4e8d-9a29-bd9b55ff78cb}</Project>
+      <Name>RecordsAgentCore</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RAI18N\RAI18N.csproj">
+      <Project>{c2a0ebcb-94aa-4db5-935e-4d4a196482b5}</Project>
+      <Name>RAI18N</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RecordsAgentCommonUtility\RecordsAgentCommonUtility.csproj">
+      <Project>{6b0b8754-7ca6-465a-a75d-cf293950e711}</Project>
+      <Name>RecordsAgentCommonUtility</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="FileSystem\ImportSetting\" />
+    <Folder Include="SharePoint\ExplorerSync\Report\" />
+    <Folder Include="SharePoint\RMExplorer\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\Packages\EntityFramework.6.5.1\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\Packages\EntityFramework.6.5.1\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\Packages\EntityFramework.6.5.1\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\Packages\EntityFramework.6.5.1\build\EntityFramework.targets'))" />
+    <Error Condition="!Exists('..\Packages\Microsoft.Data.SqlClient.SNI.6.0.2\build\net462\Microsoft.Data.SqlClient.SNI.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\Packages\Microsoft.Data.SqlClient.SNI.6.0.2\build\net462\Microsoft.Data.SqlClient.SNI.targets'))" />
+    <Error Condition="!Exists('..\Packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.119.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\Packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.119.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets'))" />
+    <Error Condition="!Exists('..\Packages\System.ValueTuple.4.6.2\build\net471\System.ValueTuple.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\Packages\System.ValueTuple.4.6.2\build\net471\System.ValueTuple.targets'))" />
+  </Target>
+  <Import Project="..\Packages\EntityFramework.6.5.1\build\EntityFramework.targets" Condition="Exists('..\Packages\EntityFramework.6.5.1\build\EntityFramework.targets')" />
+  <Import Project="..\Packages\Microsoft.Data.SqlClient.SNI.6.0.2\build\net462\Microsoft.Data.SqlClient.SNI.targets" Condition="Exists('..\Packages\Microsoft.Data.SqlClient.SNI.6.0.2\build\net462\Microsoft.Data.SqlClient.SNI.targets')" />
+  <Import Project="..\Packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.119.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets" Condition="Exists('..\Packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.119.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets')" />
+  <Import Project="..\Packages\System.ValueTuple.4.6.2\build\net471\System.ValueTuple.targets" Condition="Exists('..\Packages\System.ValueTuple.4.6.2\build\net471\System.ValueTuple.targets')" />
+</Project>

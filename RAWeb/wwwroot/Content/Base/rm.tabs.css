@@ -1,0 +1,98 @@
+﻿/*Covered by AvePoint copyright and license agreement*/
+/******************rm tabs widget**************/
+.rm-tabs-normal {
+    display: inline-block;
+    /*text-align: center;*/
+    vertical-align: bottom;
+    height: 32px;
+    line-height: 32px;
+    padding: 0 5px;
+    margin-right: 2px;
+    font-weight: 600;
+    color: #1c1c1c;
+    background-color: #e0e0e0;
+    cursor: pointer;
+}
+
+.rm-tabs-current {
+    position: relative;
+    background-color: #575758;
+    color: #ffffff;
+}
+
+    .rm-tabs-current:after {
+        content: '';
+        position: absolute;
+        bottom: -6px;
+        left: 50%;
+        margin-left: -6px;
+        width: 0;
+        height: 0;
+        border-top: 6px solid #575758;
+        border-left: 6px solid transparent;
+        border-right: 6px solid transparent;
+    }
+.rm-tabs-checkbox {
+    display: inline-block;
+}
+
+
+.rm-tabs-checkbox-box {
+    position: relative;
+    text-align: left;
+    padding: 0;
+    outline: 0;
+    margin: 4px 10px 0 3px;
+    border: 1px solid #707070;
+    display: inline-block;
+    background: #fff;
+    overflow: hidden;
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+}
+.rm-tabs-checkbox-box-disabled {
+    position: relative;
+    text-align: left;
+    padding: 0;
+    outline: 0;
+    margin: 4px 10px 0 3px;
+    border: 1px solid #bcbcbc;
+    background: #e6e6e6;
+    display: inline-block;
+    overflow: hidden;
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+}
+.rm-tabs-checkbox-box-base {
+    height: 11px;
+    width: 11px;
+}
+
+.rm-tabs-checkbox-check-box {
+    height: 11px;
+    width: 11px;
+    float: left;
+    position: relative;
+}
+
+.rm-tabs-checkbox-uncheck {
+    left: -22px;
+    top: 0;
+    position: relative;
+}
+
+.rm-tabs-checkbox-check {
+    left: 0;
+    top: 0;
+    position: relative;
+}
+.rm-tabs-checkbox-box:focus {
+    border: 1px solid #007cde;
+    background: #d9ecff;
+}
+.rm-tabs-checkbox-box:hover {
+    border: 1px solid #007cde;
+    background: #d9ecff;
+}

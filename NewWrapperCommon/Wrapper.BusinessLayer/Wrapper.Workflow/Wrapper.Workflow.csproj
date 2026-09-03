@@ -1,0 +1,265 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{11E9FFED-19E5-4FC9-B1C7-703A6AFEF4F7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Wrapper.Workflow</RootNamespace>
+    <AssemblyName>AgentCommonWrapperWorkflow</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\bin\Agent\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;DebugWF</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningsAsErrors>0168</WarningsAsErrors>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <CodeAnalysisRuleSet>..\Wrapper.Common\RolesSet\WrapperRuleSet.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\bin\Agent\Release\</OutputPath>
+    <DefineConstants>TRACE;CODE_ANALYSIS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <WarningsAsErrors>0168</WarningsAsErrors>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>DocAveStandard.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <WarningsAsErrors>0168</WarningsAsErrors>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>..\Wrapper.Common\RolesSet\WrapperRuleSet.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE;CODE_ANALYSIS</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>none</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <WarningsAsErrors>0168</WarningsAsErrors>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'DebugWithCodeAnaylysis|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\DebugWithCodeAnaylysis\</OutputPath>
+    <DefineConstants>CODE_ANALYSIS;DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <WarningsAsErrors>0168</WarningsAsErrors>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+    <CodeAnalysisLogFile>bin\Debug\AgentCommonWrapperWorkflow.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>..\Wrapper.Common\RolesSet\WrapperRuleSet.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'DebugWithCodeAnaylysis|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\DebugWithCodeAnaylysis\</OutputPath>
+    <DefineConstants>CODE_ANALYSIS;DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <WarningsAsErrors>0168</WarningsAsErrors>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+    <CodeAnalysisLogFile>bin\x64\Debug\AgentCommonWrapperWorkflow.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>..\Wrapper.Common\RolesSet\WrapperRuleSet.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'DebugWithoutUnitTest|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\DebugWithoutUnitTest\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <WarningsAsErrors>0168</WarningsAsErrors>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>..\Wrapper.Common\RolesSet\WrapperRuleSet.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'DebugWithoutUnitTest|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\DebugWithoutUnitTest\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <WarningsAsErrors>0168</WarningsAsErrors>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>..\Wrapper.Common\RolesSet\WrapperRuleSet.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="LS.BinarySerialization.Replacer\Analysis\LS.BinarySerialization.ReplaceDictionary.cs" />
+    <Compile Include="LS.BinarySerialization.Replacer\Analysis\LS.BinarySerialization.ReplaceValues.cs" />
+    <Compile Include="LS.BinarySerialization.Replacer\Analysis\LS.BinarySerialization.TreeAnalyze.cs" />
+    <Compile Include="LS.BinarySerialization.Replacer\BinaryObjectReader\LS.BinarySerialization.BinaryParser.cs" />
+    <Compile Include="LS.BinarySerialization.Replacer\BinaryObjectReader\LS.BinarySerialization.ExtentionClass.cs" />
+    <Compile Include="LS.BinarySerialization.Replacer\BinaryObjectReader\LS.BinarySerialization.IntSizedArray.cs" />
+    <Compile Include="LS.BinarySerialization.Replacer\BinaryObjectReader\LS.BinarySerialization.IStreamableClasses.cs" />
+    <Compile Include="LS.BinarySerialization.Replacer\BinaryObjectReader\LS.BinarySerialization.LSBinaryFormatter.cs" />
+    <Compile Include="LS.BinarySerialization.Replacer\BinaryObjectReader\LS.BinarySerialization.LSObjectReader.cs" />
+    <Compile Include="LS.BinarySerialization.Replacer\BinaryObjectReader\LS.BinarySerialization.NameCache.cs" />
+    <Compile Include="LS.BinarySerialization.Replacer\BinaryObjectReader\LS.BinarySerialization.ObjectMap.cs" />
+    <Compile Include="LS.BinarySerialization.Replacer\BinaryObjectReader\LS.BinarySerialization.ParseRecord.cs" />
+    <Compile Include="LS.BinarySerialization.Replacer\BinaryObjectReader\LS.BinarySerialization.PrimitiveArray.cs" />
+    <Compile Include="LS.BinarySerialization.Replacer\BinaryObjectReader\LS.BinarySerialization.ReadObjectInfo.cs" />
+    <Compile Include="LS.BinarySerialization.Replacer\BinaryObjectReader\LS.BinarySerialization.SerializationInfo.cs" />
+    <Compile Include="LS.BinarySerialization.Replacer\BinaryObjectReader\LS.BinarySerialization.SerObjectInfoCache.cs" />
+    <Compile Include="LS.BinarySerialization.Replacer\BinaryObjectReader\LS.BinarySerialization.SerObjectInfoInit.cs" />
+    <Compile Include="LS.BinarySerialization.Replacer\BinaryObjectReader\LS.BinarySerialization.Tree.cs" />
+    <Compile Include="LS.BinarySerialization.Replacer\BinaryObjectReader\LS.BinarySerialization.TypeLimitingDeserializationBinder.cs" />
+    <Compile Include="LS.BinarySerialization.Replacer\BinaryObjectReader\LS.BinarySerialization.TypeLoadExceptionHolder.cs" />
+    <Compile Include="LS.BinarySerialization.Replacer\BinaryObjectReader\LS.BinarySerialization.TypeName.cs" />
+    <Compile Include="LS.BinarySerialization.Replacer\BinaryObjectReader\LS.BinarySerialization.ValueFixup.cs" />
+    <Compile Include="LS.BinarySerialization.Replacer\BinarySerializationCommonFiles\LS.BinaryAssemblyInfo.cs" />
+    <Compile Include="LS.BinarySerialization.Replacer\BinarySerializationCommonFiles\LS.BinaryCommonClasses.cs" />
+    <Compile Include="LS.BinarySerialization.Replacer\BinarySerializationCommonFiles\LS.BinaryConverter.cs" />
+    <Compile Include="LS.BinarySerialization.Replacer\BinarySerializationCommonFiles\LS.BytesUtility.cs" />
+    <Compile Include="LS.BinarySerialization.Replacer\BinarySerializationCommonFiles\LS.Converter.cs" />
+    <Compile Include="LS.BinarySerialization.Replacer\BinarySerializationCommonFiles\LS.HighPerformanceTimer.cs" />
+    <Compile Include="LS.BinarySerialization.Replacer\BinarySerializationCommonFiles\LS.InternalFE.cs" />
+    <Compile Include="LS.BinarySerialization.Replacer\BinarySerializationCommonFiles\LS.Invoker.cs" />
+    <Compile Include="LS.BinarySerialization.Replacer\BinarySerializationCommonFiles\LS.LSResource.cs" />
+    <Compile Include="LS.BinarySerialization.Replacer\BinarySerializationCommonFiles\LS.ObjectProgress.cs" />
+    <Compile Include="LS.BinarySerialization.Replacer\BinarySerializationCommonFiles\LS.SizedArray.cs" />
+    <Compile Include="LS.BinarySerialization.Replacer\LS.BinarySerialization.Replacer.cs" />
+    <Compile Include="LS.SPWorkflowProcessor.SerializableObjects\LS.SPContentTypeSerializableData.cs" />
+    <Compile Include="LS.SPWorkflowProcessor.SerializableObjects\LS.SPFieldSerializableData.cs" />
+    <Compile Include="LS.SPWorkflowProcessor.SerializableObjects\LS.SPPermissionSerializableData.cs" />
+    <Compile Include="LS.SPWorkflowProcessor.SerializableObjects\LS.SPWFAssociationSerializableData.cs" />
+    <Compile Include="LS.SPWorkflowProcessor.SerializableObjects\LS.SPWFInstanceSerializableData.cs" />
+    <Compile Include="LS.SPWorkflowProcessor.SerializableObjects\LS.SPWorkflowSubFileSerializableData.cs" />
+    <Compile Include="LS.SPWorkflowProcessor.SerializableObjects\LS.SPWorkflowSubItemSerializableData.cs" />
+    <Compile Include="LS.SPWorkflowProcessor.SerializableObjects\LS.SPWorkflowSubListSerializableData.cs" />
+    <Compile Include="LS.SPWorkflowProcessor\AveSPWorkflowCommonUtility\AveWorkflowConstants.cs" />
+    <Compile Include="LS.SPWorkflowProcessor\AveSPWorkflowCommonUtility\AveWorkflowReplaceProcessor.cs" />
+    <Compile Include="LS.SPWorkflowProcessor\AveSPWorkflowCommonUtility\AveWorkflowRunningInstanceRecalculationService.cs" />
+    <Compile Include="LS.SPWorkflowProcessor\AveSPWorkflowCommonUtility\BuildInWorkflowBaseIdCollection.cs" />
+    <Compile Include="LS.SPWorkflowProcessor\Behavior\StartOptionPostBehavior.cs" />
+    <Compile Include="LS.SPWorkflowProcessor\Behavior\StartOptionPreBehavior.cs" />
+    <Compile Include="LS.SPWorkflowProcessor\Behavior\StartOptionUpdater.cs" />
+    <Compile Include="LS.SPWorkflowProcessor\Behavior\WorkflowBusinessBehaviorController.cs" />
+    <Compile Include="LS.SPWorkflowProcessor\NintexWorkflow\NintexWorkflowUtility.cs" />
+    <Compile Include="LS.SPWorkflowProcessor\NintexWorkflow\NWSharePointObjects.cs" />
+    <Compile Include="LS.SPWorkflowProcessor\AveSPWorkflowCommonUtility\WorkflowType.cs" />
+    <Compile Include="LS.SPWorkflowProcessor\LS.CustomWorkflowAssociationProc.cs" />
+    <Compile Include="LS.SPWorkflowProcessor\LS.CustomWorkflowInstanceProc.cs" />
+    <Compile Include="LS.SPWorkflowProcessor\LS.DictionaryExtensionMethods.cs" />
+    <Compile Include="LS.SPWorkflowProcessor\LS.ExtensionMethods.cs" />
+    <Compile Include="LS.SPWorkflowProcessor\LS.NintexDatabaseUtility.cs" />
+    <Compile Include="LS.SPWorkflowProcessor\LS.NintexWorkflowAssociationProc.cs" />
+    <Compile Include="LS.SPWorkflowProcessor\LS.NintexWorkflowInstanceProc.cs" />
+    <Compile Include="LS.SPWorkflowProcessor\LS.PerformanceMonitor.cs" />
+    <Compile Include="LS.SPWorkflowProcessor\LS.SPContentTypeProcessor.cs" />
+    <Compile Include="LS.SPWorkflowProcessor\LS.SPEventManagerWrapper.cs" />
+    <Compile Include="LS.SPWorkflowProcessor\LS.SPFieldProcessor.cs" />
+    <Compile Include="LS.SPWorkflowProcessor\LS.SPSecurityProcessor.cs" />
+    <Compile Include="LS.SPWorkflowProcessor\LS.SPWorkflowAssociationDataProc.cs" />
+    <Compile Include="LS.SPWorkflowProcessor\LS.SPWorkflowAssociationProc.cs" />
+    <Compile Include="LS.SPWorkflowProcessor\LS.SPWorkflowCommon.cs" />
+    <Compile Include="LS.SPWorkflowProcessor\LS.SPWorkflowFileContentProc.cs" />
+    <Compile Include="LS.SPWorkflowProcessor\LS.SPWorkflowInstanceProc.cs" />
+    <Compile Include="LS.SPWorkflowProcessor\LS.SPWorkflowProcessor.Exceptions.cs" />
+    <Compile Include="LS.SPWorkflowProcessor\LS.SPWorkflowProcessor.ResourcesManager.cs" />
+    <Compile Include="LS.SPWorkflowProcessor\LS.SPWorkflowProcessor.Runtime.cs" />
+    <Compile Include="LS.SPWorkflowProcessor\LS.SPWorkflowProcessor.Services.cs" />
+    <Compile Include="LS.SPWorkflowProcessor\LS.SPWorkflowProcessor.Util.cs" />
+    <Compile Include="LS.SPWorkflowProcessor\LS.SPWorkflowSubItem.cs" />
+    <Compile Include="LS.SPWorkflowProcessor\LS.SPWorkflowSubList.cs" />
+    <Compile Include="LS.SPWorkflowProcessor\LS.SPWorkflowTemplateProcessor.cs" />
+    <Compile Include="LS.SPWorkflowProcessor\WorkflowFile.cs" />
+    <Compile Include="LS.SPWorkflowProcessor\WorkflowFileMappingHelper.cs" />
+    <Compile Include="LS.SPWorkflowProcessor\AveSPWorkflowCommonUtility\XmlHelper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\GCommon\GCommonContract\DocAve.GCommonContract.csproj">
+      <Project>{361f3c7c-abbf-42d5-975a-65e4e9866068}</Project>
+      <Name>DocAve.GCommonContract</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\GCommon\GCommonUtility\DocAve.GCommonUtility.csproj">
+      <Project>{7151E862-A761-4A90-ACE6-37D7442047A6}</Project>
+      <Name>DocAve.GCommonUtility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\GCommon\CommonUtility30\DocAve.CommonUtility30.csproj">
+      <Project>{ABF32DB9-9D2A-4F78-96B5-E2B1FAC08658}</Project>
+      <Name>DocAve.CommonUtility30</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Wrapper.Core\Wrapper.Common\Wrapper.Common.csproj">
+      <Project>{9380E15E-5F69-4F2C-889F-E04756F6CCCA}</Project>
+      <Name>Wrapper.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Wrapper.Core\Wrapper.Contract\Wrapper.Contract.csproj">
+      <Project>{b6805753-b35a-4df5-a3a4-27e6868dee09}</Project>
+      <Name>Wrapper.Contract</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Wrapper.Core\Wrapper.CustomUtility\Wrapper.CustomUtility.csproj">
+      <Project>{5FF18312-8DA2-4ABF-BC20-805A18065DB6}</Project>
+      <Name>Wrapper.CustomUtility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Wrapper.Core\Wrapper.Resource\Wrapper.Resource.csproj">
+      <Project>{F977BD26-9DD0-4B6D-95DA-58096DCA1913}</Project>
+      <Name>Wrapper.Resource</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Wrapper.Workflow.Nintex\Wrapper.Workflow.Nintex.csproj">
+      <Project>{99167a05-172b-4c59-8676-5a3fe4018849}</Project>
+      <Name>Wrapper.Workflow.Nintex</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="DocAveStandard.snk" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

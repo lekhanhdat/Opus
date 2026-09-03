@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Library</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+    <AssemblyName>RevIMDiscovery</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Dao\**" />
+    <EmbeddedResource Remove="Dao\**" />
+    <None Remove="Dao\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="DiscoveryService.cs~RF21478b0d.TMP" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Cloud.Sdk.IE" Version="4.2.6" />
+    <PackageReference Include="DataOrchestration.Tag.Sdk" Version="1.0.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\RACommonUtility\RACommonUtility.csproj" />
+    <ProjectReference Include="..\RADB\RADB.csproj" />
+  </ItemGroup>
+
+</Project>

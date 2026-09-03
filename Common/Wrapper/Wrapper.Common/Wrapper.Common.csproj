@@ -1,0 +1,177 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <OutputType>Library</OutputType>
+    <RootNamespace>AvePoint.Wrapper.Common</RootNamespace>
+    <AssemblyName>AgentCommonWrapperCommon</AssemblyName>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>..\..\..\bin\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <OutputPath>..\..\..\bin\Release\</OutputPath>
+    <DefineConstants>TRACE;CODE_ANALYSIS</DefineConstants>
+    <WarningsAsErrors>0168</WarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>..\..\..\DocaveReference\DocAveStandard.snk</AssemblyOriginatorKeyFile>
+    <BaseOutputPath></BaseOutputPath>
+  </PropertyGroup>
+	<PropertyGroup>
+		<EnableUnsafeBinaryFormatterSerialization>true</EnableUnsafeBinaryFormatterSerialization>
+	</PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="Common.DynamicProxy\**" />
+    <Compile Remove="StreamConvertor\**" />
+    <EmbeddedResource Remove="Common.DynamicProxy\**" />
+    <EmbeddedResource Remove="StreamConvertor\**" />
+    <None Remove="Common.DynamicProxy\**" />
+    <None Remove="StreamConvertor\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Common\GlobalCommon\GCommon.GraphAPI\GCommon.GraphAPI.csproj" />
+    <ProjectReference Include="..\..\..\Common\GlobalCommon\GCommonContract\DocAve.GCommonContract.csproj" />
+    <ProjectReference Include="..\..\..\Common\GlobalCommon\GCommonFileReceiver\GCommonFileReceiver.csproj" />
+    <ProjectReference Include="..\..\..\Common\GlobalCommon\GCommonFileSender\GCommonFileSender.csproj" />
+    <ProjectReference Include="..\..\..\Common\GlobalCommon\GCommonNetWork\GCommonNetwork.csproj" />
+    <ProjectReference Include="..\..\..\Common\GlobalCommon\GCommonUtility\DocAve.GCommonUtility.csproj" />
+    <ProjectReference Include="..\..\..\RAI18N\RAI18N.csproj" />
+    <ProjectReference Include="..\..\GlobalCommon\GCommon.Extension\GCommon.Extension.csproj" />
+    <ProjectReference Include="..\..\Microsoft365\Authentication\Microsoft365.Authentication.csproj" />
+    <ProjectReference Include="..\..\Microsoft365\Common\Microsoft365.Common.csproj" />
+    <ProjectReference Include="..\..\Microsoft365\Contract\Microsoft365.Contract.csproj" />
+    <ProjectReference Include="..\..\Microsoft365\SharePoint\Microsoft365.SharePoint.csproj" />
+    <ProjectReference Include="..\..\VCService30\CommonUtility30\DocAve.CommonUtility30.csproj" />
+    <ProjectReference Include="..\Wrapper.Resource\Wrapper.Resource.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\..\DocaveReference\DocAveStandard.snk">
+      <Link>DocAveStandard.snk</Link>
+    </None>
+    <None Update="AgentCommonWrapperConfig.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </None>
+    <None Update="RolesSet\WrapperRuleSet.ruleset">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="MossConfig.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AdfsProtocol.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Castle.Windsor.Extensions.DependencyInjection" Version="6.0.0" />
+    <PackageReference Include="HtmlTextWriter" Version="3.0.2" />
+    <PackageReference Include="log4net" Version="3.3.1" />
+    <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
+    <PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
+    <PackageReference Include="System.Drawing.Common" Version="10.0.2" />
+    <PackageReference Include="System.Security.Cryptography.Xml" Version="10.0.10" />
+    <PackageReference Include="System.ServiceModel.Federation" Version="8.1.2" />
+    <PackageReference Include="Microsoft.DotNet.UpgradeAssistant.Extensions.Default.Analyzers" Version="0.4.421302">
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="HtmlAgilityPack" Version="1.12.4" />
+    <PackageReference Include="System.Dynamic.Runtime" Version="4.3.0" />
+    <PackageReference Include="System.Linq.Queryable" Version="4.3.0" />
+    <PackageReference Include="Microsoft.Windows.Compatibility" Version="10.0.2" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Data.Services.Client" Version="5.8.5" />
+    <PackageReference Include="Microsoft.Identity.Client" Version="4.81.0" />
+    <PackageReference Include="Microsoft.SharePointOnline.CSOM" Version="16.1.26712.12000" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.4" />
+    <PackageReference Include="util.mip" Version="4.12.12" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="AveSharePointUtility.cs" />
+    <Compile Remove="AzurePowerShellRequest\AppAPSTokenManager.cs" />
+    <Compile Remove="AzurePowerShellRequest\APPOnlyAPSTokenCache.cs" />
+    <Compile Remove="AzurePowerShellRequest\AppOnlyAPSTokenManager.cs" />
+    <Compile Remove="AzurePowerShellRequest\AveAzurePowerShellRequest.cs" />
+    <Compile Remove="AzurePowerShellRequest\AzureConst.cs" />
+    <Compile Remove="AzurePowerShellRequest\BecWebServiceAPSR.cs" />
+    <Compile Remove="AzurePowerShellRequest\BecWebServiceInstance.cs" />
+    <Compile Remove="AzurePowerShellRequest\GraphAPSR.cs" />
+    <Compile Remove="AzurePowerShellRequest\IAPSR.cs" />
+    <Compile Remove="AzurePowerShellRequest\IAPSTokenManager.cs" />
+    <Compile Remove="AzurePowerShellRequest\MFATokenManager.cs" />
+    <Compile Remove="AzurePowerShellRequest\References\BecWebServiceCustomBehavior.cs" />
+    <Compile Remove="AzurePowerShellRequest\References\BecWebServiceInspector.cs" />
+    <Compile Remove="AzurePowerShellRequest\References\Exceptions.cs" />
+    <Compile Remove="AzurePowerShellRequest\References\LiveIdentityManager.cs" />
+    <Compile Remove="AzurePowerShellRequest\References\NativeMethods.cs" />
+    <Compile Remove="AzurePowerShellRequest\UserCredentialAPSTokenManager.cs" />
+    <Compile Remove="AzurePowerShellRequest\UserRole.cs" />
+    <Compile Remove="Common.ObjectModel\Admin\IAveClaimProviderOperations.cs" />
+    <Compile Remove="Common.ObjectModel\Admin\IAvePickerEntity.cs" />
+    <Compile Remove="Common.ObjectModel\Auth\Idcrl\IdcrlAuth.cs" />
+    <Compile Remove="Common.ObjectModel\Auth\Idcrl\IdcrlConstants.cs" />
+    <Compile Remove="Common.ObjectModel\Auth\Idcrl\IdcrlEnvironment.cs" />
+    <Compile Remove="Common.ObjectModel\Auth\Idcrl\IdcrlErrorCodes.cs" />
+    <Compile Remove="Common.ObjectModel\Auth\Idcrl\IdcrlMessageConstants.cs" />
+    <Compile Remove="Common.ObjectModel\Auth\Idcrl\IdcrlUtility.cs" />
+    <Compile Remove="Common.ObjectModel\Auth\Idcrl\SharePointOnlineAuthenticationProvider.cs" />
+    <Compile Remove="Common.ObjectModel\Auth\Idcrl\STSSoapFaultCodes.cs" />
+    <Compile Remove="Common.ObjectModel\Auth\ISharePointOnlineAuthenticationProvider.cs" />
+    <Compile Remove="Common.ObjectModel\Auth\SharePointOnlineAuthenticationModule.cs" />
+    <Compile Remove="Common.ObjectModel\Auth\SharePointOnlineAuthenticationProviderHelper.cs" />
+    <Compile Remove="Common.ObjectModel\Auth\SharePointOnlineCredentials.cs" />
+    <Compile Remove="Common.ObjectModel\Field\IAveTaxonomySession.cs" />
+    <Compile Remove="Common.ObjectModel\MySite\IAveColleague.cs" />
+    <Compile Remove="Common.ObjectModel\MySite\IAveColleagueManager.cs" />
+    <Compile Remove="Common.ObjectModel\MySite\IAveLocalizedStringManager.cs" />
+    <Compile Remove="Common.ObjectModel\MySite\IAveMemberGroup.cs" />
+    <Compile Remove="Common.ObjectModel\MySite\IAveMemberGroupManager.cs" />
+    <Compile Remove="Common.ObjectModel\MySite\IAveMembership.cs" />
+    <Compile Remove="Common.ObjectModel\MySite\IAveMembershipManager.cs" />
+    <Compile Remove="Common.ObjectModel\MySite\IAvePrivacyPolicyItem.cs" />
+    <Compile Remove="Common.ObjectModel\MySite\IAveProfileSubtypeProperty.cs" />
+    <Compile Remove="Common.ObjectModel\MySite\IAveProfileSubtypePropertyManager.cs" />
+    <Compile Remove="Common.ObjectModel\MySite\IAveProperty.cs" />
+    <Compile Remove="Common.ObjectModel\MySite\IAvePropertyCollection.cs" />
+    <Compile Remove="Common.ObjectModel\MySite\IAveQuickLink.cs" />
+    <Compile Remove="Common.ObjectModel\MySite\IAveQuickLinkManager.cs" />
+    <Compile Remove="Common.ObjectModel\MySite\IAveSocialComment.cs" />
+    <Compile Remove="Common.ObjectModel\MySite\IAveSocialCommentManager.cs" />
+    <Compile Remove="Common.ObjectModel\MySite\IAveSocialTag.cs" />
+    <Compile Remove="Common.ObjectModel\MySite\IAveSocialTagManager.cs" />
+    <Compile Remove="Common.ObjectModel\MySite\IAveUserProfile.cs" />
+    <Compile Remove="Common.ObjectModel\MySite\IAveUserProfileManager.cs" />
+    <Compile Remove="Common.ObjectModel\MySite\IAveUserProfileValueCollection.cs" />
+    <Compile Remove="Common.ObjectModel\Service\AveSearchInfo.cs" />
+    <Compile Remove="Common.ObjectModel\View\AveXmlView.cs" />
+    <Compile Remove="Common.Utility\Auth\Idcrl\IdcrlAuth.cs" />
+    <Compile Remove="Common.Utility\Auth\Idcrl\IdcrlConstants.cs" />
+    <Compile Remove="Common.Utility\Auth\Idcrl\IdcrlEnvironment.cs" />
+    <Compile Remove="Common.Utility\Auth\Idcrl\IdcrlErrorCodes.cs" />
+    <Compile Remove="Common.Utility\Auth\Idcrl\IdcrlMessageConstants.cs" />
+    <Compile Remove="Common.Utility\Auth\Idcrl\IdcrlUtility.cs" />
+    <Compile Remove="Common.Utility\Auth\Idcrl\Office365ApiLogger.cs" />
+    <Compile Remove="Common.Utility\Auth\Idcrl\SharePointOnlineAuthenticationProvider.cs" />
+    <Compile Remove="Common.Utility\Auth\Idcrl\STSSoapFaultCodes.cs" />
+    <Compile Remove="Common.Utility\Auth\ISharePointOnlineAuthenticationProvider.cs" />
+    <Compile Remove="Common.Utility\Auth\SharePointOnlineAuthenticationModule.cs" />
+    <Compile Remove="Common.Utility\Auth\SharePointOnlineAuthenticationProviderHelper.cs" />
+    <Compile Remove="Common.Utility\Auth\SharePointOnlineCredentials.cs" />
+    <Compile Remove="Common.Utility\AveAuthenticationUtility.cs" />
+    <Compile Remove="Common.Utility\AveFBAUtility.cs" />
+    <Compile Remove="Common.Utility\AveObjectFactory.cs" />
+    <Compile Remove="Common.Utility\SPOnlineAuthentication.cs" />
+    <Compile Remove="Graph\Common\MicrosoftOnlineInstanceExtension.cs" />
+    <Compile Remove="Graph\GroupSiteHelper.cs" />
+    <Compile Remove="Service References\ProvisioningWebService\Reference.cs" />
+    <Compile Remove="SPClientUtility.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Common.ObjectModel\AzurePowerShell\" />
+  </ItemGroup>
+</Project>

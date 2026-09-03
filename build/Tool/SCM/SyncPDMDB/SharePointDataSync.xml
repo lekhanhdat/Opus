@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<dataSync>
+  <logininfo>
+    <db server="10.1.25.24" dbname="PackagingData" username="sa" password="SLfEzz1e6k8IB8NLjQPQpg==" failover=""/>
+    <sp domain="avepoint.com" username="" password=""/>
+  </logininfo>
+  <lists>
+    <list name="Cloud Records Binary Application">
+      <spweburl>https://cnportal.avepoint.net/sites/packaging/Application Acceptance</spweburl>
+      <dblistid>239</dblistid>
+      <dbtable>AllData</dbtable>
+      <camlquery>
+		<![CDATA[<View>
+			<Query>
+			   <Where>
+				 <Eq>
+					<FieldRef Name="Can_x0020_be_x0020_Sync_x0020_DB" />
+					<Value Type="Boolean">1</Value>
+				 </Eq>
+			   </Where>
+			</Query>
+		</View>]]>
+	  </camlquery>
+      <spitemid>ID</spitemid>
+      <dbitemid>column27</dbitemid>
+      <columns>
+        <item spname="Title" dbname="column1" filter="true" />
+		<item spname="Target_x0020_Platform" dbname="column11" filter="false" />
+		<item spname="SVN_x0020_Path" dbname="column16" filter="false" />
+		<item spname="Location_x0020_in_x0020_Package" dbname="column17" filter="false" />
+		<item spname="Comments" dbname="column25" filter="false" />
+		<item spname="Reused" dbname="column26" filter="false" />
+      </columns>
+    </list>
+  </lists>
+</dataSync>

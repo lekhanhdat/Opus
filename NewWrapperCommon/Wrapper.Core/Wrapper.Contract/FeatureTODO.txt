@@ -1,0 +1,5 @@
+﻿SP2013:
+1. 13新添加search Result Sources， Result Types ， Query Rules ，Schema ，Search Settings ，Search and offline availability ，Configuration Import ，Configuration Export，这些功能和10以及07不兼容，需要研究支持。
+
+SP2010:
+1. Site 创建需要添加lock或者使用反射，屏蔽底层的锁。

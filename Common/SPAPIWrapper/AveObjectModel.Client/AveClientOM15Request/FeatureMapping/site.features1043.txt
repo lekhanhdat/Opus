@@ -1,0 +1,32 @@
+﻿063c26fa-3ccc-4180-8a84-b6f98e991df3*Bewaren op basis van bibliotheken en mappen*Hiermee kunnen lijstbeheerders bewaarschema&#39;s voor inhoudstypen vervangen en schema&#39;s voor bibliotheken en mappen instellen.
+0af5989a-3aea-4519-8ab0-85d91abe39ff*Werkstromen*Dit is een verzameling kant-en-klare werkstroomfuncties van SharePoint.
+151d22d9-95a8-4904-a0a3-22e4db85d1e0*Publiceren van collectie op meerdere sites*Biedt de mogelijkheid aan een siteverzameling om lijsten en documentbibliotheken aan te wijzen als catalogusbronnen voor het cross-site publiceren.
+1d253548-c70d-40fd-9930-9d313bedc359*Lint van Project Web App*Het lint bevat de besturingselementen voor Project Web App-pagina&#39;s.
+2fcd5f8a-26b7-4a6a-9755-918566dba90a*Sitebeleid*Biedt siteverzamelbeheerders de mogelijkheid om bewaarschema&#39;s die van toepassing zijn op een site en alle inhoud ervan opnieuw te definiëren.
+3bae86a2-776d-499d-9db8-fa4cdc7884f8*Documentensets*Levert de inhoudstypen die nodig zijn om documentensets te maken en te gebruiken. Maak een documentenset als u meerdere documenten wilt beheren als één werkproduct.
+57ff23fc-ec05-4dd8-b7ed-d93faa7c795d*Aangepaste Help voor siteverzameling*Hiermee kunt u een Help-bibliotheek maken waarin aangepaste Help-informatie voor deze verzameling kan worden opgeslagen.
+697c64b9-3dff-4981-9394-0a62632120ec*Project Web App-instellingen*PMO-instellingen Project Web App
+6abbc685-51bd-4999-946b-b2946fb80981*Voorbeeldvoorstel*Voorbeeldwerkstroom voor Project Server
+6e1e5426-2ebd-4871-8027-c5ca86371ead*Video en uitgebreide media*Voorziet bibliotheken, inhoudtypes en webonderdelen voor het opslaan, beheren en bekijken van rijke media-elementen zoals beelden, geluidsclips en video&#39;s.
+7094bd89-2cfe-490a-8c7e-fbace37b4a34*Rapporteren*Hiermee maakt u rapporten over informatie in Microsoft SharePoint Foundation.
+77fc9e13-e99a-4bd3-9438-a3f69670ed97*Siteoverzicht van zoekprogramma*Deze functie verbetert de optimalisatie voor zoekmachines van de website door het automatisch en op periodieke basis genereren van een sitemap voor zoekmachines met alle geldige URL&#39;s in een SharePoint-website. Anonieme toegang moet zijn ingeschakeld om deze functie te gebruiken.
+7c637b23-06c4-472d-9a9a-7c175762c5c4*Machtigingsvergrendelingsmodus voor gebruikers met beperkte toegang*Wanneer deze functie is ingeschakeld, dan worden machtigingen voor gebruikers in de machtiging &#39;beperkte toegang&#39; (zoals anonieme gebruikers) verlaagd, en hebben ze geen toegang meer tot de toepassingspagina&#39;s.
+7dd73b7c-8763-4f4f-82f5-4927db8c9a90*Duet End User Help Collection*Enables Duet End User Help Collection
+8581a8a7-cf16-4770-ac54-260265ddb0b2*Functies voor siteverzamelingen in SharePoint Server Enterprise*Functies zoals InfoPath Forms Services, Visio Services, Access Services en Excel Services-toepassing, die deel uitmaken van de SharePoint Server Enterprise-licentie.
+8a4b8de2-6fd8-41e9-923c-c7c3c00f8295*Documenten standaard openen in clienttoepassingen*Hiermee configureert u koppelingen naar documenten, zodat deze standaard worden geopend in clienttoepassingen in plaats van in webtoepassingen.
+8dab53d8-e0cf-4595-b192-f71e1823f056*Controle*Schakel de definitie en declaratie van de controle in.
+96c85529-98f5-4a10-8ff5-2a479d34a92a*Project Web App-machtiging voor Excel Web App vernieuwen*Wanneer deze functie actief is, kunnen gebruikers rapporten met Project Web App-gegevens in Excel Web App vernieuwen.
+9a447926-5937-44cb-857a-d3829301c73b*Hub voor syndicatie van inhoudstypen*Hiermee kan een site worden ingericht als een hubsite voor metagegevens van een onderneming.
+9c0834e1-ba47-4d49-812b-7d4fb6fea211*Zoekcentrum Server-webonderdelen en -sjablonen*Met deze functie worden de webonderdelen van de Zoek Server en weergavesjablonen toegevoegd aan uw site. De zoeken zal op de meeste sites werken zonder dat deze functie moet worden geactiveerd, maar als er een bericht verschijnt over ontbrekende zoeksjablonen, dient u vervolgens deze functie te activeren.
+a44d2aa3-affc-4d58-8db4-f4a3af053188*Werkstroom Publicatie goedkeuren*Met deze werkstroom wordt een pagina ter goedkeuring doorgestuurd. Goedkeurders kunnen de pagina goedkeuren of afkeuren, de goedkeuringstaak opnieuw toewijzen of verzoeken om wijzigingen op de pagina. Deze werkstroom kan worden bewerkt in SharePoint Designer.
+ad739f9e-1525-4dec-a25e-10821ca70c95*Project Server-inhoudstype voor goedkeuring*Dit inhoudstype wordt gebruikt in de goedkeuringswerkstroom van Project Server.
+b21b090c-c796-4b0f-ac0f-7ef1659c20ae*Functies voor siteverzamelingen in SharePoint Server Standard*Functies zoals gebruikersprofielen en Search, die deel uitmaken van de SharePoint Server Standard-licentie.
+b435069a-e096-46e0-ae30-899daca4b304*Rapporten en Data Search-ondersteuning*Hier vindt u inhoudstypen, sitekolommen en bibliotheeksjablonen die nodig zijn voor het maken van rapporten en het opzoeken van gegevens in het Enterprise Search Center.
+b50e3104-6812-424f-a011-cc90e6327318*Document-id-service*Id&#39;s toewijzen aan documenten in de siteverzameling, die gebruikt kunnen worden om items onafhankelijk van hun huidige locatie op te halen.
+c845ed8d-9ce5-448c-bd3e-ea71350ce45b*SharePoint 2007-werkstromen*Dit is een verzameling kant-en-klare werkstroomfuncties van SharePoint 2007.
+c85e5759-f323-4efb-b548-443d2216efb5*Werkstroom Goedkeuren voor bestemming*Beheert het verloop- en behoudproces van documenten door deelnemers de mogelijkheid te geven te bepalen of verlopen documenten behouden moeten blijven of moeten worden verwijderd.
+d438adcc-d809-49ab-8022-f240d5989f3b*Aggregated Business Calendar*Displays multiple business calendars in an overlay alongside Exchange and SharePoint calendars
+da2e115b-07e4-49d9-bb2c-35e93bb9fca9*Beheer van records ter plaatse*Schakel de definitie en declaratie van records ter plaatse in.
+f32a5a06-2e62-4682-9850-f6115223b13c*Duet Enterprise Reports Content Types*This feature defines the fields and content types which will be used by Duet Enterprise Reports.
+f6924d36-2fa8-4f0b-b16d-06b7250180fa*Publicatie-infrastructuur SharePoint Server*Deze infrastructuur bevat gecentraliseerde bibliotheken, inhoudstypen, hoofdpagina&#39;s en pagina-indelingen en ondersteunt het plannen van pagina&#39;s en andere publicatiefuncties voor een siteverzameling.
+fde5d850-671e-4143-950a-87b473922dc7*Werkstroom met drie statuswaarden*Gebruik deze werkstroom voor het bijhouden van items in een lijst.

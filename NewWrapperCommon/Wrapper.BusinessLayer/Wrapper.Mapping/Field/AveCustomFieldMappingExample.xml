@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--/********************************************************************
+ *
+ *  PROPRIETARY and CONFIDENTIAL
+ *
+ *  This file is licensed from, and is a trade secret of:
+ *
+ *                   AvePoint, Inc.
+ *                   525 Washington Blvd, Suite 1400
+ *                   Jersey City, NJ 07310
+ *                   United States of America
+ *                   Telephone: +1-201-793-1111
+ *                   WWW: www.avepoint.com
+ *
+ *  Refer to your License Agreement for restrictions on use,
+ *  duplication, or disclosure.
+ *
+ *  RESTRICTED RIGHTS LEGEND
+ *
+ *  Use, duplication, or disclosure by the Government is
+ *  subject to restrictions as set forth in subdivision
+ *  (c)(1)(ii) of the Rights in Technical Data and Computer
+ *  Software clause at DFARS 252.227-7013 (Oct. 1988) and
+ *  FAR 52.227-19 (C) (June 1987).
+ *
+ *  Copyright © 2017-2026 AvePoint® Inc. All Rights Reserved. 
+ *
+ *  Unpublished - All rights reserved under the copyright laws of the United States.
+ */-->
+<config.example>
+  <!--For Content Manager Column Mapping-->
+  <columnMapping>
+    <list name="*">
+      <column name="ToMetadata">
+        <!--这个示例不会对column进行改名，但是会改变类型和Value-->
+        <destinationColumnInfo>
+          <type>Managed Metadata</type>
+          <termGroup>System</termGroup>
+          <termSet>Keywords</termSet>
+        </destinationColumnInfo>
+        <values>
+          <value source="ValueA;#ValueB" destination="Value1;#Value2"/>
+          <value source="ValueB" destination="Value2"/>
+          <value source="ValueC" destination="Value3"/>
+          <value source="ValueD" destination="Value4"/>
+        </values>
+      </column>
+      <column name="Strategy">
+        <!--这个示例会对column进行改名,保持类型和Value-->
+        <destinationcolumnInfo>
+          <name>Initiative</name>
+        </destinationcolumnInfo>
+      </column>
+      <column name="choicecol">
+        <!--这个示例会对column更改类型-->
+        <destinationcolumnInfo>
+          <type>Lookup</type>
+          <webRelativeUrl>sites/site3</webRelativeUrl>
+          <listTitle>look1</listTitle>
+          <fieldName>Title</fieldName>
+        </destinationcolumnInfo>
+        <values>
+          <value source="chi" destination="Value1"/>
+          <value source="ValueB" destination="Value2"/>
+          <value source="ValueC" destination="Value3"/>
+          <value source="ValueD" destination="Value4"/>
+        </values>
+      </column>
+    </list>
+  </columnMapping>
+  <UserMappings>
+    <UserMapping SourceUser="domain1\user1" DestinationUser="domain2\user1" />
+    <UserMapping SourceUser="domain1\user2" DestinationUser="domain2\user2" />
+    <UserMapping SourceUser="domain1\user3" DestinationUser="domain2\user3" />
+  </UserMappings>
+  <DomainMappings>
+    <DomainMapping SourceDomain= "domain1" DestinationDomain= "domain2" />
+  </DomainMappings>
+  <CustomTemplateMapping>
+    <SiteCollection name="*">
+      <TemplateMappings>
+        <TemplateMapping key="aa" value="bb"/>
+        <TemplateMapping key="cc" value="dd"/>
+      </TemplateMappings>
+    </SiteCollection>
+    <Web name="subWeb">
+      <TemplateMappings>
+        <TemplateMapping key="2" value="3"/>
+        <TemplateMapping key="4" value="5"/>
+      </TemplateMappings>
+    </Web>
+  </CustomTemplateMapping>
+</config.example>

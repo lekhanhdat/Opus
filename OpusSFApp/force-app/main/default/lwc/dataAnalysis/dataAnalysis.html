@@ -1,0 +1,43 @@
+<!--Covered by AvePoint copyright and license agreement-->
+<template>
+    <lightning-card>
+        <h3 slot="title">
+            <div class="card-title">{translation.dataAnalysisTitle}</div>
+        </h3>
+        <div class="data-analysis-container">
+            <div class="gadget-toolbar">
+                <div class="object-selection">
+                    <c-selection 
+                        selected-values={selectedObjectTypes} 
+                        is-change={isClearAllFilter} 
+                        options={searchObject}></c-selection>
+                    </div>
+            </div>
+
+            <div>
+                <lightning-datatable 
+                    key-field="id" 
+                    data={visibleData} 
+                    columns={columns} 
+                    min-column-width="200"
+                    class="file-analysis-table"
+                    resize-column-disabled
+                    onrowselection={handleRowSelection}
+                >
+                </lightning-datatable>
+            </div>
+            <div class="pagination">
+                <button onclick={handleFirstPage} disabled={disablePrevious} class="first-btn" title={translation.firstPage}>K</button>
+                <button onclick={handlePrevious} disabled={disablePrevious} title={translation.previousPage}>&lt;</button>
+                <span>{currentDataRange}</span>
+                <button onclick={handleNext} disabled={disableNext} title={translation.nextPage}>&gt;</button>
+            </div>
+            
+            <div class="chart-title">{translation.growthByCreatedTime}</div>
+            <div class="chart-zone">
+                <div class="line-chart-container" lwc:dom="manual"></div>
+            </div>
+        </div>
+    </lightning-card>
+
+</template>

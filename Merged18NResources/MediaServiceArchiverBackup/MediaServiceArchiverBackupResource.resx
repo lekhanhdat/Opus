@@ -1,0 +1,764 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ArchiverAdvancedSearchServiceCloseException" xml:space="preserve">
+    <value>An error occurred while releasing resources: {0}</value>
+  </data>
+  <data name="ArchiverAdvancedSearchServiceGetBranchesByFiltersResult" xml:space="preserve">
+    <value>Filter {0} has {1} result(s).</value>
+  </data>
+  <data name="ArchiverAdvancedSearchServiceGetFullPathException" xml:space="preserve">
+    <value>Unknown index type {0}.</value>
+  </data>
+  <data name="ArchiverAdvancedSearchServiceProcessExceptionArchiverAdvancedSearchException" xml:space="preserve">
+    <value>An error occurred while performing Archiver advanced search: {0}.</value>
+  </data>
+  <data name="ArchiverAdvancedSearchServiceSearchSiteCollectionBegin" xml:space="preserve">
+    <value>Starting advanced search on node: {0}.</value>
+  </data>
+  <data name="ArchiverAdvancedSearchServiceSearchSiteCollectionError" xml:space="preserve">
+    <value>An error occurred while searching site collection {0}: {1}.</value>
+  </data>
+  <data name="ArchiverAdvancedSearchServiceShoeResultArchiverAdvancedSearchResult" xml:space="preserve">
+    <value>Archiver advanced search result: {0}, {1}</value>
+  </data>
+  <data name="ArchiverBackupBrowserServiceArchiverBrowseResultBegin" xml:space="preserve">
+    <value>Begin browsing tree under the node {0}...</value>
+  </data>
+  <data name="ArchiverBackupBrowserServiceDisposeEnd" xml:space="preserve">
+    <value>Browsing tree node finished.</value>
+  </data>
+  <data name="ArchiverBackupBrowserServiceProcessExceptionError" xml:space="preserve">
+    <value>An error occurred while loading the archiver tree, details: {0}.</value>
+  </data>
+  <data name="ArchiverBackupConfirmMessageSenderSendProcessConfirmMessage" xml:space="preserve">
+    <value>Media confirms that the agent has received all the messages: [{0}].</value>
+  </data>
+  <data name="ArchiverBackupConfirmMessageSenderSendProcessException" xml:space="preserve">
+    <value>An error occurred while sending thread for Archive backup: {0}.</value>
+  </data>
+  <data name="ArchiverBackupConfirmMessageSenderSendProcessInfo" xml:space="preserve">
+    <value>The item that is needed to be deleted has been sent to agent, item type: {0}, path: {1}.</value>
+  </data>
+  <data name="ArchiverBackupConfirmMessageSenderSendProcessKeepAlive" xml:space="preserve">
+    <value>Archive send confirm message thread is sending a keepalive message.</value>
+  </data>
+  <data name="ArchiverBackupConfirmMessageSenderSendProcessSend" xml:space="preserve">
+    <value>The item which is needed to be deleted has been sent to agent, this item head is {0}.</value>
+  </data>
+  <data name="ArchiverBackupConfirmMessageSenderSendProcessSendAll" xml:space="preserve">
+    <value>All confirmed messages had been sent to agent.</value>
+  </data>
+  <data name="ArchiverBackupConfirmMessageSenderSendProcessStart" xml:space="preserve">
+    <value>Archive send confirm message thread starting...</value>
+  </data>
+  <data name="ArchiverBackupConfirmMessageSenderStopBegin" xml:space="preserve">
+    <value>Begin stopping archive send confirm message thread...</value>
+  </data>
+  <data name="ArchiverBackupConfirmMessageSenderStopSuccessfully" xml:space="preserve">
+    <value>Stopped archive send confirm message thread successfully.</value>
+  </data>
+  <data name="ArchiverBackupDataCalculatorCalculateBegin" xml:space="preserve">
+    <value>Begin calculating archiver data size in physical device...</value>
+  </data>
+  <data name="ArchiverBackupDataCalculatorCalculateSize" xml:space="preserve">
+    <value>Calculated successfully. ID: {0}, size: {1}</value>
+  </data>
+  <data name="ArchiverBackupDataCalculatorDisposeCalculateFinish" xml:space="preserve">
+    <value>Calculating archiver data size in physical device completed.</value>
+  </data>
+  <data name="ArchiverBackupDataCalculatorProcessExceptionError" xml:space="preserve">
+    <value>Calculated archiver data size in physical device {0} failed, the detail is {1}.</value>
+  </data>
+  <data name="ArchiverBackupDataWriterAssembleIndexHeaderArgumentNullException" xml:space="preserve">
+    <value>The detail is {0}.</value>
+  </data>
+  <data name="ArchiverBackupDataWriterAssembleIndexHeaderError" xml:space="preserve">
+    <value>Unsupported header type {0}.</value>
+  </data>
+  <data name="ArchiverBackupDataWriterCloseEnd" xml:space="preserve">
+    <value>Closed data writer successfully.</value>
+  </data>
+  <data name="ArchiverBackupDataWriterGetDataFileNameUnknownFileTypeException" xml:space="preserve">
+    <value>Data Block Changing: unknown file type: {0}.</value>
+  </data>
+  <data name="ArchiverBackupDataWriterGetFileHeaderXMLUnknownFileTypeException" xml:space="preserve">
+    <value>Unknown store type: {0}.</value>
+  </data>
+  <data name="ArchiverBackupDataWriterHandleHeaderBegin" xml:space="preserve">
+    <value>Handle header: {0}.</value>
+  </data>
+  <data name="ArchiverBackupDataWriterHandleHeaderInfo" xml:space="preserve">
+    <value>Begin handling header whose type is: {0}, path is: {1}...</value>
+  </data>
+  <data name="ArchiverBackupDataWriterHandleTailHandle" xml:space="preserve">
+    <value>Handle tail: {0}</value>
+  </data>
+  <data name="ArchiverBackupDataWriterOpenBegin" xml:space="preserve">
+    <value>Begin opening archive backup data writer...</value>
+  </data>
+  <data name="ArchiverBackupServiceOpenBegin" xml:space="preserve">
+    <value>Begin converting request to archive backup job information...</value>
+  </data>
+  <data name="ArchiverBackupServiceOpenEnd" xml:space="preserve">
+    <value>The pretreatment of the backup finished successfully.</value>
+  </data>
+  <data name="ArchiverBackupUpgradeBrowserServiceProcessExceptionError" xml:space="preserve">
+    <value>An error occurred while archiving upgrade browse tree, details: {0}.</value>
+  </data>
+  <data name="ArchiverBackupUpgradeBrowseServiceBrowseBegin" xml:space="preserve">
+    <value>Begin browsing the tree under the node...</value>
+  </data>
+  <data name="ArchiverBackupUpgradeBrowseServiceBrowseSuccessed" xml:space="preserve">
+    <value>Successfully browsed the tree under the node.</value>
+  </data>
+  <data name="ArchiverBackupUpgradeBrowseServiceOpenBegin" xml:space="preserve">
+    <value>Begin opening the index logical device...</value>
+  </data>
+  <data name="ArchiverBackupUpgradeBrowseServiceOpenIndexProcessor" xml:space="preserve">
+    <value>Begin opening the index processor...</value>
+  </data>
+  <data name="ArchiverBackupUpgradeBrowseServiceOpenIndexProcessorSuccessed" xml:space="preserve">
+    <value>Successfully opened the index processor.</value>
+  </data>
+  <data name="ArchiverBackupUpgradeBrowseServiceOpenSuccessed" xml:space="preserve">
+    <value>Successfully opened the index logical device.</value>
+  </data>
+  <data name="ArchiverBackupUpgradeServiceInsertControlSiteMasterIndexFailed" xml:space="preserve">
+    <value>An error occurred while inserting indexes into the control sitemaster table, the URL is: {0}, details: {1}.</value>
+  </data>
+  <data name="ArchiverBackupUpgradeServiceInsertControlSiteMasterIndexSuccessed" xml:space="preserve">
+    <value>Successfully inserted the indexes into the control sitemaster table, details: {0}.</value>
+  </data>
+  <data name="ArchiverBackupUpgradeServiceProcessExceptionError" xml:space="preserve">
+    <value>An error occurred while archiving upgrade data, details: {0}.</value>
+  </data>
+  <data name="ArchiverBackupUpgradeServiceUpgradeError" xml:space="preserve">
+    <value>An error occurred while upgrading data, details: {0}.</value>
+  </data>
+  <data name="ArchiverFiltersHandlerGetRealNameException" xml:space="preserve">
+    <value>Unknown index type: {0}</value>
+  </data>
+  <data name="ArchiverFiltersHandlerValidateByConditionAndRuleConditionException" xml:space="preserve">
+    <value>Not supported filter condition: {0}</value>
+  </data>
+  <data name="ArchiverFiltersHandlerValidateByConditionAndRuleRuleException" xml:space="preserve">
+    <value>Not supported filter rule type: {0}</value>
+  </data>
+  <data name="ArchiverFullTextIndexServiceCloseFailed" xml:space="preserve">
+    <value>Failed to release resources, details: {0}.</value>
+  </data>
+  <data name="ArchiverFullTextIndexServiceCloseSuccessfully" xml:space="preserve">
+    <value>Successfully released all the resources.</value>
+  </data>
+  <data name="ArchiverFullTextIndexServiceOpenBegin" xml:space="preserve">
+    <value>Media starts preparing data for search.exe.</value>
+  </data>
+  <data name="ArchiverFullTextIndexServiceRestoreEnd" xml:space="preserve">
+    <value>Archiver fulltext index finished with {0} item(s) failed.</value>
+  </data>
+  <data name="ArchiverFullTextIndexServiceRestoreError" xml:space="preserve">
+    <value>An error occurred while indexing fulltext, details: {0}.</value>
+  </data>
+  <data name="ArchiverFullTextIndexServiceSendIndexDataBegin" xml:space="preserve">
+    <value>Begin sending item {0}...  The item type is: {1}.</value>
+  </data>
+  <data name="ArchiverFullTextIndexServiceSendIndexDataError" xml:space="preserve">
+    <value>An error occurred while indexing fulltext to {0}, the file type is: {1}, details: {2}.</value>
+  </data>
+  <data name="ArchiverHeadAndBodyIndexServiceGetContentDataNumsByJobIdInformation" xml:space="preserve">
+    <value>Begin getting content data number by job ID...</value>
+  </data>
+  <data name="ArchiverHeadAndBodyIndexServiceGetCountFromBodyArgumentNullException" xml:space="preserve">
+    <value>An error occurred while getting the count: parent path is null.</value>
+  </data>
+  <data name="ArchiverHeadAndBodyIndexServiceGetMetaDataNumsByJobIdInformation" xml:space="preserve">
+    <value>Begin getting content data number by job ID...</value>
+  </data>
+  <data name="ArchiverHeadAndBodyIndexServiceGetRetensionItemsByJobIdInformation" xml:space="preserve">
+    <value>Begin getting retention items by job ID...</value>
+  </data>
+  <data name="ArchiverHeadAndBodyIndexServiceGetRetentionInformation" xml:space="preserve">
+    <value>Begin getting data file retention information...</value>
+  </data>
+  <data name="ArchiverHeadAndBodyIndexServiceLoadAllArgumentNullException" xml:space="preserve">
+    <value>Loaded failed: the path is null.</value>
+  </data>
+  <data name="ArchiverHeadAndBodyIndexServiceLoadArgumentNullException" xml:space="preserve">
+    <value>Loaded failed: the path is null.</value>
+  </data>
+  <data name="ArchiverHeadAndBodyIndexServiceLoadByFileGUIDArgumentNullException" xml:space="preserve">
+    <value>File GUID is empty.</value>
+  </data>
+  <data name="ArchiverHeadAndBodyIndexServiceLoadFoldersArgumentNullException" xml:space="preserve">
+    <value>An error occurred while loading folders: parent path is null.</value>
+  </data>
+  <data name="ArchiverHeadAndBodyIndexServiceLoadFoldersStart" xml:space="preserve">
+    <value>Begin loading folders under {0}...</value>
+  </data>
+  <data name="ArchiverHeadAndBodyIndexServiceLoadItemsArgumentNullException" xml:space="preserve">
+    <value>An error occurred while loading items: parent path is null.</value>
+  </data>
+  <data name="ArchiverHeadAndBodyIndexServiceLoadItemsStart" xml:space="preserve">
+    <value>Begin loading items under {0}...</value>
+  </data>
+  <data name="ArchiverHeadAndBodyIndexServiceLoadStart" xml:space="preserve">
+    <value>Begin loading load item from {0}...</value>
+  </data>
+  <data name="ArchiverHeadAndBodyIndexServiceUpdateContentOffsetsInformation" xml:space="preserve">
+    <value>Begin updating content offset by ID...</value>
+  </data>
+  <data name="ArchiverHeadAndBodyIndexServiceUpdateHeaderArchivedNotSupportedException" xml:space="preserve">
+    <value>Unknown store type: {0}.</value>
+  </data>
+  <data name="ArchiverIndexServiceCloseEnd" xml:space="preserve">
+    <value>Closed index service successfully.</value>
+  </data>
+  <data name="ArchiverIndexServiceOpenBegin" xml:space="preserve">
+    <value>Begin opening index service...</value>
+  </data>
+  <data name="ArchiverIndexServiceOpenEnd" xml:space="preserve">
+    <value>Opened index service successfully.</value>
+  </data>
+  <data name="ArchiverIndexServiceOpenIndexCanNotFoundException" xml:space="preserve">
+    <value>Cannot find the index in this logical device.</value>
+  </data>
+  <data name="ArchiverMergeIndexServiceMergingIndexError" xml:space="preserve">
+    <value>An error occurred while merging indexes together, details: {0}.</value>
+  </data>
+  <data name="ArchiverMergeIndexServiceRealMergeIndexError" xml:space="preserve">
+    <value>The error is {0}.</value>
+  </data>
+  <data name="ArchiverMergeIndexServiceUpdateJobProgressError" xml:space="preserve">
+    <value>An error occurred while updating job progress: {0}.</value>
+  </data>
+  <data name="ArchiverMergeIndexServiceUpdateJobProgressInfo" xml:space="preserve">
+    <value>Current merging index progress is {0}.</value>
+  </data>
+  <data name="ArchiverRestoreBrowserBrowseArchiverBackupDataLevelException" xml:space="preserve">
+    <value>Unknown level: {0}.</value>
+  </data>
+  <data name="ArchiverRestoreBrowserOpenModeException" xml:space="preserve">
+    <value>Unknown load tree mode: {0}.</value>
+  </data>
+  <data name="ArchiverRestoreDataReaderCloseEnd" xml:space="preserve">
+    <value>Closed archive restore data reader successfully.</value>
+  </data>
+  <data name="ArchiverRestoreDataReaderDataBlockOpeningBegin" xml:space="preserve">
+    <value>Begin opening stream {0}... The file size is {1}.</value>
+  </data>
+  <data name="ArchiverRestoreDataReaderGetFileNameByAveVersionContentException" xml:space="preserve">
+    <value>This version data does not support content.</value>
+  </data>
+  <data name="ArchiverRestoreDataReaderGetFileNameByAveVersionTypeException" xml:space="preserve">
+    <value>Unknown data type {0}.</value>
+  </data>
+  <data name="ArchiverRestoreDataReaderOpenBegin" xml:space="preserve">
+    <value>Begin opening archive restore data reader...</value>
+  </data>
+  <data name="ArchiverRestoreServiceCalculateTotalItemNumBegin" xml:space="preserve">
+    <value>Start calculating restore data...</value>
+  </data>
+  <data name="ArchiverRestoreServiceCalculateTotalItemNumEnd" xml:space="preserve">
+    <value>The restored data count of the restore job is {0}.</value>
+  </data>
+  <data name="ArchiverRestoreServiceCloseEnd" xml:space="preserve">
+    <value>Post restore is successful and archive restore complete.</value>
+  </data>
+  <data name="ArchiverRestoreServiceGetStreamOpenTypeException" xml:space="preserve">
+    <value>Unknown data version: {0}</value>
+  </data>
+  <data name="ArchiverRestoreServiceOpenAfterCut" xml:space="preserve">
+    <value>After cut tree{0} {1}</value>
+  </data>
+  <data name="ArchiverRestoreServiceOpenBeforeCut" xml:space="preserve">
+    <value>Start cutting tree...{0} {1}</value>
+  </data>
+  <data name="ArchiverRestoreServiceOpenBegin" xml:space="preserve">
+    <value>Prepare the pretreatment of the archiver restore service.</value>
+  </data>
+  <data name="ArchiverRestoreServicePreRestoreModeException" xml:space="preserve">
+    <value>Unknown loading tree mode: {0}.</value>
+  </data>
+  <data name="ArchiverRestoreServiceSendItemDataException" xml:space="preserve">
+    <value>An error occurred while sending the data, details: {0}.</value>
+  </data>
+  <data name="ArchiverRestoreServiceSendItemDataSendData" xml:space="preserve">
+    <value>Begin sending the data of [{0}]. And the version flag of current item is: {1}.</value>
+  </data>
+  <data name="ArchiverRestoreServiceUpdateJobProgressError" xml:space="preserve">
+    <value>An error occurred while updating job progress, details: {0}.</value>
+  </data>
+  <data name="ArchiverRestoreServiceUpdateJobProgressUpdateProgress" xml:space="preserve">
+    <value>Begin updating job progress {0}...</value>
+  </data>
+  <data name="ArchiverRestoreStatisticsCalculatorCalculateStatisticsForeachIndexUnknownType" xml:space="preserve">
+    <value>Unknown index type: {0}.</value>
+  </data>
+  <data name="ArchiverRestoreStatisticsCalculatorGetRestoreStatisticsResult" xml:space="preserve">
+    <value>the result statistics is : {0}SiteCollection:   Count: {1}  {0}                  Size:  {2}  {0}Site:             Count: {3}  {0}                  Size:  {4}  {0}List:             Count: {5}  {0}                  Size:  {6}  {0}Folder:           Count: {7}  {0}                  Size:  {8}  {0}Document:         Count: {9}  {0}                  Size:  {10} {0}DocumentVersion:  Count: {11} {0}                  Size:  {12} {0}Item:             Count: {13} {0}                  Size:  {14} {0}ItemVersion:      Count: {15} {0}                  Size:  {16} {0}Attachment:       Count: {17} {0}                  Size:  {18} {0}</value>
+  </data>
+  <data name="ArchiverRestoreStatisticsCalculatorOpenBegin" xml:space="preserve">
+    <value>Start calculating archive restore statistics...</value>
+  </data>
+  <data name="ArchiverRestoreStatisticsCalculatorProcessExceptionError" xml:space="preserve">
+    <value>An error occurred while calculating restore statistics, details: {0}.</value>
+  </data>
+  <data name="ArchiverRestoreToFSServiceCalculateTotalItemNumResult" xml:space="preserve">
+    <value>The count of items is {0}.</value>
+  </data>
+  <data name="ArchiverRestoreToFSServiceCalculateTotalItemNumStart" xml:space="preserve">
+    <value>Start calculating item that is needed to restore...</value>
+  </data>
+  <data name="ArchiverRestoreToFSServiceCloseError" xml:space="preserve">
+    <value>An error occurred while restoring data to FS: {0}</value>
+  </data>
+  <data name="ArchiverRestoreToFSServiceCloseSendJobSummaryError" xml:space="preserve">
+    <value>An error occurred while updating job summary, details: {0}.</value>
+  </data>
+  <data name="ArchiverRestoreToFSServiceCloseSucceed" xml:space="preserve">
+    <value>Restore data in Archiver to FS completed.</value>
+  </data>
+  <data name="ArchiverRestoreToFSServiceCreateFolderOrFileNotWrite" xml:space="preserve">
+    <value>The type [{1}] of this file does not need to write to FS [{0}].</value>
+  </data>
+  <data name="ArchiverRestoreToFSServiceCreateFolderOrFileOpen" xml:space="preserve">
+    <value>Opening or creating directory {0}...</value>
+  </data>
+  <data name="ArchiverRestoreToFSServiceGetStreamOpenTypeException" xml:space="preserve">
+    <value>Unknown data version: {0}</value>
+  </data>
+  <data name="ArchiverRestoreToFSServiceOpenAfterCut" xml:space="preserve">
+    <value>After cut tree{0} {1}</value>
+  </data>
+  <data name="ArchiverRestoreToFSServiceOpenBeforeCut" xml:space="preserve">
+    <value>Start cutting tree{0} {1}</value>
+  </data>
+  <data name="ArchiverRestoreToFSServiceOpenBegin" xml:space="preserve">
+    <value>Prepare to archive restore to FS.</value>
+  </data>
+  <data name="ArchiverRestoreToFSServiceSendItemDataDtoException" xml:space="preserve">
+    <value>An error occurred while sending data, details: {0}.</value>
+  </data>
+  <data name="ArchiverRestoreToFSServiceSendItemDataDtoRestore" xml:space="preserve">
+    <value>Begin restoring: {0}</value>
+  </data>
+  <data name="ArchiverRestoreToFSServiceUpdateJobProgressError" xml:space="preserve">
+    <value>An error occurred while updating job progress: {0}</value>
+  </data>
+  <data name="ArchiverRestoreToFSServiceUpdateJobReportException" xml:space="preserve">
+    <value>An error occurred while updating job report, details: {0}.</value>
+  </data>
+  <data name="ArchiverRestoreToFSServiceWriteDataToFileWrite" xml:space="preserve">
+    <value>Writing file {0} to {1}...</value>
+  </data>
+  <data name="ArchiverRestoreTreeHandlerConvertRequestToRestoreJobCuttedTree" xml:space="preserve">
+    <value>The restore tree after cutting: {0} {1}.</value>
+  </data>
+  <data name="ArchiverRestoreTreeHandlerConvertRequestToRestoreJobInitTree" xml:space="preserve">
+    <value>Init tree: {0} {1}.</value>
+  </data>
+  <data name="ArchiverRestoreTreeHandlerProcessNodeDtoInternalNodeException" xml:space="preserve">
+    <value>Leaf node is unchecked.</value>
+  </data>
+  <data name="ArchiverRestoreTreeHandlerSendAllChildrenDtoSendChildren" xml:space="preserve">
+    <value>Begin sending all children under {0}...</value>
+  </data>
+  <data name="ArchiverRestoreTreeHandlerSendSelectedItemsDtoSendItems" xml:space="preserve">
+    <value>Begin sending selected items data...</value>
+  </data>
+  <data name="ArchiverRestoreTreeHandlerSendSubItemsDtoSendSubItems" xml:space="preserve">
+    <value>Begin sending sub items data from {0}...</value>
+  </data>
+  <data name="ArchvierRestoreToFSServiceProcessExceptionError" xml:space="preserve">
+    <value>An error occurred while restoring data to file system, details: {0}.</value>
+  </data>
+  <data name="MergeIndexServiceGenerateJobReportError" xml:space="preserve">
+    <value>Generated job report failed, detail is {0}.</value>
+  </data>
+  <data name="MergeIndexServiceGenerateJobReportFinished" xml:space="preserve">
+    <value>Generated job report successfully, job: {0}</value>
+  </data>
+  <data name="MergeIndexServiceInsertIntoMainIndexBodyBegin" xml:space="preserve">
+    <value>Begin inserting data into {0} table...</value>
+  </data>
+  <data name="MergeIndexServiceInsertIntoMainIndexBodyEnd" xml:space="preserve">
+    <value>Insert data into {0} table completed.</value>
+  </data>
+  <data name="MergeIndexServiceInsertIntoMainIndexHeadBegin" xml:space="preserve">
+    <value>Begin inserting data into {0} table...</value>
+  </data>
+  <data name="MergeIndexServiceInsertIntoMainIndexHeadEnd" xml:space="preserve">
+    <value>Insert data into {0} table completed.</value>
+  </data>
+  <data name="MergeIndexServiceMergeIndexCount" xml:space="preserve">
+    <value>{0} pieces of record need to be inserted.</value>
+  </data>
+  <data name="MergeIndexServiceMergeIndexEnd" xml:space="preserve">
+    <value>Merging index is successful.</value>
+  </data>
+  <data name="MergeIndexServiceOpenBegin" xml:space="preserve">
+    <value>Begin merging index...</value>
+  </data>
+  <data name="MergeIndexServiceOpenOpenIndexLogicalDeviceSuccessfully" xml:space="preserve">
+    <value>Opened indexLogicalDevice successfully.</value>
+  </data>
+  <data name="MergeIndexServiceProcessExceptionError" xml:space="preserve">
+    <value>Merged index failed, details: {0}.</value>
+  </data>
+  <data name="MergeIndexServiceUpdateJobStatusAndControlTableError" xml:space="preserve">
+    <value>Updated job status and control table failed, details: {0}.</value>
+  </data>
+  <data name="RetentionServiceDeleteDataFromDeviceError" xml:space="preserve">
+    <value>Failed to delete file {0}, details: {1}.</value>
+  </data>
+  <data name="RetentionServiceDeleteDataFromDeviceWarn" xml:space="preserve">
+    <value>An error occurred while deleting file {0}, details: {1}.</value>
+  </data>
+  <data name="RetentionServiceDeleteFileByStorageInfoInfo" xml:space="preserve">
+    <value>Successfully deleted the data whose storage information is [{0}].</value>
+  </data>
+  <data name="RetentionServiceDeleteFileByStorageInfoWarn" xml:space="preserve">
+    <value>An error occurred while deleting file {0}, details: {1}.</value>
+  </data>
+  <data name="RetentionServiceGenerateJobReportBegin" xml:space="preserve">
+    <value>Start generating job report... Job: {0}</value>
+  </data>
+  <data name="RetentionServiceGenerateJobReportComplete" xml:space="preserve">
+    <value>Generate job report completed. Job: {0}</value>
+  </data>
+  <data name="RetentionServiceGenerateJobReportError" xml:space="preserve">
+    <value>An error occurred while generating job report, details: {1}. Job: {0}</value>
+  </data>
+  <data name="RetentionServiceMoveJobDataBegin" xml:space="preserve">
+    <value>Start executing moving data. Job: {0}</value>
+  </data>
+  <data name="RetentionServiceMoveJobDataError" xml:space="preserve">
+    <value>An error occurred while moving data, job {0}, details: {1}.</value>
+  </data>
+  <data name="RetentionServiceMoveJobDataFinished" xml:space="preserve">
+    <value>Moved data successfully. Job: {0}, size: {1} bytes</value>
+  </data>
+  <data name="RetentionServiceOpenDestinationDataDevice" xml:space="preserve">
+    <value>Begin opening destinationDataLogicalDevice...</value>
+  </data>
+  <data name="RetentionServiceOpenDestinationDataDeviceFinished" xml:space="preserve">
+    <value>Opened destinationDataLogicalDevice successfully.</value>
+  </data>
+  <data name="RetentionServiceOpenIndexAndDataDevice" xml:space="preserve">
+    <value>Begin opening IndexLogicalDevice and DataLogicalDevice...</value>
+  </data>
+  <data name="RetentionServiceOpenIndexAndDataDeviceFinished" xml:space="preserve">
+    <value>Opened indexLogicalDevice and dataLogicalDevice successfully.</value>
+  </data>
+  <data name="RetentionServiceRealMoveInvalidDevice" xml:space="preserve">
+    <value>Current storage system is not valid, details: {1}.</value>
+  </data>
+  <data name="RetentionServiceRetainJobDataBegin" xml:space="preserve">
+    <value>Start deleting data... Job: {0}</value>
+  </data>
+  <data name="RetentionServiceRetainJobDataDeleteDataError" xml:space="preserve">
+    <value>An error occurred while deleting data, job: {0} details: {1}.</value>
+  </data>
+  <data name="RetentionServiceRetainJobDataDeleteDataFinished" xml:space="preserve">
+    <value>Deleted data successfully, job: {0}, size: {1} bytes.</value>
+  </data>
+  <data name="RetentionServiceRetainUnknownFileTypeException" xml:space="preserve">
+    <value>Unknown retention rule type: {0}</value>
+  </data>
+  <data name="RetentionServiceUpdateJobStatusAndControlTableBegin" xml:space="preserve">
+    <value>Begin updating the manager table and job status...</value>
+  </data>
+  <data name="RetentionServiceUpdateJobStatusAndControlTableError" xml:space="preserve">
+    <value>Failed to update the manager table and job status, details: {0}.</value>
+  </data>
+  <data name="ArchiverBackupUpgradeServiceGenerateJobReportBegin" xml:space="preserve">
+    <value>Begin generating Archiver data upgrade job report...</value>
+  </data>
+  <data name="ArchiverBackupUpgradeServiceGenerateJobReportError" xml:space="preserve">
+    <value>An error occurred while generating Archiver data job report, details: {0}.</value>
+  </data>
+  <data name="ArchiverBackupUpgradeServiceGenerateJobReportFinished" xml:space="preserve">
+    <value>Finished generating archiver data upgrade job report.</value>
+  </data>
+  <data name="ArchiverBackupUpgradeServiceOpenIndexProcessorBegin" xml:space="preserve">
+    <value>Begin opening index processor...</value>
+  </data>
+  <data name="ArchiverBackupUpgradeServiceOpenIndexProcessorSuccessed" xml:space="preserve">
+    <value>Successfully opened the index processor.</value>
+  </data>
+  <data name="ArchiverBackupUpgradeBrowseServiceBrowseDirectoryWarning" xml:space="preserve">
+    <value>There is no directories under the node.</value>
+  </data>
+  <data name="ArchiverBackupUpgradeBrowseServiceGetSiteMasterIndexError" xml:space="preserve">
+    <value>No index was found in sitemasterindex table.</value>
+  </data>
+  <data name="ArchiverBackupUpgradeServiceVerifyDataFileExistError" xml:space="preserve">
+    <value>The data of item {1} was not mapped, detials: {0}.</value>
+  </data>
+  <data name="ArchiverBackupUpgradeServiceVerifyDataMappedBegin" xml:space="preserve">
+    <value>Begin verifying data mapping status, SiteUrl: {0}...                                    </value>
+  </data>
+  <data name="ArchiverBackupUpgradeServiceVerifyDataMappedError" xml:space="preserve">
+    <value>Upgraded Data is not mapped, detials: {0}.                                                     </value>
+  </data>
+  <data name="ArchiverBackupUpgradeServiceVerifyDataMappedFinished" xml:space="preserve">
+    <value>Verifing data mapping status finished, the site URL is: {0}.</value>
+  </data>
+  <data name="EndUserArchiverBrowserServiceAddParentNodeUrl" xml:space="preserve">
+    <value>Add parent node with URL: {0}.</value>
+  </data>
+  <data name="EndUserArchiverBrowserServiceBrowseInfo" xml:space="preserve">
+    <value>Start viewing sub node in [{0}]...</value>
+  </data>
+  <data name="EndUserArchiverBrowserServiceBrowseStartView" xml:space="preserve">
+    <value>Successfully opened the device and begin viewing the node whose MD5 is [{0}].</value>
+  </data>
+  <data name="EndUserArchiverBrowserServiceDisposeFinish" xml:space="preserve">
+    <value>Viewing sub nodes for end user archiver finished.</value>
+  </data>
+  <data name="EndUserArchiverBrowserServiceOpenInfo" xml:space="preserve">
+    <value>Begin opening index device for end user archiver view...</value>
+  </data>
+  <data name="EndUserArchiverBrowserServiceProcessExceptionError" xml:space="preserve">
+    <value>An error occurred while viewing the node in end user archiver, details: {0}.</value>
+  </data>
+  <data name="ArchiverBackupUpgradeServiceExecuteVerifyError" xml:space="preserve">
+    <value>An error occured while verifying data: file name: {0}, details: {1}.</value>
+  </data>
+  <data name="ArchiverBackupUpgradeServiceExecuteInsertError" xml:space="preserve">
+    <value>An error occurred while merging the index, site collection: {0}, details: {1}.</value>
+  </data>
+  <data name="ArchiverBackupUpgradeServiceInsertIntoJobInfoTableError" xml:space="preserve">
+    <value>An error occurred while merging the jobinfo table, details: {0}.</value>
+  </data>
+  <data name="ArchiverBackupUpgradeServiceInsertIntoSiteMasterIndexError" xml:space="preserve">
+    <value>An error occurred while merging the sitemaster table, details: {0}.</value>
+  </data>
+  <data name="ArchiverBackupUpgradeServiceReInsertError" xml:space="preserve">
+    <value>An error occurred while merging the index, item: {0}, details: {1}.</value>
+  </data>
+  <data name="EndUserArchiverBrowserServiceBrowseChildrenCount" xml:space="preserve">
+    <value>Current node has {0} children.</value>
+  </data>
+  <data name="ArchiverFullTextIndexServiceSendIndexDataSuccessfully" xml:space="preserve">
+    <value>Successfully sent  item {0}, the item type is {1}.</value>
+  </data>
+  <data name="ArchiverRestoreDataReaderOpenDataBlockBeginDebug" xml:space="preserve">
+    <value>Begin invoking opendatablock method...</value>
+  </data>
+  <data name="ArchiverFullTextIndexServiceOpenJobInfo" xml:space="preserve">
+    <value>The information of archiver fulltext job is {0}.</value>
+  </data>
+  <data name="ArchiverBackupRetentionServiceOpenStart" xml:space="preserve">
+    <value>Begin archiving retention job whose jobID is {0}...</value>
+  </data>
+  <data name="ArchiverBackupRetentionServiceUpdateJobStatusAndControlTableEnd" xml:space="preserve">
+    <value>Finished archiving retention job whose jobID is {0}.</value>
+  </data>
+  <data name="ArchiverBackupDataWriterInitResourceFinished" xml:space="preserve">
+    <value>Updating the job info table with encryption information  [{0}] finished.</value>
+  </data>
+  <data name="ArchiverBackupRetentionServiceMoveAndDeleteFileFromDeviceDataMode" xml:space="preserve">
+    <value>The data mode of this job is {0}.</value>
+  </data>
+  <data name="ArchiverBackupRetentionServiceMoveAndDeleteFileFromDeviceInfo" xml:space="preserve">
+    <value>Retention info is: {0}, content file number is: {1}.</value>
+  </data>
+  <data name="ArchiverRebuildIndexCommandExecuteCommandError" xml:space="preserve">
+    <value>An error occurred while rebuilding index, details: {0}.</value>
+  </data>
+  <data name="ArchiverRestoreServiceSendItemDataError" xml:space="preserve">
+    <value>An error occurred while accessing to the data, details: {0}.</value>
+  </data>
+  <data name="ArchiverSiteMasterIndexServiceGetRetentionTimeSpanByJobIdWarn" xml:space="preserve">
+    <value>An error occurred while searching retention time span, details: {0}.</value>
+  </data>
+  <data name="EndUserArchiverDownloadServiceDownloadPathMD5" xml:space="preserve">
+    <value>The MD5 of current file path is [{0}].</value>
+  </data>
+  <data name="EndUserBrowserIndexServiceGetChildIndexListInfo" xml:space="preserve">
+    <value>Current node archive time is {0}, final disposition time is {1} with tick {2}.</value>
+  </data>
+  <data name="EndUserBrowserIndexServiceGetRetentionTimeSpanInfo" xml:space="preserve">
+    <value>Retention time span is {0} seconds.</value>
+  </data>
+  <data name="EndUserErrorPageCheckServiceCheckFinished" xml:space="preserve">
+    <value>Checking the url finished and the result is {0}.</value>
+  </data>
+  <data name="EndUserErrorPageCheckServiceCheckStartCheckingUrl" xml:space="preserve">
+    <value>Initializing the device finished and start checking the URL [{0}].</value>
+  </data>
+  <data name="EndUserErrorPageCheckServiceDisposeFinished" xml:space="preserve">
+    <value>Checking error page finished.</value>
+  </data>
+  <data name="EndUserErrorPageCheckServiceProcessExceptionError" xml:space="preserve">
+    <value>An error occurred while checking error page, details: {0}.</value>
+  </data>
+  <data name="ExportToConcordanceServiceDoRestoreError" xml:space="preserve">
+    <value>An error occurred while exporting item {0}, details: {1}.</value>
+  </data>
+  <data name="ExportToConcordanceServiceDoRestoreFinished" xml:space="preserve">
+    <value>Exporting item [{0}] finished.</value>
+  </data>
+  <data name="ExportToConcordanceServiceDoRestorePathMD5" xml:space="preserve">
+    <value>The MD5 of current file path is [{0}].</value>
+  </data>
+  <data name="ExportToConcordanceServiceDoRestoreProcessExceptionError" xml:space="preserve">
+    <value>An error occurred while exporting data, details: {0}.</value>
+  </data>
+  <data name="ArchiverBackupVerifyImportDataServiceNotMappedAllMessage" xml:space="preserve">
+    <value>Upgrade data is not mapped all .</value>
+  </data>
+  <data name="ArchiverBackupVerifyImportDataServiceGetUpgradeInfoError" xml:space="preserve">
+    <value>Can't find any indexes which need to upgrade from the device{0}.</value>
+  </data>
+  <data name="ArchiverBackupUpgradeServiceUpgradeContinue" xml:space="preserve">
+    <value>Skip to upgrade the sitecollection, detail:{0}.</value>
+  </data>
+  <data name="ArchiverBackupUpgradeServiceUpgradeIndexLogicalDeviceNotFound" xml:space="preserve">
+    <value>Can not find the index logical device, details:{0}.</value>
+  </data>
+  <data name="ArchiverRestoreToFSServiceErrorMessage" xml:space="preserve">
+    <value>Failed to run the restore job.</value>
+  </data>
+  <data name="ArchiverBackupDataWriterGetFirstOnlinePhysicalDriveId" xml:space="preserve">
+    <value>Current backup data physical deviceID is: {0}.</value>
+  </data>
+  <data name="MoveIndexServiceGenerateJobReportFailed" xml:space="preserve">
+    <value>An error occurred while moving the Archiver index. Please refer to the logs for details.</value>
+    <comment>Added</comment>
+  </data>
+  <data name="MoveIndexServiceGenerateJobReportSuccessful" xml:space="preserve">
+    <value>Move archiver indexes successful.</value>
+    <comment>Added</comment>
+  </data>
+  <data name="MergeIndexServiceFailed" xml:space="preserve">
+    <value>An error occurred while merge index, details :  {0} .</value>
+    <comment>Added</comment>
+  </data>
+  <data name="MergeIndexServiceSuccessful" xml:space="preserve">
+    <value>Merge index successful .</value>
+    <comment>Added</comment>
+  </data>
+  <data name="ArchiverRestoreToFSSuccessfulMessage" xml:space="preserve">
+    <value>Successfully restored the data to Storage.</value>
+    <comment>Added</comment>
+  </data>
+</root>

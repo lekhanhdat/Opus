@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="MediaStorage_Connector_Dropbox_root_folder_cannot_exceed_200_characters" xml:space="preserve">
+    <value>Der Stammordnername darf maximal 200 Zeichen enthalten.</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_Connector_Dropbox_Dropbox" xml:space="preserve">
+    <value>Ablage</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_Connector_Dropbox_Configure_your_root_folder_App_key_and_token_access" xml:space="preserve">
+    <value>Geben Sie die detaillierten Informationen für den Speicherort an.</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_Connector_Dropbox_Root_folder" xml:space="preserve">
+    <value>Stammordner</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_Connector_Dropbox_Advanced" xml:space="preserve">
+    <value>Erweitert</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_Dropbox_Root_folder" xml:space="preserve">
+    <value>Root Folder Name</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_Dropbox_TokenSecret" xml:space="preserve">
+    <value>Token secret</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_Dropbox_TokenAccess" xml:space="preserve">
+    <value>Token access</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_Dropbox_Advanced" xml:space="preserve">
+    <value>Advanced</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_Dropbox_Extended_Parameters" xml:space="preserve">
+    <value>Extended Parameters</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_Dropbox_Dropbox" xml:space="preserve">
+    <value>Dropbox</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_Dropbox_AppKey" xml:space="preserve">
+    <value>App key</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_Dropbox_AppSecret" xml:space="preserve">
+    <value>App secret</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_Connector_Dropbox_Extended_Parameters" xml:space="preserve">
+    <value>Erweiterte Parameter</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_Connector_Dropbox_TokenSecret" xml:space="preserve">
+    <value>Tokengeheimnis</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_Connector_Dropbox_TokenAccess" xml:space="preserve">
+    <value>Tokenzugriff</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_Connector_Dropbox_AppKey" xml:space="preserve">
+    <value>APP-Konto</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_Connector_Dropbox_AppSecret" xml:space="preserve">
+    <value>App-Geheimnis</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_Dropbox_Specify_the_detailed_information_for_the_storage_location" xml:space="preserve">
+    <value>Stellen Sie die Verbindungsinformationen zum ausgewählten Speichertyp bereit. Es ist erforderlich, die in dieser Bibliothek gespeicherten Daten zu lesen und zu schreiben. Die für dieses Formular erforderlichen Informationen können in Ihrer Dokumentation vom Speicherhersteller gefunden werden.</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_Dropbox_Access_Token" xml:space="preserve">
+    <value>Zugriffstoken</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_Dropbox_Customized_Application" xml:space="preserve">
+    <value>Meine Clientinformationen verwenden</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_Dropbox_Default_Application" xml:space="preserve">
+    <value>Die von DocAve bereitgestellten Clientinformationen verwenden</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_Dropbox_Retrieve_Token" xml:space="preserve">
+    <value>Token abrufen</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_Connector_Dropbox_Access_Token" xml:space="preserve">
+    <value>Zugriffstoken</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_Connector_Dropbox_Customized_Application" xml:space="preserve">
+    <value>Meine Clientinformationen verwenden</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_Connector_Dropbox_Default_Application" xml:space="preserve">
+    <value>Die von DocAve bereitgestellten Clientinformationen verwenden</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_Connector_Dropbox_Retrieve_Token" xml:space="preserve">
+    <value>Token abrufen</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_Connector_Dropbox_RootFolderName_Demo" xml:space="preserve">
+    <value>Geben Sie einen Ordnernamen ein. Ein Schrägstrich (/) kann auch zum Herstellen der Verbindung vom Stammorder des Kontos einschließlich aller Dateien mit SharePoint-Bibliothek eingegeben werden.</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_Dropbox_RootFolderName_Demo" xml:space="preserve">
+    <value>Geben Sie einen Ordnernamen ein. Ein Schrägstrich (/) kann auch zum Herstellen der Verbindung vom Stammorder des Kontos einschließlich aller Dateien mit SharePoint-Bibliothek eingegeben werden.</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_Connector_Dropbox_RootFolderName_Invalid_Format" xml:space="preserve">
+    <value>Das Format des Stammordnernamens ist inkorrekt.</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_Dropbox_RootFolderName_Invalid_Format" xml:space="preserve">
+    <value>Das Format des Stammordnernamens ist inkorrekt.</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_Connector_Dropbox_Proxy" xml:space="preserve">
+    <value>Proxyeinstellungen</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_Connector_Dropbox_Proxy_Host" xml:space="preserve">
+    <value>Proxy-Host</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_Connector_Dropbox_Proxy_Password" xml:space="preserve">
+    <value>Kennwort</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_Connector_Dropbox_Proxy_Port" xml:space="preserve">
+    <value>Proxy-Port</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_Connector_Dropbox_Proxy_Username" xml:space="preserve">
+    <value>Benutzername</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_Dropbox_Proxy" xml:space="preserve">
+    <value>Proxyeinstellungen</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_Dropbox_Proxy_Host" xml:space="preserve">
+    <value>Proxy-Host</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_Dropbox_Proxy_Password" xml:space="preserve">
+    <value>Kennwort</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_Dropbox_Proxy_Port" xml:space="preserve">
+    <value>Proxy-Port</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_Dropbox_Proxy_Username" xml:space="preserve">
+    <value>Benutzername</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_Connector_Dropbox_Must_be_a_number_between_0_and_65535" xml:space="preserve">
+    <value>Bitte geben Sie eine ganze Zahl zwischen 0 und 65535 ein.</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_Dropbox_RootFolderNotExist" xml:space="preserve">
+    <value>Der Stammordner ist nicht vorhanden.</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_Dropbox_AccessTokenNotAvailable" xml:space="preserve">
+    <value>Bitte überprüfen Sie Ihr Zugriffstoken und versuchen Sie es erneut.</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_Dropbox_Proxy_Authentication_Filed" xml:space="preserve">
+    <value>Bitte überprüfen Sie Ihren Proxybenutzernamen und -kennwort und geben Sie sie korrekt ein.</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_Dropbox_Test_failed" xml:space="preserve">
+    <value>Validierungstest fehlgeschlagen. Bitte überprüfen Sie die eingegebenen Informationen und versuchen Sie es erneut.</value>
+    <comment>None</comment>
+  </data>
+</root>

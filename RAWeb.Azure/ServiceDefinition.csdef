@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--/********************************************************************
+ *
+ *  PROPRIETARY and CONFIDENTIAL
+ *
+ *  This file is licensed from, and is a trade secret of:
+ *
+ *                   AvePoint, Inc.
+ *                   525 Washington Blvd, Suite 1400
+ *                   Jersey City, NJ 07310
+ *                   United States of America
+ *                   Telephone: +1-201-793-1111
+ *                   WWW: www.avepoint.com
+ *
+ *  Refer to your License Agreement for restrictions on use,
+ *  duplication, or disclosure.
+ *
+ *  RESTRICTED RIGHTS LEGEND
+ *
+ *  Use, duplication, or disclosure by the Government is
+ *  subject to restrictions as set forth in subdivision
+ *  (c)(1)(ii) of the Rights in Technical Data and Computer
+ *  Software clause at DFARS 252.227-7013 (Oct. 1988) and
+ *  FAR 52.227-19 (C) (June 1987).
+ *
+ *  Copyright © 2017-2026 AvePoint® Inc. All Rights Reserved. 
+ *
+ *  Unpublished - All rights reserved under the copyright laws of the United States.
+ */-->
+<ServiceDefinition name="RAWeb.Azure" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceDefinition" schemaVersion="2015-04.2.6">
+  <WebRole name="RAWeb" vmsize="Small">
+    <Sites>
+      <Site name="Web" physicalDirectory="..\build\RevIMWorker.Web">
+        <Bindings>
+          <Binding name="Endpoint1" endpointName="HTTPSEndpoint1" />
+        </Bindings>
+      </Site>
+    </Sites>
+    <ConfigurationSettings>
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" />
+      <Setting name="JobQueueConnectionString" />
+      <Setting name="LogStorage"  />
+      <Setting name="RealTimeQueueName"/>
+      <Setting name="JobQueueName" />
+      <Setting name="LogContainerName"  />
+      <Setting name="ReportStorage"  />
+      <Setting name="ReportFolder"/>
+      <Setting name="LogKeepDays"  />
+      <Setting name="TenantDBTier"  />
+      <Setting name="RevIMHoldPhysicalLibraryName"  />
+      <Setting name="RevIMHomeLocationName"  />
+      <Setting name="AppUrl" />
+      <Setting name="JobLimitCount" />
+      <Setting name="ForwardToReportCenter"  />
+      <Setting name="RedirectAosLoginUrl" />
+      <Setting name="ReportContainerName"  />
+      <Setting name="ConfigDatabaseConnection"  />
+      <Setting name="PortalApiUrl"  />
+      <Setting name="ControlServiceAddress"  />
+      <Setting name="CertificateThumbprint" />
+      <Setting name="NotificationSetting" />
+      <Setting name="ClientId" />
+      <Setting name="ClientSecret" />
+      <Setting name="CosmosDBURI" />
+      <Setting name="AzureTableConnection"/>
+      <Setting name="CosmosDBSecret" />
+      <Setting name="OCCertThumbprint" />
+    </ConfigurationSettings>
+    <Runtime executionContext="elevated" />
+    <Certificates>
+      <Certificate name="Web" storeLocation="LocalMachine" storeName="My" />
+      <Certificate name="CloudRecords Application" storeName="My" storeLocation="LocalMachine" />
+      <Certificate name="DocAveOnline Application" storeName="My" storeLocation="LocalMachine" />
+      <Certificate name="Listener Wcf" storeName="My" storeLocation="LocalMachine" />
+      <Certificate name="Office Connector" storeName="My" storeLocation="LocalMachine" />
+    </Certificates>
+    <Endpoints>
+      <InputEndpoint name="HTTPSEndpoint1" protocol="https" port="443" certificate="Web" />
+    </Endpoints>
+    <Startup>
+      <Task commandLine="NetTcpSharingStartup.bat" executionContext="elevated" taskType="simple" />
+      <Task commandLine="SecurityProtocolStartup.bat" executionContext="elevated" taskType="simple" />
+    </Startup>
+  </WebRole>
+  <WorkerRole name="RATimerWorkerRole" vmsize="Small">
+    <ConfigurationSettings>
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" />
+      <Setting name="JobQueueConnectionString" />
+      <Setting name="ConfigDatabaseConnection" />
+      <Setting name="JobQueueName" />
+      <Setting name="COPQueueName" />
+      <Setting name="PortalApiUrl" />
+      <Setting name="COPApiUrl" />
+      <Setting name="ControlServiceAddress" />
+      <Setting name="JobLimitCount" />
+      <Setting name="ReportFolder" />
+      <Setting name="LogStorage" />
+      <Setting name="LogContainerName" />
+      <Setting name="CertificateThumbprint" />
+      <Setting name="PortalTopicConnectionstring" />
+      <Setting name="PortalSubscriptionName"/>
+      <Setting name="PortalTopicName" />
+      <Setting name="NodeCountInSubJob" />
+      <Setting name="SubJobCountInMainJob" />
+      <Setting name="SubJobCountForCustomer" />
+      <Setting name="ReportContainerName"  />
+      <Setting name="ReportStorage"  />
+      <Setting name="CosmosDBURI" />
+      <Setting name="CosmosDBSecret" />
+    </ConfigurationSettings>
+    <Runtime executionContext="elevated" />
+    <Certificates>
+      <Certificate name="CloudRecords Application" storeName="My" storeLocation="LocalMachine" />
+      <Certificate name="DocAveOnline Application" storeName="My" storeLocation="LocalMachine" />
+    </Certificates>
+    <Startup>
+      <Task commandLine="SecurityProtocolStartup.bat" executionContext="elevated" taskType="simple" />
+    </Startup>
+  </WorkerRole>
+</ServiceDefinition>

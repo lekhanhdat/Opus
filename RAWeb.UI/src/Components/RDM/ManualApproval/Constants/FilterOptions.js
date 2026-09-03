@@ -1,0 +1,46 @@
+import {getActionDueDateI18n} from "../../../../Utilities/CommonUtil";
+
+export const FilterOptions = {
+    None: 0,
+    CollectionTime: 1,
+    ActionTime: 2,
+    Source: 3,
+    ApprovalStatus: 4,
+    ModifiedBy: 5,
+    CreatedBy: 6,
+    RuleName: 7,
+    RuleDisposalClass: 8,
+    EscalatedFrom: 9,
+    Reviewer: 10,
+    ApprovedBy: 11,
+    LeafName: 12,
+    IsRelatedRecords: 13,
+    Workspace: 16,
+    FolderPath :22,
+    QuickReason :23,
+    ModifiedTime : 25,
+    CustomColumnText: 29,
+    CustomColumnYesOrNo: 30,
+    CustomColumnDateTime: 31,
+    CustomColumnNumber: 32,
+    DisposalDueDate: 33,
+};
+
+export const FilterI18Ns = new Map([
+    [FilterOptions.CollectionTime, RMResx.RM_JS_MA_Grid_CreatedTime.replace(":", "")],
+    [FilterOptions.ActionTime, RMResx.RM_JS_MA_Grid_ActionTime.replace(":", "")],
+    [FilterOptions.Source, RMResx.RM_JS_BCM_Explorer_Datagrid_Source],
+    [FilterOptions.ApprovalStatus, RMResx.RM_JS_MA_Grid_ApprovalStatus],
+    [FilterOptions.ModifiedBy, RMResx.RM_JS_MA_Grid_ModifiedBy],
+    [FilterOptions.CreatedBy, RMResx.RM_JS_MA_Grid_CreatedBy],
+    [FilterOptions.RuleName, RMResx.RM_JS_MA_Grid_Rule],
+    [FilterOptions.RuleDisposalClass, RMResx.RM_JS_Rule_DisposalClass_Title],
+    [FilterOptions.EscalatedFrom, RMResx.RM_MA_Grid_EscalateOrReassignFrom],
+    [FilterOptions.Reviewer, RMResx.RM_JS_MA_Grid_RecordOwner],
+    [FilterOptions.ApprovedBy, RMResx.RM_JS_MA_Grid_ApprovedBy],
+    [FilterOptions.Workspace, RMResx.RM_JS_MA_Location_Filter],
+    [FilterOptions.FolderPath, RMResx.RM_JS_MA_Grid_FolderPath],
+    [FilterOptions.QuickReason, RMResx.RM_MA_LastReasonforRejection],
+    [FilterOptions.ModifiedTime, RMResx.RM_JS_MA_Grid_ModifiedTime],
+    [FilterOptions.DisposalDueDate, getActionDueDateI18n()]
+]);

@@ -1,0 +1,132 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <OutputType>Library</OutputType>
+    <RootNamespace>AvePoint.RA.Service</RootNamespace>
+    <AssemblyName>RevIMService</AssemblyName>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <OutputPath>..\bin\Release\</OutputPath>
+  </PropertyGroup>
+	<PropertyGroup>
+		<EnableUnsafeBinaryFormatterSerialization>true</EnableUnsafeBinaryFormatterSerialization>
+	</PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>..\DocaveReference\DocAveStandard.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="Security\License\**" />
+    <Compile Remove="Services\NewArchiverApi\**" />
+    <EmbeddedResource Remove="Security\License\**" />
+    <EmbeddedResource Remove="Services\NewArchiverApi\**" />
+    <EntityDeploy Remove="Security\License\**" />
+    <EntityDeploy Remove="Services\NewArchiverApi\**" />
+    <None Remove="Security\License\**" />
+    <None Remove="Services\NewArchiverApi\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Interop.CERTENROLLLib">
+      <HintPath>..\DocaveReference\Interop.CERTENROLLLib.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Common\GlobalCommon\GCommonContract\DocAve.GCommonContract.csproj" />
+    <ProjectReference Include="..\Common\GlobalCommon\GCommonUtility\DocAve.GCommonUtility.csproj" />
+    <ProjectReference Include="..\Common\VCService30\CommonUtility30\DocAve.CommonUtility30.csproj" />
+    <ProjectReference Include="..\Common\Wrapper\Wrapper.Common\Wrapper.Common.csproj" />
+    <ProjectReference Include="..\HybirdFramework\CommonModel\HybridCommonModel.csproj" />
+    <ProjectReference Include="..\HybirdFramework\HybirdProxy\HybridProxy.csproj" />
+    <ProjectReference Include="..\Hybrid\Hybrid.ClientLibrary\Hybrid.ClientLibrary.csproj" />
+    <ProjectReference Include="..\Hybrid\Hybrid.Contract\Hybrid.Contract.csproj" />
+    <ProjectReference Include="..\RAApi.Contract\RAApi.Contract.csproj" />
+    <ProjectReference Include="..\RABox\RABox.csproj" />
+    <ProjectReference Include="..\RABrowser\RABrowser.csproj" />
+    <ProjectReference Include="..\RAChatCenter\RAChatCenter.csproj" />
+    <ProjectReference Include="..\RACloudFS\RAFileSystem.csproj" />
+    <ProjectReference Include="..\RACommon.Global\RACommon.Global.csproj" />
+    <ProjectReference Include="..\RACommon\RACommon.csproj" />
+    <ProjectReference Include="..\RAContract.Global\RAContract.Global.csproj" />
+    <ProjectReference Include="..\RACommonUtility\RACommonUtility.csproj" />
+    <ProjectReference Include="..\RADataBroker\RADataBroker.csproj" />
+    <ProjectReference Include="..\RAContract\RAContract.csproj" />
+    <ProjectReference Include="..\RADB\RADB.csproj" />
+    <ProjectReference Include="..\RAExchange\RAExchange.csproj" />
+    <ProjectReference Include="..\RAGlobalSearch\RAGlobalSearch.csproj" />
+    <ProjectReference Include="..\RAGoogle\RAGoogle.csproj" />
+    <ProjectReference Include="..\RAI18N\RAI18N.csproj" />
+    <ProjectReference Include="..\RAPhysical\RAPhysical.csproj" />
+    <ProjectReference Include="..\RARedisCache\RedisService.csproj" />
+    <ProjectReference Include="..\RASalesforce\RASalesforce.csproj" />
+    <ProjectReference Include="..\RASharePoint\RASharePoint.csproj" />
+    <ProjectReference Include="..\RATeams\RATeams.csproj" />
+    <ProjectReference Include="..\VectorDataCenter\VectorDataCenter.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Services\Discovery\Google\Audit\" />
+    <Folder Include="Services\Discovery\Google\Configuration\Checker\" />
+    <Folder Include="Services\Discovery\Salesforce\Audit\" />
+    <Folder Include="Services\EndUserApi\" />
+    <Folder Include="Services\SharePoint\ScanLocalNodes\" />
+  </ItemGroup>
+  <ItemGroup> 
+    <PackageReference Include="AWSSDK.S3" Version="4.0.17.3" /> 
+    <PackageReference Include="Cloud.Sdk.Aos" Version="5.6.17" /> 
+    <PackageReference Include="Cloud.Sdk.AosModernApi" Version="6.8.39" /> 
+    <PackageReference Include="Cloud.Sdk.Aosp" Version="5.8.38" />
+    <PackageReference Include="Cloud.Sdk.CloudInsights" Version="5.4.70" />
+    <PackageReference Include="Cloud.Sdk.Dao" Version="5.2.22" />
+    <PackageReference Include="Cloud.Sdk.Data.Aosp" Version="5.8.38" />
+    <PackageReference Include="Cloud.sdk.Data.Opus" Version="5.10.26" />
+    <PackageReference Include="Cloud.Sdk.Nexus.Foundation" Version="6.10.102" />
+    <PackageReference Include="Cloud.Sdk.Nexus.Governance" Version="6.10.102" />
+    <PackageReference Include="Cloud.Sdk.Token" Version="6.8.81" />
+    <PackageReference Include="DataOrchestration.Tag.Sdk" Version="1.1.69" />
+    <PackageReference Include="Duende.IdentityModel" Version="8.1.0" />
+    <PackageReference Include="log4net" Version="3.3.1" />
+    <PackageReference Include="Microsoft.Azure.Cosmos" Version="3.57.0" />
+    <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="10.0.2" />
+    <PackageReference Include="Microsoft.Extensions.Http.Polly" Version="10.0.2" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="10.0.2" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.4" />
+    <PackageReference Include="Polly" Version="8.6.5" />
+    <PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0" />
+    <PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
+    <PackageReference Include="System.Diagnostics.DiagnosticSource" Version="10.0.3" />
+    <PackageReference Include="System.DirectoryServices" Version="10.0.2" />
+    <PackageReference Include="System.Reflection.Emit" Version="4.7.0" />
+    <PackageReference Include="System.Reflection.Emit.ILGeneration" Version="4.7.0" />
+    <PackageReference Include="System.Reflection.TypeExtensions" Version="4.7.0" />
+    <PackageReference Include="System.Security.Cryptography.Algorithms" Version="4.3.1" />
+    <PackageReference Include="System.ServiceModel.Federation" Version="8.1.2" />
+    <PackageReference Include="Microsoft.DotNet.UpgradeAssistant.Extensions.Default.Analyzers" Version="0.4.421302">
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="System.Dynamic.Runtime" Version="4.3.0" />
+    <PackageReference Include="System.Linq.Queryable" Version="4.3.0" />
+    <PackageReference Include="util.ai.text.extractor" Version="6.10.11" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Security\ActiveDirectory\ADAuthentication.cs" />
+    <Compile Remove="Security\Buildin\BuildinAuthentication.cs" />
+    <Compile Remove="Services\AccountManager\AccountManagerService.cs" />
+    <Compile Remove="Services\AccountManager\AuditHandler\AccountManagementAfterAuditHandler.cs" />
+    <Compile Remove="Services\AccountManager\AuditHandler\AccountManagementBeforeAuditHandler.cs" />
+    <Compile Remove="Services\AosApi\AosApiService.cs" />
+    <Compile Remove="Services\AuthenticationManager\AuditHandler\AuthenticationAfterAuditHandler.cs" />
+    <Compile Remove="Services\AuthenticationManager\AuditHandler\AuthenticationBeforeAuditHandler.cs" />
+    <Compile Remove="Services\AuthenticationManager\AuthenticationManagerService.cs" />
+    <Compile Remove="Services\AzureADAPIWrapper\UserWrapperService.cs" />
+    <Compile Remove="Services\AzureFileShare\Api\AzureFileShareApiDirectory.cs" />
+    <Compile Remove="Services\AzureFileShare\Api\AzureFileShareApiFile.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Services\Discovery\Office365\Work\Trigger\whnboxpi.qzv~" />
+  </ItemGroup>
+</Project>

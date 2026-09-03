@@ -1,0 +1,9 @@
+import AnalysisConfigurationScopeComponent from "./AnalysisConfigurationScopeComponent";
+import AnalysisConfigurationInactiveComponent from "./AnalysisConfigurationInactiveComponent";
+import AnalysisConfigurationPanelComponent from "./AnalysisConfigurationPanelComponent";
+
+export {
+    AnalysisConfigurationScopeComponent as SalesforceAnalysisConfigurationScopeComponent,
+    AnalysisConfigurationInactiveComponent as SalesforceAnalysisConfigurationInactiveComponent,
+    AnalysisConfigurationPanelComponent as SalesforceAnalysisConfigurationPanelComponent,
+}

@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32106.194
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RASharpNLPTool", "RASharpNLPTool.csproj", "{7DED78EC-52BE-4FB9-8694-65E2DA07248D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RASharpNLP", "..\..\..\Common\RASharpNLP\RASharpNLP.csproj", "{CCB509AF-A4B3-40C8-9B14-C532604D98AF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7DED78EC-52BE-4FB9-8694-65E2DA07248D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7DED78EC-52BE-4FB9-8694-65E2DA07248D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7DED78EC-52BE-4FB9-8694-65E2DA07248D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7DED78EC-52BE-4FB9-8694-65E2DA07248D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CCB509AF-A4B3-40C8-9B14-C532604D98AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CCB509AF-A4B3-40C8-9B14-C532604D98AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CCB509AF-A4B3-40C8-9B14-C532604D98AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CCB509AF-A4B3-40C8-9B14-C532604D98AF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5782961A-8DE8-4E3E-A1E3-B0CD1232CD89}
+	EndGlobalSection
+EndGlobal

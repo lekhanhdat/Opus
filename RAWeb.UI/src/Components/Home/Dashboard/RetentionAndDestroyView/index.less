@@ -1,0 +1,50 @@
+.reco-dashboard-soadmin-view-wrapper {
+  width: 100%;
+  animation: reco-dashboard-admin-view-height .8s;
+
+  .reco-dashboard-so-layout-wrapper {
+    width: 100%;
+
+    .reco-dashboard-tip {
+      margin-bottom: 16px;
+    }
+
+    .reco-dashboard-cards {
+      width: 100%;
+      height: 100%;
+      background: #FFFFFF;
+      border: 1px solid #E7EAEB;
+      border-radius: 8px;
+      padding: 16px;
+      margin-bottom: 16px;
+      animation: reco-dashboard-size-card-opacity 1.5s;
+    }
+
+    .reco-dashboard-cards-title {
+      margin-bottom: 16px;
+      font: normal normal bold 13px/18px "Open Sans", sans-serif;
+      color: #323E4D;
+    }
+
+  }
+}
+
+@keyframes reco-dashboard-admin-view-height {
+  from {
+    transform: translateY(100%);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes reco-dashboard-size-card-opacity {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

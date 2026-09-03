@@ -1,0 +1,201 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{ABF32DB9-9D2A-4F78-96B5-E2B1FAC08658}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AvePoint.Common</RootNamespace>
+    <AssemblyName>AgentCommonUtility</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\bin\Agent\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\bin\Agent\Release\</OutputPath>
+    <DefineConstants>TRACE;CODE_ANALYSIS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>DocAveStandard.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'ReleaseWithoutUnitTest|AnyCPU'">
+    <OutputPath>..\..\..\bin\Agent\Release\</OutputPath>
+    <DefineConstants>TRACE;CODE_ANALYSIS</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>none</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE;CODE_ANALYSIS</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>none</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'ReleaseWithoutUnitTest|x64'">
+    <OutputPath>..\..\..\bin\Agent\Release\</OutputPath>
+    <DefineConstants>TRACE;CODE_ANALYSIS</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>none</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AgentCacheManager.cs" />
+    <Compile Include="AgentConstants.cs" />
+    <Compile Include="AgentCredentialManager.cs" />
+    <Compile Include="AgentRegisterUtil.cs" />
+    <Compile Include="AgentServiceLocator.cs" />
+    <Compile Include="AveEnv.cs" />
+    <Compile Include="AveImportTreeUtil.cs" />
+    <Compile Include="AveSqlConnection.cs" />
+    <Compile Include="AveStaticEnv.cs" />
+    <Compile Include="CustomizeChannelFactory.cs" />
+    <Compile Include="CustomizeServiceHostFactory.cs" />
+    <Compile Include="FilterEngine\Conditions\BooleanConditionChecker.cs" />
+    <Compile Include="FilterEngine\Conditions\CollectionConditionChecker.cs" />
+    <Compile Include="FilterEngine\Conditions\DateTimeConditionChecker.cs" />
+    <Compile Include="FilterEngine\Conditions\NumberConditionChecker.cs" />
+    <Compile Include="FilterEngine\Conditions\StringConditionChecker.cs" />
+    <Compile Include="FilterEngine\Conditions\StringListConditionChecker.cs" />
+    <Compile Include="FilterEngine\Conditions\VersionConditionChecker.cs" />
+    <Compile Include="FilterEngine\Engines\AttachmentFilterEngine.cs" />
+    <Compile Include="FilterEngine\Engines\DocumentFilterEngine.cs" />
+    <Compile Include="FilterEngine\Engines\DocumentVersionFilterEngine.cs" />
+    <Compile Include="FilterEngine\Engines\FilterEngineBase.cs" />
+    <Compile Include="FilterEngine\Engines\FilterEngineFactory.cs" />
+    <Compile Include="FilterEngine\Engines\FolderFilterEngine.cs" />
+    <Compile Include="FilterEngine\Engines\FSFileFilterEngine.cs" />
+    <Compile Include="FilterEngine\Engines\FSFolderFilterEngine.cs" />
+    <Compile Include="FilterEngine\Engines\IFilterEngine.cs" />
+    <Compile Include="FilterEngine\Engines\ItemFilterEngine.cs" />
+    <Compile Include="FilterEngine\Engines\ItemVersionFilterEngine.cs" />
+    <Compile Include="FilterEngine\Engines\ListFilterEngine.cs" />
+    <Compile Include="FilterEngine\Engines\MicroFeedItemFilterEngine.cs" />
+    <Compile Include="FilterEngine\Engines\Physical\PhysicalBoxFilterEngine.cs" />
+    <Compile Include="FilterEngine\Engines\Physical\PhysicalFileFilterEngine.cs" />
+    <Compile Include="FilterEngine\Engines\SiteCollectionFilterEngine.cs" />
+    <Compile Include="FilterEngine\Engines\SiteFilterEngine.cs" />
+    <Compile Include="FilterEngine\Engines\TreeNodeFilterEngine.cs" />
+    <Compile Include="FilterEngine\Engines\WebApplicationFilterEngine.cs" />
+    <Compile Include="FilterEngine\Exceptions\ConditionNotSupportedException.cs" />
+    <Compile Include="FilterEngine\Exceptions\ExpressionNotFoundException.cs" />
+    <Compile Include="FilterEngine\Exceptions\LevelNotSupportedException.cs" />
+    <Compile Include="FilterEngine\Exceptions\PolicyNotEvaluatedException.cs" />
+    <Compile Include="FilterEngine\Exceptions\PolicyValueUnitNotSupportedException.cs" />
+    <Compile Include="FilterEngine\Exceptions\RuleNotSupportedException.cs" />
+    <Compile Include="FilterEngine\FilterEngine.cs" />
+    <Compile Include="FilterEngine\FilterOption.cs" />
+    <Compile Include="FilterEngine\ObjectInfos\AttachmentInfo.cs" />
+    <Compile Include="FilterEngine\ObjectInfos\DocumentInfo.cs" />
+    <Compile Include="FilterEngine\ObjectInfos\DocumentVersionInfo.cs" />
+    <Compile Include="FilterEngine\ObjectInfos\FolderInfo.cs" />
+    <Compile Include="FilterEngine\ObjectInfos\CommonInfoBase.cs" />
+    <Compile Include="FilterEngine\ObjectInfos\FSFileInfo.cs" />
+    <Compile Include="FilterEngine\ObjectInfos\FSFolderInfo.cs" />
+    <Compile Include="FilterEngine\ObjectInfos\ItemInfo.cs" />
+    <Compile Include="FilterEngine\ObjectInfos\ItemVersionInfo.cs" />
+    <Compile Include="FilterEngine\ObjectInfos\ListInfo.cs" />
+    <Compile Include="FilterEngine\ObjectInfos\MicroFeedItemInfo.cs" />
+    <Compile Include="FilterEngine\ObjectInfos\ObjectInfoBase.cs" />
+    <Compile Include="FilterEngine\ObjectInfos\Physical\PhysicalBoxInfo.cs" />
+    <Compile Include="FilterEngine\ObjectInfos\Physical\PhysicalFileInfo.cs" />
+    <Compile Include="FilterEngine\ObjectInfos\SiteCollectionInfo.cs" />
+    <Compile Include="FilterEngine\ObjectInfos\TreeNodeInfo.cs" />
+    <Compile Include="FilterEngine\ObjectInfos\VersionedObjectInfoBase.cs" />
+    <Compile Include="FilterEngine\ObjectInfos\WebAppInfo.cs" />
+    <Compile Include="FilterEngine\ObjectInfos\SiteInfo.cs" />
+    <Compile Include="GlobalActivity.cs" />
+    <Compile Include="IAgentTypeAction.cs" />
+    <Compile Include="LogArchive.cs" />
+    <Compile Include="PermissionProvisionManager.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SPDisposeCheckIgnoreAttribute.cs" />
+    <Compile Include="SQLServerInfo.cs" />
+    <Compile Include="WcfUtility.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DataTransfer\DataTransfer.csproj">
+      <Project>{7ef9b771-97d2-4b46-a0a3-3695a8f49bd7}</Project>
+      <Name>DataTransfer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GCommon.MicroKernel\GCommon.MicroKernel.csproj">
+      <Project>{4D7D0D1F-EE7B-4494-892B-478B3F92B339}</Project>
+      <Name>GCommon.MicroKernel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GCommonContract\DocAve.GCommonContract.csproj">
+      <Project>{361F3C7C-ABBF-42D5-975A-65E4E9866068}</Project>
+      <Name>DocAve.GCommonContract</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GCommonUtility\DocAve.GCommonUtility.csproj">
+      <Project>{7151E862-A761-4A90-ACE6-37D7442047A6}</Project>
+      <Name>DocAve.GCommonUtility</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="DocAveStandard.snk" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

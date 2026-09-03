@@ -1,0 +1,251 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2E3693A2-F00E-4BFA-B87F-23F25787CDF7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AvePoint.Wrapper.Backup</RootNamespace>
+    <AssemblyName>AgentCommonWrapperBackup</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\bin\Agent\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;CODE_ANALYSIS;PerformanceLog,WrapperTest,NINTEXWF</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <WarningsAsErrors>0168</WarningsAsErrors>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <CodeAnalysisRuleSet>..\Wrapper.Common\RolesSet\WrapperRuleSet.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\bin\Agent\Release\</OutputPath>
+    <DefineConstants>TRACE;CODE_ANALYSIS,PerformanceLog,WrapperTest</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <WarningsAsErrors>0168</WarningsAsErrors>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>DocAveStandard.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;CODE_ANALYSIS;PerformanceLog,WrapperTest</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <WarningsAsErrors>0168</WarningsAsErrors>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>..\Wrapper.Common\RolesSet\WrapperRuleSet.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE;CODE_ANALYSIS,PerformanceLog,WrapperTest</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>none</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <WarningsAsErrors>0168</WarningsAsErrors>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'DebugWithCodeAnaylysis|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\DebugWithCodeAnaylysis\</OutputPath>
+    <DefineConstants>CODE_ANALYSIS;TRACE;DEBUG;CODE_ANALYSIS;PerformanceLog,WrapperTest</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <WarningsAsErrors>0168</WarningsAsErrors>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+    <CodeAnalysisLogFile>..\..\..\bin\Debug\AgentCommonWrapperBackup.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>..\Wrapper.Common\RolesSet\WrapperRuleSet.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'DebugWithCodeAnaylysis|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\DebugWithCodeAnaylysis\</OutputPath>
+    <DefineConstants>CODE_ANALYSIS;TRACE;DEBUG;CODE_ANALYSIS;PerformanceLog,WrapperTest</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <WarningsAsErrors>0168</WarningsAsErrors>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+    <CodeAnalysisLogFile>bin\x64\Debug\AgentCommonWrapperBackup.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>..\Wrapper.Common\RolesSet\WrapperRuleSet.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'DebugWithoutUnitTest|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\DebugWithoutUnitTest\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;CODE_ANALYSIS;PerformanceLog,WrapperTest</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <WarningsAsErrors>0168</WarningsAsErrors>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>..\Wrapper.Common\RolesSet\WrapperRuleSet.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'DebugWithoutUnitTest|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\DebugWithoutUnitTest\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;CODE_ANALYSIS;PerformanceLog,WrapperTest</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <WarningsAsErrors>0168</WarningsAsErrors>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>..\Wrapper.Common\RolesSet\WrapperRuleSet.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AveAudienceManager.cs" />
+    <Compile Include="AveBackupOMFactory.cs" />
+    <Compile Include="AveColumnCache.cs" />
+    <Compile Include="AveDataCache.cs" />
+    <Compile Include="AveDocumentTagging.cs" />
+    <Compile Include="AveLanguage.cs" />
+    <Compile Include="AveMetadataService.cs" />
+    <Compile Include="AveSPProject.cs" />
+    <Compile Include="NintexForm\AveNintexForm.cs" />
+    <Compile Include="AvePublishing.cs" />
+    <Compile Include="AveSecurity.cs" />
+    <Compile Include="AveSPAlert.cs" />
+    <Compile Include="AveSPAppManager.cs" />
+    <Compile Include="AveSPAttachment.cs" />
+    <Compile Include="AveSPBackupGlobalConfiguration.cs" />
+    <Compile Include="AveSPContentTypeCollection.cs" />
+    <Compile Include="AveSPContentTypeHub.cs" />
+    <Compile Include="AveSPUserCustomActionCollection.cs" />
+    <Compile Include="AveSPDoc.cs" />
+    <Compile Include="AveSPEventReceiver.cs" />
+    <Compile Include="AveSPFeature.cs" />
+    <Compile Include="AveSPFieldCollection.cs" />
+    <Compile Include="AveSPFolder.cs" />
+    <Compile Include="AveSPItem.cs" />
+    <Compile Include="AveSPList.cs" />
+    <Compile Include="AveSPListInfo.cs" />
+    <Compile Include="AveSPListItem.cs" />
+    <Compile Include="AveSPMySite.cs" />
+    <Compile Include="AveSPNavigation.cs" />
+    <Compile Include="AveSPSearch.cs" />
+    <Compile Include="AveSPSite.cs" />
+    <Compile Include="AveSPSiteInfo.cs" />
+    <Compile Include="AveSPUserProfile.cs" />
+    <Compile Include="AveSPViewer.cs" />
+    <Compile Include="AveSPWeb.cs" />
+    <Compile Include="AveSPWebApp.cs" />
+    <Compile Include="AveSPWebAppBackupManager.cs" />
+    <Compile Include="AveSPWebInfo.cs" />
+    <Compile Include="AveSPWebPart.cs" />
+    <Compile Include="AveSPSocialData.cs" />
+    <Compile Include="AveTaxonomyGroup.cs" />
+    <Compile Include="AveTerm.cs" />
+    <Compile Include="AveTermSet.cs" />
+    <Compile Include="AveTermStore.cs" />
+    <Compile Include="AveWorkflow.cs" />
+    <Compile Include="Core\SPBackupAPI.cs" />
+    <Compile Include="Core\SPAttachmentExportWrapper.cs" />
+    <Compile Include="Core\SPFileExportWrapper.cs" />
+    <Compile Include="Core\SPFolderExportWrapper.cs" />
+    <Compile Include="Core\SPListItemExportWrapper.cs" />
+    <Compile Include="Core\SPListExportWrapper.cs" />
+    <Compile Include="Core\SPWebExportWrapper.cs" />
+    <Compile Include="NintexForm\AveNintexFormLocal.cs" />
+    <Compile Include="NintexForm\AveNintexFormOnline.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SP13Extension\AveSPPolicy.cs" />
+    <Compile Include="SP13Extension\AveSPSEOSettings.cs" />
+    <Compile Include="SP13Extension\AveSPVariationSetting.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\GCommon\GCommonContract\DocAve.GCommonContract.csproj">
+      <Project>{361F3C7C-ABBF-42D5-975A-65E4E9866068}</Project>
+      <Name>DocAve.GCommonContract</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\GCommon\GCommonUtility\DocAve.GCommonUtility.csproj">
+      <Project>{7151E862-A761-4A90-ACE6-37D7442047A6}</Project>
+      <Name>DocAve.GCommonUtility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\GCommon\GI18NResources\GI18NResources.csproj">
+      <Project>{B92A472D-4F48-40C8-8910-AD9F35FDDAFA}</Project>
+      <Name>GI18NResources</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\GCommon\CommonUtility30\DocAve.CommonUtility30.csproj">
+      <Project>{ABF32DB9-9D2A-4F78-96B5-E2B1FAC08658}</Project>
+      <Name>DocAve.CommonUtility30</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Wrapper.Core\Wrapper.Common\Wrapper.Common.csproj">
+      <Project>{9380E15E-5F69-4F2C-889F-E04756F6CCCA}</Project>
+      <Name>Wrapper.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Wrapper.Core\Wrapper.Contract\Wrapper.Contract.csproj">
+      <Project>{B6805753-B35A-4DF5-A3A4-27E6868DEE09}</Project>
+      <Name>Wrapper.Contract</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Wrapper.Core\Wrapper.CustomUtility\Wrapper.CustomUtility.csproj">
+      <Project>{5FF18312-8DA2-4ABF-BC20-805A18065DB6}</Project>
+      <Name>Wrapper.CustomUtility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Wrapper.Mapping\Wrapper.Mapping.csproj">
+      <Project>{1619D977-F606-4FFD-9E2B-3A80984BD397}</Project>
+      <Name>Wrapper.Mapping</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Wrapper.Core\Wrapper.Resource\Wrapper.Resource.csproj">
+      <Project>{F977BD26-9DD0-4B6D-95DA-58096DCA1913}</Project>
+      <Name>Wrapper.Resource</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Wrapper.Workflow\Wrapper.Workflow.csproj">
+      <Project>{11E9FFED-19E5-4FC9-B1C7-703A6AFEF4F7}</Project>
+      <Name>Wrapper.Workflow</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="DocAveStandard.snk" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

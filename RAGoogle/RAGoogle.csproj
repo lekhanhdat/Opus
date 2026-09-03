@@ -1,0 +1,40 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AWSSDK.S3" Version="4.0.17.3" />
+    <PackageReference Include="Google.Apis.Admin.Directory.directory_v1" Version="1.73.0.4030" />
+    <PackageReference Include="Google.Apis.Admin.Reports.reports_v1" Version="1.73.0.3988" />
+    <PackageReference Include="Google.Apis.Auth" Version="1.73.0" />
+    <PackageReference Include="Google.Apis.Drive.v3" Version="1.73.0.3996" />
+    <PackageReference Include="Google.Apis.DriveLabels.v2" Version="1.70.0.3871" />
+    <PackageReference Include="Google.Apis.PeopleService.v1" Version="1.72.0.3973" />
+    <PackageReference Include="log4net" Version="3.3.1" />
+    <PackageReference Include="util.ai.text.extractor" Version="6.10.11" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Common\GlobalCommon\GCommonContract\DocAve.GCommonContract.csproj" />
+    <ProjectReference Include="..\Common\SPAPIWrapper\AveObjectModel.Client\AveObjectModel.Common\AveObjectModel.Common.csproj" />
+    <ProjectReference Include="..\Common\VCService30\CommonUtility30\DocAve.CommonUtility30.csproj" />
+    <ProjectReference Include="..\Media\Media.DataIO\Media.DataIO.csproj" />
+    <ProjectReference Include="..\RAArchiverCommon\RAArchiverCommon.csproj" />
+    <ProjectReference Include="..\RAArchiverMaintenance\RAArchiverMaintenance.csproj" />
+    <ProjectReference Include="..\RACommon.Global\RACommon.Global.csproj" />
+    <ProjectReference Include="..\RACommonUtility\RACommonUtility.csproj" />
+    <ProjectReference Include="..\RACommon\RACommon.csproj" />
+    <ProjectReference Include="..\RAContract.Global\RAContract.Global.csproj" />
+    <ProjectReference Include="..\RAContract\RAContract.csproj" />
+    <ProjectReference Include="..\RADataSynchronize\RADataSynchronize.csproj" />
+    <ProjectReference Include="..\RADB\RADB.csproj" />
+    <ProjectReference Include="..\RAExportCommon\RAExportCommon.csproj" />
+    <ProjectReference Include="..\RAI18N\RAI18N.csproj" />
+    <ProjectReference Include="..\VectorDataCenter\VectorDataCenter.csproj" />
+  </ItemGroup>
+
+</Project>

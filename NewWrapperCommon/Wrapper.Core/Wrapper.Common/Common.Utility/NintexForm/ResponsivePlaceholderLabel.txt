@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-16"?>
+<Columns  xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns:d5p1="http://schemas.datacontract.org/2004/07/Nintex.Forms.FormControls">
+	<d5p1:FormControlProperties i:type="d5p1:LabelFormControlProperties">
+		<d5p1:AllowRuleSetValue>false</d5p1:AllowRuleSetValue>
+		<d5p1:Border />
+		<d5p1:BorderColor>#000000</d5p1:BorderColor>
+		<d5p1:BorderStyle>Solid</d5p1:BorderStyle>
+		<d5p1:BorderWidth>2</d5p1:BorderWidth>
+		<d5p1:CanResizeAtRuntime>false</d5p1:CanResizeAtRuntime>
+		<d5p1:ControlVersion>101.5.3.0</d5p1:ControlVersion>
+		<d5p1:CssClass i:nil="true" />
+		<d5p1:DisplayName>Placeholder</d5p1:DisplayName>
+		<d5p1:FormControlTypeUniqueId>c0a89c70-0781-4bd4-8623-f73675005e00</d5p1:FormControlTypeUniqueId>
+		<d5p1:FormType>ListForm</d5p1:FormType>
+		<d5p1:InRepeater>false</d5p1:InRepeater>
+		<d5p1:InsertReferences xmlns:d7p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<d5p1:InternalPropertyBag xmlns:d7p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<d5p1:IsControlWidthFixedToCanvasWidth>false</d5p1:IsControlWidthFixedToCanvasWidth>
+		<d5p1:IsDirty>false</d5p1:IsDirty>
+		<d5p1:IsInWorkflowForm>false</d5p1:IsInWorkflowForm>
+		<d5p1:IsLocked>false</d5p1:IsLocked>
+		<d5p1:IsNotSupportAssociatedControlForLabel>false</d5p1:IsNotSupportAssociatedControlForLabel>
+		<d5p1:IsNotSupportRules>false</d5p1:IsNotSupportRules>
+		<d5p1:IsResponsive>true</d5p1:IsResponsive>
+		<d5p1:IsVisible>true</d5p1:IsVisible>
+		<d5p1:MediaSettings xmlns:d7p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+			<d7p1:KeyValueOfstringMediaSettingQmaQp9T5>
+				<d7p1:Key>xs</d7p1:Key>
+				<d7p1:Value>
+					<d5p1:DefaultSize>12</d5p1:DefaultSize>
+					<d5p1:MaxSize>12</d5p1:MaxSize>
+					<d5p1:MinSize>12</d5p1:MinSize>
+					<d5p1:Offset>0</d5p1:Offset>
+					<d5p1:Size>12</d5p1:Size>
+					<d5p1:UseSmallerScreenOffset>false</d5p1:UseSmallerScreenOffset>
+					<d5p1:UseSmallerScreenSize>false</d5p1:UseSmallerScreenSize>
+				</d7p1:Value>
+			</d7p1:KeyValueOfstringMediaSettingQmaQp9T5>
+			<d7p1:KeyValueOfstringMediaSettingQmaQp9T5>
+				<d7p1:Key>sm</d7p1:Key>
+				<d7p1:Value>
+					<d5p1:DefaultSize>6</d5p1:DefaultSize>
+					<d5p1:MaxSize>12</d5p1:MaxSize>
+					<d5p1:MinSize>3</d5p1:MinSize>
+					<d5p1:Offset>0</d5p1:Offset>
+					<d5p1:Size>6</d5p1:Size>
+					<d5p1:UseSmallerScreenOffset>false</d5p1:UseSmallerScreenOffset>
+					<d5p1:UseSmallerScreenSize>false</d5p1:UseSmallerScreenSize>
+				</d7p1:Value>
+			</d7p1:KeyValueOfstringMediaSettingQmaQp9T5>
+			<d7p1:KeyValueOfstringMediaSettingQmaQp9T5>
+				<d7p1:Key>md</d7p1:Key>
+				<d7p1:Value>
+					<d5p1:DefaultSize>6</d5p1:DefaultSize>
+					<d5p1:MaxSize>12</d5p1:MaxSize>
+					<d5p1:MinSize>3</d5p1:MinSize>
+					<d5p1:Offset>0</d5p1:Offset>
+					<d5p1:Size>6</d5p1:Size>
+					<d5p1:UseSmallerScreenOffset>true</d5p1:UseSmallerScreenOffset>
+					<d5p1:UseSmallerScreenSize>true</d5p1:UseSmallerScreenSize>
+				</d7p1:Value>
+			</d7p1:KeyValueOfstringMediaSettingQmaQp9T5>
+			<d7p1:KeyValueOfstringMediaSettingQmaQp9T5>
+				<d7p1:Key>lg</d7p1:Key>
+				<d7p1:Value>
+					<d5p1:DefaultSize>6</d5p1:DefaultSize>
+					<d5p1:MaxSize>12</d5p1:MaxSize>
+					<d5p1:MinSize>3</d5p1:MinSize>
+					<d5p1:Offset>0</d5p1:Offset>
+					<d5p1:Size>6</d5p1:Size>
+					<d5p1:UseSmallerScreenOffset>true</d5p1:UseSmallerScreenOffset>
+					<d5p1:UseSmallerScreenSize>true</d5p1:UseSmallerScreenSize>
+				</d7p1:Value>
+			</d7p1:KeyValueOfstringMediaSettingQmaQp9T5>
+		</d5p1:MediaSettings>
+		<d5p1:PaddingWidth>0</d5p1:PaddingWidth>
+		<d5p1:TabIndex>0</d5p1:TabIndex>
+		<d5p1:UniqueId>bdb18066-f927-47a2-9871-5c2784a91e29</d5p1:UniqueId>
+		<d5p1:VariableSource>Unspecified</d5p1:VariableSource>
+		<d5p1:VerticalAlign>NotSet</d5p1:VerticalAlign>
+		<d5p1:BackgroundColor i:nil="true" />
+		<d5p1:Bold>false</d5p1:Bold>
+		<d5p1:FontColor i:nil="true" />
+		<d5p1:FontFamily i:nil="true" />
+		<d5p1:FontFamilyItemId i:nil="true" />
+		<d5p1:FontSize i:nil="true" />
+		<d5p1:FontSizeItemId i:nil="true" />
+		<d5p1:HorizontalAlignment>NotSet</d5p1:HorizontalAlignment>
+		<d5p1:Italics>false</d5p1:Italics>
+		<d5p1:StrikeThrough>false</d5p1:StrikeThrough>
+		<d5p1:ThemeClass i:nil="true" />
+		<d5p1:Underline>false</d5p1:Underline>
+		<d5p1:Name i:nil="true" />
+		<d5p1:Text>Placeholder</d5p1:Text>
+		<d5p1:AssociatedControl i:nil="true" />
+		<d5p1:AssociatedControlTextSet i:nil="true" />
+	</d5p1:FormControlProperties>
+</Columns>

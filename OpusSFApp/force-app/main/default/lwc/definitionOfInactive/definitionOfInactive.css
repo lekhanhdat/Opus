@@ -1,0 +1,103 @@
+/*Covered by AvePoint copyright and license agreement*/
+.definition-card-container-title {
+    font-size: 14px;
+}
+
+.horizontal-divider {
+    height: 1px;
+    margin: 16px;
+    background-color: #dae0e2;
+}
+
+.definition-section {
+    padding-right: var(--slds-c-card-header-spacing-inline-end,
+            var(--sds-c-card-header-spacing-inline-end,
+                var(--slds-c-card-header-spacing-inline,
+                    var(--sds-c-card-header-spacing-inline,
+                        var(--lwc-varSpacingHorizontalMedium, 1rem)))));
+    padding-bottom: var(--slds-c-card-header-spacing-block-end,
+            var(--sds-c-card-header-spacing-block-end,
+                var(--slds-c-card-header-spacing-block,
+                    var(--sds-c-card-header-spacing-block, 0))));
+    padding-left: var(--slds-c-card-header-spacing-inline-start,
+            var(--sds-c-card-header-spacing-inline-start,
+                var(--slds-c-card-header-spacing-inline,
+                    var(--sds-c-card-header-spacing-inline,
+                        var(--lwc-varSpacingHorizontalMedium, 1rem)))));
+    margin: 0 0 var(--slds-c-card-header-spacing-block-end,
+            var(--sds-c-card-header-spacing-block-end,
+                var(--lwc-varSpacingVerticalSmall, 0.75rem)));
+}
+
+.basic-data {
+    height: 135px;
+    display: grid;
+    grid-template-columns: 30% 70%;
+}
+
+.modified-time-range {
+    align-self: center;
+    padding-right: 24px;
+    position: relative;
+}
+
+.without-modified-date {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    row-gap: 12px;
+}
+
+.without-modified-date p {
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.without-modified-date::after {
+    content: "";
+    width: 1px;
+    height: 165px;
+    background-color: #dae0e2;
+
+    position: absolute;
+    right: 0;
+    bottom: -48px;
+}
+
+.range-time-picker {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.definition-right-side {
+    padding-left: 24px;
+    height: 100%;
+}
+
+.custom-grid-gap {
+    column-gap: 16px;
+}
+
+.definition-card-item {
+    height: 100%;
+    padding: 12px 8px;
+    background: #f7f7f7;
+    border-radius: 8px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 4px;
+}
+
+.card-value {
+    font-weight: 600;
+    font-size: 24px;
+    color: #0866ca;
+}
+
+.card-text {
+    font-size: 14px;
+    color: #707174;
+}

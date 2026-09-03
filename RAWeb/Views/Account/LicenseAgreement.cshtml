@@ -1,0 +1,158 @@
+﻿@*Covered by AvePoint copyright and license agreement*@
+@using AvePoint.RA.I18N.Core;
+@using AvePoint.RA.Common.Util;
+@using AvePoint.RA.Web.Common;
+@using AvePoint.RA.Common.Security;
+@using AvePoint.RA.Contract.RMWeb.Account; 
+@using AvePoint.RA.Web.Extentions.Util
+@using Microsoft.AspNetCore.Html
+@model SsoSamplerUserInfo
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@Html.I18N("RM_JS_Common_RecourdAutomation")</title>
+    <link rel='SHORTCUT ICON' href='https://res.cdn.avepointonlineservices.com/cloud%20records/favicon.ico' type='image/x-icon' />
+    <link rel="stylesheet" type="text/css" href="@Url.Script("~/aui/react/opensans.css")" />
+    <script nonce="@ViewBag.Nonce" type="text/javascript" src="~/Scripts/3rd/jquery-3.5.1.min.js"></script>
+    <style>
+        .layer-container {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 550px;
+            height: 528px;
+            box-sizing: border-box;
+            padding: 30px 10px 24px 32px;
+            background: #FFFFFF 0% 0% no-repeat padding-box;
+            box-shadow: 0px 0px 40px #C2C5C899;
+            border-radius: 8px;
+        }
+
+        .la-title {
+            margin-bottom: 16px;
+            font: normal normal bold 18px/24px "Open Sans", sans-serif;
+            letter-spacing: 0px;
+            color: #27313C;
+        }
+
+        .la-desc {
+            padding: 0 32px 16px 0;
+            font: normal normal normal 14px/19px "Open Sans", sans-serif;
+        }
+
+        .dividing-line {
+            border-bottom: 1px solid #e7eaeb;
+            margin-bottom: 16px;
+            margin-right: 24px;
+        }
+
+        .la-content {
+            height: 258px;
+            padding-right: 10px;
+            overflow-y: auto;
+            overflow-x: auto;
+            font: normal normal normal 14px/19px "Open Sans", sans-serif;
+            color: #27313C;
+        }
+
+            .la-content::-webkit-scrollbar {
+                width: 6px;
+                height: 6px;
+            }
+
+            .la-content::-webkit-scrollbar-track {
+                background: rgba(87, 85, 85, 0.2);
+                border-radius: 3px;
+            }
+
+            .la-content::-webkit-scrollbar-thumb {
+                background: rgba(87, 85, 85, 0.4);
+                border-radius: 3px;
+            }
+
+        .btn-container {
+            display: flex;
+            gap: 8px;
+            justify-content: flex-end;
+            padding-right: 14px;
+            margin-top: 30px;
+            cursor: pointer;
+        }
+
+        .btn-common {
+            padding: 8px 16px;
+            border: 1px solid #415364;
+            border-radius: 2px;
+            font: normal normal 600 14px/19px "Open Sans", sans-serif;
+            letter-spacing: 0px;
+            cursor: pointer;
+        }
+
+        .btn-disabled {
+            background-color: rgb(243, 242, 241) !important;
+            color: rgb(208, 208, 208) !important;
+            border: 1px solid rgb(243, 242, 241) !important;
+        }
+
+        #btnReject {
+            background-color: #FFFFFF;
+            color: #415364;
+        }
+
+        #btnAccept {
+            background: #0072D0 0% 0% no-repeat padding-box;
+            color: #FFFFFF;
+        }
+
+        .backdrop {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            opacity: .4;
+            background: #27313c;
+            user-select: none;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        #laContentContianer {
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="backdrop"></div>
+    <div class="main-container">
+        <div class="layer-container">
+            <div class="la-title">@Html.I18N("RM_SSO_LA_Titile")</div>
+            <div class="la-desc">@Html.I18N("RM_SSO_LA_Desc")</div>
+            <div class="dividing-line"></div>
+            <iframe id="laContentContianer" sandbox="allow-popups allow-popups-to-escape-sandbox" frameborder="0" srcDoc="@Model.LAContent" title="Subscription Agreement Content"></iframe>
+            <div class="btn-container">
+                <button class="btn-common" id="btnReject">@Html.I18N("RM_SSO_LA_Btn_Reject_Text")</button>
+                <button class="btn-common" id="btnAccept">@Html.I18N("RM_SSO_LA_Btn_Accept_Text")</button>
+            </div>
+            <form id="sso_la_form" method="post" action="/Account/AcceptLicenseAgreement">
+                <input type="hidden" name="ui" value="@Model.CustomerId" />
+                <input type="hidden" name="un" value="@Model.UserName" />
+            </form>
+            <form id="sso_la_logout_form" method="post" action="/Account/SSOLogout">
+                <input type="hidden" name="userId" value="@Model.UserId" />
+            </form>
+        </div>
+    </div>
+    <script nonce="@ViewBag.Nonce" type="text/javascript" src="~/Scripts/Logon/sso.js"></script>
+</body>
+</html>

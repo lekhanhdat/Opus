@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="MediaStorage_Cleversafe_AccesserIPs_Must_be_separated_with_semicolon" xml:space="preserve">
+    <value>Trennen Sie zwei Zugriffer-IPs durch ein Semikolon.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Cleversafe_Access_Key_ID" xml:space="preserve">
+    <value>Zugriffsschlüssel-ID</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Cleversafe_Access_Key_ID_Demo" xml:space="preserve">
+    <value>ID</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Cleversafe_Advanced" xml:space="preserve">
+    <value>Erweitert</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Cleversafe_Can_contain_letters_numbers_periods_underscores_and_dashes" xml:space="preserve">
+    <value>Kann Buchstaben, Zahlen, Punkte (.), Unterstriche (_) und Bindestriche (-) enthalten.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Cleversafe_Cleversafe" xml:space="preserve">
+    <value>Cleversafe</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Cleversafe_Configure_your_bucket_name_Access_Key_ID_and_Secret_Access_Key" xml:space="preserve">
+    <value>Wählen Sie einen Speichertyp für das zu erstellende physische Gerät aus.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Cleversafe_Extended_Parameters" xml:space="preserve">
+    <value>Erweiterte Parameter</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Cleversafe_Must_be_between_3_and_255_characters_long" xml:space="preserve">
+    <value>Muss zwischen 3 und 255 Zeichen lang sein.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Cleversafe_Must_not_be_formatted_as_an_IP_address" xml:space="preserve">
+    <value>Darf nicht als IP-Adresse (z. B. 192.168.5.4) formatiert werden.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Cleversafe_Must_start_with_a_number_or_letter" xml:space="preserve">
+    <value>Vault-Namen müssen mit einem Buchstaben oder einer Zahl beginnen.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Cleversafe_Secret_Access_Key" xml:space="preserve">
+    <value>Geheimer Zugriffsschlüssel</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Cleversafe_Storage_Accesser_IPs" xml:space="preserve">
+    <value>Zugriffer-IPs</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Cleversafe_Vault_Name" xml:space="preserve">
+    <value>Vault-Name</value>
+    <comment>Approved</comment>
+  </data>
+</root>

@@ -1,0 +1,1 @@
+. "$PSScriptRoot\ContinuousIntegrationExtendedTool.exe" -cjt . ReadyforQA filter true

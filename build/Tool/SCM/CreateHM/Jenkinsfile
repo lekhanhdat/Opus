@@ -1,0 +1,179 @@
+// Basic Info
+def productName = "Cloud Records"
+def productKey = "RECO"
+
+
+// Version
+def productVersion = "1.0.3"
+
+
+// URL
+def hotfixBuildURL = "https://jenkins.avepoint.net/job/RECO/job/hotfix/"
+def branchURL = "https://10.1.0.130/reco/branches/Update/CloudRecords_1.0.3_Update_Branch"
+
+
+// Workspace
+def nodeLabel = "10.2.202.200"
+def workspaceDir = "C:\\${productKey}\\CreateHM"
+
+
+// Mail
+def recpList = "leon.chen@avepoint.com"
+def sucSubject = "${params.CINumber} Hotfix Management has been created."
+def sucMailContent = ""
+def faiSubject = "Failed to create ${params.CINumber} Hotfix Management!"
+def failMailContent = ""
+
+
+// JIRA
+def jiraProjectKey = "RECO"
+def branchBaseOn = "${productVersion}_RECO"
+def jiraSite = "jiraprod"
+def jiraIssueLink = "https://jira.avepoint.net/browse/"
+def canCreateHMStatus = "Preparing Build Environment"
+def openHMJql = "project = CI AND issuetype = \"Hotfix Management\" AND status != Closed  AND \"SVN Branch\" = \"${branchURL}\""
+def closeHMJql = "project = CI AND issuetype = \"Hotfix Management\" AND status = Closed  AND \"SVN Branch\" = \"${branchURL}\" ORDER BY key DESC"
+
+
+pipeline {
+
+	agent {
+		node {
+			label "${nodeLabel}"
+        	customWorkspace "${workspaceDir}"
+		}
+	}
+
+	
+	stages{
+
+		stage("Create HM") {
+			steps {
+				script {
+					if(!"${params.CINumber}".startsWith("${jiraProjectKey}")) {
+						
+						failMailContent = "${params.CINumber} is not a custmer issue for ${productName}."
+						error "${params.CINumber} is not a custmer issue for ${productName}."
+						
+					}
+						
+					// 获取CI的Assignee,加入到收件人中
+					def ci = jiraGetIssue idOrKey: "${params.CINumber}", site: "${jiraSite}"
+					def email = ci.data.fields.assignee.emailAddress
+					def assignee = ci.data.fields.assignee.name
+					recpList = recpList + ",${email}"
+					
+					
+					// 首先获取CI的状态
+					def status = ci.data.fields.status.name
+					if (status.trim() != "${canCreateHMStatus}")
+					{
+						failMailContent = "The status of ${params.CINumber} is not ${canCreateHMStatus}."
+						error "The status of ${params.CINumber} is not ${canCreateHMStatus}."
+					}
+					
+					
+					// 获取没有Close的HM，如果有则在邮件中提示Open的HM链接，并退出。
+					def openHMs = jiraJqlSearch jql: "${openHMJql}", site: "${jiraSite}"
+					if(openHMs.data.total != 0)
+					{
+						failMailContent = "The following Hotfix Management are not closed:<br>"
+						for(hm in openHMs.data.issues)
+						{
+							failMailContent += "${jiraIssueLink}${hm.key}<br>"
+						}
+						failMailContent += "If you want to create a new Hotfix Management, please close the above issues first."
+						error "One or more Hotfix Management are not closed."
+					}
+
+					
+					// 获取Close的HM，如果没有则表示是当前版本第一次创建HM。
+					def hotfixVersion = "${productVersion}.5001"
+					def hotfixFixed = ""
+					def closedHMs = jiraJqlSearch jql: "${closeHMJql}", site: "${jiraSite}"
+					if(closedHMs.data.total != 0)
+					{
+						def lastHotfixVersion = closedHMs.data.issues[0].fields.customfield_10084
+						hotfixVersion = "${productVersion}." + (lastHotfixVersion.replace("${productVersion}.","").toInteger() + 1)
+					}
+					
+					
+					// 创建HM
+					def hm = [fields: [ // id or key must present for project.
+								project: [key: 'CI'],
+								issuetype: [id: '13'],
+								summary: "${params.CINumber}",
+								description: "Automatically created",
+								customfield_10072: "${jiraIssueLink}${params.CINumber}",
+								assignee: [name: "${assignee}"],
+								customfield_10441: "${branchURL}",
+								customfield_10720: "${branchBaseOn}",
+								customfield_10084: "${hotfixVersion}"
+							 ]]
+					response = jiraNewIssue issue: hm, site: "${jiraSite}"
+					if(!response.successful) {
+						failMailContent = "Failed to create Hotfix Management. Please contact SCM to resolve problems."
+						error "Failed to create Hotfix Management"
+					}
+					
+					
+					
+					// 更新Hotfix fixed
+					hotfixFixed = "${hotfixVersion}(${jiraIssueLink}${response.data.key})"
+					if(closedHMs.data.total != 0)
+					{
+						hotfixFixed = closedHMs.data.issues[0].fields.customfield_10502 + "\r\n" + "${hotfixVersion}(${jiraIssueLink}${response.data.key})"
+					} 
+					def hmUpdate = [fields: [customfield_10502: "${hotfixFixed}"]]
+					def hmUpdateResponse = jiraEditIssue idOrKey: "${response.data.key}", issue: hmUpdate, site: "${jiraSite}"
+
+					if(!hmUpdateResponse.successful) {
+						failMailContent = "Failed to update Hotfix fixed. Please contact SCM to resolve problems."
+						error "Failed to update Hotfix fixed"
+					}
+					sucMailContent = """
+					1. Hotfix Management URL: ${jiraIssueLink}${response.data.key} <br>
+					2. Hotfix Version: ${hotfixVersion} <br>
+					3. Hotfix Build Job: ${hotfixBuildURL}
+					"""
+					
+					// 修改CI Build Environment URL
+					def ciUpdate = [fields: [customfield_10820: "${jiraIssueLink}${response.data.key}"]]
+					def ciUpdateResponse = jiraEditIssue idOrKey: "${params.CINumber}", issue: ciUpdate, site: "${jiraSite}"
+					if(!ciUpdateResponse.successful) {
+						failMailContent = "Failed to update Build Environment URL. Please contact SCM to resolve problems."
+						error "Failed to update Build Environment URL"
+					}
+					
+					
+					// 修改CI Status
+					def searchTransitionResult = jiraGetIssueTransitions idOrKey: "${params.CINumber}", site: "${jiraSite}"
+					def transitions =  searchTransitionResult.data.transitions
+					def transiontionId = 0
+					for (transition in transitions) {
+						if (transition.name.trim() == "Build Environment is Ready") {
+							transiontionId = transition.id
+							break
+						}
+					}
+					def transitionInput =[transition: [id: transiontionId],
+					                      fields: [customfield_13790: "${hotfixBuildURL}"]]
+					jiraTransitionIssue idOrKey: "${params.CINumber}", input: transitionInput, site: "${jiraSite}"
+
+				}
+			}
+		}
+	}
+
+	post {
+        success {
+            emailext body: "${sucMailContent}", mimeType: 'text/html', recipientProviders: [[$class: 'RequesterRecipientProvider']], subject: "${sucSubject}", to: "${recpList}"
+        }
+		failure {
+            emailext body: "${failMailContent}", mimeType: 'text/html', recipientProviders: [[$class: 'RequesterRecipientProvider']], subject: "${faiSubject}", to: "${recpList}"
+        }
+		unstable {
+            emailext body: "${failMailContent}", mimeType: 'text/html', recipientProviders: [[$class: 'RequesterRecipientProvider']], subject: "${faiSubject}", to: "${recpList}"
+        }
+    }
+}

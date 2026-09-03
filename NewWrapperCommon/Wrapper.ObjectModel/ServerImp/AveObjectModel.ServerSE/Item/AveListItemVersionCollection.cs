@@ -1,0 +1,111 @@
+﻿/********************************************************************
+ *
+ *  PROPRIETARY and CONFIDENTIAL
+ *
+ *  This file is licensed from, and is a trade secret of:
+ *
+ *                   AvePoint, Inc.
+ *                   525 Washington Blvd, Suite 1400
+ *                   Jersey City, NJ 07310
+ *                   United States of America
+ *                   Telephone: +1-201-793-1111
+ *                   WWW: www.avepoint.com
+ *
+ *  Refer to your License Agreement for restrictions on use,
+ *  duplication, or disclosure.
+ *
+ *  RESTRICTED RIGHTS LEGEND
+ *
+ *  Use, duplication, or disclosure by the Government is
+ *  subject to restrictions as set forth in subdivision
+ *  (c)(1)(ii) of the Rights in Technical Data and Computer
+ *  Software clause at DFARS 252.227-7013 (Oct. 1988) and
+ *  FAR 52.227-19 (C) (June 1987).
+ *
+ *  Copyright © 2017-2026 AvePoint® Inc. All Rights Reserved. 
+ *
+ *  Unpublished - All rights reserved under the copyright laws of the United States.
+ */
+
+
+
+using Microsoft.SharePoint;
+using AvePoint.Wrapper.Common;
+
+namespace AvePoint.ObjectModel.ServerSE
+{
+    class AveListItemVersionCollection : AveAbstractCommonCollection<IAveListItemVersion>, IAveListItemVersionCollection
+    {
+        private SPListItemVersionCollection mListItemVersionCollection;
+        private AveListItem mListItem;
+        private AveWeb mWeb;
+
+        public AveListItemVersionCollection(AveListItem listItem, SPListItemVersionCollection listItemVersionCollection)
+            : base(listItemVersionCollection)
+        {
+            mListItem = listItem;
+            mWeb = mListItem.ParentList.ParentWeb as AveWeb;
+            mListItemVersionCollection = listItemVersionCollection;
+        }
+
+        #region IAveListItemVersionCollection Members
+
+        public IAveListItem ListItem
+        {
+            get
+            {
+                return mListItem;
+            }
+        }
+
+        public IAveListItemVersion GetVersionFromID(int versionId)
+        {
+            SPListItemVersion listItemVersion = mListItemVersionCollection.GetVersionFromID(versionId);
+            if (listItemVersion == null)
+            {
+                return null;
+            }
+            return new AveListItemVersion(this, listItemVersion);
+        }
+
+        public override IAveListItemVersion this[int index]
+        {
+            get
+            {
+                return new AveListItemVersion(this, mListItemVersionCollection[index]);
+            }
+        }
+
+        protected override object CreatElementInstance(object t)
+        {
+            return new AveListItemVersion(this, t as SPListItemVersion);
+        }
+
+        public override int Count
+        {
+            get { return mListItemVersionCollection.Count; }
+        }
+
+        public IAveWeb Web
+        {
+            get { return mWeb; }
+        }
+
+        #endregion
+
+        #region IAveListItemVersionCollection Methods
+
+        public void RecycleAll()
+        {
+            mListItemVersionCollection.RecycleAll();
+        }
+
+        public void DeleteAll()
+        {
+            mListItemVersionCollection.DeleteAll();
+        }
+
+        #endregion
+
+    }
+}

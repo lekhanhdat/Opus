@@ -1,0 +1,121 @@
+{
+  "ListNode": {
+    "FullPath": "https://test.sharepoint.com/sites/test/Shared Documents",
+    "Title": "Shared Documents",
+    "Name": "Shared Documents",
+    "ID": "a1234567-0001-0001-0001-000000000001",
+    "SPNodeLevel": "List",
+    "CacheNodeType": 1000,
+    "SiteUrl": "https://test.sharepoint.com/sites/test",
+    "WebId": "a1234567-0002-0002-0002-000000000002",
+    "ListId": "a1234567-0003-0003-0003-000000000003"
+  },
+  "FolderNode": {
+    "FullPath": "https://test.sharepoint.com/sites/test/Shared Documents/ProjectDocs",
+    "Title": "ProjectDocs",
+    "Name": "ProjectDocs",
+    "ID": "a1234567-0004-0004-0004-000000000004",
+    "SPNodeLevel": "Folder",
+    "CacheNodeType": 1002,
+    "SiteUrl": "https://test.sharepoint.com/sites/test",
+    "WebId": "a1234567-0002-0002-0002-000000000002",
+    "ListId": "a1234567-0003-0003-0003-000000000003"
+  },
+  "Rules": [
+    {
+      "Id": "1",
+      "Name": "Match All Documents",
+      "Type": "ADMIN",
+      "PolicyLevel": 64,
+      "Filters": [
+        {
+          "SequenceNo": 1,
+          "Level": 64,
+          "RuleType": 1,
+          "Condition": 16827904,
+          "Value1": "*",
+          "Value1Unit": 1
+        }
+      ]
+    },
+    {
+      "Id": "2",
+      "Name": "Match All Folders",
+      "Type": "ADMIN",
+      "PolicyLevel": 16,
+      "Filters": [
+        { "SequenceNo": 1, "Level": 16, "RuleType": 8, "Condition": 8, "Value1": "*" }
+      ]
+    }
+  ],
+  "Items": [
+    {
+      "DocID": "b1234567-0001-0001-0001-000000000001",
+      "FullUrl": "https://test.sharepoint.com/sites/test/Shared Documents/ProjectDocs/Report.docx",
+      "LeafName": "Report.docx",
+      "ID": 1,
+      "Uiversion": 1536,
+      "Title": "Quarterly Report",
+      "FileSize": 102400,
+      "ItemType": "DOCUMENT",
+      "Attachments": [],
+      "Versions": [
+        { "Uiversion": 512 },
+        { "Uiversion": 1024 },
+        { "Uiversion": 1536 }
+      ]
+    },
+    {
+      "DocID": "b1234567-0002-0002-0002-000000000002",
+      "FullUrl": "https://test.sharepoint.com/sites/test/Shared Documents/ProjectDocs/Meeting Notes.docx",
+      "LeafName": "Meeting Notes.docx",
+      "ID": 2,
+      "Uiversion": 512,
+      "Title": "Meeting Notes",
+      "FileSize": 51200,
+      "ItemType": "DOCUMENT",
+      "Attachments": [
+        {
+          "Name": "Agenda.pdf",
+          "Url": "https://test.sharepoint.com/sites/test/Shared Documents/ProjectDocs/Attachments/2/Agenda.pdf"
+        },
+        {
+          "Name": "Minutes.txt",
+          "Url": "https://test.sharepoint.com/sites/test/Shared Documents/ProjectDocs/Attachments/2/Minutes.txt"
+        }
+      ],
+      "Versions": [
+        { "Uiversion": 512 }
+      ]
+    },
+    {
+      "DocID": "b1234567-0003-0003-0003-000000000003",
+      "FullUrl": "https://test.sharepoint.com/sites/test/Shared Documents/ProjectDocs/Task List Item",
+      "LeafName": "Task List Item",
+      "ID": 3,
+      "Uiversion": 1024,
+      "Title": "Sprint Task 1",
+      "FileSize": 0,
+      "ItemType": "ITEM_TYPE",
+      "Attachments": [
+        {
+          "Name": "Screenshot.png",
+          "Url": "https://test.sharepoint.com/sites/test/Shared Documents/ProjectDocs/Attachments/3/Screenshot.png"
+        }
+      ],
+      "Versions": [
+        { "Uiversion": 512 },
+        { "Uiversion": 1024 }
+      ]
+    }
+  ],
+  "Folders": [],
+  "Expected": {
+    "ShouldThrowException": false,
+    "ExpectedProcessedItemsCount": 3,
+    "ExpectedProcessedFoldersCount": 0,
+    "ExpectedProcessedVersionsCount": 3,
+    "ExpectedProcessedAttachmentsCount": 3,
+    "ExpectedExceptionsCaughtCount": 0
+  }
+}

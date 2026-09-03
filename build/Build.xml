@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--/********************************************************************
+ *
+ *  PROPRIETARY and CONFIDENTIAL
+ *
+ *  This file is licensed from, and is a trade secret of:
+ *
+ *                   AvePoint, Inc.
+ *                   Harborside Financial Center
+ *                   9th Fl.   Plaza Ten
+ *                   Jersey City, NJ 07311
+ *                   United States of America
+ *                   Telephone: +1-800-661-6588
+ *                   WWW: www.avepoint.com
+ *
+ *  Refer to your License Agreement for restrictions on use,
+ *  duplication, or disclosure.
+ *
+ *  RESTRICTED RIGHTS LEGEND
+ *
+ *  Use, duplication, or disclosure by the Government is
+ *  subject to restrictions as set forth in subdivision
+ *  (c)(1)(ii) of the Rights in Technical Data and Computer
+ *  Software clause at DFARS 252.227-7013 (Oct. 1988) and
+ *  FAR 52.227-19 (C) (June 1987).
+ *
+ *  Copyright © 2020 AvePoint® Inc. All Rights Reserved. 
+ *
+ *  Unpublished - All rights reserved under the copyright laws of the United States.
+ */-->
+
+<!--
+ ********************************************************************
+ * 请大家在申请Binary List的同时修改 CopyBinaryList.xml。确保要使用的文件能够部署出来。
+ *
+ *  Binary File List 申请路径：
+ *  http://cchome.avepoint.net/Application%20Acceptance/DocAve6%20Binary%20File%20Application/Forms/Waiting%20for%20Approve.aspx
+ *
+ *  3rd party File List 申请路径：
+ *  http://cchome.avepoint.net/Application%20Acceptance/3rd%20Party%20File%20Application/Forms/Waiting%20for%20Approving.aspx
+ * 
+ *  Binary File List 查询路径
+ *  http://cchome.avepoint.net/sites/product/Package%20Team/DocAve6/Lists/DocAve6%20Binary%20List/Standard%20View.aspx
+ *  
+ *  Pictrue File List 查询路径
+ *  http://cchome.avepoint.net/sites/product/Package%20Team/DocAve6/Lists/Picture%20File%20List/AllItems.aspx
+ *  
+ *  3rd party File List 查询路径
+ *  http://cchome.avepoint.net/sites/product/Package%20Team/DocAve6/Lists/Open%20Source%203rd%20Party%20Code/DocAve%20Waiting%20for%20US%20Approval.aspx
+ *
+ *********************************************************************
+-->
+
+<Project  DefaultTargets="MainDeployRecordsAutomation"  xmlns="http://schemas.microsoft.com/developer/msbuild/2003" >
+  <PropertyGroup>
+	<!--距此build.xml的相对路径层数-->
+	<WorkingDirectory>..\</WorkingDirectory>
+	<!--编译方式-->
+	<BuildType>Release</BuildType>
+	<BuildTarget>Rebuild</BuildTarget>
+	<Platform>Any CPU</Platform>
+	<!--Wsp10部分涉及到的文件相对路径-->
+	<ProjectPath>$(WorkingDirectory)</ProjectPath>
+	<ProjectToolPath>$(WorkingDirectory)ProductTools\</ProjectToolPath>
+	<!--文件夹的相对路径-->
+	<ProjectBasePath></ProjectBasePath>
+	<DisableILMerge Condition="'$(DisableILMerge)' == ''">false</DisableILMerge>
+	<ContinueOnFailure>false</ContinueOnFailure>
+	<MSBuildPath>C:\Program Files (x86)\MSBuild\14.0\Bin\MSBuild.exe</MSBuildPath>    
+  </PropertyGroup>
+
+  <Target Name="MainDeploy">
+    <CallTarget Targets="MainDeployAvePointRevIM" />
+  </Target>
+  
+  <Target Name="MainDeployAvePointRevIM">
+    <CallTarget Targets="RAWebCompressJsCss" />
+    <CallTarget Targets="AvePointRevIM" />
+    <CallTarget Targets="RevIMCloudService" />
+    <CallTarget Targets="RevIMScheduleJob" />
+    <CallTarget Targets="RevIMLoginWeb" />
+	<CallTarget Targets="RevIMRelatedApp" />
+
+  </Target>
+  
+  <!--RAWebCompressJsCss-->
+  <Target Name="RAWebCompressJsCss">
+    <Exec Command=".\RAWebjscss.bat"/>
+  </Target>
+
+  <!--RAWeb Gulp Build-->
+  <Target Name="RAWebGulpBuild">
+    <Exec Command=".\RAWebGulpBuild.bat"/>
+  </Target>
+  
+<!--RAWebApp-->
+<Target Name="AvePointRevIM">
+   <MSBuild
+      Projects="$(ProjectPath)RecordsAutomation.sln"
+      ContinueOnError="$(ContinueOnFailure)"
+      Targets="$(BuildTarget)"
+      Properties="Configuration=$(BuildType);Platform=$(Platform)" TargetAndPropertyListSeparators="False">
+   </MSBuild>
+</Target>
+<!--RevIMRelatedApp-->
+<Target Name="RevIMRelatedApp">
+   <MSBuild
+      Projects="$(ProjectPath)RASPApp/RASPApp.sln"
+      ContinueOnError="$(ContinueOnFailure)"
+      Targets="$(BuildTarget)"
+      Properties="Configuration=$(BuildType);Platform=$(Platform)" TargetAndPropertyListSeparators="False">
+   </MSBuild>
+</Target>
+<!--RevIMLoginWeb-->
+<Target Name="RevIMLoginWeb">
+   <MSBuild
+      Projects="$(ProjectPath)RecordsLogIn.sln"
+      ContinueOnError="$(ContinueOnFailure)"
+      Targets="$(BuildTarget)"
+      Properties="Configuration=$(BuildType);Platform=$(Platform)" TargetAndPropertyListSeparators="False">
+   </MSBuild>
+</Target>
+<!--RAScheduleJobCloudService-->
+<Target Name="RevIMCloudService">
+    <MSBuild
+       Projects=" $(ProjectPath)RACloud.sln"
+       ContinueOnError="$(ContinueOnFailure)"
+       Targets="$(BuildTarget)"
+       Properties="Configuration=$(BuildType);Platform=$(Platform);DeployOnBuild=true;DeployTarget=Package;AutoParameterizationWebConfigConnectionStrings=false" TargetAndPropertyListSeparators="False">
+    </MSBuild>
+</Target>
+
+<!--RAScheduleJobCloudService-->
+<!--RAScheduleJob-->
+<Target Name="RevIMScheduleJob">
+		<MSBuild
+      Projects=" $(ProjectPath)RAScheduleJob.sln"
+      ContinueOnError="$(ContinueOnFailure)"
+      Targets="$(BuildTarget)"
+      Properties="Configuration=$(BuildType);Platform=$(Platform)" TargetAndPropertyListSeparators="False">
+		</MSBuild>
+</Target>
+<Target Name="RevIMHotfix">
+		<MSBuild
+      Projects=" $(ProjectPath)RecordsHotfixMaintenanceService.sln"
+      ContinueOnError="$(ContinueOnFailure)"
+      Targets="$(BuildTarget)"
+      Properties="Configuration=$(BuildType);Platform=$(Platform)" TargetAndPropertyListSeparators="False">
+		</MSBuild>
+</Target>
+
+
+</Project>

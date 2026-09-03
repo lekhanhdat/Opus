@@ -1,0 +1,93 @@
+﻿/********************************************************************
+ *
+ *  PROPRIETARY and CONFIDENTIAL
+ *
+ *  This file is licensed from, and is a trade secret of:
+ *
+ *                   AvePoint, Inc.
+ *                   525 Washington Blvd, Suite 1400
+ *                   Jersey City, NJ 07310
+ *                   United States of America
+ *                   Telephone: +1-201-793-1111
+ *                   WWW: www.avepoint.com
+ *
+ *  Refer to your License Agreement for restrictions on use,
+ *  duplication, or disclosure.
+ *
+ *  RESTRICTED RIGHTS LEGEND
+ *
+ *  Use, duplication, or disclosure by the Government is
+ *  subject to restrictions as set forth in subdivision
+ *  (c)(1)(ii) of the Rights in Technical Data and Computer
+ *  Software clause at DFARS 252.227-7013 (Oct. 1988) and
+ *  FAR 52.227-19 (C) (June 1987).
+ *
+ *  Copyright © 2017-2026 AvePoint® Inc. All Rights Reserved. 
+ *
+ *  Unpublished - All rights reserved under the copyright laws of the United States.
+ */
+
+
+
+
+
+using System.Runtime.Serialization;
+using AvePoint.GCommon.Contract.Common;
+
+namespace AvePoint.GCommon.Contract.Replicator.Object.Message
+{
+    [DataContract(Namespace = ContractConstants.Namespace)]
+    public class ReplicatorReportSummary
+    {
+        [DataMember]
+        public int WebAppCount { get; set; }
+
+        [DataMember]
+        public int FailedWebApps { get; set; }
+
+        [DataMember]
+        public int SiteCount { get; set; }
+
+        [DataMember]
+        public int FailedSites { get; set; }
+
+        [DataMember]
+        public int WebCount { get; set; }
+
+        [DataMember]
+        public int FailedWeb { get; set; }
+
+        [DataMember]
+        public int ListCount { get; set; }
+
+        [DataMember]
+        public int FailedLists { get; set; }
+
+        [DataMember]
+        public int ItemCount { get; set; }
+
+        [DataMember]
+        public int FailedItems { get; set; }
+
+        [DataMember]
+        public int SkippedItems { get; set; }
+
+        [DataMember]
+        public int VersionCount { get; set; }
+
+        [DataMember]
+        public int FailedVersion { get; set; }
+
+        [DataMember]
+        public int AttachmentCount { get; set; }
+
+        [DataMember]
+        public int FailedAttachments { get; set; }
+
+        [DataMember]
+        public long Size { get; set; }
+
+        [DataMember]
+        public string ErrorMessage { get; set; }
+    }
+}

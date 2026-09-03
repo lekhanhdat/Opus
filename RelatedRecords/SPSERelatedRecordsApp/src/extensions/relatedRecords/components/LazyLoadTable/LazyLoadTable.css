@@ -1,0 +1,15 @@
+/*Covered by AvePoint copyright and license agreement*/
+.lazy-load-table{
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+.lazy-load-table .ms-DetailsList-headerWrapper {
+	position: sticky;
+	top: 0;
+	z-index: 1;
+}
+
+.lazy-load-table .ms-DetailsList {
+	overflow: visible;
+}

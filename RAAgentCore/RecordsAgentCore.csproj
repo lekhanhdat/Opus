@@ -1,0 +1,673 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\Packages\EntityFramework.6.5.1\build\EntityFramework.props" Condition="Exists('..\Packages\EntityFramework.6.5.1\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{299B387B-5A22-4E8D-9A29-BD9B55FF78CB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RAFileSystemCore</RootNamespace>
+    <AssemblyName>RecordsAgentCore</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\bin\Agent\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\bin\Agent\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>DocAveStandard.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AlphaFS, Version=2.2.0.0, Culture=neutral, PublicKeyToken=4d31a58f7d7ad5c9, processorArchitecture=MSIL">
+      <HintPath>..\Packages\AlphaFS.2.2.6\lib\net452\AlphaFS.dll</HintPath>
+    </Reference>
+    <Reference Include="Azure.Core, Version=1.50.0.0, Culture=neutral, PublicKeyToken=92742159e12e44c8, processorArchitecture=MSIL">
+      <HintPath>..\Packages\Azure.Core.1.50.0\lib\net472\Azure.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Azure.Identity, Version=1.17.1.0, Culture=neutral, PublicKeyToken=92742159e12e44c8, processorArchitecture=MSIL">
+      <HintPath>..\Packages\Azure.Identity.1.17.1\lib\netstandard2.0\Azure.Identity.dll</HintPath>
+    </Reference>
+    <Reference Include="Azure.Storage.Blobs, Version=12.25.0.0, Culture=neutral, PublicKeyToken=92742159e12e44c8, processorArchitecture=MSIL">
+      <HintPath>..\Packages\Azure.Storage.Blobs.12.25.0\lib\netstandard2.0\Azure.Storage.Blobs.dll</HintPath>
+    </Reference>
+    <Reference Include="Azure.Storage.Common, Version=12.26.0.0, Culture=neutral, PublicKeyToken=92742159e12e44c8, processorArchitecture=MSIL">
+      <HintPath>..\Packages\Azure.Storage.Common.12.26.0\lib\netstandard2.0\Azure.Storage.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Duende.IdentityModel, Version=8.0.0.0, Culture=neutral, PublicKeyToken=e7877f4675df049f, processorArchitecture=MSIL">
+      <HintPath>..\Packages\Duende.IdentityModel.8.0.0\lib\netstandard2.0\Duende.IdentityModel.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\Packages\EntityFramework.6.5.1\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\Packages\EntityFramework.6.5.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=3.3.1.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\Packages\log4net.3.3.1\lib\net462\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=10.0.0.11, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\Packages\Microsoft.Bcl.AsyncInterfaces.10.0.11\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.Cryptography, Version=10.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\Packages\Microsoft.Bcl.Cryptography.10.0.2\lib\net462\Microsoft.Bcl.Cryptography.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.HashCode, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\Packages\Microsoft.Bcl.HashCode.6.0.0\lib\net462\Microsoft.Bcl.HashCode.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.Memory, Version=10.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\Packages\Microsoft.Bcl.Memory.10.0.4\lib\net462\Microsoft.Bcl.Memory.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.TimeProvider, Version=10.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\Packages\Microsoft.Bcl.TimeProvider.10.0.2\lib\net462\Microsoft.Bcl.TimeProvider.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.SqlClient, Version=6.0.0.0, Culture=neutral, PublicKeyToken=23ec7fc2d6eaa4a5, processorArchitecture=MSIL">
+      <HintPath>..\Packages\Microsoft.Data.SqlClient.6.1.4\lib\net462\Microsoft.Data.SqlClient.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.AmbientMetadata.Application, Version=10.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\Packages\Microsoft.Extensions.AmbientMetadata.Application.10.2.0\lib\net462\Microsoft.Extensions.AmbientMetadata.Application.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Caching.Abstractions, Version=10.0.0.2, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\Packages\Microsoft.Extensions.Caching.Abstractions.10.0.2\lib\net462\Microsoft.Extensions.Caching.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Caching.Memory, Version=10.0.0.2, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\Packages\Microsoft.Extensions.Caching.Memory.10.0.2\lib\net462\Microsoft.Extensions.Caching.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Compliance.Abstractions, Version=10.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\Packages\Microsoft.Extensions.Compliance.Abstractions.10.2.0\lib\netstandard2.0\Microsoft.Extensions.Compliance.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration, Version=10.0.0.2, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\Packages\Microsoft.Extensions.Configuration.10.0.2\lib\net462\Microsoft.Extensions.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.Abstractions, Version=10.0.0.2, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\Packages\Microsoft.Extensions.Configuration.Abstractions.10.0.2\lib\net462\Microsoft.Extensions.Configuration.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.Binder, Version=10.0.0.2, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\Packages\Microsoft.Extensions.Configuration.Binder.10.0.2\lib\net462\Microsoft.Extensions.Configuration.Binder.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.EnvironmentVariables, Version=10.0.0.2, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\Packages\Microsoft.Extensions.Configuration.EnvironmentVariables.10.0.2\lib\net462\Microsoft.Extensions.Configuration.EnvironmentVariables.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.FileExtensions, Version=10.0.0.2, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\Packages\Microsoft.Extensions.Configuration.FileExtensions.10.0.2\lib\net462\Microsoft.Extensions.Configuration.FileExtensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.Json, Version=10.0.0.2, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\Packages\Microsoft.Extensions.Configuration.Json.10.0.2\lib\net462\Microsoft.Extensions.Configuration.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.UserSecrets, Version=10.0.0.2, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\Packages\Microsoft.Extensions.Configuration.UserSecrets.10.0.2\lib\net462\Microsoft.Extensions.Configuration.UserSecrets.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection, Version=10.0.0.2, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\Packages\Microsoft.Extensions.DependencyInjection.10.0.2\lib\net462\Microsoft.Extensions.DependencyInjection.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions, Version=10.0.0.2, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\Packages\Microsoft.Extensions.DependencyInjection.Abstractions.10.0.2\lib\net462\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection.AutoActivation, Version=10.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\Packages\Microsoft.Extensions.DependencyInjection.AutoActivation.10.2.0\lib\net462\Microsoft.Extensions.DependencyInjection.AutoActivation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Diagnostics, Version=10.0.0.2, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\Packages\Microsoft.Extensions.Diagnostics.10.0.2\lib\net462\Microsoft.Extensions.Diagnostics.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Diagnostics.Abstractions, Version=10.0.0.2, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\Packages\Microsoft.Extensions.Diagnostics.Abstractions.10.0.2\lib\net462\Microsoft.Extensions.Diagnostics.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Diagnostics.ExceptionSummarization, Version=10.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\Packages\Microsoft.Extensions.Diagnostics.ExceptionSummarization.10.2.0\lib\net462\Microsoft.Extensions.Diagnostics.ExceptionSummarization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.FileProviders.Abstractions, Version=10.0.0.2, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\Packages\Microsoft.Extensions.FileProviders.Abstractions.10.0.2\lib\net462\Microsoft.Extensions.FileProviders.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.FileProviders.Physical, Version=10.0.0.2, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\Packages\Microsoft.Extensions.FileProviders.Physical.10.0.2\lib\net462\Microsoft.Extensions.FileProviders.Physical.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.FileSystemGlobbing, Version=10.0.0.2, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\Packages\Microsoft.Extensions.FileSystemGlobbing.10.0.2\lib\net462\Microsoft.Extensions.FileSystemGlobbing.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Hosting.Abstractions, Version=10.0.0.2, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\Packages\Microsoft.Extensions.Hosting.Abstractions.10.0.2\lib\net462\Microsoft.Extensions.Hosting.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Http, Version=10.0.0.2, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\Packages\Microsoft.Extensions.Http.10.0.2\lib\net462\Microsoft.Extensions.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Http.Diagnostics, Version=10.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\Packages\Microsoft.Extensions.Http.Diagnostics.10.2.0\lib\net462\Microsoft.Extensions.Http.Diagnostics.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Http.Polly, Version=10.0.2.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\Packages\Microsoft.Extensions.Http.Polly.10.0.2\lib\netstandard2.0\Microsoft.Extensions.Http.Polly.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Http.Resilience, Version=10.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\Packages\Microsoft.Extensions.Http.Resilience.10.2.0\lib\net462\Microsoft.Extensions.Http.Resilience.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging, Version=10.0.0.2, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\Packages\Microsoft.Extensions.Logging.10.0.2\lib\net462\Microsoft.Extensions.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging.Abstractions, Version=10.0.0.2, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\Packages\Microsoft.Extensions.Logging.Abstractions.10.0.2\lib\net462\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging.Configuration, Version=10.0.0.2, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\Packages\Microsoft.Extensions.Logging.Configuration.10.0.2\lib\net462\Microsoft.Extensions.Logging.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.ObjectPool, Version=10.0.2.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\Packages\Microsoft.Extensions.ObjectPool.10.0.2\lib\net462\Microsoft.Extensions.ObjectPool.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Options, Version=10.0.0.2, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\Packages\Microsoft.Extensions.Options.10.0.2\lib\net462\Microsoft.Extensions.Options.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Options.ConfigurationExtensions, Version=10.0.0.2, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\Packages\Microsoft.Extensions.Options.ConfigurationExtensions.10.0.2\lib\net462\Microsoft.Extensions.Options.ConfigurationExtensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Primitives, Version=10.0.0.2, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\Packages\Microsoft.Extensions.Primitives.10.0.2\lib\net462\Microsoft.Extensions.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Resilience, Version=10.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\Packages\Microsoft.Extensions.Resilience.10.2.0\lib\net462\Microsoft.Extensions.Resilience.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Telemetry, Version=10.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\Packages\Microsoft.Extensions.Telemetry.10.2.0\lib\net462\Microsoft.Extensions.Telemetry.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Telemetry.Abstractions, Version=10.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\Packages\Microsoft.Extensions.Telemetry.Abstractions.10.2.0\lib\net462\Microsoft.Extensions.Telemetry.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Identity.Abstractions, Version=10.0.0.0, Culture=neutral, PublicKeyToken=0a613f4dd989e8ae, processorArchitecture=MSIL">
+      <HintPath>..\Packages\Microsoft.Identity.Abstractions.10.0.0\lib\net462\Microsoft.Identity.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Identity.Client, Version=4.81.0.0, Culture=neutral, PublicKeyToken=0a613f4dd989e8ae, processorArchitecture=MSIL">
+      <HintPath>..\Packages\Microsoft.Identity.Client.4.81.0\lib\net472\Microsoft.Identity.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Identity.Client.Extensions.Msal, Version=4.81.0.0, Culture=neutral, PublicKeyToken=0a613f4dd989e8ae, processorArchitecture=MSIL">
+      <HintPath>..\Packages\Microsoft.Identity.Client.Extensions.Msal.4.81.0\lib\netstandard2.0\Microsoft.Identity.Client.Extensions.Msal.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Abstractions, Version=8.15.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\Packages\Microsoft.IdentityModel.Abstractions.8.15.0\lib\net472\Microsoft.IdentityModel.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Extensions, Version=2.0.0.0, Culture=neutral, PublicKeyToken=69c3241e6f0468ca, processorArchitecture=MSIL">
+      <HintPath>..\Packages\Microsoft.Identity.Model.Extensions.2.0.1459.0\lib\Microsoft.IdentityModel.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.JsonWebTokens, Version=8.15.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\Packages\Microsoft.IdentityModel.JsonWebTokens.8.15.0\lib\net472\Microsoft.IdentityModel.JsonWebTokens.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Logging, Version=8.15.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\Packages\Microsoft.IdentityModel.Logging.8.15.0\lib\net472\Microsoft.IdentityModel.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Protocols, Version=8.15.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\Packages\Microsoft.IdentityModel.Protocols.8.15.0\lib\net472\Microsoft.IdentityModel.Protocols.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Protocols.OpenIdConnect, Version=8.15.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\Packages\Microsoft.IdentityModel.Protocols.OpenIdConnect.8.15.0\lib\net472\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Tokens, Version=8.15.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\Packages\Microsoft.IdentityModel.Tokens.8.15.0\lib\net472\Microsoft.IdentityModel.Tokens.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IO.RecyclableMemoryStream, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\Packages\Microsoft.IO.RecyclableMemoryStream.3.0.1\lib\netstandard2.0\Microsoft.IO.RecyclableMemoryStream.dll</HintPath>
+    </Reference>
+    <Reference Include="MurmurHash, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\Packages\murmurhash.1.0.3\lib\net45\MurmurHash.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\Packages\Newtonsoft.Json.13.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NVelocity, Version=1.0.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <HintPath>..\Packages\NVelocity.1.2.0\lib\netstandard2.0\NVelocity.dll</HintPath>
+    </Reference>
+    <Reference Include="Pipelines.Sockets.Unofficial, Version=1.0.0.0, Culture=neutral, PublicKeyToken=42ea0a778e13fbe2, processorArchitecture=MSIL">
+      <HintPath>..\Packages\Pipelines.Sockets.Unofficial.2.2.8\lib\net472\Pipelines.Sockets.Unofficial.dll</HintPath>
+    </Reference>
+    <Reference Include="Polly, Version=8.0.0.0, Culture=neutral, PublicKeyToken=c8a3ffc3f8f825cc, processorArchitecture=MSIL">
+      <HintPath>..\Packages\Polly.8.6.5\lib\net472\Polly.dll</HintPath>
+    </Reference>
+    <Reference Include="Polly.Core, Version=8.0.0.0, Culture=neutral, PublicKeyToken=c8a3ffc3f8f825cc, processorArchitecture=MSIL">
+      <HintPath>..\Packages\Polly.Core.8.6.5\lib\net472\Polly.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Polly.Extensions, Version=8.0.0.0, Culture=neutral, PublicKeyToken=c8a3ffc3f8f825cc, processorArchitecture=MSIL">
+      <HintPath>..\Packages\Polly.Extensions.8.6.5\lib\net472\Polly.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Polly.Extensions.Http, Version=3.0.0.0, Culture=neutral, PublicKeyToken=c8a3ffc3f8f825cc, processorArchitecture=MSIL">
+      <HintPath>..\Packages\Polly.Extensions.Http.3.0.0\lib\netstandard2.0\Polly.Extensions.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="Polly.RateLimiting, Version=8.0.0.0, Culture=neutral, PublicKeyToken=c8a3ffc3f8f825cc, processorArchitecture=MSIL">
+      <HintPath>..\Packages\Polly.RateLimiting.8.6.5\lib\net472\Polly.RateLimiting.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationFramework" />
+    <Reference Include="SmartThreadPool, Version=2.3.0.0, Culture=neutral, PublicKeyToken=1126fe8b671e8a79, processorArchitecture=MSIL">
+      <HintPath>..\Packages\SmartThreadPool.dll.2.3.0\lib\net46\SmartThreadPool.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.5.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\Packages\System.Buffers.4.6.1\lib\net462\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ClientModel, Version=1.9.0.0, Culture=neutral, PublicKeyToken=92742159e12e44c8, processorArchitecture=MSIL">
+      <HintPath>..\Packages\System.ClientModel.1.9.0\lib\netstandard2.0\System.ClientModel.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Collections.Immutable, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\Packages\System.Collections.Immutable.8.0.0\lib\net462\System.Collections.Immutable.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Annotations, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\Packages\System.ComponentModel.Annotations.5.0.0\lib\net461\System.ComponentModel.Annotations.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.ConfigurationManager, Version=10.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\Packages\System.Configuration.ConfigurationManager.10.0.2\lib\net462\System.Configuration.ConfigurationManager.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Common, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\Packages\System.Data.Common.4.3.0\lib\net451\System.Data.Common.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Data.SQLite, Version=1.0.119.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\Packages\System.Data.SQLite.AvePoint.1.0.119.2\lib\netstandard2.0\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=10.0.0.3, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\Packages\System.Diagnostics.DiagnosticSource.10.0.3\lib\net462\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Formats.Asn1, Version=10.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\Packages\System.Formats.Asn1.10.0.2\lib\net462\System.Formats.Asn1.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IdentityModel" />
+    <Reference Include="System.IdentityModel.Tokens.Jwt, Version=8.15.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\Packages\System.IdentityModel.Tokens.Jwt.8.15.0\lib\net472\System.IdentityModel.Tokens.Jwt.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\Packages\System.IO.4.3.0\lib\net462\System.IO.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.IO.Compression, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\Packages\System.IO.Compression.4.3.0\lib\net46\System.IO.Compression.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.IO.FileSystem.AccessControl, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\Packages\System.IO.FileSystem.AccessControl.5.0.0\lib\net461\System.IO.FileSystem.AccessControl.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Pipelines, Version=10.0.0.10, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\Packages\System.IO.Pipelines.10.0.10\lib\net462\System.IO.Pipelines.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Management" />
+    <Reference Include="System.Memory, Version=4.0.5.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\Packages\System.Memory.4.6.3\lib\net462\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Memory.Data, Version=10.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\Packages\System.Memory.Data.10.0.2\lib\net462\System.Memory.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net" />
+    <Reference Include="System.Net.Http, Version=4.1.1.3, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\Packages\System.Net.Http.4.3.4\lib\net46\System.Net.Http.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.6.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\Packages\System.Numerics.Vectors.4.6.1\lib\net462\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reflection, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Reflection.4.3.0\lib\net462\System.Reflection.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Reflection.TypeExtensions, Version=4.1.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Reflection.TypeExtensions.4.7.0\lib\net461\System.Reflection.TypeExtensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime, Version=4.1.1.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\Packages\System.Runtime.4.3.1\lib\net462\System.Runtime.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\Packages\System.Runtime.CompilerServices.Unsafe.6.1.2\lib\net462\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\Packages\System.Runtime.InteropServices.RuntimeInformation.4.3.0\lib\net45\System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Security.AccessControl, Version=6.0.0.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\Packages\System.Security.AccessControl.6.0.1\lib\net461\System.Security.AccessControl.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Algorithms, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\Packages\System.Security.Cryptography.Algorithms.4.3.1\lib\net463\System.Security.Cryptography.Algorithms.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Encoding, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\Packages\System.Security.Cryptography.Encoding.4.3.0\lib\net46\System.Security.Cryptography.Encoding.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Pkcs, Version=10.0.0.2, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\Packages\System.Security.Cryptography.Pkcs.10.0.2\lib\net462\System.Security.Cryptography.Pkcs.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Primitives, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\Packages\System.Security.Cryptography.Primitives.4.3.0\lib\net46\System.Security.Cryptography.Primitives.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.ProtectedData, Version=10.0.0.2, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\Packages\System.Security.Cryptography.ProtectedData.10.0.2\lib\net462\System.Security.Cryptography.ProtectedData.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.X509Certificates, Version=4.1.1.2, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\Packages\System.Security.Cryptography.X509Certificates.4.3.2\lib\net461\System.Security.Cryptography.X509Certificates.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Permissions, Version=10.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\Packages\System.Security.Permissions.10.0.2\lib\net462\System.Security.Permissions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Principal.Windows, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\Packages\System.Security.Principal.Windows.5.0.0\lib\net461\System.Security.Principal.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Text.Encodings.Web, Version=10.0.0.10, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\Packages\System.Text.Encodings.Web.10.0.10\lib\net462\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json, Version=10.0.0.10, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\Packages\System.Text.Json.10.0.10\lib\net462\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.RegularExpressions, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\Packages\System.Text.RegularExpressions.4.3.1\lib\net463\System.Text.RegularExpressions.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Threading.Channels, Version=10.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\Packages\System.Threading.Channels.10.0.2\lib\net462\System.Threading.Channels.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.RateLimiting, Version=10.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\Packages\System.Threading.RateLimiting.10.0.2\lib\net462\System.Threading.RateLimiting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.4.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\Packages\System.Threading.Tasks.Extensions.4.6.3\lib\net462\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApiClient\HybridApiClient.cs" />
+    <Compile Include="ApiClient\HybridSdk.cs" />
+    <Compile Include="ApiClient\HyperHybridAPIClient.cs" />
+    <Compile Include="ApiClient\RMFileSystemHyperHybridAPIClient.cs" />
+    <Compile Include="Cache\ICacheService.cs" />
+    <Compile Include="Cache\MemoryListCacheService.cs" />
+    <Compile Include="Cache\MemoryStackCacheService.cs" />
+    <Compile Include="Common\APIUtility.cs" />
+    <Compile Include="Common\HttpHelper.cs" />
+    <Compile Include="Common\JobHandler\AgentJobStopException.cs" />
+    <Compile Include="Common\JobHandler\ISupportsCancellation.cs" />
+    <Compile Include="Common\JobHandler\JobStopMonitor.cs" />
+    <Compile Include="Common\JobHandler\RecordsJobStopArgs.cs" />
+    <Compile Include="Common\JobIdStateInfo.cs" />
+    <Compile Include="Common\JobInfoUpdater.cs" />
+    <Compile Include="Common\FSDtoConverter.cs" />
+    <Compile Include="Common\SingletonBase.cs" />
+    <Compile Include="Common\WebRequestStr.cs" />
+    <Compile Include="JobContext.cs" />
+    <Compile Include="JobProgress\IProgressManager.cs" />
+    <Compile Include="JobProgress\IProgressService.cs" />
+    <Compile Include="JobProgress\ProgressManager.cs" />
+    <Compile Include="JobProgress\ProgressService.cs" />
+    <Compile Include="JobReport\IReportManager.cs" />
+    <Compile Include="JobReport\IReportService.cs" />
+    <Compile Include="JobReport\JobSummaryService.cs" />
+    <Compile Include="JobReport\Objects\ReportEntry.cs" />
+    <Compile Include="JobReport\ReportManager.cs" />
+    <Compile Include="JobReport\ReportService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReportSerializer\AbstractBaseWorker.cs" />
+    <Compile Include="ReportSerializer\Details\CollectionDataJobDetailWorker.cs" />
+    <Compile Include="ReportSerializer\Details\CreationAndDestructionDetailWorker.cs" />
+    <Compile Include="ReportSerializer\Details\DueDisposalDetailWorkder.cs" />
+    <Compile Include="ReportSerializer\Details\FSCollectionDetailWorker.cs" />
+    <Compile Include="ReportSerializer\Details\FSDisposalDetailWorker.cs" />
+    <Compile Include="ReportSerializer\Details\FSRestoreDetailWorker.cs" />
+    <Compile Include="ReportSerializer\Details\FSRetainDetailWorker.cs" />
+    <Compile Include="ReportSerializer\Details\GlobalSearchActionJobDetailWorker.cs" />
+    <Compile Include="ReportSerializer\Details\OnPremiseSPEnforceRuleActionDetailWorker.cs" />
+    <Compile Include="ReportSerializer\Details\OnPremiseSPScanLocalNodeJobDetialWorker.cs" />
+    <Compile Include="ReportSerializer\Details\SharePointSettingsJobDetailWorker.cs" />
+    <Compile Include="ReportSerializer\Details\TermSynchronizatoinJobDetailWorker.cs" />
+    <Compile Include="ReportSerializer\Details\UniqueIDSettingJobDetailWorker.cs" />
+    <Compile Include="ReportSerializer\Reports\AbstractReportWorker.cs" />
+    <Compile Include="ReportSerializer\Details\AbstractDetailWorker.cs" />
+    <Compile Include="ReportSerializer\Reports\BCSTermUsageReportWorker.cs" />
+    <Compile Include="ReportSerializer\Reports\CreationAndDestructionReportWorker.cs" />
+    <Compile Include="ReportSerializer\Reports\DueDisposalReportWorker.cs" />
+    <Compile Include="ReportSerializer\Reports\DueTimeFrameReportWorker.cs" />
+    <Compile Include="ReportSerializer\RCReportSerializer.cs" />
+    <Compile Include="UniqueIdService\IUniqueIdService.cs" />
+    <Compile Include="UniqueIdService\UniqueIdService.cs" />
+    <Compile Include="Utils\CodeContract.cs" />
+    <Compile Include="Utils\ConfigurationFile\AgentConfigurationFileHelper.cs" />
+    <Compile Include="Utils\ConfigurationFile\ConfigurationFileChecker.cs" />
+    <Compile Include="Utils\Configuration\AgentAccountUtil.cs" />
+    <Compile Include="Utils\Configuration\CommonConfiguration.cs" />
+    <Compile Include="Utils\Configuration\RegistryConstants.cs" />
+    <Compile Include="Utils\Configuration\ServiceInitializationUtil.cs" />
+    <Compile Include="Utils\Cryptography\AsymmetricEncryptionFactory.cs" />
+    <Compile Include="Utils\Cryptography\AsymmetricEncryption\RSAEncryption.cs" />
+    <Compile Include="Utils\Cryptography\AveProtectedData.cs" />
+    <Compile Include="Utils\Cryptography\ConfigurationProtectionUtil.cs" />
+    <Compile Include="Utils\Cryptography\CryptographyManagement.cs" />
+    <Compile Include="Utils\Cryptography\CryptoModuleStateMachine.cs" />
+    <Compile Include="Utils\Cryptography\CryptoStatus.cs" />
+    <Compile Include="Utils\Cryptography\CryptoUtil.cs" />
+    <Compile Include="Utils\Cryptography\CspCommunicationWrapper.cs" />
+    <Compile Include="Utils\Cryptography\CspCrossPlatformExchangeWrapper.cs" />
+    <Compile Include="Utils\Cryptography\EncryptionFactory.cs" />
+    <Compile Include="Utils\Cryptography\Encryption\AbstractEncryption.cs" />
+    <Compile Include="Utils\Cryptography\Encryption\AESEncriptionHelper.cs" />
+    <Compile Include="Utils\Cryptography\Encryption\AESEncryption.cs" />
+    <Compile Include="Utils\Cryptography\Encryption\BlowfishEncryption.cs" />
+    <Compile Include="Utils\Cryptography\Encryption\Blowfish\BlowfishAlgorithm.cs" />
+    <Compile Include="Utils\Cryptography\Encryption\CryptoWithIVStream.cs" />
+    <Compile Include="Utils\Cryptography\Encryption\DESEncryption.cs" />
+    <Compile Include="Utils\Cryptography\FipsModeUtil.cs" />
+    <Compile Include="Utils\Cryptography\HashAlgorithmFactory.cs" />
+    <Compile Include="Utils\Cryptography\Hash\AveHMACSHA256Provider.cs" />
+    <Compile Include="Utils\Cryptography\Hash\AveMd5.cs" />
+    <Compile Include="Utils\Cryptography\Hash\AveMD5Provider.cs" />
+    <Compile Include="Utils\Cryptography\Hash\AveSha1.cs" />
+    <Compile Include="Utils\Cryptography\Hash\AveSha256.cs" />
+    <Compile Include="Utils\Cryptography\Hash\AveSha384.cs" />
+    <Compile Include="Utils\Cryptography\Hash\AveSha512.cs" />
+    <Compile Include="Utils\Cryptography\Hash\HmacSha1.cs" />
+    <Compile Include="Utils\Cryptography\Hash\HmacSHA256.cs" />
+    <Compile Include="Utils\Cryptography\IAsymmetricEncryption.cs" />
+    <Compile Include="Utils\Cryptography\ICryptography.cs" />
+    <Compile Include="Utils\Cryptography\IEncryption.cs" />
+    <Compile Include="Utils\Cryptography\IHashAlgorithm.cs" />
+    <Compile Include="Utils\Cryptography\IKeyGenerate.cs" />
+    <Compile Include="Utils\Cryptography\IUserCredentialIdentify.cs" />
+    <Compile Include="Utils\Cryptography\KeyGenerateProviderFactory.cs" />
+    <Compile Include="Utils\Cryptography\KeyGenerate\AveKeyGenerateProvider.cs" />
+    <Compile Include="Utils\Cryptography\LocalProtectedDataUtil.cs" />
+    <Compile Include="Utils\Cryptography\MemoryCleaner.cs" />
+    <Compile Include="Utils\Cryptography\ProductInfoUtil.cs" />
+    <Compile Include="Utils\Cryptography\RAEncodeUtil.cs" />
+    <Compile Include="Utils\Cryptography\Registry\Registry64.cs" />
+    <Compile Include="Utils\Cryptography\Registry\RegistryManager.cs" />
+    <Compile Include="Utils\Cryptography\SecurityModeUtil.cs" />
+    <Compile Include="Utils\DateTimeUtil.cs" />
+    <Compile Include="Utils\DisposalRuleEngine.cs" />
+    <Compile Include="Utils\DisposalUtility.cs" />
+    <Compile Include="Utils\Extensions\StringExtentions.cs" />
+    <Compile Include="Utils\Native\Win32Native.cs" />
+    <Compile Include="Utils\ObjectConverter.cs" />
+    <Compile Include="Utils\OperationSystem\IOperatingSystem.cs" />
+    <Compile Include="Utils\OperationSystem\MonitorInformation\NetworkInfo.cs" />
+    <Compile Include="Utils\OperationSystem\MonitorInformation\NetworkMonitorInfo.cs" />
+    <Compile Include="Utils\OperationSystem\MonitorInformation\Win32_OperatingSystem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Utils\OperationSystem\MonitorInformation\Win32_Process.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Utils\OperationSystem\MonitorInformation\Win32_Processor.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Utils\OperationSystem\OperatingSystemInfo.cs" />
+    <Compile Include="Utils\OperationSystem\OSInformation.cs" />
+    <Compile Include="Utils\OperationSystem\ProcessAction.cs" />
+    <Compile Include="Utils\OperationSystem\ProcessEventArgs.cs" />
+    <Compile Include="Utils\OperationSystem\StartProcess.cs" />
+    <Compile Include="Utils\OperationSystem\Windows\Win32\WindowsOperatingSystem.cs" />
+    <Compile Include="Utils\OperationSystem\Windows\WindowsOperatingSystemBase.cs" />
+    <Compile Include="Utils\OperationSystem\Windows\WindowsOSHelper.cs" />
+    <Compile Include="Utils\OperationSystem\Windows\Wmi\WindowsOperatingSystem.cs" />
+    <Compile Include="Utils\ReportUtil.cs" />
+    <Compile Include="Utils\RuleUtil.cs" />
+    <Compile Include="Utils\Startable\IIocContainerManager.cs" />
+    <Compile Include="Utils\Startable\IStartable.cs" />
+    <Compile Include="Utils\Startable\Startable.cs" />
+    <Compile Include="Utils\STask\ISTask.cs" />
+    <Compile Include="Utils\STask\ISTaskManager.cs" />
+    <Compile Include="Utils\STask\STask.cs" />
+    <Compile Include="Utils\STask\STaskManager.cs" />
+    <Compile Include="Utils\Threads\AveSmartThreadPool.cs" />
+    <Compile Include="Utils\Threads\AveTenantSmartThreadPool.cs" />
+    <Compile Include="Utils\Threads\AveTenantThread.cs" />
+    <Compile Include="Utils\Threads\AveTenantThreadPool.cs" />
+    <Compile Include="Utils\Threads\AveTenantThreadUtility.cs" />
+    <Compile Include="Utils\Threads\AveThreadManager.cs" />
+    <Compile Include="Utils\Threads\AveThreadPoolItemBase.cs" />
+    <Compile Include="Utils\Threads\AveThreadPoolRunner.cs" />
+    <Compile Include="Utils\Threads\AveThreadUtility.cs" />
+    <Compile Include="Utils\Threads\AveThreadWrapper.cs" />
+    <Compile Include="Utils\Threads\CustomThreadPrincipal.cs" />
+    <Compile Include="Utils\Threads\LimitedConcurrencyLevelTaskScheduler.cs" />
+    <Compile Include="Utils\Threads\TenantThreadLocalValue.cs" />
+    <Compile Include="Utils\Threads\TenantThreadPoolHelper.cs" />
+    <Compile Include="Utils\Threads\ThreadPoolHelper.cs" />
+    <Compile Include="Utils\Tuple\AveTuple.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="DocAveStandard.snk" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HybirdFramework\CommonModel\HybridCommonModel.csproj">
+      <Project>{750cfcee-b3a5-4193-8a8a-7e8376bd8edd}</Project>
+      <Name>HybridCommonModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HybirdFramework\HybirdProxy\HybridProxy.csproj">
+      <Project>{f88ab260-e526-48c8-b203-f4e53a6516c7}</Project>
+      <Name>HybridProxy</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Hybrid\Hybrid.Contract\Hybrid.Contract.csproj">
+      <Project>{58BC837E-2FD3-4ACC-9F0F-86680B1C8150}</Project>
+      <Name>Hybrid.Contract</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NewWrapperCommon\GCommon\GCommonContract\DocAve.GCommonContract.csproj">
+      <Project>{361f3c7c-abbf-42d5-975a-65e4e9866068}</Project>
+      <Name>DocAve.GCommonContract</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NewWrapperCommon\GCommon\GCommonUtility\DocAve.GCommonUtility.csproj">
+      <Project>{7151e862-a761-4a90-ace6-37d7442047a6}</Project>
+      <Name>DocAve.GCommonUtility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Hybrid\Hybrid.ClientCore\Hybrid.ClientCore.csproj">
+      <Project>{9d42f530-fbdd-4df8-97a3-a9d14fce29eb}</Project>
+      <Name>Hybrid.ClientCore</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Hybrid\Hybrid.ClientLibrary\Hybrid.ClientLibrary.csproj">
+      <Project>{0109852A-7D2E-43C0-8CC8-9E2BD66D24ED}</Project>
+      <Name>Hybrid.ClientLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Hybrid\Hybrid.Utility\Hybrid.Utility.csproj">
+      <Project>{b391ba26-90a9-49c2-9576-2e959d14ad0a}</Project>
+      <Name>Hybrid.Utility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NewWrapperCommon\GCommon\CommonUtility30\DocAve.CommonUtility30.csproj">
+      <Project>{abf32db9-9d2a-4f78-96b5-e2b1fac08658}</Project>
+      <Name>DocAve.CommonUtility30</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NewWrapperCommon\GCommon\Media.Storage\Media.Storage.csproj">
+      <Project>{3180ae0e-d8e3-4b4d-903b-4af57d16caf5}</Project>
+      <Name>Media.Storage</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RAAgentContract\RecordsAgentContract.csproj">
+      <Project>{f64e4daf-c2f2-4b36-8b10-aa056b2963a5}</Project>
+      <Name>RecordsAgentContract</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RACommon.Global\RACommon.Global.csproj">
+      <Project>{c463f6eb-0f6f-465e-9275-ea24b404ed95}</Project>
+      <Name>RACommon.Global</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RAContract.Global\RAContract.Global.csproj">
+      <Project>{B5AA0AD7-D3AD-401B-B76D-99FF30CF256D}</Project>
+      <Name>RAContract.Global</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\packages\System.Data.SQLite.AvePoint.1.0.119.2\runtimes\win-x64\native\SQLite.Interop.dll">
+      <Link>x64\SQLite.Interop.dll</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\packages\System.Data.SQLite.AvePoint.1.0.119.2\runtimes\win-x86\native\SQLite.Interop.dll">
+      <Link>x86\SQLite.Interop.dll</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <!-- System.ValueTuple.4.6.2's own build\net471\System.ValueTuple.targets registers this assembly in a
+         RedistList with InGac="true", which forces MSBuild's ResolveAssemblyReference to treat it as a
+         .NET Framework prerequisite and skip CopyLocal - even when the Reference item explicitly sets
+         Private=true. Not every deployment target actually has a matching System.ValueTuple facade in its
+         GAC, causing FileNotFoundException at runtime (e.g. from netstandard2.0 libraries like Hybrid.Utility
+         that need the physical facade assembly). Copy the file directly via Content so it lands in the shared
+         Agent output folder regardless of RAR's CopyLocal decision. -->
+    <Content Include="..\Packages\System.ValueTuple.4.6.2\lib\net47\System.ValueTuple.dll">
+      <Link>System.ValueTuple.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\Packages\EntityFramework.6.5.1\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\Packages\EntityFramework.6.5.1\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\Packages\EntityFramework.6.5.1\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\Packages\EntityFramework.6.5.1\build\EntityFramework.targets'))" />
+    <Error Condition="!Exists('..\Packages\Microsoft.Data.SqlClient.SNI.6.0.2\build\net462\Microsoft.Data.SqlClient.SNI.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\Packages\Microsoft.Data.SqlClient.SNI.6.0.2\build\net462\Microsoft.Data.SqlClient.SNI.targets'))" />
+    <Error Condition="!Exists('..\Packages\System.ValueTuple.4.6.2\build\net471\System.ValueTuple.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\Packages\System.ValueTuple.4.6.2\build\net471\System.ValueTuple.targets'))" />
+  </Target>
+  <Import Project="..\Packages\EntityFramework.6.5.1\build\EntityFramework.targets" Condition="Exists('..\Packages\EntityFramework.6.5.1\build\EntityFramework.targets')" />
+  <Import Project="..\Packages\Microsoft.Data.SqlClient.SNI.6.0.2\build\net462\Microsoft.Data.SqlClient.SNI.targets" Condition="Exists('..\Packages\Microsoft.Data.SqlClient.SNI.6.0.2\build\net462\Microsoft.Data.SqlClient.SNI.targets')" />
+  <Import Project="..\Packages\System.ValueTuple.4.6.2\build\net471\System.ValueTuple.targets" Condition="Exists('..\Packages\System.ValueTuple.4.6.2\build\net471\System.ValueTuple.targets')" />
+</Project>

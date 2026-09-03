@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--/********************************************************************
+ *
+ *  PROPRIETARY and CONFIDENTIAL
+ *
+ *  This file is licensed from, and is a trade secret of:
+ *
+ *                   AvePoint, Inc.
+ *                   525 Washington Blvd, Suite 1400
+ *                   Jersey City, NJ 07310
+ *                   United States of America
+ *                   Telephone: +1-201-793-1111
+ *                   WWW: www.avepoint.com
+ *
+ *  Refer to your License Agreement for restrictions on use,
+ *  duplication, or disclosure.
+ *
+ *  RESTRICTED RIGHTS LEGEND
+ *
+ *  Use, duplication, or disclosure by the Government is
+ *  subject to restrictions as set forth in subdivision
+ *  (c)(1)(ii) of the Rights in Technical Data and Computer
+ *  Software clause at DFARS 252.227-7013 (Oct. 1988) and
+ *  FAR 52.227-19 (C) (June 1987).
+ *
+ *  Copyright © 2017-2026 AvePoint® Inc. All Rights Reserved. 
+ *
+ *  Unpublished - All rights reserved under the copyright laws of the United States.
+ */-->
+<ServiceDefinition name="ScheduleJobCloudService" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceDefinition" schemaVersion="2015-04.2.6">
+  <WorkerRole name="RAScheduleJobWorkerRole" vmsize="Small">
+    <ConfigurationSettings>
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" />
+      <Setting name="ConfigDatabaseConnection" />
+      <Setting name="JobQueueConnectionString" />
+      <Setting name="RealTimeQueueName"/>
+      <Setting name="JobQueueName" />
+      <Setting name="ReportContainerName" />
+      <Setting name="ReportStorage" />
+      <Setting name="ReportFolder" />
+      <Setting name="LogStorage" />
+      <Setting name="LogContainerName" />
+      <Setting name="ControlServiceAddress" />
+      <Setting name="PortalApiUrl" />
+      <Setting name="CertificateThumbprint" />
+      <Setting name="HotfixStorageUrl" />
+      <Setting name="AzureTableConnection" />
+      <Setting name="NotificationSetting" />
+      <Setting name="RedirectAosLoginUrl" />
+      <Setting name="CosmosDBURI" />
+      <Setting name="CosmosDBSecret" />
+      <Setting name="DAOKeyVaultCertThumbprint" />
+      <Setting name="DAOKeyVaultUrl" />
+      <Setting name="DAOKeyVaultClientId" />
+      <Setting name="SubscriptionId" />
+      <Setting name="SubscriptionCertThumbprint" />
+      <Setting name="MaxBackupItemsThreads" />
+      <Setting name="ReservedInstanceCount" />
+    </ConfigurationSettings>
+    <Runtime executionContext="elevated" />
+    <LocalResources>
+    </LocalResources>
+    <Certificates>
+      <Certificate name="CloudRecords Application" storeName="My" storeLocation="LocalMachine" />
+      <Certificate name="DocAveOnline Application" storeName="My" storeLocation="LocalMachine" />
+      <Certificate name="DocAveOnline KeyVault" storeName="My" storeLocation="LocalMachine" />
+      <Certificate name="Subscription Management" storeName="My" storeLocation="LocalMachine" />
+    </Certificates>
+    <Startup>
+      <Task commandLine="SecurityProtocolStartup.bat" executionContext="elevated" taskType="simple" />
+    </Startup>
+    <Endpoints>
+      <InputEndpoint name="StandardWeb" protocol="http" port="80" localPort="80" />
+    </Endpoints>
+  </WorkerRole>
+</ServiceDefinition>

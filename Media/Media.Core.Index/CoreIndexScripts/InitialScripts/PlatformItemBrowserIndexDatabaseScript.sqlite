@@ -1,0 +1,115 @@
+﻿-- /********************************************************************
+-- *
+-- *  PROPRIETARY and CONFIDENTIAL
+-- *
+-- *  This file is licensed from, and is a trade secret of:
+-- *
+-- *                   AvePoint, Inc.
+-- *                   525 Washington Blvd, Suite 1400
+-- *                   Jersey City, NJ 07310
+-- *                   United States of America
+-- *                   Telephone: +1-201-793-1111
+-- *                   WWW: www.avepoint.com
+-- *
+-- *  Refer to your License Agreement for restrictions on use,
+-- *  duplication, or disclosure.
+-- *
+-- *  RESTRICTED RIGHTS LEGEND
+-- *
+-- *  Use, duplication, or disclosure by the Government is
+-- *  subject to restrictions as set forth in subdivision
+-- *  (c)(1)(ii) of the Rights in Technical Data and Computer
+-- *  Software clause at DFARS 252.227-7013 (Oct. 1988) and
+-- *  FAR 52.227-19 (C) (June 1987).
+-- *
+-- *  Copyright © 2017-2026 AvePoint® Inc. All Rights Reserved. 
+-- *
+-- *  Unpublished - All rights reserved under the copyright laws of the United States.
+-- */
+-- --------------------------------------------------
+-- Entity Designer DDL Script for SQLite
+-- --------------------------------------------------
+-- Date Created: 09/26/2011 10:51:00
+-- --------------------------------------------------
+
+-- --------------------------------------------------
+-- Creating all tables
+-- --------------------------------------------------
+
+-- Creating table 'tb_head_index' 
+CREATE TABLE [tb_head_index](
+    [COL_Type] CHAR(2),
+    [COL_Dir_Name] VARCHAE(256),
+    [COL_Leaf_Name] VARCHAR(128),
+    [COL_Path_MD5] CHAR(32),
+    [COL_Parent_Path_MD5] CHAR(32),
+    [COL_Web_ID] CHAR(36),
+    [COL_Site_ID] CHAR(36),
+    [COL_List_ID] CHAR(36),
+    [COL_Item_Count] INTEGER,
+    [COL_Last_Modified_Time] LONG,
+    [COL_Title] VARCHAR(256),
+    [COL_List_Type] INTEGER
+);
+
+-- Creating table 'tb_body_index'
+CREATE TABLE [tb_body_index](
+    [COL_Type] CHAR(2),
+    [COL_Leaf_Name] VARCHAR(128),
+    [COL_Parent_Path_MD5] CHAR(32),
+    [COL_Site_ID] CHAR(36),
+    [COL_List_ID] CHAR(36),
+    [COL_Attributes] VARCHAR(32672),
+    [COL_Size] int,
+    [COL_Last_Modified_Time] LONG,
+    [COL_Title] VARCHAR(256),
+    [COL_Doclibrow_ID] INTEGER
+);
+
+-- Creating table 'tb_job_info'
+CREATE TABLE [tb_job_info](
+    [COL_GUID] VARCHAR(36) NOT NULL PRIMARY KEY,
+    [COL_JOB_ID] VARCHAR(32672),
+    [COL_KEY] VARCHAR(32672),
+    [COL_VALUE] VARCHAR(32672),
+    [COL_EXTENSION_1] INT,
+    [COL_EXTENSION_2] INT,
+    [COL_EXTENSION_3] INT,
+    [COL_EXTENSION_4] BIGINT,
+    [COL_EXTENSION_5] BIGINT,
+    [COL_EXTENSION_6] VARCHAR(32672),
+    [COL_EXTENSION_7] VARCHAR(32672),
+    [COL_EXTENSION_8] VARCHAR(32672),
+    [COL_EXTENSION_9] TEXT,
+    [COL_EXTENSION_10] TEXT
+);
+
+INSERT INTO tb_job_info (COL_GUID, COL_KEY, COL_VALUE) VALUES( 'AAAAAAAA-AAAA-AAAA-AAAA-AAAAAAAAAAAA', 'version','6.0.0.0');
+
+-- --------------------------------------------------
+-- Creating all index
+-- --------------------------------------------------
+
+-- Creating index 'idx_tb_head_index_parentpathmd5' on table 'tb_head_index'
+CREATE INDEX [idx_tb_head_index_parentpathmd5]
+    ON [tb_head_index]
+    ([COL_Parent_Path_MD5]);
+
+-- Creating index 'idx_tb_head_index_leaf_name' on table 'tb_head_index'
+CREATE INDEX [idx_tb_head_index_leaf_name]
+    ON [tb_head_index]
+    ([COL_Leaf_Name]);
+
+-- Creating index 'idx_tb_body_index_parentpathmd5' on table 'tb_body_index'
+CREATE INDEX [idx_tb_body_index_parentpathmd5]
+    ON [tb_body_index]
+    ([COL_Parent_Path_MD5]);
+
+-- Creating index 'idx_tb_body_index_leaf_name' on table 'tb_body_index'
+CREATE INDEX [idx_tb_body_index_leaf_name]
+    ON [tb_body_index]
+    ([COL_Leaf_Name]);
+
+-- --------------------------------------------------
+-- Script has ended
+-- --------------------------------------------------

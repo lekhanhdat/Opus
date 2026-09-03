@@ -1,0 +1,580 @@
+﻿<!--Covered by AvePoint copyright and license agreement-->
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <!--<link rel="stylesheet" type="text/css" href="test.css" />-->
+    <title>Team Conversation History</title>
+    <style type="text/css">
+        body {
+            font-family: "Segoe UI","Helvetica Neue",Helvetica,Arial,sans-serif;
+            color: #252424;
+            font-size: 1.4rem;
+            line-height: 1.4286;
+            background-color: #f3f2f1;
+        }
+
+        html {
+            -webkit-tap-highlight-color: transparent;
+            min-width: 720px;
+            font-size: calc(1em * .625);
+            -ms-overflow-style: none;
+            overflow: auto;
+        }
+
+        html {
+            font-family: sans-serif;
+            -ms-text-size-adjust: 100%;
+            -webkit-text-size-adjust: 100%;
+        }
+
+        ol, ul {
+            margin-bottom: 10px;
+        }
+
+        dl, ol, ul {
+            margin-top: 0 !important;
+        }
+
+        h1 {
+            font-size: 1.8rem;
+        }
+
+        h2 {
+            font-size: 1.4rem;
+        }
+
+        h3 {
+            font-size: 1.2rem;
+        }
+
+        h1, h2, h3 {
+            margin-top: 0.3rem;
+            margin-bottom: 0.3rem;
+            margin-block-start: 0.3rem;
+            margin-block-end: 0.3rem;
+        }
+
+        a {
+            color: #6264a7;
+        }
+
+        hr {
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+            margin-block-start: 2rem;
+            margin-block-end: 2rem;
+        }
+
+        .account-name {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            color: #252424;
+            font-weight: 700;
+            font-family: "Segoe UI","Helvetica Neue",Helvetica,Arial,sans-serif;
+        }
+
+        .timestamp-column {
+            margin-left: 1rem;
+            white-space: nowrap;
+        }
+
+        .message-body-top-row {
+            display: flex;
+            overflow: hidden;
+            font-size: 1.2rem;
+            flex-grow: 1;
+        }
+
+        .ts-message-thread-body .padded-content {
+            display: block;
+            padding-left: 1.6rem;
+            padding-right: 1.6rem;
+            min-width: 10.6rem;
+        }
+
+        .message-body {
+            margin-top: 0.1rem;
+            border-left: .3rem solid #6264a7;
+            padding: 1.1rem 0 0;
+        }
+
+        .padded-content {
+            padding-left: 1.6rem;
+            padding-right: 1.6rem;
+            min-width: 10.6rem;
+        }
+
+        .clearfix:after, .clearfix:before {
+            content: " ";
+            display: table;
+        }
+
+        .media-left {
+            flex: none;
+            padding: 0.2rem 0 .8rem 1.6rem;
+            position: relative;
+            /*width: 4rem;*/
+            display: inherit;
+            border-left: 1px solid #edebe9;
+        }
+
+        .reply-body {
+            display: flex;
+            overflow: hidden;
+            background-color: #f9f8f7;
+        }
+
+        .conversation {
+            max-width: 108rem;
+        }
+
+        .top-message {
+            background-color: #ffffff;
+        }
+
+        .conversation {
+            margin-left: 2rem;
+            margin-top: 2rem;
+        }
+
+        .thread-subject {
+            font-weight: 600;
+            font-size: 1.8rem;
+            line-height: 1.33333;
+            word-wrap: break-word;
+        }
+
+        .message-body-important-text {
+            font-weight: 700;
+            display: block;
+            position: relative;
+            margin-left: 1.6rem;
+            font-size: 1.2rem;
+            color: #c4314b;
+            text-transform: uppercase;
+        }
+
+        .message-body-content {
+            word-break: break-all;
+        }
+
+        blockquote {
+            background-color: rgba(37,36,35,.05);
+            margin: .7rem 0;
+            padding: .7rem 1.6rem .7rem 1.1rem;
+            border-left: .4rem solid #e1dfdd;
+            margin-top: .5rem;
+            margin-bottom: .5rem;
+        }
+
+        pre {
+            padding: .5rem;
+            background-color: rgba(37,36,35,.05);
+            border-radius: .3rem;
+        }
+
+        table {
+            border-spacing: 0;
+            border-collapse: collapse;
+        }
+
+        .topMessage, .reply {
+            position: relative;
+        }
+
+        .top-row-container {
+            display: flex;
+            padding-right: 1.6rem;
+        }
+
+        .reaction-size {
+            height: 1.6rem;
+            width: 1.6rem;
+        }
+
+        .wrapper {
+            border-radius: 50%;
+            overflow: hidden;
+            background-clip: content-box;
+            height: 3.2rem;
+            width: 3.2rem;
+        }
+
+            .wrapper img {
+                max-width: 100%;
+                min-height: 100%;
+                min-width: 100%;
+            }
+
+        .media-object {
+            display: block;
+            object-fit: cover;
+        }
+    </style>
+    <!--temp style for @mention-->
+    <style>
+        at,span[itemtype="http://schema.skype.com/Mention"] {
+            color: #6264a7;
+        }
+
+            at:hover,span[itemtype="http://schema.skype.com/Mention"]:hover {
+                text-decoration: underline;
+            }
+    </style>
+    <!--Data from graph api-->
+    <style>
+        .inline-compose-card {
+            box-sizing: border-box;
+            overflow-wrap: break-word;
+            display: block;
+            padding: 0.4rem 0px 0.4rem 0px;
+            text-size-adjust: 100%;
+        }
+
+        hero-card {
+        }
+
+        .card-container-default, .card-border {
+            border-color: rgba(37, 36, 35, 0.05);
+            border-radius: 0.3rem;
+            border-style: solid;
+            border-width: 0.2rem;
+            display: block;
+            overflow-wrap: break-word;
+            padding: 0.8rem 1.4rem 1.6rem 1.4rem;
+        }
+
+        .card-header {
+            display: flex;
+        }
+
+        .card-app-attribution {
+            display: flex;
+            align-items: center;
+            margin-bottom: .8rem;
+            padding-top: .6rem;
+            font-family: "Segoe UI",system-ui,"Apple Color Emoji","Segoe UI Emoji",sans-serif;
+            user-select: text;
+            overflow-wrap: break-word;
+        }
+
+            .card-app-attribution .image-container {
+                background-origin: padding-box;
+                background-repeat: repeat-x;
+                background-repeat: repeat-y;
+                border-radius: 0.3rem;
+                height: 2.4rem;
+                width: 2.4rem;
+                user-select: text;
+                cursor: pointer;
+                display: block;
+                overflow-x: hidden;
+                overflow-y: hidden;
+                overflow-wrap: break-word;
+            }
+
+                .card-app-attribution .image-container img {
+                    cursor: pointer;
+                    display: inline;
+                    height: 2.4rem;
+                    width: 2.4rem;
+                    vertical-align: middle;
+                    position: static;
+                    overflow-wrap: break-word;
+                }
+
+            .card-app-attribution span {
+                font-family: "Segoe UI",system-ui,"Apple Color Emoji","Segoe UI Emoji",sans-serif;
+                overflow-wrap: break-word;
+                overflow-x: hidden;
+                overflow-y: hidden;
+                padding-left: 1.2rem;
+                text-overflow: ellipsis;
+                white-space: normal;
+            }
+
+        .card-header-buttons {
+            display: flex;
+            margin-left: auto;
+            overflow-wrap: break-word;
+        }
+
+            .card-header-buttons button {
+                align-items: flex-start;
+                background-attachment: scroll;
+                background-position-x: center;
+                background-clip: border-box;
+                background-color: initial;
+                background-image: none;
+                background-origin: padding-box;
+                background-size: auto;
+                border-color: initial;
+                border-style: none;
+                border-radius: 2px;
+                letter-spacing: normal;
+                margin-top: -.3rem;
+                margin-right: -1.5rem;
+                writing-mode: horizontal-tb;
+                position: relative;
+            }
+
+        .card-content-container {
+            display: flex;
+            overflow-wrap: break-word;
+        }
+
+        .card-content-right {
+            display: block;
+            overflow-wrap: break-word;
+        }
+
+        .card-text-body {
+            clear: none;
+            display: flex;
+            flex-direction: column;
+            overflow-wrap: break-word;
+            vertical-align: top;
+        }
+
+        .card-title {
+            display: block;
+            font-size: 1.8rem;
+            font-weight: 600;
+            overflow-wrap: break-word;
+            overflow-x: hidden;
+            white-space: normal;
+        }
+
+        .card-subtitle {
+            display: block;
+            font-weight: 600;
+            margin-top: .1999rem;
+            max-height: 4rem;
+            overflow-wrap: break-word;
+            overflow-x: hidden;
+            overflow-y: hidden;
+            white-space: normal;
+        }
+
+        .image-border {
+            display: block;
+            margin-top: .9rem;
+            min-width: 100%;
+            overflow-wrap: break-word;
+        }
+
+        .card-text-body {
+            clear: none;
+            display: flex;
+            flex-direction: column;
+            margin-top: .8999rem;
+            overflow-wrap: break-word;
+            text-size-adjust: 100%;
+            vertical-align: top;
+        }
+
+        .card-actions-container-top {
+            overflow-wrap: break-word;
+        }
+
+        .card-actions-container {
+            display: block;
+            margin: 1.2rem -0.4rem -0.4rem -0.4rem;
+            padding: 0px;
+        }
+
+            .card-actions-container button {
+                align-items: flex-start;
+                background-attachment: scroll;
+                background-color: #fff;
+                background-clip: initial;
+                background-image: none;
+                background-position-x: 0px;
+                background-position-y: center;
+                background-size: auto;
+                border-bottom-color: rgb(226, 226, 246);
+                border-style: solid;
+                border-radius: 0.3rem;
+                color: #6264a7;
+                display: inline-block;
+                font-style: normal;
+                margin: 0.4rem;
+                font-weight: 600;
+                cursor: pointer;
+                height: 3.2rem;
+                padding: 0px 2rem 0px 2rem;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                position: relative;
+            }
+
+        .file-container {
+            display: flex;
+            align-items: center;
+            height: 2.4rem;
+            color: #252423;
+            background: #f3f2f1;
+            border: .1rem solid rgba(0,0,0,.05);
+            box-shadow: 0 0.2rem 0.4rem -0.075rem rgba(0,0,0,.1);
+            border-radius: .3rem;
+            max-width: 44em;
+            line-height: normal;
+            background-color: rgba(37,36,35,.05);
+            margin: .5rem .7rem .5rem 0;
+            padding: .7rem 1.6rem .7rem 1.1rem;
+            border-left: .4rem;
+        }
+        .color-theme-announcement {
+            height: 24.4rem;
+            margin-top: 0;
+            margin-bottom: 1.2rem;
+            border-radius: 0.4rem;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+        }
+        .color-theme-announcement > span {
+            font-weight: 600;
+            line-height: 52px;
+            font-size: 40px;
+            display: block;
+            overflow-y: hidden;
+            overflow-x: hidden;
+            text-align: center;
+            color: inherit;
+            padding-bottom: 1rem;
+            padding-left: 1rem;
+            padding-right: 1rem;
+            padding-top: 1rem;
+        }
+        .uploaded-image-announcement {
+            height: auto;
+            overflow-x: hidden;
+            overflow-y: hidden;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+        }
+        .uploaded-image-announcement > img {
+            vertical-align: bottom;
+            min-height: 12.2rem !important;
+            border-radius: 0.4rem;
+            display: inline-block;
+            min-width: 0;
+            box-sizing: border-box;
+            height: 100%;
+            width: 100%;
+        }
+        .channel-message-reaction-summary {
+            display: flex;
+            padding-bottom: 0.8rem;
+        }
+
+        .reactions-summary-item-renderer {
+            max-height: 26px;
+        }
+
+        .reactions-summary-item-renderer > div {
+            border-radius: 50px;
+            margin-right: 2px;
+            border-color: #e0e0e0;
+            border-width: 1px;
+            background-color: #ffffff;
+            border-style: solid;
+            display: flex;
+        }
+
+        .channel-message-reaction-tool-bar {
+            padding: 0;
+            align-content: center;
+            row-gap: 8px;
+            flex-wrap: wrap;
+            align-items: center;
+            display: flex;
+        }
+
+        .reactions-summary-item-renderer button {
+            height: 24px;
+            border-color: transparent;
+            background-color: transparent;
+            border-radius: 10000px;
+            min-width: unset;
+            color: #424242;
+            padding: 0 6px 0 6px;
+        }
+
+        .emotion-icon-renderer {
+            transform: scale(.9);
+            vertical-align: bottom;
+            display: inline-block;
+            overflow: hidden;
+            min-width: 20px;
+            height: 20px;
+        }
+
+        .emotion-icon-renderer > img {
+            display: block;
+            border-color: #d1d1d1;
+            border-radius: 0;
+            background-color: transparent;
+        }
+
+        .message-reaction-count {
+            color: #424242;
+            line-height: 16px;
+            font-size: 12px;
+            font-weight: 400;
+        }
+        emoji > img{
+            vertical-align: bottom;
+        }
+    </style>
+
+    <style>
+        .app-svg {
+            height: 3.2rem;
+            width: 3.2rem;
+        }
+
+        .icons-default-fill {
+            fill: #fff;
+        }
+
+        .icons-unfilled {
+            fill: #484644;
+        }
+
+        svg {
+            margin-left: -.4rem;
+            margin-top: -.4rem;
+        }
+
+        .action-marker {
+            border-radius: 50%;
+            overflow: hidden;
+            position: absolute;
+            height: 2.4rem;
+            width: 2.4rem;
+            top: .7rem;
+            right: -1.2rem;
+            z-index: 2;
+            background: #c4314b
+        }
+    </style>
+    <script>
+        function init() {
+            var messages = document.getElementsByClassName("message-body");
+            for (i = 0; i < messages.length; i++) {
+                //change left border color to red for important message
+                if (messages[i].getElementsByClassName("message-body-important-text")[0].innerText.toUpperCase() == "IMPORTANT!") {
+                    messages[i].style.borderLeftColor = "#c4314b";
+                }
+                //sweetheart easter egg
+                if (messages[i].innerHTML.toLowerCase().indexOf("sweetheart") >= 0) {
+                    messages[i].getElementsByClassName("reaction")[0].innerHTML = "<img class='reaction-size' src='https://statics.teams.cdn.office.net/evergreen-assets/skype/v2/heart/20.png?v=4'>";
+                }
+            }
+        }
+    </script>
+</head>

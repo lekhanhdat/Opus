@@ -1,0 +1,11 @@
+﻿UserMapping:
+usermapping只负责纯粹的替换逻辑，至于是否有前缀，再包装一层，这样避免替换逻辑比较复杂。
+
+Language Mapping:
+1. 需要支持default，如果外围没有配置language mapping，需要load指定文件夹下面的文件。
+2. 从资源文件或者xml中load mapping应该缓存起来，以便后续的使用，否则像real-time这样实时的会影响效率，cache的方法需要变更下，就是以LCID-> key, value方式，而不是mapping关系，这样不会存在重复的cache。
+3. 需要review language mapping file，去掉不合理的key & value。
+
+Column Mapping:
+Wrapper只实现和CP上对应的builtin mapping
+任何对builtin的修改请运行AvePoint.Wrapper.Core.UnitTest.Mapping.BuiltinFieldMappingTest并保证所有test case都通过

@@ -1,0 +1,116 @@
+.reco-conn-cfg-wrapper {
+  // width: 100%;
+
+  .reco-conn-cfg-item-section {
+    width: 100%;
+    margin-bottom: 24px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .reco-conn-cfg-item-button {
+    margin-bottom: 16px;
+  }
+
+  .reco-conn-cfg-item-title {
+    margin-bottom: 8px;
+    font: normal normal 600 14px "Open Sans", sans-serif;
+    font-family: "Segoe UI", sans-serif;
+    color: #323E4D;
+  }
+
+  .require {
+    &::after {
+      content: "*";
+      right: -8px;
+      top: 0;
+      font: normal normal 600 13px "Open Sans", sans-serif;
+      color: #FF4444;
+    }
+  }
+}
+
+.reco-conn-cfg-agent-icon {
+  display: flex;
+  align-items: center;
+}
+
+.reco-conn-cfg-icon {
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+  margin-right: 8px;
+  background-image: url(/Images/Base/action_button.png);
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.reco-conn-cfg-agent-icon .fia-error {
+  color: #f37813;
+  background-image: none;
+  line-height: unset;
+}
+
+.reco-conn-cfg-agent-icon .fia-mismatched {
+  color: red;
+  background-image: none;
+  line-height: 18px;
+}
+
+.reco-conn-cfg-icon-filesytem {
+  background-position: -432px -222px;
+}
+
+.reco-conn-cfg-icon-sharepoint-onpremise {
+  background-position: -378px -258px;
+}
+
+.reco-conn-cfg-not-installed-img {
+  background-position: -198px -294px;
+}
+
+.reco-conn-cfg-inActive-img {
+  background-position: -180px -294px;
+}
+
+.reco-conn-cfg-active-img {
+  background-position: -252px -294px;
+}
+
+.reco-conn-cfg-disabled-img {
+  background-position: -234px -294px;
+}
+
+// .fia-status-failed {
+//   width: 12px;
+//   height: 12px;
+//   border-radius: 50%;
+//   color: #fff;
+//   background: #B82025;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   font-size: 8px;
+// }
+
+.reco-conn-cfg-agent-icon-center {
+  margin-left: 46px;
+}
+
+.reco-conn-cfg-conn-icon-center {
+  margin-left: 16px;
+}
+
+.reco-conn-cfg-panel-desc {
+  color: #27313C;
+  font-size: 13px;
+  font-weight: normal;
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

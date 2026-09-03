@@ -1,0 +1,101 @@
+<!--Covered by AvePoint copyright and license agreement-->
+<template>
+    <c-drop-down id="selection-01" custom-class={customClass}>
+        <div slot="button">
+            <div class="slds-input-has-icon slds-input-has-icon_right icon-container">
+                <label hidden class="slds-form-element__label slds-assistive-text" for="selected-item-input">
+                    {translation.dropdownPlaceholder}
+                </label>
+                <input id="selected-item-input" type="text" readonly placeholder={translation.dropdownPlaceholder} class="slds-input slds-input-auto" value={selectedText} />
+            
+                <button class="slds-button slds-button_icon slds-input__icon slds-input__icon_right down-icon" title="Select items">
+                    <lightning-icon icon-name="utility:down" size="xx-small"></lightning-icon>
+                </button>
+            
+                <template if:true={showClearIcon}>
+                    <button class="slds-button slds-button_icon slds-input__icon slds-input__icon_right clear-icon"
+                        onclick={handleClearSelection} title="Clear selection">
+                        <lightning-icon icon-name="utility:clear" size="x-small"></lightning-icon>
+                    </button>
+                </template>
+            </div>
+        </div>
+
+        <div slot="menu">
+            <div class="slds-dropdown__list selection-zone">
+                <div class="selection-search-box">
+                    <lightning-input name="search" type="search" placeholder={translation.searchPlaceholder}
+                        value={searchText} onchange={handleSearch}></lightning-input>
+                </div>
+
+                <div class="selection-content slds-scrollable_y">
+
+                    <!-- Standard Group -->
+                    <template if:true={standardOptions.length}>
+                        <div>
+                            <div class="group-header slds-p-around_x-small" onclick={toggleStandard} onkeydown={onStandardKeyDown} tabindex="0">
+                                <strong>{translation.standardGroup}</strong>
+                                <lightning-icon icon-name={chevronIconStandard} size="xx-small"
+                                    class="slds-m-right_x-small custom-icon"></lightning-icon>
+                            </div>
+                        
+                            <template if:true={expandedStandard}>
+                                <ul>
+                                    <template for:each={standardOptions} for:item="option">
+                                        <li key={option.value} class="selection-item slds-p-around_x-small">
+                                            <div class="slds-form-element">
+                                                <div class="slds-checkbox">
+                                                    <input type="checkbox" id={option.computedId} value={option.value} checked={option.selected}
+                                                        onchange={handleCheckboxChange} />
+                                                    <label class="slds-checkbox__label" for={option.computedId}>
+                                                        <span class="slds-checkbox_faux"></span>
+                                                        <span class="slds-form-element__label">{option.label}</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </template>
+                                </ul>
+                            </template>
+                        </div>
+                    </template>
+                    
+                    <!-- Custom Group -->
+                    <template if:true={customOptions.length}>
+                        <div>
+                            <div class="group-header slds-p-around_x-small" onclick={toggleCustom} onkeydown={onCustomKeyDown} tabindex="0">
+                                <strong>{translation.customGroup}</strong>
+                                <lightning-icon icon-name={chevronIconCustom} size="xx-small"
+                                    class="slds-m-right_x-small custom-icon"></lightning-icon>
+                            </div>
+                            
+                            <template if:true={expandedCustom}>
+                                <ul>
+                                    <template for:each={customOptions} for:item="option">
+                                        <li key={option.value} class="selection-item slds-p-around_x-small">
+                                            <div class="slds-form-element">
+                                                <div class="slds-checkbox">
+                                                    <input type="checkbox" id={option.computedId} value={option.value} checked={option.selected}
+                                                        onchange={handleCheckboxChange} />
+                                                    <label class="slds-checkbox__label" for={option.computedId}>
+                                                        <span class="slds-checkbox_faux"></span>
+                                                        <span class="slds-form-element__label">{option.label}</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </template>
+                                </ul>
+                            </template>
+                        </div>
+                    </template>
+                </div>
+
+                <div class="selection-actions slds-p-around_small slds-border_top">
+                    <button class="slds-button slds-button_neutral footer-button" onclick={handleCancel}>{translation.cancel}</button>
+                    <button class="slds-button slds-button_brand footer-button" onclick={handleApply}>{translation.apply}</button>
+                </div>
+            </div>
+        </div>
+    </c-drop-down>
+</template>

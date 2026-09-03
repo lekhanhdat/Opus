@@ -1,0 +1,180 @@
+#raStorageSettingsManagement {
+    #crm-menu {
+        display: flex;
+        column-gap: 8px;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}
+
+#storageSettingsPanel {
+    .ra-storagePanel-content {
+        margin-bottom: 24px;
+        font-size: 13px;
+    }
+
+    .ra-storagePanel-content-popbottom {
+        margin-bottom: 17px;
+        font-size: 13px;
+    }
+
+    .ra-storagePanel-title {
+        font: normal normal 600 13px/18px "Open Sans", sans-serif;
+        color: #323E4D;
+        display: inline-block;
+    }
+
+    .ra-storagePanel-extend {
+        margin-top: 8px;
+        margin-left: 31px;
+    }
+
+    .ra-storagePanel-retention {
+        margin-left: 31px;
+    }
+
+    .storagePanel-line-top {
+        margin-bottom: 8px;
+
+        >div {
+            display: inline-block;
+        }
+
+        >div,
+        >span {
+            vertical-align: top !important;
+        }
+    }
+
+    .storagePanel-label {
+        line-height: 34px;
+        margin-right: 10px;
+    }
+
+    .storagePanel-radio {
+        text-align: left;
+        font: normal normal normal 13px/18px "Open Sans", sans-serif;
+        color: #27313C;
+        margin: 8px 0;
+    }
+
+    .storagePanel-checkbox {
+        margin-left: 28px;
+    }
+
+    .storagePanel-checkbox-remove {
+        margin-bottom: 8px;
+    }
+
+    .storagePanel-checkbox-tier {
+        margin: 8px 0px;
+    }
+
+    .ra-storageType-content {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 8px;
+        font: normal normal normal 13px/18px "Open Sans", sans-serif;
+        color: #323E4D;
+    }
+
+    .ra-storageType-title {
+        flex: 0.36;
+        line-height: 34px;
+    }
+
+    .ra-storageType-main {
+        flex: 1;
+    }
+
+    .ra-storageType-file {
+        display: flex;
+        flex: 1;
+    }
+
+    .ra-storageType-input {
+        flex: 1;
+        margin-right: 8px;
+    }
+
+    .ra-storagePanel-moveCom {
+        margin: 8px 0 0 28px;
+    }
+
+    .ra-storagePanel-moveCom1 {
+      margin: 0 0 0 28px;
+    }
+
+    .ra-storagePanel-moveRadio {
+      margin-top: -6px;
+    }
+
+    #boxTokenBtn, #dropboxTokenBtn, #netappBrowseBtn, #sftpBrowseBtn {
+        .button-icon.button-default,
+            .button-button.button-default {
+                border: 1px solid #7d848b !important;
+        }
+    }
+
+    #raRetentions, #raCompression, #raEncryption {
+        display: inline-block;
+        .aui-choice-label {
+            font: normal normal 600 13px/18px "Open Sans", sans-serif;
+            color: #27313C;
+        }
+
+        #raRetentionRuleChk {
+          .aui-choice-content {
+            font: normal normal 600 13px/18px "Open Sans", sans-serif;
+          }
+        }
+    }
+}
+
+#raStorageTable {
+    .ra-table-namecol {
+        display: flex;
+    }
+
+    .ra-table-name {
+        padding-right: 3px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .ra-table-index {
+        background: #EEFFE8 0% 0% no-repeat padding-box;
+        border-radius: 2px;
+        font: normal normal normal 12px/21px "Open Sans", sans-serif;
+        color: #05773A;
+        margin-left: 10px;
+    }
+}
+
+.export-key-wrapper {
+    display: flex;
+    flex-direction: column;
+    padding-top: 0;
+    padding-bottom: 0;
+
+    p {
+        margin-top: 0;
+    }
+
+    .export-key-input-wrapper {
+        position: relative;
+    
+        input {
+            padding-right: 36px;
+        }
+        
+        .export-key-eye-icon {
+            display: flex;
+            position: absolute;
+            top: 9px;
+            right: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    }
+}

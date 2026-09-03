@@ -1,0 +1,185 @@
+.reco-rot-optimization-container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 24px;
+
+  .reco-profile-total-data {
+    display: grid;
+    grid-template-columns: calc(100% - 260px) 260px;
+  }
+
+  .reco-profile-action-bar {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+
+    .reco-profile-selector {
+      position: relative;
+      min-width: max-content;
+
+      .button-text-part {
+        margin-left: 24px;
+      }
+
+      #raGoogleProfileSelectorBtn {
+        .button {
+          background-color: #f2f3f4;
+          max-width: 220px;
+        }
+      }
+
+      .fia-triangle-down {
+        transform: translateY(1px);
+
+        &::before {
+          color: #27313c !important;
+        }
+      }
+
+      .fia-select-all {
+        position: absolute;
+        top: 13px;
+        left: 0;
+        margin-right: 10px;
+        margin-left: 16px;
+        transform: translateY(-2px);
+
+        &::before {
+          color: #0072d0 !important;
+        }
+      }
+    }
+
+    .reco-profile-action {
+      display: flex;
+      column-gap: 8px;
+      margin-left: 8px;
+    }
+  }
+
+  .reco-profile-view-bar {
+    display: flex;
+    column-gap: 8px;
+  }
+
+  .reco-data {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 16px;
+
+    .reco-title {
+      font: bold 14px "Open Sans", sans-serif;
+      color: #323e4d;
+    }
+
+    .reco-basic-data {
+      display: flex;
+      gap: 22px;
+    }
+
+    .reco-basic-data>div {
+      flex: 1;
+      width: 0;
+    }
+
+    .reco-rot-category {
+      padding: 16px 24px 16px 0;
+      align-self: center;
+      position: relative;
+      height: 100%;
+
+      &::after {
+        content: "";
+        width: 1px;
+        height: 75px;
+        background-color: #dae0e2;
+        position: absolute;
+        right: 0;
+        top: 15px;
+      }
+    }
+
+    .reco-rot-category-last {
+      padding: 16px 24px 16px 0;
+      align-self: center;
+      height: 100%;
+    }
+  }
+}
+
+.reco-inactive-profile-panel {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 24px;
+
+  .reco-profile-field-item {
+    display: flex;
+    flex-direction: column;
+    row-gap: 4px;
+
+    .reco-profile-field-title {
+      //styleName: Base/SemiBold;
+      font-family: "Open Sans", sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 20px;
+      letter-spacing: -0.03em;
+    }
+
+    .reco-profile-field-validate-message {
+      margin-top: 8px;
+      font: normal normal 400 14px "Open Sans", sans-serif;
+      color: #cc0000;
+    }
+  }
+}
+
+.reco-profile-custom-combobox-item {
+  display: flex;
+  column-gap: 8px;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+
+  .reco-profile-custom-combobox-checked-hidden {
+    opacity: 0;
+  }
+
+  .reco-profile-custom-combobox-item-name {
+    max-width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .reco-profile-custom-combobox-item-loading {
+    animation: rotate 3s linear infinite;
+  }
+
+  @keyframes rotate {
+    0% {
+      transform: rotateZ(0deg);
+    }
+    100% {
+      transform: rotateZ(360deg);
+    }
+  }
+
+  .reco-profile-custom-combobox-item-default {
+    font: italic normal normal 12px / 21px "Segoe UI", sans-serif;
+    transform: translateY(-1px);
+    color: #707174;
+  }
+
+  > div {
+    display: flex;
+    align-items: center;
+    column-gap: 4px;
+
+    > .fia-check {
+      color: #0072d0 !important;
+      font-size: 12px !important;
+    }
+  }
+}

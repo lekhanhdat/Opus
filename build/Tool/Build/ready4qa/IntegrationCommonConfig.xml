@@ -1,0 +1,15 @@
+<configurations>
+
+  <option type="JiraWorkflow" name="ReadyforQA">
+    <jira>
+      <url>https://jira.avepoint.net</url>
+      <username>yksun</username>
+      <password>Q3wj7mGMYk0brYlE7uFgFw==</password>
+    </jira>
+    <filter type="id" exporterror="aa" exportexcel="">
+      <![CDATA[65401]]>
+    </filter>
+    <issue destination="Ready for QA"/>
+  </option>
+
+</configurations>

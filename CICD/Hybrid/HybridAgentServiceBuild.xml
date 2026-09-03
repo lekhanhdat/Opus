@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--/********************************************************************
+ *
+ *  PROPRIETARY and CONFIDENTIAL
+ *
+ *  This file is licensed from, and is a trade secret of:
+ *
+ *                   AvePoint, Inc.
+ *                   525 Washington Blvd, Suite 1400
+ *                   Jersey City, NJ 07310
+ *                   United States of America
+ *                   Telephone: +1-201-793-1111
+ *                   WWW: www.avepoint.com
+ *
+ *  Refer to your License Agreement for restrictions on use,
+ *  duplication, or disclosure.
+ *
+ *  RESTRICTED RIGHTS LEGEND
+ *
+ *  Use, duplication, or disclosure by the Government is
+ *  subject to restrictions as set forth in subdivision
+ *  (c)(1)(ii) of the Rights in Technical Data and Computer
+ *  Software clause at DFARS 252.227-7013 (Oct. 1988) and
+ *  FAR 52.227-19 (C) (June 1987).
+ *
+ *  Copyright © 2017-2026 AvePoint® Inc. All Rights Reserved. 
+ *
+ *  Unpublished - All rights reserved under the copyright laws of the United States.
+ */-->
+
+<!--
+ ********************************************************************
+ * 请大家在申请Binary List的同时修改 CopyBinaryList.xml。确保要使用的文件能够部署出来。
+ *
+ *  Binary File List 申请路径：
+ *  http://cchome.avepoint.net/Application%20Acceptance/DocAve6%20Binary%20File%20Application/Forms/Waiting%20for%20Approve.aspx
+ *
+ *  3rd party File List 申请路径：
+ *  http://cchome.avepoint.net/Application%20Acceptance/3rd%20Party%20File%20Application/Forms/Waiting%20for%20Approving.aspx
+ * 
+ *  Binary File List 查询路径
+ *  http://cchome.avepoint.net/sites/product/Package%20Team/DocAve6/Lists/DocAve6%20Binary%20List/Standard%20View.aspx
+ *  
+ *  Pictrue File List 查询路径
+ *  http://cchome.avepoint.net/sites/product/Package%20Team/DocAve6/Lists/Picture%20File%20List/AllItems.aspx
+ *  
+ *  3rd party File List 查询路径
+ *  http://cchome.avepoint.net/sites/product/Package%20Team/DocAve6/Lists/Open%20Source%203rd%20Party%20Code/DocAve%20Waiting%20for%20US%20Approval.aspx
+ *
+ *********************************************************************
+-->
+
+<Project  DefaultTargets="MainDeployRecordsAutomation"  xmlns="http://schemas.microsoft.com/developer/msbuild/2003" >
+  <PropertyGroup>
+	<!--距此build.xml的相对路径层数-->
+	<WorkingDirectory>..\..\</WorkingDirectory>
+	<!--编译方式-->
+	<BuildType>Release</BuildType>
+	<BuildTarget>Rebuild</BuildTarget>
+	<Platform>Any CPU</Platform>
+	<!--Wsp10部分涉及到的文件相对路径-->
+	<ProjectPath>$(WorkingDirectory)</ProjectPath>
+	<ProjectToolPath>$(WorkingDirectory)ProductTools\</ProjectToolPath>
+	<!--文件夹的相对路径-->
+	<ProjectBasePath></ProjectBasePath>
+	<DisableILMerge Condition="'$(DisableILMerge)' == ''">false</DisableILMerge>
+	<ContinueOnFailure>false</ContinueOnFailure>
+	<MSBuildPath>C:\Program Files (x86)\MSBuild\14.0\Bin\MSBuild.exe</MSBuildPath>    
+  </PropertyGroup>
+
+  <Target Name="MainDeploy">
+    <CallTarget Targets="HybridAgentServiceBuild" />
+  </Target>
+  
+<!--HybridAgentServiceBuild-->
+<Target Name="HybridAgentServiceBuild">
+   <MSBuild
+      Projects="$(ProjectPath)RAAgent.sln"
+      ContinueOnError="$(ContinueOnFailure)"
+      Targets="$(BuildTarget)"
+      Properties="Configuration=$(BuildType);Platform=$(Platform)" TargetAndPropertyListSeparators="False">
+   </MSBuild>
+</Target>
+
+</Project>

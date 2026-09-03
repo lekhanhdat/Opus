@@ -1,0 +1,56 @@
+/*Covered by AvePoint copyright and license agreement*/
+.data-analysis-container
+{
+    padding: 10px;
+}
+.gadget-toolbar {
+    width: 100%;
+    display: inline-flex;
+    margin-bottom: 15px;
+}
+.object-selection {
+    width: 250px;
+}
+
+.pagination {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 2px;
+    padding: 20px 0;
+}
+
+.pagination span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+}
+
+.pagination button {
+    margin: -2px;
+    font-weight: 600;
+}
+
+.first-btn {
+    padding-right: 1px;
+    font-size: 12px;
+}
+
+button {
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:disabled {
+    color: gray;
+    cursor: not-allowed;
+}
+
+.chart-title {
+    width: 100vw;
+    font-size: 14px;
+    font-weight: 700;
+}

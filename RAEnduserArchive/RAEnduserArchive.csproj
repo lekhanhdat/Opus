@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+	<PropertyGroup>
+		<EnableUnsafeBinaryFormatterSerialization>true</EnableUnsafeBinaryFormatterSerialization>
+	</PropertyGroup>
+	<ItemGroup>
+	  <PackageReference Include="AWSSDK.S3" Version="4.0.17.3" />
+	  <PackageReference Include="log4net" Version="3.3.1" />
+	  <PackageReference Include="util.ai.text.extractor" Version="6.10.11" />
+	</ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\RAPhysical\RAPhysical.csproj" />
+    <ProjectReference Include="..\RASharePoint\RASharePoint.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,577 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Wrapper_Report_NoPermissionToRestoreWebSetting" xml:space="preserve">
+    <value>Cannot restore the site settings. The Agent account does not have sufficient permission. Error: {0}</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Report_RestoreAlertError" xml:space="preserve">
+    <value>An error occurred while restoring the alert. Error: {0}.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Report_NoPermissionToUpdateContentType" xml:space="preserve">
+    <value>Cannot update the content type settings. The Agent account does not have sufficient permission. Error: {0}</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Report_NoPermissionToRestoreWebPart" xml:space="preserve">
+    <value>Cannot restore the Web part. Either the Agent account or the user checking out the page where the Web part resides does not have sufficient permission. Error: {0}</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Report_DonnotHavePermissionRestoreTag" xml:space="preserve">
+    <value>Cannot restore the tags in Tags &amp;amp; Notes. The Agent account does not have sufficient permission. Error: {0}</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Report_TheGroupIsUser" xml:space="preserve">
+    <value>Failed to restore the group.  A user having the same ID as the group exists in the destination.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Report_NoPermissionToRestoreListRoleAssignments" xml:space="preserve">
+    <value>Cannot restore the list permission. The Agent account does not have sufficient permission. Error: {0}</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Report_NoPermissionToRestoreConentTypes" xml:space="preserve">
+    <value>Cannot restore the content types. The Agent account does not have sufficient permission. Error: {0}</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Report_NoPermissionToRestoreMetadataService" xml:space="preserve">
+    <value>Cannot restore the Managed Metadata Service. The Agent account does not have sufficient permission. </value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Report_RestoreWFWithoutPermission" xml:space="preserve">
+    <value>The user does not have sufficient permission to the workflow.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Report_SkipCheckOutFileWorkflowInstance" xml:space="preserve">
+    <value>Skipped restoring the workflow instance on the checked-out file. File URL: {0}.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Report_RestorePersonalViewError" xml:space="preserve">
+    <value>Cannot find the user that is associated with personal view. View Title: {0}. User ID: {1}.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Report_NoPermissionToRestoreEventReceiver" xml:space="preserve">
+    <value>Cannot restore the event receiver settings. The Agent account does not have sufficient permission. Error: {0}</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Report_NoPermissionToRestoreSiteFeature" xml:space="preserve">
+    <value>Cannot restore the features of the site or site collection. The Agent account does not have sufficient permission. Error: {0}</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Report_CannotUpdateColumValueError" xml:space="preserve">
+    <value>An error occurred while updating item colum value. Item: {0}. Column name: {1}. Column value: {2}. Error: {3}</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Report_CreateSiteGroupError" xml:space="preserve">
+    <value>An error occurred while creating the SharePoint groups at the site collection level. Error: {0}</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Report_Office365EnvironmentIssue" xml:space="preserve">
+    <value>Encountered SharePoint Online environment issue. Some SharePoint Online built-in files were skipped in the operation. Please make sure you were not processing the data to an environment running SharePoint services of a lower version.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Report_NoPermissionToUpdateSiteSetting" xml:space="preserve">
+    <value>Cannot update the site collection settings. The Agent account does not have sufficient permission. Error: {0}</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Report_UserHasRestored" xml:space="preserve">
+    <value>This user has already been restored by DocAve.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Report_NoPermissionRestoreItemRoleAssignment" xml:space="preserve">
+    <value>You do not have permission to restore item role assignments. Error: {0}</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Report_NoPermissionToRestoreSocialComment" xml:space="preserve">
+    <value>Cannot restore the notes in Tags &amp;amp; Notes. The Agent account does not have sufficient permission. Error: {0}</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Report_UserRestoreFailedError" xml:space="preserve">
+    <value>An error occurred while restoring the user.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Report_NoPermissionToRestoreUserSetting" xml:space="preserve">
+    <value>Cannot restore the user settings. The Agent account does not have sufficient permission. Error: {0}</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Report_NoPermissionToRestoreWebSearch" xml:space="preserve">
+    <value>Cannot restore the search settings, scopes, and keywords. The Agent account does not have sufficient permission. Error: {0}</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Report_RestoreDocumentTaggingError" xml:space="preserve">
+    <value>Cannot restore the tags in Tags &amp;amp; Notes. The Agent account does not have sufficient permission. Error: {0}</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Report_GroupRestoreFailedError" xml:space="preserve">
+    <value>An error occurred while restoring the group.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Report_NoPermissionToUpdateListSetting" xml:space="preserve">
+    <value>Cannot update the list settings. The Agent account does not have sufficient permission. Error: {0}</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Report_RestoreSocialFeedError" xml:space="preserve">
+    <value>An error occurred while restoring the SocialFeed property.  Error: {0}</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Report_NoPermissionToRestoreDataJunctions" xml:space="preserve">
+    <value>Cannot restore the column values allowing multiple users or lookups. The Agent account does not have sufficient permission. Error: {0}</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Report_NoPermissionToRestoreWebFeature" xml:space="preserve">
+    <value>Cannot restore the site features. The Agent account does not have sufficient permission. Error: {0}</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Report_GetTermSetByNameError" xml:space="preserve">
+    <value>An error occurred while getting term set by internal name. Error: {0}</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Report_UserPermissionNotEnough" xml:space="preserve">
+    <value>The user "{0}" does not have enough permission to the site "{1}".</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Report_NoPermissionToRestoreSiteSearch" xml:space="preserve">
+    <value>Cannot restore the site collection search settings. The Agent account does not have sufficient permission. Error: {0}</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Report_NoPermissionToRestoreSocailTag" xml:space="preserve">
+    <value>Cannot restore the tags in Tags &amp; Notes. The Agent account does not have sufficient permission. Error: {0}</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Report_TheUserIsGroup" xml:space="preserve">
+    <value>Failed to restore the user. A group having the same ID as the user exists in the destination. </value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Report_NoPermissionToUpdateListRootFolder" xml:space="preserve">
+    <value>Cannot update the list root folder properties. The Agent account does not have sufficient permission. Error: {0}</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Report_NoPermissionToRestoreRoles" xml:space="preserve">
+    <value>Cannot restore the site collection permission levels. The Agent account does not have sufficient permission. Error: {0}</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Report_NoPermissionToRestoreWebRoleAssignments" xml:space="preserve">
+    <value>Cannot restore the site permission. The Agent account does not have sufficient permission. Error: {0}</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Report_UserRestoreSkipError" xml:space="preserve">
+    <value>Skipped restoring the user. The user already exists in the destination.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Report_SkipTheNoPermissionUser" xml:space="preserve">
+    <value>Skipped restoring the user. The user does not have any permissions in the restore destination. If you still wish to restore this user, deselect the Exclude user/group without permissions option in the restore wizard.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Report_SkipTheNoPermissionGroup" xml:space="preserve">
+    <value>Skipped restoring the group. The group does not have any permissions in the restore destination. If you still wish to restore this group, deselect the Exclude user/group without permissions option in the restore wizard.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Report_SkipFoundationMetadataColum" xml:space="preserve">
+    <value>The current SharePoint environment is running SharePoint Foundation. It does not support managed metadata columns.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Report_UpdateListFailed" xml:space="preserve">
+    <value>An error occurred while updating the list's created time record in the database. Error: {0} </value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Report_SkipBuiltInUser" xml:space="preserve">
+    <value>Skipped restoring SharePoint built-in user.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Report_RestoreListRootFolderError" xml:space="preserve">
+    <value>An error occurred while restoring the root folder of the list. List ID: {0}, List Title: {1}, Error: {2}.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Report_ViewIDNotEqualError" xml:space="preserve">
+    <value>An error occurred while restoring the Web part. Cannot find the Web part view ID in the destination. View Title: {0}.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Report_NoPermissionToRestoreHiddenPageProperty" xml:space="preserve">
+    <value>Cannot restore the navigation settings for the hidden pages. The Agent account does not have sufficient permission.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Report_CreateNewScopeRuleError" xml:space="preserve">
+    <value>An error occurred while creating the scope rule. Location ID: {0}\nError: {1}.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Report_SetNewCreateGroupPropertyError" xml:space="preserve">
+    <value>An error occurred while setting properties for the newly created group. Group Name: {0}, Error: {1}. </value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Report_CreateTermGroupError" xml:space="preserve">
+    <value>An error occurred while creating the term set group. Term Set Group Name: {0}, Error: {1}. </value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Report_SetDisplayGroupListInfoError" xml:space="preserve">
+    <value>An error occurred while restoring all display groups. Location ID: {0}, Display Group: {1},\nError: {2}.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Report_NoPermissionToCreateSite" xml:space="preserve">
+    <value>Cannot create the site collection. The Agent account does not have sufficient permission.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Report_GetOrCreateKeywordError" xml:space="preserve">
+    <value>An error occurred while either obtaining the keyword information or creating a keyword. Keyword: {0},\nError: {1}.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Report_CreateSubTermError" xml:space="preserve">
+    <value>An error occurred while creating a sub term. Term Name: {0}, Error: {1}.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Report_SetTermSetOwnerError" xml:space="preserve">
+    <value>An error occurred while setting the term set owner. Term Set: {0}, Owner: {1}, Error: {2}.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Report_NoPermissionToClearWebNavigation" xml:space="preserve">
+    <value>Cannot delete the site navigation settings. The Agent account does not have sufficient permission.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Report_RestoreCustomOrderError" xml:space="preserve">
+    <value>An error occurred while restoring the custom sort order settings. Error: {0}.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Report_UpdateEventReceiverToListError" xml:space="preserve">
+    <value>An error occurred while updating the event receiver settings. Event Receiver Name: {0}, Error: {1}.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Report_CannotGetViewByID" xml:space="preserve">
+    <value>Cannot obtain the list view information. View ID:  {0}, View Title: {1}.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Report_NoPermissionToRestoreItemRoleAssignments" xml:space="preserve">
+    <value>Cannot restore the item permission. The Agent account does not have sufficient permission.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Report_NoPermissionToRestoreListDefaultView" xml:space="preserve">
+    <value>Cannot restore the default view of the list. The Agent account does not have sufficient permission.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Report_NoPermissionToRestoreGroupOwner" xml:space="preserve">
+    <value>Cannot restore the group owner. The Agent account does not have sufficient permission.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Report_UpdateWebPropertyError" xml:space="preserve">
+    <value>An error occurred while updating the site properties. Site ID: {0}, Site URL: {1},\nError: {2}.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Report_RestoreSynonymError" xml:space="preserve">
+    <value>An error occurred while restoring a synonym. Synonym: {0},\nError: {1}.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Report_NoPermissionToRestoreLookupFields" xml:space="preserve">
+    <value>Cannot restore the lookup column. The Agent account does not have sufficient permission.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Report_CreateNewDisplayGroupError" xml:space="preserve">
+    <value>An error occurred while creating the display group. Location ID: {0},\nError: {1}.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Report_NoPermissionToRestoreListSetting" xml:space="preserve">
+    <value>Cannot restore the list settings. The Agent account does not have sufficient permission.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Report_CannotGetWebPartObject" xml:space="preserve">
+    <value>Failed to restore the Web part. </value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Report_NotRelativeToMetadataService" xml:space="preserve">
+    <value>The destination Web application does not have the Managed Metadata Service started.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Report_ProcessListRatingSettingError" xml:space="preserve">
+    <value>An error occurred while restoring the list rating settings. Error: {0}.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Report_NoPermissionToRestoreCalendarSettings" xml:space="preserve">
+    <value>Cannot restore the calendar settings. The Agent account does not have sufficient permission.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Report_NoPermissionToRestoreNavNodes" xml:space="preserve">
+    <value>Cannot restore the navigation items. The Agent account does not have sufficient permission.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Report_ClearMultipleDataListDefaultFoldersError" xml:space="preserve">
+    <value>An error occurred while deleting the folders under the list root folder.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Report_SetTermOwnerError" xml:space="preserve">
+    <value>An error occurred while setting the term owner. Term: {0}, Term Set Owner: {1}, Error: {2}.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Report_SkipListContentType" xml:space="preserve">
+    <value>Cannot restore the list content type. The Agent account does not have sufficient permission.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Report_SetSubTermPropertyError" xml:space="preserve">
+    <value>An error occurred while setting the sub term properties. Sub Term Name: {0}, Error: {1}.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Report_SetTermSetPropertyError" xml:space="preserve">
+    <value>An error occurred while setting the term set properties. Term Set Name:{0}, Error:{1}.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Report_RestoreBestBetsError" xml:space="preserve">
+    <value>An error occurred while restoring a best bet. Best Bet Title: {0},\nError: {1}. </value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Report_NoPermissionToRestoreEmailSubmittedRecordsListIDProperty" xml:space="preserve">
+    <value>Cannot restore the EmailSubmittedRecordsListID property of the Content Organizer Settings. The Agent account does not have sufficient permission.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Report_NoPermissionToRestoreNavigationSettings" xml:space="preserve">
+    <value>Cannot restore the managed navigation settings. The Agent account does not have sufficient permission.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Report_SetScheduledItemSettingError" xml:space="preserve">
+    <value>An error occurred while configuring the item schedule settings. Error: {0}.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Report_CannotCreateMMSSession" xml:space="preserve">
+    <value>Cannot find the available Managed Metadata Service.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Report_CannotFindWebPartAssembly" xml:space="preserve">
+    <value>Cannot obtain the Web part assembly information. Web Part Type ID: {0}.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Report_NoPermissionToRestoreDataSourceFields" xml:space="preserve">
+    <value>Cannot restore the data source columns. The Agent account does not have sufficient permission.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Report_NoPermissionToRestoreHoldRecord" xml:space="preserve">
+    <value>Cannot restore the item that is declared as a record. The Agent account does not have sufficient permission.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Report_ListPropertyRestoreFailed" xml:space="preserve">
+    <value>Failed to restore the EmailAlias property. List Title: {0}, Error: {1}.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Report_NoPermissionToRestoreAssociateGroups" xml:space="preserve">
+    <value>Cannot restore the associatevisitorgroup property.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Report_NoPermissionToRestoreRequestAccessEmail" xml:space="preserve">
+    <value>Cannot restore the Allow Request Settings. The Agent account does not have sufficient permission.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Report_NoPermissionToRestoreDocumentTemplateUrl" xml:space="preserve">
+    <value>Cannot restore the URL settings of the document template. The Agent account does not sufficient permission.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Report_CannotGetScope" xml:space="preserve">
+    <value>Cannot obtain the scope information. Scope Name: {0}, Error: {1}.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Report_RestoreWebPartError" xml:space="preserve">
+    <value>An error occurred while restoring the Web part. Web Part: {0}, Error: {1}.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Report_NoPermissionToRestoreUrlNeedPost" xml:space="preserve">
+    <value>Cannot restore the properties in the site collection that have URL values. The Agent account does not have sufficient permission.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Report_NoPermissionToRestoreSiteLogo" xml:space="preserve">
+    <value>Cannot restore the site logo. The Agent account does not have sufficient permission.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Report_NoPermissionToRestoreItem" xml:space="preserve">
+    <value>Cannot restore the item. The Agent account does not have sufficient permission.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Report_GetSearchServiceApplicationProxyError" xml:space="preserve">
+    <value>An error occurred while obtaining the proxy settings of the Search Service Application. Site Collection URL: {0}, Error: {1}.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Report_NoPermissionToRestoreWelcomePage" xml:space="preserve">
+    <value>Cannot restore the welcome page settings. The Agent account does not have sufficient permission.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Report_NoPermissionToRestoreContentOrganizationSetting" xml:space="preserve">
+    <value>Cannot restore the content organizer settings. The Agent account does not have sufficient permission.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Report_NoPermissionToRestoreWebMetaInfo" xml:space="preserve">
+    <value>Cannot restore the MetaInfo property. The Agent account does not sufficient permission.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Report_NoPermissionToRestoreSiteTheme" xml:space="preserve">
+    <value>Cannot restore the site theme settings. The Agent account does not have sufficient permission.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Report_AddGroupContributorError" xml:space="preserve">
+    <value>An error occurred while restoring the group contributor configured in the Managed Metadata Service. User/Group Name: {0}, Error: {1}.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Report_RestoreKeywordError" xml:space="preserve">
+    <value>An error occurred while restoring the keyword. Keyword Definition: {0}, Contact: {1},\nError: {2}.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Report_AddTermSetStakeholderError" xml:space="preserve">
+    <value>An error occurred while restoring the term set stakeholder. Term Set: {0}, Stakeholder: {1}, Error: {2}.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Report_CannotGetWebPart" xml:space="preserve">
+    <value>Failed to the restore the Web part.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Report_NoPermissionToRestoreUrlIDNeedReplace" xml:space="preserve">
+    <value>Cannot replace the item properties whose values are dynamic and based on the destination properties. The Agent account does not have sufficient permission.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Report_NoPermissionToAddFolder" xml:space="preserve">
+    <value>Cannot replace the item properties whose values are dynamic and based on the destination properties. The Agent account does not have sufficient permission.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Report_NoPermissionToRestoreLookupFieldValues" xml:space="preserve">
+    <value>Cannot restore the lookup column value. The Agent account does not have sufficient permission.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Report_AddEventReceiverError" xml:space="preserve">
+    <value>An error occurred while creating the event receiver.\nError: {0}.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Report_UpdateGroupPropertyError" xml:space="preserve">
+    <value>An error occurred while updating the group properties. Group Name: {0}, Error: {1}.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Report_NoPermissionToRestoreRelationShipListSetting" xml:space="preserve">
+    <value>Cannot restore the VarRelationshipsListId property. The Agent account does not have sufficient permission.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Report_NoPermissionToDeleteWebNavigations" xml:space="preserve">
+    <value>Cannot delete the site navigation items. The Agent account does not have sufficient permission.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Report_NoPermissionToRestoreListRssViewField" xml:space="preserve">
+    <value>Cannot restore columns in the RRS view of the list.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Report_UpdateEventReceiverToWebError" xml:space="preserve">
+    <value>An error occurred while updating the site event receiver settings.  Event Receiver Name: {0}, Error: {1}.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Report_NoPermissionToRestoreHiddenSiteProperty" xml:space="preserve">
+    <value>Cannot restore the navigation settings for the hidden site. The Agent account does not have sufficient permission.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Report_NoPermissionToRestoreAlternateCSSUrl" xml:space="preserve">
+    <value>Cannot restore the URL of an alternate cascading style sheet (CSS). The Agent account does not have sufficient permission.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Report_CreateSiteCollectionError" xml:space="preserve">
+    <value>An error occurred while creating the site collection. Site Collection URL: {0}, Site Collection ID: {1},\nError: {2}.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Report_CreateTermSetError" xml:space="preserve">
+    <value>An error occurred while creating the term set. Term Set Name: {0}, Error: {1}.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Report_SetWebRequestAccessEmailError" xml:space="preserve">
+    <value>An error occurred while setting the Access Request Settings. Error: {0}.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Report_RestoreTermFailed" xml:space="preserve">
+    <value>An error occurred while restoring the tags in Tags &amp; Notes. Tag URL: {0},\nTag Title: {1}, Error: {2}.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Report_SetSubTermOwnerError" xml:space="preserve">
+    <value>An error occurred while setting the sub term owner. Sub Term: {0}, Term Set Owner: {1}, Error: {2}. </value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Report_RestoreListPropertyError" xml:space="preserve">
+    <value>An error occurred while restoring the list properties. List Name: {0},\nError: {1}.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Report_RestoreAveMetadataServiceError" xml:space="preserve">
+    <value>An error occurred while restoring the Managed Metadata Service. Error: {0}.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Report_CreateNewScopeError" xml:space="preserve">
+    <value>An error occurred while creating the search scope. Location ID: {0},\nError: {1}. </value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Report_NoPermissionToRestoreCacheProfileListId" xml:space="preserve">
+    <value>Cannot restore the CacheProfileListId property. The Agent account does not have sufficient permission.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Report_NoPermissionToRestoreMasterPageProperty" xml:space="preserve">
+    <value>Cannot restore the master page properties. The Agent account does not have sufficient permission.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Report_SetTermPropertyError" xml:space="preserve">
+    <value>An error occurred while setting the term properties. Term Name: {0}, Error: {1}.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Report_CreateTermError" xml:space="preserve">
+    <value>An error occurred while creating the term. Term Name: {0}, Error: {1}.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Report_NoPermissionToRestoreGroup" xml:space="preserve">
+    <value>Failed to restore the group. The Agent account does not have sufficient permission. </value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Report_GroupRestoreSkipError" xml:space="preserve">
+    <value>Failed to restore the group. The Agent account does not have sufficient permission. </value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Report_NoPermissionToRestoreUser" xml:space="preserve">
+    <value>Failed to restore the user. The Agent account does not have sufficient permission. </value>
+    <comment>None</comment>
+  </data>
+</root>

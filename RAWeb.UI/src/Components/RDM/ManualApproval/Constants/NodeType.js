@@ -1,0 +1,31 @@
+export const NodeType = {
+    Item: 500,
+    SiteCollection: 100,
+    Site: 200,
+    List: 300,
+    Folder: 400,
+    PhysicalBox: 9300,
+    PhysicalCustom: 9250,
+    PhysicalRecord: 9500,
+    PhysicalFile: 9400,
+    ExchangeOnlineItem: 5110,
+    FSFolder: 2100,
+    FSFile: 2200,
+    GoogleDriveFolder: 7202,
+    GoogleDriveFile: 7203,
+};
+
+export const NodeTypeI18Ns = new Map([
+    [NodeType.Item, RMResx.RM_RDM_RecordDetails_DataType_SPItem],
+    [NodeType.SiteCollection, RMResx.RM_JS_Rule_ObjectLevel_SiteCollection],
+    [NodeType.Site, RMResx.RM_JS_Rule_ObjectLevel_Site],
+    [NodeType.List, RMResx.RM_Common_ObjectLevel_List],
+    [NodeType.Folder, RMResx.RM_Common_ObjectLevel_Folder],
+    [NodeType.PhysicalBox, RMResx.RM_Common_ObjectLevel_PhysicalBox],
+    [NodeType.PhysicalCustom, RMResx.RM_RDM_RecordDetails_DataType_SPItem],
+    [NodeType.PhysicalRecord, RMResx.RM_PRM_PRE_TableItemType_Record],
+    [NodeType.PhysicalFile, RMResx.RM_Common_ObjectLevel_PhysicalFile],
+    [NodeType.ExchangeOnlineItem, RMResx.RM_JS_Rule_ObjectLevel_ExchangeOnlineItem],
+    [NodeType.FSFolder, RMResx.RM_JM_GlobalSearch_FSFolderType],
+    [NodeType.FSFile, RMResx.RM_JM_GlobalSearch_FSFileType],
+]);

@@ -1,0 +1,86 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <AssemblyName>MediaCoreIndex</AssemblyName>
+    <RootNamespace>AvePoint.Media.Core.Index</RootNamespace>
+  </PropertyGroup>
+	<PropertyGroup>
+		<EnableUnsafeBinaryFormatterSerialization>true</EnableUnsafeBinaryFormatterSerialization>
+	</PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="CoreIndexScripts\InitialScripts\ArchiverDedupIndexDatabaseScript.sqlite" />
+    <None Remove="CoreIndexScripts\InitialScripts\ArchiverIndexDatabaseScript.sqlite" />
+    <None Remove="CoreIndexScripts\InitialScripts\EDiscoveryIndexDatabaseScript.sqlite" />
+    <None Remove="CoreIndexScripts\InitialScripts\ExchangeIndexDatabaseScript.sqlite" />
+    <None Remove="CoreIndexScripts\InitialScripts\GoogleDriveIndexDatabaseScript.sqlite" />
+	<None Remove="CoreIndexScripts\InitialScripts\ExportIndexDatabaseScript.sqlite" />
+    <None Remove="CoreIndexScripts\InitialScripts\GeneralIndexDatabaseScript.sqlite" />
+    <None Remove="CoreIndexScripts\InitialScripts\GranularIndexDatabaseScript.sqlite" />
+    <None Remove="CoreIndexScripts\InitialScripts\GroupIndexDatabaseScript.sqlite" />
+    <None Remove="CoreIndexScripts\InitialScripts\PlatformIndexDatabaseScript.sqlite" />
+    <None Remove="CoreIndexScripts\InitialScripts\PlatformItemBrowserIndexDatabaseScript.sqlite" />
+    <None Remove="CoreIndexScripts\InitialScripts\SolutionIndexDatabaseScript.sqlite" />
+    <None Remove="CoreIndexScripts\InitialScripts\VaultIndexDatabaseScript.sqlite" />
+    <None Remove="CoreIndexScripts\UpgradeScripts\ArchiverDedupIndexDatabaseScript.config" />
+    <None Remove="CoreIndexScripts\UpgradeScripts\ArchiverIndexDatabaseScript.config" />
+	  <None Remove="CoreIndexScripts\UpgradeScripts\ExchangeIndexDatabaseScript.config" />
+	  <None Remove="CoreIndexScripts\UpgradeScripts\GoogleDriveIndexDatabaseScript.config" />
+    <None Remove="CoreIndexScripts\UpgradeScripts\GeneralIndexDatabaseScript.config" />
+    <None Remove="CoreIndexScripts\UpgradeScripts\GranularIndexDatabaseScript.config" />
+    <None Remove="CoreIndexScripts\UpgradeScripts\PlatformIndexDatabaseScript.config" />
+    <None Remove="CoreIndexScripts\UpgradeScripts\PlatformItemBrowserIndexDatabaseScript.config" />
+    <None Remove="CoreIndexScripts\UpgradeScripts\SolutionIndexDatabaseScript.config" />
+    <None Remove="CoreIndexScripts\UpgradeScripts\UpgradeConfigurationSection.csd" />
+    <None Remove="CoreIndexScripts\UpgradeScripts\UpgradeConfigurationSection.csd.config" />
+    <None Remove="CoreIndexScripts\UpgradeScripts\UpgradeConfigurationSection.csd.diagram" />
+    <None Remove="CoreIndexScripts\UpgradeScripts\UpgradeConfigurationSection.csd.xsd" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="CoreIndexScripts\InitialScripts\ArchiverDedupIndexDatabaseScript.sqlite" />
+    <EmbeddedResource Include="CoreIndexScripts\InitialScripts\ArchiverIndexDatabaseScript.sqlite" />
+    <EmbeddedResource Include="CoreIndexScripts\InitialScripts\EDiscoveryIndexDatabaseScript.sqlite" />
+    <EmbeddedResource Include="CoreIndexScripts\InitialScripts\ExchangeIndexDatabaseScript.sqlite" />
+    <EmbeddedResource Include="CoreIndexScripts\InitialScripts\GoogleDriveIndexDatabaseScript.sqlite" />
+	<EmbeddedResource Include="CoreIndexScripts\InitialScripts\ExportIndexDatabaseScript.sqlite" />
+    <EmbeddedResource Include="CoreIndexScripts\InitialScripts\GeneralIndexDatabaseScript.sqlite" />
+    <EmbeddedResource Include="CoreIndexScripts\InitialScripts\GranularIndexDatabaseScript.sqlite" />
+    <EmbeddedResource Include="CoreIndexScripts\InitialScripts\GroupIndexDatabaseScript.sqlite" />
+    <EmbeddedResource Include="CoreIndexScripts\InitialScripts\PlatformIndexDatabaseScript.sqlite" />
+    <EmbeddedResource Include="CoreIndexScripts\InitialScripts\PlatformItemBrowserIndexDatabaseScript.sqlite" />
+    <EmbeddedResource Include="CoreIndexScripts\InitialScripts\SolutionIndexDatabaseScript.sqlite" />
+    <EmbeddedResource Include="CoreIndexScripts\InitialScripts\VaultIndexDatabaseScript.sqlite" />
+    <EmbeddedResource Include="CoreIndexScripts\UpgradeScripts\ArchiverDedupIndexDatabaseScript.config" />
+    <EmbeddedResource Include="CoreIndexScripts\UpgradeScripts\ArchiverIndexDatabaseScript.config" />
+	  <EmbeddedResource Include="CoreIndexScripts\UpgradeScripts\ExchangeIndexDatabaseScript.config" />
+	  <EmbeddedResource Include="CoreIndexScripts\UpgradeScripts\GoogleDriveIndexDatabaseScript.config" />
+    <EmbeddedResource Include="CoreIndexScripts\UpgradeScripts\GeneralIndexDatabaseScript.config" />
+    <EmbeddedResource Include="CoreIndexScripts\UpgradeScripts\GranularIndexDatabaseScript.config" />
+    <EmbeddedResource Include="CoreIndexScripts\UpgradeScripts\PlatformIndexDatabaseScript.config" />
+    <EmbeddedResource Include="CoreIndexScripts\UpgradeScripts\PlatformItemBrowserIndexDatabaseScript.config" />
+    <EmbeddedResource Include="CoreIndexScripts\UpgradeScripts\SolutionIndexDatabaseScript.config" />
+    <EmbeddedResource Include="CoreIndexScripts\UpgradeScripts\UpgradeConfigurationSection.csd" />
+    <EmbeddedResource Include="CoreIndexScripts\UpgradeScripts\UpgradeConfigurationSection.csd.config" />
+    <EmbeddedResource Include="CoreIndexScripts\UpgradeScripts\UpgradeConfigurationSection.csd.diagram" />
+    <EmbeddedResource Include="CoreIndexScripts\UpgradeScripts\UpgradeConfigurationSection.csd.xsd" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AWSSDK.S3" Version="4.0.17.3" />
+    <PackageReference Include="log4net" Version="3.3.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Common\MediaStorage\Media.StorageApi\Media.StorageApi.csproj" />
+    <ProjectReference Include="..\..\Merged18NResources\Merged18NResources.csproj" />
+    <ProjectReference Include="..\..\RACommon.Global\RACommon.Global.csproj" />
+    <ProjectReference Include="..\..\RADB\RADB.csproj" />
+    <ProjectReference Include="..\Media.Common\Media.Common.csproj" />
+    <ProjectReference Include="..\Media.Service.DomainModel\Media.Service.DomainModel.csproj" />
+  </ItemGroup>
+
+</Project>

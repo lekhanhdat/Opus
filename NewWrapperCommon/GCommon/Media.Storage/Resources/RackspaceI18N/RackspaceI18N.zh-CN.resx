@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="MediaStorage_Rackspace_Username_Demo" xml:space="preserve">
+    <value>Benutzername</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Connector_Rackspace_API_Key" xml:space="preserve">
+    <value>API-Schlüssel</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Connector_Rackspace_CDN_Enabled" xml:space="preserve">
+    <value>CDN aktiviert</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Connector_Rackspace_Container_names_cannot_contain_a_forward_slash_and_must_be_less_than_256_bytes_in_length" xml:space="preserve">
+    <value>Die Container-Namen können keinen Schrägstrich (/) enthalten und müssen weniger als 256 Bytes lang sein.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Connector_Rackspace_RackSpace_Cloud_Files" xml:space="preserve">
+    <value>Rackspace Cloud-Dateien</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Connector_Rackspace_Connector_Rackspace_Description" xml:space="preserve">
+    <value>Geben Sie die detaillierten Informationen für den Speicherort an.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Connector_Rackspace_Extended_Parameters" xml:space="preserve">
+    <value>Erweiterte Parameter</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Connector_Rackspace_Username" xml:space="preserve">
+    <value>Benutzername</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Connector_Rackspace_Advanced" xml:space="preserve">
+    <value>Erweitert</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Connector_Rackspace_Container_Name" xml:space="preserve">
+    <value>Container-Name</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Rackspace_RackSpace_Cloud_Files" xml:space="preserve">
+    <value>Rackspace Cloud-Dateien</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Rackspace_Username" xml:space="preserve">
+    <value>Benutzername</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Rackspace_CDN_Enabled" xml:space="preserve">
+    <value>CDN aktiviert</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Rackspace_Container_names_cannot_contain_a_forward_slash_and_must_be_less_than_256_bytes_in_length" xml:space="preserve">
+    <value>Die Container-Namen können keinen Schrägstrich (/) enthalten und müssen kleiner als 256 Bytes sein.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Rackspace_API_Key" xml:space="preserve">
+    <value>API-Schlüssel</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Rackspace_Extended_Parameters" xml:space="preserve">
+    <value>Erweiterte Parameter</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Rackspace_Advanced" xml:space="preserve">
+    <value>Erweitert</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Rackspace_Container_Name" xml:space="preserve">
+    <value>Container-Name</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Rackspace_Connector_Rackspace_Description" xml:space="preserve">
+    <value>Geben Sie detaillierte Informationen für den Speicherort an.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Connector_Rackspace_Proxy" xml:space="preserve">
+    <value>Proxyeinstellungen</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Connector_Rackspace_Proxy_Host" xml:space="preserve">
+    <value>Proxy-Host</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Connector_Rackspace_Proxy_Password" xml:space="preserve">
+    <value>Kennwort</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Connector_Rackspace_Proxy_Port" xml:space="preserve">
+    <value>Proxy-Port</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Connector_Rackspace_Proxy_Username" xml:space="preserve">
+    <value>Benutzername</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Rackspace_Proxy" xml:space="preserve">
+    <value>Proxyeinstellungen</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Rackspace_Proxy_Host" xml:space="preserve">
+    <value>Proxy-Host</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Rackspace_Proxy_Password" xml:space="preserve">
+    <value>Kennwort</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Rackspace_Proxy_Port" xml:space="preserve">
+    <value>Proxy-Port</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Rackspace_Proxy_Username" xml:space="preserve">
+    <value>Benutzername</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Connector_Rackspace_Must_be_a_number_between_0_and_65535" xml:space="preserve">
+    <value>Bitte geben Sie eine ganze Zahl zwischen 0 und 65535 ein.</value>
+    <comment>Approved</comment>
+  </data>
+</root>

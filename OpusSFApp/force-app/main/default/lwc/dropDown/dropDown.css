@@ -1,0 +1,34 @@
+/*Covered by AvePoint copyright and license agreement*/
+.dropdown-menu-default {
+    margin-top: 5px;
+    position: absolute;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 4px;
+    box-shadow: 0px 4px 4px 0px #0000001A;
+    z-index: 9001;
+}
+
+.dropdown-button {
+    cursor: pointer;
+}
+
+.slds-show {
+    display: block;
+}
+
+.slds-hide {
+    display: none;
+}
+.arrow-point-to-dropdown {
+    position: absolute;
+    width: 10px;
+    height: 100px;
+    z-index: 1001;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid black;
+    top: -100px;
+    left: 20px;
+}
+

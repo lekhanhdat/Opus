@@ -1,0 +1,32 @@
+﻿063c26fa-3ccc-4180-8a84-b6f98e991df3*Library and Folder Based Retention*Allows list administrators to override content type retention schedules and set schedules on libraries and folders.
+0af5989a-3aea-4519-8ab0-85d91abe39ff*Workflows*Aggregated set of out-of-box workflow features provided by SharePoint.
+151d22d9-95a8-4904-a0a3-22e4db85d1e0*Cross-Site Collection Publishing*Enables site collection to designate lists and document libraries as catalog sources for Cross-Site Collection Publishing.
+1d253548-c70d-40fd-9930-9d313bedc359*Project Web App Ribbon*Contains the ribbon controls for Project Web App pages.
+2fcd5f8a-26b7-4a6a-9755-918566dba90a*Site Policy*Allows site collection administrators to define retention schedules that apply to a site and all its content.
+3bae86a2-776d-499d-9db8-fa4cdc7884f8*Document Sets*Provides the content types required for creating and using document sets. Create a document set when you want to manage multiple documents as a single work product.
+57ff23fc-ec05-4dd8-b7ed-d93faa7c795d*Custom Site Collection Help*Creates a Help library that can be used to store custom help for this site collection.
+697c64b9-3dff-4981-9394-0a62632120ec*Project Web App Settings*Project Web App PMO Settings
+6abbc685-51bd-4999-946b-b2946fb80981*Sample Proposal*Sample workflow for Project Server
+6e1e5426-2ebd-4871-8027-c5ca86371ead*Video and Rich Media*Provides libraries, content types, and web parts for storing, managing, and viewing rich media assets, like images, sound clips, and videos.
+7094bd89-2cfe-490a-8c7e-fbace37b4a34*Reporting*Creates reports about information in Microsoft SharePoint Foundation.
+77fc9e13-e99a-4bd3-9438-a3f69670ed97*Search Engine Sitemap*This feature improves the search engine optimization of a website by automatically generating a search engine sitemap on a recurring basis that contains all valid URLs in a SharePoint website. Anonymous access must be enabled in order to use this feature.
+7c637b23-06c4-472d-9a9a-7c175762c5c4*Limited-access user permission lockdown mode*When this feature is enabled, permissions for users in the &quot;limited access&quot; permissions level (such as Anonymous Users) are reduced, preventing access to Application Pages.
+7dd73b7c-8763-4f4f-82f5-4927db8c9a90*Duet End User Help Collection*Enables Duet End User Help Collection
+8581a8a7-cf16-4770-ac54-260265ddb0b2*SharePoint Server Enterprise Site Collection features*Features such as InfoPath Forms Services, Visio Services, Access Services, and Excel Services Application, included in the SharePoint Server Enterprise License.
+8a4b8de2-6fd8-41e9-923c-c7c3c00f8295*Open Documents in Client Applications by Default*Configures links to documents so they open in client applications instead of Web applications, by default.
+8dab53d8-e0cf-4595-b192-f71e1823f056*Review*Enable the definition and declaration of review.
+96c85529-98f5-4a10-8ff5-2a479d34a92a*Project Web App Permission for Excel Web App Refresh*When this feature is active, users can refresh reports containing Project Web App data within Excel Web App.
+9a447926-5937-44cb-857a-d3829301c73b*Content Type Syndication Hub*Provisions a site to be Enterprise Metadata hub site.
+9c0834e1-ba47-4d49-812b-7d4fb6fea211*Search Server Web Parts and Templates*This feature will add the Search Server Web Parts and Display Templates to your site. Search will work on most sites without this feature being activated, but if you get a message about missing templates when searching, then activate this feature.
+a44d2aa3-affc-4d58-8db4-f4a3af053188*Publishing Approval Workflow*Routes a page for approval. Approvers can approve or reject the page, reassign the approval task, or request changes to the page. This workflow can be edited in SharePoint Designer.
+ad739f9e-1525-4dec-a25e-10821ca70c95*Project Server Approval Content Type*This content type is used by the Project Server Approval workflow.
+b21b090c-c796-4b0f-ac0f-7ef1659c20ae*SharePoint Server Standard Site Collection features*Features such as user profiles and search, included in the SharePoint Server Standard License.
+b435069a-e096-46e0-ae30-899daca4b304*Reports and Data Search Support*Provides content types, site columns, and library templates required to support Reports and Data Search in the Enterprise Search Center.
+b50e3104-6812-424f-a011-cc90e6327318*Document ID Service*Assigns IDs to documents in the Site Collection, which can be used to retrieve items independent of their current location.
+c845ed8d-9ce5-448c-bd3e-ea71350ce45b*SharePoint 2007 Workflows*Aggregated set of out-of-box workflow features provided by SharePoint 2007.
+c85e5759-f323-4efb-b548-443d2216efb5*Disposition Approval Workflow*Manages document expiration and retention by allowing participants to decide whether to retain or delete expired documents.
+d438adcc-d809-49ab-8022-f240d5989f3b*Aggregated Business Calendar*Displays multiple business calendars in an overlay alongside Exchange and SharePoint calendars
+da2e115b-07e4-49d9-bb2c-35e93bb9fca9*In Place Records Management*Enable the definition and declaration of records in place.
+f32a5a06-2e62-4682-9850-f6115223b13c*Duet Enterprise Reports Content Types*This feature defines the fields and content types which will be used by Duet Enterprise Reports.
+f6924d36-2fa8-4f0b-b16d-06b7250180fa*SharePoint Server Publishing Infrastructure*Provides centralized libraries, content types, master pages and page layouts and enables page scheduling and other publishing functionality for a site collection.
+fde5d850-671e-4143-950a-87b473922dc7*Three-state workflow*Use this workflow to track items in a list.

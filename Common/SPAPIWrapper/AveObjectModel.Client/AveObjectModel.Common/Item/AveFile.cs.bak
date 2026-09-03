@@ -1,0 +1,377 @@
+﻿/********************************************************************
+ *
+ *  PROPRIETARY and CONFIDENTIAL
+ *
+ *  This file is licensed from, and is a trade secret of:
+ *
+ *                   AvePoint, Inc.
+ *                   Harborside Financial Center
+ *                   9th Fl.   Plaza Ten
+ *                   Jersey City, NJ 07311
+ *                   United States of America
+ *                   Telephone: +1-800-661-6588
+ *                   WWW: www.avepoint.com
+ *
+ *  Refer to your License Agreement for restrictions on use,
+ *  duplication, or disclosure.
+ *
+ *  RESTRICTED RIGHTS LEGEND
+ *
+ *  Use, duplication, or disclosure by the Government is
+ *  subject to restrictions as set forth in subdivision
+ *  (c)(1)(ii) of the Rights in Technical Data and Computer
+ *  Software clause at DFARS 252.227-7013 (Oct. 1988) and
+ *  FAR 52.227-19 (C) (June 1987).
+ *
+ *  Copyright © 2013-2017 AvePoint® Inc. All Rights Reserved. 
+ *
+ *  Unpublished - All rights reserved under the copyright laws of the United States.
+ *  $Revision:  $
+ *  $Author:  $        
+ *  $Date:  $
+ */
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using AvePoint.Wrapper.Common;
+using System.Net;
+using System.Xml;
+using System.Web;
+
+namespace AvePoint.ObjectModel.Common
+{
+    class AveFile : AveClientObject, IAveFile
+    {
+        private IAveRequest mRequest;
+        private IAveWeb mParentWeb;
+        private string mSiteUrl;
+        private string mServerRelativeUrl;
+        private string mFullUrl;
+        private bool mVersionsLoaded;
+        private bool mUniqueIdLoaded;
+
+        public AveFile(IAveRequest request, IAveWeb web, string serverRelativeUrl, string listName)
+        {
+            mRequest = request;
+            mParentWeb = web;
+            mSiteUrl = web.Site.Url;
+            mServerRelativeUrl = serverRelativeUrl;
+            mVersionsLoaded = false;
+            mUniqueIdLoaded = false;
+            mFullUrl = GetServerUrl(web.Url).TrimEnd('/') +"/" + serverRelativeUrl.TrimStart('/');
+            Dictionary<string, object> items = mRequest.FileGetFile(web.Url, web.Id.ToString(), serverRelativeUrl, listName);
+            List<Dictionary<string, object>> itemsList = items["Items"] as List<Dictionary<string, object>>;
+            if ( itemsList.Count == 0 )
+            {
+                //throw new Exception("file object isn't exist");
+                base.DataCache.PropertiesCache.Add("Exist", false);
+                return;
+            }
+            Dictionary<string, object> fileProperties = itemsList[0];
+            string name = fileProperties["AuthorName"] as string;
+            string id = fileProperties["AuthorId"] as string;
+            foreach ( IAveUser user in  mParentWeb.SiteUsers)
+            {
+                if ( id.Equals(user.Id.ToString()) && name.Equals(user.Name.ToString()) )
+                {
+                    fileProperties.Remove("AuthorName");
+                    fileProperties.Remove("AuthorId");
+                    fileProperties.Add("Author", user);
+                    break;
+                }
+            }
+            base.DataCache.AddPropertyies(fileProperties);
+        }
+
+        #region IAveFile Members
+
+        public void Approve(string comment)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void CheckIn(string comment)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void CheckIn(string comment, AveCheckinType checkinType)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void CheckOut()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void CopyTo(string strNewUrl, bool bOverWrite)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void DeleteObject()
+        {
+            throw new NotImplementedException();
+        }
+
+        public IAveLimitedWebPartManager GetLimitedWebPartManager(System.Web.UI.WebControls.WebParts.PersonalizationScope scope)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void MoveTo(string newUrl, AveMoveOperations flags)
+        {
+            throw new NotImplementedException();
+        }
+
+        public byte[] OpenBinary(AveOpenBinaryOptions openOptions)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void SaveBinary(System.IO.Stream file)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void SaveBinary(byte[] file)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void SaveBinary(System.IO.Stream file, bool checkRequiredFields, bool createVersion, string etagMatch, string lockIdMatch, System.IO.Stream fileFormatMetaInfo, out string etagNew)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void UndoCheckOut()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void UnPublish(string comment)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Update()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Publish(string comment)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Delete()
+        {
+            throw new NotImplementedException();
+        }
+
+        public byte[] OpenBinary()
+        {
+            return mRequest.FileOpenBinary(mFullUrl, mSiteUrl);
+        }
+
+        public System.IO.Stream OpenBinaryStream()
+        {
+            throw new NotImplementedException();
+        }
+
+        public IAveUser Author
+        {
+            get {
+                return base.DataCache.GetProperty<IAveUser>("Author");
+            }
+        }
+
+        public IAveUser CheckedOutByUser
+        {
+            get { throw new NotImplementedException(); }
+        }
+
+        public string CheckInComment
+        {
+            get { throw new NotImplementedException(); }
+        }
+
+        public AveCheckOutType CheckOutType
+        {
+            get { throw new NotImplementedException(); }
+        }
+
+        public AveCustomizedPageStatus CustomizedPageStatus
+        {
+            get { throw new NotImplementedException(); }
+        }
+
+        public string ETag
+        {
+            get { throw new NotImplementedException(); }
+        }
+
+        public bool Exists
+        {
+            get { return base.DataCache.GetProperty<Boolean>("Exists"); }
+        }
+
+        public bool InDocumentLibrary
+        {
+            get { throw new NotImplementedException(); }
+        }
+
+        public IAveListItem Item
+        {
+            get { throw new NotImplementedException(); }
+        }
+
+        public long Length
+        {
+            get { 
+                return long.Parse(base.DataCache.GetProperty<string>("File_x0020_Size"));
+            }
+        }
+
+        public AveFileLevel Level
+        {
+            get {
+                return (AveFileLevel)int.Parse((base.DataCache.GetProperty<string>("Level"))); 
+            }
+        }
+
+        public IAveUser LockedByUser
+        {
+            get { throw new NotImplementedException(); }
+        }
+
+        public int MajorVersion
+        {
+            get { return base.DataCache.GetProperty<int>("MajorVersion"); }
+        }
+
+        public int MinorVersion
+        {
+            get { return base.DataCache.GetProperty<int>("MinorVersion"); }
+        }
+
+        public string Name
+        {
+            get { return base.DataCache.GetProperty<string>("FileLeafRef"); }
+        }
+
+        public System.Collections.Hashtable Properties
+        {
+            get { throw new NotImplementedException(); }
+        }
+
+        public string ServerRelativeUrl
+        {
+            get { return base.DataCache.GetProperty<string>("FileRef"); }
+        }
+
+        public DateTime TimeCreated
+        {
+            get { return DateTime.Parse(base.DataCache.GetProperty<string>("Created")); }
+        }
+
+        public DateTime TimeLastModified
+        {
+            get { return DateTime.Parse(base.DataCache.GetProperty<string>("Last_x0020_Modified")); }
+        }
+
+        public string Title
+        {
+            get { return base.DataCache.GetProperty<string>("Title"); }
+        }
+
+        public int UIVersion
+        {
+            get { return int.Parse(base.DataCache.GetProperty<string>("UIVersion")); }
+        }
+
+        public string UIVersionLabel
+        {
+            get { return base.DataCache.GetProperty<string>("UIVersionString"); }
+        }
+
+        public Guid UniqueId
+        {
+            get {
+                if (mUniqueIdLoaded == false)
+                {
+                    Guid id = new Guid(base.DataCache.GetProperty<string>("UniqueId"));
+                    base.DataCache.PropertiesCache.Remove("UniqueId");
+                    base.DataCache.PropertiesCache.Add("UniqueId", id);
+                    mUniqueIdLoaded = true;
+                }
+                return base.DataCache.GetProperty<Guid>("UniqueId");
+            }
+        }
+
+        public IAveFileVersionCollection Versions
+        {
+            get {
+                //using the version service
+                if ( mVersionsLoaded == false )
+                {
+                    string fileSiteRelativeUrl = mServerRelativeUrl.Substring( mParentWeb.ServerRelativeUrl.Length);
+                    List<Dictionary<string, object>> versions = mRequest.FileGetVersions(mParentWeb.Url, fileSiteRelativeUrl);
+                    AveFileVersionCollection versionCollection = new AveFileVersionCollection();
+                    foreach ( Dictionary<string, object> dic in versions )
+                    {
+                        AveFileVersion fileVersion = new AveFileVersion(mRequest, this.mParentWeb.Site.Url, dic);
+                        versionCollection.Add(fileVersion);
+                    }
+                    versions.Clear();
+                    base.DataCache.PropertiesCache.Add("Versions", versionCollection);
+                    mVersionsLoaded = true;
+                }
+                return base.DataCache.GetProperty<IAveFileVersionCollection>("Versions"); 
+            }
+        }
+
+        public IAveFolder ParentFolder
+        {
+            get { throw new NotImplementedException(); }
+        }
+
+        public IAveWeb Web
+        {
+            get { return mParentWeb; }
+        }
+
+        public string Url
+        {
+            get {
+                throw new NotImplementedException();
+                //return base.DataCache.GetProperty<string>("Url");
+            }
+        }
+
+        #endregion
+
+        #region Private Method
+        private string GetServerUrl(string url)
+        {
+            int index = url.IndexOf("://");
+            if (index < 0)
+            {
+                throw new Exception(string.Format("illegal format:{0} ", url));
+            }
+            index = url.IndexOf('/', index + 3);
+            if (index > 0)
+            {
+                return url.Substring(0, index);
+            }
+            else
+            {
+                return url;
+            }
+        }
+        #endregion
+
+    }
+}

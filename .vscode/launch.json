@@ -1,0 +1,202 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "compounds": [
+        {
+            "name": "Start All",
+            "configurations": [
+                // "HybridServer",
+                "RATimerWorkerRole",
+                // "RAApi",
+                "RAWeb",
+                // "RealTimeWorkerRole"
+            ],
+            "presentation": {
+                "group": "1. compounds"
+            },
+            "stopAll": true,
+            //Ctrl-Shift-B
+            //"preLaunchTask": "build"
+        },
+        {
+            "name": "Start All(Hot Reload)",
+            "configurations": [
+                "HybridServer(Hot Reload)",
+                "RATimerWorkerRole(Hot Reload)",
+                "RAApi(Hot Reload)",
+                "RAWeb(Hot Reload)",
+                "RealTimeWorkerRole(Hot Reload)"
+            ],
+            "presentation": {
+                "group": "1. compounds"
+            },
+            "stopAll": true,
+            //Ctrl-Shift-B
+            //"preLaunchTask": "build"
+        }
+    ],
+    "configurations": [
+        {
+            "name": "RAWeb",
+            "type": "coreclr",
+            "request": "launch",
+            "program": "${workspaceFolder}/RAWeb/bin/Debug/net8.0/AvePointRevIM.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/RAWeb",
+            "stopAtEntry": false,
+            "console": "integratedTerminal",
+            "presentation": {
+                "group": "3. normal"
+            }
+        },
+        {
+            "name": "RATimerWorkerRole",
+            "type": "coreclr",
+            "request": "launch",
+            "program": "${workspaceFolder}/RATimerWorkerRole/bin/net8.0/RATimerWorkerRole.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/RATimerWorkerRole",
+            "stopAtEntry": false,
+            "console": "integratedTerminal",
+            "presentation": {
+                "group": "3. normal"
+            }
+        },
+        {
+            "name": "RealTimeWorkerRole",
+            "type": "coreclr",
+            "request": "launch",
+            "program": "${workspaceFolder}/RAScheduleJobWorkerRole/bin/Debug/net8.0/RevIMScheduleJobWorkerRole.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/RAScheduleJobWorkerRole",
+            "stopAtEntry": false,
+            "console": "integratedTerminal",
+            "presentation": {
+                "group": "3. normal"
+            }
+        },
+        {
+            "name": "RAApi",
+            "type": "coreclr",
+            "request": "launch",
+            "program": "${workspaceFolder}/RAApi.Web/bin/net8.0/RAApi.Web.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/RAApi.Web",
+            "stopAtEntry": false,
+            "console": "integratedTerminal",
+            "presentation": {
+                "group": "3. normal"
+            }
+        },
+        {
+            "name": "HybridServer",
+            "type": "coreclr",
+            "request": "launch",
+            "program": "${workspaceFolder}/HybirdFramework/HybridServer/bin/Debug/net8.0/HybridServer.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/HybirdFramework/HybridServer",
+            "stopAtEntry": false,
+            "console": "integratedTerminal",
+            "presentation": {
+                "group": "3. normal"
+            }
+        },
+        {
+            "name": "RAWeb(Hot Reload)",
+            "type": "coreclr",
+            "request": "launch",
+            "program": "dotnet",
+            "args": [
+                "watch",
+                "run",
+                "--project",
+                ".\\RAWeb\\RAWeb.csproj",
+                "--verbose"
+            ],
+            "cwd": "${workspaceFolder}",
+            "stopAtEntry": false,
+            "console": "integratedTerminal",
+            "presentation": {
+                "group": "4. hot reload"
+            }
+        },
+        {
+            "name": "RATimerWorkerRole(Hot Reload)",
+            "type": "coreclr",
+            "request": "launch",
+            "program": "dotnet",
+            "args": [
+                "watch",
+                "run",
+                "--project",
+                ".\\RATimerWorkerRole\\RATimerWorkerRole.csproj",
+                "--verbose"
+            ],
+            "cwd": "${workspaceFolder}",
+            "stopAtEntry": false,
+            "console": "integratedTerminal",
+            "presentation": {
+                "group": "4. hot reload"
+            }
+        },
+        {
+            "name": "RealTimeWorkerRole(Hot Reload)",
+            "type": "coreclr",
+            "request": "launch",
+            "program": "dotnet",
+            "args": [
+                "watch",
+                "run",
+                "--project",
+                ".\\RAScheduleJobWorkerRole\\RAScheduleJobWorkerRole.csproj",
+                "--verbose"
+            ],
+            "cwd": "${workspaceFolder}",
+            "stopAtEntry": false,
+            "console": "integratedTerminal",
+            "presentation": {
+                "group": "4. hot reload"
+            }
+        },
+        {
+            "name": "RAApi(Hot Reload)",
+            "type": "coreclr",
+            "request": "launch",
+            "program": "dotnet",
+            "args": [
+                "watch",
+                "run",
+                "--project",
+                ".\\RAApi.Web\\RAApi.Web.csproj",
+                "--verbose"
+            ],
+            "cwd": "${workspaceFolder}",
+            "stopAtEntry": false,
+            "console": "integratedTerminal",
+            "presentation": {
+                "group": "4. hot reload"
+            }
+        },
+        {
+            "name": "HybridServer(Hot Reload)",
+            "type": "coreclr",
+            "request": "launch",
+            "program": "dotnet",
+            "args": [
+                "watch",
+                "run",
+                "--project",
+                ".\\HybirdFramework\\HybridServer\\HybridServer.csproj",
+                "--verbose"
+            ],
+            "cwd": "${workspaceFolder}",
+            "stopAtEntry": false,
+            "console": "integratedTerminal",
+            "presentation": {
+                "group": "4. hot reload"
+            }
+        },
+    ]
+}

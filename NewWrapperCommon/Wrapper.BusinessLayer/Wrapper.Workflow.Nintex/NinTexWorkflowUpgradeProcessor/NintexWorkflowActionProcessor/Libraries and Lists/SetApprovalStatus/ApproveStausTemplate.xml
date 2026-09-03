@@ -1,0 +1,908 @@
+﻿<?xml version="1.0"?>
+<!--/********************************************************************
+ *
+ *  PROPRIETARY and CONFIDENTIAL
+ *
+ *  This file is licensed from, and is a trade secret of:
+ *
+ *                   AvePoint, Inc.
+ *                   525 Washington Blvd, Suite 1400
+ *                   Jersey City, NJ 07310
+ *                   United States of America
+ *                   Telephone: +1-201-793-1111
+ *                   WWW: www.avepoint.com
+ *
+ *  Refer to your License Agreement for restrictions on use,
+ *  duplication, or disclosure.
+ *
+ *  RESTRICTED RIGHTS LEGEND
+ *
+ *  Use, duplication, or disclosure by the Government is
+ *  subject to restrictions as set forth in subdivision
+ *  (c)(1)(ii) of the Rights in Technical Data and Computer
+ *  Software clause at DFARS 252.227-7013 (Oct. 1988) and
+ *  FAR 52.227-19 (C) (June 1987).
+ *
+ *  Copyright © 2017-2026 AvePoint® Inc. All Rights Reserved. 
+ *
+ *  Unpublished - All rights reserved under the copyright laws of the United States.
+ */-->
+<ArrayOfProperty xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" >
+  <Property>
+    <ID>p0</ID>
+    <DesignerType>Text</DesignerType>
+    <DisplayName>Destination site URL</DisplayName>
+    <Parameters>
+      <Name>InputDestinationSharePointUrl</Name>
+      <Value>
+        <PrimitiveValue>
+          <Type>String</Type>
+          <Value>
+            <string>{0}</string>
+          </Value>
+          <FormatValues>
+            <SelectedValue>
+              <Coercion>AsDNString</Coercion>
+              <WorkflowContext>
+                <Value>CurrentWebUrl</Value>
+                <Type>String</Type>
+              </WorkflowContext>
+            </SelectedValue>
+          </FormatValues>
+        </PrimitiveValue>
+      </Value>
+      <Description />
+      <Required>true</Required>
+      <DataType>String</DataType>
+      <DesignerType>Text</DesignerType>
+      <Direction>Input</Direction>
+    </Parameters>
+  </Property>
+  <Property>
+    <ID>p1</ID>
+    <DesignerType>Text</DesignerType>
+    <DisplayName>List name</DisplayName>
+    <Parameters>
+      <Name>InputDestinationListTitle</Name>
+      <Value>
+        <PrimitiveValue>
+          <Type>String</Type>
+          <Value>
+            <string>{0}</string>
+          </Value>
+          <FormatValues>
+            <SelectedValue>
+              <Coercion>AsDNString</Coercion>
+              <WorkflowContext>
+                <Value>ListName</Value>
+                <Type>String</Type>
+              </WorkflowContext>
+            </SelectedValue>
+          </FormatValues>
+        </PrimitiveValue>
+      </Value>
+      <Description />
+      <Required>true</Required>
+      <DataType>String</DataType>
+      <DesignerType>Text</DesignerType>
+      <Direction>Input</Direction>
+    </Parameters>
+  </Property>
+  <Property>
+    <ID>p2</ID>
+    <DesignerType>DisplayExpression</DesignerType>
+    <DisplayName>Items to update</DisplayName>
+    <Parameters>
+      <Name>InputSelector</Name>
+      <Value>
+        <PrimitiveValue>
+          <Type>String</Type>
+          <Value>
+            <string>0&lt;View Scope="FilesOnly"&gt;&lt;Query&gt;&lt;Where&gt;&lt;Eq&gt;&lt;FieldRef Name="ID"/&gt;&lt;Value Type="Text"&gt;{0}&lt;/Value&gt;&lt;/Eq&gt;&lt;/Where&gt;&lt;/Query&gt;&lt;/View&gt;</string>
+          </Value>
+          <FormatValues>
+            <SelectedValue>
+              <PrimitiveValue>
+                <Type>String</Type>
+                <Value>
+                  <string>{0}</string>
+                </Value>
+                <FormatValues>
+                  <SelectedValue>
+                    <ListLookup>
+                      <SelectList>[Current Item]</SelectList>
+                      <SelectField>ID</SelectField>
+                      <SelectFieldType>Int32</SelectFieldType>
+                      <WhereField />
+                      <WhereFieldType />
+                      <WhereValue />
+                    </ListLookup>
+                    <Coercion>AsDNString</Coercion>
+                  </SelectedValue>
+                </FormatValues>
+              </PrimitiveValue>
+            </SelectedValue>
+          </FormatValues>
+        </PrimitiveValue>
+      </Value>
+      <Description />
+      <Required>true</Required>
+      <DataType>String</DataType>
+      <DesignerType>DisplayExpression</DesignerType>
+      <Direction>Input</Direction>
+      <Properties>
+        <DisplayExpression>
+          &lt;div id="UxCamlContainer"&gt;
+          &lt;div&gt;
+          &lt;input type="radio" id="UxBuilder" name="InputMode" checked="checked" /&gt;&lt;label for="UxBuilder"&gt;Query builder&lt;/label&gt;
+          &lt;input type="radio" id="UxEditor" name="InputMode" /&gt;&lt;label for="UxEditor"&gt;CAML editor&lt;/label&gt;
+          &lt;/div&gt;
+          &lt;hr style="border:0; border-bottom:1px dotted #d8d8d8;height:0;margin-top:1em;" /&gt;
+          &lt;div id="UxBuilderContainer"&gt;
+          &lt;div style="margin-top:1em;margin-bottom:0.3em;"&gt;
+          &lt;div&gt;&lt;input type="checkbox" id="UxIncludeSubfolders" /&gt;&lt;label for="UxIncludeSubfolders" style="margin-right:0.3em;"&gt;Search folders&lt;/label&gt;&lt;/div&gt;
+          &lt;div&gt;&lt;input type="checkbox" id="UxDeleteFolders" /&gt;&lt;label for="UxDeleteFolders" style="margin-right:0.3em;"&gt;Update folders&lt;/label&gt;&lt;/div&gt;
+          &lt;/div&gt;
+          &lt;hr style="border:0; border-bottom:1px dotted #d8d8d8;height:0;margin-top:1em;" /&gt;
+          &lt;div style="margin-top:1em;margin-bottom:0.3em;font-weight:bold;"&gt;Filters:&lt;/div&gt;
+          &lt;div&gt;&lt;input type="radio" id="UxNoFilter" name="InputFilterMode" checked="checked" /&gt;&lt;label for="UxNoFilter"&gt;Update all list items&lt;/label&gt;&lt;/div&gt;
+          &lt;div&gt;&lt;input type="radio" id="UxUseFilter" name="InputFilterMode" /&gt;&lt;label for="UxUseFilter"&gt;Update items only when the following is true:&lt;/label&gt;&lt;/div&gt;
+          &lt;div id="UxFilterBuilder" style="display:none;"&gt;
+          &lt;div id="UxFilterInputs"&gt;&lt;/div&gt;
+          &lt;div style="margin-top:1em;"&gt;&lt;a href="#" id="UxAddFilter" style="margin-left:180px;"&gt;&lt;img src="../images/Plus.png" border="0" /&gt; Add filter rule&lt;/a&gt;&lt;/div&gt;
+          &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div id="UxEditorContainer" style="display:none;"&gt;&lt;textarea style="width:450px;height:200px;" class="ms-inputuserfield"&gt;&lt;/textarea&gt;&lt;/div&gt;
+          &lt;/div&gt;
+          &lt;script type="text/javascript"&gt;
+          (function () {
+          var inputSelector = function () {
+
+          var initialized = false,
+          $builder = NWL$('#UxBuilder'),
+          $editor = NWL$('#UxEditor'),
+          $deleteFolders = NWL$('#UxDeleteFolders'),
+          $includeSubfolders = NWL$('#UxIncludeSubfolders'),
+          $camlTextArea = NWL$('#UxEditorContainer textarea'),
+          caml = null,
+          filterIdx = -1,
+          firstFilterHasField = false,
+          changesMadeInEditor = false,
+          webUtility = (function (undefined) {
+          var $codec = NWL$('&lt;div /&gt;');
+
+          return {
+          htmlDecode: function (htmlString) {
+          if (htmlString === undefined || htmlString === null || htmlString === '') {
+          return htmlString;
+          }
+
+          return $codec.html(htmlString).text();
+          },
+          htmlEncode: function (textString) {
+          if (textString === undefined || textString === null || textString === '') {
+          return textString;
+          }
+
+          return $codec.text(textString).html();
+          }
+          };
+          }());
+
+          function createRte(id) {
+          return cloneRTE(txtHiddenTextInputId, id);
+          }
+
+          function getRteValue(id) {
+          return webUtility.htmlDecode(getRTEValue(id));
+          }
+
+          function setRteValue(id, value) {
+          setRTEValue(id, webUtility.htmlEncode(value));
+          }
+
+          function validateXml(value, errorMessage) {
+          if (errorMessage === undefined || errorMessage === null) {
+          errorMessage = 'Invalid XML entered.';
+          }
+
+          if (window.DOMParser) {
+          var parser = new DOMParser();
+          try {
+          parser.parseFromString(value, 'text/xml');
+          }
+          catch (e) {
+          alert(errorMessage);
+          return false;
+          }
+          }
+          else {
+          var tempXml = new ActiveXObject('Microsoft.XMLDOM');
+          tempXml.async = false;
+          if (!tempXml.loadXML(value)) {
+          alert(errorMessage);
+          tempXml = null;
+          return false;
+          }
+
+          tempXml = null;
+          }
+
+          return true;
+          }
+
+          function createXmlDocument(xmlString) {
+          var xmlDoc = null;
+          if (window.DOMParser) {
+          var parser = new DOMParser();
+          try {
+          xmlDoc = parser.parseFromString(xmlString, 'text/xml');
+          }
+          catch (e) {
+          return null;
+          }
+          }
+          else if (window.ActiveXObject) {
+          xmlDoc = new ActiveXObject('Microsoft.XMLDOM');
+          xmlDoc.async = false;
+          xmlDoc.loadXML(xmlString);
+          if (xmlDoc.parseError.errorCode != 0) {
+          xmlDoc = null;
+          }
+          }
+
+          return xmlDoc;
+          }
+
+          function getXmlString(xmlDoc) {
+          if (window.XMLSerializer) {
+          var serializer = new XMLSerializer();
+          return serializer.serializeToString(xmlDoc);
+          }
+          else {
+          return xmlDoc.xml || '';
+          }
+          }
+
+          function stringLeft(txt, numOfChar) {
+          return txt.substring(0, numOfChar);
+          }
+
+          function stringRight(txt, numOfChar) {
+          return txt.substring(txt.length - numOfChar, txt.length);
+          }
+
+          function getNewFilterHtml(filterNum) {
+          var whenColumnLabel = 'Update the items when column',
+          imgTag = '',
+          logicalOperatorTags = '';
+
+          if (filterNum !== 0) {
+          whenColumnLabel = 'When column:';
+          imgTag = '&lt;img class="removeReferenceButton nwl-delete" style="border:0;cursor:pointer;" title="Delete" alt="Delete" src="../images/Delete.gif" /&gt;';
+          logicalOperatorTags = [
+          '&lt;div&gt;&lt;div style="text-align:center;width:335px;"&gt;',
+          '&lt;input id="UxFilterAnd' + filterNum + '" type="radio" name="InputFilterLogic' + filterNum + '" checked="checked" /&gt;&lt;label for="UxFilterAnd' + filterNum + '"&gt;And&lt;/label&gt;',
+          '&lt;input id="UxFilterOr' + filterNum + '" type="radio" name="InputFilterLogic' + filterNum + '" /&gt;&lt;label for="UxFilterOr' + filterNum + '"&gt;Or&lt;/label&gt;',
+          '&lt;/div&gt;&lt;/div&gt;'].join('');
+          }
+
+          return [
+          '&lt;div id="UxFilter' + filterNum + '" class="nwl-filter" style="margin-top:1em;" data-nwl-filteridx="' + filterNum + '"&gt;',
+          logicalOperatorTags,
+          '&lt;div&gt;' + whenColumnLabel + imgTag + '&lt;/div&gt;',
+          '&lt;div style="margin-top:0.3em" class="nwl-filterFieldContainer"&gt;&lt;/div&gt;',
+          '&lt;div style="margin-top:0.3em"&gt;&lt;select class="ms-inputuserfield nwl-filterOperator" style="width:339px;"&gt;',
+          '&lt;option value="Eq"&gt;is equal to&lt;/option&gt;',
+          '&lt;option value="Neq"&gt;is not equal to&lt;/option&gt;',
+          '&lt;option value="Gt"&gt;is greater than&lt;/option&gt;',
+          '&lt;option value="Lt"&gt;is less than&lt;/option&gt;',
+          '&lt;option value="Geq"&gt;is greater than or equal to&lt;/option&gt;',
+          '&lt;option value="Leq"&gt;is less than or equal to&lt;/option&gt;',
+          '&lt;option value="IsNull"&gt;is null&lt;/option&gt;',
+          '&lt;option value="IsNotNull"&gt;is not null&lt;/option&gt;',
+          '&lt;option value="BeginsWith"&gt;begins with&lt;/option&gt;',
+          '&lt;option value="Contains"&gt;contains&lt;/option&gt;',
+          '&lt;/select&gt;&lt;/div&gt;',
+          '&lt;div style="margin-top:0.3em" class="nwl-filterValueContainer"&gt;&lt;/div&gt;',
+          '&lt;/div&gt;'].join('');
+          }
+
+          function getComparisonNode(context, operator, field, value) {
+          switch(operator) {
+          case 'IsNull':
+          return NWL$('&lt;IsNull /&gt;', context).append(NWL$('&lt;FieldRef /&gt;', context).attr('Name', field));
+          case 'IsNotNull':
+          return NWL$('&lt;IsNotNull /&gt;', context).append(NWL$('&lt;FieldRef /&gt;', context).attr('Name', field));
+          default:
+          return NWL$('&lt;' + operator + ' /&gt;', context).
+          append(NWL$('&lt;FieldRef /&gt;', context).attr('Name', field)).
+          append(NWL$('&lt;Value /&gt;', context).attr('Type', 'Text').text(value));
+          }
+          }
+
+          function buildCamlText() {
+          caml = createXmlDocument('&lt;View /&gt;');
+          var $caml = NWL$('*:not(* *)', caml);
+          $caml.append(NWL$('&lt;Query /&gt;', caml));
+          if ($includeSubfolders.get(0).checked) {
+          if ($deleteFolders.get(0).checked) {
+          $caml.attr('Scope', 'RecursiveAll');
+          } else {
+          $caml.attr('Scope', 'Recursive');
+          }
+          } else {
+          if ($deleteFolders.get(0).checked) {
+          $caml.removeAttr('Scope');
+          } else {
+          $caml.attr('Scope', 'FilesOnly');
+          }
+          }
+
+          if (NWL$('#UxNoFilter').get(0).checked) {
+          return getXmlString(caml);
+          }
+
+          var $filters = NWL$('#UxFilterInputs div.nwl-filter');
+          var $where = NWL$('&lt;Where /&gt;', caml);
+          $filters.each(function (idx, el) {
+          var filterIdx = NWL$(el).attr("data-nwl-filteridx");
+          var field = getRteValue('UxFilterField' + filterIdx);
+          if (field === '') {
+          return;
+          }
+
+          var operator = NWL$('select.nwl-filterOperator', el).val();
+          var value = getRteValue('UxFilterValue' + filterIdx);
+          var $operator = getComparisonNode(caml, operator, field, value);
+          if (filterIdx == 0) {
+          $where.append($operator);
+          }
+          else {
+          var logicTag = '&lt;And /&gt;';
+          if (NWL$('#UxFilterOr' + filterIdx).get(0).checked) {
+          logicTag = '&lt;Or /&gt;';
+          }
+
+          $where.append($operator).children().wrapAll(logicTag);
+          }
+          });
+
+          if ($where.children().length &gt; 0) {
+          $caml.children('Query').append($where);
+          }
+
+          return getXmlString(caml);
+          }
+
+          function setFilter(filterNum, field, value, comparisonOperator, logicalOperator) {
+          var $filter = NWL$('#UxFilter' + filterNum);
+          setRteValue('UxFilterField' + filterNum, field);
+          setRteValue('UxFilterValue' + filterNum, value);
+
+          if (filterNum === 0 &amp;&amp; field != '') {
+          firstFilterHasField = true;
+          }
+
+          if (typeof comparisonOperator === 'undefined' || comparisonOperator === null || comparisonOperator === '') {
+          comparisonOperator = NWL$('option.first', this).val();
+          }
+
+          $filter.find('select.nwl-filterOperator').val(comparisonOperator).change();
+
+          if (typeof logicalOperator === 'undefined' || logicalOperator === null || logicalOperator === '') {
+          return;
+          }
+
+          if (logicalOperator == 'Or') {
+          $filter.find('input#UxFilterOr' + filterNum).attr('checked', 'checked');
+          return;
+          }
+          }
+
+          function resetBuilder() {
+          filterIdx = -1;
+          firstFilterHasField = false;
+          $includeSubfolders.removeAttr('checked');
+          $deleteFolders.removeAttr('checked');
+          NWL$('#UxFilterInputs div.nwl-filter').remove();
+          addFilter();
+          }
+
+          function operatorSelectOnChange(e) {
+          var evt = e || event;
+          var tg = evt.target || evt.srcElement;
+          var $operator = NWL$(tg);
+          switch ($operator.val()) {
+          case 'IsNull':
+          $operator.parent().parent().find('div.nwl-filterValueContainer').hide();
+          break;
+          case 'IsNotNull':
+          $operator.parent().parent().find('div.nwl-filterValueContainer').hide();
+          break;
+          default:
+          $operator.parent().parent().find('div.nwl-filterValueContainer').show();
+          break;
+          }
+          }
+
+          function addFilter() {
+          var currentIdx = ++filterIdx;
+          var fieldRte = createRte('UxFilterField' + currentIdx);
+          NWL$(fieldRte).find('.ms-inputuserfield').css('width', '335px');
+          var valueRte = createRte('UxFilterValue' + currentIdx);
+          NWL$(valueRte).find('.ms-inputuserfield').css('width', '335px');
+          NWL$('#UxFilterInputs').
+          append(getNewFilterHtml(currentIdx)).
+          find('#UxFilter' + currentIdx + ' div.nwl-filterFieldContainer').
+          append(fieldRte).
+          end().
+          find('#UxFilter' + currentIdx + ' div.nwl-filterValueContainer').
+          append(valueRte).
+          end().
+          find('#UxFilter' + currentIdx + ' select.nwl-filterOperator').each(function() {
+          this.onchange = operatorSelectOnChange;
+          });
+
+          return false;
+          }
+
+          function removeFilter() {
+          NWL$(this).parent().parent().remove();
+          }
+
+          function isLogical(operator) {
+          return operator == 'And' || operator == 'Or';
+          }
+
+          function populateFilterBuilder(field, value, comparisonOperator, logicalOperator) {
+          if (filterIdx == 0 &amp;&amp; !firstFilterHasField) {
+          setFilter(0, field, value, comparisonOperator);
+          return;
+          }
+
+          addFilter();
+          setFilter(filterIdx, field, value, comparisonOperator, logicalOperator);
+          }
+
+          function processOperatorNode(idx, el) {
+          var operator = el.nodeName;
+          var $operator = NWL$(el);
+          if (isLogical(operator)) {
+          $operator.children().each(processOperatorNode);
+          return;
+          }
+
+          var logicalOperator = $operator.parent().get(0).nodeName;
+          var field = $operator.children('FieldRef[Name]').attr('Name');
+          if (typeof field === 'undefined') {
+          return;
+          }
+          var value = $operator.children('Value').text();
+          if (typeof value === 'undefined') {
+          value = '';
+          }
+          if (logicalOperator == 'Where') {
+          populateFilterBuilder(field, value, operator);
+          return;
+          }
+
+          populateFilterBuilder(field, value, operator, logicalOperator);
+          }
+
+          function populateBuilder(camlText) {
+          resetBuilder();
+          caml = createXmlDocument(camlText);
+          var $caml = NWL$('View:not(View View)', caml);
+          if ($caml.get(0)) {
+          var scope = $caml.attr('Scope');
+          switch (scope) {
+          case 'FilesOnly':
+          $includeSubfolders.removeAttr('checked');
+          $deleteFolders.removeAttr('checked');
+          break;
+          case 'Recursive':
+          $includeSubfolders.attr('checked', 'checked');
+          $deleteFolders.removeAttr('checked');
+          break;
+          case 'RecursiveAll':
+          $includeSubfolders.attr('checked', 'checked');
+          $deleteFolders.attr('checked', 'checked');
+          break;
+          default:
+          $includeSubfolders.removeAttr('checked');
+          $deleteFolders.removeAttr('checked');
+          break;
+          }
+          }
+
+          var $where = NWL$('View &gt; Query &gt; Where', caml);
+          if ($where.length === 0) {
+          NWL$('#UxNoFilter').attr('checked', 'checked');
+          hideFilterBuilder();
+          return;
+          }
+
+          NWL$('#UxUseFilter').attr('checked', 'checked');
+          showFilterBuilder();
+          $where.children().each(processOperatorNode);
+          }
+
+          function showBuilder() {
+          NWL$("#UxBuilderContainer").show();
+          NWL$("#UxEditorContainer").hide();
+          }
+
+          function showEditor() {
+          NWL$("#UxBuilderContainer").hide();
+          NWL$("#UxEditorContainer").show();
+          }
+
+          function hideFilterBuilder() {
+          NWL$('#UxFilterBuilder').hide();
+          }
+
+          function showFilterBuilder() {
+          NWL$('#UxFilterBuilder').show();
+          }
+
+          function isXmlRootEquals(nodeName, xmlToCheck) {
+          var xdoc = createXmlDocument(xmlToCheck);
+          if (xdoc) {
+          return xdoc.documentElement.nodeName == nodeName;
+          }
+
+          return false;
+          }
+
+          function convertSelectorToCaml(selectorValue) {
+          var selectorXml = createXmlDocument(selectorValue);
+          if (selectorXml) {
+          var $selector = NWL$('Selector', selectorXml);
+          if ($selector.length === 0) {
+          return selectorValue;
+          }
+
+          var field = $selector.attr('Field');
+          var value = $selector.attr('Value');
+          var camlXmlDoc = createXmlDocument("&lt;View /&gt;");
+          var $caml = NWL$('*:not(* *)', camlXmlDoc);
+          $caml.append(NWL$('&lt;Query /&gt;', camlXmlDoc));
+          var $where = NWL$('&lt;Where /&gt;', camlXmlDoc);
+          var $operator = getComparisonNode(camlXmlDoc, 'Eq', field, value);
+          $where.append($operator);
+          $caml.children('Query').append($where);
+          return FormatXmlString(getXmlString(camlXmlDoc));
+          }
+
+          return;
+          }
+
+          function loadValue(valueToLoad) {
+          if (typeof valueToLoad === 'undefined' || valueToLoad === null || valueToLoad === '') {
+          return;
+          }
+
+          var inputMode = stringLeft(valueToLoad, 1);
+          if (inputMode === '&lt;') {
+          if (isXmlRootEquals('Selector', valueToLoad)) {
+          valueToLoad = '0' + convertSelectorToCaml(valueToLoad);
+          inputMode = '0';
+          }
+          else {
+          valueToLoad = '1' + valueToLoad;
+          inputMode = '1';
+          changesMadeInEditor = true;
+          }
+          }
+
+          var camlText = stringRight(valueToLoad, valueToLoad.length - 1);
+          if (isXmlRootEquals('Query', camlText)) {
+          camlText = '&lt;View&gt;' + camlText + '&lt;/View&gt;';
+          }
+
+          if (inputMode === '0') {
+          populateBuilder(camlText);
+          showBuilder();
+          return;
+          }
+
+          $camlTextArea.val(camlText);
+          $editor.attr('checked', 'checked');
+          showEditor();
+          }
+
+          function getValueToSave() {
+          if ($builder.get(0).checked) {
+          return '0' + buildCamlText();
+          }
+
+          var camlValue = $camlTextArea.val();
+          validateXml(camlValue, 'The CAML is not a valid XML. Please ensure the CAML is valid before publishing and running the workflow.');
+          return '1' + camlValue;
+          }
+
+          function uxBuilderOnChange(e) {
+          if (!e.target.checked) {
+          return false;
+          }
+
+          if (changesMadeInEditor &amp;&amp; !confirm('Changes made in the CAML Editor may be lost if you switch to the Builder mode. Do you wish to proceed?')) {
+          $editor.attr('checked', 'checked');
+          return false;
+          }
+
+          var camlText = $camlTextArea.val();
+          if (!validateXml(camlText)) {
+          $editor.attr('checked', 'checked');
+          return false;
+          }
+
+          populateBuilder(camlText);
+          showBuilder();
+          }
+
+          function uxEditorOnChange(e) {
+          if (!e.target.checked) {
+          return false;
+          }
+
+          $camlTextArea.val(FormatXmlString(buildCamlText()));
+          showEditor();
+          changesMadeInEditor = false;
+          }
+
+          function uxNoFilterOnChange(e) {
+          if (!e.target.checked) {
+          return false;
+          }
+
+          hideFilterBuilder();
+          }
+
+          function uxUseFilterOnChange(e) {
+          if (!e.target.checked) {
+          return false;
+          }
+
+          showFilterBuilder();
+          }
+
+          function camlTextAreaOnChange(e) {
+          changesMadeInEditor = true;
+          }
+
+          function selectSubFolders(){
+          $deleteFolders = NWL$('#UxDeleteFolders');
+          $includeSubfolders = NWL$('#UxIncludeSubfolders');
+
+          if ($deleteFolders.get(0).checked){
+          $includeSubfolders.attr('checked','checked');
+          }
+          }
+
+          function deselectDeleteFolders(){
+          $deleteFolders = NWL$('#UxDeleteFolders');
+          $includeSubfolders = NWL$('#UxIncludeSubfolders');
+
+          if (!$includeSubfolders.get(0).checked){
+          $deleteFolders.removeAttr('checked');
+          }
+          }
+
+          function init() {
+          $builder.change(uxBuilderOnChange);
+          $editor.change(uxEditorOnChange);
+          NWL$('#UxNoFilter').change(uxNoFilterOnChange);
+          NWL$('#UxUseFilter').change(uxUseFilterOnChange);
+          NWL$('#UxAddFilter').click(addFilter);
+          NWL$('#UxDeleteFolders').click(selectSubFolders);
+          NWL$('#UxIncludeSubfolders').click(deselectDeleteFolders);
+
+          NWL$('#UxFilterInputs img.nwl-delete').live('click', removeFilter);
+          addFilter();
+          $camlTextArea.change(camlTextAreaOnChange);
+          initialized = true;
+          }
+
+          return {
+          load: function (valueToLoad) {
+          if (!initialized) {
+          init();
+          }
+
+          loadValue(valueToLoad);
+          },
+          save: function () {
+          return getValueToSave();
+          }
+          };
+          } ();
+
+          NWL.Designer.DisplayExpression.add('InputSelector', inputSelector.load, inputSelector.save);
+          })();
+          &lt;/script&gt;
+        </DisplayExpression>
+      </Properties>
+    </Parameters>
+  </Property>
+  <Property>
+    <ID>p3</ID>
+    <DesignerType>Text</DesignerType>
+    <DisplayName>SharePoint Online URL</DisplayName>
+    <Parameters>
+      <Name>InputSharePointOnlineSiteUrl</Name>
+      <Value>
+        <PrimitiveValue>
+          <Type>String</Type>
+          <Value>
+            <string>{0}</string>
+          </Value>
+          <FormatValues>
+            <SelectedValue>
+              <Coercion>AsDNString</Coercion>
+              <WorkflowContext>
+                <Value>CurrentWebUrl</Value>
+                <Type>String</Type>
+              </WorkflowContext>
+            </SelectedValue>
+          </FormatValues>
+        </PrimitiveValue>
+      </Value>
+      <Description>e.g. http://targetdomain.sharepoint.com</Description>
+      <Required>true</Required>
+      <DataType>String</DataType>
+      <DesignerType>Text</DesignerType>
+      <Direction>Input</Direction>
+    </Parameters>
+  </Property>
+  <Property>
+    <ID>p4</ID>
+    <DesignerType>Text</DesignerType>
+    <DisplayName>Username</DisplayName>
+    <Parameters>
+      <Name>InputUserName</Name>
+      <Value>
+        <PrimitiveValue>
+          <Type>String</Type>
+          <Value>
+            <string>xluo@victorvv.onmicrosoft.com</string>
+          </Value>
+        </PrimitiveValue>
+      </Value>
+      <Description>The user to set the approval status.</Description>
+      <Required>true</Required>
+      <DataType>String</DataType>
+      <DesignerType>Text</DesignerType>
+      <Direction>Input</Direction>
+    </Parameters>
+  </Property>
+  <Property>
+    <ID>p5</ID>
+    <DesignerType>Secure</DesignerType>
+    <DisplayName>Password</DisplayName>
+    <Parameters>
+      <Name>InputPassword</Name>
+      <Value>
+        <PrimitiveValue>
+          <Type>String</Type>
+          <Value>
+            <string>____passwordplaceholder____</string>
+          </Value>
+        </PrimitiveValue>
+      </Value>
+      <Description />
+      <Required>true</Required>
+      <DataType>String</DataType>
+      <DesignerType>Secure</DesignerType>
+      <Direction>Input</Direction>
+      <SecureValue>_SECURE_QGyqkiOUDAwT0p4qJW2VvQ==</SecureValue>
+    </Parameters>
+  </Property>
+  <Property>
+    <ID>p6</ID>
+    <DesignerType>ChoiceList</DesignerType>
+    <DisplayName>Approval status</DisplayName>
+    <Parameters>
+      <Name>InputStatus</Name>
+      <Value>
+        <PrimitiveValue>
+          <Type>String</Type>
+          <Value>
+            <string>Denied</string>
+          </Value>
+        </PrimitiveValue>
+      </Value>
+      <Description />
+      <Required>true</Required>
+      <DataType>String</DataType>
+      <DesignerType>ChoiceList</DesignerType>
+      <Direction>Input</Direction>
+      <Options>
+        <Text>Approved</Text>
+        <Value>Approved</Value>
+      </Options>
+      <Options>
+        <Text>Rejected</Text>
+        <Value>Denied</Value>
+      </Options>
+      <Options>
+        <Text>Pending</Text>
+        <Value>Pending</Value>
+      </Options>
+      <Options>
+        <Text>Draft</Text>
+        <Value>Draft</Value>
+      </Options>
+      <Options>
+        <Text>Scheduled</Text>
+        <Value>Scheduled</Value>
+      </Options>
+    </Parameters>
+  </Property>
+  <Property>
+    <ID>p7</ID>
+    <DesignerType>Text</DesignerType>
+    <DisplayName>Comments</DisplayName>
+    <Parameters>
+      <Name>InputComment</Name>
+      <Value>
+        <PrimitiveValue>
+          <Type>String</Type>
+          <Value>
+            <string>test comments</string>
+          </Value>
+        </PrimitiveValue>
+      </Value>
+      <Description />
+      <Required>false</Required>
+      <DataType>String</DataType>
+      <DesignerType>Text</DesignerType>
+      <Direction>Input</Direction>
+    </Parameters>
+  </Property>
+  <Property>
+    <ID>p8</ID>
+    <DesignerType>Variable</DesignerType>
+    <DisplayName>All matched items updated</DisplayName>
+    <Parameters>
+      <Name>OutputAllMatchedItemsUpdated</Name>
+      <Value />
+      <Description>Returns "Yes" if all matched items were successfully updated.</Description>
+      <Required>false</Required>
+      <DataType>Boolean</DataType>
+      <DesignerType>Variable</DesignerType>
+      <Direction>Output</Direction>
+    </Parameters>
+  </Property>
+  <Property>
+    <ID>p9</ID>
+    <DesignerType>Variable</DesignerType>
+    <DisplayName>List item ID</DisplayName>
+    <Parameters>
+      <Name>OutputListItemId</Name>
+      <Value />
+      <Description />
+      <Required>false</Required>
+      <DataType>DynamicValue</DataType>
+      <DefaultType>Array</DefaultType>
+      <DesignerType>Variable</DesignerType>
+      <Direction>Output</Direction>
+    </Parameters>
+  </Property>
+  <Property>
+    <ID>p10</ID>
+    <DesignerType>Variable</DesignerType>
+    <DisplayName>List item URL</DisplayName>
+    <Parameters>
+      <Name>OutputListItemUrl</Name>
+      <Value />
+      <Description />
+      <Required>false</Required>
+      <DataType>DynamicValue</DataType>
+      <DefaultType>Array</DefaultType>
+      <DesignerType>Variable</DesignerType>
+      <Direction>Output</Direction>
+    </Parameters>
+  </Property>
+</ArrayOfProperty>

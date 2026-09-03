@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="MediaStorage_CAStor_Cluster_Name_Demo" xml:space="preserve">
+    <value>Clustername</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_CAStor_Proxy_Locator" xml:space="preserve">
+    <value>Proxy-Locator</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_CAStor_Remote_CSN_Port" xml:space="preserve">
+    <value>CSN-Remoteport</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_CAStor_Advanced" xml:space="preserve">
+    <value>Erweitert</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_CAStor_CSN_Private_Network_IP" xml:space="preserve">
+    <value>IP des privaten Netzwerks für CSN</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_CAStor_Best" xml:space="preserve">
+    <value>Beste</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_CAStor_Primary_DX_CR_Publisher_Port" xml:space="preserve">
+    <value>Port des primären DX CR Publishers</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_CAStor_Fast" xml:space="preserve">
+    <value>Schnell</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_CAStor_DataWriteFailed" xml:space="preserve">
+    <value>Schreiben der Daten fehlgeschlagen, Pfad: {0}.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_CAStor_DataNotFound" xml:space="preserve">
+    <value>Öffnen des Objekts fehlgeschlagen, ID: {0}.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_CAStor_Communication_Type" xml:space="preserve">
+    <value>Kommunikationstyp</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_CAStor_Access_Mode" xml:space="preserve">
+    <value>Zugriffsmodus</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_CAStor_Authentication_failed" xml:space="preserve">
+    <value>Die Authentifizierung ist fehlgeschlagen.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_CAStor_Cluster_Name" xml:space="preserve">
+    <value>Clustername</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_CAStor_DataReadFailed" xml:space="preserve">
+    <value>Lesen des Objekts fehlgeschlagen, ID: {0}.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_CAStor_DX_Optimizer_Compression" xml:space="preserve">
+    <value>Komprimierung des DX Optimizers</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_CAStor_SCSP_Proxy_Host" xml:space="preserve">
+    <value>SCSP-Proxyhost</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_CAStor_DELL_DX_Storage" xml:space="preserve">
+    <value>Dell DX-Speicher</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_CAStor_Extended_Parameters" xml:space="preserve">
+    <value>Erweiterte Parameter</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_CAStor_Password" xml:space="preserve">
+    <value>Kennwort</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_CAStor_Caringo_Optimizer_Compression" xml:space="preserve">
+    <value>Komprimierung des Caringo Optimizers</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_CAStor_Require_Authentication" xml:space="preserve">
+    <value>Authentifizierung erfordern</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_CAStor_Primary_DX_CR_Publisher" xml:space="preserve">
+    <value>Primärer DX CR-Verleger</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_CAStor_Remote_Cluster_Name" xml:space="preserve">
+    <value>Remote-Clustername</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_CAStor_Remote_CSN" xml:space="preserve">
+    <value>Remote-CSN</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_CAStor_Compress_After_Days" xml:space="preserve">
+    <value>Komprimieren nach (Tagen)</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_CAStor_Cannot_connect_to_the_remote_server" xml:space="preserve">
+    <value>Keine Verbindung zum Remoteserver möglich.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_CAStor_SCSP_Proxy_Port" xml:space="preserve">
+    <value>SCSP-Proxyport</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_CAStor_Primary_DX_Storage_Node" xml:space="preserve">
+    <value>Primärer DX-Speicherknoten</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_CAStor_Static_Locator" xml:space="preserve">
+    <value>Statischer Locator</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_CAStor_Caringo_Storage" xml:space="preserve">
+    <value>Caringo-Speicher</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_CAStor_Authentication_Realm" xml:space="preserve">
+    <value>Authentifizierungsbereich</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_CAStor_Remote_CSN_Host" xml:space="preserve">
+    <value>Remote-CSN-Host</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_CAStor_None" xml:space="preserve">
+    <value>Keine</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_CAStor_Local_Proxy" xml:space="preserve">
+    <value>Lokaler Proxy</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_CAStor_Test_failed" xml:space="preserve">
+    <value>Test fehlgeschlagen. Bitte überprüfen Sie die eingegebenen Informationen.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_CAStor_Username" xml:space="preserve">
+    <value>Benutzername</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_CAStor_With_Remote_D_R_Cluster" xml:space="preserve">
+    <value>Mit Remote-D/R-Cluster</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_CAStor_Primary_Storage_Node_Port" xml:space="preserve">
+    <value>Port für primären Speicherknoten</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_CAStor_Number_of_Object_Replicas" xml:space="preserve">
+    <value>Anzahl der Objektreplikate</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_CAStor_Create_proxy_locator_failed" xml:space="preserve">
+    <value>Erstellen von Proxy-Locator fehlgeschlagen.</value>
+    <comment>Approved</comment>
+  </data>
+</root>

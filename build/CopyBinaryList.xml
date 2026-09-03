@@ -1,0 +1,1061 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--/********************************************************************
+ *
+ *  PROPRIETARY and CONFIDENTIAL
+ *
+ *  This file is licensed from, and is a trade secret of:
+ *
+ *                   AvePoint, Inc.
+ *                   Harborside Financial Center
+ *                   9th Fl.   Plaza Ten
+ *                   Jersey City, NJ 07311
+ *                   United States of America
+ *                   Telephone: +1-800-661-6588
+ *                   WWW: www.avepoint.com
+ *
+ *  Refer to your License Agreement for restrictions on use,
+ *  duplication, or disclosure.
+ *
+ *  RESTRICTED RIGHTS LEGEND
+ *
+ *  Use, duplication, or disclosure by the Government is
+ *  subject to restrictions as set forth in subdivision
+ *  (c)(1)(ii) of the Rights in Technical Data and Computer
+ *  Software clause at DFARS 252.227-7013 (Oct. 1988) and
+ *  FAR 52.227-19 (C) (June 1987).
+ *
+ *  Copyright © 2020 AvePoint® Inc. All Rights Reserved. 
+ *
+ *  Unpublished - All rights reserved under the copyright laws of the United States.
+ */-->
+<!--
+ ********************************************************************
+ * 请大家在申请Binary List的同时修改 CopyBinaryList.xml。确保要使用的文件能够部署出来。
+ *
+ *  Binary File List 申请路径：
+ *  http://cchome.avepoint.net/Application%20Acceptance/DocAve6%20Binary%20File%20Application/Forms/Waiting%20for%20Approve.aspx
+ *
+ *  3rd party File List 申请路径：
+ *  http://cchome.avepoint.net/Application%20Acceptance/3rd%20Party%20File%20Application/Forms/Waiting%20for%20Approving.aspx
+ *
+ *  Binary File List 查询路径
+ *  http://cchome.avepoint.net/sites/product/Package%20Team/DocAve6/Lists/DocAve6%20Binary%20List/Standard%20View.aspx
+ *
+ *  Pictrue File List 查询路径
+ *  http://cchome.avepoint.net/sites/product/Package%20Team/DocAve6/Lists/Picture%20File%20List/AllItems.aspx
+ *
+ *  3rd party File List 查询路径
+ *  http://cchome.avepoint.net/sites/product/Package%20Team/DocAve6/Lists/Open%20Source%203rd%20Party%20Code/DocAve%20Waiting%20for%20US%20Approval.aspx
+ *
+ *********************************************************************
+-->
+<Project DefaultTargets="MainDeploy" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<PropertyGroup>
+		<!--距此build.xml的相对路径层数-->
+		<WorkingDirectory>..\</WorkingDirectory>
+		<!--编译方式-->
+		<BuildType>Release</BuildType>
+		<BuildTarget>Rebuild</BuildTarget>
+		<Platform>Any CPU</Platform>
+		<!--Wsp10部分涉及到的文件相对路径-->
+		<ProjectPath>..\</ProjectPath>
+		<!--安装包RAWeb存放文件位置-->
+		<RAWebPath>..\..\CloudRecords\CloudRecordsWeb</RAWebPath>
+		<!--安装包RAProviderHostWeb存放文件位置
+    <RAProviderWebPath>..\..\CloudRecords\CloudRecordsProviderWeb</RAProviderWebPath>
+    安装包CloudService存放文件位置-->
+		<CloudServicePath>..\..\CloudRecords\CloudRecordsAgent</CloudServicePath>
+		<!--Bin\Rlease下的文件相对路径-->
+		<ReleasePath>$(WorkingDirectory)bin\Release</ReleasePath>
+		<!--安装包RAScheduleJob存放文件位置-->
+		<RAScheduleJobPath>RevIMWorker.ScheduleJob</RAScheduleJobPath>
+		<RATimerPath>RevIMWorker.Timer</RATimerPath>
+		<RAWebTempPath>RevIMWorker.Web</RAWebTempPath>
+		<RAProviderWebTempPath>RevIMWorker.ProviderWeb</RAProviderWebTempPath>
+		<RALoginWebTempPath>RevIMWorker.LoginWeb</RALoginWebTempPath>
+		<!--RMWeb的相对路径-->
+		<ProjectBasePath>$(WorkingDirectory)\RAWeb</ProjectBasePath>
+		<!--Scripts的相对路径-->
+		<StartupSecurityUpdatePath>..\Startup</StartupSecurityUpdatePath>
+		<AppProjectBasePath>$(WorkingDirectory)\RASPApp</AppProjectBasePath>
+		<LoginProjectBasePath>$(WorkingDirectory)\RecordsLogIn</LoginProjectBasePath>
+		<!--RACloud的相对路径-->
+		<CloudServiceBasePath>$(WorkingDirectory)RACloud</CloudServiceBasePath>
+		<!--RAScheduleJob的相对路径-->
+		<ScheduleJobBasePath>$(WorkingDirectory)\RAScheduleJob</ScheduleJobBasePath>
+		<!--workerRole的相对路径-->
+		<ScheduleJobWorkerRoleBasePath>$(WorkingDirectory)RAScheduleJobWorkerRole</ScheduleJobWorkerRoleBasePath>
+		<ScheduleJobWorkerRoleReleasePath>$(ScheduleJobWorkerRoleBasePath)\bin\Release</ScheduleJobWorkerRoleReleasePath>
+		<TimerWorkerRoleBasePath>$(WorkingDirectory)RATimerWorkerRole</TimerWorkerRoleBasePath>
+		<TimerWorkerRoleReleasePath>$(TimerWorkerRoleBasePath)\bin\Release</TimerWorkerRoleReleasePath>
+
+		<ProjectBaseBinPath>$(WorkingDirectory)\RAWeb\bin</ProjectBaseBinPath>
+		<AppProjectBaseBinPath>$(WorkingDirectory)\RASpApp\bin</AppProjectBaseBinPath>
+		<ProjectThirdPath>$(WorkingDirectory)\ThirdDlls</ProjectThirdPath>
+		<RACommonPath>$(WorkingDirectory)\RACommon</RACommonPath>
+		<DocAveRefPath>$(WorkingDirectory)\DocaveReference</DocAveRefPath>
+		<PackagePath>$(ProjectPath)Package</PackagePath>
+		<BinRoot>$(WorkingDirectory)bin</BinRoot>
+		<DisableILMerge Condition="'$(DisableILMerge)' == ''">false</DisableILMerge>
+		<ContinueOnFailure>false</ContinueOnFailure>
+
+	</PropertyGroup>
+	<Target Name="RevIMMainTarget">
+		<CallTarget Targets="CopyBinFilesToRAWeb" />
+		<CallTarget Targets="CopyScheduleJobFiles" />
+		<CallTarget Targets="CopyJobWorkerFiles" />
+		<CallTarget Targets="CopyTimerWorkerFiles" />
+		<CallTarget Targets="CopyStartupFiles" />
+		<CallTarget Targets="CopyRAWebFiles" />
+		<CallTarget Targets="CopyApp_DataFiles" />
+		<CallTarget Targets="CopyApp_GlobalResourcesFiles" />
+		<CallTarget Targets="CopyauiFiles" />
+		<CallTarget Targets="CopyDistFiles" />
+		<CallTarget Targets="CopyConfigsFiles" />
+		<CallTarget Targets="CopyContentFiles" />
+		<CallTarget Targets="CopyImagesFiles" />
+		<CallTarget Targets="CopyScriptsFiles" />
+		<CallTarget Targets="CopyViewsFiles" />
+		<!-- <CallTarget Targets="CopyThirdLicFiles" /> -->
+		<CallTarget Targets="CopyDAORefFiles" />
+		<CallTarget Targets="CopyBinFiledsToProviderWeb" />
+		<CallTarget Targets="CopyProviderWebFiles" />
+		<CallTarget Targets="CopyAppScriptsFiles" />
+		<CallTarget Targets="CopyAppViewsFiles" />
+		<CallTarget Targets="CopyBinFiledsToLoginWeb" />
+		<CallTarget Targets="CopyLoginWebFiles" />
+		<!-- <CallTarget Targets="CopyLoginWebScriptsFiles" /> -->
+		<CallTarget Targets="CopyLoginWebViewsFiles" />
+	</Target>
+	<Target Name="CopyLoginWebFiles">
+		<Copy SourceFiles="$(LoginProjectBasePath)\Dockerfile" DestinationFolder="$(RALoginWebTempPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(LoginProjectBasePath)\Web.config" DestinationFolder="$(RALoginWebTempPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(LoginProjectBasePath)\APPLog4net.config" DestinationFolder="$(RALoginWebTempPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(LoginProjectBasePath)\Global.asax" DestinationFolder="$(RALoginWebTempPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(LoginProjectBasePath)\logo.png" DestinationFolder="$(RALoginWebTempPath)\" ContinueOnError="true" />
+	</Target>
+	<Target Name="CopyBinFiledsToLoginWeb">
+		<Copy SourceFiles="$(ReleasePath)\AvePoint.ContainerService.dll" DestinationFolder="$(RALoginWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\RecordsLogIn.dll" DestinationFolder="$(RALoginWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\RevIMCommon.dll" DestinationFolder="$(RALoginWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\RevIMGCommon.dll" DestinationFolder="$(RALoginWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\RevIMContract.dll" DestinationFolder="$(RALoginWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\RevIMGContract.dll" DestinationFolder="$(RALoginWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\RevIMI18N.dll" DestinationFolder="$(RALoginWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(DocAveRefPath)\Aos.Sdk.dll" DestinationFolder="$(RALoginWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\CommonContract.dll" DestinationFolder="$(RALoginWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\CommonMicroKernel.dll" DestinationFolder="$(RALoginWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\CommonUtility.dll" DestinationFolder="$(RALoginWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\log4net.dll" DestinationFolder="$(RALoginWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.WindowsAzure.Configuration.dll" DestinationFolder="$(RALoginWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\AOSReportingSDK.dll" DestinationFolder="$(RALoginWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Bcl.AsyncInterfaces.dll" DestinationFolder="$(RALoginWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\System.Runtime.CompilerServices.Unsafe.dll" DestinationFolder="$(RALoginWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Azure.ServiceBus.dll" DestinationFolder="$(RALoginWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.IdentityModel.Tokens.dll" DestinationFolder="$(RALoginWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.IdentityModel.Logging.dll" DestinationFolder="$(RALoginWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\zxing.presentation.dll" DestinationFolder="$(RALoginWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\zxing.dll" DestinationFolder="$(RALoginWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\System.Memory.dll" DestinationFolder="$(RALoginWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Azure.Amqp.dll" DestinationFolder="$(RALoginWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.IdentityModel.JsonWebTokens.dll" DestinationFolder="$(RALoginWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\System.IdentityModel.Tokens.Jwt.dll" DestinationFolder="$(RALoginWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\System.Threading.Tasks.Extensions.dll" DestinationFolder="$(RALoginWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\System.Diagnostics.DiagnosticSource.dll" DestinationFolder="$(RALoginWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.IdentityModel.Clients.ActiveDirectory.dll" DestinationFolder="$(RALoginWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.IdentityModel.Clients.ActiveDirectory.Platform.dll" DestinationFolder="$(RALoginWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Azure.Services.AppAuthentication.dll" DestinationFolder="$(RALoginWebTempPath)\bin\" ContinueOnError="false"/>
+
+		<Copy SourceFiles="$(ReleasePath)\System.ValueTuple.dll" DestinationFolder="$(RALoginWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\System.Numerics.Vectors.dll" DestinationFolder="$(RALoginWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\System.Buffers.dll" DestinationFolder="$(RALoginWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Newtonsoft.Json.dll" DestinationFolder="$(RALoginWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\System.Web.Helpers.dll" DestinationFolder="$(RALoginWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\System.Web.WebPages.Deployment.dll" DestinationFolder="$(RALoginWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\System.Web.WebPages.dll" DestinationFolder="$(RALoginWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\System.Web.WebPages.Razor.dll" DestinationFolder="$(RALoginWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\System.Web.Razor.dll" DestinationFolder="$(RALoginWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\System.Web.Mvc.dll" DestinationFolder="$(RALoginWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.ServiceBus.dll" DestinationFolder="$(RALoginWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.WindowsAzure.Storage.dll" DestinationFolder="$(RALoginWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Web.Administration.dll" DestinationFolder="$(RALoginWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\MonAgentListener.dll" DestinationFolder="$(RALoginWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.WindowsAzure.Diagnostics.dll" DestinationFolder="$(RALoginWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\System.Spatial.dll" DestinationFolder="$(RALoginWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Data.Services.Client.dll" DestinationFolder="$(RALoginWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Data.OData.dll" DestinationFolder="$(RALoginWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Azure.KeyVault.Core.dll" DestinationFolder="$(RALoginWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Rest.ClientRuntime.dll" DestinationFolder="$(RALoginWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Rest.ClientRuntime.Azure.dll" DestinationFolder="$(RALoginWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Azure.KeyVault.WebKey.dll" DestinationFolder="$(RALoginWebTempPath)\bin" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Data.Edm.dll" DestinationFolder="$(RALoginWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Data.OData.dll" DestinationFolder="$(RALoginWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.ServiceBus.dll" DestinationFolder="$(RALoginWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Azure.ServiceBus.dll" DestinationFolder="$(RALoginWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.WindowsAzure.Configuration.dll" DestinationFolder="$(RALoginWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.WindowsAzure.Diagnostics.dll" DestinationFolder="$(RALoginWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\CommonCryptographyAlgorithm.dll" DestinationFolder="$(RALoginWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Azure.KeyVault.dll" DestinationFolder="$(RALoginWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Azure.Common.NetFramework.dll" DestinationFolder="$(RALoginWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Hyak.Common.dll" DestinationFolder="$(RALoginWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Castle.Core.dll" DestinationFolder="$(RALoginWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Castle.Windsor.dll" DestinationFolder="$(RALoginWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\System.Net.Http.Extensions.dll" DestinationFolder="$(RALoginWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\System.Net.Http.Primitives.dll" DestinationFolder="$(RALoginWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Threading.Tasks.dll" DestinationFolder="$(RALoginWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Threading.Tasks.Extensions.Desktop.dll" DestinationFolder="$(RALoginWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Threading.Tasks.Extensions.dll" DestinationFolder="$(RALoginWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\System.Web.Optimization.dll" DestinationFolder="$(RALoginWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\WebGrease.dll" DestinationFolder="$(RALoginWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\System.Web.Http.WebHost.dll" DestinationFolder="$(RALoginWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\System.Net.Http.Formatting.dll" DestinationFolder="$(RALoginWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\System.Web.Http.dll" DestinationFolder="$(RALoginWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Antlr3.Runtime.dll" DestinationFolder="$(RALoginWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\DocumentFormat.OpenXml.dll" DestinationFolder="$(RALoginWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Web.Infrastructure.dll" DestinationFolder="$(RALoginWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\netstandard.dll" DestinationFolder="$(RALoginWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Cloud.Sdk.Aos.dll" DestinationFolder="$(RALoginWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Cloud.Sdk.Core.dll" DestinationFolder="$(RALoginWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Cloud.Sdk.Token.dll" DestinationFolder="$(RALoginWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Cloud.Sdk.Data.Aos.dll" DestinationFolder="$(RALoginWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\IdentityModel.dll" DestinationFolder="$(RALoginWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Extensions.Http.Polly.dll" DestinationFolder="$(RALoginWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Extensions.Http.dll" DestinationFolder="$(RALoginWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Extensions.Logging.Abstractions.dll" DestinationFolder="$(RALoginWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Extensions.Logging.dll" DestinationFolder="$(RALoginWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Extensions.Primitives.dll" DestinationFolder="$(RALoginWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Extensions.DependencyInjection.Abstractions.dll" DestinationFolder="$(RALoginWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Extensions.Options.dll" DestinationFolder="$(RALoginWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Extensions.Caching.Memory.dll" DestinationFolder="$(RALoginWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Extensions.DependencyInjection.dll" DestinationFolder="$(RALoginWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Extensions.Caching.Abstractions.dll" DestinationFolder="$(RALoginWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Polly.dll" DestinationFolder="$(RALoginWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Polly.Extensions.Http.dll" DestinationFolder="$(RALoginWebTempPath)\bin\" ContinueOnError="true" />
+
+		<Copy SourceFiles="$(ReleasePath)\System.ComponentModel.Annotations.dll" DestinationFolder="$(RALoginWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\System.Threading.Tasks.Extensions.dll" DestinationFolder="$(RALoginWebTempPath)\bin\" ContinueOnError="true" />
+	</Target>
+	<Target Name="CopyProviderWebFiles">
+		<Copy SourceFiles="$(AppProjectBasePath)\RASPAppWeb\Dockerfile" DestinationFolder="$(RAProviderWebTempPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(AppProjectBasePath)\RASPAppWeb\Web.config" DestinationFolder="$(RAProviderWebTempPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(AppProjectBasePath)\RASPAppWeb\APPLog4net.config" DestinationFolder="$(RAProviderWebTempPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(AppProjectBasePath)\RASPAppWeb\Global.asax" DestinationFolder="$(RAProviderWebTempPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(AppProjectBasePath)\RASPAppWeb\RelatedRecords.ashx" DestinationFolder="$(RAProviderWebTempPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(AppProjectBasePath)\RASPAppWeb\Pages\Default.aspx" DestinationFolder="$(RAProviderWebTempPath)\Pages\" ContinueOnError="true" />
+		<Copy SourceFiles="$(AppProjectBasePath)\RASPAppWeb\Styles\appMain.css" DestinationFolder="$(RAProviderWebTempPath)\Styles\" ContinueOnError="true" />
+		<Copy SourceFiles="$(AppProjectBasePath)\RASPAppWeb\Resources\RelatedRecords.resx" DestinationFolder="$(RAProviderWebTempPath)\Resources\" ContinueOnError="true" />
+		
+		<Copy SourceFiles="$(AppProjectBasePath)\RASPAppWeb\Images\APP-icon1.png" DestinationFolder="$(RAProviderWebTempPath)\Images\" ContinueOnError="true" />
+		<Copy SourceFiles="$(AppProjectBasePath)\RASPAppWeb\Images\APP-icon2.png" DestinationFolder="$(RAProviderWebTempPath)\Images\" ContinueOnError="true" />
+	</Target>
+	<Target Name="CopyBinFiledsToProviderWeb">
+		<Copy SourceFiles="$(ReleasePath)\AvePoint.ContainerService.dll" DestinationFolder="$(RAProviderWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.WindowsAzure.ServiceRuntime.dll" DestinationFolder="$(RAProviderWebTempPath)\bin\" ContinueOnError="false" />
+		<Copy SourceFiles="$(ReleasePath)\RASPAppWeb.dll" DestinationFolder="$(RAProviderWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\RASPAppWeb.dll.config" DestinationFolder="$(RAProviderWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\RevIMCommon.dll" DestinationFolder="$(RAProviderWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\RevIMGCommon.dll" DestinationFolder="$(RAProviderWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\RevIMContract.dll" DestinationFolder="$(RAProviderWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\RevIMGContract.dll" DestinationFolder="$(RAProviderWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\RevIMI18N.dll" DestinationFolder="$(RAProviderWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\en-US\RevIMI18N.resources.dll" DestinationFolder="$(RAProviderWebTempPath)\bin\en-US\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\ja-JP\RevIMI18N.resources.dll" DestinationFolder="$(RAProviderWebTempPath)\bin\ja-JP\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\CommonMicroKernel.dll" DestinationFolder="$(RAProviderWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\CommonUtility.dll" DestinationFolder="$(RAProviderWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\log4net.dll" DestinationFolder="$(RAProviderWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\ActiveDirectoryWrapper.dll" DestinationFolder="$(RAProviderWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\CommonCryptographyAlgorithm.dll" DestinationFolder="$(RAProviderWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\EntityFramework.dll" DestinationFolder="$(RAProviderWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\EntityFramework.SqlServer.dll" DestinationFolder="$(RAProviderWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Castle.Core.dll" DestinationFolder="$(RAProviderWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Castle.Windsor.dll" DestinationFolder="$(RAProviderWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Newtonsoft.Json.dll" DestinationFolder="$(RAProviderWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Web.Infrastructure.dll" DestinationFolder="$(RAProviderWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Common.Logging.dll" DestinationFolder="$(RAProviderWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Common.Logging.Core.dll" DestinationFolder="$(RAProviderWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\RevIMDB.dll.config" DestinationFolder="$(RAProviderWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\System.Net.Http.Formatting.dll" DestinationFolder="$(RAProviderWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\System.Web.Helpers.dll" DestinationFolder="$(RAProviderWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\System.Web.Http.dll" DestinationFolder="$(RAProviderWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\System.Web.Http.WebHost.dll" DestinationFolder="$(RAProviderWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\System.Web.Mvc.dll" DestinationFolder="$(RAProviderWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\System.Web.WebPages.Deployment.dll" DestinationFolder="$(RAProviderWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\System.Web.WebPages.dll" DestinationFolder="$(RAProviderWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\System.Web.WebPages.Razor.dll" DestinationFolder="$(RAProviderWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(RACommonPath)\ServiceVersion\ServiceVersion.config" DestinationFolder="$(RAProviderWebTempPath)\Config\ServiceVersion\" ContinueOnError="true" />
+		<Copy SourceFiles="$(DocAveRefPath)\EmRuntime_X64.dll" DestinationFolder="$(RAProviderWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(DocAveRefPath)\EmRuntime_X86.dll" DestinationFolder="$(RAProviderWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(DocAveRefPath)\Office365Api.dll" DestinationFolder="$(RAProviderWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(DocAveRefPath)\Office365Api.dll.config" DestinationFolder="$(RAProviderWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\CommonContract.dll" DestinationFolder="$(RAProviderWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(DocAveRefPath)\Microsoft.SharePoint.Client.dll" DestinationFolder="$(RAProviderWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(DocAveRefPath)\Microsoft.SharePoint.Client.Runtime.dll" DestinationFolder="$(RAProviderWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(DocAveRefPath)\NintexO365API.dll" DestinationFolder="$(RAProviderWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(DocAveRefPath)\Microsoft.SharePoint.Client.DocumentManagement.dll" DestinationFolder="$(RAProviderWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(DocAveRefPath)\Microsoft.SharePoint.Client.Publishing.dll" DestinationFolder="$(RAProviderWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(DocAveRefPath)\Microsoft.SharePoint.Client.Search.Applications.dll" DestinationFolder="$(RAProviderWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(DocAveRefPath)\Microsoft.SharePoint.Client.Search.dll" DestinationFolder="$(RAProviderWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(DocAveRefPath)\Microsoft.SharePoint.Client.ServerRuntime.dll" DestinationFolder="$(RAProviderWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(DocAveRefPath)\Microsoft.SharePoint.Client.Taxonomy.dll" DestinationFolder="$(RAProviderWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(DocAveRefPath)\Microsoft.SharePoint.Client.UserProfiles.dll" DestinationFolder="$(RAProviderWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(DocAveRefPath)\Microsoft.SharePoint.Client.WorkflowServices.dll" DestinationFolder="$(RAProviderWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(DocAveRefPath)\Microsoft.IdentityModel.Extensions.dll" DestinationFolder="$(RAProviderWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(DocAveRefPath)\Microsoft.IdentityModel.dll" DestinationFolder="$(RAProviderWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="@(ThirdDllsX64Files)" DestinationFiles="@(ThirdDllsX64Files -> '$(RAProviderWebTempPath)\bin\x64\%(RecursiveDir)%(Filename)%(Extension)')" ContinueOnError="true"/>
+		<Copy SourceFiles="@(ThirdDllsX86Files)" DestinationFiles="@(ThirdDllsX86Files -> '$(RAProviderWebTempPath)\bin\x86\%(RecursiveDir)%(Filename)%(Extension)')" ContinueOnError="true"/>
+		<Copy SourceFiles="$(ReleasePath)\DocumentFormat.OpenXml.dll" DestinationFolder="$(RAProviderWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Azure.KeyVault.Core.dll" DestinationFolder="$(RAProviderWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Rest.ClientRuntime.dll" DestinationFolder="$(RAProviderWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Rest.ClientRuntime.Azure.dll" DestinationFolder="$(RAProviderWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Azure.KeyVault.WebKey.dll" DestinationFolder="$(RAProviderWebTempPath)\bin" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Web.Administration.dll" DestinationFolder="$(RAProviderWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Data.Edm.dll" DestinationFolder="$(RAProviderWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Data.OData.dll" DestinationFolder="$(RAProviderWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Data.Services.Client.dll" DestinationFolder="$(RAProviderWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.ServiceBus.dll" DestinationFolder="$(RAProviderWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Azure.ServiceBus.dll" DestinationFolder="$(RAProviderWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.WindowsAzure.Configuration.dll" DestinationFolder="$(RAProviderWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.WindowsAzure.Diagnostics.dll" DestinationFolder="$(RAProviderWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\MonAgentListener.dll" DestinationFolder="$(RAProviderWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.WindowsAzure.Storage.dll" DestinationFolder="$(RAProviderWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Ionic.Zip.dll" DestinationFolder="$(RAProviderWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(DocAveRefPath)\Aos.Sdk.dll" DestinationFolder="$(RAProviderWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(DocAveRefPath)\Gao.Sdk.dll" DestinationFolder="$(RAProviderWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\ApiContract.dll" DestinationFolder="$(RAProviderWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\RADataBroker.dll" DestinationFolder="$(RAProviderWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Hyak.Common.dll" DestinationFolder="$(RAProviderWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Azure.Common.dll" DestinationFolder="$(RAProviderWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Azure.KeyVault.dll" DestinationFolder="$(RAProviderWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Threading.Tasks.dll" DestinationFolder="$(RAProviderWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\System.Spatial.dll" DestinationFolder="$(RAProviderWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.IdentityModel.Clients.ActiveDirectory.dll" DestinationFolder="$(RAProviderWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(DocAveRefPath)\Microsoft.Office.Client.Policy.dll" DestinationFolder="$(RAProviderWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(DocAveRefPath)\Microsoft.Online.SharePoint.Client.Tenant.dll" DestinationFolder="$(RAProviderWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\System.Web.Razor.dll" DestinationFolder="$(RAProviderWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.WindowsAzure.ServiceRuntime.dll" DestinationFolder="$(RAProviderWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\RevIMCommonUtility.dll" DestinationFolder="$(RAProviderWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\netstandard.dll" DestinationFolder="$(RAProviderWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Cloud.Sdk.Aos.dll" DestinationFolder="$(RAProviderWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Cloud.Sdk.Core.dll" DestinationFolder="$(RAProviderWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Cloud.Sdk.Token.dll" DestinationFolder="$(RAProviderWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Cloud.Sdk.Data.Aos.dll" DestinationFolder="$(RAProviderWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\IdentityModel.dll" DestinationFolder="$(RAProviderWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Extensions.Http.Polly.dll" DestinationFolder="$(RAProviderWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Extensions.Http.dll" DestinationFolder="$(RAProviderWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Extensions.Logging.Abstractions.dll" DestinationFolder="$(RAProviderWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Extensions.Logging.dll" DestinationFolder="$(RAProviderWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Extensions.Primitives.dll" DestinationFolder="$(RAProviderWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Extensions.DependencyInjection.Abstractions.dll" DestinationFolder="$(RAProviderWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Extensions.Options.dll" DestinationFolder="$(RAProviderWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Extensions.Caching.Memory.dll" DestinationFolder="$(RAProviderWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Extensions.DependencyInjection.dll" DestinationFolder="$(RAProviderWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Extensions.Caching.Abstractions.dll" DestinationFolder="$(RAProviderWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Polly.dll" DestinationFolder="$(RAProviderWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Polly.Extensions.Http.dll" DestinationFolder="$(RAProviderWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Bcl.AsyncInterfaces.dll" DestinationFolder="$(RAProviderWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\System.ComponentModel.Annotations.dll" DestinationFolder="$(RAProviderWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\System.Threading.Tasks.Extensions.dll" DestinationFolder="$(RAProviderWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.IdentityModel.JsonWebTokens.dll" DestinationFolder="$(RAProviderWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\System.IdentityModel.Tokens.Jwt.dll" DestinationFolder="$(RAProviderWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.IdentityModel.Logging.dll" DestinationFolder="$(RAProviderWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.IdentityModel.Tokens.dll" DestinationFolder="$(RAProviderWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.AspNet.OData.dll" DestinationFolder="$(RAProviderWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\System.Diagnostics.DiagnosticSource.dll" DestinationFolder="$(RAProviderWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Extensions.Options.dll" DestinationFolder="$(RAProviderWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\System.Memory.dll" DestinationFolder="$(RAProviderWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\System.Runtime.CompilerServices.Unsafe.dll" DestinationFolder="$(RAProviderWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll" DestinationFolder="$(RAProviderWebTempPath)\bin\" ContinueOnError="true" />
+	</Target>
+	<Target Name="CopyBinFilesToRAWeb">
+		<Copy SourceFiles="$(ProjectBasePath)\ExportSPTermScript\ExportSPTermtoCsv.ps1" DestinationFolder="$(RAWebTempPath)\ExportSPTermScript\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\AvePointRevIM.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\RevIMTimer.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\RevIMService.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\RevIMDB.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\RevIMCommon.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\RevIMGCommon.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\RevIMContract.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\RevIMGContract.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\RAQueryBuilder.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\RevIMSharePoint.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\RevIMI18N.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\en-US\RevIMI18N.resources.dll" DestinationFolder="$(RAWebTempPath)\bin\en-US\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\ja-JP\RevIMI18N.resources.dll" DestinationFolder="$(RAWebTempPath)\bin\ja-JP\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\CommonMicroKernel.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\CommonUtility.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\log4net.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\ActiveDirectoryWrapper.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\CommonCryptographyAlgorithm.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\EntityFramework.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\EntityFramework.SqlServer.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Quartz.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Castle.Core.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Castle.Windsor.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Newtonsoft.Json.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\WebGrease.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Web.Infrastructure.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Common.Logging.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Common.Logging.Core.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Antlr3.Runtime.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\RevIMDB.dll.config" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\System.Net.Http.Formatting.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\System.Web.Helpers.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\System.Web.Http.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\System.Web.Http.WebHost.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\System.Web.Mvc.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\System.Web.Optimization.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\System.Web.Razor.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\System.Web.WebPages.Deployment.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\System.Web.WebPages.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\System.Web.WebPages.Razor.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(RACommonPath)\ServiceVersion\ServiceVersion.config" DestinationFolder="$(RAWebTempPath)\Config\ServiceVersion\" ContinueOnError="true" />
+		<Copy SourceFiles="@(ThirdDllsX64Files)" DestinationFiles="@(ThirdDllsX64Files -> '$(RAWebTempPath)\bin\x64\%(RecursiveDir)%(Filename)%(Extension)')" ContinueOnError="true"/>
+		<Copy SourceFiles="@(ThirdDllsX86Files)" DestinationFiles="@(ThirdDllsX86Files -> '$(RAWebTempPath)\bin\x86\%(RecursiveDir)%(Filename)%(Extension)')" ContinueOnError="true"/>
+		<Copy SourceFiles="$(ReleasePath)\System.Data.SQLite.DLL" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\DocumentFormat.OpenXml.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Azure.KeyVault.Core.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Rest.ClientRuntime.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Rest.ClientRuntime.Azure.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Azure.KeyVault.WebKey.dll" DestinationFolder="$(RAWebTempPath)\bin" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Web.Administration.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Data.Edm.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Data.OData.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Data.Services.Client.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.ServiceBus.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Azure.ServiceBus.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.WindowsAzure.Configuration.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.WindowsAzure.Diagnostics.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.WindowsAzure.Storage.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\MonAgentListener.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Ionic.Zip.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Simple.OData.Client.Core.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(DocAveRefPath)\System.Web.OData.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\ApiContract.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.OData.Core.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.OData.Edm.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Spatial.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\RADataBroker.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Hyak.Common.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Azure.Common.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Azure.KeyVault.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Threading.Tasks.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\System.Spatial.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.IdentityModel.Clients.ActiveDirectory.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\RazorEngine.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\System.Web.Razor.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Cosmos.CRTCompat.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Azure.Documents.Client.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Azure.Documents.ServiceInterop.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\System.Buffers.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\System.Memory.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\System.Net.Http.Extensions.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\System.Net.Http.WinHttpHandler.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\System.Numerics.Vectors.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\System.Net.Http.Primitives.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\System.Runtime.CompilerServices.Unsafe.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\System.Security.Cryptography.Algorithms.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\System.Security.Cryptography.Encoding.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\System.Security.Cryptography.Primitives.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\System.Security.Cryptography.X509Certificates.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\netstandard.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\RevIMExchange.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\RecordsAPIContract.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\ExchangeBackupUtility.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Exchange.WebServices.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\ClientSdkExchange.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\RevIMCommonUtility.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\RevIMPhysical.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\zxing.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\zxing.presentation.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\AvePoint.ContainerService.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.WindowsAzure.ServiceRuntime.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.IdentityModel.Logging.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.IdentityModel.Protocol.Extensions.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.IdentityModel.Protocols.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.IdentityModel.Tokens.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.IdentityModel.JsonWebTokens.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Owin.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Owin.Host.SystemWeb.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Owin.Security.Cookies.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Owin.Security.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Owin.Security.OpenIdConnect.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\System.IdentityModel.Tokens.Jwt.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Owin.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\RevIMWorkflow.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Cloud.Sdk.Aos.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Cloud.Sdk.Core.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Cloud.Sdk.Token.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Cloud.Sdk.Data.Aos.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\IdentityModel.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Extensions.Http.Polly.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Extensions.Http.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Extensions.Logging.Abstractions.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Extensions.Logging.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Extensions.Primitives.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Extensions.DependencyInjection.Abstractions.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Extensions.Options.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Extensions.Caching.Memory.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Extensions.DependencyInjection.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Extensions.Caching.Abstractions.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Polly.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Polly.Extensions.Http.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Bcl.AsyncInterfaces.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\System.ComponentModel.Annotations.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\System.Threading.Tasks.Extensions.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.AspNet.OData.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\CloudAgentApiClient.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\CloudAgentApiClient.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\CloudAgentHybridModel.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\CloudAgentCommonContract.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\CloudAgentHybridProxy.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\RAApi.Contract.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.AspNetCore.Connections.Abstractions.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.AspNetCore.Http.Connections.Client.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.AspNetCore.Http.Connections.Common.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.AspNetCore.Http.Features.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.AspNetCore.SignalR.Client.Core.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.AspNetCore.SignalR.Client.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.AspNetCore.SignalR.Common.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.AspNetCore.SignalR.Protocols.Json.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Azure.ActiveDirectory.Client.Framework.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Azure.ActiveDirectory.GraphClient.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\System.Diagnostics.DiagnosticSource.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Graph.Core.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Graph.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\NVelocity.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\System.Threading.Channels.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Extensions.Options.ConfigurationExtensions.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Castle.Facilities.AspNet.SystemWeb.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\System.Text.Json.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\System.Text.Encodings.Web.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\System.Threading.Tasks.Extensions.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\System.ValueTuple.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\System.IO.Pipelines.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\CloudAgentApiClientCore.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\StackExchange.Redis.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Pipelines.Sockets.Unofficial.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Cloud.Sdk.Telemetry.Data.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true"/>
+		<Copy SourceFiles="$(ReleasePath)\Cloud.Sdk.Telemetry.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Extensions.FileSystemGlobbing.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true"/>
+		<Copy SourceFiles="$(ReleasePath)\Azure.Core.Amqp.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Extensions.Configuration.EnvironmentVariables.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Extensions.FileProviders.Abstractions.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Extensions.FileProviders.Physical.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Extensions.Configuration.FileExtensions.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true"/>
+		<Copy SourceFiles="$(ReleasePath)\Azure.Core.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Extensions.Configuration.Json.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true"/>
+		<Copy SourceFiles="$(ReleasePath)\System.Memory.Data.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true"/>
+		<Copy SourceFiles="$(ReleasePath)\Azure.Messaging.ServiceBus.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Azure.Amqp.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Extensions.Configuration.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Extensions.Configuration.Abstractions.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true"/>
+		<Copy SourceFiles="$(ReleasePath)\System.Net.WebSockets.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true"/>
+		<Copy SourceFiles="$(ReleasePath)\System.Net.WebSockets.Client.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true"/>
+		<Copy SourceFiles="$(ReleasePath)\System.Runtime.Serialization.Primitives.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Win32.Registry.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true"/>
+		<Copy SourceFiles="$(ReleasePath)\System.Security.AccessControl.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true"/>		
+		<Copy SourceFiles="$(ReleasePath)\System.Security.Principal.Windows.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true"/>
+		<Copy SourceFiles="$(ReleasePath)\Azure.Core.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Azure.Cosmos.Client.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Bcl.HashCode.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true"/>
+		<Copy SourceFiles="$(ReleasePath)\System.Collections.Immutable.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true"/>
+		<Copy SourceFiles="$(ReleasePath)\System.Configuration.ConfigurationManager.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true"/>
+		<Copy SourceFiles="$(ReleasePath)\System.Configuration.ConfigurationManager.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true"/>
+		<Copy SourceFiles="$(ReleasePath)\System.Security.AccessControl.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true"/>		
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Azure.Cosmos.Core.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true"/>	
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Azure.Cosmos.Direct.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Azure.Cosmos.Serialization.HybridRow.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true"/>
+		<Copy SourceFiles="$(ReleasePath)\System.Security.Permissions.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true"/>
+		<Copy SourceFiles="$(ReleasePath)\System.Security.Principal.Windows.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="true"/>
+		<Copy SourceFiles="$(ReleasePath)\System.ValueTuple.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Azure.Cosmos.Client.xml" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Bcl.HashCode.xml" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Azure.Cosmos.ServiceInterop.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="false"/>
+	</Target>
+	<Target Name="CopyScheduleJobFiles">
+		<Copy SourceFiles="$(ScheduleJobBasePath)\Dockerfile" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="false" />
+		<Copy SourceFiles="$(ReleasePath)\Dockerfile.Worker" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="false" />
+		<Copy SourceFiles="$(ReleasePath)\AvePoint.ContainerService.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.WindowsAzure.ServiceRuntime.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="false" />
+		<Copy SourceFiles="@(ThirdDllsX64Files)" DestinationFiles="@(ThirdDllsX64Files -> '$(RAScheduleJobPath)\x64\%(RecursiveDir)%(Filename)%(Extension)')" ContinueOnError="true"/>
+		<Copy SourceFiles="@(ThirdDllsX86Files)" DestinationFiles="@(ThirdDllsX86Files -> '$(RAScheduleJobPath)\x86\%(RecursiveDir)%(Filename)%(Extension)')" ContinueOnError="true"/>
+		<Copy SourceFiles="@(ScheduleConfigsFiles)" DestinationFiles="@(ScheduleConfigsFiles -> '$(RAScheduleJobPath)\Config\%(RecursiveDir)%(Filename)%(Extension)')" ContinueOnError="true"/>
+		<Copy SourceFiles="$(ReleasePath)\ActiveDirectoryWrapper.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\AgentLog4net.config" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\RecordsCommonVCEnv.config" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Castle.Core.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Castle.Windsor.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Common.Logging.Core.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Common.Logging.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\CommonCryptographyAlgorithm.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\DocumentFormat.OpenXml.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\EntityFramework.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\EntityFramework.SqlServer.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Newtonsoft.Json.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\RevIMCommon.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\RevIMGCommon.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\RevIMContract.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\RevIMGContract.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\RAQueryBuilder.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\RevIMDB.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\RevIMDB.dll.config" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\RevIMScheduleJob.exe" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\RevIMScheduleJob.exe.config" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\RevIMService.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\RevIMSharePoint.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\RevIMGlobalSearch.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\RevIMI18N.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Web.Administration.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.WindowsAzure.ServiceRuntime.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ScheduleJobBasePath)\Config\DesignLists\DesignLists.config" DestinationFolder="$(RAScheduleJobPath)\Config\DesignLists\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ScheduleJobBasePath)\Config\BarcodeTemplate\BarcodeTemplate.docx" DestinationFolder="$(RAScheduleJobPath)\Config\BarcodeTemplate\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\en-US\RevIMI18N.resources.dll" DestinationFolder="$(RAScheduleJobPath)\en-US\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\ja-JP\RevIMI18N.resources.dll" DestinationFolder="$(RAScheduleJobPath)\ja-JP\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\System.Data.SQLite.DLL" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ScheduleJobBasePath)\Config\Castle\ServiceCastle.config" DestinationFolder="$(RAScheduleJobPath)\Config\Castle\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ScheduleJobBasePath)\Config\Castle\TimerCastle.config" DestinationFolder="$(RAScheduleJobPath)\Config\Castle\" ContinueOnError="true" />
+		<Copy SourceFiles="$(RACommonPath)\ServiceVersion\ServiceVersion.config" DestinationFolder="$(RAScheduleJobPath)\Config\ServiceVersion\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Ionic.Zip.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Simple.OData.Client.Core.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(DocAveRefPath)\System.Web.OData.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\ApiContract.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.OData.Core.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.OData.Edm.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Spatial.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\RADataBroker.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Hyak.Common.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Azure.Common.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Azure.KeyVault.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Threading.Tasks.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.IdentityModel.Clients.ActiveDirectory.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\RazorEngine.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\System.Web.Razor.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Cosmos.CRTCompat.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Azure.Documents.Client.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Azure.Documents.ServiceInterop.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Cosmos.CRTCompat.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Azure.Documents.Client.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Azure.Documents.ServiceInterop.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\System.Buffers.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\System.Memory.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\System.Net.Http.Extensions.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\System.Net.Http.WinHttpHandler.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\System.Numerics.Vectors.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\System.Net.Http.Primitives.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\System.Runtime.CompilerServices.Unsafe.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\System.Security.Cryptography.Algorithms.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\System.Security.Cryptography.Encoding.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\System.Security.Cryptography.Primitives.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\System.Security.Cryptography.X509Certificates.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\netstandard.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\RevIMExchange.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\ExchangeBackupUtility.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Exchange.WebServices.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\ClientSdkExchange.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\RevIMCommonUtility.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\WindowsAzureEventSource.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\WindowsAzureTelemetryEvents.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\RevIMPhysical.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\zxing.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\zxing.presentation.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Cloud.Sdk.Aos.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Cloud.Sdk.Core.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Cloud.Sdk.Data.Aos.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Cloud.Sdk.Token.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\IdentityModel.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Extensions.Http.Polly.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Extensions.Http.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Extensions.Logging.Abstractions.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Extensions.Logging.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Extensions.Primitives.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Extensions.DependencyInjection.Abstractions.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Extensions.Options.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Extensions.Caching.Memory.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Extensions.DependencyInjection.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Extensions.Caching.Abstractions.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Polly.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Polly.Extensions.Http.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\RevIMWorkflow.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\System.ComponentModel.Annotations.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\System.Threading.Tasks.Extensions.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Bcl.AsyncInterfaces.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.IdentityModel.JsonWebTokens.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\System.IdentityModel.Tokens.Jwt.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.IdentityModel.Logging.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.IdentityModel.Tokens.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.AspNet.OData.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\log4net.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\CloudAgentApiClient.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\CloudAgentHybridModel.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\CloudAgentCommonContract.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\CloudAgentHybridProxy.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\RAApi.Contract.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.AspNetCore.Connections.Abstractions.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.AspNetCore.Http.Connections.Client.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.AspNetCore.Http.Connections.Common.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.AspNetCore.Http.Features.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.AspNetCore.SignalR.Client.Core.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.AspNetCore.SignalR.Client.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.AspNetCore.SignalR.Common.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.AspNetCore.SignalR.Protocols.Json.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Azure.ActiveDirectory.Client.Framework.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Azure.ActiveDirectory.GraphClient.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Graph.Core.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Graph.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\NVelocity.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\System.Threading.Channels.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Extensions.Options.ConfigurationExtensions.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\System.Diagnostics.DiagnosticSource.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Castle.Facilities.AspNet.SystemWeb.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\System.Text.Json.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\System.Text.Encodings.Web.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\System.Threading.Tasks.Extensions.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\System.ValueTuple.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\RACloudFS.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\RASharePointOnPrem.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\StackExchange.Redis.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Pipelines.Sockets.Unofficial.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\System.IO.Pipelines.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\System.Diagnostics.PerformanceCounter.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\CloudAgentApiClientCore.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Azure.Core.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="true"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Azure.Cosmos.Client.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="true"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Bcl.HashCode.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="true"/>
+		<Copy SourceFiles="$(ReleasePath)\System.Collections.Immutable.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="true"/>
+		<Copy SourceFiles="$(ReleasePath)\System.Configuration.ConfigurationManager.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="true"/>
+		<Copy SourceFiles="$(ReleasePath)\System.Configuration.ConfigurationManager.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="true"/>
+		<Copy SourceFiles="$(ReleasePath)\System.Security.AccessControl.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="true"/>		
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Azure.Cosmos.Core.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="true"/>	
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Azure.Cosmos.Direct.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="true"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Azure.Cosmos.Serialization.HybridRow.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="true"/>
+		<Copy SourceFiles="$(ReleasePath)\System.Security.Permissions.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="true"/>
+		<Copy SourceFiles="$(ReleasePath)\System.Security.Principal.Windows.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="true"/>
+		<Copy SourceFiles="$(ReleasePath)\System.ValueTuple.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Azure.Cosmos.Client.xml" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Bcl.HashCode.xml" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Azure.Cosmos.ServiceInterop.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="false"/>
+	</Target>
+
+	<Target Name="CopyJobWorkerFiles">
+		<Copy SourceFiles="$(ReleasePath)\RevIMScheduleJobWorkerRole.exe" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\RevIMScheduleJobWorkerRole.exe.config" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\WorkerLog4net.config" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Azure.KeyVault.Core.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Rest.ClientRuntime.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Rest.ClientRuntime.Azure.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Azure.KeyVault.WebKey.dll" DestinationFolder="$(RAScheduleJobPath)" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Data.Edm.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Data.OData.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Data.Services.Client.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.ServiceBus.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Azure.ServiceBus.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.WindowsAzure.Configuration.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.WindowsAzure.Diagnostics.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.WindowsAzure.Storage.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\System.Spatial.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\MonAgentListener.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\System.Net.Http.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="workerRoleProperties.txt" DestinationFolder="$(CloudServicePath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="webRoleProperties.txt" DestinationFolder="$(RAWebTempPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="appwebRoleProperties.txt" DestinationFolder="$(RAProviderWebTempPath)\" ContinueOnError="false"/>
+	</Target>
+	<Target Name="CopyTimerWorkerFiles">
+		<Copy SourceFiles="$(TimerWorkerRoleBasePath)\Dockerfile" DestinationFolder="$(RATimerPath)\" ContinueOnError="false" />
+		<Copy SourceFiles="$(ReleasePath)\AvePoint.ContainerService.dll" DestinationFolder="$(RATimerPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Azure.Amqp.dll" DestinationFolder="$(RATimerPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Azure.ServiceBus.dll" DestinationFolder="$(RATimerPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Azure.Services.AppAuthentication.dll" DestinationFolder="$(RATimerPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Bcl.AsyncInterfaces.dll" DestinationFolder="$(RATimerPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.IdentityModel.JsonWebTokens.dll" DestinationFolder="$(RATimerPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.IdentityModel.Logging.dll" DestinationFolder="$(RATimerPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.IdentityModel.Tokens.dll" DestinationFolder="$(RATimerPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\System.Diagnostics.DiagnosticSource.dll" DestinationFolder="$(RATimerPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\System.IdentityModel.Tokens.Jwt.dll" DestinationFolder="$(RATimerPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\System.Net.WebSockets.dll" DestinationFolder="$(RATimerPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\System.Net.WebSockets.Client.dll" DestinationFolder="$(RATimerPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\System.Runtime.Serialization.Primitives.dll" DestinationFolder="$(RATimerPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\System.Text.Encodings.Web.dll" DestinationFolder="$(RATimerPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\System.Threading.Tasks.Extensions.dll" DestinationFolder="$(RATimerPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\System.ValueTuple.dll" DestinationFolder="$(RATimerPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.WindowsAzure.ServiceRuntime.dll" DestinationFolder="$(RATimerPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="@(TimerWorkerConfigs)" DestinationFiles="@(TimerWorkerConfigs -> '$(RATimerPath)\Config\%(RecursiveDir)%(Filename)%(Extension)')" ContinueOnError="true"/>
+		<Copy SourceFiles="$(ReleasePath)\TimerLog4net.config" DestinationFolder="$(RATimerPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\RATimerWorkerRole.exe" DestinationFolder="$(RATimerPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\RATimerWorkerRole.exe.config" DestinationFolder="$(RATimerPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(DocAveRefPath)\Aos.Sdk.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Config\NAA Configuration File.zip" DestinationFolder="$(RATimerPath)\Config" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Config\NARA Configuration File.zip" DestinationFolder="$(RATimerPath)\Config" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Config\VEO Configuration Files.zip" DestinationFolder="$(RATimerPath)\Config" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Castle.Core.dll" DestinationFolder="$(RATimerPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Castle.Windsor.dll" DestinationFolder="$(RATimerPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Common.Logging.Core.dll" DestinationFolder="$(RATimerPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Common.Logging.dll" DestinationFolder="$(RATimerPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\CommonContract.dll" DestinationFolder="$(RATimerPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\CommonCryptographyAlgorithm.dll" DestinationFolder="$(RATimerPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\CommonUtility.dll" DestinationFolder="$(RATimerPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\DocumentFormat.OpenXml.dll" DestinationFolder="$(RATimerPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\log4net.dll" DestinationFolder="$(RATimerPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Quartz.dll" DestinationFolder="$(RATimerPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\RevIMCommon.dll" DestinationFolder="$(RATimerPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\RevIMGCommon.dll" DestinationFolder="$(RATimerPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\RevIMContract.dll" DestinationFolder="$(RATimerPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\RevIMGContract.dll" DestinationFolder="$(RATimerPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\RevIMI18N.dll" DestinationFolder="$(RATimerPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\RevIMTimer.dll" DestinationFolder="$(RATimerPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\RevIMService.dll" DestinationFolder="$(RATimerPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\RevIMDB.dll" DestinationFolder="$(RATimerPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\RevIMSharePoint.dll" DestinationFolder="$(RATimerPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\RevIMGlobalSearch.dll" DestinationFolder="$(RATimerPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Azure.KeyVault.Core.dll" DestinationFolder="$(RATimerPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Rest.ClientRuntime.dll" DestinationFolder="$(RATimerPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Rest.ClientRuntime.Azure.dll" DestinationFolder="$(RATimerPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Azure.KeyVault.WebKey.dll" DestinationFolder="$(RATimerPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Data.Edm.dll" DestinationFolder="$(RATimerPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Data.OData.dll" DestinationFolder="$(RATimerPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Data.Services.Client.dll" DestinationFolder="$(RATimerPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.ServiceBus.dll" DestinationFolder="$(RATimerPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Azure.ServiceBus.dll" DestinationFolder="$(RATimerPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.WindowsAzure.Configuration.dll" DestinationFolder="$(RATimerPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.WindowsAzure.Diagnostics.dll" DestinationFolder="$(RATimerPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.WindowsAzure.Storage.dll" DestinationFolder="$(RATimerPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\System.Net.Http.dll" DestinationFolder="$(RATimerPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\System.Spatial.dll" DestinationFolder="$(RATimerPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\MonAgentListener.dll" DestinationFolder="$(RATimerPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(DocAveRefPath)\Office365Api.dll" DestinationFolder="$(RATimerPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(DocAveRefPath)\Office365Api.dll.config" DestinationFolder="$(RATimerPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\EntityFramework.dll" DestinationFolder="$(RATimerPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\EntityFramework.SqlServer.dll" DestinationFolder="$(RATimerPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Aos.Sdk.dll" DestinationFolder="$(RATimerPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\MonAgentListener.dll" DestinationFolder="$(RATimerPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Newtonsoft.Json.dll" DestinationFolder="$(RATimerPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Ionic.Zip.dll" DestinationFolder="$(RATimerPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(RACommonPath)\ServiceVersion\ServiceVersion.config" DestinationFolder="$(RATimerPath)\Config\ServiceVersion\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Simple.OData.Client.Core.dll" DestinationFolder="$(RATimerPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(DocAveRefPath)\System.Web.OData.dll" DestinationFolder="$(RATimerPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\ApiContract.dll" DestinationFolder="$(RATimerPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.OData.Core.dll" DestinationFolder="$(RATimerPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.OData.Edm.dll" DestinationFolder="$(RATimerPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Spatial.dll" DestinationFolder="$(RATimerPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\RADataBroker.dll" DestinationFolder="$(RATimerPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\RevIMExchange.dll" DestinationFolder="$(RATimerPath)\" ContinueOnError="false" />
+		<Copy SourceFiles="$(ReleasePath)\Hyak.Common.dll" DestinationFolder="$(RATimerPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Azure.Common.dll" DestinationFolder="$(RATimerPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Azure.KeyVault.dll" DestinationFolder="$(RATimerPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Threading.Tasks.dll" DestinationFolder="$(RATimerPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(DocAveRefPath)\Microsoft.Office.Client.Policy.dll" DestinationFolder="$(RATimerPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(DocAveRefPath)\Microsoft.Online.SharePoint.Client.Tenant.dll" DestinationFolder="$(RATimerPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.IdentityModel.Clients.ActiveDirectory.dll" DestinationFolder="$(RATimerPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Azure.Documents.Client.dll" DestinationFolder="$(RATimerPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Azure.Documents.ServiceInterop.dll" DestinationFolder="$(RATimerPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Cosmos.CRTCompat.dll" DestinationFolder="$(RATimerPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\RevIMCommonUtility.dll" DestinationFolder="$(RATimerPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Cloud.Sdk.Aos.dll" DestinationFolder="$(RATimerPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Cloud.Sdk.Core.dll" DestinationFolder="$(RATimerPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Cloud.Sdk.Token.dll" DestinationFolder="$(RATimerPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Cloud.Sdk.Data.Aos.dll" DestinationFolder="$(RATimerPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\IdentityModel.dll" DestinationFolder="$(RATimerPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Extensions.Http.Polly.dll" DestinationFolder="$(RATimerPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Extensions.Http.dll" DestinationFolder="$(RATimerPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Extensions.Logging.Abstractions.dll" DestinationFolder="$(RATimerPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Extensions.Logging.dll" DestinationFolder="$(RATimerPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Extensions.Primitives.dll" DestinationFolder="$(RATimerPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Extensions.DependencyInjection.Abstractions.dll" DestinationFolder="$(RATimerPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Extensions.Options.dll" DestinationFolder="$(RATimerPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Extensions.Caching.Memory.dll" DestinationFolder="$(RATimerPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Extensions.DependencyInjection.dll" DestinationFolder="$(RATimerPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Extensions.Caching.Abstractions.dll" DestinationFolder="$(RATimerPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Polly.dll" DestinationFolder="$(RATimerPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Polly.Extensions.Http.dll" DestinationFolder="$(RATimerPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\RevIMWorkflow.dll" DestinationFolder="$(RATimerPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\System.ComponentModel.Annotations.dll" DestinationFolder="$(RATimerPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\System.Threading.Tasks.Extensions.dll" DestinationFolder="$(RATimerPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.AspNet.OData.dll" DestinationFolder="$(RATimerPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\CloudAgentApiClient.dll" DestinationFolder="$(RATimerPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\CloudAgentHybridModel.dll" DestinationFolder="$(RATimerPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\CloudAgentCommonContract.dll" DestinationFolder="$(RATimerPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\CloudAgentHybridProxy.dll" DestinationFolder="$(RATimerPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\RAApi.Contract.dll" DestinationFolder="$(RATimerPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.AspNetCore.Connections.Abstractions.dll" DestinationFolder="$(RATimerPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.AspNetCore.Http.Connections.Client.dll" DestinationFolder="$(RATimerPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.AspNetCore.Http.Connections.Common.dll" DestinationFolder="$(RATimerPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.AspNetCore.Http.Features.dll" DestinationFolder="$(RATimerPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.AspNetCore.SignalR.Client.Core.dll" DestinationFolder="$(RATimerPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.AspNetCore.SignalR.Client.dll" DestinationFolder="$(RATimerPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.AspNetCore.SignalR.Common.dll" DestinationFolder="$(RATimerPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.AspNetCore.SignalR.Protocols.Json.dll" DestinationFolder="$(RATimerPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Azure.ActiveDirectory.Client.Framework.dll" DestinationFolder="$(RATimerPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Azure.ActiveDirectory.GraphClient.dll" DestinationFolder="$(RATimerPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Graph.Core.dll" DestinationFolder="$(RATimerPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Graph.dll" DestinationFolder="$(RATimerPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\NVelocity.dll" DestinationFolder="$(RATimerPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\System.Threading.Channels.dll" DestinationFolder="$(RATimerPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Extensions.Options.ConfigurationExtensions.dll" DestinationFolder="$(RATimerPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\Castle.Facilities.AspNet.SystemWeb.dll" DestinationFolder="$(RATimerPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\System.Text.Json.dll" DestinationFolder="$(RATimerPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\System.IO.Pipelines.dll" DestinationFolder="$(RATimerPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\System.Buffers.dll" DestinationFolder="$(RATimerPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\System.Memory.dll" DestinationFolder="$(RATimerPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\System.Net.Http.Extensions.dll" DestinationFolder="$(RATimerPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\System.Net.Http.WinHttpHandler.dll" DestinationFolder="$(RATimerPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\System.Numerics.Vectors.dll" DestinationFolder="$(RATimerPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\System.Net.Http.Primitives.dll" DestinationFolder="$(RATimerPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\System.Runtime.CompilerServices.Unsafe.dll" DestinationFolder="$(RATimerPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\System.Security.Cryptography.Algorithms.dll" DestinationFolder="$(RATimerPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\System.Security.Cryptography.Encoding.dll" DestinationFolder="$(RATimerPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\System.Security.Cryptography.Primitives.dll" DestinationFolder="$(RATimerPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\System.Security.Cryptography.X509Certificates.dll" DestinationFolder="$(RATimerPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\netstandard.dll" DestinationFolder="$(RATimerPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ReleasePath)\CloudAgentApiClientCore.dll" DestinationFolder="$(RATimerPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\StackExchange.Redis.dll" DestinationFolder="$(RATimerPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Pipelines.Sockets.Unofficial.dll" DestinationFolder="$(RATimerPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\System.Diagnostics.PerformanceCounter.dll" DestinationFolder="$(RATimerPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Azure.Core.dll" DestinationFolder="$(RATimerPath)\" ContinueOnError="true"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Azure.Cosmos.Client.dll" DestinationFolder="$(RATimerPath)\" ContinueOnError="true"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Bcl.HashCode.dll" DestinationFolder="$(RATimerPath)\" ContinueOnError="true"/>
+		<Copy SourceFiles="$(ReleasePath)\System.Collections.Immutable.dll" DestinationFolder="$(RATimerPath)\" ContinueOnError="true"/>
+		<Copy SourceFiles="$(ReleasePath)\System.Configuration.ConfigurationManager.dll" DestinationFolder="$(RATimerPath)\" ContinueOnError="true"/>
+		<Copy SourceFiles="$(ReleasePath)\System.Configuration.ConfigurationManager.dll" DestinationFolder="$(RATimerPath)\" ContinueOnError="true"/>
+		<Copy SourceFiles="$(ReleasePath)\System.Security.AccessControl.dll" DestinationFolder="$(RATimerPath)\" ContinueOnError="true"/>		
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Azure.Cosmos.Core.dll" DestinationFolder="$(RATimerPath)\" ContinueOnError="true"/>	
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Azure.Cosmos.Direct.dll" DestinationFolder="$(RATimerPath)\" ContinueOnError="true"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Azure.Cosmos.Serialization.HybridRow.dll" DestinationFolder="$(RATimerPath)\" ContinueOnError="true"/>
+		<Copy SourceFiles="$(ReleasePath)\System.Security.Permissions.dll" DestinationFolder="$(RATimerPath)\" ContinueOnError="true"/>
+		<Copy SourceFiles="$(ReleasePath)\System.Security.Principal.Windows.dll" DestinationFolder="$(RATimerPath)\" ContinueOnError="true"/>
+		<Copy SourceFiles="$(ReleasePath)\System.ValueTuple.dll" DestinationFolder="$(RATimerPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Azure.Cosmos.Client.xml" DestinationFolder="$(RATimerPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Bcl.HashCode.xml" DestinationFolder="$(RATimerPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Microsoft.Azure.Cosmos.ServiceInterop.dll" DestinationFolder="$(RATimerPath)\" ContinueOnError="false"/>
+	</Target>
+	<Target Name="CopyStartupFiles">
+		<Copy SourceFiles="$(StartupSecurityUpdatePath)\Startups\SecurityProtocolStartup.bat" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(StartupSecurityUpdatePath)\Startups\NetTcpSharingStartup.bat" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(StartupSecurityUpdatePath)\Startups\SecurityProtocolStartup.bat" DestinationFolder="$(RATimerPath)\" ContinueOnError="false"/>
+
+		<Copy SourceFiles="$(StartupSecurityUpdatePath)\Startups\SecurityProtocolStartup.bat" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="false"/>
+
+		<Copy SourceFiles="$(StartupSecurityUpdatePath)\Startups\SecurityProtocolStartup.bat" DestinationFolder="$(RAProviderWebTempPath)\bin\" ContinueOnError="false"/>
+	</Target>
+	<ItemGroup>
+		<AppDataFiles Include="$(ProjectBasePath)\App_Data\**\*.*" />
+		<AppGlobalResourcesFiles Include="$(ProjectBasePath)\App_GlobalResources\**\*.*"/>
+		<AuiFiles Include="$(ProjectBasePath)\aui\**\*.*" />
+		<DistFiles Include="$(ProjectBasePath)\dist\bundle\*.*" />
+		<ConfigsFiles Include="$(ProjectBasePath)\Config\**\*.*" />
+		<ContentFiles Include="$(ProjectBasePath)\Content\**\*.*" />
+		<ImagesFiles Include="$(ProjectBasePath)\Images\**\*.*" />
+		<ScriptsFiles Include="$(ProjectBasePath)\Scripts\**\*.*" />
+		<ViewsFiles Include="$(ProjectBasePath)\Views\**\*.*" />
+		<ThirdDllsX64Files Include="$(ReleasePath)\x64\**\*.*" />
+		<ThirdDllsX86Files Include="$(ReleasePath)\x86\**\*.*" />
+		<ScheduleConfigsFiles Include="$(ScheduleJobBasePath)\Config\**\*.*" />
+		<TimerWorkerConfigs Include="$(TimerWorkerRoleBasePath)\Config\**\*.*" />
+		<DocAveRefPathFiles Include="$(DocAveRefPath)\*.*" Exclude="$(DocAveRefPath)\Nintex.Workflow.dll"/>
+		<ThirdLicFiles Include="$(WorkingDirectory)\lic\*.*" />
+		<AppScriptsFiles Include="$(AppProjectBasePath)\Scripts\*.*" />
+		<AppViewsFiles Include="$(AppProjectBasePath)\Pages\*.*" />
+		<LoginViewsFiles Include="$(LoginProjectBasePath)\Views\**\*.*" />
+	</ItemGroup>
+	<!-- <Target Name="CopyThirdLicFiles">
+		<Copy SourceFiles="@(ThirdLicFiles)" DestinationFiles="@(ThirdLicFiles -> 'RevIMWorker.ScheduleJob\lic\%(RecursiveDir)%(Filename)%(Extension)')" ContinueOnError="true"/>
+		<Copy SourceFiles="@(ThirdLicFiles)" DestinationFiles="@(ThirdLicFiles -> 'RevIMWorker.Timer\lic\%(RecursiveDir)%(Filename)%(Extension)')" ContinueOnError="true"/>
+		<Copy SourceFiles="@(ThirdLicFiles)" DestinationFiles="@(ThirdLicFiles -> '$(RAWebTempPath)\lic\%(RecursiveDir)%(Filename)%(Extension)')" ContinueOnError="true"/>
+	</Target> -->
+	<Target Name="CopyDAORefFiles">
+		<Copy SourceFiles="@(DocAveRefPathFiles)" DestinationFiles="@(DocAveRefPathFiles -> '$(RAScheduleJobPath)\%(RecursiveDir)%(Filename)%(Extension)')" ContinueOnError="true"/>
+		<Copy SourceFiles="@(DocAveRefPathFiles)" DestinationFiles="@(DocAveRefPathFiles -> '$(RAWebTempPath)\bin\%(RecursiveDir)%(Filename)%(Extension)')" ContinueOnError="true"/>
+		<Copy SourceFiles="$(ReleasePath)\AgentCommonClientRequestCommon.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\AgentCommonObjectModelCommon.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\AgentCommonPSIRequest.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\AgentCommonUtility.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\AgentCommonWebServiceRequest.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\AgentCommonWrapperBackup.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\AgentCommonWrapperCommon.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\AgentCommonWrapperDiscovery.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\AgentCommonWrapperMapping.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\AgentCommonWrapperResource.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\AgentCommonWrapperRestore.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\AgentCommonWrapperSPService.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\AgentCommonWrapperWorkflow.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\CommonContract.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\CommonFileReceiver.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\CommonFileSender.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\CommonMicroKernel.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\CommonNetworkWrapper.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\CommonResources.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\CommonUtility.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\SP2013ClientOMRequest.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Storage.dll" DestinationFolder="$(RAScheduleJobPath)\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\AgentCommonClientRequestCommon.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\AgentCommonObjectModelCommon.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\AgentCommonPSIRequest.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\AgentCommonUtility.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\AgentCommonWebServiceRequest.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\AgentCommonWrapperBackup.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\AgentCommonWrapperCommon.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\AgentCommonWrapperDiscovery.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\AgentCommonWrapperMapping.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\AgentCommonWrapperResource.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\AgentCommonWrapperRestore.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\AgentCommonWrapperSPService.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\AgentCommonWrapperWorkflow.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\CommonContract.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\CommonFileReceiver.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\CommonFileSender.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\CommonMicroKernel.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\CommonNetworkWrapper.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\CommonResources.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\CommonUtility.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\SP2013ClientOMRequest.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="false"/>
+		<Copy SourceFiles="$(ReleasePath)\Storage.dll" DestinationFolder="$(RAWebTempPath)\bin\" ContinueOnError="false"/>
+		
+		
+	</Target>
+	<Target Name="CopyRAWebFiles">
+		<Copy SourceFiles="$(ProjectBasePath)\Web.config" DestinationFolder="$(RAWebTempPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ProjectBasePath)\Images\Base\Favicon.ico" DestinationFolder="$(RAWebTempPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ProjectBasePath)\Global.asax" DestinationFolder="$(RAWebTempPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ProjectBasePath)\RecordsService.asmx" DestinationFolder="$(RAWebTempPath)\" ContinueOnError="true" />
+		<Copy SourceFiles="$(ProjectBasePath)\Dockerfile" DestinationFolder="$(RAWebTempPath)\" ContinueOnError="true" />
+	</Target>
+
+	<Target Name="CopyApp_DataFiles">
+		<Copy SourceFiles="@(AppDataFiles)" DestinationFiles="@(AppDataFiles -> '$(RAWebTempPath)\App_Data\%(RecursiveDir)%(Filename)%(Extension)')" ContinueOnError="true"/>
+	</Target>
+
+	<Target Name="CopyApp_GlobalResourcesFiles">
+		<Copy SourceFiles="@(AppGlobalResourcesFiles)" DestinationFiles="@(AppGlobalResourcesFiles -> '$(RAWebTempPath)\App_GlobalResources\%(RecursiveDir)%(Filename)%(Extension)')" ContinueOnError="true"/>
+	</Target>
+
+	<Target Name="CopyDistFiles">
+		<Copy SourceFiles="@(DistFiles)" DestinationFiles="@(DistFiles -> '$(RAWebTempPath)\dist\bundle\%(RecursiveDir)%(Filename)%(Extension)')" ContinueOnError="true"/>
+	</Target>
+	<Target Name="CopyauiFiles">
+		<Copy SourceFiles="@(AuiFiles)" DestinationFiles="@(AuiFiles -> '$(RAWebTempPath)\aui\%(RecursiveDir)%(Filename)%(Extension)')" ContinueOnError="true"/>
+	</Target>
+	<Target Name="CopyConfigsFiles">
+		<Copy SourceFiles="@(ConfigsFiles)" DestinationFiles="@(ConfigsFiles -> '$(RAWebTempPath)\Config\%(RecursiveDir)%(Filename)%(Extension)')" ContinueOnError="true"/>
+	</Target>
+	<Target Name="CopyContentFiles">
+		<Copy SourceFiles="@(ContentFiles)" DestinationFiles="@(ContentFiles -> '$(RAWebTempPath)\Content\%(RecursiveDir)%(Filename)%(Extension)')" ContinueOnError="true"/>
+	</Target>
+	<Target Name="CopyImagesFiles">
+		<Copy SourceFiles="@(ImagesFiles)" DestinationFiles="@(ImagesFiles -> '$(RAWebTempPath)\Images\%(RecursiveDir)%(Filename)%(Extension)')" ContinueOnError="true"/>
+	</Target>
+	<Target Name="CopyScriptsFiles">
+		<Copy SourceFiles="@(ScriptsFiles)" DestinationFiles="@(ScriptsFiles -> '$(RAWebTempPath)\Scripts\%(RecursiveDir)%(Filename)%(Extension)')" ContinueOnError="true"/>
+	</Target>
+	<Target Name="CopyViewsFiles">
+		<Copy SourceFiles="@(ViewsFiles)" DestinationFiles="@(ViewsFiles -> '$(RAWebTempPath)\Views\%(RecursiveDir)%(Filename)%(Extension)')" ContinueOnError="true"/>
+	</Target>
+	<Target Name="CopyAppScriptsFiles">
+		<Copy SourceFiles="@(AppScriptsFiles)" DestinationFiles="@(AppScriptsFiles -> '$(RAProviderWebTempPath)\Scripts\%(RecursiveDir)%(Filename)%(Extension)')" ContinueOnError="true"/>
+	</Target>
+	<Target Name="CopyAppViewsFiles">
+		<Copy SourceFiles="@(AppViewsFiles)" DestinationFiles="@(AppViewsFiles -> '$(RAProviderWebTempPath)\Pages\%(RecursiveDir)%(Filename)%(Extension)')" ContinueOnError="true"/>
+	</Target>
+	<Target Name="CopyLoginWebViewsFiles">
+		<Copy SourceFiles="@(LoginViewsFiles)" DestinationFiles="@(LoginViewsFiles -> '$(RALoginWebTempPath)\Views\%(RecursiveDir)%(Filename)%(Extension)')" ContinueOnError="true"/>
+	</Target>
+	
+</Project>

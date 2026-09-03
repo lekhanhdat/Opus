@@ -1,0 +1,108 @@
+﻿/********************************************************************
+ *
+ *  PROPRIETARY and CONFIDENTIAL
+ *
+ *  This file is licensed from, and is a trade secret of:
+ *
+ *                   AvePoint, Inc.
+ *                   525 Washington Blvd, Suite 1400
+ *                   Jersey City, NJ 07310
+ *                   United States of America
+ *                   Telephone: +1-201-793-1111
+ *                   WWW: www.avepoint.com
+ *
+ *  Refer to your License Agreement for restrictions on use,
+ *  duplication, or disclosure.
+ *
+ *  RESTRICTED RIGHTS LEGEND
+ *
+ *  Use, duplication, or disclosure by the Government is
+ *  subject to restrictions as set forth in subdivision
+ *  (c)(1)(ii) of the Rights in Technical Data and Computer
+ *  Software clause at DFARS 252.227-7013 (Oct. 1988) and
+ *  FAR 52.227-19 (C) (June 1987).
+ *
+ *  Copyright © 2017-2026 AvePoint® Inc. All Rights Reserved. 
+ *
+ *  Unpublished - All rights reserved under the copyright laws of the United States.
+ */
+using AvePoint.RA.Contract.CodeView;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace AvePoint.RA.DB.Model
+{
+    [RACodeReview("Allen Yin", comment: "目前此表只有一条记录，暂不加索引")]
+    public class RMSchedule : BaseModel
+    {
+        [Key]
+        [Column(TypeName = "nvarchar", Order = 1)]
+        [MaxLength(1024)]
+        public string Id { get; set; }
+
+        [Column(TypeName = "bit")]
+        public bool NoSchedule { get; set; }
+
+        [Column(TypeName = "bigint")]
+        //[Required]
+        public long StartTime { get; set; }
+
+        [Column(TypeName = "bigint")]
+        public long EndTime { get; set; }
+
+        [Column(TypeName = "nvarchar")]
+        [MaxLength(255)]
+        //[Required]
+        public string TimeZoneId{get;set;}
+
+        [Column(TypeName = "bit")]
+        public bool IsDaylightSaving { get; set; }
+
+        [Column(TypeName = "int")]
+        //[Required]
+        public int EndType { get; set; }
+
+        [Column(TypeName = "int")]
+        public int OccurrencesTotal { get; set; }
+
+        [Column(TypeName = "int")]
+        public int Occurrences { get; set; }
+
+        [Column(TypeName = "int")]
+        public int Interval { get; set; }
+
+        [Column(TypeName = "int")]
+        public int IntervalType { get; set; }
+
+        [Column(TypeName = "bigint")]
+        public long NextTime { get; set; }
+
+        [Column(TypeName = "int")]
+        [Required]
+        public int JobCategory { get; set; }
+
+        [Column(TypeName = "nvarchar(max)")]
+        public string ProfileId { get; set; }
+
+        [Column(TypeName = "nvarchar(max)")]
+        public string Extentions { get; set; }
+
+        [Column(TypeName = "bit"), DefaultValue(0)]
+        public bool IsRemoved { set; get; }
+
+        [Column(TypeName = "bit"), DefaultValue(0)]
+        public bool? DAOMigrated { set; get; }
+
+        [Column(TypeName = "int")]
+        public int DayOfMonth { get; set; }
+
+        [Column(TypeName = "int")]
+        public int WeekType { get; set; }
+    }
+}

@@ -1,0 +1,68 @@
+.reco-dashboard-size-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 16px;
+}
+
+.reco-dashboard-size-card {
+  margin: 32px auto;
+
+  .reco-dashboard-empty-content-wrapper {
+    padding: 0;
+  }
+
+}
+
+.reco-dashboard-size-card-title {
+  margin-bottom: 4px;
+  font: normal normal 600 14px/19px "Open Sans", sans-serif;
+  color: #323E4D;
+  text-align: center;
+}
+
+.reco-dashboard-size-card-data {
+  text-align: center;
+}
+
+.reco-dashboard-size-number {
+  font: normal normal 600 40px/55px "Open Sans", sans-serif;
+  color: #323E4D;
+}
+
+.reco-dashboard-size-yearly-number {
+  font: normal normal 600 40px/55px "Open Sans", sans-serif;
+  color: #FF7C00;
+}
+
+.reco-dashboard-size-unit {
+  font: normal normal normal 14px/19px "Open Sans", sans-serif;
+  color: #323E4D;
+}
+
+.reco-dashboard-config {
+  margin-bottom: 16px;
+}
+
+.reco-dashboard-config-title {
+  margin-bottom: 8px;
+  font: normal normal 600 13px/18px "Open Sans", sans-serif;
+  color: #27313C;
+}
+
+.reco-dashboard-config-unit {
+  display: inline-block;
+  margin-left: 8px;
+  font: normal normal normal 13px/18px "Open Sans", sans-serif;
+  color: #27313C;
+}
+
+@media (max-width: 1280px) {
+
+  .reco-dashboard-size-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 16px;
+    row-gap: 16px;
+  }
+
+}

@@ -1,0 +1,21 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx/command-set-extension-manifest.schema.json",
+
+  "id": "92714c8b-9cde-4de3-aa2d-04d258e98816",
+  "alias": "RelatedRecordsCommandSet",
+  "componentType": "Extension",
+  "extensionType": "ListViewCommandSet",
+
+  "version": "*",
+  "manifestVersion": 2,
+
+  "requiresCustomScript": false,
+
+  "items": {
+    "RELATED_RECORDS": {
+      "title": { "default": "Manage related records" },
+      "iconImageUrl": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAD8SURBVHgB3VHLrcIwEJwkfnc6eOHOtwOoBFMBdICoAKgAUwF0gKgA00FKgDMSZtZyIEAUKeLGSrays97JzG6ErnaoGycTPZO6BG/vY3wZ6oVZpFUpepFebKwTv2dBlT7q6QZumCBC+sAcLA1viK+KT+NSZoc9mwc8h3BOPhc8xrJcQe6vpQe8G8z7j5pgCoYER2apVwicYU32uQXFQjHaWiPBNmSZJ0dQQ6KyNWb+7uhFMDmj/DG9j/zfrdnxiA1LbPpJYM2ZDUN+XQKSIkpEejPg+ZxkLv/Ve5cGRwWi6srp34I9RdIEa9bnysurCqk7LPDnB5iHqJxTrbkD4EJZleJCqKEAAAAASUVORK5CYII=",
+      "type": "command"
+    }
+  }
+}

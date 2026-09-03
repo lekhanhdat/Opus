@@ -1,0 +1,570 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AddResourceFileToCTFailed" xml:space="preserve">
+    <value>An error occurred while adding resourceFile to contentType resourceFolder. ContentType name:{0}. fileUrl:{1}. Error message:{2}.</value>
+  </data>
+  <data name="AddRssViewFieldError" xml:space="preserve">
+    <value>An error occurred while adding fields for RssView. Error message:{0}.</value>
+  </data>
+  <data name="AddTagFailed" xml:space="preserve">
+    <value>Restore term failed while adding tag. Url:{0}. Title{1}. Error message: {2}.</value>
+  </data>
+  <data name="AddToRemoveFieldLinkFailed" xml:space="preserve">
+    <value>An error occurred while adding to need remove fieldLinks. Error message:{0}.</value>
+  </data>
+  <data name="BackupListSettingFailed" xml:space="preserve">
+    <value>An error occurred while backuping list setting. Error message:{0}.</value>
+  </data>
+  <data name="CannotDeleteMetadataGroup" xml:space="preserve">
+    <value>Cannot delete old metadata group while restoring metadata group. Error message:{0}.</value>
+  </data>
+  <data name="CannotFindGroup" xml:space="preserve">
+    <value>Cannot find the Group, we will create it. Group title:{0}.Error message:{1}.</value>
+  </data>
+  <data name="CannotGetRoleDefinition" xml:space="preserve">
+    <value>An error occurred while get role definition.Role id:{0}.  Error message:{1}.</value>
+  </data>
+  <data name="CheckNeedAddFieldLinkError" xml:space="preserve">
+    <value>An error occurred while checking need add FieldLink. Error message:{0}.</value>
+  </data>
+  <data name="CreateUserSelectionScopeError" xml:space="preserve">
+    <value>Cannot restore the user selecttion scope while creating a user type field. Error message:{0}.</value>
+  </data>
+  <data name="EnableModifiedFieldError" xml:space="preserve">
+    <value>An error occurred while enableing modified field . Error message:{0}.</value>
+  </data>
+  <data name="FindFieldByObjectError" xml:space="preserve">
+    <value>An error occurred while finding a field. Find option: {0} . Error message:{1}.</value>
+  </data>
+  <data name="FindFieldFailed" xml:space="preserve">
+    <value>An error occurred while finding field in collection.Name:{0}.  Error message:{1}.</value>
+  </data>
+  <data name="FindUserIdFailed" xml:space="preserve">
+    <value>An error occurred while getting user id. Error message:{0}.</value>
+  </data>
+  <data name="GetChoiceFieldFailed" xml:space="preserve">
+    <value>An error occurred while getting the choice field. Error message:{0}.</value>
+  </data>
+  <data name="GetCurrentSPListItemFailed" xml:space="preserve">
+    <value>An error occurred while getting current item. Error message:{0}.</value>
+  </data>
+  <data name="GetFieldError" xml:space="preserve">
+    <value>An error occurred while getting field. Error message:{0}.</value>
+  </data>
+  <data name="GetListItemFailed" xml:space="preserve">
+    <value>An error occurred while getting listitem. Error message:{0}.</value>
+  </data>
+  <data name="GetLookupFieldFailed" xml:space="preserve">
+    <value>An error occurred while getting look up field. Error message:{0}.</value>
+  </data>
+  <data name="GetMetadataValueFailed" xml:space="preserve">
+    <value>An error occurred while getting metadata value by mapping value. Error message:{0}.</value>
+  </data>
+  <data name="GetMetaInfoFailed" xml:space="preserve">
+    <value>Cannot get metainfo while preprocessing restoring item. Error message:{0}.</value>
+  </data>
+  <data name="GetRssViewFailed" xml:space="preserve">
+    <value>An error occurred while getting RssView. Error message:{0}.</value>
+  </data>
+  <data name="GetTaxonomyListFailed" xml:space="preserve">
+    <value>An error occurred while getting taxonomyList. Error message:{0}.</value>
+  </data>
+  <data name="GetUserContentFailed" xml:space="preserve">
+    <value>An error occurred while getting user content. Error message:{0}.</value>
+  </data>
+  <data name="GetXmlDocumentsElementsFailed" xml:space="preserve">
+    <value>An error occurred while getting XmlDocument  Elements. Error message:{0}.</value>
+  </data>
+  <data name="InitialAlertFailed" xml:space="preserve">
+    <value>An error occurred while initialing alert. Error message:{0}.</value>
+  </data>
+  <data name="MergeFileValuesFailed" xml:space="preserve">
+    <value>An error occurred while setting values for mergeing file. Error message:{0}.</value>
+  </data>
+  <data name="OverWriteRetionStreamFailed" xml:space="preserve">
+    <value>An error occurred while overwriting retion stream of file. Error message:{0}.</value>
+  </data>
+  <data name="PreProcessConditionError" xml:space="preserve">
+    <value>An error occurred while preprocessing condition. Error message:{0}.</value>
+  </data>
+  <data name="ReloadFolderError" xml:space="preserve">
+    <value>An error occurred while reloading folder. Error message:{0}.</value>
+  </data>
+  <data name="ReplaceCustomValueError" xml:space="preserve">
+    <value>An error occurred while replacing custom values. Error message:{0}.</value>
+  </data>
+  <data name="ReplaceDataSourceLocationError" xml:space="preserve">
+    <value>Error while replace data source Location. Error message:{0}.</value>
+  </data>
+  <data name="ReplaceFieldRefIDFailed" xml:space="preserve">
+    <value>An error occurred while replacing the id of field. Error message:{0}.</value>
+  </data>
+  <data name="ReplaceMetaInfoFailed" xml:space="preserve">
+    <value>An error occurred while replacing no version meta info. Error message:{0}.</value>
+  </data>
+  <data name="RestoreFieldLinkFailed" xml:space="preserve">
+    <value>An error occurred while restoring contentType fieldLink. FieldLink ID:{0}. FieldLink Name:{1}. Error message:{2}.</value>
+  </data>
+  <data name="RestoreListSettingFailed" xml:space="preserve">
+    <value>An error occurred while restoring  list setting. Error message:{0}.</value>
+  </data>
+  <data name="SetAttributeFailed" xml:space="preserve">
+    <value>An error occurred while setting attribute for updatedefault value. Error message:{0}.</value>
+  </data>
+  <data name="SetFileMetaInfoFailed" xml:space="preserve">
+    <value>An error occurred while setting file metainfo information. Error message:{0}.</value>
+  </data>
+  <data name="SetScopeIdFailed" xml:space="preserve">
+    <value>An error occurred while setting scope id . Error message:{0}.</value>
+  </data>
+  <data name="SetWelcomePageFailed" xml:space="preserve">
+    <value>An error occurred while setting welcome page. Error message:{0}.</value>
+  </data>
+  <data name="SignRoleAssignmentFailed" xml:space="preserve">
+    <value>An error occurred while signing role assignment to a user. Login name:{0}.  Error message:{1}.</value>
+  </data>
+  <data name="UpdateAlertFailed" xml:space="preserve">
+    <value>An error occurred while updating alert. Error message:{0}.</value>
+  </data>
+  <data name="UpdateAttachmentFailed" xml:space="preserve">
+    <value>An error occurred while updating doc property of attachment. Error message:{0}.</value>
+  </data>
+  <data name="UpdateDocumentTemplateUrlFailed" xml:space="preserve">
+    <value>An error occurred while updating DocumentTemplateUrl. List title:{0}, source document template url:{1}. Error message:{2}.</value>
+  </data>
+  <data name="UpdateItemFailed" xml:space="preserve">
+    <value>An error occurred while updating item. Error message:{0}.</value>
+  </data>
+  <data name="UpdateListFailed" xml:space="preserve">
+    <value>An error occurred while updating list created by native. Error message:{0}.</value>
+  </data>
+  <data name="UpdateListLookUpFailed" xml:space="preserve">
+    <value>An error occurred while updating list lookup properties. Error message:{0}.</value>
+  </data>
+  <data name="AddDicDestPolicyFailed" xml:space="preserve">
+    <value>An error occurred while adding dic dest policy. Error message:{0}.</value>
+  </data>
+  <data name="CannotFindRole" xml:space="preserve">
+    <value>Cannot find role in role definition cache. RoleId:{0}, PrincipalId:{1}.Error message:{2}.</value>
+  </data>
+  <data name="CannotFindUserProfile" xml:space="preserve">
+    <value>Cannot find the user profile for user [{0}]. Error message:{1}.</value>
+  </data>
+  <data name="CannotUpdateMemberShip" xml:space="preserve">
+    <value>Cannot update membership. Error message:{0}.</value>
+  </data>
+  <data name="ClearAllRoleAssignments" xml:space="preserve">
+    <value>An error occurred while clearing all role assignment because the site is new ctreated.Web url:{0}. Error message:{1}.</value>
+  </data>
+  <data name="CreateNewWebError" xml:space="preserve">
+    <value>An error occurred while creating new web. SiteUrl:{0}, WebName:{1}, LCID:{2}, Template:{3}, HasUniqueRoleDefinitions:{4}. Error message:{5}.</value>
+  </data>
+  <data name="FindOrCreateUserProfileError" xml:space="preserve">
+    <value>Create user profile if cannot find the user profile.Error message:{0}.</value>
+  </data>
+  <data name="FindParentAssociationFailed" xml:space="preserve">
+    <value>An error occurred while finding parent association. Error message:{0}.</value>
+  </data>
+  <data name="GetCheckOutUserFailed" xml:space="preserve">
+    <value>An error occurred while getting checkout user. Error message:{0}.</value>
+  </data>
+  <data name="GetDestSelfHiddenFailed" xml:space="preserve">
+    <value>An error occurred while getting dest self hidden. Error message:{0}.</value>
+  </data>
+  <data name="GetFieldDoubleValueFailed" xml:space="preserve">
+    <value>An error occurred while getting double field's value. Error message:{0}.</value>
+  </data>
+  <data name="GetFieldIntValueFailed" xml:space="preserve">
+    <value>An error occurred while getting int field value. Error message:{0}.</value>
+  </data>
+  <data name="GetIdFailed" xml:space="preserve">
+    <value>An error occurred while getting id to replace. Error message:{0}.</value>
+  </data>
+  <data name="GetListTaxonomyFieldsFailed" xml:space="preserve">
+    <value>An error occurred while getting list taxonomy fields. List title:{0}. Error message:{1}.</value>
+  </data>
+  <data name="GetMemberShipFailed" xml:space="preserve">
+    <value>An error occurred while getting member ship. Error message:{0}.</value>
+  </data>
+  <data name="GetScopeFailed" xml:space="preserve">
+    <value>An error occurred while getting scope. Error message:{0}.</value>
+  </data>
+  <data name="GetTermFailed" xml:space="preserve">
+    <value>An error occurred while getting term for updating tag. Error message:{0}.</value>
+  </data>
+  <data name="GetUserIdByNameFailed" xml:space="preserve">
+    <value>An error occurred while getting user id by name.User name:{0}.  Error message:{1}.</value>
+  </data>
+  <data name="GetWebsAndPagesFailed" xml:space="preserve">
+    <value>An error occurred while getting webs and pages. Error message:{0}.</value>
+  </data>
+  <data name="GetWFRunningInstance" xml:space="preserve">
+    <value>An error occurred while getting workflow running instance. Error message:{0}.</value>
+  </data>
+  <data name="InheritWebPropertyFailed" xml:space="preserve">
+    <value>An error occurred while inherting web property. Web url:{0}. Error message:{1}.</value>
+  </data>
+  <data name="RealRestoreWebPartFailed" xml:space="preserve">
+    <value>An error occurred while restoring webpart really. Error message:{0}.</value>
+  </data>
+  <data name="ReloadAllError" xml:space="preserve">
+    <value>An error occurred while reloading all. Error message:{0}.</value>
+  </data>
+  <data name="ReloadHiddenWebOrPagesFailed" xml:space="preserve">
+    <value>An error occurred while load hidden webs and pages. Error message:{0}.</value>
+  </data>
+  <data name="ReplaceIdInUrlFailed" xml:space="preserve">
+    <value>An error occurred while replacing id in url. Error message:{0}.</value>
+  </data>
+  <data name="RestoreAssociationDataInternalError" xml:space="preserve">
+    <value>An error occurred while restoring association data internally. Error message:{0}.</value>
+  </data>
+  <data name="RestoreInstanceError" xml:space="preserve">
+    <value>An error occurred while restoring workflow instance. Error message:{0}.</value>
+  </data>
+  <data name="SetColleaguePolicyError" xml:space="preserve">
+    <value>An error occurred while setting colleague policy. Colleague title:{0}. Error message:{1}.</value>
+  </data>
+  <data name="SetCustomizationFailed" xml:space="preserve">
+    <value>An error occurred while setting customizations. Error message:{0}.</value>
+  </data>
+  <data name="SetItemFieldError" xml:space="preserve">
+    <value>An error occurred while setting item field. Fiel name:{0},Value:{1}. Error message:{2}.</value>
+  </data>
+  <data name="SetMinAndMaxValueFailed" xml:space="preserve">
+    <value>An error occurred while setting min and max value. Error message:{0}.</value>
+  </data>
+  <data name="SetViewFieldFailed" xml:space="preserve">
+    <value>An error occurred while setting view field.View title:{0}.Error message:{1}.</value>
+  </data>
+  <data name="UpdateCollegueFailed" xml:space="preserve">
+    <value>An error occurred while updating collegue. Error message:{0}.</value>
+  </data>
+  <data name="GetContentTypeDocumentTemplateFailed" xml:space="preserve">
+    <value>An error occurred while getting the contentType document template. ContentType id:{0}, ContentType name:{1}. Error message:{2}.</value>
+  </data>
+  <data name="RestoreContentTypeXmlDocumentFailed" xml:space="preserve">
+    <value>An error occurred while restoring contentType xmlDocument. ContentType id:{0}.	 ContentType name:{1}. Error message:{2}.</value>
+  </data>
+  <data name="AveObjectSecuritySettingInfoIsNull" xml:space="preserve">
+    <value>{0} is null may cause security restored uncorrectly,please set {0} if you don't restore property</value>
+  </data>
+  <data name="NeedRestoreRolesHere" xml:space="preserve">
+    <value>Cann't find role is current web.Message: {0}</value>
+  </data>
+  <data name="RestoreRolesWhenRestoreRoleAssignmentFailed" xml:space="preserve">
+    <value>Restore roles failed when restore role assignment of {0}.</value>
+  </data>
+  <data name="ActiateFeatureFail" xml:space="preserve">
+    <value>Cannot active feature, Id:{0}, Reason:{1}.</value>
+  </data>
+  <data name="AddPolicyIdError" xml:space="preserve">
+    <value>An error occurred while adding policy id  .Error message:{0}.</value>
+  </data>
+  <data name="CheckListEqualError" xml:space="preserve">
+    <value>An error occurred while checking two lists whether equal  .Error message:{0}.</value>
+  </data>
+  <data name="ConvertXmlToContentTypeError" xml:space="preserve">
+    <value>An error occurred while convert xml to content type .Error message:{0}.</value>
+  </data>
+  <data name="ConvertXmlToFieldIDMappingError" xml:space="preserve">
+    <value>An error occurred while convert xml to field id mapping .Error message:{0}.</value>
+  </data>
+  <data name="CreateListError" xml:space="preserve">
+    <value>An error occurred while creating list .Error message:{0}.</value>
+  </data>
+  <data name="CreateWebAppByUrlError" xml:space="preserve">
+    <value>An error occurred while creating web application by url .Error message:{0}.</value>
+  </data>
+  <data name="DeleteFileError" xml:space="preserve">
+    <value>An error occurred while deleting file .Error message:{0}.</value>
+  </data>
+  <data name="FindFieldInCollectionError" xml:space="preserve">
+    <value>An error occurred while finding field in collection .Error message:{0}.</value>
+  </data>
+  <data name="GetFieldByInternalNameError" xml:space="preserve">
+    <value>An error occurred while getting field by internal name .Error message:{0}.</value>
+  </data>
+  <data name="GetFieldSchemaXmlError" xml:space="preserve">
+    <value>An error occurred while getting field schemaXml.Error message:{0}.</value>
+  </data>
+  <data name="GetFileByNameError" xml:space="preserve">
+    <value>An error occurred while getting file by name .Error message:{0}.</value>
+  </data>
+  <data name="GetFileFromIdError" xml:space="preserve">
+    <value>An error occurred while getting file from id .Error message:{0}.</value>
+  </data>
+  <data name="GetFileFromURLError" xml:space="preserve">
+    <value>An error occurred while getting file from url .Error message:{0}.</value>
+  </data>
+  <data name="GetFolderByNameError" xml:space="preserve">
+    <value>An error occurred while getting folder by name .Error message:{0}.</value>
+  </data>
+  <data name="GetGroupIdFromMemberNameFaild" xml:space="preserve">
+    <value>An error occurred while getting group id by member name .Error message:{0}.</value>
+  </data>
+  <data name="GetListViewByNameError" xml:space="preserve">
+    <value>An error occurred while getting list view by name  .Error message:{0}.</value>
+  </data>
+  <data name="GetRolePermissionError" xml:space="preserve">
+    <value>An error occurred while getting role permission .Error message:{0}.</value>
+  </data>
+  <data name="GetSourceTextTaxonomyDic" xml:space="preserve">
+    <value>An error occurred while getting source text taxonomy .Error message:{0}.</value>
+  </data>
+  <data name="GetSPUserByIdError" xml:space="preserve">
+    <value>An error occurred while getting user by id .Error message:{0}.</value>
+  </data>
+  <data name="GetTermByNameError" xml:space="preserve">
+    <value>An error occurred while getting term by internal name .Error message:{0}.</value>
+  </data>
+  <data name="GetTermDestinationError" xml:space="preserve">
+    <value>Cannot get termStore in Destination.termStoreName:{0},Error message:{1}</value>
+  </data>
+  <data name="GetTermSetByNameError" xml:space="preserve">
+    <value>An error occurred while getting term set by internal name .Error message:{0}.</value>
+  </data>
+  <data name="GetUserByNameError" xml:space="preserve">
+    <value>An error occurred while getting userby name .Error message:{0}.</value>
+  </data>
+  <data name="GetUserByUrlError" xml:space="preserve">
+    <value>An error occurred while getting user by url .Error message:{0}.</value>
+  </data>
+  <data name="GetUserDataFromDiscussionError" xml:space="preserve">
+    <value>An error occurred while getting user data from discussion board .Error message:{0}.</value>
+  </data>
+  <data name="GetUserIdFromWebError" xml:space="preserve">
+    <value>An error occurred while getting user id from web .Error message:{0}.</value>
+  </data>
+  <data name="GetUserProfileByUsrNameFaild" xml:space="preserve">
+    <value>Cannot get user profile by user name .Login name:{0}. Error message:{0}.</value>
+  </data>
+  <data name="MergeFileError" xml:space="preserve">
+    <value>Merge the file: {0} failed. /Forms/client_LocationBasedDefaults.html.Error message:{1}</value>
+  </data>
+  <data name="ReloadListError" xml:space="preserve">
+    <value>An error occurred while reloading list  .Error message:{0}.</value>
+  </data>
+  <data name="ReplaceXmlLinksError" xml:space="preserve">
+    <value>An error occurred while replacing xml links .Error message:{0}.</value>
+  </data>
+  <data name="RestoreDisplayGroupError" xml:space="preserve">
+    <value>An error occurred while restoring display group .Error message:{0}.</value>
+  </data>
+  <data name="RestoreSearchScopeError" xml:space="preserve">
+    <value>An error occurred while restoring search scope .Error message:{0}.</value>
+  </data>
+  <data name="SetDisplayTimeError" xml:space="preserve">
+    <value>An error occurred while setting display time .Error message:{0}.</value>
+  </data>
+  <data name="SetWebSafeUpdateError" xml:space="preserve">
+    <value>An error occurred while getting setting web safe updating.Error message:{0}.</value>
+  </data>
+  <data name="UpdateCheckUserIdError" xml:space="preserve">
+    <value>An error occurred while updating check user id  .Error message:{0}.</value>
+  </data>
+  <data name="UpdateContentTypeError" xml:space="preserve">
+    <value>An error occurred while updating content type .Error message:{0}.</value>
+  </data>
+  <data name="UpdateItemError" xml:space="preserve">
+    <value>An error occurred while updating item error .Error message:{0}.</value>
+  </data>
+  <data name="UpdateListContentTypeError" xml:space="preserve">
+    <value>An error occurred while updating list content type .Error message:{0}.</value>
+  </data>
+  <data name="GetUserProfileByUsrNameFail" xml:space="preserve">
+    <value>Cannot get user profile. Login name:{0}.Error message:{1}.</value>
+  </data>
+  <data name="GetListByNameError" xml:space="preserve">
+    <value>An error occurred while getting list by name .Error message:{0}.</value>
+  </data>
+  <data name="CannotGetTermStore" xml:space="preserve">
+    <value>Cannot get termStore in Destination.termStoreName:{0}.Error message:{1}.</value>
+  </data>
+  <data name="ClearTermError" xml:space="preserve">
+    <value>An error occurred while clearing item. Error message:{0}.</value>
+  </data>
+  <data name="CommitTermStoreError" xml:space="preserve">
+    <value>An error occurred while commiting term store. Error message:{0}.</value>
+  </data>
+  <data name="ConverToFieldAttributeError" xml:space="preserve">
+    <value>An error occurred while converting XML to field attribute. Error message:{0}.</value>
+  </data>
+  <data name="CreateSiteCollectionError" xml:space="preserve">
+    <value>An error occurred while creating site collection. Error message:{0}.</value>
+  </data>
+  <data name="GetAlertError" xml:space="preserve">
+    <value>An error occurred while getting alert by id. Error message:{0}.</value>
+  </data>
+  <data name="GetUserByIdError" xml:space="preserve">
+    <value>An error occurred while getting user by id. Error message:{0}.</value>
+  </data>
+  <data name="MergeFileFailed" xml:space="preserve">
+    <value>Merge the file: {0} failed.</value>
+  </data>
+  <data name="UpdateListFieldError" xml:space="preserve">
+    <value>An error occurred while updating list field. Error message:{0}.</value>
+  </data>
+  <data name="GetLoginUserError" xml:space="preserve">
+    <value>An error occurred while getting login user. Error message:{0}.</value>
+  </data>
+  <data name="SortSourceFieldFailed" xml:space="preserve">
+    <value>An error occurred while sorting source field. Error message:{0}.</value>
+  </data>
+  <data name="SortFieldValueFailed" xml:space="preserve">
+    <value>An error occurred while sorting field value. Error message{0}.</value>
+  </data>
+  <data name="CannotFindUser" xml:space="preserve">
+    <value>Cannot find the User, User's name :{0}.Error message:{1}.</value>
+  </data>
+  <data name="WorkflowPostAction" xml:space="preserve">
+    <value>An error occurred while executing workflow post action.{0}.</value>
+  </data>
+  <data name="CompatibilityLevelConflictError" xml:space="preserve">
+    <value>The experience versions of the source and destination site templates do no match.</value>
+  </data>
+  <data name="GroupRestoreFailError" xml:space="preserve">
+    <value>An error occured while restore the group {0}, restore failed.</value>
+  </data>
+  <data name="GroupRestoreSkipError" xml:space="preserve">
+    <value>The group {0} has already existed, it is not necessary to restore it.</value>
+  </data>
+  <data name="UserRestoreFailError" xml:space="preserve">
+    <value>An error occured while restore the user {0}, restore failed.</value>
+  </data>
+  <data name="UserRestoreSkipError" xml:space="preserve">
+    <value>The user {0} has already existed, it is not necessary to restore it.</value>
+  </data>
+  <data name="RestoreWebWelcomePageFailed" xml:space="preserve">
+    <value>An error occurred while restore welcome page, Web:{0}, Welcome Page:{1}, Error:{2}.</value>
+  </data>
+  <data name="UserHasRestored" xml:space="preserve">
+    <value>"DocAve has already restored a user whose Id is {0}."</value>
+  </data>
+  <data name="FakeUserRestoreSkipError" xml:space="preserve">
+    <value>The user {0} was skipped, because itcan not be added  in destination environment.</value>
+  </data>
+  <data name="RestoreNintexFormFailed" xml:space="preserve">
+    <value>An error occurred while restoring nintex form of content type:{0} in the list:{1}, Error:{2}</value>
+  </data>
+  <data name="RestoreNintexFormInPostActionFailed" xml:space="preserve">
+    <value>An error occurred while restoring nintex form of content type:{0} in the list:{1} in post action, Error:{2}</value>
+  </data>
+</root>

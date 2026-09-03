@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5BFF8CBD-95AF-4367-8AC2-9E6CF5CCFEDE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AvePoint.Wrapper.QueryService</RootNamespace>
+    <AssemblyName>SP2016WrapperQueryService</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\..\bin\Agent\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\..\bin\Agent\Release\</OutputPath>
+    <DefineConstants>TRACE;CODE_ANALYSIS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <WarningsAsErrors>0168</WarningsAsErrors>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>DocAveStandard.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'DebugWithoutUnitTest|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\DebugWithoutUnitTest\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AveQueryString16.cs" />
+    <Compile Include="BusinessLayer\BusinessLayerForBackupRestore.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QueryService\Attribute\QueryServiceLogicAttribute.cs" />
+    <Compile Include="QueryService\AveQueryService.cs" />
+    <Compile Include="SP2016QueryString\AveQueryStringCommonUtility.cs" />
+    <Compile Include="QueryService\BackupRestore\QueryService.BackupRestore.Site.cs" />
+    <Compile Include="QueryService\CommonQuery\AveQueryService.CentralAdmin.cs" />
+    <Compile Include="QueryService\CommonQuery\AveQueryService.Common.cs" />
+    <Compile Include="QueryService\Discover\AveDiscoverSqlUtility.cs" />
+    <Compile Include="QueryService\Discover\AveQueryService.Discover.cs" />
+    <Compile Include="QueryService\CommonQuery\AveQueryService.MetadataService.cs" />
+    <Compile Include="BusinessLayer\BusinessLayerForDiscover.cs" />
+    <Compile Include="SP2016QueryString\SP2016DeleteQueryString.cs" />
+    <Compile Include="SP2016QueryString\SP2016DiscoverQueryStringSelectMethod.cs" />
+    <Compile Include="SP2016QueryString\SP2016InsertQueryString.cs" />
+    <Compile Include="SP2016QueryString\SP2016SelectQueryString.cs" />
+    <Compile Include="SP2016QueryString\SP2016UpdateQueryString.cs" />
+    <Compile Include="QueryService\BackupRestore\QueryService.BackupRestore.Alert.cs" />
+    <Compile Include="QueryService\BackupRestore\QueryService.BackupRestore.Apps.cs" />
+    <Compile Include="QueryService\BackupRestore\QueryService.BackupRestore.Attachment.cs" />
+    <Compile Include="QueryService\BackupRestore\QueryService.BackupRestore.cs" />
+    <Compile Include="QueryService\BackupRestore\QueryService.BackupRestore.RBS.cs" />
+    <Compile Include="QueryService\BackupRestore\QueryService.BackupRestore.Version.cs" />
+    <Compile Include="QueryService\BackupRestore\QueryService.BackupRestore.WebParts.cs" />
+    <Compile Include="QueryService\BackupRestore\QueryService.BackupRestore.Workflow.cs" />
+    <Compile Include="QueryService\ReportCenter\QueryService.Auditor.cs" />
+    <Compile Include="QueryService\ReportCenter\QueryService.ReportCenter.cs" />
+    <Compile Include="QueryService\StorageOptimization\QueryService.Connector.cs" />
+    <Compile Include="QueryService\StorageOptimization\QueryService.SOIntegration.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\GCommon\GCommonContract\DocAve.GCommonContract.csproj">
+      <Project>{361f3c7c-abbf-42d5-975a-65e4e9866068}</Project>
+      <Name>DocAve.GCommonContract</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\GCommon\GCommonUtility\DocAve.GCommonUtility.csproj">
+      <Project>{7151e862-a761-4a90-ace6-37d7442047a6}</Project>
+      <Name>DocAve.GCommonUtility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\GCommon\CommonUtility30\DocAve.CommonUtility30.csproj">
+      <Project>{abf32db9-9d2a-4f78-96b5-e2b1fac08658}</Project>
+      <Name>DocAve.CommonUtility30</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Wrapper.Core\Wrapper.Common\Wrapper.Common.csproj">
+      <Project>{9380e15e-5f69-4f2c-889f-e04756f6ccca}</Project>
+      <Name>Wrapper.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Wrapper.Core\Wrapper.Contract\Wrapper.Contract.csproj">
+      <Project>{b6805753-b35a-4df5-a3a4-27e6868dee09}</Project>
+      <Name>Wrapper.Contract</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Wrapper.Core\Wrapper.CustomUtility\Wrapper.CustomUtility.csproj">
+      <Project>{5ff18312-8da2-4abf-bc20-805a18065db6}</Project>
+      <Name>Wrapper.CustomUtility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Wrapper.Core\Wrapper.Resource\Wrapper.Resource.csproj">
+      <Project>{f977bd26-9dd0-4b6d-95da-58096dca1913}</Project>
+      <Name>Wrapper.Resource</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="QueryService\BackupRestore\QueryService.BackupRestore.FieldsAndContentTypes.cs" />
+    <Compile Include="QueryService\BackupRestore\QueryService.BackupRestore.Item.cs" />
+    <Compile Include="QueryService\BackupRestore\QueryService.BackupRestore.List.cs" />
+    <Compile Include="QueryService\BackupRestore\QueryService.BackupRestore.Security.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SP2016QueryString\QueryStringNameSpecification.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="QueryService\BackupRestore\QueryService.BackupRestore.Web.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="DocAveStandard.snk" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,12 @@
+<!--Covered by AvePoint copyright and license agreement-->
+<template>
+    <div class={containerClass}>
+        <div class="no-license-avatar"></div>
+        <div>{messageTitle}</div>
+        <span if:true={isMissingConfigError}>
+            {missingConfigPrefix}
+            <a href={userguideLink} target="_blank">{missingConfigGuide}</a>
+        </span>
+        <span>{errorMessage}</span>
+    </div>
+</template>

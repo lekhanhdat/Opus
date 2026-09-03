@@ -1,0 +1,144 @@
+﻿/*Covered by AvePoint copyright and license agreement*/
+/* Code Review Whole File */
+.ra-topMessageBar {
+    position: relative;
+    background-color: rgb(236, 249, 255);
+    border: 1px solid rgb(84, 171, 232);
+}
+.ra-topMessageBar-icon {
+    position: absolute;
+    top: 6px;
+    left: 8px;
+    width: 16px;
+    height: 16px;
+    background-image: url("/aui/image/messagebar.png");
+    background-position: -16px 0;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.ra-topMessageBar-message {
+    font-family: "Segoe UI", sans-serif;
+    font-size: 14px;
+    color: #222222;
+    line-height: 14px;
+    padding: 7px 30px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+    .ra-topMessageBar-message a {
+        text-decoration: none;
+    }
+
+        .ra-topMessageBar-message a :hover {
+            text-decoration: underline;
+        }
+
+.ra-topMessageBar-close-border {
+    height: 28px;
+    width: 28px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    cursor: pointer;
+}
+
+.ra-topMessageBar-close {
+    position: relative;
+    top: 5px;
+    right: -6px;
+    width: 16px;
+    height: 16px;
+    background-image: url("/aui/image/messagebar.png");
+    background-position: -64px 0;
+    cursor: pointer;
+}
+
+    .ra-topMessageBar-close:hover {
+        background-image: url("/aui/image/messagebar.png");
+        background-position: -96px 0;
+        color: black;
+    }
+
+.ra-topMessageBar-icon, .ra-topMessageBar-close {
+    display: inline-block;
+}
+
+
+
+/* jquery ui slider */
+.ui-slider-horizontal {
+    height: 0;
+}
+
+.ui-slider .ui-slider-handle {
+    height: 10px;
+    width: 4px;
+    background: #0079DD;
+    border-bottom: 0px;
+    margin-left: -2.5px;
+    cursor: pointer;
+}
+
+.ui-widget-header {
+    background-color: #0079DD;
+}
+
+.ui-slider-horizontal .ui-slider-range-min {
+    height: 1.5px;
+}
+
+.ui-state-focus {
+    outline-color: white;
+}
+
+.ra-slider-pips {
+    margin-bottom: 2em;
+    background-color: red;
+}
+
+.ra-slider-pip {
+    width: 4em;
+    height: 3em;
+    line-height: 1em;
+    position: absolute;
+    font-size: 0.6em;
+    overflow: visible;
+    text-align: center;
+    top: -25px;
+    left: 20px;
+    margin-left: -2em;
+    cursor: pointer;
+}
+
+.ra-slider-pip:hover {
+    color: black;
+    font-weight: bold;
+}
+
+.ra-slider-line {
+    width: 1px;
+    height: 5px;
+    position: absolute;
+    left: 50%;
+    top: -50%;
+    background: black;
+    display: none;
+}
+
+.ra-slider-number {
+    top: 50%;
+    left: 0.5em;
+    margin-left: 0;
+    margin-top: -0.5em;
+    width: 2em;
+}
+
+.ra-slider-pip-show {
+    display: block;
+}
+
+.ra-slider-pip-hide {
+    display: none;
+}

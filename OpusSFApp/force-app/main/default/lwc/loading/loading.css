@@ -1,0 +1,44 @@
+/*Covered by AvePoint copyright and license agreement*/
+.overlay {
+    position: fixed;
+    top: 85px;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 85px);
+    background: rgba(240, 238, 238, 0.644);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.spinner-container {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0.5;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0.5;
+    }
+}
+
+.loading-text {
+    z-index: 1001;
+    margin-left: 170px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #747474;
+    animation: fade 4s infinite ease-in-out;
+}

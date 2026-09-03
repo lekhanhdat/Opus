@@ -1,0 +1,38 @@
+﻿@*Covered by AvePoint copyright and license agreement*@
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>@RASPAppWeb.Resources.RelatedRecords.RM_App_HomePageTitle</title>
+    <link href="~/css/appMain.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="divPage">
+        <div id="header">
+            <div id="hDesc">@RASPAppWeb.Resources.RelatedRecords.RM_App_HomePageTitle</div>
+        </div>
+        <div id="divContent">
+            <div id="topDiv">
+                <div id="appIcon1"></div>
+                <div id="appDeploy" class="appDivTile">@RASPAppWeb.Resources.RelatedRecords.RM_App_InstallTitle</div>
+                <div id="appDeployDes" class="appDivDes">@RASPAppWeb.Resources.RelatedRecords.RM_App_DeployDescription</div>
+            </div>
+
+            <div id="bottomDiv">
+                <div id="appIcon2"></div>
+                <div id="appInstall" class="appDivTile">@RASPAppWeb.Resources.RelatedRecords.RM_App_InstallTitle</div>
+                <div id="appInstallDes" class="appDivDes">@RASPAppWeb.Resources.RelatedRecords.RM_App_InstallDescription</div>
+            </div>
+        </div>
+        <div id="guideDiv">
+            <div id="guideLink">
+                <a class="link" target="_blank" href="@RASPAppWeb.RMEnvConfig.CDNURL">@RASPAppWeb.Resources.RelatedRecords.RM_App_GuideLink</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

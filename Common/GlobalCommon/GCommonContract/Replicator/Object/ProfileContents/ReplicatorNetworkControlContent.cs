@@ -1,0 +1,100 @@
+﻿/********************************************************************
+ *
+ *  PROPRIETARY and CONFIDENTIAL
+ *
+ *  This file is licensed from, and is a trade secret of:
+ *
+ *                   AvePoint, Inc.
+ *                   525 Washington Blvd, Suite 1400
+ *                   Jersey City, NJ 07310
+ *                   United States of America
+ *                   Telephone: +1-201-793-1111
+ *                   WWW: www.avepoint.com
+ *
+ *  Refer to your License Agreement for restrictions on use,
+ *  duplication, or disclosure.
+ *
+ *  RESTRICTED RIGHTS LEGEND
+ *
+ *  Use, duplication, or disclosure by the Government is
+ *  subject to restrictions as set forth in subdivision
+ *  (c)(1)(ii) of the Rights in Technical Data and Computer
+ *  Software clause at DFARS 252.227-7013 (Oct. 1988) and
+ *  FAR 52.227-19 (C) (June 1987).
+ *
+ *  Copyright © 2017-2026 AvePoint® Inc. All Rights Reserved. 
+ *
+ *  Unpublished - All rights reserved under the copyright laws of the United States.
+ */
+
+
+
+
+
+using System.Runtime.Serialization;
+using AvePoint.GCommon.Contract.Common;
+using AvePoint.GCommon.Contract.Server.Common.Profile.Object;
+
+namespace AvePoint.GCommon.Contract.Replicator.Object.ProfileContents
+{
+    [DataContract(Namespace = ContractConstants.Namespace)]
+    public class ReplicatorNetworkControlContent : IProfileContent
+    {
+        #region Default values
+        
+        private int _workingHoursBegin = 9;
+        private int _workingHoursTo = 18;
+        private AveDayOfWeek _workingDays =
+            AveDayOfWeek.Monday | AveDayOfWeek.Tuesday |
+            AveDayOfWeek.Wednesday | AveDayOfWeek.Thursday |
+            AveDayOfWeek.Friday;
+
+        private TimeUnit retryDelayUnit = TimeUnit.Minutes;
+
+        #endregion
+
+        [DataMember]
+        public string Description { get; set; }
+
+        [DataMember]
+        public NetworkSpeed WorkingHoursSpeed { get; set; }
+
+        [DataMember]
+        public NetworkSpeed NonWorkingHoursSpeed { get; set; }
+
+        [DataMember]
+        public int WorkingHoursBegin
+        {
+            get { return _workingHoursBegin; }
+            set { _workingHoursBegin = value; }
+        }
+
+        [DataMember]
+        public int WorkingHoursTo
+        {
+            get { return _workingHoursTo; }
+            set { _workingHoursTo = value; }
+        }
+
+        [DataMember]
+        public AveDayOfWeek WorkingDays
+        {
+            get { return _workingDays; }
+            set { _workingDays = value; }
+        }
+
+        [DataMember]
+        public int RetryDelay { get; set; }
+
+        [DataMember]
+        public TimeUnit RetryDelayUnit
+        {
+            get { return retryDelayUnit; }
+            set { retryDelayUnit = value; }
+        }
+
+        [DataMember]
+        public int NumberOfRetries { get; set; }
+
+    }
+}

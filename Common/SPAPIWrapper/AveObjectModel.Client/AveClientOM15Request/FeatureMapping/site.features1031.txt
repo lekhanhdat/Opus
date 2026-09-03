@@ -1,0 +1,32 @@
+﻿063c26fa-3ccc-4180-8a84-b6f98e991df3*Bibliotheks- und ordnerbasierte Aufbewahrung*Listenadministratoren das Außerkraftsetzen von Inhaltstyp-Aufbewahrungszeitplänen sowie das Festlegen von Zeitplänen für Bibliotheken und Ordner erlauben.
+0af5989a-3aea-4519-8ab0-85d91abe39ff*Workflows*Aggregierte Sammlung der von SharePoint bereitgestellten Out-of-Box-Workflowfeatures.
+151d22d9-95a8-4904-a0a3-22e4db85d1e0*Websiteübergreifende Veröffentlichung von Sammlungen*Aktiviert die Websitesammlung, sodass Listen und Dokumentbibliotheken als Katalogquellen für die websiteübergreifende Veröffentlichung von Sammlungen definiert werden.
+1d253548-c70d-40fd-9930-9d313bedc359*Project Web App-Menüband*Enthält die Menüband-Steuerelemente für Project Web App-Seiten
+2fcd5f8a-26b7-4a6a-9755-918566dba90a*Websiterichtlinie*Ermöglicht Websitesammlungs-Administratoren Aufbewahrungszeitpläne für eine Website und ihre Inhalte zu definieren.
+3bae86a2-776d-499d-9db8-fa4cdc7884f8*Dokumentenmappen*Stellt die Inhaltstypen zur Verfügung, die für das Erstellen und Verwenden von Dokumentenmappen erforderlich sind. Erstellen Sie eine Dokumentenmappe, wenn Sie mehrere Dokumente als ein einzelnes Arbeitsprodukt verwalten möchten.
+57ff23fc-ec05-4dd8-b7ed-d93faa7c795d*Benutzerdefinierte Hilfe zu Websitesammlung*Erstellt eine Hilfebibliothek, die zum Speichern der benutzerdefinierten Hilfe für diese Websitesammlung verwendet werden kann.
+697c64b9-3dff-4981-9394-0a62632120ec*Project Web App-Einstellungen*Project Web App PMO-Einstellungen
+6abbc685-51bd-4999-946b-b2946fb80981*Mustervorschlag*Sample workflow for Project Server
+6e1e5426-2ebd-4871-8027-c5ca86371ead*Video und Rich-Media*Umfasst Bibliotheken, Inhaltstypen und Webparts zum Speichern, Verwalten und Anzeigen von Rich-Media-Ressourcen wie Bilder, Audioclips und Videos.
+7094bd89-2cfe-490a-8c7e-fbace37b4a34*Berichterstellung*Erstellt Berichte zu Informationen in Microsoft SharePoint Foundation.
+77fc9e13-e99a-4bd3-9438-a3f69670ed97*Suchmaschinen-Sitemap*Dieses Feature verbessert die Suchmaschinenoptimierung einer Website, indem regelmäßig automatisch eine Suchmaschinen-Sitemap generiert wird, die alle gültigen URLs einer SharePoint-Website enthält. Für dieses Feature muss der anonyme Zugriff aktiviert sein.
+7c637b23-06c4-472d-9a9a-7c175762c5c4*Sperrmodus zur Benutzerberechtigung für beschränkten Zugriff*Wenn dieses Feature aktiviert ist, sind Berechtigungen für Benutzer mit der Berechtigungsstufe „beschränkter Zugriff“ (z. B. anonyme Benutzer) eingeschränkt, wodurch der Zugriff auf Anwendungsseiten verhindert wird.
+7dd73b7c-8763-4f4f-82f5-4927db8c9a90*Hilfeauflistung für Duet-Endbenutzer*Aktiviert die Hilfeauflistung für Duet-Endbenutzer.
+8581a8a7-cf16-4770-ac54-260265ddb0b2*Features von Websitesammlungen in SharePoint Server Enterprise*In der SharePoint Server Enterprise-Lizenz enthaltene Features wie z. B. InfoPath Forms Services, Visio Services, Access Services und die Anwendung Excel Services.
+8a4b8de2-6fd8-41e9-923c-c7c3c00f8295*Dokumente standardmäßig in Clientanwendungen öffnen*Konfiguriert Verknüpfungen mit Dokumenten so, dass diese standardmäßig in Clientanwendungen anstatt in Webanwendungen geöffnet werden.
+8dab53d8-e0cf-4595-b192-f71e1823f056*Überprüfen*Definition und Deklaration von Überprüfung aktivieren.
+96c85529-98f5-4a10-8ff5-2a479d34a92a*Project Web App-Berechtigungen für Excel Web App-Aktualisierung*Wenn dieses Feature aktiv ist, können Benutzer Berichte, die Project Web App-Daten enthalten, in Excel Web App aktualisieren.
+9a447926-5937-44cb-857a-d3829301c73b*Inhaltstyp-Veröffentlichungshub*Stellt eine Website als Unternehmensmetadaten-Hubwebsite bereit.
+9c0834e1-ba47-4d49-812b-7d4fb6fea211*Search Server-Webparts und -Vorlagen*Dieses Feature fügt Ihrer Website das Feature &quot;Search Server-Webparts und -Anzeigevorlagen&quot; hinzu. Die Suche funktioniert zwar auf den meisten Websites auch ohne, dass dieses Feature aktiviert ist, doch wenn während der Suche eine Meldung wegen fehlender Vorlagen angezeigt wird, sollten Sie dieses Feature aktivieren.
+a44d2aa3-affc-4d58-8db4-f4a3af053188*Workflow für die Veröffentlichungsgenehmigung*Leitet eine Seite zur Genehmigung weiter. Genehmigende Personen können die Seite genehmigen oder ablehnen, die Genehmigungsaufgabe einer anderen Person zuweisen oder Änderungen an der Seite anfordern. Dieser Workflow kann in SharePoint Designer bearbeitet werden.
+ad739f9e-1525-4dec-a25e-10821ca70c95*Project Server-Genehmigung - Inhaltstyp*Dieser Inhaltstyp wird vom Genehmigungsworkflow von Project Server verwendet.
+b21b090c-c796-4b0f-ac0f-7ef1659c20ae*Features von SharePoint Server-Standardwebsite-Sammlungen*In der SharePoint Server-Standardlizenz enthaltene Features wie z. B. Benutzerprofile und die Suche.
+b435069a-e096-46e0-ae30-899daca4b304*Unterstützung für Berichte und Datensuche*Stellt Inhaltstypen, Websitespalten und Bibliotheksvorlagen bereit, die erforderlich sind, damit Berichte und Datensuche im Unternehmenssuchcenter unterstützt werden.
+b50e3104-6812-424f-a011-cc90e6327318*Dokument-ID-Dienst*Weist Dokumenten in der Websitesammlung IDs zu, die zum Abrufen von Elementen unabhängig von deren aktuellem Speicherort verwendet werden können.
+c845ed8d-9ce5-448c-bd3e-ea71350ce45b*SharePoint 2007-Workflows*Aggregierte Sammlung der von SharePoint 2007 bereitgestellten Out-of-Box-Workflowfeatures.
+c85e5759-f323-4efb-b548-443d2216efb5*Workflow für die Dispositionsgenehmigung*Verwaltet den Ablauf und die Beibehaltung von Dokumenten, indem die Teilnehmer entscheiden können, ob abgelaufene Dokumente beibehalten oder gelöscht werden sollen.
+d438adcc-d809-49ab-8022-f240d5989f3b*Zusammengefasster Geschäftskalender*Zeigt mehrere Geschäftskalender in einer Überlagerung zusammen mit Exchange- und SharePoint-Kalendern an.
+da2e115b-07e4-49d9-bb2c-35e93bb9fca9*Direkte Datensatzverwaltung*Die direkte Definition und Deklaration von Datensätzen aktivieren.
+f32a5a06-2e62-4682-9850-f6115223b13c*Inhaltstypen für Duet Enterprise-Berichte*Diese Funktion dient zum Definieren der Felder und Inhaltstypen, die in Duet Enterprise-Berichten verwendet werden.
+f6924d36-2fa8-4f0b-b16d-06b7250180fa*SharePoint Server-Veröffentlichungsinfrastruktur*Stellt zentralisierte Bibliotheken, Inhaltstypen, Gestaltungsvorlagen und Seitenlayouts bereit und ermöglicht die Zeitplanung für die Seiten und andere Veröffentlichungsfunktionen für eine Websitesammlung.
+fde5d850-671e-4143-950a-87b473922dc7*Workflow mit drei Status*Mit diesem Workflow können Sie Elemente in einer Liste verfolgen.

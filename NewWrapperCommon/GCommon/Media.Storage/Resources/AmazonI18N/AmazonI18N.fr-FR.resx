@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="MediaStorage_Amazon_Access_Key_ID_Demo" xml:space="preserve">
+    <value>ID</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Amazon_US_West_Oregon" xml:space="preserve">
+    <value>US West (Oregon)</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Connector_Amazon_Advanced" xml:space="preserve">
+    <value>Erweitert</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Connector_Amazon_Extended_Parameters" xml:space="preserve">
+    <value>Erweiterte Parameter</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Connector_Amazon_Storage_Region" xml:space="preserve">
+    <value>Speicherbereich</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Connector_Amazon_Must_be_between_3_and_255_characters_long" xml:space="preserve">
+    <value>Muss zwischen 3 und 255 Zeichen lang sein.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Connector_Amazon_Can_contain_lowercase_letters_numbers_periods_underscores_and_dashes" xml:space="preserve">
+    <value>Kann Kleinbuchstaben, Zahlen, Punkte (.), Unterstriche (_) und Bindestriche (-) enthalten.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Connector_Amazon_Asia_Pacific_Sydney" xml:space="preserve">
+    <value>Asien-Pazifik (Sydney)</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Connector_Amazon_Amazon_S3" xml:space="preserve">
+    <value>Amazon S3</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Connector_Amazon_Access_Key_ID" xml:space="preserve">
+    <value>Zugriffsschlüssel-ID</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Connector_Amazon_Asia_Pacific_Tokyo" xml:space="preserve">
+    <value>Asien-Pazifik (Tokio)</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Connector_Amazon_Must_start_with_a_number_or_letter" xml:space="preserve">
+    <value>Muss mit einer Zahl oder einem Buchstaben beginnen.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Connector_Amazon_Secret_Access_Key" xml:space="preserve">
+    <value>Geheimer Zugriffsschlüssel</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Connector_Amazon_Asia_Pacific_Singapore" xml:space="preserve">
+    <value>Asien-Pazifik (Singapur)</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Connector_Amazon_US_West_Northern_California" xml:space="preserve">
+    <value>US West (Nordkalifornien)</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Connector_Amazon_US_West_Oregon" xml:space="preserve">
+    <value>US West (Oregon)</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Connector_Amazon_Configure_your_bucket_name_Access_Key_ID_and_Secret_Access_Key" xml:space="preserve">
+    <value>Geben Sie die detaillierten Informationen für den Speicherort an.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Connector_Amazon_Must_not_be_formatted_as_an_IP_address" xml:space="preserve">
+    <value>Darf nicht als IP-Adresse formatiert werden (z.B., 192.168.5.4) </value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Connector_Amazon_US_Standard" xml:space="preserve">
+    <value>US-Standard</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Connector_Amazon_Bucket_Name" xml:space="preserve">
+    <value>Bucketname</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Connector_Amazon_EU_Ireland" xml:space="preserve">
+    <value>EU (Irland)</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Connector_Amazon_South_America_Saopaulo" xml:space="preserve">
+    <value>Südamerika (Sao Paulo)</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Amazon_EU_Ireland" xml:space="preserve">
+    <value>EU (Ireland)</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Amazon_Must_start_with_a_number_or_letter" xml:space="preserve">
+    <value>Must start with a number or letter.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Amazon_Advanced" xml:space="preserve">
+    <value>Advanced</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Amazon_South_America_Saopaulo" xml:space="preserve">
+    <value>South America (Sao Paulo)</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Amazon_Secret_Access_Key" xml:space="preserve">
+    <value>Secret access key</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Amazon_Bucket_Name" xml:space="preserve">
+    <value>Bucket name</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Amazon_Access_Key_ID" xml:space="preserve">
+    <value>Access key ID</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Amazon_US_West_Northern_California" xml:space="preserve">
+    <value>US West (Northern California)</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Amazon_Must_be_between_3_and_255_characters_long" xml:space="preserve">
+    <value>Must be between 3 and 255 characters long.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Amazon_Must_not_be_formatted_as_an_IP_address" xml:space="preserve">
+    <value>Must not be formatted as an IP address (e.g., 192.168.5.4)</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Amazon_Asia_Pacific_Tokyo" xml:space="preserve">
+    <value>Asia Pacific (Tokyo)</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Amazon_US_Standard" xml:space="preserve">
+    <value>US East (N. Virginia)</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Amazon_Asia_Pacific_Singapore" xml:space="preserve">
+    <value>Asia Pacific (Singapore)</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Amazon_Amazon_S3" xml:space="preserve">
+    <value>Amazon S3</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Amazon_Configure_your_bucket_name_Access_Key_ID_and_Secret_Access_Key" xml:space="preserve">
+    <value>Specify the detailed information for the storage location.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Amazon_Can_contain_lowercase_letters_numbers_periods_underscores_and_dashes" xml:space="preserve">
+    <value>Can contain lowercase letters, numbers, periods (.), underscores (_), and dashes (-).</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Amazon_Storage_Region" xml:space="preserve">
+    <value>Storage region</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Amazon_Extended_Parameters" xml:space="preserve">
+    <value>Extended parameters</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Amazon_Asia_Pacific_Sydney" xml:space="preserve">
+    <value>Asia Pacific (Sydney)</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Amazon_EU_Frankfurt" xml:space="preserve">
+    <value>EU (Frankfurt)</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Connector_Amazon_EU_Frankfurt" xml:space="preserve">
+    <value>EU (Frankfurt)</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Amazon_Proxy" xml:space="preserve">
+    <value>Proxyeinstellungen</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Amazon_Proxy_Host" xml:space="preserve">
+    <value>Proxy-Host</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Amazon_Proxy_Password" xml:space="preserve">
+    <value>Kennwort</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Amazon_Proxy_Port" xml:space="preserve">
+    <value>Proxy-Port</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Amazon_Proxy_Username" xml:space="preserve">
+    <value>Benutzername</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Connector_Amazon_Proxy" xml:space="preserve">
+    <value>Proxyeinstellungen</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Connector_Amazon_Proxy_Host" xml:space="preserve">
+    <value>Proxy-Host</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Connector_Amazon_Proxy_Password" xml:space="preserve">
+    <value>Kennwort</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Connector_Amazon_Proxy_Port" xml:space="preserve">
+    <value>Proxy-Port</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Connector_Amazon_Proxy_Username" xml:space="preserve">
+    <value>Benutzername</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Connector_Amazon_Must_be_a_number_between_0_and_65535" xml:space="preserve">
+    <value>Bitte geben Sie eine ganze Zahl zwischen 0 und 65535 ein.</value>
+    <comment>Approved</comment>
+  </data>
+</root>

@@ -1,0 +1,199 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Library</OutputType>
+    <RootNamespace>AvePoint.GCommon.Utility</RootNamespace>
+    <AssemblyName>CommonUtility</AssemblyName>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <GenerateTargetFrameworkAttribute>false</GenerateTargetFrameworkAttribute>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>..\..\..\bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <OutputPath>..\..\..\bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>..\..\..\DocaveReference\DocAveStandard.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+		<EnableUnsafeBinaryFormatterSerialization>true</EnableUnsafeBinaryFormatterSerialization>
+	</PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>net10.0</TargetFramework>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <BaseOutputPath>bin\</BaseOutputPath>
+    <BaseIntermediateOutputPath>obj\</BaseIntermediateOutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="Azure\**" />
+    <Compile Remove="Office365\References\**" />
+    <Compile Remove="ServiceBus\**" />
+    <Compile Remove="StorageTable\**" />
+    <Compile Remove="Uploader\**" />
+    <EmbeddedResource Remove="Azure\**" />
+    <EmbeddedResource Remove="Office365\References\**" />
+    <EmbeddedResource Remove="ServiceBus\**" />
+    <EmbeddedResource Remove="StorageTable\**" />
+    <EmbeddedResource Remove="Uploader\**" />
+    <EntityDeploy Remove="Azure\**" />
+    <None Remove="Azure\**" />
+    <None Remove="Office365\References\**" />
+    <None Remove="ServiceBus\**" />
+    <None Remove="StorageTable\**" />
+    <None Remove="Uploader\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GCommon.Extension\GCommon.Extension.csproj" />
+    <ProjectReference Include="..\GCommonContract\DocAve.GCommonContract.csproj" />
+    <ProjectReference Include="..\GI18NResources\GI18NResources.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="PerformanceMonitor\Win32_NetworkAdapter.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\..\DocaveReference\DocAveStandard.snk">
+      <Link>DocAveStandard.snk</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Azure.Security.KeyVault.Certificates" Version="4.8.0" />
+    <PackageReference Include="Azure.Security.KeyVault.Keys" Version="4.8.0" />
+    <PackageReference Include="Azure.Security.KeyVault.Secrets" Version="4.8.0" />
+    <PackageReference Include="Azure.Storage.Blobs" Version="12.27.0" />
+    <PackageReference Include="Cloud.Sdk.Aos" Version="5.6.17" />
+    <PackageReference Include="Cloud.Sdk.AosModernApi" Version="6.8.39" />
+    <PackageReference Include="Cloud.Sdk.Amls.Ics" Version="4.12.30" />
+    <PackageReference Include="Cloud.Sdk.Aosp" Version="5.8.38" />
+    <PackageReference Include="Cloud.Sdk.CloudInsights">
+      <Version>5.4.70</Version>
+    </PackageReference>
+    <PackageReference Include="Cloud.Sdk.Cop" Version="5.8.61" />
+    <PackageReference Include="Cloud.Sdk.Core" Version="6.10.102" />
+    <PackageReference Include="Cloud.Sdk.Dao">
+      <Version>5.2.22</Version>
+    </PackageReference>
+    <PackageReference Include="Cloud.Sdk.Data.Aosp" Version="5.8.38" />
+    <PackageReference Include="Cloud.Sdk.LAL.PlatformSS" Version="6.10.16" />
+    <PackageReference Include="Cloud.Sdk.EDiscovery" Version="6.10.46" />
+    <PackageReference Include="Cloud.Sdk.Nexus.Foundation" Version="6.10.102" />
+    <PackageReference Include="Cloud.Sdk.IE" Version="6.10.16" />
+    <PackageReference Include="Cloud.Sdk.MyHub" Version="5.2.33" />
+    <PackageReference Include="Cloud.Sdk.Nexus.Governance" Version="6.10.102" />
+    <PackageReference Include="Cloud.Sdk.Telemetry" Version="1.0.188" />
+    <PackageReference Include="Cloud.Sdk.Token">
+      <Version>6.8.81</Version>
+    </PackageReference>
+    <PackageReference Include="Duende.IdentityModel" Version="8.1.0" />
+    <PackageReference Include="log4net">
+      <Version>3.3.1</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
+    <PackageReference Include="Microsoft.Data.Services.Client">
+      <Version>5.8.5</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="6.1.4" />
+    <PackageReference Include="Microsoft.Extensions.Caching.Memory">
+      <Version>10.0.2</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Configuration">
+			<Version>10.0.2</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Configuration.Binder">
+			<Version>10.0.2</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Configuration.EnvironmentVariables" Version="10.0.2" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection">
+      <Version>10.0.2</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Http.Polly">
+      <Version>10.0.2</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Logging">
+      <Version>10.0.2</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Identity.Client">
+      <Version>4.81.0</Version>
+    </PackageReference>
+    <PackageReference Include="Polly">
+      <Version>8.6.5</Version>
+    </PackageReference>
+    <PackageReference Include="RazorEngine.NetCore" Version="3.1.1" />
+    <PackageReference Include="SharpZipLib" Version="1.4.2" />
+    <PackageReference Include="SmartThreadPool.dll">
+      <Version>2.3.0</Version>
+    </PackageReference>
+    <PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0" />
+    <PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
+    <PackageReference Include="System.Diagnostics.DiagnosticSource">
+      <Version>10.0.3</Version>
+    </PackageReference>
+    <PackageReference Include="System.Diagnostics.PerformanceCounter" Version="10.0.2" />
+    <PackageReference Include="System.Drawing.Common" Version="10.0.2" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt">
+      <Version>8.19.1</Version>
+    </PackageReference>
+    <PackageReference Include="System.Management" Version="10.0.2" />
+    <PackageReference Include="System.Net.Http" Version="4.3.4" />
+    <PackageReference Include="System.Reflection.Emit">
+      <Version>4.7.0</Version>
+    </PackageReference>
+    <PackageReference Include="System.Reflection.Emit.ILGeneration">
+      <Version>4.7.0</Version>
+    </PackageReference>
+    <PackageReference Include="System.Reflection.TypeExtensions">
+      <Version>4.7.0</Version>
+    </PackageReference>
+    <PackageReference Include="System.Security.Cryptography.Xml" Version="10.0.10" />
+    <PackageReference Include="System.Security.Permissions" Version="10.0.2" />
+    <PackageReference Include="System.Text.Json">
+      <Version>10.0.10</Version>
+    </PackageReference>
+    <PackageReference Include="TimeZoneConverter" Version="7.2.0" />
+    <PackageReference Include="PowerShellStandard.Library" Version="5.1.1" />
+    <PackageReference Include="System.ServiceModel.Duplex" Version="6.0.0" />
+    <PackageReference Include="System.ServiceModel.NetTcp" Version="8.1.2" />
+    <PackageReference Include="System.ServiceModel.Federation" Version="8.1.2" />
+    <PackageReference Include="Microsoft.DotNet.UpgradeAssistant.Extensions.Default.Analyzers" Version="0.4.421302">
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="System.Dynamic.Runtime" Version="4.3.0" />
+    <PackageReference Include="System.Linq.Queryable" Version="4.3.0" />
+    <PackageReference Include="util" Version="4.12.7" />
+    <PackageReference Include="util.azure" Version="4.2.2" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="AveImpersonator.cs" />
+    <Compile Remove="AveLoadBalanceInfoUtility.cs" />
+    <Compile Remove="AveLogger\Log4netAppenders\AveAzureStorageLogAppender.cs" />
+    <Compile Remove="Certificate\CertificateValidator.cs" />
+    <Compile Remove="Cloud\AzureCloudServiceRoleConfiguration.cs" />
+    <Compile Remove="Cloud\StorageTableConfigurationConverter.cs" />
+    <Compile Remove="Cryptography\CommunicationEncryptionHelper.cs" />
+    <Compile Remove="Cryptography\DataEncryptionUtil.cs" />
+    <Compile Remove="FilteringBox\DecryptionFilteringBox.cs" />
+    <Compile Remove="FilteringBox\FilteringBoxConstants.cs" />
+    <Compile Remove="FilteringBox\ZlibDeCompressionFilteringBox.cs" />
+    <Compile Remove="I18N\ErrorCodes.cs" />
+    <Compile Remove="JobProcessUtility.cs" />
+    <Compile Remove="Office365\AzurePowerShell.cs" />
+    <Compile Remove="Security\AveAppPoolExecuter.cs" />
+    <Compile Remove="Security\AveImpersonator.cs" />
+    <Compile Remove="ThreadPoolHelper.cs" />
+    <Compile Remove="Tuple.cs" />
+    <Compile Remove="WCF\CustomizeMessageInspector.cs" />
+    <Compile Remove="WCF\LogContractOperationPerformanceAttribute.cs" />
+    <Compile Remove="WCF\MessageInspectorBehaviorExtensionElement.cs" />
+    <Compile Remove="WCF\MessageInspectorServiceBehavior.cs" />
+    <Compile Remove="WCF\WCFSharedConfiguration.cs" />
+    <Compile Remove="ZlibUtil.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="AzureBlobStorage\" />
+  </ItemGroup>
+</Project>

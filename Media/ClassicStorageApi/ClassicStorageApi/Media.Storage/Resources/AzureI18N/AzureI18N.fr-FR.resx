@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="MediaStorage_Azure_Access_Point" xml:space="preserve">
+    <value>Point d'accès</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Azure_Account_Key" xml:space="preserve">
+    <value>Clé du compte</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Azure_Account_Name" xml:space="preserve">
+    <value>Nom du compte</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Azure_Advanced" xml:space="preserve">
+    <value>Paramètres avancés</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Azure_CDN_Enabled" xml:space="preserve">
+    <value>CDN activé</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Azure_Configure_your_container_name_account_name_and_account_key" xml:space="preserve">
+    <value>Spécifiez les informations détaillées pour l'emplacement de stockage.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Azure_Container_Name" xml:space="preserve">
+    <value>Nom du conteneur</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Azure_Container_names_must_be_from_3_through_63_characters_long" xml:space="preserve">
+    <value>Le nom du conteneur doit comporter entre 3 et 63 caractères.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Azure_Container_names_must_start_with_a_letter_or_number_and_can_contain_only_letters_numbers_and_the_dash_character" xml:space="preserve">
+    <value>Les noms de conteneur doivent commencer par une lettre ou un chiffre et ne peuvent contenir que des lettres minuscules, des chiffres et des tirets (-).</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Azure_Every_dash_character_must_be_immediately_preceded_and_followed_by_a_letter_or_number" xml:space="preserve">
+    <value>Chaque tiret (-) doit être immédiatement précédé et suivi par une lettre ou un nombre.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Azure_Extended_Parameters" xml:space="preserve">
+    <value>Paramètres étendus</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Azure_GUID" xml:space="preserve">
+    <value>GUID</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="MediaStorage_Azure_Windows_Azure_Storage" xml:space="preserve">
+    <value>Stockage d'objets blob Microsoft Azure</value>
+    <comment>Approved</comment>
+  </data>
+</root>

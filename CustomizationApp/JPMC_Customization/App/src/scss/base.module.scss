@@ -1,0 +1,25 @@
+.EventFootBtns{
+  margin-top: 50px;
+}
+:global {
+  .ms-Panel-scrollableContent {
+    flex-shrink: 1;
+  }
+  .ms-Panel-footer {
+    flex-shrink: 0;
+  }
+}
+
+.TextSizeNoneAdjust {
+  -webkit-text-size-adjust: none
+}
+
+.DetailsMessageSpan {
+  @extend .TextSizeNoneAdjust;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.ProgressIndicatorDescription{
+  font-size: 13px;
+}

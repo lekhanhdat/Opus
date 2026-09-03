@@ -1,0 +1,1466 @@
+/*Covered by AvePoint copyright and license agreement*/
+/* Code Review Whole File */
+.ra-auto-rule {
+    padding-right: 32px;
+    input, textarea {
+        font-size: 14px !important;
+    }
+
+    input:disabled, textarea:disabled {
+        color: #ccc;
+    }
+
+    .aui-rangepicker{
+        width: calc(100% - 84px);
+        min-width: 240px !important;
+    }
+
+    .aui-datepicker{
+        width: 120px !important;
+        min-width: 120px !important;
+    }
+
+    .ra-timeRange-picker-content .aui-datepicker{
+        width: 100% !important; 
+    }
+
+    .checkbox-label {
+        display: inline !important;
+    }
+    //解决读屏重复的问题
+    .ra-marginL-10 {
+        margin-left: 10px !important;
+    }
+
+    .ra-marginL-20 {
+        margin-left: 20px !important;
+    }
+
+    .ra-marginL-35 {
+        margin-left: 35px !important;
+    }
+
+    .ra-marginB-8 {
+        margin-bottom: 8px !important;
+    }
+
+    .ra-marginT-3 {
+        margin-top: 3px !important;
+    }
+
+    .ra-marginT-5 {
+        margin-top: 5px !important;
+    }
+
+    .ra-validation-msg {
+        color: var(--error-color);
+        font-size: 13px;
+    }
+
+    .crm-criteria::before {
+        color: #4C5966;
+    }
+
+    .ra-createRule-question {
+        height: 40px;
+        line-height: 40px;
+        font-weight: 600;
+        display: inline-block;
+    }
+
+    input::-ms-clear {
+        display: none;
+    }
+
+    .ra-creatRule-tip-Msg {
+        padding: 0 20px
+    }
+
+    #rm_createRule_container {
+        font-size: 14px;
+        color: #1c1c1c;
+        .aui-messagebar{
+            margin: 0
+        }
+    }
+
+    .ra-createRule-level {
+        margin-left: 30px !important;
+    }
+
+    .ra-rule-term-icon {
+        background-image: url("/Images/Base/action_button.png");
+        background-position: -108px -178px;
+        background-repeat: no-repeat;
+        width: 18px;
+        height: 18px;
+        display: inline-block;
+        margin-left: 5px;
+        vertical-align: middle;
+        cursor: pointer;
+    }
+
+    #rm_rule_content {
+        border: 1px solid #ededed;
+        width: 438px;
+        padding: 15px 10px;
+        height: 80px;
+        overflow-y: auto;
+        display: none;
+        font-size: 14px;
+        color: #585858;
+        line-height: 16px;
+    }
+
+    #rm_rule_Terms {
+        margin-top: 20px;
+    }
+
+    #rm_rule_title {
+        font-size: 14px;
+        color: #0026b3;
+        display: inline-block;
+        cursor: pointer;
+    }
+
+    .ra-term-ruleName {
+        margin-bottom: 8px;
+    }
+
+    .ra-term-Name {
+        width: 44px;
+        display: inline-block;
+        text-align: right;
+        vertical-align: top;
+    }
+
+    .ra-rule-terms {
+        line-height: 18px;
+    }
+
+    .ra-term-title {
+        margin-left: 4px;
+        display: inline-block;
+        width: 340px;
+    }
+
+    .ra-rule-terms {
+        margin-left: 10px;
+        display: inline-block;
+    }
+
+    .extend-icon {
+        background-position: -90px -178px;
+    }
+
+    .ra-term-group {
+        margin-bottom: 15px;
+    }
+
+    .ra-createRule-baseInfo {
+        margin: 10px 0 0 30px;
+    }
+
+    #rm_createRule_archiveType {
+        margin-left: 10px;
+    }
+
+    #rm_createRule_condition_container {
+        margin-top: 6px;
+        position: relative;
+        margin-left: 20px;
+        .aui-tabs-bar > div{
+            max-width: 300px;
+        }
+    }
+
+    .ra-sourceTab-name {
+        margin-left: 4px;
+    }
+
+    .rm_createRule_exportOnly_exo {
+        margin-left: 30px;
+        margin-top: -5px;
+        margin-bottom: 10px;
+    }
+
+    .ra-createRule-moveTo {
+        margin: 10px 0 0 20px;
+    }
+
+    .ra-createRule-condition-input, .archiveDataAction-radio {
+        margin-left: 30px;
+    }
+
+    .ra-createRule-exprot {
+        margin-left: 25px;
+    }
+
+    .rm_createRule_archiveAction {
+        margin: 10px 0 10px 30px
+    }
+
+    .rm_createRule_archiveAction_container, #rm_createRule_exportContainer, #rm_crateRule_approval {
+        margin-left: 3px;
+    }
+
+    .ra-rule-body{
+        // padding: 0 10px;
+        border: 1px solid #585858;
+    }
+
+    .filter-group-top {
+        height: 40px;
+        line-height: 40px;
+        background-color: #ebebeb;
+        padding-left: 10px;
+    }
+    
+    .ra-createRule-condition {
+        position: relative;
+        float: right;
+        cursor: pointer;
+    }
+
+    .ra-createRule-condition .button-blank {
+        background-color: transparent;
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+
+    .ra-createRule-condition .button-blank:hover:not([disabled]) {
+        background-color: var(--hover-bg-rgba);
+    }
+
+    .ra-createRule-condition-btn {
+        color: #1c1c1c;
+        cursor: pointer;
+        margin-left: 20px;
+        display: inline-block;
+        font-size: 14px;
+        /*outline: medium;*/
+    }
+
+    .ra-createRule-condition-btn > div {
+        margin: -3px 5px 0px 0px;
+        position: relative;
+        bottom: -2px;
+        cursor: pointer;
+    }
+
+    .archiveExport-radio {
+        margin-left: 30px;
+    }
+
+    #rm_createRule_create {
+        margin: 5px 0 0 10px;
+    }
+
+    .ra-createRule-title {
+        margin-bottom: 5px;
+    }
+
+    .ra-red {
+        color: red;
+        vertical-align: top;
+        margin-right: 5px;
+    }
+
+    .ra-none {
+        margin-right: 10px;
+    }
+
+    #keep_tag_container, #exo_keep_tag_container, #rm_createRule_move_container {
+        margin: 7px 0 7px 20px;
+    }
+
+    #rm_createRule_move_container label span {
+        vertical-align: middle;
+    }
+
+    #keep_tag, #keep_tag_by, #keep_tag_time, #keep_tag_metadata_container, #keep_tag_retention, .rm_createRule_keep_noSelect {
+        margin-top: 5px
+    }
+
+    #rm_createRule_move_declare {
+        margin-top: 10px;
+    }
+
+
+    #keep_logicalDevice_container {
+        line-height: 32px;
+        margin-left: 20px;
+    }
+
+    #logicaldevice_selector {
+        display: inline-block;
+        margin: 4px 0 0 8px;
+    }
+
+    .rm_createRule_keep_container {
+        margin: 7px 0 7px 20px;
+    }
+
+    .ra-createRule-device {
+        margin-left: 5px;
+        display: inline-block;
+        vertical-align: top;
+        font-weight: 600;
+    }
+
+    .ra-createRule-input-ruleName {
+        margin-bottom: 5px !important;
+        width: 532px !important;
+        height: 30px !important;
+        border: 1px solid #585858 !important;
+        padding: 2px 8px;
+        resize: none !important;
+    }
+
+    #rm_createRule_destinationUrl {
+        margin-bottom: 5px;
+        width: 532px;
+        height: 6px;
+        display: inline-block;
+    }
+
+    .ra-createRule-input-moveurl, .ra-createRule-input-moveuser, .ra-createRule-input-movepassword {
+        margin-top: 7px;
+        margin-bottom: 5px;
+        width: 320px;
+        height: 24px;
+        border: 1px solid #585858;
+        padding: 2px 8px;
+        resize: none;
+    }
+
+    #move_EnterNameDescrition, #move_EnterPassWordDescrition {
+        margin-top: 7px;
+    }
+
+    #btnImport {
+        margin: 5px 20px 20px 0;
+    }
+
+    #rm_createRule_validation {
+        display: inline-block;
+        border: 1px solid #585858;
+        width: 110px;
+        height: 26px;
+        vertical-align: top;
+        line-height: 26px;
+        text-align: center;
+        margin-left: 4px;
+        cursor: pointer;
+    }
+
+    // #ra-noRuleName {
+    //     margin-left: 20px;
+    // }
+
+    .auto-filterGroup-body {
+        padding: 16px 24px 16px 24px;
+        margin-bottom: 8px;
+    }
+
+    .auto-rule-bg-color-odd {
+        background-color: #F2F3F4;
+    }
+    
+    .auto-rule-bg-color-even {
+        background-color: #FFFFFF;
+    }
+    
+    .auto-condition-bg-color-odd {
+        padding: 8px;
+        background-color: #FFFFFF;
+    }
+    .auto-condition-bg-color-even {
+        padding: 8px;
+        background-color: #F2F3F4;
+    }
+    
+    .condition-group-popup {
+        margin-bottom: 8px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+    
+    .condition-group-popup-row {
+        width: 100%;
+        display: flex;
+        flex: 1;
+        gap: 8px;
+    }
+    
+    .tag-metadata-column {
+        display: inline-block;
+        width: 160px;
+        height: 30px;
+        padding-left: 8px;
+        padding-right: 8px;
+        vertical-align: middle;
+        margin-left: 5px;
+        border: 1px solid #585858;
+    }
+
+    .tag-metadata-retention {
+        display: inline-block;
+        height: 30px;
+        padding-left: 8px;
+        padding-right: 8px;
+        vertical-align: middle;
+        margin-left: 9px;
+        width: 568px;
+    }
+
+    #metadata_content {
+        display: inline-block;
+        position: relative;
+        bottom: 3px;
+    }
+
+    #keep_tag_metadata {
+        display: inline-block;
+        position: relative;
+        bottom: 3px;
+        margin-right: 3px;
+    }
+
+    #keep_tag_metadata_option {
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    .ra-createRule-textArea-desc {
+        height: 80px;
+        overflow-y: auto;
+        width: 532px;
+    }
+
+    .ra-createRule-title-inline {
+        display: inline-block;
+        flex: 1;
+        height: 34px;
+        line-height: 34px;
+        vertical-align: top;
+        margin-bottom: 7px;
+    }
+
+    .ra-createRule-title-inline a {
+        color: #0072D0;
+    }
+
+    .ra-createRule-title-exp {
+        vertical-align: top;
+        position: relative;
+        top: 8px;
+    }
+
+    .ra-rule-tips {
+        display: inline-block;
+        width: 380px;
+
+        a {
+            text-decoration: underline
+        }
+    }
+
+    .ra-createRule-explocation {
+        margin-top: 5px;
+    }
+
+    .ra-export-without-container {
+        margin-left: 18px;
+    }
+
+    #rm_createRule_export {
+        margin-bottom: 8px;
+    }
+
+    #rm_export_type {
+        /*margin-left: 5px;*/
+        color: #aaa;
+    }
+
+    .ra-createRule-export-type-error .rm_export_error {
+        margin-top: 0px;
+    }
+
+    #rm_createRule_destinationUrl, .ra-createRule-textArea-desc {
+        border: 1px solid #585858;
+        padding: 10px 8px;
+        resize: none;
+    }
+
+    #rm_createRule_TrueOrFalse {
+        text-decoration: underline;
+        color: #0026b3;
+        cursor: pointer;
+    }
+
+    #rm_createRule_cancelBtn {
+        margin-left: 10px;
+        border: solid 1px black;
+    }
+
+    #rm_createRule_cancelBtn:hover {
+        border: 1px solid #1b5599;
+    }
+
+    .ra-export-without-container {
+        margin-top: 10px;
+    }
+
+    .ra-createRule-export-type-error {
+        display: inline-block;
+        margin-left: 5px;
+    }
+
+    .condition-date1, .condition-date2, .condition-date, .tag-date {
+        display: inline-block;
+        vertical-align: top;
+        // margin-left: 5px;
+    }
+
+    .tag-date {
+        width: 160px;
+    }
+
+    #conflict_container {
+        margin-left: 10px;
+    }
+
+    #rm_createRule_manual {
+        margin-left: 30px;
+    }
+
+    #rm_createRule_declaredFile {
+        margin-left: -10px;
+    }
+
+    div[id^=condition_Match1_popup], div[id^=condition_Match2_popup] {
+        border: 1px solid #585858;
+        max-height: 150px !important;
+        background-color: #ffffff;
+        line-height: 30px;
+        width: 200px;
+    }
+
+    div[id^=condition-type-popup] {
+        border: 1px solid #585858;
+        max-height: 150px !important;
+        background-color: #ffffff;
+        line-height: 30px;
+
+    }
+
+    .ra-condition-type-popup {
+        width: auto;
+        height: 150px;
+        top: 20px;
+        display: block;
+        z-index: 998;
+        position: absolute;
+        overflow: auto;
+        border: 1px solid black;
+    }
+
+    .condition-group {
+        margin-bottom: 5px;
+        position: relative;
+    }
+
+    #rm_createRule_delcare_container {
+        margin-left: 20px;
+    }
+
+    #rm_createRule_ruleSelector {
+        margin: 10px 0 0px 20px;
+        display: inline-block;
+        /*color: #aaa;*/
+    }
+
+    #rm_createRule_objectLevelSelector {
+        margin: 0 0 10px 30px;
+    }
+
+    #rm_createRule_deleteRelatedRecordOption, #rm_crateRule_declaredFile, #rm_createRule_leaveStubOption, #rm_createRule_backupBeforeDestroying {
+        margin-left: 20px;
+        white-space: nowrap;
+        position: relative;
+    }
+
+    #rm_createRule_destoryBoxIfEmptyOption {
+        margin: 7px 0px 7px 20px;
+        white-space: nowrap;
+        position: relative;
+    }
+
+    #rm_createRule_ctContainer {
+        margin-left: -10px;
+    }
+
+    #ct_generateXml {
+        margin-left: 20px;
+    }
+
+    #ct_container {
+        margin-left: 10px;
+    }
+
+    #rm_control_btn {
+        width: 890px;
+        text-align: right;
+        margin-top: 32px;
+    }
+
+    .condtion-input-value {
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-bottom: 1px solid #585858;
+        color: #1c1c1c;
+        width: 100px;
+        display: inline-block;
+        margin-left: 5px;
+        height: 18px;
+        background: transparent;
+        position: relative;
+        float: left;
+        font-size: 14px;
+        bottom: 0;
+    }
+
+    .condtion-actionMenu {
+        color: #0026b3;
+        display: inline-block;
+        text-decoration: underline;
+        cursor: pointer;
+        margin-left: 5px;
+        float: left;
+        position: relative;
+    }
+
+    .condtion-actionMenu2 {
+        color: #007c1c;
+        display: inline-block;
+        text-decoration: underline;
+        cursor: pointer;
+        margin-left: 5px;
+        float: left;
+        position: relative;
+    }
+
+    .condtion-actionMenu2-options {
+        position: absolute;
+        border: 1px solid black;
+        left: 0px;
+        z-index: 99;
+    }
+
+    .condition-date1 {
+        display: inline-block;
+        vertical-align: middle;
+        // margin-left: 10px;
+    }
+
+    .condition-date2 {
+        display: inline-block;
+        vertical-align: middle;
+
+        .condition-date-to {
+            margin-right: 5px;
+            vertical-align: middle;
+        }
+    }
+
+    .action-menu-option {
+        // border: none;
+        font-size: 14px;
+        background: #fff;
+        padding: 0 5px;
+        margin: 0;
+        width: 100%;
+        min-height: 24px;
+        text-align: left;
+        border: transparent solid 1px;
+        cursor: default;
+        color: #1c1c1c;
+        /*outline: 0;*/
+        text-decoration: none !important;
+    }
+
+    #keep_declareAsRecord #exo_keep_declareAsRecord {
+        margin-bottom: 8px;
+        white-space: nowrap;
+    }
+
+    .codition-ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .codition-li {
+        list-style: none;
+        margin: 0px;
+        border-collapse: collapse;
+        display: list-item;
+        position: relative;
+    }
+
+
+    .actionmenuPopupdiv {
+        background-color: #ffffff;
+        display: none;
+        max-height: 150px !important;
+        width: auto !important;
+        height: auto !important;
+        border: 1px solid #585858;
+        min-width: 60px !important;
+    }
+
+    .ra-action-popupTrueOrFase {
+        width: 64px !important;
+        position: absolute;
+        background: white;
+        top: 20px;
+        left: 0;
+        z-Index: 999;
+    }
+
+    .ra-createRule-img-loading {
+        background-image: url("/Images/Base/loading_18x18.gif");
+        background-repeat: no-repeat;
+        width: 18px;
+        height: 18px;
+        display: inline-block;
+        margin-left: 5px;
+        margin-top: 5px;
+    }
+
+    #copyRule_validation_msg {
+        margin-left: 20px;
+    }
+
+    .ra-createRule-msg {
+        font-size: 14px;
+        color: red;
+        margin: 3px 2px;
+        height: auto;
+        white-space: nowrap;
+        overflow: hidden;
+        max-width: 560px;
+    }
+
+    .ra-description-icon {
+        background-image: url("/Images/Base/action_button.png");
+        background-position: -54px 0;
+        background-repeat: no-repeat;
+        width: 18px;
+        height: 18px;
+        display: inline-block;
+        position: relative;
+        top: 3px;
+        margin-left: 10px;
+        cursor: pointer;
+        font-size: 14px;
+    }
+
+    .sp_tag-metadata-retention_valid {
+        margin-left: 64px;
+    }
+
+    .exo_tag-metadata-retention_valid {
+        margin-left: 44px;
+    }
+
+    .ra-description-icon:hover {
+        background-position: -54px -18px;
+    }
+
+    input::-moz-focus-inner {
+        border: 0;
+        padding: 0;
+    }
+
+    #rm_createRule_saveBtn:focus {
+        background-color: #1b5599;
+        font-size: 14px;
+        color: #ffffff;
+        width: 85px;
+        height: 30px;
+    }
+
+    .codition-ul {
+        list-style: none;
+        margin: 0;
+        border-collapse: collapse;
+        display: list-item;
+        position: relative;
+        padding-right: 15px;
+        white-space: nowrap;
+    }
+
+    .ra-codition-ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        border-collapse: collapse;
+        display: list-item;
+        position: relative;
+        white-space: nowrap
+    }
+
+    .action-menu-option {
+        padding-right: 18px;
+    }
+
+    ::-moz-focus-inner {
+        border-color: transparent;
+    }
+
+    button::-moz-focus-inner {
+        border: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .ra-createRule-disposalClass {
+        margin-left: 12px;
+    }
+
+    .ra-createRule-disposalClass-container {
+        margin-left: 18px
+    }
+
+    .ra-createRule-disposalClass-value {
+        margin: 7px 0 5px 0;
+        width: 532px;
+        height: 30px;
+        border: 1px solid #585858;
+        padding: 2px 8px;
+        resize: none;
+    }
+
+    .ra-createRule-input-ruleName-react {
+    }
+
+    .sps-ro-summaryTitle {
+        font-weight: 600;
+        font-family: "Segoe UI", sans-serif;
+        font-size: 14px;
+        margin-top: 6px;
+    }
+
+    .sps-ro-mailToOwner {
+        margin: 15px 20px 20px 0px;
+        width: auto !important;
+    }
+
+    #rmBody {
+        position: relative;
+        min-height: 250px;
+    }
+
+    .user-title {
+        margin: 8px 0 7px 20px;
+        font-family: "Segoe UI", sans-serif;
+        font-size: 14px;
+        font-weight: 600;
+        color: #1c1c1c;
+    }
+
+    .user-content {
+        position: relative;
+        padding-right: 23px;
+        margin-left: 20px;
+        font-size: 14px;
+        font-family: "Segoe UI", sans-serif;
+        color: #1c1c1c;
+        width: 600px;
+        min-height: 78px;
+        border: 1px solid #585858;
+        cursor: text;
+    }
+
+    .user-item {
+        display: inline-block;
+        height: 22px;
+        line-height: 22px;
+        font-family: "Segoe UI", sans-serif;
+        font-size: 14px;
+        color: #1c1c1c;
+        margin-top: 10px;
+        margin-left: 10px;
+        padding: 0px 8px 0px 10px;
+        border-radius: 10px;
+        background-color: #ebebeb;
+        cursor: default;
+    }
+
+    .user-input {
+        width: auto;
+        max-width: 510px;
+        min-width: 30px;
+        height: 30px;
+        line-height: 30px;
+        margin-top: 1px;
+        border: none;
+        outline: none;
+        font-size: 14px;
+        background: none;
+        margin-left: 11px;
+    }
+
+    .user-result-item-wrap {
+        max-height: 200px;
+        overflow-y: scroll;
+    }
+
+    .user-search {
+        display: inline-block;
+        margin-top: 1px;
+        position: relative;
+        width: 567px;
+        height: 33px;
+        border: 1px solid black;
+    }
+
+    .user-result {
+        display: none;
+        font-family: "Segoe UI", sans-serif;
+        font-size: 14px;
+        color: #1c1c1c;
+        border: 1px solid #585858;
+        width: 623px;
+        border-top: none;
+        cursor: default;
+    }
+
+    .user-search-content {
+        position: relative;
+        margin-left: 20px;
+    }
+
+    .user-result-count {
+        padding-left: 10px;
+        height: auto;
+        line-height: 28px;
+        color: #333333;
+        background-color: #ebebeb;
+    }
+
+    .user-delete {
+        display: inline-block;
+        vertical-align: top;
+        margin-top: 2px;
+        cursor: pointer;
+        width: 18px;
+        height: 18px;
+        background-image: url("/Images/Base/action_button.png");
+        background-position: -72px -178px;
+    }
+
+    .user-result-item {
+        padding-left: 10px;
+        height: 28px;
+        line-height: 28px;
+    }
+
+    .user-result-item:hover, .selected {
+        background-color: #E3E3E3;
+        cursor: pointer;
+    }
+
+    .user-button {
+        position: absolute;
+        bottom: 0px;
+        width: 100%;
+        text-align: right;
+    }
+
+    #rm_createRule_workflowSelector {
+        margin-left: 20px;
+        margin-top: 8px;
+    }
+
+    .btn-save, .btn-cancel {
+        display: inline-block;
+        margin-bottom: 40px;
+        vertical-align: top;
+        text-align: center;
+        line-height: 30px;
+        width: 85px;
+        height: 30px;
+        font-family: "Segoe UI", sans-serif;
+        font-weight: 600;
+        font-size: 14px;
+        cursor: pointer;
+    }
+
+    .btn-save {
+        color: #ffffff;
+        background-color: #0079DD;
+    }
+
+    .btn-cancel {
+        margin-left: 10px;
+        margin-right: 25px;
+        color: #333333;
+        width: 83px;
+        height: 28px;
+        border: 1px solid #686868;
+    }
+
+    .no-validation {
+        background-repeat: repeat-x;
+        vertical-align: top;
+        height: 22px;
+        line-height: 18px;
+        padding-bottom: 2px;
+        background-position: left bottom;
+        display: inline-block;
+        background-image: url("/Images/CP/UserSquiggle.png");
+    }
+
+    .user-validate-msg {
+        display: none;
+        color: #1c1c1c;
+        margin-left: 36px;
+        margin-top: 10px;
+        font-size: 14px;
+        line-height: 18px;
+    }
+
+    .user-search-loading {
+        background-image: url("/Images/Base/loading_18x18.gif");
+        background-repeat: no-repeat;
+        width: 18px;
+        height: 18px;
+        position: absolute;
+        right: 5px;
+        top: 5px;
+    }
+
+    #rm_crateRule_approveAndExport {
+        margin-left: 30px
+    }
+
+    .user-validate-img {
+        display: inline-block;
+        margin-right: 5px;
+        width: 18px;
+        height: 18px;
+        background-image: url("/Images/Base/action_button.png");
+        background-position: -396px 0px;
+        vertical-align: top;
+    }
+
+    .btn-save:hover {
+        background-color: #1b5599;
+    }
+
+    .btn-cancel:hover {
+        border: 1px solid #1b5599;
+    }
+
+    #roContent {
+        padding-top: 10px;
+        margin-left: 20px;
+    }
+
+    #term-path-group {
+        margin-left: 54px;
+        margin-bottom: 20px;
+    }
+
+    .sendEmail-validate-msg {
+        margin-top: -10px;
+        margin-bottom: 10px;
+        display: none;
+        color: red;
+        margin-left: 36px;
+        font-size: 14px;
+        line-height: 18px;
+        margin-right: 20px;
+    }
+
+    .sendEmail-validate-img {
+        display: inline-block;
+        margin-right: 8px;
+        width: 18px;
+        height: 18px;
+        background-image: url("/Images/Base/action_button.png");
+        background-position: -396px 0px;
+        vertical-align: top;
+        float: left;
+    }
+
+    .sendEmail-validate-txt {
+        overflow: hidden;
+    }
+    /*rule move*/
+    #moveto-records-panel {
+        width: calc(100% - 600px);
+        margin-left: 300px;
+        /*height: 760px;*/
+        position: absolute;
+        top: 120px;
+        background-color: #fff;
+        z-index: 1000;
+    }
+
+    .moveto-records-body {
+        /*margin: 25px 25px 20px 25px;*/
+        position: relative;
+    }
+
+    .moveto-popup-detail-bar {
+        height: 35px;
+        line-height: 35px;
+        color: white;
+        background-color: #0079DD;
+    }
+
+    .moveto-popup-detail-title {
+        float: left;
+        margin-left: 10px;
+        font-family: "Segoe UI", sans-serif;
+        font-weight: 600;
+        font-size: 14px;
+        color: #ffffff;
+    }
+
+    .moveto-popup-detail-close-icon {
+        float: right;
+        margin-right: 10px;
+        cursor: pointer;
+        line-height: 35px;
+    }
+
+    .moveto-popup-detail-close {
+        position: relative;
+        bottom: 0px;
+        width: 100%;
+        text-align: right;
+        padding-top: 30px;
+    }
+
+    .moveto-popup-detail-close input {
+        position: relative;
+        width: 85px;
+        height: 30px;
+        margin-right: 20px;
+        margin-bottom: 20px;
+        line-height: 30px;
+        color: #ffffff;
+        border: none;
+        background-color: #0079DD;
+        font-family: "Segoe UI", sans-serif;
+        font-weight: 600;
+        font-size: 14px;
+        cursor: pointer;
+    }
+
+    .moveto-popup-detail-close input:hover {
+        background-color: #1b5599;
+    }
+
+    .moveto-popup-detail-close input:focus {
+        background-color: #1b5599;
+    }
+    /*********copy from report location*/
+    .main-title {
+        margin-top: 10px;
+        /*margin-left: 25px;*/
+        font-family: "Segoe UI", sans-serif;
+        font-size: 14px;
+    }
+
+    .inline-title {
+        display: inline;
+    }
+
+    .option-title {
+        margin-top: 10px;
+    }
+
+    #location-container {
+        padding: 0 0 0 25px;
+        width: calc(100% - 85px);
+        background-color: white;
+        /*display: none;*/
+    }
+
+    .sub-options-container {
+        margin-left: 19px;
+        margin-top: 10px;
+
+        input {
+            display: inline-block !important;
+        }
+    }
+
+    .location-title {
+        margin-top: 10px;
+        font-family: "Segoe UI", sans-serif;
+        font-size: 14px;
+    }
+
+    #location-path {
+        height: 28px;
+        width: 390px;
+        padding: 0px;
+        padding-left: 8px;
+        vertical-align: middle;
+        border: 1px solid #cccccc;
+        outline: none;
+        font-size: 14px;
+        color: #1c1c1c;
+    }
+
+    #location-path:focus {
+        border: 1px solid #4C9ED1;
+    }
+
+    #location-account-profiles {
+        margin-top: 10px;
+        height: 28px;
+        background-color: white;
+        border: 1px solid #CCC;
+    }
+
+    #location_validateBtn {
+        margin: 0 0px 0 10px;
+        color: black;
+        border: 1px solid #cccccc;
+        background-color: white;
+        cursor: pointer;
+        display: inline-block;
+        height: 30px;
+        // width: 75px;
+        text-align: center;
+        vertical-align: middle;
+        font-family: "Segoe UI", sans-serif;
+        font-size: 14px;
+        width: 120px;
+        /*width: 122px;*/
+    }
+
+    #location-vlidat-msg {
+        width: 390px;
+        margin-top: 2px;
+    }
+
+    #location_validateBtn:hover:enabled {
+        color: #185599;
+        border-color: #185599;
+    }
+
+    #location_validateBtn:focus {
+        color: #185599;
+        border-color: #185599;
+    }
+
+    #location_validateBtn:disabled {
+        background: #aaaaaa;
+        cursor: default;
+    }
+
+    #location_account_error {
+        display: none;
+        margin-left: 17px;
+        margin-top: 10px;
+        position: relative;
+        color: #1c1c1c;
+        font-family: "Segoe UI", sans-serif;
+        font-size: 14px;
+    }
+
+    #location_gs_account_valid_icon {
+        display: inline-block;
+        // margin-right: 8px;
+        background-image: url("/Images/Base/action_button.png");
+        background-repeat: no-repeat;
+        width: 18px;
+        height: 18px;
+        background-position: -396px -0px;
+        vertical-align: middle;
+        margin-right: 5px;
+    }
+    /******end copy from report location*/
+    /****overwrite sptree css **********/
+    .sp-tree-container {
+        border: 1px solid #cccccc;
+        height: 150px;
+        overflow: auto;
+        font-size: 14px;
+    }
+
+    #SCGroups {
+        margin-bottom: 10px !important;
+    }
+
+
+    .ra-createRule-input-move-react {
+        margin-bottom: 5px !important;
+        width: 320px !important;
+        height: 30px !important;
+        border: 1px solid #585858 !important;
+        resize: none !important;
+    }
+
+    .user-result {
+        display: block;
+        width: 600px;
+    }
+
+    .user-result-item-wrap div {
+        height: 28px;
+        line-height: 28px;
+        padding-left: 10px;
+    }
+
+    .user-result-item-wrap :hover {
+        background-color: #E3E3E3;
+    }
+
+    .condition-Match2-popup {
+        width: 60px;
+        height: auto;
+        border: 1px solid black;
+        z-index: 999;
+        position: absolute;
+    }
+
+    .ra-rule-addIcon {
+        overflow: hidden;
+        display: inline-block;
+        width: 18px;
+        height: 18px;
+        position: relative;
+        top: 3px;
+    }
+
+    .ra-add-img-position {
+        top: 0;
+        left: -162px;
+        position: relative;
+    }
+
+    .ra-add-dis-img-position {
+        top: -18px;
+        left: -162px;
+        position: relative;
+    }
+
+    .rm_createRule_allOrAny {
+        position: relative;
+        margin: 0 2px;
+        text-decoration: underline;
+        color: #0072D0;
+        cursor: pointer
+    }
+
+    .ra-tree-container {
+        border: 1px solid #cccccc;
+        height: 150px;
+        width: 800px;
+        overflow: auto;
+        font-size: 14px;
+        margin-top: 10px;
+    }
+
+    .ra-sp-icon {
+        float: left;
+        position: relative;
+        overflow: hidden;
+        display: inline-block;
+        width: 18px;
+        height: 18px;
+
+        img {
+            left: -378px;
+            top: -258px;
+            position: absolute;
+        }
+    }
+
+    .ra-exo-icon {
+        float: left;
+        position: relative;
+        overflow: hidden;
+        display: inline-block;
+        width: 18px;
+        height: 18px;
+
+        img {
+            left: -342px;
+            top: -276px;
+            position: absolute;
+        }
+    }
+
+    .ra-phy-icon {
+        float: left;
+        position: relative;
+        overflow: hidden;
+        display: inline-block;
+        width: 18px;
+        height: 18px;
+
+        img {
+            left: -342px;
+            top: -294px;
+            position: absolute;
+        }
+    }
+
+    .ra-fs-icon {
+        float: left;
+        position: relative;
+        overflow: hidden;
+        display: inline-block;
+        width: 18px;
+        height: 18px;
+
+        img {
+            left: -216px;
+            top: 0px;
+            position: absolute;
+        }
+    }
+
+    #spExportOnly, #exoExportOnly {
+        margin-left: -34px;
+    }
+
+    .rm-createRule-leaveStubMessage-container {
+        margin: 0px 0 7px 38px;
+    }
+
+    .rm-createRule-leaveStubMessage-textArea {
+        height: 80px;
+        overflow-y: auto;
+        width: 532px;
+        margin-top: 10px;
+        padding: 10px 8px;
+        border: 1px solid #585858;
+        resize: none;
+    }
+
+    .cr-normal-valid-msg{
+      font-style: italic;
+      font-size: 13px;
+      width: calc(100% - 42px)
+    }
+
+    .cr-short-valid-msg{
+      font-style: italic;
+      font-size: 13px;
+      width: calc(100% - 86px)
+    }
+}

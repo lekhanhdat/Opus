@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--/********************************************************************
+ *
+ *  PROPRIETARY and CONFIDENTIAL
+ *
+ *  This file is licensed from, and is a trade secret of:
+ *
+ *                   AvePoint, Inc.
+ *                   525 Washington Blvd, Suite 1400
+ *                   Jersey City, NJ 07310
+ *                   United States of America
+ *                   Telephone: +1-201-793-1111
+ *                   WWW: www.avepoint.com
+ *
+ *  Refer to your License Agreement for restrictions on use,
+ *  duplication, or disclosure.
+ *
+ *  RESTRICTED RIGHTS LEGEND
+ *
+ *  Use, duplication, or disclosure by the Government is
+ *  subject to restrictions as set forth in subdivision
+ *  (c)(1)(ii) of the Rights in Technical Data and Computer
+ *  Software clause at DFARS 252.227-7013 (Oct. 1988) and
+ *  FAR 52.227-19 (C) (June 1987).
+ *
+ *  Copyright © 2017-2026 AvePoint® Inc. All Rights Reserved. 
+ *
+ *  Unpublished - All rights reserved under the copyright laws of the United States.
+ */-->
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="AvePoint.GCommon.Transfer.MQ.AveMQServer" Collapsed="true">
+    <Position X="0.5" Y="5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AGAAAABACAAAABAADAAAABAIBAAAADAAAABCAAAAAAo=</HashCode>
+      <FileName>MQ\AveMQServer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AvePoint.GCommon.Transfer.MQ.AveMQClientCallback" Collapsed="true">
+    <Position X="5.25" Y="6.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MQ\AveMQClientCallback.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="AvePoint.GCommon.Transfer.MQ.AveMQClient2ServerPeer" Collapsed="true">
+    <Position X="2.75" Y="6.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAQAAAABAGCAUAAIBAAAQAAABAAQCAAAAAAk=</HashCode>
+      <FileName>MQ\AveMQClient2ServerPeer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AvePoint.GCommon.Transfer.MQ.AveMQClient" Collapsed="true">
+    <Position X="0.5" Y="6.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AEAAAACAACDAAAAACCAAAAAIkAAAAKAAAAAAQMAAAAA=</HashCode>
+      <FileName>MQ\AveMQClient.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AvePoint.GCommon.Transfer.MQ.AveMQServer2ClientPeer" Collapsed="true">
+    <Position X="2.75" Y="5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AEACAADAAAAAAAAECCAAAAAIAAAQAAABAIACQICAAEA=</HashCode>
+      <FileName>MQ\AveMQClientPeer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AvePoint.GCommon.Transfer.MQ.Channel.InProcessMessageChannel" Collapsed="true">
+    <Position X="2.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAACAAIAAAACAAIAAAACAAAAABAAQAAICAAAA=</HashCode>
+      <FileName>MQ\Channel\InProcessMessageChannel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="AvePoint.GCommon.Transfer.MQ.Channel.WCFMessageChannel" Collapsed="true">
+    <Position X="0.5" Y="3.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAgAAACAACAAIAAAACAAAAAAACAAAAAAAAQAAJCAAAA=</HashCode>
+      <FileName>MQ\Channel\WCFMessageChannel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="AvePoint.GCommon.Transfer.MQ.Service.AveMQWCFService" Collapsed="true">
+    <Position X="3.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAABAAAAAACAAAAAAAAAAAAABAAQAAAQAAAA=</HashCode>
+      <FileName>MQ\Service\AveMQWCFService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="AvePoint.GCommon.Transfer.MQ.Interface.IMessageChannel" Collapsed="true">
+    <Position X="1.75" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAIAAAACAAAAAAACAAAAAAAAQAAACAAAA=</HashCode>
+      <FileName>MQ\Interface\IMessageChannel.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="AvePoint.GCommon.Transfer.MQ.Interface.IMQClientCallback" Collapsed="true">
+    <Position X="5.25" Y="5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MQ\Interface\IMQClientCallback.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="AvePoint.GCommon.Transfer.MQ.Interface.IMQWCFService" Collapsed="true">
+    <Position X="1" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAABAAAAAACAAAAAAAAAAAAAAAAQAAAQAAAA=</HashCode>
+      <FileName>MQ\Interface\IMQWCFService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Tahoma" Size="8.25" />
+</ClassDiagram>

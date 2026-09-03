@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+    <!--http://wixtoolset.org/documentation/manual/v3/patching/wix_patching.html-->
+    <!--Create your patch authoring in the sample root called Patch.wxs with the following content:-->
+    <Patch 
+        AllowRemoval="yes"
+        Manufacturer="AvePoint"
+        MoreInfoURL="https://www.avepoint.com/"
+        DisplayName="AvePoint Cloud Agent Service Patch"
+        Description="AvePoint Cloud Agent Service Update Patch"
+        Classification="Update"
+        >
+ 
+        <Media Id="5000" Cabinet="RTM.cab">
+            <PatchBaseline Id="RTM">
+                <Validate ProductId="no" UpgradeCode="yes" ProductVersion="Update" ProductVersionOperator="GreaterOrEqual" />
+            </PatchBaseline>
+        </Media>
+ 
+        <PatchFamilyRef Id="AvePointExamGuardPatchFamily"/>
+    </Patch>
+
+    <Fragment>
+        <PatchFamily Id='AvePointExamGuardPatchFamily' Version="$(var.Version)" Supersede='yes'>
+            <PropertyRef Id="ProductVersion"/>
+            <All />
+        </PatchFamily>
+    </Fragment>
+</Wix>

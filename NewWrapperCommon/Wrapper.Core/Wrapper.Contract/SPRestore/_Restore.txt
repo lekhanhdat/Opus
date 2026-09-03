@@ -1,0 +1,16 @@
+﻿Restore的宗旨:
+1. Restore必须有返回值，返回包括Report。
+2. Restore过程中如果object还原失败，并且不能继续往下面还原的，需要throw RestoreFailedException().
+   如果只是setting还原不了，那么返回report，下面的item还是可以继续还原。
+3. 
+
+
+setting还原的机制:
+1. O365存在限制，导致有些属性无法取到，所以还原对应的属性是一个问题。
+2. 是否需要考虑修改备份数据的结构，这样针对不同的数据也能做调整。
+
+
+EventReceiverFiringDisable:
+1. 在进行SharePoint操作的时候进行保护。
+2. 特殊的地方不需要care这个setting
+

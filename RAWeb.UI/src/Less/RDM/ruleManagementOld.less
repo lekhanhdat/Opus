@@ -1,0 +1,383 @@
+﻿#raRuleManagement {
+  #rm_rule_container {
+    display: none;
+  }
+
+  .ra-rule-title {
+    height: 50px;
+    font-size: 20px;
+    line-height: 50px;
+    padding-left: 10px;
+  }
+
+  #rmdatagrid {
+    margin: 0;
+  }
+
+  #rm_rule_bottom {
+    margin: 5px 0 0 0;
+  }
+
+  #rm_control {
+    margin-bottom: 12px;
+    font-size: 14px;
+  }
+
+  .ra-rule-dataCalc {
+    display: inline-block;
+    font-size: 13px;
+    color: #333333;
+  }
+
+  .ra-control-btn {
+    font-size: 14px;
+    display: inline-block;
+    color: #1c1c1c;
+    border: none;
+    /*outline: medium;*/
+    cursor: pointer;
+  }
+
+  .ra-control-btn div, .ra-control-btn span {
+    cursor: pointer;
+  }
+
+  .ra-control-btn:hover span {
+    text-decoration: underline;
+  }
+
+  .ra-control-btn > span {
+    display: inline-block;
+    vertical-align: middle;
+    height: 18px;
+    line-height: 18px;
+  }
+
+  .ra-control-btn:not(:first-child) {
+    margin-left: 30px;
+  }
+
+  .ra-control-btn > div {
+    margin: 0 8px 0px 0px;
+    position: relative;
+    vertical-align: middle;
+    overflow: hidden;
+    width: 18px;
+    height: 18px;
+  }
+
+  #rm_rule_selectInfo {
+    float: left;
+    display: inline-block;
+  }
+
+  #rm_rule_page, #rm_rule_selectPageCount {
+    display: inline-block;
+    float: right;
+    color: #333333;
+    font-size: 13px;
+  }
+
+  .ra-rule-pageSize-title {
+    color: #333333;
+    font-size: 13px;
+  }
+
+  .ra-rule-headerTemplate {
+    text-align: center;
+    line-height: 35px;
+  }
+
+  .ra-rule-pageSize-title {
+    display: inline-block;
+    margin-right: 5px;
+  }
+
+  #rm_rule_selectPageCount {
+    display: inline-block;
+  }
+
+  #rm_rule_messagebox {
+    display: none;
+    max-height: 320px !important;
+  }
+
+  #rm_rule_messagebar {
+    margin-bottom: 10px;
+    display: none;
+  }
+
+  #rm_rule_pageSizeSetting {
+    display: inline-block;
+    /*float: left;
+    margin-right: 20px;*/
+  }
+
+  .rule-data-ruleName {
+    font-size: 14px;
+    color: #0026b3;
+    text-decoration: none;
+  }
+
+  .rule-data-ruleName:hover {
+    text-decoration: underline !important;
+    cursor: pointer;
+  }
+
+  .rule-data-ruleName:visited {
+    text-decoration: underline !important;
+  }
+
+  #rm_rule_Terms {
+    margin-top: 20px;
+  }
+
+  .rule-data-modified, .rule-data-desc, .rule-data-ruleName {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .ra-rule-terms {
+    line-height: 18px;
+  }
+
+  .ra-rule-terms {
+    margin-left: 10px;
+    display: inline-block;
+    width: 360px;
+  }
+
+  .rule-data-desc {
+    font-size: 14px;
+    color: #1c1c1c;
+  }
+
+  /*-----------rule detail---------*/
+
+  .ra-popup-cover {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 10000;
+  }
+
+  .ra-popup-detail {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 855px;
+    background-color: white;
+    z-index: 10001;
+  }
+
+  
+
+  .clear::after {
+    content: '';
+    clear: both;
+    visibility: hidden;
+  }
+
+  .sharepointPng {
+    left: -180px;
+    top: 0px;
+  }
+
+  .filesystemPng {
+    left: -216px;
+    top: 0px;
+  }
+
+  .CretiaText {
+    line-height: 24px;
+    margin-left: 4px;
+  }
+  #rm_rule_datagarid_container{
+    padding-bottom: 16px;
+    margin-bottom: 24px;
+  }
+  .table-foot {
+    margin-top: 8px;
+  }
+  .table-foot-left {
+    display: inline-block;
+    height: 32px;
+    line-height: 32px;
+  }
+  .table-foot-right {
+    float: right;
+  }
+  .navbar {
+    overflow: hidden;
+    margin-bottom: 0;
+    padding-top: 0;
+  }
+  .navbar-left {
+      margin-left: 5px;
+      float: left;
+  }
+  .navbar-right {
+    float: right;
+  }
+  .navbar-actions {
+      display: inline-block;
+      vertical-align: middle;
+  }
+}
+
+.ra-rule-term-icon {
+  background-image: url("/Images/Base/action_button.png");
+  background-position: -108px -178px;
+  background-repeat: no-repeat;
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+  margin-left: 5px;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+.extend-icon {
+  background-position: -90px -178px;
+}
+
+#rm_rule_title {
+  font-size: 14px;
+  color: #0026b3;
+  display: inline-block;
+  cursor: pointer;
+}
+
+#rm_rule_content {
+  border: 1px solid #ededed;
+  padding: 15px 10px;
+  height: 120px;
+  overflow-y: auto;
+  font-size: 14px;
+  color: #585858;
+  line-height: 16px;
+}
+
+.ra-term-group {
+  margin-bottom: 15px;
+}
+
+.ra-term-ruleName {
+  margin-bottom: 8px;
+}
+
+.ra-term-Name {
+  width: 44px;
+  display: inline-block;
+  text-align: right;
+  vertical-align: top;
+}
+
+.ra-term-title {
+  margin-left: 4px;
+  display: inline-block;
+  width: 340px;
+}
+
+#ra-rule-detail{
+    .ra-popup-detail-content {
+        padding-top: 20px;
+        max-height: 410px;
+        overflow-y: auto;
+      }
+
+      .aui-tabs-bar > div{
+        max-width: 300px;
+    }
+    
+      .ra-popup-detail-content tr {
+        display: block;
+      }
+    
+      .ra-popup-detail-content-key {
+        display: inline-block;
+        width: 230px;
+        padding-bottom: 15px;
+        text-align: right;
+        vertical-align: top;
+        font-family: "Segoe UI", sans-serif;
+        font-size: 14px;
+        font-weight: 600;
+        color: #1c1c1c;
+      }
+    
+      .ra-popup-detail-content-value {
+        display: inline-block;
+        //width: 575px;
+        padding-left: 20px;
+        padding-bottom: 15px;
+        word-wrap: break-word;
+        vertical-align: bottom;
+        font-family: "Segoe UI", sans-serif;
+        font-size: 14px;
+        color: #1c1c1c;
+      }
+    
+      .ra-popup-detail-content-value-long {
+        max-width: 546px;
+      }
+      .ra-popup-detail-bar {
+        height: 35px;
+        line-height: 35px;
+        color: white;
+        background-color: #0079DD;
+      }
+    
+      .ra-popup-detail-title {
+        float: left;
+        margin-left: 10px;
+        font-family: "Segoe UI", sans-serif;
+        font-weight: 600;
+        font-size: 14px;
+        color: #ffffff;
+      }
+    
+      .ra-popup-detail-close-icon {
+        float: right;
+        margin-right: 10px;
+        cursor: pointer;
+        line-height: 35px;
+      }
+    
+      .ra-popup-detail-close {
+        position: relative;
+        bottom: 0px;
+        width: 100%;
+        text-align: right;
+        padding-top: 30px;
+      }
+    
+      .ra-popup-detail-close input {
+        position: relative;
+        width: 85px;
+        height: 30px;
+        margin-right: 20px;
+        margin-bottom: 20px;
+        line-height: 30px;
+        color: #ffffff;
+        border: none;
+        background-color: #0079DD;
+        font-family: "Segoe UI", sans-serif;
+        font-weight: 600;
+        font-size: 14px;
+        cursor: pointer;
+      }
+    
+      .ra-popup-detail-close input:hover {
+        background-color: #1b5599;
+      }
+    
+      .ra-popup-detail-close input:focus {
+        background-color: #1b5599;
+      }
+}
+

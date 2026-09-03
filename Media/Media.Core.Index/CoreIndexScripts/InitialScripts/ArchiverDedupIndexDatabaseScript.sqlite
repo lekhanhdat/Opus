@@ -1,0 +1,118 @@
+﻿-- /********************************************************************
+-- *
+-- *  PROPRIETARY and CONFIDENTIAL
+-- *
+-- *  This file is licensed from, and is a trade secret of:
+-- *
+-- *                   AvePoint, Inc.
+-- *                   525 Washington Blvd, Suite 1400
+-- *                   Jersey City, NJ 07310
+-- *                   United States of America
+-- *                   Telephone: +1-201-793-1111
+-- *                   WWW: www.avepoint.com
+-- *
+-- *  Refer to your License Agreement for restrictions on use,
+-- *  duplication, or disclosure.
+-- *
+-- *  RESTRICTED RIGHTS LEGEND
+-- *
+-- *  Use, duplication, or disclosure by the Government is
+-- *  subject to restrictions as set forth in subdivision
+-- *  (c)(1)(ii) of the Rights in Technical Data and Computer
+-- *  Software clause at DFARS 252.227-7013 (Oct. 1988) and
+-- *  FAR 52.227-19 (C) (June 1987).
+-- *
+-- *  Copyright © 2017-2026 AvePoint® Inc. All Rights Reserved. 
+-- *
+-- *  Unpublished - All rights reserved under the copyright laws of the United States.
+-- */
+
+CREATE TABLE [tb_body_index] ( 
+    [COL_ID] CHAR(36) not null primary key,
+    [COL_FLAG] BIGINT,
+	[COL_TYPE] CHAR(2),
+    [COL_NAME] VARCHAR(32672), COL_PATH_MD5 CHAR(32),
+    [COL_PARENT_PATH_MD5] CHAR(32),
+    [COL_DATA_FILE_NUMBER] BIGINT,
+    [COL_DATA_FILE_OFFSET] BIGINT,
+    [COL_DATA_FILE_LENGTH] BIGINT,
+    [COL_CRC] BIGINT,
+    [COL_FILE_HEADER_TYPE] INT,
+    [COL_ARCHIVE_TIME] BIGINT,
+    [COL_CREATE_TIME] BIGINT,
+    [COL_MODIFY_TIME] BIGINT,
+    [COL_RECYCLE_TIME] BIGINT,
+    [COL_AUTHOR] CHAR(20),
+    [COL_PERMISSION] TEXT,
+    [COL_RETENTION] VARCHAR(32672),
+    [COL_SUB_RETENTION] VARCHAR(32672),
+    [COL_ATTRIBUTES] VARCHAR(32672),
+    [COL_EXTRAINFO] VARCHAR(32672),
+    [COL_ITEMID] VARCHAR(32672),
+    [COL_ISSYSTEMFILE] VARCHAR(20),
+    [COL_STUBINFO] VARCHAR(32672),
+    [COL_STORAGE] INT,
+    [COL_PLANID] VARCHAR(32672),
+    [COL_CYCLEID] VARCHAR(32672),
+    [COL_JOBID] VARCHAR(32672),
+    [COL_SEQUENCE] BIGINT,
+    [COL_STORAGEPOLICYID] CHAR(36),
+    [COL_EXTENSION_1] INT,
+    [COL_EXTENSION_2] INT,
+    [COL_EXTENSION_3] INT,
+    [COL_EXTENSION_4] BIGINT,
+    [COL_EXTENSION_5] BIGINT,
+    [COL_EXTENSION_6] VARCHAR(32672),
+    [COL_EXTENSION_7] VARCHAR(32672),
+    [COL_EXTENSION_8] VARCHAR(32672),
+    [COL_EXTENSION_9] TEXT,
+    [COL_EXTENSION_10] TEXT,
+    [COL_CONTENT_DATA_OFFSET] BIGINT,
+    [COL_CONTENT_DATA_FILE_NUMBER] BIGINT,
+    [COL_CONTENT_DATA_FILE_PREFIX_NUMBER] BIGINT,
+    [COL_STORAGEINFO] TEXT,
+    [COL_HAD_OFFSET] BOOLEAN,
+    [COL_VERSION] BIGINT,
+    [COL_META_DATA_HEADER_OFFSET] BIGINT,
+    [COL_CONTENT_DATA_HEADER_OFFSET] BIGINT,
+    [COL_CONTENT_PAGE_SIZE] BIGINT,
+    [COL_STATUS] BIGINT default 0,
+    [COL_PRUNE_TIME] BIGINT,
+    [COL_POOL_GUID] TEXT,
+    [COL_BLOB_INFO] TEXT,
+    [COL_UI_VERSION] INTEGER,
+	[COL_SITE_PATH] VARCHAR(255),
+	[COL_DEL_STATUS] INT,
+	[COL_USESNAPLOCK] INT, 
+	[COL_RETENTION_STATUS] INT,
+	[COL_META_TAIL_LENGTH] BIGINT,
+	[COL_PLATFORM_TYPE] INT default 1,
+	[COL_ARCHIVE_BY] VARCHAR(32672),
+	[COL_IS_APP_DATA] VARCHAR(20),
+	[COL_APP_DATA_NAME] VARCHAR(255)
+);
+
+CREATE TABLE [tb_job_info](
+    [COL_GUID] VARCHAR(36) not null primary key,
+    [COL_JOB_ID] VARCHAR(32672),
+    [COL_KEY] VARCHAR(32672),
+    [COL_VALUE] VARCHAR(32672),
+    [COL_EXTENSION_3] INT,
+    [COL_EXTENSION_4] BIGINT,
+    [COL_EXTENSION_5] BIGINT,
+    [COL_EXTENSION_6] VARCHAR(32672),
+    [COL_EXTENSION_7] VARCHAR(32672),
+    [COL_EXTENSION_8] VARCHAR(32672),
+    [COL_EXTENSION_9] TEXT,
+    [COL_EXTENSION_10] TEXT
+);
+
+INSERT INTO tb_job_info (COL_GUID, COL_KEY, COL_VALUE) VALUES( 'AAAAAAAA-AAAA-AAAA-AAAA-AAAAAAAAAAAA', 'version','6.0.0.0');
+
+CREATE INDEX 
+            IF NOT EXISTS IDX_BODY_DUP_STATUS_RECYCLE_TIME
+            on tb_body_index(COL_EXTENSION_3, COL_RECYCLE_TIME asc);
+
+CREATE INDEX 
+            IF NOT EXISTS IDX_BODY_COL_DEL_STATUS
+            on tb_body_index(COL_DEL_STATUS asc);

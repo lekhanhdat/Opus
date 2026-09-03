@@ -1,0 +1,36 @@
+<!--Covered by AvePoint copyright and license agreement-->
+<template>
+    <lightning-card>
+        <h3 slot="title" class="definition-card-container-title">
+            {translation.inactiveDataTitle}
+        </h3>
+        <div class="horizontal-divider"></div>
+        <div class="definition-section">
+            <div class="basic-data">
+                <div class="modified-time-range">
+                    <div class="without-modified-date">
+                        <p>{translation.timeRange}</p>
+                        <div class="range-time-picker">
+                            <label>{translation.from}</label>
+                            <lightning-select name="from" value={fromValue} options={fromOptions} onchange={handleFromOptionChange} variant="label-hidden"></lightning-select>
+                            <label>{translation.to}</label>
+                            <lightning-select name="to" value={toValue} options={toOptions} onchange={handleToOptionChange} variant="label-hidden"></lightning-select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slds-grid custom-grid-gap definition-right-side">
+                    <template for:each={totalData} for:item="item">
+                        <div key={item.text} class="slds-col">
+                            <div class="definition-card-item">
+                                <p class="card-text">{item.text}</p>
+                                <p class="card-value">{item.value}</p>
+                            </div>
+                        </div>
+                    </template>
+                </div>
+            </div>
+        </div>
+    </lightning-card>
+
+</template>

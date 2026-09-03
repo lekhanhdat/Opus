@@ -1,0 +1,64 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <OutputType>Library</OutputType>
+    <RootNamespace>ExchangeBackupUtility</RootNamespace>
+    <AssemblyName>ExchangeBackupUtility</AssemblyName>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>..\RAScheduleJob\bin\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <OutputPath>..\bin\Release\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>..\DocaveReference\DocAveStandard.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+	<PropertyGroup>
+		<EnableUnsafeBinaryFormatterSerialization>true</EnableUnsafeBinaryFormatterSerialization>
+	</PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="ExchangeServiceExtension\Core\Requests\**" />
+    <Compile Remove="ExchangeServiceExtension\Core\Responses\**" />
+    <EmbeddedResource Remove="ExchangeServiceExtension\Core\Requests\**" />
+    <EmbeddedResource Remove="ExchangeServiceExtension\Core\Responses\**" />
+    <EntityDeploy Remove="ExchangeServiceExtension\Core\Requests\**" />
+    <EntityDeploy Remove="ExchangeServiceExtension\Core\Responses\**" />
+    <None Remove="ExchangeServiceExtension\Core\Requests\**" />
+    <None Remove="ExchangeServiceExtension\Core\Responses\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Common\GlobalCommon\GCommonContract\DocAve.GCommonContract.csproj" />
+    <ProjectReference Include="..\Common\GlobalCommon\GCommonUtility\DocAve.GCommonUtility.csproj" />
+    <ProjectReference Include="..\Common\M365Wrapper\WrapperBackup\M365.Wrapper.Backup.csproj" />
+    <ProjectReference Include="..\RACommon.Global\RACommon.Global.csproj" />
+    <ProjectReference Include="..\RACommon\RACommon.csproj" />
+    <ProjectReference Include="..\RAContract.Global\RAContract.Global.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="AOS.SDK" Version="1.2.78" />
+    <PackageReference Include="AWSSDK.S3" Version="4.0.17.3" />
+    <PackageReference Include="log4net" Version="3.3.1" />
+    <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
+    <PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
+    <PackageReference Include="System.DirectoryServices" Version="10.0.2" />
+    <PackageReference Include="PowerShellStandard.Library" Version="5.1.1" />
+    <PackageReference Include="Microsoft.DotNet.UpgradeAssistant.Extensions.Default.Analyzers" Version="0.4.421302">
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="System.Dynamic.Runtime" Version="4.3.0" />
+    <PackageReference Include="System.Linq.Queryable" Version="4.3.0" />
+    <PackageReference Include="util.exchange" Version="4.12.20" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Auth\AppToken\ExchangeServiceBindingV2.cs" />
+    <Compile Remove="EWSProxy.cs" />
+    <Compile Remove="ExchangeServiceExtension\Core\BufferFreeEwsHttpWebRequestFactory.cs" />
+    <Compile Remove="ExchangeServiceExtension\Core\ExchangeServicePlus.cs" />
+    <Compile Remove="RetryLogic\Exception\SoapExceptionExtension.cs" />
+    <Compile Remove="RetryLogic\ResponseCodeTypeExtension.cs" />
+    <Compile Remove="RetryLogic\RetryableEwsHttpWebRequestFactory.cs" />
+  </ItemGroup>
+</Project>

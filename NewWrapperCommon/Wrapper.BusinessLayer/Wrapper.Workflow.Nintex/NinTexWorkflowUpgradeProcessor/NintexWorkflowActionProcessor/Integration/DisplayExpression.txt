@@ -1,0 +1,712 @@
+﻿<script type="text/javascript">
+    var SharepointInput = function () {
+        var webRequestlookupPlaceHolders = [];
+
+        var webUtility = (function (undefined) {
+            var $codec = NWL$('<div />');
+
+            return {
+                htmlDecode: function (htmlString) {
+                    if (htmlString === undefined || htmlString === null || htmlString === '') {
+                        return htmlString;
+                    }
+
+                    return $codec.html(htmlString).text();
+
+                },
+                htmlEncode: function (textString) {
+                    if (textString === undefined || textString === null || textString === '') {
+                        return textString;
+                    }
+
+                    return $codec.text(textString).html();
+                }
+            };
+        }());
+
+        function getNodeParameters(xmlNode) {
+            var nodeParameter = {};
+            nodeParameter.field = NWL$(xmlNode).find('Key').text();
+            nodeParameter.value = NWL$(xmlNode).find('Value').text();
+
+            return nodeParameter;
+        };
+
+        function stringRight(text, numOfChar) {
+            return text.substring(text.length - numOfChar, text.length);
+        }
+
+        function getKeyNode(nodeValue) {
+            if (nodeValue != '') {
+                return '<Key>' + nodeValue.encodeHTML() + '</Key>';
+            }
+
+            return '';
+        };
+
+        function getValueNode(nodeValue) {
+            return '<Value>' + nodeValue.encodeHTML() + '</Value>';
+        };
+
+        function isDuplicateKey() {
+            var rows = NWL$('#sharepointInputs .leadRow');
+            var keys = [];
+            var isDuplicate = false;
+
+            NWL$.each(rows, function (count, item) {
+                if (NWL$(item).is(":visible")) {
+                    var keyNode = getRTEValue('field_' + count);
+
+                    if (keyNode == "[%Value:Use text builder%]") {
+                        keyNode = rows[count].textContent;
+                    }
+
+                    if (keyNode != null && keyNode != '') {
+                        if (NWL$.inArray(keyNode, keys) < 0) {
+                            keys.push(keyNode);
+                        }
+                        else {
+                            isDuplicate = true;
+                        }
+                    }
+                }
+            });
+
+            return isDuplicate;
+        };
+
+        function showBuilderView() {
+            NWL$('#InputRichHTML_Builder').attr('checked', 'checked');
+            NWL$('#InputRichHTML_XML').removeAttr('checked');
+            NWL$('#xmlWrapper').hide();
+            NWL$('#builderWrapper').show();
+        }
+
+        function showXmlView() {
+            NWL$('#InputRichHTML_Builder').removeAttr('checked');
+            NWL$('#InputRichHTML_XML').attr('checked', 'checked');
+            NWL$('#xmlWrapper').show();
+            NWL$('#builderWrapper').hide();
+        }
+
+        function validateXml(value, errorMessage) {
+            var tempXml;
+            if (errorMessage === undefined || errorMessage === null) {
+                errorMessage = SharepointInput.msgInvalidXML;
+            }
+
+            if (window.DOMParser) {
+                var parser = new DOMParser();
+                try {
+                    tempXml = parser.parseFromString(value, 'text/xml');
+                }
+                catch (e) {
+                    alert(errorMessage);
+                    return false;
+                }
+            }
+            else {
+                tempXml = new ActiveXObject('Microsoft.XMLDOM');
+                tempXml.async = false;
+                if (!tempXml.loadXML(value)) {
+                    alert(errorMessage);
+                    return false;
+                }
+            }
+
+            tempXml = null;
+            return true;
+        }
+
+        function buildXml() {
+            var result = '';
+            
+            var method = 'GET';
+            var valueContentType = '';
+            var valueSoapAction = '';
+            var valueCustomMethod = '';
+
+            if (document.getElementById('radioGET').checked) {
+                method = document.getElementById('radioGET').value;
+            }
+            else if (document.getElementById('radioPOST').checked) {
+                method = document.getElementById('radioPOST').value;
+                valueContentType = webUtility.htmlEncode(SharepointInput.getRTEValue('ctrlContentType'));
+
+                //if (valueContentType == '') {
+                //    alert(SharepointInput.msgEmptyContentType);
+                //}
+            }
+            else if (document.getElementById('radioPUT').checked) {
+                method = document.getElementById('radioPUT').value;
+                valueContentType = webUtility.htmlEncode(SharepointInput.getRTEValue('ctrlContentType'));
+
+                //if (valueContentType == '') {
+                //    alert(SharepointInput.msgEmptyContentType);
+                //}
+            }
+            else if (document.getElementById('radioSOAP11').checked) {
+                method = document.getElementById('radioSOAP11').value;
+                valueSoapAction = webUtility.htmlEncode(SharepointInput.getRTEValue('ctrlSoapAction'));
+
+                //if (valueSoapAction == '') {
+                //    alert(SharepointInput.msgEmptySoapAction);
+                //}
+            }
+            else if (document.getElementById('radioSOAP12').checked) {
+                method = document.getElementById('radioSOAP12').value;
+            }
+            else if (document.getElementById('radioCustom').checked) {
+                method = document.getElementById('radioCustom').value;
+                valueCustomMethod = webUtility.htmlEncode(SharepointInput.getRTEValue('ctrlCustomMethod'));
+
+                //if (valueCustomMethod == '') {
+                //    alert(SharepointInput.msgEmptyCustomMethod);
+                //}
+            }
+
+            result += '<MetaData><Key>RequestMethod</Key><Value>' + method.encodeHTML() + '</Value></MetaData>';
+            result += '<MetaData><Key>ContentType</Key><Value>' + valueContentType.encodeHTML() + '</Value></MetaData>';
+            result += '<MetaData><Key>SoapAction</Key><Value>' + valueSoapAction.encodeHTML() + '</Value></MetaData>';
+            result += '<MetaData><Key>CustomMethod</Key><Value>' + valueCustomMethod.encodeHTML() + '</Value></MetaData>';
+
+            var rows = NWL$('#sharepointInputs .leadRow');
+            NWL$.each(rows, function (count, item) {
+                if (NWL$(item).is(":visible")) {
+                    var keyNode = getKeyNode(webUtility.htmlEncode(SharepointInput.getRTEValue('field_' + count)));
+                    var valueNode = getValueNode(webUtility.htmlEncode(SharepointInput.getRTEValue('value_' + count)));
+
+                    if (keyNode != '') {
+                        result += '<MetaData>' + keyNode + '' + valueNode + '</MetaData>';
+                    }
+                }
+            });
+
+            if (result != '') {
+                result = '<?xml version="1.0" encoding="utf-8"?><MetaDataCollection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">' + result + '</MetaDataCollection>';
+            }
+
+            return result;
+        }
+
+        function getLookupDataObj(wrapperId, dispExprInputWrappers) {
+            return $.grep(dispExprInputWrappers, function (n, i) {
+                return n.wrapperId == wrapperId;
+            })
+        };
+
+        function getFormatValuePlaceHolder(formatValueElement) {
+            var placeHolderText = '';
+            if (formatValueElement.primitiveValue && formatValueElement.primitiveValue.value) {
+                placeHolderText = formatValueElement.primitiveValue.value;
+                if (formatValueElement.primitiveValue.formatValues && formatValueElement.primitiveValue.formatValues.length > 0) {
+                    placeHolderText = getPlaceHolderText(NW.Resources.language.StringBuilder_PlaceHolder_Value, NW.Resources.language.StringBuilder_Text);
+                }
+            }
+            if (formatValueElement.listLookup) {
+                var selectedListId = formatValueElement.listLookup.selectList;
+                lists = _listRepository.get();
+                selectedList;
+                if (selectedListId === '[Current Item]') {
+                    selectedList = _listRepository.getCurrent();
+                    selectedListText = NW.Resources.language.List_Lookup_CurrentItem;
+                }
+                else {
+                    selectedList = lists.getById(selectedListId);
+                    selectedListText = selectedList.title;
+                }
+                if (selectedList && selectedList.fields) {
+                    var field = selectedList.fields.getByInternalName(formatValueElement.listLookup.selectField);
+                    if (field) {
+                        selectedListField = field.title;
+                    }
+                }
+                placeHolderText = getPlaceHolderText(selectedListText, selectedListField);
+            }
+            else if (formatValueElement.variable) {
+                placeHolderText = getPlaceHolderText(NW.Resources.language.StringBuilder_PlaceHolder_Variable, formatValueElement.variable.name);
+            }
+            else if (formatValueElement.workflowContext) {
+                placeHolderText = getPlaceHolderText(NW.Resources.language.StringBuilder_PlaceHolder_WFContext, formatValueElement.workflowContext.value);
+            }
+            else if (formatValueElement.taskProperty) {
+                placeHolderText = getPlaceHolderText(NW.Resources.language.StringBuilder_PlaceHolder_TaskProperty, formatValueElement.taskProperty.value);
+            }
+            return placeHolderText;
+        };
+
+        function getPlaceHolderText(key, value) {
+            return "[%".concat(key, ":", value, "%]");
+        };
+
+        return {
+            labelOther: "Other",
+            labelCustom: "Custom method",
+            labelContentType: "Content type",
+            labelSoapAction: "Soap action",
+            labelAddHeader: "Add header",
+            labelHeader: "Header name (key)",
+            labelValue: "Header value",
+            //msgDuplicateHeader: 'Duplicate header detected. To publish or run the workflow, ensure the each specified header is unique.',
+            //msgEmptyContentType: 'Content type not indicated. To publish or run the workflow, specify the content type.',
+            //msgEmptySoapAction: 'SOAP action not indicated. To publish or run the workflow, specify the SOAP action.',
+            //msgEmptyCustomMethod: 'Custom method not indicated. To publish or run the workflow, specify the custom method.',
+            msgInvalidXML: 'The XML is invalid.',
+            msgValidWorkflowConfirmation: 'Please ensure it is valid before publishing and running the workflow.',
+            //descAddHeader: 'The following types of authentication are supported: Anonymous and Basic.',
+
+            addRow: function (np, toEncode) {
+                var rowNum = NWL$('#sharepointInputs .leadRow').length;
+
+                var clonedControlField = cloneRTE(txtHiddenTextInputId, 'field_' + rowNum);
+                var clonedControlValue = cloneRTE(txtHiddenTextInputId, 'value_' + rowNum);
+
+                var leadRow = NWL$('<tr class="leadRow"><td width="25%">' + SharepointInput.labelHeader + '</td><td colspan="2" id="td_field_' + rowNum + '"></td><td><a href="#" onclick="SharepointInput.removeField(this); return false;"><img alt="Delete" title="Delete" src="../images/Delete.gif" style="border:0; margin-left:8px; margin-bottom: 12px;" /></a></td></tr>');
+                var secondRow = NWL$('<tr class="secondRow"><td style="border-bottom:1px dashed #e9e9e9;padding-bottom:42px;">' + SharepointInput.labelValue + '</td><td style="border-bottom:1px dashed #e9e9e9;"  colspan="3" id="td_value_' + rowNum + '"></td></tr>');
+
+                NWL$('#sharepointInputs').append(leadRow);
+                NWL$('#sharepointInputs').append(secondRow);
+
+                NWL$('#td_field_' + rowNum).append(clonedControlField);
+                NWL$('#td_value_' + rowNum).append(clonedControlValue);
+
+                NWL$('#sharepointInputs .leadRow .ms-inputuserfield').css('width', '360px');
+                NWL$('#sharepointInputs .secondRow .ms-inputuserfield').css('width', '360px');
+
+                if (np.field != '') {
+                    var field = (toEncode != null && toEncode == true) ? webUtility.htmlEncode(np.field.encodeHTML()) : webUtility.htmlDecode(np.field.decodeHTML());
+                    setRTEValue('field_' + rowNum, field);
+                }
+
+                if (np.value != '') {
+                    var value = (toEncode != null && toEncode == true) ? webUtility.htmlEncode(np.value.encodeHTML()) : webUtility.htmlDecode(np.value.decodeHTML());
+                    setRTEValue('value_' + rowNum, value);
+                }
+            },
+            removeField: function (item) {
+                var trLead$ = NWL$(item).closest('tr');
+                var trSecond$ = trLead$.hide().next();
+
+                var fieldInput = NWL$('.ms-inputBox div', trLead$);
+                var valueInput = NWL$('.ms-inputBox div', trSecond$);
+
+                if (fieldInput.length == 1) {
+                    fieldInput[0].innerText = '';
+                }
+
+                if (valueInput.length == 1) {
+                    valueInput[0].innerText = '';
+                }
+
+                trLead$.hide();
+                trSecond$.hide();
+            },
+            load: function (value) {
+                // Add Content Type
+                var clonedControl1 = cloneRTE(txtHiddenTextInputId, 'ctrlContentType');
+                var newRow1 = NWL$('<tr id="rowContentType" class="newRow" style="margin: 0px 0px 5px; display: none;"><td width="25%" style="padding-bottom: 30px" class="req">' + SharepointInput.labelContentType + '</td><td colspan="2" id="colContentType"></td></tr>');
+
+                NWL$('#webRequestInputs').append(newRow1);
+                NWL$('#colContentType').append(clonedControl1);
+                NWL$('#webRequestInputs .newRow .ms-inputuserfield').css('width', '300px');
+                if (typeof dispExprInputWrappers != 'undefined') NWL.Designer.DisplayExpression.addFieldLookups(dispExprInputWrappers);
+
+                // Add Soap Action
+                var clonedControl2 = cloneRTE(txtHiddenTextInputId, 'ctrlSoapAction');
+                var newRow2 = NWL$('<tr id="rowSoapAction" class="newRow" style="margin: 0px 0px 5px; display: none;"><td width="25%" style="padding-bottom: 30px" class="req">' + SharepointInput.labelSoapAction + '</td><td colspan="2" id="colSoapAction"></td></tr>');
+
+                NWL$('#webRequestInputs').append(newRow2);
+                NWL$('#colSoapAction').append(clonedControl2);
+                NWL$('#webRequestInputs .newRow .ms-inputuserfield').css('width', '300px');
+                if (typeof dispExprInputWrappers != 'undefined') NWL.Designer.DisplayExpression.addFieldLookups(dispExprInputWrappers);
+
+                // Add Custom Method
+                var clonedControl3 = cloneRTE(txtHiddenTextInputId, 'ctrlCustomMethod');
+                var newRow3 = NWL$('<tr id="rowCustomMethod" class="newRow" style="margin: 0px 0px 5px; display: none;"><td width="25%" style="padding-bottom: 30px" class="req">' + SharepointInput.labelCustom + '</td><td colspan="2" id="colCustomMethod"></td></tr>');
+
+                NWL$('#webRequestInputs').append(newRow3);
+                NWL$('#colCustomMethod').append(clonedControl3);
+                NWL$('#webRequestInputs .newRow .ms-inputuserfield').css('width', '300px');
+                if (typeof dispExprInputWrappers != 'undefined') NWL.Designer.DisplayExpression.addFieldLookups(dispExprInputWrappers);
+
+                if (document.getElementById("labelCustom") != 'undefined') {
+                    if (document.getElementById("labelCustom").textContent != 'undefined') {
+                        document.getElementById("labelCustom").textContent = SharepointInput.labelOther;
+                    }
+                    else {
+                        document.getElementById("labelCustom").innerText = SharepointInput.labelOther;
+                    }
+                }
+                
+                if (document.getElementById("hyperlinkAddHeader") != 'undefined') {
+                    if (document.getElementById("hyperlinkAddHeader").textContent != 'undefined') {
+                        document.getElementById("hyperlinkAddHeader").textContent = SharepointInput.labelAddHeader;
+                    }
+                    else {
+                        document.getElementById("hyperlinkAddHeader").innerText = SharepointInput.labelAddHeader;
+                    }
+                }
+
+                //if (document.getElementById("spanAddHeader") != 'undefined') {
+                //    if (document.getElementById("spanAddHeader").textContent != 'undefined') {
+                //        document.getElementById("spanAddHeader").textContent = SharepointInput.descAddHeader;
+                //    }
+                //    else {
+                //        document.getElementById("spanAddHeader").innerText = SharepointInput.descAddHeader;
+                //    }
+                //}
+                
+                if (value == '') {
+                    return;
+                }
+
+                var editorType = value.substring(0, 1);
+                value = stringRight(value, value.length - 1);
+
+                if (editorType === '0' || editorType === '<') {
+                    showBuilderView();
+                    if (value == '') {
+                        return;
+                    }
+                }
+                else {
+                    showXmlView();
+                    if (value == '') {
+                        return;
+                    }
+
+                    var xmlValue$ = NWL$('#xmlValue');
+                    if (xmlValue$.val() == '') {
+                        xmlValue$.val(value);
+                    }
+                }
+
+                var xmlSharepointDoc;
+
+                if (window.DOMParser) {
+                    var parser = new DOMParser();
+                    try {
+                        xmlSharepointDoc = parser.parseFromString(value, 'text/xml');
+                    }
+                    catch (e) {
+                        return false;
+                    }
+                }
+                else {
+                    xmlSharepointDoc = new ActiveXObject('Microsoft.XMLDOM');
+                    xmlSharepointDoc.async = false;
+                    if (!xmlSharepointDoc.loadXML(value)) {
+                        return false;
+                    }
+                }
+
+                NWL$(xmlSharepointDoc).find('MetaData').each(function () {
+                    var np = getNodeParameters(NWL$(this));
+
+                    if (np.field != '') {
+                        switch (np.field) {
+                            case 'RequestMethod':
+                                SharepointInput.toggleMethod(np.value);
+                                break;
+                            case 'ContentType':
+                                //if (np.value == "") {
+                                //    np.value = "application/x-www-form-urlencoded";
+                                //}
+                                setRTEValue('ctrlContentType', webUtility.htmlDecode(np.value.decodeHTML()));
+                                break;
+                            case 'SoapAction':
+                                setRTEValue('ctrlSoapAction', webUtility.htmlDecode(np.value.decodeHTML()));
+                                break;
+                            case 'CustomMethod':
+                                setRTEValue('ctrlCustomMethod', webUtility.htmlDecode(np.value.decodeHTML()));
+                                break;
+                            default:
+                                SharepointInput.addRow(np, false);
+                                break;
+                        }
+                    }
+                });
+            },
+            save: function () {
+                var result = '';
+                //if (isDuplicateKey()) {
+                //    alert(SharepointInput.msgDuplicateHeader);
+                //}
+
+                var editorType = NWL$('#InputRichHTML_Builder:checked').length === 1 ? '0' : '1';
+                if (editorType === '0') {
+                    result = buildXml();
+                }
+                else {
+                    result = NWL$('#xmlValue').val();
+                    validateXml(result, SharepointInput.msgInvalidXML + ' ' + SharepointInput.msgValidWorkflowConfirmation);
+                }
+
+                if (result === '') {
+                    return '';
+                }
+
+                return editorType + result;
+            },
+            toggleMode: function (mode) {
+                var xmlValue = '';
+                if (mode == 'xml') {
+                    xmlValue = buildXml();
+                    NWL$('#xmlValue').val(xmlValue);
+                    NWL$('#xmlWrapper').show();
+                    NWL$('#builderWrapper').hide();
+                }
+                else {
+                    var editorType = NWL$('#InputRichHTML_Builder:checked').length === 1 ? '0' : '1';
+                    xmlValue = NWL$('#xmlValue').val();
+                    if (xmlValue !== '') {
+                        var isValid = validateXml(xmlValue);
+                        if (!isValid) {
+                            showXmlView();
+                            return false;
+                        }
+                    }
+
+                    SharepointInput.load(editorType + xmlValue);
+                    NWL$('#xmlWrapper').hide();
+                    NWL$('#builderWrapper').show();
+                }
+            },
+            toggleMethod: function (sOperation) {
+                switch (sOperation) {
+                    case "GET":
+                        document.getElementById("radioGET").checked = true;
+                        SharepointInput.HideShowContentType(false);
+                        SharepointInput.HideShowSoapAction(false);
+                        SharepointInput.HideShowCustomMethod(false);
+                        break;
+                    case "POST":
+                        document.getElementById("radioPOST").checked = true;
+                        SharepointInput.HideShowContentType(true);
+                        SharepointInput.HideShowSoapAction(false);
+                        SharepointInput.HideShowCustomMethod(false);
+                        break;
+                    case "PUT":
+                        document.getElementById("radioPUT").checked = true;
+                        SharepointInput.HideShowContentType(true);
+                        SharepointInput.HideShowSoapAction(false);
+                        SharepointInput.HideShowCustomMethod(false);
+                        break;
+                    case "SOAP11":
+                        document.getElementById("radioSOAP11").checked = true;
+                        SharepointInput.HideShowContentType(false);
+                        SharepointInput.HideShowSoapAction(true);
+                        SharepointInput.HideShowCustomMethod(false);
+                        break;
+                    case "SOAP12":
+                        document.getElementById("radioSOAP12").checked = true;
+                        SharepointInput.HideShowContentType(false);
+                        SharepointInput.HideShowSoapAction(false);
+                        SharepointInput.HideShowCustomMethod(false);
+                        break;
+                    default:
+                        document.getElementById("radioCustom").checked = true;
+                        SharepointInput.HideShowContentType(false);
+                        SharepointInput.HideShowSoapAction(false);
+                        SharepointInput.HideShowCustomMethod(true);
+                        break;
+                }
+
+                RefreshCommandUI();
+            },
+            HideShowContentType: function (show) {
+                if (show) {
+                    document.getElementById("rowContentType").style.display = "";
+                    document.getElementById("rowContentType").style.margin = "0px 0px 5px 0px";
+                }
+                else {
+                    document.getElementById("rowContentType").style.display = "none";
+                    document.getElementById("rowContentType").style.margin = "0px 0px 0px 0px";
+                }
+            },
+            HideShowSoapAction: function (show) {
+                if (show) {
+                    document.getElementById("rowSoapAction").style.display = "";
+                    document.getElementById("rowSoapAction").style.margin = "0px 0px 5px 0px";
+                }
+                else {
+                    document.getElementById("rowSoapAction").style.display = "none";
+                    document.getElementById("rowSoapAction").style.margin = "0px 0px 0px 0px";
+                }
+            },
+            HideShowCustomMethod: function (show) {
+                if (show) {
+                    document.getElementById("rowCustomMethod").style.display = "";
+                    document.getElementById("rowCustomMethod").style.margin = "0px 0px 5px 0px";
+                }
+                else {
+                    document.getElementById("rowCustomMethod").style.display = "none";
+                    document.getElementById("rowCustomMethod").style.margin = "0px 0px 0px 0px";
+                }
+            },
+
+            isWorkflowOnlineEnvironment: function () {
+                if (NWL$('#scrollableContentLayout-content') != undefined) {
+                    var control = NWL$('#scrollableContentLayout-content')[0];
+
+                    if (control != undefined) {
+                        var workflowOnlineURL = control.ownerDocument.URL;
+
+                        if (workflowOnlineURL.indexOf("nCAFHubKey") > 0) {
+                            return true;
+                        }
+                    }
+                }
+                return false;
+            },
+            getRTEValue: function (id) {
+                return SharepointInput.getLookupControlValue(id, webRequestlookupPlaceHolders, isSavingOrLoadingDispExpr, dispExprInputWrappers);
+            },
+            getLookupControlValue: function (id, webRequestlookupPlaceHolders, isSavingOrLoadingDispExpr, dispExprInputWrappers) {
+                var textValue = '';
+                var environment = null;
+                var lookupDataObj = getLookupDataObj(id, dispExprInputWrappers)[0];
+                if (lookupDataObj && lookupDataObj.saveFunction) {
+                    var formatValueElement = lookupDataObj.saveFunction();
+                    if (formatValueElement) {
+                        textValue = getFormatValuePlaceHolder(formatValueElement);
+                        isSavingOrLoadingDispExpr = true;
+                        if (isSavingOrLoadingDispExpr && formatValueElement.primitiveValue && formatValueElement.primitiveValue.formatValues && formatValueElement.primitiveValue.formatValues.length > 0) {
+                            webRequestlookupPlaceHolders.push(formatValueElement);
+                        }
+                    }
+                }
+                return textValue;
+            },
+            getValueToSave: function (webRequestlookupPlaceHolders, textValue) {
+                var ctr = 0;
+                var filteredPlaceHolders = $.grep(webRequestlookupPlaceHolders, function (el, i) {
+
+                    var firstStartIndex = textValue.indexOf('[%');
+                    if (firstStartIndex >= 0) {
+                        var firstEndIndex = textValue.indexOf('%]') + 2;
+                        var placeHolder = textValue.substring(firstStartIndex, firstEndIndex);
+                        textValue = textValue.replace(placeHolder, '{' + ctr + '}');
+                        ctr++;
+                        return true; //grep - returning true to keep the element in the array
+                    } else {
+                        //if the place lookup place holder is in the array and the text place holder is 
+                        //not found it could the chosen operator field be is null or is not null.
+                        //therefore remove the current placeholder from format value array
+                        return false; //grep - returning false not to keep the element in the array
+                    }
+                });
+
+                return {
+                    text: textValue,
+                    formatValues: filteredPlaceHolders
+                };
+            },
+            getWebRequestlookupPlaceHolders: function () {
+                return webRequestlookupPlaceHolders;
+            }
+        };
+    }();
+
+    if (typeof (SharepointInput) != 'undefined') {
+        if (SharepointInput.isWorkflowOnlineEnvironment()) {
+
+            var originalSharepointInputAddRow = (typeof (SharepointInput) != 'undefined' && typeof (SharepointInput.addRow) != 'undefined') ? SharepointInput.addRow : function () { };
+            if (typeof (SharepointInput) != 'undefined') {
+                SharepointInput.addRow = function (np) {
+                    originalSharepointInputAddRow(np);
+                    NWL.Designer.DisplayExpression.addFieldLookups(dispExprInputWrappers);
+                    clearDispExpressionBorders();
+
+                    NWL$('.leadRow td').css({ 'border': 'none', 'padding-top': '12px' });
+                    NWL$('.leadRow td div[id^=field_]').css({ 'border': 'none', 'margin-top': '0px' });
+                    NWL$('.leadRow').css({ 'border-bottom': '1px solid  #e2e3e3', 'vertical-align': 'top' });
+                    NWL$(".leadRow td a img[title='Delete']").css({ 'margin-top': '5px' });
+
+                    //NWL$('.secondRow td').css({ 'border': 'none' });
+                    //NWL$('.secondRow td div[id^=value_]').css({ 'border': 'none', 'margin-top': '0px' });
+                    //NWL$('.secondRow').css({ 'border-bottom': '1px solid  #e2e3e3', 'vertical-align': 'top' });
+                };
+            }
+
+            var orginalSPInputSave = (typeof (SharepointInput) != 'undefined' && typeof (SharepointInput.save) != 'undefined') ? SharepointInput.save : function () { };
+            if (typeof (SharepointInput) != 'undefined') {
+                SharepointInput.save = function () {
+                    isSavingOrLoadingDispExpr = true;
+                    var textValue = orginalSPInputSave();
+                    var webRequestlookupPlaceHolders = SharepointInput.getWebRequestlookupPlaceHolders();
+                    var savedObj = SharepointInput.getValueToSave(webRequestlookupPlaceHolders, textValue);
+                    webRequestlookupPlaceHolders = [];
+                    return savedObj;
+                };
+            }
+        }
+    }
+
+    if (!String.prototype.encodeHTML) {
+        String.prototype.encodeHTML = function () {
+            return this.replace(/&/g, '&amp;')
+                       .replace(/</g, '&lt;')
+                       .replace(/>/g, '&gt;')
+                       .replace(/"/g, '&quot;')
+                       .replace(/'/g, '&apos;');
+        };
+    }
+
+    if (!String.prototype.decodeHTML) {
+        String.prototype.decodeHTML = function () {
+            return this.replace(/&apos;/g, "'")
+                       .replace(/&quot;/g, '"')
+                       .replace(/&gt;/g, '>')
+                       .replace(/&lt;/g, '<')
+                       .replace(/&amp;/g, '&');
+        };
+    }
+
+    NWL.Designer.DisplayExpression.add('InputWebRequestMetaDataXml', SharepointInput.load, SharepointInput.save);
+    var blankParameter = { 'field': '', 'value': '' };
+</script>
+<style>
+    .req:after
+    {
+        content: " *";
+        color: #ff0f00;
+    }
+</style>
+
+<div id="buildMethod">
+    <table id="webRequestInputs" style="width:100%; padding-bottom : 12px">
+        <tr class="methodRow">
+            <td colspan="2">
+                <div style="margin: 0px 0px 5px 0px; width: 100%;">
+                    <input type="radio" id="radioGET" name="method" onclick="SharepointInput.toggleMethod('GET');" value="GET"/>
+                    <label id="labelGET" for="radioGET">GET</label>
+                    <input type="radio" id="radioPOST" name="method" onclick="SharepointInput.toggleMethod('POST');" value="POST"/>
+                    <label id="labelPOST" for="radioPOST">POST</label>
+                    <input type="radio" id="radioPUT" name="method" onclick="SharepointInput.toggleMethod('PUT');" value="PUT"/>
+                    <label id="labelPUT" for="radioPUT">PUT</label>
+                    <input type="radio" id="radioSOAP11" name="method" onclick="SharepointInput.toggleMethod('SOAP11');" value="SOAP11"/>
+                    <label id="labelSOAP11" for="radioSOAP11">SOAP 1.1</label>
+                    <input type="radio" id="radioSOAP12" name="method" onclick="SharepointInput.toggleMethod('SOAP12');" value="SOAP12"/>
+                    <label id="labelSOAP12" for="radioSOAP12">SOAP 1.2</label>
+                    <input type="radio" id="radioCustom" name="method" onclick="SharepointInput.toggleMethod('Custom');" value="Custom"/>
+                    <label id="labelCustom" for="radioCustom">Other</label>
+                </div>
+            </td>
+        </tr>
+    </table>
+</div>
+<div id="wrapper" style="display: none;">
+    <input name="InputRichHTMLType" id="InputRichHTML_Builder" onclick="return SharepointInput.toggleMode('builder');" type="radio" checked="checked" />Builder
+    <input name="InputRichHTMLType" id="InputRichHTML_XML" onclick="return SharepointInput.toggleMode('xml');" type="radio" />XML
+</div>
+<div id="builderWrapper">
+    <table id="sharepointInputs" style="width:100%; border-top: 1px dashed #e9e9e9"></table>
+    <div style="padding-top : 12px">
+        <a id="hyperlinkAddHeader" href="#" onclick="SharepointInput.addRow(blankParameter); return void(0);"><img src="../images/Plus.png" border="0"/> Add header</a>
+    </div>
+    <!--<span id="spanAddHeader" class="nw-dialog-description"></span>-->
+</div>
+<div id="xmlWrapper" style="display:none;">
+    <textarea id="xmlValue" style="width:450px; height:200px;" class="ms-inputuserfield"></textarea>
+</div>

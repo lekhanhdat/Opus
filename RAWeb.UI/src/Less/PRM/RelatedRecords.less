@@ -1,0 +1,52 @@
+#explorerManageRelatedRecords, #explorerAddRelatedRecords, #explorerRelatedRecords,#elecRelatedForm{
+    .navbar {
+        margin-bottom: 16px;
+        overflow: hidden;
+    }
+    .navbar-left {
+        margin-left: 5px;
+        float: left;
+    }
+    .navbar-right {
+        float: right;
+    }
+    .navbar-actions {
+        // display: inline-block;
+        // vertical-align: middle;
+        display: flex;
+        column-gap: 8px;
+    }
+    .navbar-search {
+        display: inline-block;
+        vertical-align: middle;
+    }
+    
+    .table-foot {
+        margin-top: 8px;
+    }
+    .table-foot-left {
+        display: inline-block;
+        height: 32px;
+        line-height: 32px;
+    }
+    .table-foot-right {
+        float: right;
+    }
+    a{
+        cursor: pointer;
+    }
+}
+#explorerAddRelatedRecords {
+    //override
+    .navbar-left{
+        margin-left: 0;
+    }
+    .text-desc{
+        margin-bottom: 10px;
+        font-size: 14px;
+        font-family: "Segoe UI", sans-serif;
+    }
+    #addRelatedTable{
+        width: calc(100% - 14px);        
+    }
+}

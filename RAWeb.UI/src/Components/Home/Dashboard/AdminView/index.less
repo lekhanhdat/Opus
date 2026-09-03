@@ -1,0 +1,101 @@
+.reco-dashboard-admin-view-wrapper {
+  width: 100%;
+  animation: reco-dashboard-admin-view-height .8s;
+
+  .reco-dashboard-layout-wrapper {
+    width: 100%;
+
+    .reco-dashboard-managed-cards {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      column-gap: 16px;
+      margin-bottom: 16px;
+    }
+
+    .reco-dashboard-managed-cards-4wrapper {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      column-gap: 16px;
+      margin-bottom: 16px;
+    }
+
+    .reco-dashboard-managed-cards-3wrapper {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      column-gap: 16px;
+      margin-bottom: 16px;
+    }
+
+
+    .reco-dashboard-source-cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      column-gap: 16px;
+      margin-bottom: 16px;
+    }
+
+    .reco-dashboard-graphic-cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      column-gap: 16px;
+    }
+
+    .reco-dashboard-graphic-left {
+      grid-column: 1 / span 2;
+    }
+
+    .reco-dashboard-line-chart-card {
+      margin-bottom: 16px;
+    }
+
+    .reco-dashboard-progress-cards {
+      display: grid;
+      grid-template-columns: minmax(calc(50% - 8px), 1fr) minmax(calc(50% - 8px), 1fr);
+      column-gap: 16px;
+    }
+
+    .reco-dashboard-user-record-card {
+      overflow: hidden;
+    }
+
+    @media (max-width: 1280px) {
+
+      .reco-dashboard-managed-cards {
+        display: grid;
+        grid-template-columns: 1fr;
+        row-gap: 16px;
+      }
+
+      .reco-dashboard-managed-cards-4wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 16px;
+        row-gap: 16px;
+      }
+
+      .reco-dashboard-source-cards {
+        display: grid;
+        grid-template-columns: 1fr;
+        row-gap: 16px;
+      }
+
+      .reco-dashboard-graphic-cards {
+        display: block;
+      }
+
+      .reco-dashboard-user-record-card {
+        margin-top: 16px;
+      }
+    }
+  }
+}
+
+@keyframes reco-dashboard-admin-view-height {
+  from {
+    transform: translateY(100%);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}

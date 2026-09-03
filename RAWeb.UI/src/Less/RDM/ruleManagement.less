@@ -1,0 +1,195 @@
+#raRuleManagement {
+  width: 100%;
+  height: calc(100% - 8px);
+  display: grid;
+  grid-template-rows: auto 1fr;
+  grid-template-columns: 100%;
+  margin-bottom: 40px;
+
+  #treeview {
+    padding: 10px 16px;
+  }
+
+  .rule-content {
+    width: 100%;
+    display: grid;
+  }
+
+  .rule-splitter-container {
+    border: 1px solid #DAE0E2;
+    border-radius: 8px;
+    background-color: #fff;
+  }
+
+  .rule-splitter-left,
+  .rule-splitter-right {
+    position: relative;
+  }
+
+  .ra-splitter-headerLeft {
+    height: 83px;
+    line-height: 83px;
+    display: flex;
+  }
+
+  .ra-splitter-headerRight {
+    font-size: 0;
+    display: flex;
+  }
+
+  .ra-splitter-headerborder {
+    border-bottom: 1px solid #e7eaeb;
+  }
+
+  .ra-splitter-headerTitle {
+    display: inline-block;
+    margin: 24px 32px 4px 24px;
+    font: normal normal bold 16px/22px "Open Sans", sans-serif;
+    letter-spacing: 0px;
+    color: #323E4D;
+  }
+
+  .ra-splitter-tree {
+    margin-top: 6px;
+    overflow: auto;
+    height: calc(100% - 90px);
+  }
+
+  .ra-splitter-headerName {
+    margin: 0 0 25px 24px;
+    font: italic normal normal 13px/18px "Open Sans", sans-serif;
+    color: #0072D0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .ra-splitter-folder {
+    display: inline;
+    margin-right: 6px;
+  }
+
+  .ra-splitter-searchboxLeft {
+    display: inline-block;
+    margin-right: 32px;
+    margin-top: 24px;
+    font: italic normal normal 14px/19px "Open Sans", sans-serif;
+    color: #707174;
+    flex-grow: 1;
+  }
+
+  .ra-splitter-searchboxRight {
+    width: 100%;
+    display: inline-block;
+    margin-right: 8px;
+    font: italic normal normal 14px/19px "Open Sans", sans-serif;
+    color: #707174;
+  }
+  
+  .ra-splitter-buttons {
+    border-top: 1px solid #E8E9EA;
+    border-bottom: 1px solid #E8E9EA;
+
+    #crm-menu {
+      flex: 1;
+      display: flex;
+      gap: 8px;
+      margin: 0;
+    }
+  }
+
+  .ra-list-item-title {
+    flex: 1;
+    padding-left: 50px;
+    padding-top: 16px;
+    padding-right: 34px;
+    padding-bottom: 8px;
+  }
+
+  .ra-splitter-createBtn {
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  .ra-header-right {
+    flex: 1;
+    display: flex;
+    margin: 30px 24px;
+    vertical-align: top;
+  }
+
+  .ra-rule-expander {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .ra-expander-fontStyle {
+    margin-right: auto;
+    vertical-align: middle;
+    font: normal normal bold 13px/18px "Open Sans", sans-serif;
+    color: #323E4D;
+    flex: 1;
+    width: 0;
+  }
+
+  .ra-expander-action{
+    width: auto;
+  }
+
+  .ra-rule-expander-content {
+    margin-top: 16px;
+  }
+
+  .ra-noitems {
+    text-align: center;
+    padding: 16px;
+  }
+
+  .ra-rule-detail-align {
+    text-align: end;
+  }
+
+  .ra-rule-detail-span {
+    cursor: pointer;
+    text-decoration: underline;
+    font: italic normal normal 13px/18px "Open Sans", sans-serif;
+    color: #0072D0;
+  }
+
+  .ra-rule-expander-detail{
+    margin-top: 16px;
+  }
+
+  .ra-main-footer{
+    padding: 16px 8px;
+  }
+
+  //rule中expander覆盖样式
+
+  .aui-expander-title {
+    border-radius: 0% !important;
+    background: #F2F3F4;
+    min-height: 0;
+    height: 34px;
+    border-top: 1px solid #E7EAEB;
+    border-bottom: 0 !important;
+  }
+
+  .aui-expander-title[aria-expanded=true] {
+    border-bottom-color: #F2F3F4;
+  }
+
+  .aui-expander-expand>.aui-expander-title {
+    background: #FFFFFF;
+  }
+
+  .aui-expander-panel {
+    padding: 0 24px 16px 24px;
+  }
+
+  .aui-expander-panel>div {
+    border-top: 1px solid #F2F3F4;
+    padding: 0;
+  }
+}

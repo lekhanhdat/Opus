@@ -1,0 +1,99 @@
+{
+  "ListNode": {
+    "FullPath": "https://test.sharepoint.com/sites/test/Lists/TestList",
+    "Title": "TestList",
+    "Name": "TestList",
+    "ID": "12345678-1234-1234-1234-123456789012",
+    "SPNodeLevel": "List",
+    "CacheNodeType": 1000,
+    "SiteUrl": "https://test.sharepoint.com/sites/test",
+    "WebId": "22345678-1234-1234-1234-123456789012",
+    "ListId": "32345678-1234-1234-1234-123456789012"
+  },
+  "FolderNode": {
+    "FullPath": "https://test.sharepoint.com/sites/test/Lists/TestList/ErrorFolder",
+    "Title": "ErrorFolder",
+    "Name": "ErrorFolder",
+    "ID": "42345678-1234-1234-1234-123456789012",
+    "SPNodeLevel": "Folder",
+    "CacheNodeType": 1002,
+    "SiteUrl": "https://test.sharepoint.com/sites/test",
+    "WebId": "22345678-1234-1234-1234-123456789012",
+    "ListId": "32345678-1234-1234-1234-123456789012"
+  },
+  "Rules": [
+    {
+      "Id": "1",
+      "Name": "Match All Documents",
+      "Type": "ADMIN",
+      "PolicyLevel": 64,
+      "Filters": [
+        {
+          "SequenceNo": 1,
+          "Level": 64,
+          "RuleType": 8,
+          "Condition": 8,
+          "Value1": "*"
+        }
+      ]
+    },
+    {
+      "Id": "2",
+      "Name": "Match All Folders",
+      "Type": "ADMIN",
+      "PolicyLevel": 16,
+      "Filters": [
+        {
+          "SequenceNo": 1,
+          "Level": 16,
+          "RuleType": 8,
+          "Condition": 8,
+          "Value1": "*"
+        }
+      ]
+    }
+  ],
+  "Items": [
+    {
+      "DocID": "52345678-1234-1234-1234-123456789012",
+      "FullUrl": "https://test.sharepoint.com/sites/test/Lists/TestList/ErrorFolder/GoodDoc.docx",
+      "LeafName": "GoodDoc.docx",
+      "ID": 101,
+      "Uiversion": 512,
+      "Attachments": [],
+      "Versions": [{ "Uiversion": 512 }],
+      "ShouldThrowException": false
+    },
+    {
+      "DocID": "62345678-1234-1234-1234-123456789012",
+      "FullUrl": "https://test.sharepoint.com/sites/test/Lists/TestList/ErrorFolder/BadDoc.docx",
+      "LeafName": "BadDoc.docx",
+      "ID": 102,
+      "Uiversion": 512,
+      "Attachments": [],
+      "Versions": [{ "Uiversion": 512 }],
+      "ShouldThrowException": true,
+      "ExceptionMessage": "Simulated processing error for BadDoc.docx"
+    },
+    {
+      "DocID": "72345678-1234-1234-1234-123456789012",
+      "FullUrl": "https://test.sharepoint.com/sites/test/Lists/TestList/ErrorFolder/AnotherGoodDoc.xlsx",
+      "LeafName": "AnotherGoodDoc.xlsx",
+      "ID": 103,
+      "Uiversion": 512,
+      "Attachments": [],
+      "Versions": [{ "Uiversion": 512 }],
+      "ShouldThrowException": false
+    }
+  ],
+  "Folders": [],
+  "Expected": {
+    "ShouldThrowException": false,
+    "ExceptionType": null,
+    "ExceptionMessage": null,
+    "ExpectedProcessedItemsCount": 2,
+    "ExpectedProcessedFoldersCount": 0,
+    "ExpectedReportedPaths": [],
+    "ShouldReportFailure": false
+  }
+}

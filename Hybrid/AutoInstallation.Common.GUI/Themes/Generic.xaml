@@ -1,0 +1,73 @@
+﻿<!--/********************************************************************
+ *
+ *  PROPRIETARY and CONFIDENTIAL
+ *
+ *  This file is licensed from, and is a trade secret of:
+ *
+ *                   AvePoint, Inc.
+ *                   525 Washington Blvd, Suite 1400
+ *                   Jersey City, NJ 07310
+ *                   United States of America
+ *                   Telephone: +1-201-793-1111
+ *                   WWW: www.avepoint.com
+ *
+ *  Refer to your License Agreement for restrictions on use,
+ *  duplication, or disclosure.
+ *
+ *  RESTRICTED RIGHTS LEGEND
+ *
+ *  Use, duplication, or disclosure by the Government is
+ *  subject to restrictions as set forth in subdivision
+ *  (c)(1)(ii) of the Rights in Technical Data and Computer
+ *  Software clause at DFARS 252.227-7013 (Oct. 1988) and
+ *  FAR 52.227-19 (C) (June 1987).
+ *
+ *  Copyright © 2017-2026 AvePoint® Inc. All Rights Reserved. 
+ *
+ *  Unpublished - All rights reserved under the copyright laws of the United States.
+ */-->
+
+
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:AutoInstallation.Common.GUI">
+
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/CloudAgentConfigurationToolCommonGUI;Component/Styles/DefaultStyle.xaml" />
+        <ResourceDictionary Source="/CloudAgentConfigurationToolCommonGUI;Component/BaseControl/ButtonStyle.xaml" />
+        <ResourceDictionary Source="/CloudAgentConfigurationToolCommonGUI;Component/BaseControl/CheckBoxStyle.xaml" />
+        <ResourceDictionary Source="/CloudAgentConfigurationToolCommonGUI;Component/BaseControl/ExpanderStyle.xaml" />
+        <ResourceDictionary Source="/CloudAgentConfigurationToolCommonGUI;Component/BaseControl/FrameStyle.xaml" />
+        <ResourceDictionary Source="/CloudAgentConfigurationToolCommonGUI;Component/BaseControl/GroupBoxStyle.xaml" />
+        <ResourceDictionary Source="/CloudAgentConfigurationToolCommonGUI;Component/BaseControl/LabelStyle.xaml" />
+        <ResourceDictionary Source="/CloudAgentConfigurationToolCommonGUI;Component/BaseControl/MenuStyle.xaml" />
+        <ResourceDictionary Source="/CloudAgentConfigurationToolCommonGUI;Component/BaseControl/ListBoxStyle.xaml" />
+        <ResourceDictionary Source="/CloudAgentConfigurationToolCommonGUI;Component/BaseControl/ListViewStyle.xaml" />
+        <ResourceDictionary Source="/CloudAgentConfigurationToolCommonGUI;Component/BaseControl/NavigationWindowStyle.xaml" />
+        <ResourceDictionary Source="/CloudAgentConfigurationToolCommonGUI;Component/BaseControl/ProgressBarStyle.xaml" />
+        <ResourceDictionary Source="/CloudAgentConfigurationToolCommonGUI;Component/BaseControl/RadioButtonStyle.xaml" />
+        <ResourceDictionary Source="/CloudAgentConfigurationToolCommonGUI;Component/BaseControl/ResizeGripStyle.xaml" />
+        <ResourceDictionary Source="/CloudAgentConfigurationToolCommonGUI;Component/BaseControl/ScrollBarStyle.xaml" />
+        <ResourceDictionary Source="/CloudAgentConfigurationToolCommonGUI;Component/BaseControl/ScrollViewerStyle.xaml" />
+        <ResourceDictionary Source="/CloudAgentConfigurationToolCommonGUI;Component/BaseControl/SeparatorStyle.xaml" />
+        <ResourceDictionary Source="/CloudAgentConfigurationToolCommonGUI;Component/BaseControl/SharedStyle.xaml" />
+        <ResourceDictionary Source="/CloudAgentConfigurationToolCommonGUI;Component/BaseControl/SliderStyle.xaml" />
+        <ResourceDictionary Source="/CloudAgentConfigurationToolCommonGUI;Component/BaseControl/StatusBarStyle.xaml" />
+        <ResourceDictionary Source="/CloudAgentConfigurationToolCommonGUI;Component/BaseControl/TabControlStyle.xaml" />
+        <ResourceDictionary Source="/CloudAgentConfigurationToolCommonGUI;Component/BaseControl/TextBoxStyle.xaml" />
+        <ResourceDictionary Source="/CloudAgentConfigurationToolCommonGUI;Component/BaseControl/ToolBarStyle.xaml" />
+        <ResourceDictionary Source="/CloudAgentConfigurationToolCommonGUI;Component/BaseControl/ToolTipStyle.xaml" />
+        <ResourceDictionary Source="/CloudAgentConfigurationToolCommonGUI;Component/BaseControl/TreeViewStyle.xaml" />
+        <ResourceDictionary Source="/CloudAgentConfigurationToolCommonGUI;Component/BaseControl/WindowStyle.xaml" />
+        <ResourceDictionary Source="/CloudAgentConfigurationToolCommonGUI;Component/BaseControl/ComboBoxStyle.xaml" />
+        <ResourceDictionary Source="/CloudAgentConfigurationToolCommonGUI;Component/BaseControl/TextBlockStyle.xaml" />
+
+        <ResourceDictionary Source="/CloudAgentConfigurationToolCommonGUI;component/UI/BaseWindowUI/BaseWindow.xaml" />
+        <ResourceDictionary Source="/CloudAgentConfigurationToolCommonGUI;component/UI/BaseMessageUI/BaseMessage.xaml" />
+        <ResourceDictionary Source="/CloudAgentConfigurationToolCommonGUI;component/UI/TextBox/TextBoxExStyle.xaml" />
+
+    </ResourceDictionary.MergedDictionaries>
+
+    <Style TargetType="{x:Type local:BaseWindow}" BasedOn="{StaticResource BaseWindowStyle}" />
+
+</ResourceDictionary>

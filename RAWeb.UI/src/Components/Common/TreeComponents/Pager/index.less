@@ -1,0 +1,44 @@
+.reco-pager-wrapper {
+  width: 100%;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  padding: 0 8px;
+  background-color: #EEE;
+
+  .reco-pager-button {
+    font-size: 13px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    padding: 0;
+
+    &:focus-visible {
+      border: 1px solid #000;
+      border-radius: 4px;
+    }
+  }
+
+  .reco-pager-button-disable {
+    color: var(--disabled-color);
+    pointer-events: none;
+  }
+
+  .reco-pager-content {
+    display: flex;
+    align-items: center;
+    margin: 0 10px;
+
+    .reco-pager-text {
+      font-size: 13px;
+    }
+
+    .reco-pager-input {
+      font-size: 13px;
+      width: 50px;
+      height: 24px;
+      margin: 0 5px;
+      border-color: #777;
+    }
+  }
+}

@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7EF9B771-97D2-4B46-A0A3-3695A8F49BD7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AvePoint.GCommon.Transfer</RootNamespace>
+    <AssemblyName>CommonDataTransfer</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Manager|AnyCPU'">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\bin\Release\Manager\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>..\..\Shared\DocAveStandard.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.IdentityModel" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\MediaStorage\Media.Storage\Media.Storage.csproj">
+      <Project>{3180AE0E-D8E3-4B4D-903B-4AF57D16CAF5}</Project>
+      <Name>Media.Storage</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GCommonContract\DocAve.GCommonContract.csproj">
+      <Project>{361F3C7C-ABBF-42D5-975A-65E4E9866068}</Project>
+      <Name>DocAve.GCommonContract</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GCommonNetWork\GCommonNetwork.csproj">
+      <Project>{590C8B1E-D973-4CF4-A142-B475131EC4B5}</Project>
+      <Name>GCommonNetwork</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GCommonUtility\DocAve.GCommonUtility.csproj">
+      <Project>{7151E862-A761-4A90-ACE6-37D7442047A6}</Project>
+      <Name>DocAve.GCommonUtility</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\AveChannelMode.cs" />
+    <Compile Include="Common\BufferStorage.cs" />
+    <Compile Include="Common\CycleStream.cs" />
+    <Compile Include="Common\DataTransferConfiguration.cs" />
+    <Compile Include="Common\DataTransferConstants.cs" />
+    <Compile Include="Common\DataTransferException.cs" />
+    <Compile Include="Common\DataTransferLogger.cs" />
+    <Compile Include="Common\DataTransferPerformanceCounter.cs" />
+    <Compile Include="Common\DataTransferPerformanceTimerPool.cs" />
+    <Compile Include="Common\DataTransferSetting.cs" />
+    <Compile Include="Common\DataTransferStatus.cs" />
+    <Compile Include="Common\ObjectUtility.cs" />
+    <Compile Include="Common\SessionStatus.cs" />
+    <Compile Include="Common\SynchronizedLinkedList.cs" />
+    <Compile Include="Common\ThrottleControlInfo.cs" />
+    <Compile Include="Common\TransferChannelMode.cs" />
+    <Compile Include="Common\UriUtility.cs" />
+    <Compile Include="Common\XmlConfiguration.cs" />
+    <Compile Include="Data\BaseDataTransferLogic.cs" />
+    <Compile Include="Data\Channel\BaseWCFTransferChannel.cs" />
+    <Compile Include="Data\Channel\FileSystemDataChannel.cs" />
+    <Compile Include="Data\Channel\InProcessChannel.cs" />
+    <Compile Include="Data\Channel\WCFDataChannel.cs" />
+    <Compile Include="Data\Channel\WCFFileTransferChannel.cs" />
+    <Compile Include="Data\CMDataReceiver.cs" />
+    <Compile Include="Data\CMDataSender.cs" />
+    <Compile Include="Data\DataBlockProcessorV2.cs" />
+    <Compile Include="Data\Interface\IDataBlockProcessor.cs" />
+    <Compile Include="Data\Interface\IDataReceiver.cs" />
+    <Compile Include="Data\Interface\IDataSender.cs" />
+    <Compile Include="Data\Interface\IDataTransfer.cs" />
+    <Compile Include="Data\Interface\IFileTransferService.cs" />
+    <Compile Include="Data\Interface\IRelay.cs" />
+    <Compile Include="Data\Interface\ITransferChannel.cs" />
+    <Compile Include="Data\Interface\ITransferNotifier.cs" />
+    <Compile Include="Data\Multiple\AveMultiReceiver.cs" />
+    <Compile Include="Data\Multiple\AveMultiReceiveTask.cs" />
+    <Compile Include="Data\Multiple\AveMultiSender.cs" />
+    <Compile Include="Data\Multiple\AveMultiSendTask.cs" />
+    <Compile Include="Data\Multiple\AveMultiTask.cs" />
+    <Compile Include="Data\Multiple\Util\AveMultiTaskThread.cs" />
+    <Compile Include="Data\Multiple\Util\AveMultiTaskThreadPool.cs" />
+    <Compile Include="Data\Multiple\Util\AveMultiTaskTree.cs" />
+    <Compile Include="Data\Multiple\Util\AveTaskHierarchyScheduler.cs" />
+    <Compile Include="Data\Multiple\Util\SegmentedDataTransfer.cs" />
+    <Compile Include="Data\Multiple\Util\SegmentedStream.cs" />
+    <Compile Include="Data\Multiple\Util\TaskExecutionHierarchyLogic.cs" />
+    <Compile Include="Data\Service\FileTransferService.cs" />
+    <Compile Include="Data\Service\GlobalWCFServiceInstanceManager.cs" />
+    <Compile Include="Data\Service\ReplayService.cs" />
+    <Compile Include="Data\Service\WCFDataTransferService.cs" />
+    <Compile Include="Factory\AveAgentFileSender.cs" />
+    <Compile Include="Factory\DataChannelFactory.cs" />
+    <Compile Include="Factory\WCFChannelFactory.cs" />
+    <Compile Include="Factory\WCFServiceHostFactory.cs" />
+    <Compile Include="MQ\AveMessage.cs" />
+    <Compile Include="MQ\AveMQClient.cs" />
+    <Compile Include="MQ\AveMQClient2ServerPeer.cs" />
+    <Compile Include="MQ\AveMQClientCallback.cs" />
+    <Compile Include="MQ\AveMQConfigure.cs" />
+    <Compile Include="MQ\AveMQServer.cs" />
+    <Compile Include="MQ\AveMQServer2ClientPeer.cs" />
+    <Compile Include="MQ\Channel\InProcessMessageChannel.cs" />
+    <Compile Include="MQ\Channel\MessageChannelFactory.cs" />
+    <Compile Include="MQ\Channel\WCFMessageChannel.cs" />
+    <Compile Include="MQ\Interface\IMessageChannel.cs" />
+    <Compile Include="MQ\Interface\IMQClientCallback.cs" />
+    <Compile Include="MQ\Interface\IMQWCFService.cs" />
+    <Compile Include="MQ\Service\AveMQWCFService.cs" />
+    <Compile Include="MQ\Service\AveMQWCFServiceOneWay.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TestCase\AveMQTestCase.cs" />
+    <Compile Include="TestCase\ByteArrayTestCase.cs" />
+    <Compile Include="TestCase\CycelStreamTestCase.cs" />
+    <Compile Include="TestCase\DataBlockProcessorV2Testcase.cs" />
+    <Compile Include="TestCase\DataTransferTestCase.cs" />
+    <Compile Include="TestCase\FileSystemTestCase.cs" />
+    <Compile Include="TestCase\FileTransferTestCase.cs" />
+    <Compile Include="TestCase\TestCompreeEncrypt.cs" />
+    <Compile Include="TestCase\ThrottleControlTestCase.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="How to config in One Way Connection Environment.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\Shared\DocAveStandard.snk">
+      <Link>DocAveStandard.snk</Link>
+    </None>
+    <None Include="app.config" />
+    <None Include="CommonDataTransfer.config">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataTransfer.cd" />
+    <None Include="MQ.cd" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

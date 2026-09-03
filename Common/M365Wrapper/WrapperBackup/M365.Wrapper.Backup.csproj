@@ -1,0 +1,55 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net10.0</TargetFramework>
+		<OutputType>Library</OutputType>
+		
+		
+	</PropertyGroup>
+	<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+		<OutputPath>..\..\..\bin\Debug\</OutputPath>
+		<DebugSymbols>true</DebugSymbols>
+	</PropertyGroup>
+	<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+		<OutputPath>..\..\..\bin\Release\</OutputPath>
+	</PropertyGroup>
+	<PropertyGroup>
+		<SignAssembly>false</SignAssembly>
+	</PropertyGroup>
+	<PropertyGroup>
+		<AssemblyOriginatorKeyFile>DocAveStandard.snk</AssemblyOriginatorKeyFile>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\..\..\common\GlobalCommon\GCommon.GraphAPI\GCommon.GraphAPI.csproj" />
+		<ProjectReference Include="..\..\..\common\Microsoft365\Common\Microsoft365.Common.csproj" />
+		<ProjectReference Include="..\..\..\common\Microsoft365\Contract\Microsoft365.Contract.csproj" />
+		<ProjectReference Include="..\..\..\common\Microsoft365\SharePoint\Microsoft365.SharePoint.csproj" />
+		<ProjectReference Include="..\..\..\RACommon.Global\RACommon.Global.csproj" />
+		<ProjectReference Include="..\..\..\RACommon\RACommon.csproj" />
+		<ProjectReference Include="..\..\Microsoft365\Microsoft365.Graph.Extensions\Microsoft365.Graph.Extensions.csproj" />
+		<ProjectReference Include="..\..\Microsoft365\Microsoft365.Graph\Microsoft365.Graph.csproj" />
+		<ProjectReference Include="..\..\VCService30\CommonUtility30\DocAve.CommonUtility30.csproj" />
+		<ProjectReference Include="..\..\Wrapper\Wrapper.Common\Wrapper.Common.csproj" />
+		<ProjectReference Include="..\WrapperCommon\M365.Wrapper.Common.csproj" />
+	</ItemGroup>
+	<ItemGroup>
+		<Content Include="SkypeAPI\Examples\Body\Json_ChannelSettings.json">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="SkypeAPI\Examples\Body\Json_ChannelNotificationSettings.json">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="RetryLogic\Readme.txt" />
+		<Content Include="SkypeAPI\Examples\Body\Json_SpaceAdminSettings.json">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+	</ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="log4net" Version="3.3.1" />
+		<PackageReference Include="util.exchange" Version="4.12.20" />
+		<PackageReference Include="AWSSDK.S3" Version="4.0.17.3" />
+		<PackageReference Include="util.outlook" Version="5.2.28" />
+	</ItemGroup>
+
+</Project>

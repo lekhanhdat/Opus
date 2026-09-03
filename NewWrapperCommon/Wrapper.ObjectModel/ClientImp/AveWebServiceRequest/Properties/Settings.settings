@@ -1,0 +1,45 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="AvePoint.ObjectModel.WebService.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="AveWebServiceRequest_Authentication_Authentication" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://vm08r2bob:23023/_vti_bin/authentication.asmx</Value>
+    </Setting>
+    <Setting Name="AveWebServiceRequest_vm08r2bob_Copy" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://vm08r2bob:23023/_vti_bin/copy.asmx</Value>
+    </Setting>
+    <Setting Name="AveWebServiceRequest_Lists_Lists" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://vm08r2bob:23023/_vti_bin/Lists.asmx</Value>
+    </Setting>
+    <Setting Name="AveWebServiceRequest_SiteData_SiteData" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://vm08r2bob:23023/_vti_bin/SiteData.asmx</Value>
+    </Setting>
+    <Setting Name="AveWebServiceRequest_Sites_Sites" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://vm08r2bob:23023/_vti_bin/sites.asmx</Value>
+    </Setting>
+    <Setting Name="AveWebServiceRequest_UserGroup_UserGroup" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://vm08r2bob:23023/_vti_bin/UserGroup.asmx</Value>
+    </Setting>
+    <Setting Name="AveWebServiceRequest_Versions_Versions" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://vm08r2bob:23023/_vti_bin/versions.asmx</Value>
+    </Setting>
+    <Setting Name="AveWebServiceRequest_Webs_Webs" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:23023/_vti_bin/Webs.asmx</Value>
+    </Setting>
+    <Setting Name="DocAve_Common_ObjectModel_WebServiceRequest_WebPartPages_WebPartPagesWebService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:12029/_vti_bin/webpartpages.asmx</Value>
+    </Setting>
+    <Setting Name="DocAve_Common_ObjectModel_WebServiceRequest_UserProfileService_UserProfileService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://win-emfiefu1786:22222/_vti_bin/userprofileservice.asmx</Value>
+    </Setting>
+    <Setting Name="AgentCommonWebServiceRequest_FormsServices_FormsServicesWebService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost/_vti_bin/FormsServices.asmx</Value>
+    </Setting>
+    <Setting Name="AgentCommonWebServiceRequest_SocialDataService_SocialDataService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://avepoint-bic:8080/_vti_bin/socialdataservice.asmx</Value>
+    </Setting>
+    <Setting Name="AgentCommonWebServiceRequest_Admin_Admin" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://39vm35:8080/_vti_adm/admin.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

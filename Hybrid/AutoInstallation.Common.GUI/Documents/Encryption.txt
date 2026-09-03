@@ -1,0 +1,27 @@
+﻿DocAve6中相关加密解密方法
+
+目前我们现在使用的是开发提供的加密解密类,相关文件存放位置为https://10.1.0.130/docave6/trunk/package/Deployment/AutoInstallation.Common.GUI/Encryption ,在这里我们主要只要如何使用即可,想进一步了解的童鞋请阅读相关类和方法相信会很有帮助.
+
+这里需要说明的是目前DocAve6提供三种加密解密方法,需要根据功能和版本不同选取特定的加密解密方法.这三种方法分别是AES,DES,BLOWFISH.
+枚举类示例:
+public enum EncryptionMethods : byte
+    {
+        BLOWFISH_ENCRYPTION = 0,
+        AES_ENCRYPTION = 1,
+        DES_ENCRYPTION = 2,
+    }
+
+下面具体说下三种方法的区别:
+DES_ENCRYPTION & BLOWFISH_ENCRYPTION:
+原DocAve5中使用的方法,DocAve6中已经不再使用,但是为了兼容以前的旧数据依然提供相关解密方法.
+AES_ENCRYPTION:
+DocAve6中使用的加密解密方法,也是DocAve6中官方指定的方法.
+
+使用方法:
+IEncryption yyy = EncryptionFactory.GetEncryption(EncryptionMethods.DES_ENCRYPTION);
+string value = yyy.DecryptString(xxx);
+
+另外一点需要说明的是，EncryptionFactory提供了默认的加密方式（AES），使用时只需IEncryption  mIEncryption =EncryptionFactory.GetDefaultEncryption()即可。
+注：在GetEncryption中写入相关加密解密类型即可。
+
+

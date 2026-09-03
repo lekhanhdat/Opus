@@ -1,0 +1,64 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+	<AssemblyName>DataExportCore</AssemblyName>
+  </PropertyGroup>
+
+	<ItemGroup>
+		<None Remove="Castle\ServiceCastle.config" />
+	</ItemGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>..\..\..\bin\Debug\StandaloneTool\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>..\..\..\bin\Release\StandaloneTool\</OutputPath>
+  </PropertyGroup>
+  
+	<ItemGroup>
+		<Content Include="Castle\ServiceCastle.config">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+			<SubType>Designer</SubType>
+			<ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+			<CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+		</Content>
+	</ItemGroup>
+	
+	
+  <ItemGroup>
+    <PackageReference Include="Castle.Windsor" Version="6.0.0" />
+    <PackageReference Include="Castle.Windsor.Extensions.DependencyInjection" Version="6.0.0" />
+    <PackageReference Include="Storage.Modern" Version="1.19.6" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Common\M365Wrapper\WrapperCommon\M365.Wrapper.Common.csproj" />
+    <ProjectReference Include="..\..\..\Media\Media.DataIO\Media.DataIO.csproj" />
+    <ProjectReference Include="..\..\..\Media\Media.Service.ArchiverBackup\Media.Service.ArchiverBackup.csproj" />
+    <ProjectReference Include="..\..\..\Media\Media.Service.DomainModel\Media.Service.DomainModel.csproj" />
+    <ProjectReference Include="..\..\..\RATeams\RATeams.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Resources\CommonResourceManager.Designer.cs">
+      <DependentUpon>CommonResourceManager.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Resources\CommonResourceManager.resx">
+      <LastGenOutput>CommonResourceManager.Designer.cs</LastGenOutput>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+	<ItemGroup>
+		<None Update="storage.config">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+	</ItemGroup>
+</Project>

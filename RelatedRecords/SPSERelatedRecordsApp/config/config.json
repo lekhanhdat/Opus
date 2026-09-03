@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "related-records-command-set": {
+      "components": [
+        {
+          "entrypoint": "./lib/extensions/relatedRecords/RelatedRecordsCommandSet.js",
+          "manifest": "./src/extensions/relatedRecords/RelatedRecordsCommandSet.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "RelatedRecordsCommandSetStrings": "lib/extensions/relatedRecords/loc/i18n.{locale}.js"
+  }
+}

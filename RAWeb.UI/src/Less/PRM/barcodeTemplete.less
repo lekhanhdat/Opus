@@ -1,0 +1,460 @@
+@layputColBorder: 1px dashed #707070;
+@layputColBorderRadius: 2px;
+
+#raBarcodeTemplate {
+  min-width: 1356px;
+
+  .ra-barcode-template-left {
+    width: 880px;
+    float: left;
+  }
+
+  .ra-barcode-template-right {
+    width: calc(100% - 896px);
+    float: right;
+  }
+
+  .ra-barcode-template-configuration {
+    min-height: 761px;
+    position: relative;
+  }
+
+  .ra-section {
+    margin-bottom: 16px;
+    padding-top: 16px;
+    padding-left: 24px;
+    padding-right: 24px
+  }
+
+  .ra-barcode-template-tab {
+    margin: 16px 0 0 0;
+  }
+
+  .layout-content {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+  }
+
+  .layout-content-right {
+    margin-left: 16px;
+    float: left;
+  }
+
+  .layout-img {
+    width: 169px;
+    height: 169px;
+    line-height: 169px;
+    float: left;
+    border: @layputColBorder;
+    border-radius: @layputColBorderRadius;
+    background: #F5F5F5 0% 0% no-repeat;
+    font-size: 132px;
+    color: #D9D9D9;
+    position: relative;
+    text-align: center;
+  }
+
+  .layout-img-text {
+    font: normal normal normal 30px/41px "Open Sans", sans-serif;
+    color: #000000;
+    position: absolute;
+    left: calc(50% - 10px);
+    top: calc(50% - 20px);
+    font-weight: 600;
+  }
+
+  .layout-short-col {
+    width: 300px;
+    height: 30px;
+    line-height: 30px;
+    border: @layputColBorder;
+    border-radius: @layputColBorderRadius;
+    display: inline-block;
+    margin-right: 8px;
+  }
+
+  .layout-long-col {
+    width: 608px;
+    height: 93px;
+    line-height: 93px;
+    margin: 8px 0;
+    border: @layputColBorder;
+  }
+
+  .layout-short-col,
+  .layout-long-col {
+    text-align: center;
+    font-weight: 600;
+  }
+
+  .layout-barcord-img {
+    height: 80px;
+    margin-left: 366px;
+    width: 242px;
+    background: url("/Images/PRM/Barcode.png") no-repeat
+  }
+
+
+  .preview-barcord-explain {
+    font: normal normal normal 13px/18px "Open Sans", sans-serif !important;
+    color: #5D6778;
+  }
+
+  // confiuration
+  .confiuration-title {
+    height: 68px;
+  }
+
+  .confiuration-title .explain {
+    font-size: 13px;
+  }
+
+
+  .ra-form-label {
+    white-space: nowrap;
+  }
+
+  .confiuration-foot-btns {
+    text-align: right;
+    position: absolute;
+    right: 32px;
+    bottom: 24px;
+  }
+
+  //aui
+  .button-button {
+    width: 80px;
+  }
+
+  .aui-uploader-container {
+    overflow: hidden;
+  }
+
+  .aui-uploader-button-container {
+    width: 310px;
+    float: left;
+  }
+
+  .aui-uploader-list {
+    width: 310px;
+    float: left;
+    margin-left: 20px;
+  }
+
+  .container-fluid {
+    padding: 0;
+    margin-top: 24px;
+  }
+}
+
+#raBarcodepReview {
+
+  .preview-content,
+  .layout-content {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+  }
+
+  .preview-default-img {
+    width: 169px;
+    height: 169px;
+    line-height: 169px;
+    float: left;
+    border: @layputColBorder;
+    border-radius: @layputColBorderRadius;
+    background: #F5F5F5 0% 0% no-repeat;
+    font-size: 132px;
+    color: #D9D9D9;
+    position: relative;
+    text-align: center;
+  }
+
+  .preview-img {
+    width: 169px;
+    height: 169px;
+    float: left;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important;
+  }
+
+  .preview-content-right {
+    margin-left: 11px;
+    float: left;
+    width: 634px;
+  }
+
+  .preview-barcord-column-content {
+    overflow: hidden;
+  }
+
+  .preview-short-col-left,
+  .preview-short-col-right {
+    width: 317px;
+    height: 25px;
+    float: left;
+    font: normal normal 600 13px/19px "Open Sans", sans-serif;
+    line-height: 25px !important;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .preview-short-col-right {
+    text-align: right;
+  }
+
+  .preview-long-col {
+    width: 634px;
+    height: 120px;
+    border: 2px solid #707070;
+    padding: 13px 13px 15px 15px;
+    float: left;
+    overflow: hidden;
+  }
+
+  .preview-long-col-content {
+    height: 90px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
+    overflow: hidden;
+    word-break: keep-all;
+    word-wrap: break-word;
+  }
+
+  .preview-long-content {
+    height: 90px;
+    overflow: hidden;
+    width: 430px;
+  }
+
+  .preview-template-column-name {
+    font: normal normal 600 13px/18px "Open Sans", sans-serif;
+    ;
+  }
+
+  .preview-barcord-img-content {
+    width: 100%;
+    float: right;
+    text-align: right;
+  }
+
+  .preview-barcord-img {
+    height: 80px;
+    width: 242px;
+    margin-left: 390px;
+    background: url("/Images/PRM/Barcode.png") no-repeat
+  }
+
+  .barcodePrint-content-right-width {
+    width: 462px;
+  }
+
+  .barcodePrint-long-col-width {
+    width: 100%;
+  }
+
+  .barcodePrint-short-col-width {
+    width: 231px;
+  }
+}
+
+.reco-barcode-template-wrapper {
+  width: 100%;
+  height: 100%;
+  // display: grid;
+  // grid-template-rows: auto auto 1fr;
+  display: flex;
+  flex-direction: column;
+
+  .reco-barcode-template-tabs {
+    margin-top: 12px;
+    margin-bottom: 16px
+  }
+
+  .reco-barcode-template-content {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    column-gap: 12px;
+  }
+
+  .reco-barcode-template-content-left {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: auto auto;
+    row-gap: 12px;
+  }
+
+  .reco-barcode-config-title,
+  .reco-barcode-layout-title,
+  .reco-barcode-preview-title {
+    font: normal normal 600 16px "Open Sans", sans-serif;
+    color: #323E4D;
+    margin-bottom: 8px;
+  }
+
+  .reco-barcode-config-desc,
+  .reco-barcode-layout-desc {
+    font: normal normal normal 12px/17px "Open Sans", sans-serif;
+    color: #5D6778;
+  }
+
+  .reco-barcode-template-content-config {
+    width: 100%;
+    height: 100%;
+    background: #FFFFFF;
+    border: 1px solid #DAE0E2;
+    border-radius: 8px;
+    padding: 24px;
+    position: relative;
+
+    .reco-barcode-template-btns {
+      position: absolute;
+      bottom: 24px;
+      right: 24px;
+    }
+
+    .reco-barcode-config-item {
+      width: 100%;
+      margin-top: 24px;
+
+      .reco-barcode-config-label {
+        font: normal normal 600 13px/18px "Open Sans", sans-serif;
+        color: #323E4D;
+        margin-bottom: 8px;
+      }
+
+      .reco-barcode-config-input {
+        width: 100%;
+        display: grid;
+      }
+    }
+  }
+
+  .reco-barcode-template-layout,
+  .reco-barcode-template-preview {
+    width: 100%;
+    background: #FFFFFF;
+    border: 1px solid #DAE0E2;
+    border-radius: 8px;
+    padding: 24px;
+  }
+
+  .reco-barcode-layout-content,
+  .reco-barcode-preview-content {
+    width: 100%;
+    height: 169px;
+    display: grid;
+    grid-template-columns: 169px 1fr;
+    column-gap: 16px;
+    margin-top: 16px;
+    margin-bottom: 8px;
+  }
+
+  .reco-barcode-layout-pic {
+    border: 1px dashed #707070;
+    border-radius: 2px;
+    background: #F5F5F5 0% 0% no-repeat;
+    font-size: 132px;
+    color: #D9D9D9;
+    text-align: center;
+    line-height: 169px;
+    position: relative;
+
+    .reco-barcode-layout-pic-text {
+      position: absolute;
+      font: normal normal normal 30px "Open Sans", sans-serif;
+      color: #000000;
+      font-weight: 600;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  .reco-barcode-layout-inputs {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 30px 93px 30px;
+    column-gap: 8px;
+    row-gap: 8px;
+  }
+
+  .reco-barcode-layout-input {
+    width: 100%;
+    height: 100%;
+    border: 1px dashed #707070;
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+  }
+
+  .reco-barcode-layout-input-content {
+    grid-column: 1 / span 2;
+  }
+
+  .reco-barcode-layout-img,
+  .reco-barcode-preview-img {
+    width: 242px;
+    height: 80px;
+    background: url(/Images/PRM/Barcode.png) no-repeat;
+    float: right;
+  }
+
+  .reco-barcode-preview-pic {
+    border-radius: 2px;
+    font-size: 132px;
+    color: #D9D9D9;
+    text-align: center;
+    line-height: 169px;
+    background-color: #F5F5F5;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important;
+  }
+
+  .reco-barcode-preview-values {
+    width: 100%;
+    display: grid;
+    grid-template-rows: 20px 113px 20px;
+    row-gap: 8px;
+  }
+
+  .reco-barcode-preview-value {
+    display: flex;
+    justify-content: space-between;
+    font: normal normal 600 13px "Open Sans", sans-serif;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .reco-barcode-preview-value:first-child {
+      align-items: flex-start;
+  }
+
+  .reco-barcode-preview-value:last-child {
+      align-items: flex-end;
+  }
+
+  .reco-barcode-preview-value-content {
+    border: 1px solid #707070;
+    padding: 8px;
+    float: left;
+    overflow: auto;
+    word-break: keep-all;
+    word-wrap: break-word;
+  }
+
+  .reco-barcode-preview-value-content-item {
+    font: normal normal 600 13px/18px "Open Sans", sans-serif;
+  }
+}

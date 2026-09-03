@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ServiceConfiguration serviceName="RASPAppWeb.Azure" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceConfiguration" osFamily="5" osVersion="WA-GUEST-OS-5.41_202003-01" schemaVersion="2015-04.2.6">
+  <Role name="RASPAppWeb">
+    <Instances count="1" />
+    <ConfigurationSettings>
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="UseDevelopmentStorage=true" />
+      <Setting name="AppUrl" value="https://www.RevIM.com"/>
+      <Setting name="ClientId" value="3939dfab-72db-451b-ad68-59d4c60fc938"/>
+      <Setting name="ClientSecret" value="Y3NadEpsdzBzZVFlZ2F6U1RPczU5QWNhNVRWaHk2Rm82cmIvSnl6M3ZvOD0="/>
+      <Setting name="LogStorage" value="RGVmYXVsdEVuZHBvaW50c1Byb3RvY29sPWh0dHBzO0FjY291bnROYW1lPXJlY29xYXRlc3Q7QWNjb3VudEtleT1SRjQ2cFdrZkVLZ2NhUEIxL0ZqczNSa1RtbHpobElYSDZRQi8zYkdXSHN4bnR3WnJlU3JqRGlIM1RZNTBIdnplcC9EV3E4STFVYzJEdHBDR0JYb05zUT09O0VuZHBvaW50U3VmZml4PWNvcmUud2luZG93cy5uZXQ="/>
+      <Setting name="LogContainerName" value="applogs"/>
+	  <Setting name="CertificateThumbprint" value="958B6B5093959E9B3886BC19D5B10A19C417973D" />
+      <Setting name="PortalApiUrl" value="Https://testapi.sharepointguild.com"/>
+    </ConfigurationSettings>
+    <Certificates>
+      <Certificate name="Web" thumbprint="958B6B5093959E9B3886BC19D5B10A19C417973D" thumbprintAlgorithm="sha1" />
+      <Certificate name="CloudRecords Application" thumbprint="958B6B5093959E9B3886BC19D5B10A19C417973D" thumbprintAlgorithm="sha1" />
+    </Certificates>
+  </Role>
+  <NetworkConfiguration>
+	<VirtualNetworkSite name="Group RECOQATest APCRQATestVirtualNetworks"/>
+    <AddressAssignments>
+      <InstanceAddress roleName="RASPAppWeb">
+		<Subnets>
+			<Subnet name="App"/>
+		</Subnets>
+	  </InstanceAddress>
+      <ReservedIPs>
+        <ReservedIP name="RECOQATestAppWebIP" />
+      </ReservedIPs>
+    </AddressAssignments>
+  </NetworkConfiguration>
+</ServiceConfiguration>

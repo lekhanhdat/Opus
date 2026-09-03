@@ -1,0 +1,4 @@
+﻿WrapperRestoreStreamBaseV2 是在WrapperRestoreStream的基础上抽离了Metadata的读取，然后写的一个基类.
+重写WrapperRestoreStreamBaseV2时,需要自己定义读取header和读取metadata的方式,可以参照WrapperRestoreStreamV2
+protected override void InitInternalRestoreStream()  需要读取header
+protected override void InitMetadataReader()   需要定义如何读取Metadata

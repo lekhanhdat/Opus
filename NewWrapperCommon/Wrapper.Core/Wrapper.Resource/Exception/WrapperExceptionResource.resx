@@ -1,0 +1,725 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Wrapper_Exception_Office365_Common_DeleteItemVersionFailed" xml:space="preserve">
+    <value>Failed to delete the item version.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_Office365_Common_NotFoundFolder" xml:space="preserve">
+    <value>Cannot find the folder {0}.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_Office365_Common_RemoteServerError" xml:space="preserve">
+    <value>The current user does not have the permission to perform this action.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_Office365_Request_AccessDenied" xml:space="preserve">
+    <value>Access denied. The current user does not have enough permission to perform this action or access the resource.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_Mapping_LookupFieldNotFound" xml:space="preserve">
+    <value>Cannot find the destination Lookup column by the specified name. Ensure that the column mapping you applied is correctly configured. List title: {0}. Column name: {1}.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_Office365_Common_NotEnoughInfo" xml:space="preserve">
+    <value>The specified information is not enough to login into the SharePoint Online site. Site URL: {0}, Domain: {1}, Username: {2}.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_Office365_Common_UsedTermError" xml:space="preserve">
+    <value>The term {0} already exists in the destination.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_Office365_Common_CannotDeleteGroup" xml:space="preserve">
+    <value>The group {0} has one or more term sets and cannot be deleted.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_Office365_Common_UniqueGroupNameError" xml:space="preserve">
+    <value>A group named {0} already exists in the destination.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_Office365_RequestCommon_MoveNavigationFailed" xml:space="preserve">
+    <value>Failed to change the order of navigation links in the destination.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_Office365_Common_NotFindRole" xml:space="preserve">
+    <value>Cannot find the permission level in the destination.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_Office365_Common_CannotCreateDuplicatedLabel" xml:space="preserve">
+    <value>The label {0} you are about to create for the term already exists.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_Office365_Common_RootWebError" xml:space="preserve">
+    <value>Cannot find the top-level site. URL: {0}.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_Office365_Request_OpenThemeFailed" xml:space="preserve">
+    <value>Cannot find the information on the theme file.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_Discovery_CurrentFilterNotExist" xml:space="preserve">
+    <value>The specified filter policy does not exist.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_QueryService_ErrorCode" xml:space="preserve">
+    <value>Exception Error Code: {0}</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_Discovery_SOARCheckAuditorJobTimeException" xml:space="preserve">
+    <value>The date of the last Auditor Retrieve Data job is earlier than the specified time period for archiving. Please run an Auditor Retrieve Data job first.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_Discovery_AWDGetSecuritiesError" xml:space="preserve">
+    <value>An error occurred while getting modified securities.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_Restore_RestoreAddDataFailedForCheckAppWebUrl" xml:space="preserve">
+    <value>Failed to restore the app data. Please check the URL of the app site.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_Restore_RestoreAddDataFailedForInstallAppFailed" xml:space="preserve">
+    <value>Failed to restore the app data, because installation of the app "{0}" has failed.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_QueryService_CreateArchivePoolFailed" xml:space="preserve">
+    <value>Cannot create archive pool in pool collection "{0}" for RBS provider "{1}". Error: {2}.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_Restore_FieldNotExist" xml:space="preserve">
+    <value>The field "{0}" does not exist.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_Discovery_AWDGetStubItemsError" xml:space="preserve">
+    <value>An error occurred while getting stub items.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_Discovery_AWDGetWebError" xml:space="preserve">
+    <value>An error occurred while getting child sites.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_Discovery_AWDGetAttachmentsError" xml:space="preserve">
+    <value>An error occurred while getting attachments.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_Restore_Office365Environmental" xml:space="preserve">
+    <value>Encountered SharePoint Online environment issue. Some SharePoint Online built-in files were skipped in the operation. Please make sure you were not processing data to an environment running SharePoint services of a lower version.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_Restore_SetLanguageResourcePath" xml:space="preserve">
+    <value>Please set the path for the language resource file first.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_Workflow_NotFindConfigFile" xml:space="preserve">
+    <value>Cannot find the configuration file for the workflow.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_QueryService_NotGenerateRBSStub" xml:space="preserve">
+    <value>This RBS stub was not generated by DocAve.SP2010.Storage.RBSProvider.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_Discovery_AWDGetCTsError" xml:space="preserve">
+    <value>An error occurred while getting content types.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_Discovery_AWDGetChangedUsersError" xml:space="preserve">
+    <value>An error occurred while getting modified users.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_Restore_ItemHasForcedUniqueField" xml:space="preserve">
+    <value>The item "{0}" has a field that requires a unique value.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_Discovery_AWDGetListRoorFolderError" xml:space="preserve">
+    <value>An error occurred while getting list root folder.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_Mapping_DirectoryNotFound" xml:space="preserve">
+    <value>The Excel folder path "{0}" does not exist.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_Discovery_AWDGetAttachmentsForPRError" xml:space="preserve">
+    <value>An error occurred while getting attachments for Platform Backup.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_Discovery_Office365NotSupportlistRootFolderFilter" xml:space="preserve">
+    <value>Filtering of SharePoint Online list root folders is not supported. Related filter policy name: {0}.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_Server_AttachmentUrlIncorrect" xml:space="preserve">
+    <value>The attachments collection URL is incorrect. URL prefix: {0}. Full site URL: {1}.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_QueryService_SONotFindItem" xml:space="preserve">
+    <value>Cannot find the item.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_Discovery_AWDGetFolderError" xml:space="preserve">
+    <value>An error occurred while getting folder.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_Server_NotFindGroupWithId" xml:space="preserve">
+    <value>Cannot find the group with ID "{0}" in the term store {1}.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_Discovery_AWDGetRootWebError" xml:space="preserve">
+    <value>An error occurred while getting top-level sites.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_Discovery_AWDGetItemModifyTimeError" xml:space="preserve">
+    <value>An error occurred while getting the last modified time property of the item.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_Discovery_SOARAuditorJobException" xml:space="preserve">
+    <value>The latest Auditor Retrieve Data job failed or finished with exception, and no data was retrieved. Run a new Auditor Retrieve Data job.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_Discovery_AWDGetItemsError" xml:space="preserve">
+    <value>An error occurred while getting items.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_Server_NotFindWebApplication" xml:space="preserve">
+    <value>Cannot find the Web application: {0}.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_Restore_NotHavePermissionToCreateSiteCollection" xml:space="preserve">
+    <value>You do not have permission to create a site collection. Exception type: UnauthorizedAccessException.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_Restore_CannotCreateSiteCollectionForUserPermission" xml:space="preserve">
+    <value>Cannot create a site collection. The Agent account is not in the Farm Administrators group.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_Restore_ReplaceInvalidUserFailed" xml:space="preserve">
+    <value>Failed to replace the invalid user with Agent account. Please check the site collection administrator authentication method.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_Discovery_AWDGetGuidDocIdMappingError" xml:space="preserve">
+    <value>An error occurred while getting GUID-to-DocID mappings.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_QueryService_GenerateBlobRecordError" xml:space="preserve">
+    <value>An error occurred while generating BLOB record.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_Server_ExportWebPartError" xml:space="preserve">
+    <value>An error occurred while backing up the web part "{0}". Error: {1}</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_Server_ConfigurationFileIllegal" xml:space="preserve">
+    <value>The built-in configuration file is invalid. Please contact AvePoint Technical Support for assistance.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_Common_PolicySchemaIsNull" xml:space="preserve">
+    <value>The policy schema does not contain policy information.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_Restore_NotFindSpecificField" xml:space="preserve">
+    <value>Cannot find the field. Field ID: 5a14d1ab-1513-48c7-97b3-657a5ba6c742.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_QueryService_NotFindMetaInfoInRecycleBin" xml:space="preserve">
+    <value>Cannot get the metadata of the item in recycle bin.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_Restore_WFDeNameOrTemplateConflictError" xml:space="preserve">
+    <value>Skipped processing the workflow definition. The template is different in the destination, and there is a conflict with the name.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_Server13_FaileRestoreHistoricalVersions" xml:space="preserve">
+    <value>Failed to restore only the historical versions. To restore historical versions in SharePoint 2013, select the desired versions along with the current version, and then perform the restore job.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_Discovery_Office365NotSupportListCreatedByRule" xml:space="preserve">
+    <value>Cannot find the Created By value. The list/library-level rule in the filter policy selected for this job is invalid.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_Restore_SkipRestoreAppData" xml:space="preserve">
+    <value>Skipped restoring the app data. The app already exists in the destination.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_Backup_NotFindSiteCollection" xml:space="preserve">
+    <value>The site collection does not exist or cannot be accessed. Site collection URL: {0}</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_Mapping_FailedToCreateExcelFile" xml:space="preserve">
+    <value>Failed to create the Excel file.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_Workflow_NotFindParentFolder" xml:space="preserve">
+    <value>Cannot find the parent folder. Error: {0}</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_QueryService_NotFindContentTypeIdInRecycleBin" xml:space="preserve">
+    <value>Cannot find the content type ID of the item in recycle bin.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_Restore_WFDeConflictError" xml:space="preserve">
+    <value>The workflow definition you are trying to restore conflicts with an existing one in the destination.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_Discovery_AWDGetViewsError" xml:space="preserve">
+    <value>An error occurred while getting views.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_Discovery_AWDOffice365NotSupportListCreatedByRule" xml:space="preserve">
+    <value>Cannot obtain the Created By value. The list/library-level rule in the filter policy selected for this job is invalid.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_QueryService_SONotRBSOrEBSData" xml:space="preserve">
+    <value>The BLOB is not EBS or RBS data.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_Restore_NotSiteCollection" xml:space="preserve">
+    <value>The site collection URL "{0}" is invalid.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_Discovery_AWDInitListPropertyError" xml:space="preserve">
+    <value>An error occurred while initializing list properties.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_Common_PasswordNotMatch" xml:space="preserve">
+    <value>The entered password does not match the stored password.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_Restore_RestoreAddDataFailedForNotRestoredCorrectly" xml:space="preserve">
+    <value>Failed to restore AppData. A possible cause is that the app may not have been restored successfully.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_Restore_NotEnableAttachment" xml:space="preserve">
+    <value>Attachments are not enabled in this list: {0}.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_Restore_NoRowIdForItem" xml:space="preserve">
+    <value>The list item '{0}' does not have a row ID.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_Restore_CanNotGetRequestUserInSourceSite" xml:space="preserve">
+    <value>An error occurred while restoring an item in the Access Request list. Cannot get the request-by user and request-for user in the source site. Request-by user ID: {0}. Request-for user ID: {1}.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_Discovery_Office365NotSupportSiteCollectionFilter" xml:space="preserve">
+    <value>SharePoint Online does not support site collection-level filter policies. Related filter policy name: {0}.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_Common_NotFindData" xml:space="preserve">
+    <value>Cannot find data.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_QueryService_SONotFindRBSBlobId" xml:space="preserve">
+    <value>Cannot find RBS BLOB ID.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_Server_FileNotFoundException" xml:space="preserve">
+    <value>Cannot find the item. It may have been deleted by another user.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_Workflow_EndOfFile" xml:space="preserve">
+    <value>An error occurred while parsing the workflow instance data.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_Backup_GetDocumentContentError" xml:space="preserve">
+    <value>An error occurred while getting document content.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_QueryService_NotStubException" xml:space="preserve">
+    <value>The item is not a stub.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_Discovery_AWDGetAlertsError" xml:space="preserve">
+    <value>An error occurred while getting alerts.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_Discovery_AWDGetVersionsError" xml:space="preserve">
+    <value>An error occurred while getting versions.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_Restore_NotFindWebApplication" xml:space="preserve">
+    <value>Cannot find the Web application in the destination for restoring the site collection. Web application URL: {0}.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_Common_TermSetNotExist" xml:space="preserve">
+    <value>The term set "{0}" does not exist.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_Discovery_AWDGetSizeSizeError" xml:space="preserve">
+    <value>An error occurred while getting site size.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_Discovery_AWDGetListError" xml:space="preserve">
+    <value>An error occurred while getting list information.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_Restore_CreateTaxonomyGroupError" xml:space="preserve">
+    <value>An error occurred while creating taxonomy group. Group name: {0}. Error: {1}</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_Server_NoVersionId" xml:space="preserve">
+    <value>Invalid data. The returned version number of the item '{0}' is 0.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_Discovery_AWDGetSubSitesError" xml:space="preserve">
+    <value>An error occurred while getting child sites.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_Common_PasswordExpired" xml:space="preserve">
+    <value>The password for the account has expired.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_Restore_DifferentBaseTypeList" xml:space="preserve">
+    <value>Failed to restore this list, because a list already exists in the destination with the same name but a different base type.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_Backup_BlockSite" xml:space="preserve">
+    <value>Access to this site has been blocked. Please contact your SharePoint administrator for assistance.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_Server13_NotCreateAppCatalog" xml:space="preserve">
+    <value>The app catalog site collection does not exist in the destination.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_Discovery_AWDGetChangedWebError" xml:space="preserve">
+    <value>An error occurred while getting modified child sites.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_Server07_FolderOccupyRowIdWithoutFolderUrl" xml:space="preserve">
+    <value>The row ID '{0}' has been occupied by a folder.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_QueryService_CRCMatchFailed" xml:space="preserve">
+    <value>The CRC in the stub database "{0}" does not match the CRC from the media device "{1}".</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_Server07_FolderOccupyRowIdWithFolderUrl" xml:space="preserve">
+    <value>The row ID '{0}' has been occupied by the folder "{1}".</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_Server_FileSizeTooLarge" xml:space="preserve">
+    <value>The file size has exceeded the designated maximum upload size.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_Discovery_SOARReportServiceException" xml:space="preserve">
+    <value>The specified rule requires use of the Report Service and the Compliance Reports. Either the Report Service is down, or the Compliance Reports product is not active or properly licensed.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_Restore_CreateTermError" xml:space="preserve">
+    <value>An error occurred while creating term. Term name:{0}. Error: {1}</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_Common_FakeUserException" xml:space="preserve">
+    <value>Skipped the operation on the user "{0}". The user is a dead account.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_Server_NotFindSetupPathForGhostedPage" xml:space="preserve">
+    <value>Cannot find the setup path "{0}" for this ghosted page: {1}.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_Server_NotFindTermwithId" xml:space="preserve">
+    <value>Cannot find the term with ID '{0}' in the term set: {1}.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_Discovery_AWDGetSubFoldersError" xml:space="preserve">
+    <value>An error occurred while getting the child folders.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_Discovery_AWDGetStubContentsError" xml:space="preserve">
+    <value>An error occurred while getting stubs.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_Discovery_AWDGetListSizeError" xml:space="preserve">
+    <value>An error occurred while getting list size.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_Discovery_SOARAuditorEnableException" xml:space="preserve">
+    <value>SharePoint Audit settings are not enabled for this site collection.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_Restore_HostHeaderSiteCollectionAlreadyExists" xml:space="preserve">
+    <value>The host header site collection already exists in the destination, but not in the selected Web application.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_Common_BlobPoolnotGeneratedByDocAve6Extender" xml:space="preserve">
+    <value>The BLOB pool ID binary is not generated by DocAve 6 Storage Manager.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_Discovery_AWDValidateNameError" xml:space="preserve">
+    <value>An error occurred while validating whether the same items or documents exist in the destination. </value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_Common_NotFindTermSetwithId" xml:space="preserve">
+    <value>Cannot find the term set with ID '{0}' in the term store: {1}.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_Discovery_AWDGetFolderSizeError" xml:space="preserve">
+    <value>An error occurred while getting folder size.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_Common_LoginFailedForFedAuthCookie" xml:space="preserve">
+    <value>Failed to log in to the site. The cookie obtained is invalid.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_Restore_CompatibilityLevelConflictError" xml:space="preserve">
+    <value>The experience versions of the source and destination site templates do not match.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_Discovery_Office365NotSupportWebCreatedByRule" xml:space="preserve">
+    <value>Cannot get the Created By value. The site-level rule in the filter policy selected for this job is invalid.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_Restore_VerifyFilePageLayoutFailed" xml:space="preserve">
+    <value>Failed to verify the page layout file.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_Restore_VerifyItemMetadataValueNotFound" xml:space="preserve">
+    <value>Failed to verify the item metadata column.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_Server13_InstallAppFailed" xml:space="preserve">
+    <value>Failed to install or update the app "{0}". Operation count: {1}.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_Workflow_NotFindWFDefinition" xml:space="preserve">
+    <value>Cannot find the workflow template associated with the workflow definition. Make sure this workflow template is deployed and the feature is active.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_QueryService_SONotGenerateBlobRecord" xml:space="preserve">
+    <value>Cannot generate BLOB record.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_Discovery_AWDGetItemWebpartsError" xml:space="preserve">
+    <value>An error occurred while getting information on Web parts.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_Restore_NotFindCurrentUser" xml:space="preserve">
+    <value>Cannot get the current user. Please check your Agent Monitor settings.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_Discovery_AWDGetChangeSizeError" xml:space="preserve">
+    <value>An error occurred while getting the changed size of the cache.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_Mapping_PathTooLongException" xml:space="preserve">
+    <value>The path is too long. The length of the path must be less than 255 characters. Path: {0}</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_Discovery_AWDGetItemSizeError" xml:space="preserve">
+    <value>An error occurred while getting item size.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_Discovery_AWDGetChangedSiteError" xml:space="preserve">
+    <value>An error occurred while getting modified sites.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_Server13_NotGetAppLicenseForUser" xml:space="preserve">
+    <value>Cannot get the app license for the current user.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_Server13_UploadEmptyAttachmentError" xml:space="preserve">
+    <value>Cannot upload empty attachment.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_Discovery_AWDGetWebRootFolderError" xml:space="preserve">
+    <value>An error occurred while obtaining the top-level site.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_Restore_NotGetContentDatabaseById" xml:space="preserve">
+    <value>Cannot obtain the content database by ID: {0}.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_Restore_CreateTermSetError" xml:space="preserve">
+    <value>An error occurred while creating the term set. Term set name: {0}. Error: {1}</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_Discovery_SOARNotFindAuditorJobException" xml:space="preserve">
+    <value>Cannot find any Auditor job that has the Track object last accessed time checkbox selected. </value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_Contract_ContentTypeConflict" xml:space="preserve">
+    <value>The schema dependency of the {1} "{0}" conflicts with a destination {1} using the same name or ID.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_Contract_ConnotFindSchemaDependency" xml:space="preserve">
+    <value>Skipped restoring the schema dependency of the {1} "{0}". It does not exist in the destination.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_Workflow_NotFindListOrFolder" xml:space="preserve">
+    <value>Cannot find the lists or folders associated with this workflow. List Title/Folder Name: {0}. Site URL: {1}.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_Restore_ManagedPathNotFound" xml:space="preserve">
+    <value>Cannot find the managed path of the Web application in the destination.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_Workflow_ServiceNotAvailable" xml:space="preserve">
+    <value>Skipped restoring the workflow definition as the workflow service is not connected to the site: {0}.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_Restore_SingleDocumentVersionNotSupported" xml:space="preserve">
+    <value>A historical version of a document cannot be restored seperately.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_Workflow_CustomWorkflowNotSupported" xml:space="preserve">
+    <value>SharePoint Online does not support restoring custom workflows from SharePoint on-premises. For example: Nintex Workflow.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_Workflow_DependencyFeatureNotActivated" xml:space="preserve">
+    <value>Skipped restoring this workflow definition as the features that the current workflow depends on are deactivated. For more details, please refer to the Agent logs.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_Workflow_NotBuildinAssociationSkipException" xml:space="preserve">
+    <value>Skipped restoring this workflow definition. The workflow is not a SharePoint built-in workflow, and in the AgentCommonWrapperConfig.config file stored in the ...\AvePoint\DocAve6\Agent\bin directory, the value of the RestoreBuiltinOnly parameter under the WrapperCommon node is set to "true". You can change the value of the parameter to "false" in order to restore this workflow definition. Workflow name: {0}</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_Workflow_AssociationConflictWithInstanceExist" xml:space="preserve">
+    <value>Skipped restoring the workflow definition "{0}" with {1} configured as conflict resolution. There are {2} workflow instances triggered by the conflicting workflow definition in the destination.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_Restore_TermGroupNotFound" xml:space="preserve">
+    <value>Cannot find the term group "{0}" in the destination.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_Restore_TermNotFound" xml:space="preserve">
+    <value>Cannot find the term "{0}" in the destination.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_Restore_TermSetNotFound" xml:space="preserve">
+    <value>Cannot find the term set "{0}" in the destination.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_Restore_TermStoreNotFound" xml:space="preserve">
+    <value>Cannot find the term store "{0}" in the destination.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_Restore_ContentTypeFaild" xml:space="preserve">
+    <value>Failed to restore the content type. Please refer to the Agent logs for details.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_Workflow_TemplateTypeNotSupportIn365" xml:space="preserve">
+    <value>Skipped restoring the workflow template since SharePoint Online does not support reusable workflow templates due to the limit of its Client API.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_Restore_SharePointVersionNotSupportAudit" xml:space="preserve">
+    <value>An error occurred while updating the audit settings. Please check your SharePoint Version (Foundation does not support auditing). </value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_Backup_SkipBackupDocumentWithInvalidUserData" xml:space="preserve">
+    <value>Skipped backing up the document, because the backup data is invalid.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_Restore_SkipRestoreDocumentWithInvalidUserData" xml:space="preserve">
+    <value>Skipped restoring the document, because the backup data is invalid.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_Workflow_RestoreWorkflowInstanceError" xml:space="preserve">
+    <value>An error occurred while migrating the workflow instance.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_Server16_FaileRestoreHistoricalVersions" xml:space="preserve">
+    <value>Failed to restore only the historical versions. To restore historical versions in SharePoint 2016, select the desired versions along with the current version, and then perform the restore job.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_Restore_DocumentTypeConflict" xml:space="preserve">
+    <value>There is a folder in the destination that has the same name as the item in the source. Document name: {0}. Folder URL: {1}.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_Restore_ItemTypeConflict" xml:space="preserve">
+    <value>There is a folder in the destination that has the same ID as the item in the source. Item ID: {0}. Folder URL: {1}.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_Workflow_DefinitionNotFound" xml:space="preserve">
+    <value>Cannot find the workflow definition in the destination.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_Discovery_SOARNodeModifiedAfterAuditorRetriveJob" xml:space="preserve">
+    <value>Skipped archiving the object. The modified time of this object is later than the time retrieved by the corresponding Report Center job.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_Common_AIRMSIPCClientLoadFailed" xml:space="preserve">
+    <value>Failed to back up the object. Cannot set the MSIPC.dll file's directory.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_Common_AIRMSIPCClientNotFound" xml:space="preserve">
+    <value>Failed to back up the object. Ensure the Rights Management Service client has been installed.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_Common_AIRSuperUserNotConfigured" xml:space="preserve">
+    <value>Failed to back up the object. Go to Control Panel to configure a super user to decrypt the object during the backup. </value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_Restore_SkipListWhenDenyAddAndCustomizePagesStatus" xml:space="preserve">
+    <value>The current list: {0} is within the site: {1}. DocAve does not have permission to access this list, because the Custom Script settings in the destination SharePoint Online may not be enabled. Please enable the destination Custom Script settings in SharePoint admin center &amp;gt; settings. Then, run the job again.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_Office365_Common_FileConentBroken" xml:space="preserve">
+    <value>Failed to retrieve the complete content of the file.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_Common_AccountDisable" xml:space="preserve">
+    <value>This account has already been disabled.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_Common_IncorrectUserNameOrPassword" xml:space="preserve">
+    <value>The username or password is incorrect.</value>
+    <comment>None</comment>
+  </data>
+  <data name="Wrapper_Exception_Common_NonOffice365Account" xml:space="preserve">
+    <value>The user you entered cannot be found.</value>
+    <comment>None</comment>
+  </data>
+</root>

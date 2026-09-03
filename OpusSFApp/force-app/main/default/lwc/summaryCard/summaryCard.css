@@ -1,0 +1,67 @@
+/*Covered by AvePoint copyright and license agreement*/
+.summary-card-container-title {
+    font-size: 14px;
+}
+
+.summary-section {
+    padding-right: var(--slds-c-card-header-spacing-inline-end,
+            var(--sds-c-card-header-spacing-inline-end,
+                var(--slds-c-card-header-spacing-inline,
+                    var(--sds-c-card-header-spacing-inline,
+                        var(--lwc-varSpacingHorizontalMedium, 1rem)))));
+    padding-bottom: var(--slds-c-card-header-spacing-block-end,
+            var(--sds-c-card-header-spacing-block-end,
+                var(--slds-c-card-header-spacing-block,
+                    var(--sds-c-card-header-spacing-block, 0))));
+    padding-left: var(--slds-c-card-header-spacing-inline-start,
+            var(--sds-c-card-header-spacing-inline-start,
+                var(--slds-c-card-header-spacing-inline,
+                    var(--sds-c-card-header-spacing-inline,
+                        var(--lwc-varSpacingHorizontalMedium, 1rem)))));
+    margin: 0 0 var(--slds-c-card-header-spacing-block-end,
+            var(--sds-c-card-header-spacing-block-end,
+                var(--lwc-varSpacingVerticalSmall, 0.75rem)));
+}
+
+.summary-title {
+    font-weight: 600;
+    font-size: 14px;
+    color: #323e4d;
+}
+
+.custom-grid-gap {
+    column-gap: 16px;
+}
+
+.summary-card-item {
+    width: 100%;
+    height: 100%;
+    padding: 12px 8px;
+    font-size: 14px;
+    color: #171d24;
+    border: 1px solid #e7eaeb;
+    border-radius: 4px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 8px;
+}
+
+
+.card-value-unit {
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+    max-width: calc(100% - 16px);
+}
+.card-value {
+    font-weight: 600;
+    font-size: 24px;
+    color: #323e4d;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

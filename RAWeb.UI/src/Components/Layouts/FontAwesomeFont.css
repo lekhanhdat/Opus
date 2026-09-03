@@ -1,0 +1,10803 @@
+/*Covered by AvePoint copyright and license agreement*/
+/*!
+ * Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com
+ * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
+ * Copyright 2024 Fonticons, Inc.
+ */
+
+[class^="fas-"]:before,
+[class^="far-"]:before {
+  font-family: "Font Awesome 6 Free";
+  content: var(--fa);
+  font-size: 14px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="fas-"] {
+  font-weight: 900;
+}
+
+[class^="far-"] {
+  font-weight: 400;
+}
+
+.fa {
+  font-family: var(--fa-style-family, "Font Awesome 6 Free");
+  font-weight: var(--fa-style, 900);
+}
+
+/* .fa,
+ .far-brands, .fas-brands ,
+ .far-regular, .fas-regular ,
+ .far-solid, .fas-solid ,
+ .fab,
+ .far,
+ .fas {
+     -moz-osx-font-smoothing: grayscale;
+     -webkit-font-smoothing: antialiased;
+     display: var(--fa-display, inline-block);
+     font-style: normal;
+     font-variant: normal;
+     line-height: 1;
+     text-rendering: auto;
+ } */
+.far-regular:before,
+.fas-regular:before,
+.far-solid:before,
+.fas-solid:before,
+.fa:before,
+.fab:before,
+.far:before,
+.fas:before {
+  content: var(--fa);
+}
+
+.far-classic,
+.fas-classic,
+.far-regular,
+.fas-regular,
+.far-solid,
+.fas-solid,
+.far,
+.fas {
+  font-family: "Font Awesome 6 Free";
+}
+
+.far-0,
+.fas-0 {
+  --fa: "\30";
+}
+
+.far-1,
+.fas-1 {
+  --fa: "\31";
+}
+
+.far-2,
+.fas-2 {
+  --fa: "\32";
+}
+
+.far-3,
+.fas-3 {
+  --fa: "\33";
+}
+
+.far-4,
+.fas-4 {
+  --fa: "\34";
+}
+
+.far-5,
+.fas-5 {
+  --fa: "\35";
+}
+
+.far-6,
+.fas-6 {
+  --fa: "\36";
+}
+
+.far-7,
+.fas-7 {
+  --fa: "\37";
+}
+
+.far-8,
+.fas-8 {
+  --fa: "\38";
+}
+
+.far-9,
+.fas-9 {
+  --fa: "\39";
+}
+
+.far-fill-drip,
+.fas-fill-drip {
+  --fa: "\f576";
+}
+
+.far-arrows-to-circle,
+.fas-arrows-to-circle {
+  --fa: "\e4bd";
+}
+
+.far-chevron-circle-right,
+.fas-chevron-circle-right,
+.far-circle-chevron-right,
+.fas-circle-chevron-right {
+  --fa: "\f138";
+}
+
+.far-at,
+.fas-at {
+  --fa: "\40";
+}
+
+.far-trash-alt,
+.fas-trash-alt,
+.far-trash-can,
+.fas-trash-can {
+  --fa: "\f2ed";
+}
+
+.far-text-height,
+.fas-text-height {
+  --fa: "\f034";
+}
+
+.far-user-times,
+.fas-user-times,
+.far-user-xmark,
+.fas-user-xmark {
+  --fa: "\f235";
+}
+
+.far-stethoscope,
+.fas-stethoscope {
+  --fa: "\f0f1";
+}
+
+.far-comment-alt,
+.fas-comment-alt,
+.far-message,
+.fas-message {
+  --fa: "\f27a";
+}
+
+.far-info,
+.fas-info {
+  --fa: "\f129";
+}
+
+.far-compress-alt,
+.fas-compress-alt,
+.far-down-left-and-up-right-to-center,
+.fas-down-left-and-up-right-to-center {
+  --fa: "\f422";
+}
+
+.far-explosion,
+.fas-explosion {
+  --fa: "\e4e9";
+}
+
+.far-file-alt,
+.fas-file-alt,
+.far-file-lines,
+.fas-file-lines,
+.far-file-text,
+.fas-file-text {
+  --fa: "\f15c";
+}
+
+.far-wave-square,
+.fas-wave-square {
+  --fa: "\f83e";
+}
+
+.far-ring,
+.fas-ring {
+  --fa: "\f70b";
+}
+
+.far-building-un,
+.fas-building-un {
+  --fa: "\e4d9";
+}
+
+.far-dice-three,
+.fas-dice-three {
+  --fa: "\f527";
+}
+
+.far-calendar-alt,
+.fas-calendar-alt,
+.far-calendar-days,
+.fas-calendar-days {
+  --fa: "\f073";
+}
+
+.far-anchor-circle-check,
+.fas-anchor-circle-check {
+  --fa: "\e4aa";
+}
+
+.far-building-circle-arrow-right,
+.fas-building-circle-arrow-right {
+  --fa: "\e4d1";
+}
+
+.far-volleyball,
+.fas-volleyball,
+.far-volleyball-ball,
+.fas-volleyball-ball {
+  --fa: "\f45f";
+}
+
+.far-arrows-up-to-line,
+.fas-arrows-up-to-line {
+  --fa: "\e4c2";
+}
+
+.far-sort-desc,
+.fas-sort-desc,
+.far-sort-down,
+.fas-sort-down {
+  --fa: "\f0dd";
+}
+
+.far-circle-minus,
+.fas-circle-minus,
+.far-minus-circle,
+.fas-minus-circle {
+  --fa: "\f056";
+}
+
+.far-door-open,
+.fas-door-open {
+  --fa: "\f52b";
+}
+
+.far-right-from-bracket,
+.fas-right-from-bracket,
+.far-sign-out-alt,
+.fas-sign-out-alt {
+  --fa: "\f2f5";
+}
+
+.far-atom,
+.fas-atom {
+  --fa: "\f5d2";
+}
+
+.far-soap,
+.fas-soap {
+  --fa: "\e06e";
+}
+
+.far-heart-music-camera-bolt,
+.fas-heart-music-camera-bolt,
+.far-icons,
+.fas-icons {
+  --fa: "\f86d";
+}
+
+.far-microphone-alt-slash,
+.fas-microphone-alt-slash,
+.far-microphone-lines-slash,
+.fas-microphone-lines-slash {
+  --fa: "\f539";
+}
+
+.far-bridge-circle-check,
+.fas-bridge-circle-check {
+  --fa: "\e4c9";
+}
+
+.far-pump-medical,
+.fas-pump-medical {
+  --fa: "\e06a";
+}
+
+.far-fingerprint,
+.fas-fingerprint {
+  --fa: "\f577";
+}
+
+.far-hand-point-right,
+.fas-hand-point-right {
+  --fa: "\f0a4";
+}
+
+.far-magnifying-glass-location,
+.fas-magnifying-glass-location,
+.far-search-location,
+.fas-search-location {
+  --fa: "\f689";
+}
+
+.far-forward-step,
+.fas-forward-step,
+.far-step-forward,
+.fas-step-forward {
+  --fa: "\f051";
+}
+
+.far-face-smile-beam,
+.fas-face-smile-beam,
+.far-smile-beam,
+.fas-smile-beam {
+  --fa: "\f5b8";
+}
+
+.far-flag-checkered,
+.fas-flag-checkered {
+  --fa: "\f11e";
+}
+
+.far-football,
+.fas-football,
+.far-football-ball,
+.fas-football-ball {
+  --fa: "\f44e";
+}
+
+.far-school-circle-exclamation,
+.fas-school-circle-exclamation {
+  --fa: "\e56c";
+}
+
+.far-crop,
+.fas-crop {
+  --fa: "\f125";
+}
+
+.far-angle-double-down,
+.fas-angle-double-down,
+.far-angles-down,
+.fas-angles-down {
+  --fa: "\f103";
+}
+
+.far-users-rectangle,
+.fas-users-rectangle {
+  --fa: "\e594";
+}
+
+.far-people-roof,
+.fas-people-roof {
+  --fa: "\e537";
+}
+
+.far-people-line,
+.fas-people-line {
+  --fa: "\e534";
+}
+
+.far-beer,
+.fas-beer,
+.far-beer-mug-empty,
+.fas-beer-mug-empty {
+  --fa: "\f0fc";
+}
+
+.far-diagram-predecessor,
+.fas-diagram-predecessor {
+  --fa: "\e477";
+}
+
+.far-arrow-up-long,
+.fas-arrow-up-long,
+.far-long-arrow-up,
+.fas-long-arrow-up {
+  --fa: "\f176";
+}
+
+.far-burn,
+.fas-burn,
+.far-fire-flame-simple,
+.fas-fire-flame-simple {
+  --fa: "\f46a";
+}
+
+.far-male,
+.fas-male,
+.far-person,
+.fas-person {
+  --fa: "\f183";
+}
+
+.far-laptop,
+.fas-laptop {
+  --fa: "\f109";
+}
+
+.far-file-csv,
+.fas-file-csv {
+  --fa: "\f6dd";
+}
+
+.far-menorah,
+.fas-menorah {
+  --fa: "\f676";
+}
+
+.far-truck-plane,
+.fas-truck-plane {
+  --fa: "\e58f";
+}
+
+.far-record-vinyl,
+.fas-record-vinyl {
+  --fa: "\f8d9";
+}
+
+.far-face-grin-stars,
+.fas-face-grin-stars,
+.far-grin-stars,
+.fas-grin-stars {
+  --fa: "\f587";
+}
+
+.far-bong,
+.fas-bong {
+  --fa: "\f55c";
+}
+
+.far-pastafarianism,
+.fas-pastafarianism,
+.far-spaghetti-monster-flying,
+.fas-spaghetti-monster-flying {
+  --fa: "\f67b";
+}
+
+.far-arrow-down-up-across-line,
+.fas-arrow-down-up-across-line {
+  --fa: "\e4af";
+}
+
+.far-spoon,
+.fas-spoon,
+.far-utensil-spoon,
+.fas-utensil-spoon {
+  --fa: "\f2e5";
+}
+
+.far-jar-wheat,
+.fas-jar-wheat {
+  --fa: "\e517";
+}
+
+.far-envelopes-bulk,
+.fas-envelopes-bulk,
+.far-mail-bulk,
+.fas-mail-bulk {
+  --fa: "\f674";
+}
+
+.far-file-circle-exclamation,
+.fas-file-circle-exclamation {
+  --fa: "\e4eb";
+}
+
+.far-circle-h,
+.fas-circle-h,
+.far-hospital-symbol,
+.fas-hospital-symbol {
+  --fa: "\f47e";
+}
+
+.far-pager,
+.fas-pager {
+  --fa: "\f815";
+}
+
+.far-address-book,
+.fas-address-book,
+.far-contact-book,
+.fas-contact-book {
+  --fa: "\f2b9";
+}
+
+.far-strikethrough,
+.fas-strikethrough {
+  --fa: "\f0cc";
+}
+
+.far-k,
+.fas-k {
+  --fa: "\4b";
+}
+
+.far-landmark-flag,
+.fas-landmark-flag {
+  --fa: "\e51c";
+}
+
+.far-pencil,
+.fas-pencil,
+.far-pencil-alt,
+.fas-pencil-alt {
+  --fa: "\f303";
+}
+
+.far-backward,
+.fas-backward {
+  --fa: "\f04a";
+}
+
+.far-caret-right,
+.fas-caret-right {
+  --fa: "\f0da";
+}
+
+.far-comments,
+.fas-comments {
+  --fa: "\f086";
+}
+
+.far-file-clipboard,
+.fas-file-clipboard,
+.far-paste,
+.fas-paste {
+  --fa: "\f0ea";
+}
+
+.far-code-pull-request,
+.fas-code-pull-request {
+  --fa: "\e13c";
+}
+
+.far-clipboard-list,
+.fas-clipboard-list {
+  --fa: "\f46d";
+}
+
+.far-truck-loading,
+.fas-truck-loading,
+.far-truck-ramp-box,
+.fas-truck-ramp-box {
+  --fa: "\f4de";
+}
+
+.far-user-check,
+.fas-user-check {
+  --fa: "\f4fc";
+}
+
+.far-vial-virus,
+.fas-vial-virus {
+  --fa: "\e597";
+}
+
+.far-sheet-plastic,
+.fas-sheet-plastic {
+  --fa: "\e571";
+}
+
+.far-blog,
+.fas-blog {
+  --fa: "\f781";
+}
+
+.far-user-ninja,
+.fas-user-ninja {
+  --fa: "\f504";
+}
+
+.far-person-arrow-up-from-line,
+.fas-person-arrow-up-from-line {
+  --fa: "\e539";
+}
+
+.far-scroll-torah,
+.fas-scroll-torah,
+.far-torah,
+.fas-torah {
+  --fa: "\f6a0";
+}
+
+.far-broom-ball,
+.fas-broom-ball,
+.far-quidditch,
+.fas-quidditch,
+.far-quidditch-broom-ball,
+.fas-quidditch-broom-ball {
+  --fa: "\f458";
+}
+
+.far-toggle-off,
+.fas-toggle-off {
+  --fa: "\f204";
+}
+
+.far-archive,
+.fas-archive,
+.far-box-archive,
+.fas-box-archive {
+  --fa: "\f187";
+}
+
+.far-person-drowning,
+.fas-person-drowning {
+  --fa: "\e545";
+}
+
+.far-arrow-down-9-1,
+.fas-arrow-down-9-1,
+.far-sort-numeric-desc,
+.fas-sort-numeric-desc,
+.far-sort-numeric-down-alt,
+.fas-sort-numeric-down-alt {
+  --fa: "\f886";
+}
+
+.far-face-grin-tongue-squint,
+.fas-face-grin-tongue-squint,
+.far-grin-tongue-squint,
+.fas-grin-tongue-squint {
+  --fa: "\f58a";
+}
+
+.far-spray-can,
+.fas-spray-can {
+  --fa: "\f5bd";
+}
+
+.far-truck-monster,
+.fas-truck-monster {
+  --fa: "\f63b";
+}
+
+.far-w,
+.fas-w {
+  --fa: "\57";
+}
+
+.far-earth-africa,
+.fas-earth-africa,
+.far-globe-africa,
+.fas-globe-africa {
+  --fa: "\f57c";
+}
+
+.far-rainbow,
+.fas-rainbow {
+  --fa: "\f75b";
+}
+
+.far-circle-notch,
+.fas-circle-notch {
+  --fa: "\f1ce";
+}
+
+.far-tablet-alt,
+.fas-tablet-alt,
+.far-tablet-screen-button,
+.fas-tablet-screen-button {
+  --fa: "\f3fa";
+}
+
+.far-paw,
+.fas-paw {
+  --fa: "\f1b0";
+}
+
+.far-cloud,
+.fas-cloud {
+  --fa: "\f0c2";
+}
+
+.far-trowel-bricks,
+.fas-trowel-bricks {
+  --fa: "\e58a";
+}
+
+.far-face-flushed,
+.fas-face-flushed,
+.far-flushed,
+.fas-flushed {
+  --fa: "\f579";
+}
+
+.far-hospital-user,
+.fas-hospital-user {
+  --fa: "\f80d";
+}
+
+.far-tent-arrow-left-right,
+.fas-tent-arrow-left-right {
+  --fa: "\e57f";
+}
+
+.far-gavel,
+.fas-gavel,
+.far-legal,
+.fas-legal {
+  --fa: "\f0e3";
+}
+
+.far-binoculars,
+.fas-binoculars {
+  --fa: "\f1e5";
+}
+
+.far-microphone-slash,
+.fas-microphone-slash {
+  --fa: "\f131";
+}
+
+.far-box-tissue,
+.fas-box-tissue {
+  --fa: "\e05b";
+}
+
+.far-motorcycle,
+.fas-motorcycle {
+  --fa: "\f21c";
+}
+
+.far-bell-concierge,
+.fas-bell-concierge,
+.far-concierge-bell,
+.fas-concierge-bell {
+  --fa: "\f562";
+}
+
+.far-pen-ruler,
+.fas-pen-ruler,
+.far-pencil-ruler,
+.fas-pencil-ruler {
+  --fa: "\f5ae";
+}
+
+.far-people-arrows,
+.fas-people-arrows,
+.far-people-arrows-left-right,
+.fas-people-arrows-left-right {
+  --fa: "\e068";
+}
+
+.far-mars-and-venus-burst,
+.fas-mars-and-venus-burst {
+  --fa: "\e523";
+}
+
+.far-caret-square-right,
+.fas-caret-square-right,
+.far-square-caret-right,
+.fas-square-caret-right {
+  --fa: "\f152";
+}
+
+.far-cut,
+.fas-cut,
+.far-scissors,
+.fas-scissors {
+  --fa: "\f0c4";
+}
+
+.far-sun-plant-wilt,
+.fas-sun-plant-wilt {
+  --fa: "\e57a";
+}
+
+.far-toilets-portable,
+.fas-toilets-portable {
+  --fa: "\e584";
+}
+
+.far-hockey-puck,
+.fas-hockey-puck {
+  --fa: "\f453";
+}
+
+.far-table,
+.fas-table {
+  --fa: "\f0ce";
+}
+
+.far-magnifying-glass-arrow-right,
+.fas-magnifying-glass-arrow-right {
+  --fa: "\e521";
+}
+
+.far-digital-tachograph,
+.fas-digital-tachograph,
+.far-tachograph-digital,
+.fas-tachograph-digital {
+  --fa: "\f566";
+}
+
+.far-users-slash,
+.fas-users-slash {
+  --fa: "\e073";
+}
+
+.far-clover,
+.fas-clover {
+  --fa: "\e139";
+}
+
+.far-mail-reply,
+.fas-mail-reply,
+.far-reply,
+.fas-reply {
+  --fa: "\f3e5";
+}
+
+.far-star-and-crescent,
+.fas-star-and-crescent {
+  --fa: "\f699";
+}
+
+.far-house-fire,
+.fas-house-fire {
+  --fa: "\e50c";
+}
+
+.far-minus-square,
+.fas-minus-square,
+.far-square-minus,
+.fas-square-minus {
+  --fa: "\f146";
+}
+
+.far-helicopter,
+.fas-helicopter {
+  --fa: "\f533";
+}
+
+.far-compass,
+.fas-compass {
+  --fa: "\f14e";
+}
+
+.far-caret-square-down,
+.fas-caret-square-down,
+.far-square-caret-down,
+.fas-square-caret-down {
+  --fa: "\f150";
+}
+
+.far-file-circle-question,
+.fas-file-circle-question {
+  --fa: "\e4ef";
+}
+
+.far-laptop-code,
+.fas-laptop-code {
+  --fa: "\f5fc";
+}
+
+.far-swatchbook,
+.fas-swatchbook {
+  --fa: "\f5c3";
+}
+
+.far-prescription-bottle,
+.fas-prescription-bottle {
+  --fa: "\f485";
+}
+
+.far-bars,
+.fas-bars,
+.far-navicon,
+.fas-navicon {
+  --fa: "\f0c9";
+}
+
+.far-people-group,
+.fas-people-group {
+  --fa: "\e533";
+}
+
+.far-hourglass-3,
+.fas-hourglass-3,
+.far-hourglass-end,
+.fas-hourglass-end {
+  --fa: "\f253";
+}
+
+.far-heart-broken,
+.fas-heart-broken,
+.far-heart-crack,
+.fas-heart-crack {
+  --fa: "\f7a9";
+}
+
+.far-external-link-square-alt,
+.fas-external-link-square-alt,
+.far-square-up-right,
+.fas-square-up-right {
+  --fa: "\f360";
+}
+
+.far-face-kiss-beam,
+.fas-face-kiss-beam,
+.far-kiss-beam,
+.fas-kiss-beam {
+  --fa: "\f597";
+}
+
+.far-film,
+.fas-film {
+  --fa: "\f008";
+}
+
+.far-ruler-horizontal,
+.fas-ruler-horizontal {
+  --fa: "\f547";
+}
+
+.far-people-robbery,
+.fas-people-robbery {
+  --fa: "\e536";
+}
+
+.far-lightbulb,
+.fas-lightbulb {
+  --fa: "\f0eb";
+}
+
+.far-caret-left,
+.fas-caret-left {
+  --fa: "\f0d9";
+}
+
+.far-circle-exclamation,
+.fas-circle-exclamation,
+.far-exclamation-circle,
+.fas-exclamation-circle {
+  --fa: "\f06a";
+}
+
+.far-school-circle-xmark,
+.fas-school-circle-xmark {
+  --fa: "\e56d";
+}
+
+.far-arrow-right-from-bracket,
+.fas-arrow-right-from-bracket,
+.far-sign-out,
+.fas-sign-out {
+  --fa: "\f08b";
+}
+
+.far-chevron-circle-down,
+.fas-chevron-circle-down,
+.far-circle-chevron-down,
+.fas-circle-chevron-down {
+  --fa: "\f13a";
+}
+
+.far-unlock-alt,
+.fas-unlock-alt,
+.far-unlock-keyhole,
+.fas-unlock-keyhole {
+  --fa: "\f13e";
+}
+
+.far-cloud-showers-heavy,
+.fas-cloud-showers-heavy {
+  --fa: "\f740";
+}
+
+.far-headphones-alt,
+.fas-headphones-alt,
+.far-headphones-simple,
+.fas-headphones-simple {
+  --fa: "\f58f";
+}
+
+.far-sitemap,
+.fas-sitemap {
+  --fa: "\f0e8";
+}
+
+.far-circle-dollar-to-slot,
+.fas-circle-dollar-to-slot,
+.far-donate,
+.fas-donate {
+  --fa: "\f4b9";
+}
+
+.far-memory,
+.fas-memory {
+  --fa: "\f538";
+}
+
+.far-road-spikes,
+.fas-road-spikes {
+  --fa: "\e568";
+}
+
+.far-fire-burner,
+.fas-fire-burner {
+  --fa: "\e4f1";
+}
+
+.far-flag,
+.fas-flag {
+  --fa: "\f024";
+}
+
+.far-hanukiah,
+.fas-hanukiah {
+  --fa: "\f6e6";
+}
+
+.far-feather,
+.fas-feather {
+  --fa: "\f52d";
+}
+
+.far-volume-down,
+.fas-volume-down,
+.far-volume-low,
+.fas-volume-low {
+  --fa: "\f027";
+}
+
+.far-comment-slash,
+.fas-comment-slash {
+  --fa: "\f4b3";
+}
+
+.far-cloud-sun-rain,
+.fas-cloud-sun-rain {
+  --fa: "\f743";
+}
+
+.far-compress,
+.fas-compress {
+  --fa: "\f066";
+}
+
+.far-wheat-alt,
+.fas-wheat-alt,
+.far-wheat-awn,
+.fas-wheat-awn {
+  --fa: "\e2cd";
+}
+
+.far-ankh,
+.fas-ankh {
+  --fa: "\f644";
+}
+
+.far-hands-holding-child,
+.fas-hands-holding-child {
+  --fa: "\e4fa";
+}
+
+.far-asterisk,
+.fas-asterisk {
+  --fa: "\2a";
+}
+
+.far-check-square,
+.fas-check-square,
+.far-square-check,
+.fas-square-check {
+  --fa: "\f14a";
+}
+
+.far-peseta-sign,
+.fas-peseta-sign {
+  --fa: "\e221";
+}
+
+.far-header,
+.fas-header,
+.far-heading,
+.fas-heading {
+  --fa: "\f1dc";
+}
+
+.far-ghost,
+.fas-ghost {
+  --fa: "\f6e2";
+}
+
+.far-list,
+.fas-list,
+.far-list-squares,
+.fas-list-squares {
+  --fa: "\f03a";
+}
+
+.far-phone-square-alt,
+.fas-phone-square-alt,
+.far-square-phone-flip,
+.fas-square-phone-flip {
+  --fa: "\f87b";
+}
+
+.far-cart-plus,
+.fas-cart-plus {
+  --fa: "\f217";
+}
+
+.far-gamepad,
+.fas-gamepad {
+  --fa: "\f11b";
+}
+
+.far-circle-dot,
+.fas-circle-dot,
+.far-dot-circle,
+.fas-dot-circle {
+  --fa: "\f192";
+}
+
+.far-dizzy,
+.fas-dizzy,
+.far-face-dizzy,
+.fas-face-dizzy {
+  --fa: "\f567";
+}
+
+.far-egg,
+.fas-egg {
+  --fa: "\f7fb";
+}
+
+.far-house-medical-circle-xmark,
+.fas-house-medical-circle-xmark {
+  --fa: "\e513";
+}
+
+.far-campground,
+.fas-campground {
+  --fa: "\f6bb";
+}
+
+.far-folder-plus,
+.fas-folder-plus {
+  --fa: "\f65e";
+}
+
+.far-futbol,
+.fas-futbol,
+.far-futbol-ball,
+.fas-futbol-ball,
+.far-soccer-ball,
+.fas-soccer-ball {
+  --fa: "\f1e3";
+}
+
+.far-paint-brush,
+.fas-paint-brush,
+.far-paintbrush,
+.fas-paintbrush {
+  --fa: "\f1fc";
+}
+
+.far-lock,
+.fas-lock {
+  --fa: "\f023";
+}
+
+.far-gas-pump,
+.fas-gas-pump {
+  --fa: "\f52f";
+}
+
+.far-hot-tub,
+.fas-hot-tub,
+.far-hot-tub-person,
+.fas-hot-tub-person {
+  --fa: "\f593";
+}
+
+.far-map-location,
+.fas-map-location,
+.far-map-marked,
+.fas-map-marked {
+  --fa: "\f59f";
+}
+
+.far-house-flood-water,
+.fas-house-flood-water {
+  --fa: "\e50e";
+}
+
+.far-tree,
+.fas-tree {
+  --fa: "\f1bb";
+}
+
+.far-bridge-lock,
+.fas-bridge-lock {
+  --fa: "\e4cc";
+}
+
+.far-sack-dollar,
+.fas-sack-dollar {
+  --fa: "\f81d";
+}
+
+.far-edit,
+.fas-edit,
+.far-pen-to-square,
+.fas-pen-to-square {
+  --fa: "\f044";
+}
+
+.far-car-side,
+.fas-car-side {
+  --fa: "\f5e4";
+}
+
+.far-share-alt,
+.fas-share-alt,
+.far-share-nodes,
+.fas-share-nodes {
+  --fa: "\f1e0";
+}
+
+.far-heart-circle-minus,
+.fas-heart-circle-minus {
+  --fa: "\e4ff";
+}
+
+.far-hourglass-2,
+.fas-hourglass-2,
+.far-hourglass-half,
+.fas-hourglass-half {
+  --fa: "\f252";
+}
+
+.far-microscope,
+.fas-microscope {
+  --fa: "\f610";
+}
+
+.far-sink,
+.fas-sink {
+  --fa: "\e06d";
+}
+
+.far-bag-shopping,
+.fas-bag-shopping,
+.far-shopping-bag,
+.fas-shopping-bag {
+  --fa: "\f290";
+}
+
+.far-arrow-down-z-a,
+.fas-arrow-down-z-a,
+.far-sort-alpha-desc,
+.fas-sort-alpha-desc,
+.far-sort-alpha-down-alt,
+.fas-sort-alpha-down-alt {
+  --fa: "\f881";
+}
+
+.far-mitten,
+.fas-mitten {
+  --fa: "\f7b5";
+}
+
+.far-person-rays,
+.fas-person-rays {
+  --fa: "\e54d";
+}
+
+.far-users,
+.fas-users {
+  --fa: "\f0c0";
+}
+
+.far-eye-slash,
+.fas-eye-slash {
+  --fa: "\f070";
+}
+
+.far-flask-vial,
+.fas-flask-vial {
+  --fa: "\e4f3";
+}
+
+.far-hand,
+.fas-hand,
+.far-hand-paper,
+.fas-hand-paper {
+  --fa: "\f256";
+}
+
+.far-om,
+.fas-om {
+  --fa: "\f679";
+}
+
+.far-worm,
+.fas-worm {
+  --fa: "\e599";
+}
+
+.far-house-circle-xmark,
+.fas-house-circle-xmark {
+  --fa: "\e50b";
+}
+
+.far-plug,
+.fas-plug {
+  --fa: "\f1e6";
+}
+
+.far-chevron-up,
+.fas-chevron-up {
+  --fa: "\f077";
+}
+
+.far-hand-spock,
+.fas-hand-spock {
+  --fa: "\f259";
+}
+
+.far-stopwatch,
+.fas-stopwatch {
+  --fa: "\f2f2";
+}
+
+.far-face-kiss,
+.fas-face-kiss,
+.far-kiss,
+.fas-kiss {
+  --fa: "\f596";
+}
+
+.far-bridge-circle-xmark,
+.fas-bridge-circle-xmark {
+  --fa: "\e4cb";
+}
+
+.far-face-grin-tongue,
+.fas-face-grin-tongue,
+.far-grin-tongue,
+.fas-grin-tongue {
+  --fa: "\f589";
+}
+
+.far-chess-bishop,
+.fas-chess-bishop {
+  --fa: "\f43a";
+}
+
+.far-face-grin-wink,
+.fas-face-grin-wink,
+.far-grin-wink,
+.fas-grin-wink {
+  --fa: "\f58c";
+}
+
+.far-deaf,
+.fas-deaf,
+.far-deafness,
+.fas-deafness,
+.far-ear-deaf,
+.fas-ear-deaf,
+.far-hard-of-hearing,
+.fas-hard-of-hearing {
+  --fa: "\f2a4";
+}
+
+.far-road-circle-check,
+.fas-road-circle-check {
+  --fa: "\e564";
+}
+
+.far-dice-five,
+.fas-dice-five {
+  --fa: "\f523";
+}
+
+.far-rss-square,
+.fas-rss-square,
+.far-square-rss,
+.fas-square-rss {
+  --fa: "\f143";
+}
+
+.far-land-mine-on,
+.fas-land-mine-on {
+  --fa: "\e51b";
+}
+
+.far-i-cursor,
+.fas-i-cursor {
+  --fa: "\f246";
+}
+
+.far-stamp,
+.fas-stamp {
+  --fa: "\f5bf";
+}
+
+.far-stairs,
+.fas-stairs {
+  --fa: "\e289";
+}
+
+.far-i,
+.fas-i {
+  --fa: "\49";
+}
+
+.far-hryvnia,
+.fas-hryvnia,
+.far-hryvnia-sign,
+.fas-hryvnia-sign {
+  --fa: "\f6f2";
+}
+
+.far-pills,
+.fas-pills {
+  --fa: "\f484";
+}
+
+.far-face-grin-wide,
+.fas-face-grin-wide,
+.far-grin-alt,
+.fas-grin-alt {
+  --fa: "\f581";
+}
+
+.far-tooth,
+.fas-tooth {
+  --fa: "\f5c9";
+}
+
+.far-v,
+.fas-v {
+  --fa: "\56";
+}
+
+.far-bangladeshi-taka-sign,
+.fas-bangladeshi-taka-sign {
+  --fa: "\e2e6";
+}
+
+.far-bicycle,
+.fas-bicycle {
+  --fa: "\f206";
+}
+
+.far-rod-asclepius,
+.fas-rod-asclepius,
+.far-rod-snake,
+.fas-rod-snake,
+.far-staff-aesculapius,
+.fas-staff-aesculapius,
+.far-staff-snake,
+.fas-staff-snake {
+  --fa: "\e579";
+}
+
+.far-head-side-cough-slash,
+.fas-head-side-cough-slash {
+  --fa: "\e062";
+}
+
+.far-ambulance,
+.fas-ambulance,
+.far-truck-medical,
+.fas-truck-medical {
+  --fa: "\f0f9";
+}
+
+.far-wheat-awn-circle-exclamation,
+.fas-wheat-awn-circle-exclamation {
+  --fa: "\e598";
+}
+
+.far-snowman,
+.fas-snowman {
+  --fa: "\f7d0";
+}
+
+.far-mortar-pestle,
+.fas-mortar-pestle {
+  --fa: "\f5a7";
+}
+
+.far-road-barrier,
+.fas-road-barrier {
+  --fa: "\e562";
+}
+
+.far-school,
+.fas-school {
+  --fa: "\f549";
+}
+
+.far-igloo,
+.fas-igloo {
+  --fa: "\f7ae";
+}
+
+.far-joint,
+.fas-joint {
+  --fa: "\f595";
+}
+
+.far-angle-right,
+.fas-angle-right {
+  --fa: "\f105";
+}
+
+.far-horse,
+.fas-horse {
+  --fa: "\f6f0";
+}
+
+.far-q,
+.fas-q {
+  --fa: "\51";
+}
+
+.far-g,
+.fas-g {
+  --fa: "\47";
+}
+
+.far-notes-medical,
+.fas-notes-medical {
+  --fa: "\f481";
+}
+
+.far-temperature-2,
+.fas-temperature-2,
+.far-temperature-half,
+.fas-temperature-half,
+.far-thermometer-2,
+.fas-thermometer-2,
+.far-thermometer-half,
+.fas-thermometer-half {
+  --fa: "\f2c9";
+}
+
+.far-dong-sign,
+.fas-dong-sign {
+  --fa: "\e169";
+}
+
+.far-capsules,
+.fas-capsules {
+  --fa: "\f46b";
+}
+
+.far-poo-bolt,
+.fas-poo-bolt,
+.far-poo-storm,
+.fas-poo-storm {
+  --fa: "\f75a";
+}
+
+.far-face-frown-open,
+.fas-face-frown-open,
+.far-frown-open,
+.fas-frown-open {
+  --fa: "\f57a";
+}
+
+.far-hand-point-up,
+.fas-hand-point-up {
+  --fa: "\f0a6";
+}
+
+.far-money-bill,
+.fas-money-bill {
+  --fa: "\f0d6";
+}
+
+.far-bookmark,
+.fas-bookmark {
+  --fa: "\f02e";
+}
+
+.far-align-justify,
+.fas-align-justify {
+  --fa: "\f039";
+}
+
+.far-umbrella-beach,
+.fas-umbrella-beach {
+  --fa: "\f5ca";
+}
+
+.far-helmet-un,
+.fas-helmet-un {
+  --fa: "\e503";
+}
+
+.far-bullseye,
+.fas-bullseye {
+  --fa: "\f140";
+}
+
+.far-bacon,
+.fas-bacon {
+  --fa: "\f7e5";
+}
+
+.far-hand-point-down,
+.fas-hand-point-down {
+  --fa: "\f0a7";
+}
+
+.far-arrow-up-from-bracket,
+.fas-arrow-up-from-bracket {
+  --fa: "\e09a";
+}
+
+.far-folder,
+.fas-folder,
+.far-folder-blank,
+.fas-folder-blank {
+  --fa: "\f07b";
+}
+
+.far-file-medical-alt,
+.fas-file-medical-alt,
+.far-file-waveform,
+.fas-file-waveform {
+  --fa: "\f478";
+}
+
+.far-radiation,
+.fas-radiation {
+  --fa: "\f7b9";
+}
+
+.far-chart-simple,
+.fas-chart-simple {
+  --fa: "\e473";
+}
+
+.far-mars-stroke,
+.fas-mars-stroke {
+  --fa: "\f229";
+}
+
+.far-vial,
+.fas-vial {
+  --fa: "\f492";
+}
+
+.far-dashboard,
+.fas-dashboard,
+.far-gauge,
+.fas-gauge,
+.far-gauge-med,
+.fas-gauge-med,
+.far-tachometer-alt-average,
+.fas-tachometer-alt-average {
+  --fa: "\f624";
+}
+
+.far-magic-wand-sparkles,
+.fas-magic-wand-sparkles,
+.far-wand-magic-sparkles,
+.fas-wand-magic-sparkles {
+  --fa: "\e2ca";
+}
+
+.far-e,
+.fas-e {
+  --fa: "\45";
+}
+
+.far-pen-alt,
+.fas-pen-alt,
+.far-pen-clip,
+.fas-pen-clip {
+  --fa: "\f305";
+}
+
+.far-bridge-circle-exclamation,
+.fas-bridge-circle-exclamation {
+  --fa: "\e4ca";
+}
+
+.far-user,
+.fas-user {
+  --fa: "\f007";
+}
+
+.far-school-circle-check,
+.fas-school-circle-check {
+  --fa: "\e56b";
+}
+
+.far-dumpster,
+.fas-dumpster {
+  --fa: "\f793";
+}
+
+.far-shuttle-van,
+.fas-shuttle-van,
+.far-van-shuttle,
+.fas-van-shuttle {
+  --fa: "\f5b6";
+}
+
+.far-building-user,
+.fas-building-user {
+  --fa: "\e4da";
+}
+
+.far-caret-square-left,
+.fas-caret-square-left,
+.far-square-caret-left,
+.fas-square-caret-left {
+  --fa: "\f191";
+}
+
+.far-highlighter,
+.fas-highlighter {
+  --fa: "\f591";
+}
+
+.far-key,
+.fas-key {
+  --fa: "\f084";
+}
+
+.far-bullhorn,
+.fas-bullhorn {
+  --fa: "\f0a1";
+}
+
+.far-globe,
+.fas-globe {
+  --fa: "\f0ac";
+}
+
+.far-synagogue,
+.fas-synagogue {
+  --fa: "\f69b";
+}
+
+.far-person-half-dress,
+.fas-person-half-dress {
+  --fa: "\e548";
+}
+
+.far-road-bridge,
+.fas-road-bridge {
+  --fa: "\e563";
+}
+
+.far-location-arrow,
+.fas-location-arrow {
+  --fa: "\f124";
+}
+
+.far-c,
+.fas-c {
+  --fa: "\43";
+}
+
+.far-tablet-button,
+.fas-tablet-button {
+  --fa: "\f10a";
+}
+
+.far-building-lock,
+.fas-building-lock {
+  --fa: "\e4d6";
+}
+
+.far-pizza-slice,
+.fas-pizza-slice {
+  --fa: "\f818";
+}
+
+.far-money-bill-wave,
+.fas-money-bill-wave {
+  --fa: "\f53a";
+}
+
+.far-area-chart,
+.fas-area-chart,
+.far-chart-area,
+.fas-chart-area {
+  --fa: "\f1fe";
+}
+
+.far-house-flag,
+.fas-house-flag {
+  --fa: "\e50d";
+}
+
+.far-person-circle-minus,
+.fas-person-circle-minus {
+  --fa: "\e540";
+}
+
+.far-ban,
+.fas-ban,
+.far-cancel,
+.fas-cancel {
+  --fa: "\f05e";
+}
+
+.far-camera-rotate,
+.fas-camera-rotate {
+  --fa: "\e0d8";
+}
+
+.far-air-freshener,
+.fas-air-freshener,
+.far-spray-can-sparkles,
+.fas-spray-can-sparkles {
+  --fa: "\f5d0";
+}
+
+.far-star,
+.fas-star {
+  --fa: "\f005";
+}
+
+.far-repeat,
+.fas-repeat {
+  --fa: "\f363";
+}
+
+.far-cross,
+.fas-cross {
+  --fa: "\f654";
+}
+
+.far-box,
+.fas-box {
+  --fa: "\f466";
+}
+
+.far-venus-mars,
+.fas-venus-mars {
+  --fa: "\f228";
+}
+
+.far-arrow-pointer,
+.fas-arrow-pointer,
+.far-mouse-pointer,
+.fas-mouse-pointer {
+  --fa: "\f245";
+}
+
+.far-expand-arrows-alt,
+.fas-expand-arrows-alt,
+.far-maximize,
+.fas-maximize {
+  --fa: "\f31e";
+}
+
+.far-charging-station,
+.fas-charging-station {
+  --fa: "\f5e7";
+}
+
+.far-shapes,
+.fas-shapes,
+.far-triangle-circle-square,
+.fas-triangle-circle-square {
+  --fa: "\f61f";
+}
+
+.far-random,
+.fas-random,
+.far-shuffle,
+.fas-shuffle {
+  --fa: "\f074";
+}
+
+.far-person-running,
+.fas-person-running,
+.far-running,
+.fas-running {
+  --fa: "\f70c";
+}
+
+.far-mobile-retro,
+.fas-mobile-retro {
+  --fa: "\e527";
+}
+
+.far-grip-lines-vertical,
+.fas-grip-lines-vertical {
+  --fa: "\f7a5";
+}
+
+.far-spider,
+.fas-spider {
+  --fa: "\f717";
+}
+
+.far-hands-bound,
+.fas-hands-bound {
+  --fa: "\e4f9";
+}
+
+.far-file-invoice-dollar,
+.fas-file-invoice-dollar {
+  --fa: "\f571";
+}
+
+.far-plane-circle-exclamation,
+.fas-plane-circle-exclamation {
+  --fa: "\e556";
+}
+
+.far-x-ray,
+.fas-x-ray {
+  --fa: "\f497";
+}
+
+.far-spell-check,
+.fas-spell-check {
+  --fa: "\f891";
+}
+
+.far-slash,
+.fas-slash {
+  --fa: "\f715";
+}
+
+.far-computer-mouse,
+.fas-computer-mouse,
+.far-mouse,
+.fas-mouse {
+  --fa: "\f8cc";
+}
+
+.far-arrow-right-to-bracket,
+.fas-arrow-right-to-bracket,
+.far-sign-in,
+.fas-sign-in {
+  --fa: "\f090";
+}
+
+.far-shop-slash,
+.fas-shop-slash,
+.far-store-alt-slash,
+.fas-store-alt-slash {
+  --fa: "\e070";
+}
+
+.far-server,
+.fas-server {
+  --fa: "\f233";
+}
+
+.far-virus-covid-slash,
+.fas-virus-covid-slash {
+  --fa: "\e4a9";
+}
+
+.far-shop-lock,
+.fas-shop-lock {
+  --fa: "\e4a5";
+}
+
+.far-hourglass-1,
+.fas-hourglass-1,
+.far-hourglass-start,
+.fas-hourglass-start {
+  --fa: "\f251";
+}
+
+.far-blender-phone,
+.fas-blender-phone {
+  --fa: "\f6b6";
+}
+
+.far-building-wheat,
+.fas-building-wheat {
+  --fa: "\e4db";
+}
+
+.far-person-breastfeeding,
+.fas-person-breastfeeding {
+  --fa: "\e53a";
+}
+
+.far-right-to-bracket,
+.fas-right-to-bracket,
+.far-sign-in-alt,
+.fas-sign-in-alt {
+  --fa: "\f2f6";
+}
+
+.far-venus,
+.fas-venus {
+  --fa: "\f221";
+}
+
+.far-passport,
+.fas-passport {
+  --fa: "\f5ab";
+}
+
+.far-thumb-tack-slash,
+.fas-thumb-tack-slash,
+.far-thumbtack-slash,
+.fas-thumbtack-slash {
+  --fa: "\e68f";
+}
+
+.far-heart-pulse,
+.fas-heart-pulse,
+.far-heartbeat,
+.fas-heartbeat {
+  --fa: "\f21e";
+}
+
+.far-people-carry,
+.fas-people-carry,
+.far-people-carry-box,
+.fas-people-carry-box {
+  --fa: "\f4ce";
+}
+
+.far-temperature-high,
+.fas-temperature-high {
+  --fa: "\f769";
+}
+
+.far-microchip,
+.fas-microchip {
+  --fa: "\f2db";
+}
+
+.far-crown,
+.fas-crown {
+  --fa: "\f521";
+}
+
+.far-weight-hanging,
+.fas-weight-hanging {
+  --fa: "\f5cd";
+}
+
+.far-xmarks-lines,
+.fas-xmarks-lines {
+  --fa: "\e59a";
+}
+
+.far-file-prescription,
+.fas-file-prescription {
+  --fa: "\f572";
+}
+
+.far-weight,
+.fas-weight,
+.far-weight-scale,
+.fas-weight-scale {
+  --fa: "\f496";
+}
+
+.far-user-friends,
+.fas-user-friends,
+.far-user-group,
+.fas-user-group {
+  --fa: "\f500";
+}
+
+.far-arrow-up-a-z,
+.fas-arrow-up-a-z,
+.far-sort-alpha-up,
+.fas-sort-alpha-up {
+  --fa: "\f15e";
+}
+
+.far-chess-knight,
+.fas-chess-knight {
+  --fa: "\f441";
+}
+
+.far-face-laugh-squint,
+.fas-face-laugh-squint,
+.far-laugh-squint,
+.fas-laugh-squint {
+  --fa: "\f59b";
+}
+
+.far-wheelchair,
+.fas-wheelchair {
+  --fa: "\f193";
+}
+
+.far-arrow-circle-up,
+.fas-arrow-circle-up,
+.far-circle-arrow-up,
+.fas-circle-arrow-up {
+  --fa: "\f0aa";
+}
+
+.far-toggle-on,
+.fas-toggle-on {
+  --fa: "\f205";
+}
+
+.far-person-walking,
+.fas-person-walking,
+.far-walking,
+.fas-walking {
+  --fa: "\f554";
+}
+
+.far-l,
+.fas-l {
+  --fa: "\4c";
+}
+
+.far-fire,
+.fas-fire {
+  --fa: "\f06d";
+}
+
+.far-bed-pulse,
+.fas-bed-pulse,
+.far-procedures,
+.fas-procedures {
+  --fa: "\f487";
+}
+
+.far-shuttle-space,
+.fas-shuttle-space,
+.far-space-shuttle,
+.fas-space-shuttle {
+  --fa: "\f197";
+}
+
+.far-face-laugh,
+.fas-face-laugh,
+.far-laugh,
+.fas-laugh {
+  --fa: "\f599";
+}
+
+.far-folder-open,
+.fas-folder-open {
+  --fa: "\f07c";
+}
+
+.far-heart-circle-plus,
+.fas-heart-circle-plus {
+  --fa: "\e500";
+}
+
+.far-code-fork,
+.fas-code-fork {
+  --fa: "\e13b";
+}
+
+.far-city,
+.fas-city {
+  --fa: "\f64f";
+}
+
+.far-microphone-alt,
+.fas-microphone-alt,
+.far-microphone-lines,
+.fas-microphone-lines {
+  --fa: "\f3c9";
+}
+
+.far-pepper-hot,
+.fas-pepper-hot {
+  --fa: "\f816";
+}
+
+.far-unlock,
+.fas-unlock {
+  --fa: "\f09c";
+}
+
+.far-colon-sign,
+.fas-colon-sign {
+  --fa: "\e140";
+}
+
+.far-headset,
+.fas-headset {
+  --fa: "\f590";
+}
+
+.far-store-slash,
+.fas-store-slash {
+  --fa: "\e071";
+}
+
+.far-road-circle-xmark,
+.fas-road-circle-xmark {
+  --fa: "\e566";
+}
+
+.far-user-minus,
+.fas-user-minus {
+  --fa: "\f503";
+}
+
+.far-mars-stroke-up,
+.fas-mars-stroke-up,
+.far-mars-stroke-v,
+.fas-mars-stroke-v {
+  --fa: "\f22a";
+}
+
+.far-champagne-glasses,
+.fas-champagne-glasses,
+.far-glass-cheers,
+.fas-glass-cheers {
+  --fa: "\f79f";
+}
+
+.far-clipboard,
+.fas-clipboard {
+  --fa: "\f328";
+}
+
+.far-house-circle-exclamation,
+.fas-house-circle-exclamation {
+  --fa: "\e50a";
+}
+
+.far-file-arrow-up,
+.fas-file-arrow-up,
+.far-file-upload,
+.fas-file-upload {
+  --fa: "\f574";
+}
+
+.far-wifi,
+.fas-wifi,
+.far-wifi-3,
+.fas-wifi-3,
+.far-wifi-strong,
+.fas-wifi-strong {
+  --fa: "\f1eb";
+}
+
+.far-bath,
+.fas-bath,
+.far-bathtub,
+.fas-bathtub {
+  --fa: "\f2cd";
+}
+
+.far-underline,
+.fas-underline {
+  --fa: "\f0cd";
+}
+
+.far-user-edit,
+.fas-user-edit,
+.far-user-pen,
+.fas-user-pen {
+  --fa: "\f4ff";
+}
+
+.far-signature,
+.fas-signature {
+  --fa: "\f5b7";
+}
+
+.far-stroopwafel,
+.fas-stroopwafel {
+  --fa: "\f551";
+}
+
+.far-bold,
+.fas-bold {
+  --fa: "\f032";
+}
+
+.far-anchor-lock,
+.fas-anchor-lock {
+  --fa: "\e4ad";
+}
+
+.far-building-ngo,
+.fas-building-ngo {
+  --fa: "\e4d7";
+}
+
+.far-manat-sign,
+.fas-manat-sign {
+  --fa: "\e1d5";
+}
+
+.far-not-equal,
+.fas-not-equal {
+  --fa: "\f53e";
+}
+
+.far-border-style,
+.fas-border-style,
+.far-border-top-left,
+.fas-border-top-left {
+  --fa: "\f853";
+}
+
+.far-map-location-dot,
+.fas-map-location-dot,
+.far-map-marked-alt,
+.fas-map-marked-alt {
+  --fa: "\f5a0";
+}
+
+.far-jedi,
+.fas-jedi {
+  --fa: "\f669";
+}
+
+.far-poll,
+.fas-poll,
+.far-square-poll-vertical,
+.fas-square-poll-vertical {
+  --fa: "\f681";
+}
+
+.far-mug-hot,
+.fas-mug-hot {
+  --fa: "\f7b6";
+}
+
+.far-battery-car,
+.fas-battery-car,
+.far-car-battery,
+.fas-car-battery {
+  --fa: "\f5df";
+}
+
+.far-gift,
+.fas-gift {
+  --fa: "\f06b";
+}
+
+.far-dice-two,
+.fas-dice-two {
+  --fa: "\f528";
+}
+
+.far-chess-queen,
+.fas-chess-queen {
+  --fa: "\f445";
+}
+
+.far-glasses,
+.fas-glasses {
+  --fa: "\f530";
+}
+
+.far-chess-board,
+.fas-chess-board {
+  --fa: "\f43c";
+}
+
+.far-building-circle-check,
+.fas-building-circle-check {
+  --fa: "\e4d2";
+}
+
+.far-person-chalkboard,
+.fas-person-chalkboard {
+  --fa: "\e53d";
+}
+
+.far-mars-stroke-h,
+.fas-mars-stroke-h,
+.far-mars-stroke-right,
+.fas-mars-stroke-right {
+  --fa: "\f22b";
+}
+
+.far-hand-back-fist,
+.fas-hand-back-fist,
+.far-hand-rock,
+.fas-hand-rock {
+  --fa: "\f255";
+}
+
+.far-caret-square-up,
+.fas-caret-square-up,
+.far-square-caret-up,
+.fas-square-caret-up {
+  --fa: "\f151";
+}
+
+.far-cloud-showers-water,
+.fas-cloud-showers-water {
+  --fa: "\e4e4";
+}
+
+.far-bar-chart,
+.fas-bar-chart,
+.far-chart-bar,
+.fas-chart-bar {
+  --fa: "\f080";
+}
+
+.far-hands-bubbles,
+.fas-hands-bubbles,
+.far-hands-wash,
+.fas-hands-wash {
+  --fa: "\e05e";
+}
+
+.far-less-than-equal,
+.fas-less-than-equal {
+  --fa: "\f537";
+}
+
+.far-train,
+.fas-train {
+  --fa: "\f238";
+}
+
+.far-eye-low-vision,
+.fas-eye-low-vision,
+.far-low-vision,
+.fas-low-vision {
+  --fa: "\f2a8";
+}
+
+.far-crow,
+.fas-crow {
+  --fa: "\f520";
+}
+
+.far-sailboat,
+.fas-sailboat {
+  --fa: "\e445";
+}
+
+.far-window-restore,
+.fas-window-restore {
+  --fa: "\f2d2";
+}
+
+.far-plus-square,
+.fas-plus-square,
+.far-square-plus,
+.fas-square-plus {
+  --fa: "\f0fe";
+}
+
+.far-torii-gate,
+.fas-torii-gate {
+  --fa: "\f6a1";
+}
+
+.far-frog,
+.fas-frog {
+  --fa: "\f52e";
+}
+
+.far-bucket,
+.fas-bucket {
+  --fa: "\e4cf";
+}
+
+.far-image,
+.fas-image {
+  --fa: "\f03e";
+}
+
+.far-microphone,
+.fas-microphone {
+  --fa: "\f130";
+}
+
+.far-cow,
+.fas-cow {
+  --fa: "\f6c8";
+}
+
+.far-caret-up,
+.fas-caret-up {
+  --fa: "\f0d8";
+}
+
+.far-screwdriver,
+.fas-screwdriver {
+  --fa: "\f54a";
+}
+
+.far-folder-closed,
+.fas-folder-closed {
+  --fa: "\e185";
+}
+
+.far-house-tsunami,
+.fas-house-tsunami {
+  --fa: "\e515";
+}
+
+.far-square-nfi,
+.fas-square-nfi {
+  --fa: "\e576";
+}
+
+.far-arrow-up-from-ground-water,
+.fas-arrow-up-from-ground-water {
+  --fa: "\e4b5";
+}
+
+.far-glass-martini-alt,
+.fas-glass-martini-alt,
+.far-martini-glass,
+.fas-martini-glass {
+  --fa: "\f57b";
+}
+
+.far-square-binary,
+.fas-square-binary {
+  --fa: "\e69b";
+}
+
+.far-rotate-back,
+.fas-rotate-back,
+.far-rotate-backward,
+.fas-rotate-backward,
+.far-rotate-left,
+.fas-rotate-left,
+.far-undo-alt,
+.fas-undo-alt {
+  --fa: "\f2ea";
+}
+
+.far-columns,
+.fas-columns,
+.far-table-columns,
+.fas-table-columns {
+  --fa: "\f0db";
+}
+
+.far-lemon,
+.fas-lemon {
+  --fa: "\f094";
+}
+
+.far-head-side-mask,
+.fas-head-side-mask {
+  --fa: "\e063";
+}
+
+.far-handshake,
+.fas-handshake {
+  --fa: "\f2b5";
+}
+
+.far-gem,
+.fas-gem {
+  --fa: "\f3a5";
+}
+
+.far-dolly,
+.fas-dolly,
+.far-dolly-box,
+.fas-dolly-box {
+  --fa: "\f472";
+}
+
+.far-smoking,
+.fas-smoking {
+  --fa: "\f48d";
+}
+
+.far-compress-arrows-alt,
+.fas-compress-arrows-alt,
+.far-minimize,
+.fas-minimize {
+  --fa: "\f78c";
+}
+
+.far-monument,
+.fas-monument {
+  --fa: "\f5a6";
+}
+
+.far-snowplow,
+.fas-snowplow {
+  --fa: "\f7d2";
+}
+
+.far-angle-double-right,
+.fas-angle-double-right,
+.far-angles-right,
+.fas-angles-right {
+  --fa: "\f101";
+}
+
+.far-cannabis,
+.fas-cannabis {
+  --fa: "\f55f";
+}
+
+.far-circle-play,
+.fas-circle-play,
+.far-play-circle,
+.fas-play-circle {
+  --fa: "\f144";
+}
+
+.far-tablets,
+.fas-tablets {
+  --fa: "\f490";
+}
+
+.far-ethernet,
+.fas-ethernet {
+  --fa: "\f796";
+}
+
+.far-eur,
+.fas-eur,
+.far-euro,
+.fas-euro,
+.far-euro-sign,
+.fas-euro-sign {
+  --fa: "\f153";
+}
+
+.far-chair,
+.fas-chair {
+  --fa: "\f6c0";
+}
+
+.far-check-circle,
+.fas-check-circle,
+.far-circle-check,
+.fas-circle-check {
+  --fa: "\f058";
+}
+
+.far-circle-stop,
+.fas-circle-stop,
+.far-stop-circle,
+.fas-stop-circle {
+  --fa: "\f28d";
+}
+
+.far-compass-drafting,
+.fas-compass-drafting,
+.far-drafting-compass,
+.fas-drafting-compass {
+  --fa: "\f568";
+}
+
+.far-plate-wheat,
+.fas-plate-wheat {
+  --fa: "\e55a";
+}
+
+.far-icicles,
+.fas-icicles {
+  --fa: "\f7ad";
+}
+
+.far-person-shelter,
+.fas-person-shelter {
+  --fa: "\e54f";
+}
+
+.far-neuter,
+.fas-neuter {
+  --fa: "\f22c";
+}
+
+.far-id-badge,
+.fas-id-badge {
+  --fa: "\f2c1";
+}
+
+.far-marker,
+.fas-marker {
+  --fa: "\f5a1";
+}
+
+.far-face-laugh-beam,
+.fas-face-laugh-beam,
+.far-laugh-beam,
+.fas-laugh-beam {
+  --fa: "\f59a";
+}
+
+.far-helicopter-symbol,
+.fas-helicopter-symbol {
+  --fa: "\e502";
+}
+
+.far-universal-access,
+.fas-universal-access {
+  --fa: "\f29a";
+}
+
+.far-chevron-circle-up,
+.fas-chevron-circle-up,
+.far-circle-chevron-up,
+.fas-circle-chevron-up {
+  --fa: "\f139";
+}
+
+.far-lari-sign,
+.fas-lari-sign {
+  --fa: "\e1c8";
+}
+
+.far-volcano,
+.fas-volcano {
+  --fa: "\f770";
+}
+
+.far-person-walking-dashed-line-arrow-right,
+.fas-person-walking-dashed-line-arrow-right {
+  --fa: "\e553";
+}
+
+.far-gbp,
+.fas-gbp,
+.far-pound-sign,
+.fas-pound-sign,
+.far-sterling-sign,
+.fas-sterling-sign {
+  --fa: "\f154";
+}
+
+.far-viruses,
+.fas-viruses {
+  --fa: "\e076";
+}
+
+.far-square-person-confined,
+.fas-square-person-confined {
+  --fa: "\e577";
+}
+
+.far-user-tie,
+.fas-user-tie {
+  --fa: "\f508";
+}
+
+.far-arrow-down-long,
+.fas-arrow-down-long,
+.far-long-arrow-down,
+.fas-long-arrow-down {
+  --fa: "\f175";
+}
+
+.far-tent-arrow-down-to-line,
+.fas-tent-arrow-down-to-line {
+  --fa: "\e57e";
+}
+
+.far-certificate,
+.fas-certificate {
+  --fa: "\f0a3";
+}
+
+.far-mail-reply-all,
+.fas-mail-reply-all,
+.far-reply-all,
+.fas-reply-all {
+  --fa: "\f122";
+}
+
+.far-suitcase,
+.fas-suitcase {
+  --fa: "\f0f2";
+}
+
+.far-person-skating,
+.fas-person-skating,
+.far-skating,
+.fas-skating {
+  --fa: "\f7c5";
+}
+
+.far-filter-circle-dollar,
+.fas-filter-circle-dollar,
+.far-funnel-dollar,
+.fas-funnel-dollar {
+  --fa: "\f662";
+}
+
+.far-camera-retro,
+.fas-camera-retro {
+  --fa: "\f083";
+}
+
+.far-arrow-circle-down,
+.fas-arrow-circle-down,
+.far-circle-arrow-down,
+.fas-circle-arrow-down {
+  --fa: "\f0ab";
+}
+
+.far-arrow-right-to-file,
+.fas-arrow-right-to-file,
+.far-file-import,
+.fas-file-import {
+  --fa: "\f56f";
+}
+
+.far-external-link-square,
+.fas-external-link-square,
+.far-square-arrow-up-right,
+.fas-square-arrow-up-right {
+  --fa: "\f14c";
+}
+
+.far-box-open,
+.fas-box-open {
+  --fa: "\f49e";
+}
+
+.far-scroll,
+.fas-scroll {
+  --fa: "\f70e";
+}
+
+.far-spa,
+.fas-spa {
+  --fa: "\f5bb";
+}
+
+.far-location-pin-lock,
+.fas-location-pin-lock {
+  --fa: "\e51f";
+}
+
+.far-pause,
+.fas-pause {
+  --fa: "\f04c";
+}
+
+.far-hill-avalanche,
+.fas-hill-avalanche {
+  --fa: "\e507";
+}
+
+.far-temperature-0,
+.fas-temperature-0,
+.far-temperature-empty,
+.fas-temperature-empty,
+.far-thermometer-0,
+.fas-thermometer-0,
+.far-thermometer-empty,
+.fas-thermometer-empty {
+  --fa: "\f2cb";
+}
+
+.far-bomb,
+.fas-bomb {
+  --fa: "\f1e2";
+}
+
+.far-registered,
+.fas-registered {
+  --fa: "\f25d";
+}
+
+.far-address-card,
+.fas-address-card,
+.far-contact-card,
+.fas-contact-card,
+.far-vcard,
+.fas-vcard {
+  --fa: "\f2bb";
+}
+
+.far-balance-scale-right,
+.fas-balance-scale-right,
+.far-scale-unbalanced-flip,
+.fas-scale-unbalanced-flip {
+  --fa: "\f516";
+}
+
+.far-subscript,
+.fas-subscript {
+  --fa: "\f12c";
+}
+
+.far-diamond-turn-right,
+.fas-diamond-turn-right,
+.far-directions,
+.fas-directions {
+  --fa: "\f5eb";
+}
+
+.far-burst,
+.fas-burst {
+  --fa: "\e4dc";
+}
+
+.far-house-laptop,
+.fas-house-laptop,
+.far-laptop-house,
+.fas-laptop-house {
+  --fa: "\e066";
+}
+
+.far-face-tired,
+.fas-face-tired,
+.far-tired,
+.fas-tired {
+  --fa: "\f5c8";
+}
+
+.far-money-bills,
+.fas-money-bills {
+  --fa: "\e1f3";
+}
+
+.far-smog,
+.fas-smog {
+  --fa: "\f75f";
+}
+
+.far-crutch,
+.fas-crutch {
+  --fa: "\f7f7";
+}
+
+.far-cloud-arrow-up,
+.fas-cloud-arrow-up,
+.far-cloud-upload,
+.fas-cloud-upload,
+.far-cloud-upload-alt,
+.fas-cloud-upload-alt {
+  --fa: "\f0ee";
+}
+
+.far-palette,
+.fas-palette {
+  --fa: "\f53f";
+}
+
+.far-arrows-turn-right,
+.fas-arrows-turn-right {
+  --fa: "\e4c0";
+}
+
+.far-vest,
+.fas-vest {
+  --fa: "\e085";
+}
+
+.far-ferry,
+.fas-ferry {
+  --fa: "\e4ea";
+}
+
+.far-arrows-down-to-people,
+.fas-arrows-down-to-people {
+  --fa: "\e4b9";
+}
+
+.far-seedling,
+.fas-seedling,
+.far-sprout,
+.fas-sprout {
+  --fa: "\f4d8";
+}
+
+.far-arrows-alt-h,
+.fas-arrows-alt-h,
+.far-left-right,
+.fas-left-right {
+  --fa: "\f337";
+}
+
+.far-boxes-packing,
+.fas-boxes-packing {
+  --fa: "\e4c7";
+}
+
+.far-arrow-circle-left,
+.fas-arrow-circle-left,
+.far-circle-arrow-left,
+.fas-circle-arrow-left {
+  --fa: "\f0a8";
+}
+
+.far-group-arrows-rotate,
+.fas-group-arrows-rotate {
+  --fa: "\e4f6";
+}
+
+.far-bowl-food,
+.fas-bowl-food {
+  --fa: "\e4c6";
+}
+
+.far-candy-cane,
+.fas-candy-cane {
+  --fa: "\f786";
+}
+
+.far-arrow-down-wide-short,
+.fas-arrow-down-wide-short,
+.far-sort-amount-asc,
+.fas-sort-amount-asc,
+.far-sort-amount-down,
+.fas-sort-amount-down {
+  --fa: "\f160";
+}
+
+.far-cloud-bolt,
+.fas-cloud-bolt,
+.far-thunderstorm,
+.fas-thunderstorm {
+  --fa: "\f76c";
+}
+
+.far-remove-format,
+.fas-remove-format,
+.far-text-slash,
+.fas-text-slash {
+  --fa: "\f87d";
+}
+
+.far-face-smile-wink,
+.fas-face-smile-wink,
+.far-smile-wink,
+.fas-smile-wink {
+  --fa: "\f4da";
+}
+
+.far-file-word,
+.fas-file-word {
+  --fa: "\f1c2";
+}
+
+.far-file-powerpoint,
+.fas-file-powerpoint {
+  --fa: "\f1c4";
+}
+
+.far-arrows-h,
+.fas-arrows-h,
+.far-arrows-left-right,
+.fas-arrows-left-right {
+  --fa: "\f07e";
+}
+
+.far-house-lock,
+.fas-house-lock {
+  --fa: "\e510";
+}
+
+.far-cloud-arrow-down,
+.fas-cloud-arrow-down,
+.far-cloud-download,
+.fas-cloud-download,
+.far-cloud-download-alt,
+.fas-cloud-download-alt {
+  --fa: "\f0ed";
+}
+
+.far-children,
+.fas-children {
+  --fa: "\e4e1";
+}
+
+.far-blackboard,
+.fas-blackboard,
+.far-chalkboard,
+.fas-chalkboard {
+  --fa: "\f51b";
+}
+
+.far-user-alt-slash,
+.fas-user-alt-slash,
+.far-user-large-slash,
+.fas-user-large-slash {
+  --fa: "\f4fa";
+}
+
+.far-envelope-open,
+.fas-envelope-open {
+  --fa: "\f2b6";
+}
+
+.far-handshake-alt-slash,
+.fas-handshake-alt-slash,
+.far-handshake-simple-slash,
+.fas-handshake-simple-slash {
+  --fa: "\e05f";
+}
+
+.far-mattress-pillow,
+.fas-mattress-pillow {
+  --fa: "\e525";
+}
+
+.far-guarani-sign,
+.fas-guarani-sign {
+  --fa: "\e19a";
+}
+
+.far-arrows-rotate,
+.fas-arrows-rotate,
+.far-refresh,
+.fas-refresh,
+.far-sync,
+.fas-sync {
+  --fa: "\f021";
+}
+
+.far-fire-extinguisher,
+.fas-fire-extinguisher {
+  --fa: "\f134";
+}
+
+.far-cruzeiro-sign,
+.fas-cruzeiro-sign {
+  --fa: "\e152";
+}
+
+.far-greater-than-equal,
+.fas-greater-than-equal {
+  --fa: "\f532";
+}
+
+.far-shield-alt,
+.fas-shield-alt,
+.far-shield-halved,
+.fas-shield-halved {
+  --fa: "\f3ed";
+}
+
+.far-atlas,
+.fas-atlas,
+.far-book-atlas,
+.fas-book-atlas {
+  --fa: "\f558";
+}
+
+.far-virus,
+.fas-virus {
+  --fa: "\e074";
+}
+
+.far-envelope-circle-check,
+.fas-envelope-circle-check {
+  --fa: "\e4e8";
+}
+
+.far-layer-group,
+.fas-layer-group {
+  --fa: "\f5fd";
+}
+
+.far-arrows-to-dot,
+.fas-arrows-to-dot {
+  --fa: "\e4be";
+}
+
+.far-archway,
+.fas-archway {
+  --fa: "\f557";
+}
+
+.far-heart-circle-check,
+.fas-heart-circle-check {
+  --fa: "\e4fd";
+}
+
+.far-house-chimney-crack,
+.fas-house-chimney-crack,
+.far-house-damage,
+.fas-house-damage {
+  --fa: "\f6f1";
+}
+
+.far-file-archive,
+.fas-file-archive,
+.far-file-zipper,
+.fas-file-zipper {
+  --fa: "\f1c6";
+}
+
+.far-square,
+.fas-square {
+  --fa: "\f0c8";
+}
+
+.far-glass-martini,
+.fas-glass-martini,
+.far-martini-glass-empty,
+.fas-martini-glass-empty {
+  --fa: "\f000";
+}
+
+.far-couch,
+.fas-couch {
+  --fa: "\f4b8";
+}
+
+.far-cedi-sign,
+.fas-cedi-sign {
+  --fa: "\e0df";
+}
+
+.far-italic,
+.fas-italic {
+  --fa: "\f033";
+}
+
+.far-table-cells-column-lock,
+.fas-table-cells-column-lock {
+  --fa: "\e678";
+}
+
+.far-church,
+.fas-church {
+  --fa: "\f51d";
+}
+
+.far-comments-dollar,
+.fas-comments-dollar {
+  --fa: "\f653";
+}
+
+.far-democrat,
+.fas-democrat {
+  --fa: "\f747";
+}
+
+.far-z,
+.fas-z {
+  --fa: "\5a";
+}
+
+.far-person-skiing,
+.fas-person-skiing,
+.far-skiing,
+.fas-skiing {
+  --fa: "\f7c9";
+}
+
+.far-road-lock,
+.fas-road-lock {
+  --fa: "\e567";
+}
+
+.far-a,
+.fas-a {
+  --fa: "\41";
+}
+
+.far-temperature-arrow-down,
+.fas-temperature-arrow-down,
+.far-temperature-down,
+.fas-temperature-down {
+  --fa: "\e03f";
+}
+
+.far-feather-alt,
+.fas-feather-alt,
+.far-feather-pointed,
+.fas-feather-pointed {
+  --fa: "\f56b";
+}
+
+.far-p,
+.fas-p {
+  --fa: "\50";
+}
+
+.far-snowflake,
+.fas-snowflake {
+  --fa: "\f2dc";
+}
+
+.far-newspaper,
+.fas-newspaper {
+  --fa: "\f1ea";
+}
+
+.far-ad,
+.fas-ad,
+.far-rectangle-ad,
+.fas-rectangle-ad {
+  --fa: "\f641";
+}
+
+.far-arrow-circle-right,
+.fas-arrow-circle-right,
+.far-circle-arrow-right,
+.fas-circle-arrow-right {
+  --fa: "\f0a9";
+}
+
+.far-filter-circle-xmark,
+.fas-filter-circle-xmark {
+  --fa: "\e17b";
+}
+
+.far-locust,
+.fas-locust {
+  --fa: "\e520";
+}
+
+.far-sort,
+.fas-sort,
+.far-unsorted,
+.fas-unsorted {
+  --fa: "\f0dc";
+}
+
+.far-list-1-2,
+.fas-list-1-2,
+.far-list-numeric,
+.fas-list-numeric,
+.far-list-ol,
+.fas-list-ol {
+  --fa: "\f0cb";
+}
+
+.far-person-dress-burst,
+.fas-person-dress-burst {
+  --fa: "\e544";
+}
+
+.far-money-check-alt,
+.fas-money-check-alt,
+.far-money-check-dollar,
+.fas-money-check-dollar {
+  --fa: "\f53d";
+}
+
+.far-vector-square,
+.fas-vector-square {
+  --fa: "\f5cb";
+}
+
+.far-bread-slice,
+.fas-bread-slice {
+  --fa: "\f7ec";
+}
+
+.far-language,
+.fas-language {
+  --fa: "\f1ab";
+}
+
+.far-face-kiss-wink-heart,
+.fas-face-kiss-wink-heart,
+.far-kiss-wink-heart,
+.fas-kiss-wink-heart {
+  --fa: "\f598";
+}
+
+.far-filter,
+.fas-filter {
+  --fa: "\f0b0";
+}
+
+.far-question,
+.fas-question {
+  --fa: "\3f";
+}
+
+.far-file-signature,
+.fas-file-signature {
+  --fa: "\f573";
+}
+
+.far-arrows-alt,
+.fas-arrows-alt,
+.far-up-down-left-right,
+.fas-up-down-left-right {
+  --fa: "\f0b2";
+}
+
+.far-house-chimney-user,
+.fas-house-chimney-user {
+  --fa: "\e065";
+}
+
+.far-hand-holding-heart,
+.fas-hand-holding-heart {
+  --fa: "\f4be";
+}
+
+.far-puzzle-piece,
+.fas-puzzle-piece {
+  --fa: "\f12e";
+}
+
+.far-money-check,
+.fas-money-check {
+  --fa: "\f53c";
+}
+
+.far-star-half-alt,
+.fas-star-half-alt,
+.far-star-half-stroke,
+.fas-star-half-stroke {
+  --fa: "\f5c0";
+}
+
+.far-code,
+.fas-code {
+  --fa: "\f121";
+}
+
+.far-glass-whiskey,
+.fas-glass-whiskey,
+.far-whiskey-glass,
+.fas-whiskey-glass {
+  --fa: "\f7a0";
+}
+
+.far-building-circle-exclamation,
+.fas-building-circle-exclamation {
+  --fa: "\e4d3";
+}
+
+.far-magnifying-glass-chart,
+.fas-magnifying-glass-chart {
+  --fa: "\e522";
+}
+
+.far-arrow-up-right-from-square,
+.fas-arrow-up-right-from-square,
+.far-external-link,
+.fas-external-link {
+  --fa: "\f08e";
+}
+
+.far-cubes-stacked,
+.fas-cubes-stacked {
+  --fa: "\e4e6";
+}
+
+.far-krw,
+.fas-krw,
+.far-won,
+.fas-won,
+.far-won-sign,
+.fas-won-sign {
+  --fa: "\f159";
+}
+
+.far-virus-covid,
+.fas-virus-covid {
+  --fa: "\e4a8";
+}
+
+.far-austral-sign,
+.fas-austral-sign {
+  --fa: "\e0a9";
+}
+
+.far-f,
+.fas-f {
+  --fa: "\46";
+}
+
+.far-leaf,
+.fas-leaf {
+  --fa: "\f06c";
+}
+
+.far-road,
+.fas-road {
+  --fa: "\f018";
+}
+
+.far-cab,
+.fas-cab,
+.far-taxi,
+.fas-taxi {
+  --fa: "\f1ba";
+}
+
+.far-person-circle-plus,
+.fas-person-circle-plus {
+  --fa: "\e541";
+}
+
+.far-chart-pie,
+.fas-chart-pie,
+.far-pie-chart,
+.fas-pie-chart {
+  --fa: "\f200";
+}
+
+.far-bolt-lightning,
+.fas-bolt-lightning {
+  --fa: "\e0b7";
+}
+
+.far-sack-xmark,
+.fas-sack-xmark {
+  --fa: "\e56a";
+}
+
+.far-file-excel,
+.fas-file-excel {
+  --fa: "\f1c3";
+}
+
+.far-file-contract,
+.fas-file-contract {
+  --fa: "\f56c";
+}
+
+.far-fish-fins,
+.fas-fish-fins {
+  --fa: "\e4f2";
+}
+
+.far-building-flag,
+.fas-building-flag {
+  --fa: "\e4d5";
+}
+
+.far-face-grin-beam,
+.fas-face-grin-beam,
+.far-grin-beam,
+.fas-grin-beam {
+  --fa: "\f582";
+}
+
+.far-object-ungroup,
+.fas-object-ungroup {
+  --fa: "\f248";
+}
+
+.far-poop,
+.fas-poop {
+  --fa: "\f619";
+}
+
+.far-location-pin,
+.fas-location-pin,
+.far-map-marker,
+.fas-map-marker {
+  --fa: "\f041";
+}
+
+.far-kaaba,
+.fas-kaaba {
+  --fa: "\f66b";
+}
+
+.far-toilet-paper,
+.fas-toilet-paper {
+  --fa: "\f71e";
+}
+
+.far-hard-hat,
+.fas-hard-hat,
+.far-hat-hard,
+.fas-hat-hard,
+.far-helmet-safety,
+.fas-helmet-safety {
+  --fa: "\f807";
+}
+
+.far-eject,
+.fas-eject {
+  --fa: "\f052";
+}
+
+.far-arrow-alt-circle-right,
+.fas-arrow-alt-circle-right,
+.far-circle-right,
+.fas-circle-right {
+  --fa: "\f35a";
+}
+
+.far-plane-circle-check,
+.fas-plane-circle-check {
+  --fa: "\e555";
+}
+
+.far-face-rolling-eyes,
+.fas-face-rolling-eyes,
+.far-meh-rolling-eyes,
+.fas-meh-rolling-eyes {
+  --fa: "\f5a5";
+}
+
+.far-object-group,
+.fas-object-group {
+  --fa: "\f247";
+}
+
+.far-chart-line,
+.fas-chart-line,
+.far-line-chart,
+.fas-line-chart {
+  --fa: "\f201";
+}
+
+.far-mask-ventilator,
+.fas-mask-ventilator {
+  --fa: "\e524";
+}
+
+.far-arrow-right,
+.fas-arrow-right {
+  --fa: "\f061";
+}
+
+.far-map-signs,
+.fas-map-signs,
+.far-signs-post,
+.fas-signs-post {
+  --fa: "\f277";
+}
+
+.far-cash-register,
+.fas-cash-register {
+  --fa: "\f788";
+}
+
+.far-person-circle-question,
+.fas-person-circle-question {
+  --fa: "\e542";
+}
+
+.far-h,
+.fas-h {
+  --fa: "\48";
+}
+
+.far-tarp,
+.fas-tarp {
+  --fa: "\e57b";
+}
+
+.far-screwdriver-wrench,
+.fas-screwdriver-wrench,
+.far-tools,
+.fas-tools {
+  --fa: "\f7d9";
+}
+
+.far-arrows-to-eye,
+.fas-arrows-to-eye {
+  --fa: "\e4bf";
+}
+
+.far-plug-circle-bolt,
+.fas-plug-circle-bolt {
+  --fa: "\e55b";
+}
+
+.far-heart,
+.fas-heart {
+  --fa: "\f004";
+}
+
+.far-mars-and-venus,
+.fas-mars-and-venus {
+  --fa: "\f224";
+}
+
+.far-home-user,
+.fas-home-user,
+.far-house-user,
+.fas-house-user {
+  --fa: "\e1b0";
+}
+
+.far-dumpster-fire,
+.fas-dumpster-fire {
+  --fa: "\f794";
+}
+
+.far-house-crack,
+.fas-house-crack {
+  --fa: "\e3b1";
+}
+
+.far-cocktail,
+.fas-cocktail,
+.far-martini-glass-citrus,
+.fas-martini-glass-citrus {
+  --fa: "\f561";
+}
+
+.far-face-surprise,
+.fas-face-surprise,
+.far-surprise,
+.fas-surprise {
+  --fa: "\f5c2";
+}
+
+.far-bottle-water,
+.fas-bottle-water {
+  --fa: "\e4c5";
+}
+
+.far-circle-pause,
+.fas-circle-pause,
+.far-pause-circle,
+.fas-pause-circle {
+  --fa: "\f28b";
+}
+
+.far-toilet-paper-slash,
+.fas-toilet-paper-slash {
+  --fa: "\e072";
+}
+
+.far-apple-alt,
+.fas-apple-alt,
+.far-apple-whole,
+.fas-apple-whole {
+  --fa: "\f5d1";
+}
+
+.far-kitchen-set,
+.fas-kitchen-set {
+  --fa: "\e51a";
+}
+
+.far-r,
+.fas-r {
+  --fa: "\52";
+}
+
+.far-temperature-1,
+.fas-temperature-1,
+.far-temperature-quarter,
+.fas-temperature-quarter,
+.far-thermometer-1,
+.fas-thermometer-1,
+.far-thermometer-quarter,
+.fas-thermometer-quarter {
+  --fa: "\f2ca";
+}
+
+.far-cube,
+.fas-cube {
+  --fa: "\f1b2";
+}
+
+.far-bitcoin-sign,
+.fas-bitcoin-sign {
+  --fa: "\e0b4";
+}
+
+.far-shield-dog,
+.fas-shield-dog {
+  --fa: "\e573";
+}
+
+.far-solar-panel,
+.fas-solar-panel {
+  --fa: "\f5ba";
+}
+
+.far-lock-open,
+.fas-lock-open {
+  --fa: "\f3c1";
+}
+
+.far-elevator,
+.fas-elevator {
+  --fa: "\e16d";
+}
+
+.far-money-bill-transfer,
+.fas-money-bill-transfer {
+  --fa: "\e528";
+}
+
+.far-money-bill-trend-up,
+.fas-money-bill-trend-up {
+  --fa: "\e529";
+}
+
+.far-house-flood-water-circle-arrow-right,
+.fas-house-flood-water-circle-arrow-right {
+  --fa: "\e50f";
+}
+
+.far-poll-h,
+.fas-poll-h,
+.far-square-poll-horizontal,
+.fas-square-poll-horizontal {
+  --fa: "\f682";
+}
+
+.far-circle,
+.fas-circle {
+  --fa: "\f111";
+}
+
+.far-backward-fast,
+.fas-backward-fast,
+.far-fast-backward,
+.fas-fast-backward {
+  --fa: "\f049";
+}
+
+.far-recycle,
+.fas-recycle {
+  --fa: "\f1b8";
+}
+
+.far-user-astronaut,
+.fas-user-astronaut {
+  --fa: "\f4fb";
+}
+
+.far-plane-slash,
+.fas-plane-slash {
+  --fa: "\e069";
+}
+
+.far-trademark,
+.fas-trademark {
+  --fa: "\f25c";
+}
+
+.far-basketball,
+.fas-basketball,
+.far-basketball-ball,
+.fas-basketball-ball {
+  --fa: "\f434";
+}
+
+.far-satellite-dish,
+.fas-satellite-dish {
+  --fa: "\f7c0";
+}
+
+.far-arrow-alt-circle-up,
+.fas-arrow-alt-circle-up,
+.far-circle-up,
+.fas-circle-up {
+  --fa: "\f35b";
+}
+
+.far-mobile-alt,
+.fas-mobile-alt,
+.far-mobile-screen-button,
+.fas-mobile-screen-button {
+  --fa: "\f3cd";
+}
+
+.far-volume-high,
+.fas-volume-high,
+.far-volume-up,
+.fas-volume-up {
+  --fa: "\f028";
+}
+
+.far-users-rays,
+.fas-users-rays {
+  --fa: "\e593";
+}
+
+.far-wallet,
+.fas-wallet {
+  --fa: "\f555";
+}
+
+.far-clipboard-check,
+.fas-clipboard-check {
+  --fa: "\f46c";
+}
+
+.far-file-audio,
+.fas-file-audio {
+  --fa: "\f1c7";
+}
+
+.far-burger,
+.fas-burger,
+.far-hamburger,
+.fas-hamburger {
+  --fa: "\f805";
+}
+
+.far-wrench,
+.fas-wrench {
+  --fa: "\f0ad";
+}
+
+.far-bugs,
+.fas-bugs {
+  --fa: "\e4d0";
+}
+
+.far-rupee,
+.fas-rupee,
+.far-rupee-sign,
+.fas-rupee-sign {
+  --fa: "\f156";
+}
+
+.far-file-image,
+.fas-file-image {
+  --fa: "\f1c5";
+}
+
+.far-circle-question,
+.fas-circle-question,
+.far-question-circle,
+.fas-question-circle {
+  --fa: "\f059";
+}
+
+.far-plane-departure,
+.fas-plane-departure {
+  --fa: "\f5b0";
+}
+
+.far-handshake-slash,
+.fas-handshake-slash {
+  --fa: "\e060";
+}
+
+.far-book-bookmark,
+.fas-book-bookmark {
+  --fa: "\e0bb";
+}
+
+.far-code-branch,
+.fas-code-branch {
+  --fa: "\f126";
+}
+
+.far-hat-cowboy,
+.fas-hat-cowboy {
+  --fa: "\f8c0";
+}
+
+.far-bridge,
+.fas-bridge {
+  --fa: "\e4c8";
+}
+
+.far-phone-alt,
+.fas-phone-alt,
+.far-phone-flip,
+.fas-phone-flip {
+  --fa: "\f879";
+}
+
+.far-truck-front,
+.fas-truck-front {
+  --fa: "\e2b7";
+}
+
+.far-cat,
+.fas-cat {
+  --fa: "\f6be";
+}
+
+.far-anchor-circle-exclamation,
+.fas-anchor-circle-exclamation {
+  --fa: "\e4ab";
+}
+
+.far-truck-field,
+.fas-truck-field {
+  --fa: "\e58d";
+}
+
+.far-route,
+.fas-route {
+  --fa: "\f4d7";
+}
+
+.far-clipboard-question,
+.fas-clipboard-question {
+  --fa: "\e4e3";
+}
+
+.far-panorama,
+.fas-panorama {
+  --fa: "\e209";
+}
+
+.far-comment-medical,
+.fas-comment-medical {
+  --fa: "\f7f5";
+}
+
+.far-teeth-open,
+.fas-teeth-open {
+  --fa: "\f62f";
+}
+
+.far-file-circle-minus,
+.fas-file-circle-minus {
+  --fa: "\e4ed";
+}
+
+.far-tags,
+.fas-tags {
+  --fa: "\f02c";
+}
+
+.far-wine-glass,
+.fas-wine-glass {
+  --fa: "\f4e3";
+}
+
+.far-fast-forward,
+.fas-fast-forward,
+.far-forward-fast,
+.fas-forward-fast {
+  --fa: "\f050";
+}
+
+.far-face-meh-blank,
+.fas-face-meh-blank,
+.far-meh-blank,
+.fas-meh-blank {
+  --fa: "\f5a4";
+}
+
+.far-parking,
+.fas-parking,
+.far-square-parking,
+.fas-square-parking {
+  --fa: "\f540";
+}
+
+.far-house-signal,
+.fas-house-signal {
+  --fa: "\e012";
+}
+
+.far-bars-progress,
+.fas-bars-progress,
+.far-tasks-alt,
+.fas-tasks-alt {
+  --fa: "\f828";
+}
+
+.far-faucet-drip,
+.fas-faucet-drip {
+  --fa: "\e006";
+}
+
+.far-cart-flatbed,
+.fas-cart-flatbed,
+.far-dolly-flatbed,
+.fas-dolly-flatbed {
+  --fa: "\f474";
+}
+
+.far-ban-smoking,
+.fas-ban-smoking,
+.far-smoking-ban,
+.fas-smoking-ban {
+  --fa: "\f54d";
+}
+
+.far-terminal,
+.fas-terminal {
+  --fa: "\f120";
+}
+
+.far-mobile-button,
+.fas-mobile-button {
+  --fa: "\f10b";
+}
+
+.far-house-medical-flag,
+.fas-house-medical-flag {
+  --fa: "\e514";
+}
+
+.far-basket-shopping,
+.fas-basket-shopping,
+.far-shopping-basket,
+.fas-shopping-basket {
+  --fa: "\f291";
+}
+
+.far-tape,
+.fas-tape {
+  --fa: "\f4db";
+}
+
+.far-bus-alt,
+.fas-bus-alt,
+.far-bus-simple,
+.fas-bus-simple {
+  --fa: "\f55e";
+}
+
+.far-eye,
+.fas-eye {
+  --fa: "\f06e";
+}
+
+.far-face-sad-cry,
+.fas-face-sad-cry,
+.far-sad-cry,
+.fas-sad-cry {
+  --fa: "\f5b3";
+}
+
+.far-audio-description,
+.fas-audio-description {
+  --fa: "\f29e";
+}
+
+.far-person-military-to-person,
+.fas-person-military-to-person {
+  --fa: "\e54c";
+}
+
+.far-file-shield,
+.fas-file-shield {
+  --fa: "\e4f0";
+}
+
+.far-user-slash,
+.fas-user-slash {
+  --fa: "\f506";
+}
+
+.far-pen,
+.fas-pen {
+  --fa: "\f304";
+}
+
+.far-tower-observation,
+.fas-tower-observation {
+  --fa: "\e586";
+}
+
+.far-file-code,
+.fas-file-code {
+  --fa: "\f1c9";
+}
+
+.far-signal,
+.fas-signal,
+.far-signal-5,
+.fas-signal-5,
+.far-signal-perfect,
+.fas-signal-perfect {
+  --fa: "\f012";
+}
+
+.far-bus,
+.fas-bus {
+  --fa: "\f207";
+}
+
+.far-heart-circle-xmark,
+.fas-heart-circle-xmark {
+  --fa: "\e501";
+}
+
+.far-home-lg,
+.fas-home-lg,
+.far-house-chimney,
+.fas-house-chimney {
+  --fa: "\e3af";
+}
+
+.far-window-maximize,
+.fas-window-maximize {
+  --fa: "\f2d0";
+}
+
+.far-face-frown,
+.fas-face-frown,
+.far-frown,
+.fas-frown {
+  --fa: "\f119";
+}
+
+.far-prescription,
+.fas-prescription {
+  --fa: "\f5b1";
+}
+
+.far-shop,
+.fas-shop,
+.far-store-alt,
+.fas-store-alt {
+  --fa: "\f54f";
+}
+
+.far-floppy-disk,
+.fas-floppy-disk,
+.far-save,
+.fas-save {
+  --fa: "\f0c7";
+}
+
+.far-vihara,
+.fas-vihara {
+  --fa: "\f6a7";
+}
+
+.far-balance-scale-left,
+.fas-balance-scale-left,
+.far-scale-unbalanced,
+.fas-scale-unbalanced {
+  --fa: "\f515";
+}
+
+.far-sort-asc,
+.fas-sort-asc,
+.far-sort-up,
+.fas-sort-up {
+  --fa: "\f0de";
+}
+
+.far-comment-dots,
+.fas-comment-dots,
+.far-commenting,
+.fas-commenting {
+  --fa: "\f4ad";
+}
+
+.far-plant-wilt,
+.fas-plant-wilt {
+  --fa: "\e5aa";
+}
+
+.far-diamond,
+.fas-diamond {
+  --fa: "\f219";
+}
+
+.far-face-grin-squint,
+.fas-face-grin-squint,
+.far-grin-squint,
+.fas-grin-squint {
+  --fa: "\f585";
+}
+
+.far-hand-holding-dollar,
+.fas-hand-holding-dollar,
+.far-hand-holding-usd,
+.fas-hand-holding-usd {
+  --fa: "\f4c0";
+}
+
+.far-chart-diagram,
+.fas-chart-diagram {
+  --fa: "\e695";
+}
+
+.far-bacterium,
+.fas-bacterium {
+  --fa: "\e05a";
+}
+
+.far-hand-pointer,
+.fas-hand-pointer {
+  --fa: "\f25a";
+}
+
+.far-drum-steelpan,
+.fas-drum-steelpan {
+  --fa: "\f56a";
+}
+
+.far-hand-scissors,
+.fas-hand-scissors {
+  --fa: "\f257";
+}
+
+.far-hands-praying,
+.fas-hands-praying,
+.far-praying-hands,
+.fas-praying-hands {
+  --fa: "\f684";
+}
+
+.far-arrow-right-rotate,
+.fas-arrow-right-rotate,
+.far-arrow-rotate-forward,
+.fas-arrow-rotate-forward,
+.far-arrow-rotate-right,
+.fas-arrow-rotate-right,
+.far-redo,
+.fas-redo {
+  --fa: "\f01e";
+}
+
+.far-biohazard,
+.fas-biohazard {
+  --fa: "\f780";
+}
+
+.far-location,
+.fas-location,
+.far-location-crosshairs,
+.fas-location-crosshairs {
+  --fa: "\f601";
+}
+
+.far-mars-double,
+.fas-mars-double {
+  --fa: "\f227";
+}
+
+.far-child-dress,
+.fas-child-dress {
+  --fa: "\e59c";
+}
+
+.far-users-between-lines,
+.fas-users-between-lines {
+  --fa: "\e591";
+}
+
+.far-lungs-virus,
+.fas-lungs-virus {
+  --fa: "\e067";
+}
+
+.far-face-grin-tears,
+.fas-face-grin-tears,
+.far-grin-tears,
+.fas-grin-tears {
+  --fa: "\f588";
+}
+
+.far-phone,
+.fas-phone {
+  --fa: "\f095";
+}
+
+.far-calendar-times,
+.fas-calendar-times,
+.far-calendar-xmark,
+.fas-calendar-xmark {
+  --fa: "\f273";
+}
+
+.far-child-reaching,
+.fas-child-reaching {
+  --fa: "\e59d";
+}
+
+.far-head-side-virus,
+.fas-head-side-virus {
+  --fa: "\e064";
+}
+
+.far-user-cog,
+.fas-user-cog,
+.far-user-gear,
+.fas-user-gear {
+  --fa: "\f4fe";
+}
+
+.far-arrow-up-1-9,
+.fas-arrow-up-1-9,
+.far-sort-numeric-up,
+.fas-sort-numeric-up {
+  --fa: "\f163";
+}
+
+.far-door-closed,
+.fas-door-closed {
+  --fa: "\f52a";
+}
+
+.far-shield-virus,
+.fas-shield-virus {
+  --fa: "\e06c";
+}
+
+.far-dice-six,
+.fas-dice-six {
+  --fa: "\f526";
+}
+
+.far-mosquito-net,
+.fas-mosquito-net {
+  --fa: "\e52c";
+}
+
+.far-file-fragment,
+.fas-file-fragment {
+  --fa: "\e697";
+}
+
+.far-bridge-water,
+.fas-bridge-water {
+  --fa: "\e4ce";
+}
+
+.far-person-booth,
+.fas-person-booth {
+  --fa: "\f756";
+}
+
+.far-text-width,
+.fas-text-width {
+  --fa: "\f035";
+}
+
+.far-hat-wizard,
+.fas-hat-wizard {
+  --fa: "\f6e8";
+}
+
+.far-pen-fancy,
+.fas-pen-fancy {
+  --fa: "\f5ac";
+}
+
+.far-digging,
+.fas-digging,
+.far-person-digging,
+.fas-person-digging {
+  --fa: "\f85e";
+}
+
+.far-trash,
+.fas-trash {
+  --fa: "\f1f8";
+}
+
+.far-gauge-simple,
+.fas-gauge-simple,
+.far-gauge-simple-med,
+.fas-gauge-simple-med,
+.far-tachometer-average,
+.fas-tachometer-average {
+  --fa: "\f629";
+}
+
+.far-book-medical,
+.fas-book-medical {
+  --fa: "\f7e6";
+}
+
+.far-poo,
+.fas-poo {
+  --fa: "\f2fe";
+}
+
+.far-quote-right,
+.fas-quote-right,
+.far-quote-right-alt,
+.fas-quote-right-alt {
+  --fa: "\f10e";
+}
+
+.far-shirt,
+.fas-shirt,
+.far-t-shirt,
+.fas-t-shirt,
+.far-tshirt,
+.fas-tshirt {
+  --fa: "\f553";
+}
+
+.far-cubes,
+.fas-cubes {
+  --fa: "\f1b3";
+}
+
+.far-divide,
+.fas-divide {
+  --fa: "\f529";
+}
+
+.far-tenge,
+.fas-tenge,
+.far-tenge-sign,
+.fas-tenge-sign {
+  --fa: "\f7d7";
+}
+
+.far-headphones,
+.fas-headphones {
+  --fa: "\f025";
+}
+
+.far-hands-holding,
+.fas-hands-holding {
+  --fa: "\f4c2";
+}
+
+.far-hands-clapping,
+.fas-hands-clapping {
+  --fa: "\e1a8";
+}
+
+.far-republican,
+.fas-republican {
+  --fa: "\f75e";
+}
+
+.far-arrow-left,
+.fas-arrow-left {
+  --fa: "\f060";
+}
+
+.far-person-circle-xmark,
+.fas-person-circle-xmark {
+  --fa: "\e543";
+}
+
+.far-ruler,
+.fas-ruler {
+  --fa: "\f545";
+}
+
+.far-align-left,
+.fas-align-left {
+  --fa: "\f036";
+}
+
+.far-dice-d6,
+.fas-dice-d6 {
+  --fa: "\f6d1";
+}
+
+.far-restroom,
+.fas-restroom {
+  --fa: "\f7bd";
+}
+
+.far-j,
+.fas-j {
+  --fa: "\4a";
+}
+
+.far-users-viewfinder,
+.fas-users-viewfinder {
+  --fa: "\e595";
+}
+
+.far-file-video,
+.fas-file-video {
+  --fa: "\f1c8";
+}
+
+.far-external-link-alt,
+.fas-external-link-alt,
+.far-up-right-from-square,
+.fas-up-right-from-square {
+  --fa: "\f35d";
+}
+
+.far-table-cells,
+.fas-table-cells,
+.far-th,
+.fas-th {
+  --fa: "\f00a";
+}
+
+.far-file-pdf,
+.fas-file-pdf {
+  --fa: "\f1c1";
+}
+
+.far-bible,
+.fas-bible,
+.far-book-bible,
+.fas-book-bible {
+  --fa: "\f647";
+}
+
+.far-o,
+.fas-o {
+  --fa: "\4f";
+}
+
+.far-medkit,
+.fas-medkit,
+.far-suitcase-medical,
+.fas-suitcase-medical {
+  --fa: "\f0fa";
+}
+
+.far-user-secret,
+.fas-user-secret {
+  --fa: "\f21b";
+}
+
+.far-otter,
+.fas-otter {
+  --fa: "\f700";
+}
+
+.far-female,
+.fas-female,
+.far-person-dress,
+.fas-person-dress {
+  --fa: "\f182";
+}
+
+.far-comment-dollar,
+.fas-comment-dollar {
+  --fa: "\f651";
+}
+
+.far-briefcase-clock,
+.fas-briefcase-clock,
+.far-business-time,
+.fas-business-time {
+  --fa: "\f64a";
+}
+
+.far-table-cells-large,
+.fas-table-cells-large,
+.far-th-large,
+.fas-th-large {
+  --fa: "\f009";
+}
+
+.far-book-tanakh,
+.fas-book-tanakh,
+.far-tanakh,
+.fas-tanakh {
+  --fa: "\f827";
+}
+
+.far-phone-volume,
+.fas-phone-volume,
+.far-volume-control-phone,
+.fas-volume-control-phone {
+  --fa: "\f2a0";
+}
+
+.far-hat-cowboy-side,
+.fas-hat-cowboy-side {
+  --fa: "\f8c1";
+}
+
+.far-clipboard-user,
+.fas-clipboard-user {
+  --fa: "\f7f3";
+}
+
+.far-child,
+.fas-child {
+  --fa: "\f1ae";
+}
+
+.far-lira-sign,
+.fas-lira-sign {
+  --fa: "\f195";
+}
+
+.far-satellite,
+.fas-satellite {
+  --fa: "\f7bf";
+}
+
+.far-plane-lock,
+.fas-plane-lock {
+  --fa: "\e558";
+}
+
+.far-tag,
+.fas-tag {
+  --fa: "\f02b";
+}
+
+.far-comment,
+.fas-comment {
+  --fa: "\f075";
+}
+
+.far-birthday-cake,
+.fas-birthday-cake,
+.far-cake,
+.fas-cake,
+.far-cake-candles,
+.fas-cake-candles {
+  --fa: "\f1fd";
+}
+
+.far-envelope,
+.fas-envelope {
+  --fa: "\f0e0";
+}
+
+.far-angle-double-up,
+.fas-angle-double-up,
+.far-angles-up,
+.fas-angles-up {
+  --fa: "\f102";
+}
+
+.far-paperclip,
+.fas-paperclip {
+  --fa: "\f0c6";
+}
+
+.far-arrow-right-to-city,
+.fas-arrow-right-to-city {
+  --fa: "\e4b3";
+}
+
+.far-ribbon,
+.fas-ribbon {
+  --fa: "\f4d6";
+}
+
+.far-lungs,
+.fas-lungs {
+  --fa: "\f604";
+}
+
+.far-arrow-up-9-1,
+.fas-arrow-up-9-1,
+.far-sort-numeric-up-alt,
+.fas-sort-numeric-up-alt {
+  --fa: "\f887";
+}
+
+.far-litecoin-sign,
+.fas-litecoin-sign {
+  --fa: "\e1d3";
+}
+
+.far-border-none,
+.fas-border-none {
+  --fa: "\f850";
+}
+
+.far-circle-nodes,
+.fas-circle-nodes {
+  --fa: "\e4e2";
+}
+
+.far-parachute-box,
+.fas-parachute-box {
+  --fa: "\f4cd";
+}
+
+.far-indent,
+.fas-indent {
+  --fa: "\f03c";
+}
+
+.far-truck-field-un,
+.fas-truck-field-un {
+  --fa: "\e58e";
+}
+
+.far-hourglass,
+.fas-hourglass,
+.far-hourglass-empty,
+.fas-hourglass-empty {
+  --fa: "\f254";
+}
+
+.far-mountain,
+.fas-mountain {
+  --fa: "\f6fc";
+}
+
+.far-user-doctor,
+.fas-user-doctor,
+.far-user-md,
+.fas-user-md {
+  --fa: "\f0f0";
+}
+
+.far-circle-info,
+.fas-circle-info,
+.far-info-circle,
+.fas-info-circle {
+  --fa: "\f05a";
+}
+
+.far-cloud-meatball,
+.fas-cloud-meatball {
+  --fa: "\f73b";
+}
+
+.far-camera,
+.fas-camera,
+.far-camera-alt,
+.fas-camera-alt {
+  --fa: "\f030";
+}
+
+.far-square-virus,
+.fas-square-virus {
+  --fa: "\e578";
+}
+
+.far-meteor,
+.fas-meteor {
+  --fa: "\f753";
+}
+
+.far-car-on,
+.fas-car-on {
+  --fa: "\e4dd";
+}
+
+.far-sleigh,
+.fas-sleigh {
+  --fa: "\f7cc";
+}
+
+.far-arrow-down-1-9,
+.fas-arrow-down-1-9,
+.far-sort-numeric-asc,
+.fas-sort-numeric-asc,
+.far-sort-numeric-down,
+.fas-sort-numeric-down {
+  --fa: "\f162";
+}
+
+.far-hand-holding-droplet,
+.fas-hand-holding-droplet,
+.far-hand-holding-water,
+.fas-hand-holding-water {
+  --fa: "\f4c1";
+}
+
+.far-water,
+.fas-water {
+  --fa: "\f773";
+}
+
+.far-calendar-check,
+.fas-calendar-check {
+  --fa: "\f274";
+}
+
+.far-braille,
+.fas-braille {
+  --fa: "\f2a1";
+}
+
+.far-prescription-bottle-alt,
+.fas-prescription-bottle-alt,
+.far-prescription-bottle-medical,
+.fas-prescription-bottle-medical {
+  --fa: "\f486";
+}
+
+.far-landmark,
+.fas-landmark {
+  --fa: "\f66f";
+}
+
+.far-truck,
+.fas-truck {
+  --fa: "\f0d1";
+}
+
+.far-crosshairs,
+.fas-crosshairs {
+  --fa: "\f05b";
+}
+
+.far-person-cane,
+.fas-person-cane {
+  --fa: "\e53c";
+}
+
+.far-tent,
+.fas-tent {
+  --fa: "\e57d";
+}
+
+.far-vest-patches,
+.fas-vest-patches {
+  --fa: "\e086";
+}
+
+.far-check-double,
+.fas-check-double {
+  --fa: "\f560";
+}
+
+.far-arrow-down-a-z,
+.fas-arrow-down-a-z,
+.far-sort-alpha-asc,
+.fas-sort-alpha-asc,
+.far-sort-alpha-down,
+.fas-sort-alpha-down {
+  --fa: "\f15d";
+}
+
+.far-money-bill-wheat,
+.fas-money-bill-wheat {
+  --fa: "\e52a";
+}
+
+.far-cookie,
+.fas-cookie {
+  --fa: "\f563";
+}
+
+.far-arrow-left-rotate,
+.fas-arrow-left-rotate,
+.far-arrow-rotate-back,
+.fas-arrow-rotate-back,
+.far-arrow-rotate-backward,
+.fas-arrow-rotate-backward,
+.far-arrow-rotate-left,
+.fas-arrow-rotate-left,
+.far-undo,
+.fas-undo {
+  --fa: "\f0e2";
+}
+
+.far-hard-drive,
+.fas-hard-drive,
+.far-hdd,
+.fas-hdd {
+  --fa: "\f0a0";
+}
+
+.far-face-grin-squint-tears,
+.fas-face-grin-squint-tears,
+.far-grin-squint-tears,
+.fas-grin-squint-tears {
+  --fa: "\f586";
+}
+
+.far-dumbbell,
+.fas-dumbbell {
+  --fa: "\f44b";
+}
+
+.far-list-alt,
+.fas-list-alt,
+.far-rectangle-list,
+.fas-rectangle-list {
+  --fa: "\f022";
+}
+
+.far-tarp-droplet,
+.fas-tarp-droplet {
+  --fa: "\e57c";
+}
+
+.far-house-medical-circle-check,
+.fas-house-medical-circle-check {
+  --fa: "\e511";
+}
+
+.far-person-skiing-nordic,
+.fas-person-skiing-nordic,
+.far-skiing-nordic,
+.fas-skiing-nordic {
+  --fa: "\f7ca";
+}
+
+.far-calendar-plus,
+.fas-calendar-plus {
+  --fa: "\f271";
+}
+
+.far-plane-arrival,
+.fas-plane-arrival {
+  --fa: "\f5af";
+}
+
+.far-arrow-alt-circle-left,
+.fas-arrow-alt-circle-left,
+.far-circle-left,
+.fas-circle-left {
+  --fa: "\f359";
+}
+
+.far-subway,
+.fas-subway,
+.far-train-subway,
+.fas-train-subway {
+  --fa: "\f239";
+}
+
+.far-chart-gantt,
+.fas-chart-gantt {
+  --fa: "\e0e4";
+}
+
+.far-indian-rupee,
+.fas-indian-rupee,
+.far-indian-rupee-sign,
+.fas-indian-rupee-sign,
+.far-inr,
+.fas-inr {
+  --fa: "\e1bc";
+}
+
+.far-crop-alt,
+.fas-crop-alt,
+.far-crop-simple,
+.fas-crop-simple {
+  --fa: "\f565";
+}
+
+.far-money-bill-1,
+.fas-money-bill-1,
+.far-money-bill-alt,
+.fas-money-bill-alt {
+  --fa: "\f3d1";
+}
+
+.far-left-long,
+.fas-left-long,
+.far-long-arrow-alt-left,
+.fas-long-arrow-alt-left {
+  --fa: "\f30a";
+}
+
+.far-dna,
+.fas-dna {
+  --fa: "\f471";
+}
+
+.far-virus-slash,
+.fas-virus-slash {
+  --fa: "\e075";
+}
+
+.far-minus,
+.fas-minus,
+.far-subtract,
+.fas-subtract {
+  --fa: "\f068";
+}
+
+.far-chess,
+.fas-chess {
+  --fa: "\f439";
+}
+
+.far-arrow-left-long,
+.fas-arrow-left-long,
+.far-long-arrow-left,
+.fas-long-arrow-left {
+  --fa: "\f177";
+}
+
+.far-plug-circle-check,
+.fas-plug-circle-check {
+  --fa: "\e55c";
+}
+
+.far-street-view,
+.fas-street-view {
+  --fa: "\f21d";
+}
+
+.far-franc-sign,
+.fas-franc-sign {
+  --fa: "\e18f";
+}
+
+.far-volume-off,
+.fas-volume-off {
+  --fa: "\f026";
+}
+
+.far-american-sign-language-interpreting,
+.fas-american-sign-language-interpreting,
+.far-asl-interpreting,
+.fas-asl-interpreting,
+.far-hands-american-sign-language-interpreting,
+.fas-hands-american-sign-language-interpreting,
+.far-hands-asl-interpreting,
+.fas-hands-asl-interpreting {
+  --fa: "\f2a3";
+}
+
+.far-cog,
+.fas-cog,
+.far-gear,
+.fas-gear {
+  --fa: "\f013";
+}
+
+.far-droplet-slash,
+.fas-droplet-slash,
+.far-tint-slash,
+.fas-tint-slash {
+  --fa: "\f5c7";
+}
+
+.far-mosque,
+.fas-mosque {
+  --fa: "\f678";
+}
+
+.far-mosquito,
+.fas-mosquito {
+  --fa: "\e52b";
+}
+
+.far-star-of-david,
+.fas-star-of-david {
+  --fa: "\f69a";
+}
+
+.far-person-military-rifle,
+.fas-person-military-rifle {
+  --fa: "\e54b";
+}
+
+.far-cart-shopping,
+.fas-cart-shopping,
+.far-shopping-cart,
+.fas-shopping-cart {
+  --fa: "\f07a";
+}
+
+.far-vials,
+.fas-vials {
+  --fa: "\f493";
+}
+
+.far-plug-circle-plus,
+.fas-plug-circle-plus {
+  --fa: "\e55f";
+}
+
+.far-place-of-worship,
+.fas-place-of-worship {
+  --fa: "\f67f";
+}
+
+.far-grip-vertical,
+.fas-grip-vertical {
+  --fa: "\f58e";
+}
+
+.far-hexagon-nodes,
+.fas-hexagon-nodes {
+  --fa: "\e699";
+}
+
+.far-arrow-turn-up,
+.fas-arrow-turn-up,
+.far-level-up,
+.fas-level-up {
+  --fa: "\f148";
+}
+
+.far-u,
+.fas-u {
+  --fa: "\55";
+}
+
+.far-square-root-alt,
+.fas-square-root-alt,
+.far-square-root-variable,
+.fas-square-root-variable {
+  --fa: "\f698";
+}
+
+.far-clock,
+.fas-clock,
+.far-clock-four,
+.fas-clock-four {
+  --fa: "\f017";
+}
+
+.far-backward-step,
+.fas-backward-step,
+.far-step-backward,
+.fas-step-backward {
+  --fa: "\f048";
+}
+
+.far-pallet,
+.fas-pallet {
+  --fa: "\f482";
+}
+
+.far-faucet,
+.fas-faucet {
+  --fa: "\e005";
+}
+
+.far-baseball-bat-ball,
+.fas-baseball-bat-ball {
+  --fa: "\f432";
+}
+
+.far-s,
+.fas-s {
+  --fa: "\53";
+}
+
+.far-timeline,
+.fas-timeline {
+  --fa: "\e29c";
+}
+
+.far-keyboard,
+.fas-keyboard {
+  --fa: "\f11c";
+}
+
+.far-caret-down,
+.fas-caret-down {
+  --fa: "\f0d7";
+}
+
+.far-clinic-medical,
+.fas-clinic-medical,
+.far-house-chimney-medical,
+.fas-house-chimney-medical {
+  --fa: "\f7f2";
+}
+
+.far-temperature-3,
+.fas-temperature-3,
+.far-temperature-three-quarters,
+.fas-temperature-three-quarters,
+.far-thermometer-3,
+.fas-thermometer-3,
+.far-thermometer-three-quarters,
+.fas-thermometer-three-quarters {
+  --fa: "\f2c8";
+}
+
+.far-mobile-android-alt,
+.fas-mobile-android-alt,
+.far-mobile-screen,
+.fas-mobile-screen {
+  --fa: "\f3cf";
+}
+
+.far-plane-up,
+.fas-plane-up {
+  --fa: "\e22d";
+}
+
+.far-piggy-bank,
+.fas-piggy-bank {
+  --fa: "\f4d3";
+}
+
+.far-battery-3,
+.fas-battery-3,
+.far-battery-half,
+.fas-battery-half {
+  --fa: "\f242";
+}
+
+.far-mountain-city,
+.fas-mountain-city {
+  --fa: "\e52e";
+}
+
+.far-coins,
+.fas-coins {
+  --fa: "\f51e";
+}
+
+.far-khanda,
+.fas-khanda {
+  --fa: "\f66d";
+}
+
+.far-sliders,
+.fas-sliders,
+.far-sliders-h,
+.fas-sliders-h {
+  --fa: "\f1de";
+}
+
+.far-folder-tree,
+.fas-folder-tree {
+  --fa: "\f802";
+}
+
+.far-network-wired,
+.fas-network-wired {
+  --fa: "\f6ff";
+}
+
+.far-map-pin,
+.fas-map-pin {
+  --fa: "\f276";
+}
+
+.far-hamsa,
+.fas-hamsa {
+  --fa: "\f665";
+}
+
+.far-cent-sign,
+.fas-cent-sign {
+  --fa: "\e3f5";
+}
+
+.far-flask,
+.fas-flask {
+  --fa: "\f0c3";
+}
+
+.far-person-pregnant,
+.fas-person-pregnant {
+  --fa: "\e31e";
+}
+
+.far-wand-sparkles,
+.fas-wand-sparkles {
+  --fa: "\f72b";
+}
+
+.far-ellipsis-v,
+.fas-ellipsis-v,
+.far-ellipsis-vertical,
+.fas-ellipsis-vertical {
+  --fa: "\f142";
+}
+
+.far-ticket,
+.fas-ticket {
+  --fa: "\f145";
+}
+
+.far-power-off,
+.fas-power-off {
+  --fa: "\f011";
+}
+
+.far-long-arrow-alt-right,
+.fas-long-arrow-alt-right,
+.far-right-long,
+.fas-right-long {
+  --fa: "\f30b";
+}
+
+.far-flag-usa,
+.fas-flag-usa {
+  --fa: "\f74d";
+}
+
+.far-laptop-file,
+.fas-laptop-file {
+  --fa: "\e51d";
+}
+
+.far-teletype,
+.fas-teletype,
+.far-tty,
+.fas-tty {
+  --fa: "\f1e4";
+}
+
+.far-diagram-next,
+.fas-diagram-next {
+  --fa: "\e476";
+}
+
+.far-person-rifle,
+.fas-person-rifle {
+  --fa: "\e54e";
+}
+
+.far-house-medical-circle-exclamation,
+.fas-house-medical-circle-exclamation {
+  --fa: "\e512";
+}
+
+.far-closed-captioning,
+.fas-closed-captioning {
+  --fa: "\f20a";
+}
+
+.far-hiking,
+.fas-hiking,
+.far-person-hiking,
+.fas-person-hiking {
+  --fa: "\f6ec";
+}
+
+.far-venus-double,
+.fas-venus-double {
+  --fa: "\f226";
+}
+
+.far-images,
+.fas-images {
+  --fa: "\f302";
+}
+
+.far-calculator,
+.fas-calculator {
+  --fa: "\f1ec";
+}
+
+.far-people-pulling,
+.fas-people-pulling {
+  --fa: "\e535";
+}
+
+.far-n,
+.fas-n {
+  --fa: "\4e";
+}
+
+.far-cable-car,
+.fas-cable-car,
+.far-tram,
+.fas-tram {
+  --fa: "\f7da";
+}
+
+.far-cloud-rain,
+.fas-cloud-rain {
+  --fa: "\f73d";
+}
+
+.far-building-circle-xmark,
+.fas-building-circle-xmark {
+  --fa: "\e4d4";
+}
+
+.far-ship,
+.fas-ship {
+  --fa: "\f21a";
+}
+
+.far-arrows-down-to-line,
+.fas-arrows-down-to-line {
+  --fa: "\e4b8";
+}
+
+.far-download,
+.fas-download {
+  --fa: "\f019";
+}
+
+.far-face-grin,
+.fas-face-grin,
+.far-grin,
+.fas-grin {
+  --fa: "\f580";
+}
+
+.far-backspace,
+.fas-backspace,
+.far-delete-left,
+.fas-delete-left {
+  --fa: "\f55a";
+}
+
+.far-eye-dropper,
+.fas-eye-dropper,
+.far-eye-dropper-empty,
+.fas-eye-dropper-empty,
+.far-eyedropper,
+.fas-eyedropper {
+  --fa: "\f1fb";
+}
+
+.far-file-circle-check,
+.fas-file-circle-check {
+  --fa: "\e5a0";
+}
+
+.far-forward,
+.fas-forward {
+  --fa: "\f04e";
+}
+
+.far-mobile,
+.fas-mobile,
+.far-mobile-android,
+.fas-mobile-android,
+.far-mobile-phone,
+.fas-mobile-phone {
+  --fa: "\f3ce";
+}
+
+.far-face-meh,
+.fas-face-meh,
+.far-meh,
+.fas-meh {
+  --fa: "\f11a";
+}
+
+.far-align-center,
+.fas-align-center {
+  --fa: "\f037";
+}
+
+.far-book-dead,
+.fas-book-dead,
+.far-book-skull,
+.fas-book-skull {
+  --fa: "\f6b7";
+}
+
+.far-drivers-license,
+.fas-drivers-license,
+.far-id-card,
+.fas-id-card {
+  --fa: "\f2c2";
+}
+
+.far-dedent,
+.fas-dedent,
+.far-outdent,
+.fas-outdent {
+  --fa: "\f03b";
+}
+
+.far-heart-circle-exclamation,
+.fas-heart-circle-exclamation {
+  --fa: "\e4fe";
+}
+
+.far-home,
+.fas-home,
+.far-home-alt,
+.fas-home-alt,
+.far-home-lg-alt,
+.fas-home-lg-alt,
+.far-house,
+.fas-house {
+  --fa: "\f015";
+}
+
+.far-calendar-week,
+.fas-calendar-week {
+  --fa: "\f784";
+}
+
+.far-laptop-medical,
+.fas-laptop-medical {
+  --fa: "\f812";
+}
+
+.far-b,
+.fas-b {
+  --fa: "\42";
+}
+
+.far-file-medical,
+.fas-file-medical {
+  --fa: "\f477";
+}
+
+.far-dice-one,
+.fas-dice-one {
+  --fa: "\f525";
+}
+
+.far-kiwi-bird,
+.fas-kiwi-bird {
+  --fa: "\f535";
+}
+
+.far-arrow-right-arrow-left,
+.fas-arrow-right-arrow-left,
+.far-exchange,
+.fas-exchange {
+  --fa: "\f0ec";
+}
+
+.far-redo-alt,
+.fas-redo-alt,
+.far-rotate-forward,
+.fas-rotate-forward,
+.far-rotate-right,
+.fas-rotate-right {
+  --fa: "\f2f9";
+}
+
+.far-cutlery,
+.fas-cutlery,
+.far-utensils,
+.fas-utensils {
+  --fa: "\f2e7";
+}
+
+.far-arrow-up-wide-short,
+.fas-arrow-up-wide-short,
+.far-sort-amount-up,
+.fas-sort-amount-up {
+  --fa: "\f161";
+}
+
+.far-mill-sign,
+.fas-mill-sign {
+  --fa: "\e1ed";
+}
+
+.far-bowl-rice,
+.fas-bowl-rice {
+  --fa: "\e2eb";
+}
+
+.far-skull,
+.fas-skull {
+  --fa: "\f54c";
+}
+
+.far-broadcast-tower,
+.fas-broadcast-tower,
+.far-tower-broadcast,
+.fas-tower-broadcast {
+  --fa: "\f519";
+}
+
+.far-truck-pickup,
+.fas-truck-pickup {
+  --fa: "\f63c";
+}
+
+.far-long-arrow-alt-up,
+.fas-long-arrow-alt-up,
+.far-up-long,
+.fas-up-long {
+  --fa: "\f30c";
+}
+
+.far-stop,
+.fas-stop {
+  --fa: "\f04d";
+}
+
+.far-code-merge,
+.fas-code-merge {
+  --fa: "\f387";
+}
+
+.far-upload,
+.fas-upload {
+  --fa: "\f093";
+}
+
+.far-hurricane,
+.fas-hurricane {
+  --fa: "\f751";
+}
+
+.far-mound,
+.fas-mound {
+  --fa: "\e52d";
+}
+
+.far-toilet-portable,
+.fas-toilet-portable {
+  --fa: "\e583";
+}
+
+.far-compact-disc,
+.fas-compact-disc {
+  --fa: "\f51f";
+}
+
+.far-file-arrow-down,
+.fas-file-arrow-down,
+.far-file-download,
+.fas-file-download {
+  --fa: "\f56d";
+}
+
+.far-caravan,
+.fas-caravan {
+  --fa: "\f8ff";
+}
+
+.far-shield-cat,
+.fas-shield-cat {
+  --fa: "\e572";
+}
+
+.far-bolt,
+.fas-bolt,
+.far-zap,
+.fas-zap {
+  --fa: "\f0e7";
+}
+
+.far-glass-water,
+.fas-glass-water {
+  --fa: "\e4f4";
+}
+
+.far-oil-well,
+.fas-oil-well {
+  --fa: "\e532";
+}
+
+.far-vault,
+.fas-vault {
+  --fa: "\e2c5";
+}
+
+.far-mars,
+.fas-mars {
+  --fa: "\f222";
+}
+
+.far-toilet,
+.fas-toilet {
+  --fa: "\f7d8";
+}
+
+.far-plane-circle-xmark,
+.fas-plane-circle-xmark {
+  --fa: "\e557";
+}
+
+.far-cny,
+.fas-cny,
+.far-jpy,
+.fas-jpy,
+.far-rmb,
+.fas-rmb,
+.far-yen,
+.fas-yen,
+.far-yen-sign,
+.fas-yen-sign {
+  --fa: "\f157";
+}
+
+.far-rouble,
+.fas-rouble,
+.far-rub,
+.fas-rub,
+.far-ruble,
+.fas-ruble,
+.far-ruble-sign,
+.fas-ruble-sign {
+  --fa: "\f158";
+}
+
+.far-sun,
+.fas-sun {
+  --fa: "\f185";
+}
+
+.far-guitar,
+.fas-guitar {
+  --fa: "\f7a6";
+}
+
+.far-face-laugh-wink,
+.fas-face-laugh-wink,
+.far-laugh-wink,
+.fas-laugh-wink {
+  --fa: "\f59c";
+}
+
+.far-horse-head,
+.fas-horse-head {
+  --fa: "\f7ab";
+}
+
+.far-bore-hole,
+.fas-bore-hole {
+  --fa: "\e4c3";
+}
+
+.far-industry,
+.fas-industry {
+  --fa: "\f275";
+}
+
+.far-arrow-alt-circle-down,
+.fas-arrow-alt-circle-down,
+.far-circle-down,
+.fas-circle-down {
+  --fa: "\f358";
+}
+
+.far-arrows-turn-to-dots,
+.fas-arrows-turn-to-dots {
+  --fa: "\e4c1";
+}
+
+.far-florin-sign,
+.fas-florin-sign {
+  --fa: "\e184";
+}
+
+.far-arrow-down-short-wide,
+.fas-arrow-down-short-wide,
+.far-sort-amount-desc,
+.fas-sort-amount-desc,
+.far-sort-amount-down-alt,
+.fas-sort-amount-down-alt {
+  --fa: "\f884";
+}
+
+.far-less-than,
+.fas-less-than {
+  --fa: "\3c";
+}
+
+.far-angle-down,
+.fas-angle-down {
+  --fa: "\f107";
+}
+
+.far-car-tunnel,
+.fas-car-tunnel {
+  --fa: "\e4de";
+}
+
+.far-head-side-cough,
+.fas-head-side-cough {
+  --fa: "\e061";
+}
+
+.far-grip-lines,
+.fas-grip-lines {
+  --fa: "\f7a4";
+}
+
+.far-thumbs-down,
+.fas-thumbs-down {
+  --fa: "\f165";
+}
+
+.far-user-lock,
+.fas-user-lock {
+  --fa: "\f502";
+}
+
+.far-arrow-right-long,
+.fas-arrow-right-long,
+.far-long-arrow-right,
+.fas-long-arrow-right {
+  --fa: "\f178";
+}
+
+.far-anchor-circle-xmark,
+.fas-anchor-circle-xmark {
+  --fa: "\e4ac";
+}
+
+.far-ellipsis,
+.fas-ellipsis,
+.far-ellipsis-h,
+.fas-ellipsis-h {
+  --fa: "\f141";
+}
+
+.far-chess-pawn,
+.fas-chess-pawn {
+  --fa: "\f443";
+}
+
+.far-first-aid,
+.fas-first-aid,
+.far-kit-medical,
+.fas-kit-medical {
+  --fa: "\f479";
+}
+
+.far-person-through-window,
+.fas-person-through-window {
+  --fa: "\e5a9";
+}
+
+.far-toolbox,
+.fas-toolbox {
+  --fa: "\f552";
+}
+
+.far-hands-holding-circle,
+.fas-hands-holding-circle {
+  --fa: "\e4fb";
+}
+
+.far-bug,
+.fas-bug {
+  --fa: "\f188";
+}
+
+.far-credit-card,
+.fas-credit-card,
+.far-credit-card-alt,
+.fas-credit-card-alt {
+  --fa: "\f09d";
+}
+
+.far-automobile,
+.fas-automobile,
+.far-car,
+.fas-car {
+  --fa: "\f1b9";
+}
+
+.far-hand-holding-hand,
+.fas-hand-holding-hand {
+  --fa: "\e4f7";
+}
+
+.far-book-open-reader,
+.fas-book-open-reader,
+.far-book-reader,
+.fas-book-reader {
+  --fa: "\f5da";
+}
+
+.far-mountain-sun,
+.fas-mountain-sun {
+  --fa: "\e52f";
+}
+
+.far-arrows-left-right-to-line,
+.fas-arrows-left-right-to-line {
+  --fa: "\e4ba";
+}
+
+.far-dice-d20,
+.fas-dice-d20 {
+  --fa: "\f6cf";
+}
+
+.far-truck-droplet,
+.fas-truck-droplet {
+  --fa: "\e58c";
+}
+
+.far-file-circle-xmark,
+.fas-file-circle-xmark {
+  --fa: "\e5a1";
+}
+
+.far-temperature-arrow-up,
+.fas-temperature-arrow-up,
+.far-temperature-up,
+.fas-temperature-up {
+  --fa: "\e040";
+}
+
+.far-medal,
+.fas-medal {
+  --fa: "\f5a2";
+}
+
+.far-bed,
+.fas-bed {
+  --fa: "\f236";
+}
+
+.far-h-square,
+.fas-h-square,
+.far-square-h,
+.fas-square-h {
+  --fa: "\f0fd";
+}
+
+.far-podcast,
+.fas-podcast {
+  --fa: "\f2ce";
+}
+
+.far-temperature-4,
+.fas-temperature-4,
+.far-temperature-full,
+.fas-temperature-full,
+.far-thermometer-4,
+.fas-thermometer-4,
+.far-thermometer-full,
+.fas-thermometer-full {
+  --fa: "\f2c7";
+}
+
+.far-bell,
+.fas-bell {
+  --fa: "\f0f3";
+}
+
+.far-superscript,
+.fas-superscript {
+  --fa: "\f12b";
+}
+
+.far-plug-circle-xmark,
+.fas-plug-circle-xmark {
+  --fa: "\e560";
+}
+
+.far-star-of-life,
+.fas-star-of-life {
+  --fa: "\f621";
+}
+
+.far-phone-slash,
+.fas-phone-slash {
+  --fa: "\f3dd";
+}
+
+.far-paint-roller,
+.fas-paint-roller {
+  --fa: "\f5aa";
+}
+
+.far-hands-helping,
+.fas-hands-helping,
+.far-handshake-angle,
+.fas-handshake-angle {
+  --fa: "\f4c4";
+}
+
+.far-location-dot,
+.fas-location-dot,
+.far-map-marker-alt,
+.fas-map-marker-alt {
+  --fa: "\f3c5";
+}
+
+.far-file,
+.fas-file {
+  --fa: "\f15b";
+}
+
+.far-greater-than,
+.fas-greater-than {
+  --fa: "\3e";
+}
+
+.far-person-swimming,
+.fas-person-swimming,
+.far-swimmer,
+.fas-swimmer {
+  --fa: "\f5c4";
+}
+
+.far-arrow-down,
+.fas-arrow-down {
+  --fa: "\f063";
+}
+
+.far-droplet,
+.fas-droplet,
+.far-tint,
+.fas-tint {
+  --fa: "\f043";
+}
+
+.far-eraser,
+.fas-eraser {
+  --fa: "\f12d";
+}
+
+.far-earth,
+.fas-earth,
+.far-earth-america,
+.fas-earth-america,
+.far-earth-americas,
+.fas-earth-americas,
+.far-globe-americas,
+.fas-globe-americas {
+  --fa: "\f57d";
+}
+
+.far-person-burst,
+.fas-person-burst {
+  --fa: "\e53b";
+}
+
+.far-dove,
+.fas-dove {
+  --fa: "\f4ba";
+}
+
+.far-battery-0,
+.fas-battery-0,
+.far-battery-empty,
+.fas-battery-empty {
+  --fa: "\f244";
+}
+
+.far-socks,
+.fas-socks {
+  --fa: "\f696";
+}
+
+.far-inbox,
+.fas-inbox {
+  --fa: "\f01c";
+}
+
+.far-section,
+.fas-section {
+  --fa: "\e447";
+}
+
+.far-gauge-high,
+.fas-gauge-high,
+.far-tachometer-alt,
+.fas-tachometer-alt,
+.far-tachometer-alt-fast,
+.fas-tachometer-alt-fast {
+  --fa: "\f625";
+}
+
+.far-envelope-open-text,
+.fas-envelope-open-text {
+  --fa: "\f658";
+}
+
+.far-hospital,
+.fas-hospital,
+.far-hospital-alt,
+.fas-hospital-alt,
+.far-hospital-wide,
+.fas-hospital-wide {
+  --fa: "\f0f8";
+}
+
+.far-wine-bottle,
+.fas-wine-bottle {
+  --fa: "\f72f";
+}
+
+.far-chess-rook,
+.fas-chess-rook {
+  --fa: "\f447";
+}
+
+.far-bars-staggered,
+.fas-bars-staggered,
+.far-reorder,
+.fas-reorder,
+.far-stream,
+.fas-stream {
+  --fa: "\f550";
+}
+
+.far-dharmachakra,
+.fas-dharmachakra {
+  --fa: "\f655";
+}
+
+.far-hotdog,
+.fas-hotdog {
+  --fa: "\f80f";
+}
+
+.far-blind,
+.fas-blind,
+.far-person-walking-with-cane,
+.fas-person-walking-with-cane {
+  --fa: "\f29d";
+}
+
+.far-drum,
+.fas-drum {
+  --fa: "\f569";
+}
+
+.far-ice-cream,
+.fas-ice-cream {
+  --fa: "\f810";
+}
+
+.far-heart-circle-bolt,
+.fas-heart-circle-bolt {
+  --fa: "\e4fc";
+}
+
+.far-fax,
+.fas-fax {
+  --fa: "\f1ac";
+}
+
+.far-paragraph,
+.fas-paragraph {
+  --fa: "\f1dd";
+}
+
+.far-check-to-slot,
+.fas-check-to-slot,
+.far-vote-yea,
+.fas-vote-yea {
+  --fa: "\f772";
+}
+
+.far-star-half,
+.fas-star-half {
+  --fa: "\f089";
+}
+
+.far-boxes,
+.fas-boxes,
+.far-boxes-alt,
+.fas-boxes-alt,
+.far-boxes-stacked,
+.fas-boxes-stacked {
+  --fa: "\f468";
+}
+
+.far-chain,
+.fas-chain,
+.far-link,
+.fas-link {
+  --fa: "\f0c1";
+}
+
+.far-assistive-listening-systems,
+.fas-assistive-listening-systems,
+.far-ear-listen,
+.fas-ear-listen {
+  --fa: "\f2a2";
+}
+
+.far-tree-city,
+.fas-tree-city {
+  --fa: "\e587";
+}
+
+.far-play,
+.fas-play {
+  --fa: "\f04b";
+}
+
+.far-font,
+.fas-font {
+  --fa: "\f031";
+}
+
+.far-table-cells-row-lock,
+.fas-table-cells-row-lock {
+  --fa: "\e67a";
+}
+
+.far-rupiah-sign,
+.fas-rupiah-sign {
+  --fa: "\e23d";
+}
+
+.far-magnifying-glass,
+.fas-magnifying-glass,
+.far-search,
+.fas-search {
+  --fa: "\f002";
+}
+
+.far-ping-pong-paddle-ball,
+.fas-ping-pong-paddle-ball,
+.far-table-tennis,
+.fas-table-tennis,
+.far-table-tennis-paddle-ball,
+.fas-table-tennis-paddle-ball {
+  --fa: "\f45d";
+}
+
+.far-diagnoses,
+.fas-diagnoses,
+.far-person-dots-from-line,
+.fas-person-dots-from-line {
+  --fa: "\f470";
+}
+
+.far-trash-can-arrow-up,
+.fas-trash-can-arrow-up,
+.far-trash-restore-alt,
+.fas-trash-restore-alt {
+  --fa: "\f82a";
+}
+
+.far-naira-sign,
+.fas-naira-sign {
+  --fa: "\e1f6";
+}
+
+.far-cart-arrow-down,
+.fas-cart-arrow-down {
+  --fa: "\f218";
+}
+
+.far-walkie-talkie,
+.fas-walkie-talkie {
+  --fa: "\f8ef";
+}
+
+.far-file-edit,
+.fas-file-edit,
+.far-file-pen,
+.fas-file-pen {
+  --fa: "\f31c";
+}
+
+.far-receipt,
+.fas-receipt {
+  --fa: "\f543";
+}
+
+.far-pen-square,
+.fas-pen-square,
+.far-pencil-square,
+.fas-pencil-square,
+.far-square-pen,
+.fas-square-pen {
+  --fa: "\f14b";
+}
+
+.far-suitcase-rolling,
+.fas-suitcase-rolling {
+  --fa: "\f5c1";
+}
+
+.far-person-circle-exclamation,
+.fas-person-circle-exclamation {
+  --fa: "\e53f";
+}
+
+.far-chevron-down,
+.fas-chevron-down {
+  --fa: "\f078";
+}
+
+.far-battery,
+.fas-battery,
+.far-battery-5,
+.fas-battery-5,
+.far-battery-full,
+.fas-battery-full {
+  --fa: "\f240";
+}
+
+.far-skull-crossbones,
+.fas-skull-crossbones {
+  --fa: "\f714";
+}
+
+.far-code-compare,
+.fas-code-compare {
+  --fa: "\e13a";
+}
+
+.far-list-dots,
+.fas-list-dots,
+.far-list-ul,
+.fas-list-ul {
+  --fa: "\f0ca";
+}
+
+.far-school-lock,
+.fas-school-lock {
+  --fa: "\e56f";
+}
+
+.far-tower-cell,
+.fas-tower-cell {
+  --fa: "\e585";
+}
+
+.far-down-long,
+.fas-down-long,
+.far-long-arrow-alt-down,
+.fas-long-arrow-alt-down {
+  --fa: "\f309";
+}
+
+.far-ranking-star,
+.fas-ranking-star {
+  --fa: "\e561";
+}
+
+.far-chess-king,
+.fas-chess-king {
+  --fa: "\f43f";
+}
+
+.far-person-harassing,
+.fas-person-harassing {
+  --fa: "\e549";
+}
+
+.far-brazilian-real-sign,
+.fas-brazilian-real-sign {
+  --fa: "\e46c";
+}
+
+.far-landmark-alt,
+.fas-landmark-alt,
+.far-landmark-dome,
+.fas-landmark-dome {
+  --fa: "\f752";
+}
+
+.far-arrow-up,
+.fas-arrow-up {
+  --fa: "\f062";
+}
+
+.far-television,
+.fas-television,
+.far-tv,
+.fas-tv,
+.far-tv-alt,
+.fas-tv-alt {
+  --fa: "\f26c";
+}
+
+.far-shrimp,
+.fas-shrimp {
+  --fa: "\e448";
+}
+
+.far-list-check,
+.fas-list-check,
+.far-tasks,
+.fas-tasks {
+  --fa: "\f0ae";
+}
+
+.far-jug-detergent,
+.fas-jug-detergent {
+  --fa: "\e519";
+}
+
+.far-circle-user,
+.fas-circle-user,
+.far-user-circle,
+.fas-user-circle {
+  --fa: "\f2bd";
+}
+
+.far-user-shield,
+.fas-user-shield {
+  --fa: "\f505";
+}
+
+.far-wind,
+.fas-wind {
+  --fa: "\f72e";
+}
+
+.far-car-burst,
+.fas-car-burst,
+.far-car-crash,
+.fas-car-crash {
+  --fa: "\f5e1";
+}
+
+.far-y,
+.fas-y {
+  --fa: "\59";
+}
+
+.far-person-snowboarding,
+.fas-person-snowboarding,
+.far-snowboarding,
+.fas-snowboarding {
+  --fa: "\f7ce";
+}
+
+.far-shipping-fast,
+.fas-shipping-fast,
+.far-truck-fast,
+.fas-truck-fast {
+  --fa: "\f48b";
+}
+
+.far-fish,
+.fas-fish {
+  --fa: "\f578";
+}
+
+.far-user-graduate,
+.fas-user-graduate {
+  --fa: "\f501";
+}
+
+.far-adjust,
+.fas-adjust,
+.far-circle-half-stroke,
+.fas-circle-half-stroke {
+  --fa: "\f042";
+}
+
+.far-clapperboard,
+.fas-clapperboard {
+  --fa: "\e131";
+}
+
+.far-circle-radiation,
+.fas-circle-radiation,
+.far-radiation-alt,
+.fas-radiation-alt {
+  --fa: "\f7ba";
+}
+
+.far-baseball,
+.fas-baseball,
+.far-baseball-ball,
+.fas-baseball-ball {
+  --fa: "\f433";
+}
+
+.far-jet-fighter-up,
+.fas-jet-fighter-up {
+  --fa: "\e518";
+}
+
+.far-diagram-project,
+.fas-diagram-project,
+.far-project-diagram,
+.fas-project-diagram {
+  --fa: "\f542";
+}
+
+.far-copy,
+.fas-copy {
+  --fa: "\f0c5";
+}
+
+.far-volume-mute,
+.fas-volume-mute,
+.far-volume-times,
+.fas-volume-times,
+.far-volume-xmark,
+.fas-volume-xmark {
+  --fa: "\f6a9";
+}
+
+.far-hand-sparkles,
+.fas-hand-sparkles {
+  --fa: "\e05d";
+}
+
+.far-grip,
+.fas-grip,
+.far-grip-horizontal,
+.fas-grip-horizontal {
+  --fa: "\f58d";
+}
+
+.far-share-from-square,
+.fas-share-from-square,
+.far-share-square,
+.fas-share-square {
+  --fa: "\f14d";
+}
+
+.far-child-combatant,
+.fas-child-combatant,
+.far-child-rifle,
+.fas-child-rifle {
+  --fa: "\e4e0";
+}
+
+.far-gun,
+.fas-gun {
+  --fa: "\e19b";
+}
+
+.far-phone-square,
+.fas-phone-square,
+.far-square-phone,
+.fas-square-phone {
+  --fa: "\f098";
+}
+
+.far-add,
+.fas-add,
+.far-plus,
+.fas-plus {
+  --fa: "\2b";
+}
+
+.far-expand,
+.fas-expand {
+  --fa: "\f065";
+}
+
+.far-computer,
+.fas-computer {
+  --fa: "\e4e5";
+}
+
+.far-close,
+.fas-close,
+.far-multiply,
+.fas-multiply,
+.far-remove,
+.fas-remove,
+.far-times,
+.fas-times,
+.far-xmark,
+.fas-xmark {
+  --fa: "\f00d";
+}
+
+.far-arrows,
+.fas-arrows,
+.far-arrows-up-down-left-right,
+.fas-arrows-up-down-left-right {
+  --fa: "\f047";
+}
+
+.far-chalkboard-teacher,
+.fas-chalkboard-teacher,
+.far-chalkboard-user,
+.fas-chalkboard-user {
+  --fa: "\f51c";
+}
+
+.far-peso-sign,
+.fas-peso-sign {
+  --fa: "\e222";
+}
+
+.far-building-shield,
+.fas-building-shield {
+  --fa: "\e4d8";
+}
+
+.far-baby,
+.fas-baby {
+  --fa: "\f77c";
+}
+
+.far-users-line,
+.fas-users-line {
+  --fa: "\e592";
+}
+
+.far-quote-left,
+.fas-quote-left,
+.far-quote-left-alt,
+.fas-quote-left-alt {
+  --fa: "\f10d";
+}
+
+.far-tractor,
+.fas-tractor {
+  --fa: "\f722";
+}
+
+.far-trash-arrow-up,
+.fas-trash-arrow-up,
+.far-trash-restore,
+.fas-trash-restore {
+  --fa: "\f829";
+}
+
+.far-arrow-down-up-lock,
+.fas-arrow-down-up-lock {
+  --fa: "\e4b0";
+}
+
+.far-lines-leaning,
+.fas-lines-leaning {
+  --fa: "\e51e";
+}
+
+.far-ruler-combined,
+.fas-ruler-combined {
+  --fa: "\f546";
+}
+
+.far-copyright,
+.fas-copyright {
+  --fa: "\f1f9";
+}
+
+.far-equals,
+.fas-equals {
+  --fa: "\3d";
+}
+
+.far-blender,
+.fas-blender {
+  --fa: "\f517";
+}
+
+.far-teeth,
+.fas-teeth {
+  --fa: "\f62e";
+}
+
+.far-ils,
+.fas-ils,
+.far-shekel,
+.fas-shekel,
+.far-shekel-sign,
+.fas-shekel-sign,
+.far-sheqel,
+.fas-sheqel,
+.far-sheqel-sign,
+.fas-sheqel-sign {
+  --fa: "\f20b";
+}
+
+.far-map,
+.fas-map {
+  --fa: "\f279";
+}
+
+.far-rocket,
+.fas-rocket {
+  --fa: "\f135";
+}
+
+.far-photo-film,
+.fas-photo-film,
+.far-photo-video,
+.fas-photo-video {
+  --fa: "\f87c";
+}
+
+.far-folder-minus,
+.fas-folder-minus {
+  --fa: "\f65d";
+}
+
+.far-hexagon-nodes-bolt,
+.fas-hexagon-nodes-bolt {
+  --fa: "\e69a";
+}
+
+.far-store,
+.fas-store {
+  --fa: "\f54e";
+}
+
+.far-arrow-trend-up,
+.fas-arrow-trend-up {
+  --fa: "\e098";
+}
+
+.far-plug-circle-minus,
+.fas-plug-circle-minus {
+  --fa: "\e55e";
+}
+
+.far-sign,
+.fas-sign,
+.far-sign-hanging,
+.fas-sign-hanging {
+  --fa: "\f4d9";
+}
+
+.far-bezier-curve,
+.fas-bezier-curve {
+  --fa: "\f55b";
+}
+
+.far-bell-slash,
+.fas-bell-slash {
+  --fa: "\f1f6";
+}
+
+.far-tablet,
+.fas-tablet,
+.far-tablet-android,
+.fas-tablet-android {
+  --fa: "\f3fb";
+}
+
+.far-school-flag,
+.fas-school-flag {
+  --fa: "\e56e";
+}
+
+.far-fill,
+.fas-fill {
+  --fa: "\f575";
+}
+
+.far-angle-up,
+.fas-angle-up {
+  --fa: "\f106";
+}
+
+.far-drumstick-bite,
+.fas-drumstick-bite {
+  --fa: "\f6d7";
+}
+
+.far-holly-berry,
+.fas-holly-berry {
+  --fa: "\f7aa";
+}
+
+.far-chevron-left,
+.fas-chevron-left {
+  --fa: "\f053";
+}
+
+.far-bacteria,
+.fas-bacteria {
+  --fa: "\e059";
+}
+
+.far-hand-lizard,
+.fas-hand-lizard {
+  --fa: "\f258";
+}
+
+.far-notdef,
+.fas-notdef {
+  --fa: "\e1fe";
+}
+
+.far-disease,
+.fas-disease {
+  --fa: "\f7fa";
+}
+
+.far-briefcase-medical,
+.fas-briefcase-medical {
+  --fa: "\f469";
+}
+
+.far-genderless,
+.fas-genderless {
+  --fa: "\f22d";
+}
+
+.far-chevron-right,
+.fas-chevron-right {
+  --fa: "\f054";
+}
+
+.far-retweet,
+.fas-retweet {
+  --fa: "\f079";
+}
+
+.far-car-alt,
+.fas-car-alt,
+.far-car-rear,
+.fas-car-rear {
+  --fa: "\f5de";
+}
+
+.far-pump-soap,
+.fas-pump-soap {
+  --fa: "\e06b";
+}
+
+.far-video-slash,
+.fas-video-slash {
+  --fa: "\f4e2";
+}
+
+.far-battery-2,
+.fas-battery-2,
+.far-battery-quarter,
+.fas-battery-quarter {
+  --fa: "\f243";
+}
+
+.far-radio,
+.fas-radio {
+  --fa: "\f8d7";
+}
+
+.far-baby-carriage,
+.fas-baby-carriage,
+.far-carriage-baby,
+.fas-carriage-baby {
+  --fa: "\f77d";
+}
+
+.far-traffic-light,
+.fas-traffic-light {
+  --fa: "\f637";
+}
+
+.far-thermometer,
+.fas-thermometer {
+  --fa: "\f491";
+}
+
+.far-vr-cardboard,
+.fas-vr-cardboard {
+  --fa: "\f729";
+}
+
+.far-hand-middle-finger,
+.fas-hand-middle-finger {
+  --fa: "\f806";
+}
+
+.far-percent,
+.fas-percent,
+.far-percentage,
+.fas-percentage {
+  --fa: "\25";
+}
+
+.far-truck-moving,
+.fas-truck-moving {
+  --fa: "\f4df";
+}
+
+.far-glass-water-droplet,
+.fas-glass-water-droplet {
+  --fa: "\e4f5";
+}
+
+.far-display,
+.fas-display {
+  --fa: "\e163";
+}
+
+.far-face-smile,
+.fas-face-smile,
+.far-smile,
+.fas-smile {
+  --fa: "\f118";
+}
+
+.far-thumb-tack,
+.fas-thumb-tack,
+.far-thumbtack,
+.fas-thumbtack {
+  --fa: "\f08d";
+}
+
+.far-trophy,
+.fas-trophy {
+  --fa: "\f091";
+}
+
+.far-person-praying,
+.fas-person-praying,
+.far-pray,
+.fas-pray {
+  --fa: "\f683";
+}
+
+.far-hammer,
+.fas-hammer {
+  --fa: "\f6e3";
+}
+
+.far-hand-peace,
+.fas-hand-peace {
+  --fa: "\f25b";
+}
+
+.far-rotate,
+.fas-rotate,
+.far-sync-alt,
+.fas-sync-alt {
+  --fa: "\f2f1";
+}
+
+.far-spinner,
+.fas-spinner {
+  --fa: "\f110";
+}
+
+.far-robot,
+.fas-robot {
+  --fa: "\f544";
+}
+
+.far-peace,
+.fas-peace {
+  --fa: "\f67c";
+}
+
+.far-cogs,
+.fas-cogs,
+.far-gears,
+.fas-gears {
+  --fa: "\f085";
+}
+
+.far-warehouse,
+.fas-warehouse {
+  --fa: "\f494";
+}
+
+.far-arrow-up-right-dots,
+.fas-arrow-up-right-dots {
+  --fa: "\e4b7";
+}
+
+.far-splotch,
+.fas-splotch {
+  --fa: "\f5bc";
+}
+
+.far-face-grin-hearts,
+.fas-face-grin-hearts,
+.far-grin-hearts,
+.fas-grin-hearts {
+  --fa: "\f584";
+}
+
+.far-dice-four,
+.fas-dice-four {
+  --fa: "\f524";
+}
+
+.far-sim-card,
+.fas-sim-card {
+  --fa: "\f7c4";
+}
+
+.far-transgender,
+.fas-transgender,
+.far-transgender-alt,
+.fas-transgender-alt {
+  --fa: "\f225";
+}
+
+.far-mercury,
+.fas-mercury {
+  --fa: "\f223";
+}
+
+.far-arrow-turn-down,
+.fas-arrow-turn-down,
+.far-level-down,
+.fas-level-down {
+  --fa: "\f149";
+}
+
+.far-person-falling-burst,
+.fas-person-falling-burst {
+  --fa: "\e547";
+}
+
+.far-award,
+.fas-award {
+  --fa: "\f559";
+}
+
+.far-ticket-alt,
+.fas-ticket-alt,
+.far-ticket-simple,
+.fas-ticket-simple {
+  --fa: "\f3ff";
+}
+
+.far-building,
+.fas-building {
+  --fa: "\f1ad";
+}
+
+.far-angle-double-left,
+.fas-angle-double-left,
+.far-angles-left,
+.fas-angles-left {
+  --fa: "\f100";
+}
+
+.far-qrcode,
+.fas-qrcode {
+  --fa: "\f029";
+}
+
+.far-clock-rotate-left,
+.fas-clock-rotate-left,
+.far-history,
+.fas-history {
+  --fa: "\f1da";
+}
+
+.far-face-grin-beam-sweat,
+.fas-face-grin-beam-sweat,
+.far-grin-beam-sweat,
+.fas-grin-beam-sweat {
+  --fa: "\f583";
+}
+
+.far-arrow-right-from-file,
+.fas-arrow-right-from-file,
+.far-file-export,
+.fas-file-export {
+  --fa: "\f56e";
+}
+
+.far-shield,
+.fas-shield,
+.far-shield-blank,
+.fas-shield-blank {
+  --fa: "\f132";
+}
+
+.far-arrow-up-short-wide,
+.fas-arrow-up-short-wide,
+.far-sort-amount-up-alt,
+.fas-sort-amount-up-alt {
+  --fa: "\f885";
+}
+
+.far-comment-nodes,
+.fas-comment-nodes {
+  --fa: "\e696";
+}
+
+.far-house-medical,
+.fas-house-medical {
+  --fa: "\e3b2";
+}
+
+.far-golf-ball,
+.fas-golf-ball,
+.far-golf-ball-tee,
+.fas-golf-ball-tee {
+  --fa: "\f450";
+}
+
+.far-chevron-circle-left,
+.fas-chevron-circle-left,
+.far-circle-chevron-left,
+.fas-circle-chevron-left {
+  --fa: "\f137";
+}
+
+.far-house-chimney-window,
+.fas-house-chimney-window {
+  --fa: "\e00d";
+}
+
+.far-pen-nib,
+.fas-pen-nib {
+  --fa: "\f5ad";
+}
+
+.far-tent-arrow-turn-left,
+.fas-tent-arrow-turn-left {
+  --fa: "\e580";
+}
+
+.far-tents,
+.fas-tents {
+  --fa: "\e582";
+}
+
+.far-magic,
+.fas-magic,
+.far-wand-magic,
+.fas-wand-magic {
+  --fa: "\f0d0";
+}
+
+.far-dog,
+.fas-dog {
+  --fa: "\f6d3";
+}
+
+.far-carrot,
+.fas-carrot {
+  --fa: "\f787";
+}
+
+.far-moon,
+.fas-moon {
+  --fa: "\f186";
+}
+
+.far-wine-glass-alt,
+.fas-wine-glass-alt,
+.far-wine-glass-empty,
+.fas-wine-glass-empty {
+  --fa: "\f5ce";
+}
+
+.far-cheese,
+.fas-cheese {
+  --fa: "\f7ef";
+}
+
+.far-yin-yang,
+.fas-yin-yang {
+  --fa: "\f6ad";
+}
+
+.far-music,
+.fas-music {
+  --fa: "\f001";
+}
+
+.far-code-commit,
+.fas-code-commit {
+  --fa: "\f386";
+}
+
+.far-temperature-low,
+.fas-temperature-low {
+  --fa: "\f76b";
+}
+
+.far-biking,
+.fas-biking,
+.far-person-biking,
+.fas-person-biking {
+  --fa: "\f84a";
+}
+
+.far-broom,
+.fas-broom {
+  --fa: "\f51a";
+}
+
+.far-shield-heart,
+.fas-shield-heart {
+  --fa: "\e574";
+}
+
+.far-gopuram,
+.fas-gopuram {
+  --fa: "\f664";
+}
+
+.far-earth-oceania,
+.fas-earth-oceania,
+.far-globe-oceania,
+.fas-globe-oceania {
+  --fa: "\e47b";
+}
+
+.far-square-xmark,
+.fas-square-xmark,
+.far-times-square,
+.fas-times-square,
+.far-xmark-square,
+.fas-xmark-square {
+  --fa: "\f2d3";
+}
+
+.far-hashtag,
+.fas-hashtag {
+  --fa: "\23";
+}
+
+.far-expand-alt,
+.fas-expand-alt,
+.far-up-right-and-down-left-from-center,
+.fas-up-right-and-down-left-from-center {
+  --fa: "\f424";
+}
+
+.far-oil-can,
+.fas-oil-can {
+  --fa: "\f613";
+}
+
+.far-t,
+.fas-t {
+  --fa: "\54";
+}
+
+.far-hippo,
+.fas-hippo {
+  --fa: "\f6ed";
+}
+
+.far-chart-column,
+.fas-chart-column {
+  --fa: "\e0e3";
+}
+
+.far-infinity,
+.fas-infinity {
+  --fa: "\f534";
+}
+
+.far-vial-circle-check,
+.fas-vial-circle-check {
+  --fa: "\e596";
+}
+
+.far-person-arrow-down-to-line,
+.fas-person-arrow-down-to-line {
+  --fa: "\e538";
+}
+
+.far-voicemail,
+.fas-voicemail {
+  --fa: "\f897";
+}
+
+.far-fan,
+.fas-fan {
+  --fa: "\f863";
+}
+
+.far-person-walking-luggage,
+.fas-person-walking-luggage {
+  --fa: "\e554";
+}
+
+.far-arrows-alt-v,
+.fas-arrows-alt-v,
+.far-up-down,
+.fas-up-down {
+  --fa: "\f338";
+}
+
+.far-cloud-moon-rain,
+.fas-cloud-moon-rain {
+  --fa: "\f73c";
+}
+
+.far-calendar,
+.fas-calendar {
+  --fa: "\f133";
+}
+
+.far-trailer,
+.fas-trailer {
+  --fa: "\e041";
+}
+
+.far-bahai,
+.fas-bahai,
+.far-haykal,
+.fas-haykal {
+  --fa: "\f666";
+}
+
+.far-sd-card,
+.fas-sd-card {
+  --fa: "\f7c2";
+}
+
+.far-dragon,
+.fas-dragon {
+  --fa: "\f6d5";
+}
+
+.far-shoe-prints,
+.fas-shoe-prints {
+  --fa: "\f54b";
+}
+
+.far-circle-plus,
+.fas-circle-plus,
+.far-plus-circle,
+.fas-plus-circle {
+  --fa: "\f055";
+}
+
+.far-face-grin-tongue-wink,
+.fas-face-grin-tongue-wink,
+.far-grin-tongue-wink,
+.fas-grin-tongue-wink {
+  --fa: "\f58b";
+}
+
+.far-hand-holding,
+.fas-hand-holding {
+  --fa: "\f4bd";
+}
+
+.far-plug-circle-exclamation,
+.fas-plug-circle-exclamation {
+  --fa: "\e55d";
+}
+
+.far-chain-broken,
+.fas-chain-broken,
+.far-chain-slash,
+.fas-chain-slash,
+.far-link-slash,
+.fas-link-slash,
+.far-unlink,
+.fas-unlink {
+  --fa: "\f127";
+}
+
+.far-clone,
+.fas-clone {
+  --fa: "\f24d";
+}
+
+.far-person-walking-arrow-loop-left,
+.fas-person-walking-arrow-loop-left {
+  --fa: "\e551";
+}
+
+.far-arrow-up-z-a,
+.fas-arrow-up-z-a,
+.far-sort-alpha-up-alt,
+.fas-sort-alpha-up-alt {
+  --fa: "\f882";
+}
+
+.far-fire-alt,
+.fas-fire-alt,
+.far-fire-flame-curved,
+.fas-fire-flame-curved {
+  --fa: "\f7e4";
+}
+
+.far-tornado,
+.fas-tornado {
+  --fa: "\f76f";
+}
+
+.far-file-circle-plus,
+.fas-file-circle-plus {
+  --fa: "\e494";
+}
+
+.far-book-quran,
+.fas-book-quran,
+.far-quran,
+.fas-quran {
+  --fa: "\f687";
+}
+
+.far-anchor,
+.fas-anchor {
+  --fa: "\f13d";
+}
+
+.far-border-all,
+.fas-border-all {
+  --fa: "\f84c";
+}
+
+.far-angry,
+.fas-angry,
+.far-face-angry,
+.fas-face-angry {
+  --fa: "\f556";
+}
+
+.far-cookie-bite,
+.fas-cookie-bite {
+  --fa: "\f564";
+}
+
+.far-arrow-trend-down,
+.fas-arrow-trend-down {
+  --fa: "\e097";
+}
+
+.far-feed,
+.fas-feed,
+.far-rss,
+.fas-rss {
+  --fa: "\f09e";
+}
+
+.far-draw-polygon,
+.fas-draw-polygon {
+  --fa: "\f5ee";
+}
+
+.far-balance-scale,
+.fas-balance-scale,
+.far-scale-balanced,
+.fas-scale-balanced {
+  --fa: "\f24e";
+}
+
+.far-gauge-simple-high,
+.fas-gauge-simple-high,
+.far-tachometer,
+.fas-tachometer,
+.far-tachometer-fast,
+.fas-tachometer-fast {
+  --fa: "\f62a";
+}
+
+.far-shower,
+.fas-shower {
+  --fa: "\f2cc";
+}
+
+.far-desktop,
+.fas-desktop,
+.far-desktop-alt,
+.fas-desktop-alt {
+  --fa: "\f390";
+}
+
+.far-m,
+.fas-m {
+  --fa: "\4d";
+}
+
+.far-table-list,
+.fas-table-list,
+.far-th-list,
+.fas-th-list {
+  --fa: "\f00b";
+}
+
+.far-comment-sms,
+.fas-comment-sms,
+.far-sms,
+.fas-sms {
+  --fa: "\f7cd";
+}
+
+.far-book,
+.fas-book {
+  --fa: "\f02d";
+}
+
+.far-user-plus,
+.fas-user-plus {
+  --fa: "\f234";
+}
+
+.far-check,
+.fas-check {
+  --fa: "\f00c";
+}
+
+.far-battery-4,
+.fas-battery-4,
+.far-battery-three-quarters,
+.fas-battery-three-quarters {
+  --fa: "\f241";
+}
+
+.far-house-circle-check,
+.fas-house-circle-check {
+  --fa: "\e509";
+}
+
+.far-angle-left,
+.fas-angle-left {
+  --fa: "\f104";
+}
+
+.far-diagram-successor,
+.fas-diagram-successor {
+  --fa: "\e47a";
+}
+
+.far-truck-arrow-right,
+.fas-truck-arrow-right {
+  --fa: "\e58b";
+}
+
+.far-arrows-split-up-and-left,
+.fas-arrows-split-up-and-left {
+  --fa: "\e4bc";
+}
+
+.far-fist-raised,
+.fas-fist-raised,
+.far-hand-fist,
+.fas-hand-fist {
+  --fa: "\f6de";
+}
+
+.far-cloud-moon,
+.fas-cloud-moon {
+  --fa: "\f6c3";
+}
+
+.far-briefcase,
+.fas-briefcase {
+  --fa: "\f0b1";
+}
+
+.far-person-falling,
+.fas-person-falling {
+  --fa: "\e546";
+}
+
+.far-image-portrait,
+.fas-image-portrait,
+.far-portrait,
+.fas-portrait {
+  --fa: "\f3e0";
+}
+
+.far-user-tag,
+.fas-user-tag {
+  --fa: "\f507";
+}
+
+.far-rug,
+.fas-rug {
+  --fa: "\e569";
+}
+
+.far-earth-europe,
+.fas-earth-europe,
+.far-globe-europe,
+.fas-globe-europe {
+  --fa: "\f7a2";
+}
+
+.far-cart-flatbed-suitcase,
+.fas-cart-flatbed-suitcase,
+.far-luggage-cart,
+.fas-luggage-cart {
+  --fa: "\f59d";
+}
+
+.far-rectangle-times,
+.fas-rectangle-times,
+.far-rectangle-xmark,
+.fas-rectangle-xmark,
+.far-times-rectangle,
+.fas-times-rectangle,
+.far-window-close,
+.fas-window-close {
+  --fa: "\f410";
+}
+
+.far-baht-sign,
+.fas-baht-sign {
+  --fa: "\e0ac";
+}
+
+.far-book-open,
+.fas-book-open {
+  --fa: "\f518";
+}
+
+.far-book-journal-whills,
+.fas-book-journal-whills,
+.far-journal-whills,
+.fas-journal-whills {
+  --fa: "\f66a";
+}
+
+.far-handcuffs,
+.fas-handcuffs {
+  --fa: "\e4f8";
+}
+
+.far-exclamation-triangle,
+.fas-exclamation-triangle,
+.far-triangle-exclamation,
+.fas-triangle-exclamation,
+.far-warning,
+.fas-warning {
+  --fa: "\f071";
+}
+
+.far-database,
+.fas-database {
+  --fa: "\f1c0";
+}
+
+.far-mail-forward,
+.fas-mail-forward,
+.far-share,
+.fas-share {
+  --fa: "\f064";
+}
+
+.far-bottle-droplet,
+.fas-bottle-droplet {
+  --fa: "\e4c4";
+}
+
+.far-mask-face,
+.fas-mask-face {
+  --fa: "\e1d7";
+}
+
+.far-hill-rockslide,
+.fas-hill-rockslide {
+  --fa: "\e508";
+}
+
+.far-exchange-alt,
+.fas-exchange-alt,
+.far-right-left,
+.fas-right-left {
+  --fa: "\f362";
+}
+
+.far-paper-plane,
+.fas-paper-plane {
+  --fa: "\f1d8";
+}
+
+.far-road-circle-exclamation,
+.fas-road-circle-exclamation {
+  --fa: "\e565";
+}
+
+.far-dungeon,
+.fas-dungeon {
+  --fa: "\f6d9";
+}
+
+.far-align-right,
+.fas-align-right {
+  --fa: "\f038";
+}
+
+.far-money-bill-1-wave,
+.fas-money-bill-1-wave,
+.far-money-bill-wave-alt,
+.fas-money-bill-wave-alt {
+  --fa: "\f53b";
+}
+
+.far-life-ring,
+.fas-life-ring {
+  --fa: "\f1cd";
+}
+
+.far-hands,
+.fas-hands,
+.far-sign-language,
+.fas-sign-language,
+.far-signing,
+.fas-signing {
+  --fa: "\f2a7";
+}
+
+.far-calendar-day,
+.fas-calendar-day {
+  --fa: "\f783";
+}
+
+.far-ladder-water,
+.fas-ladder-water,
+.far-swimming-pool,
+.fas-swimming-pool,
+.far-water-ladder,
+.fas-water-ladder {
+  --fa: "\f5c5";
+}
+
+.far-arrows-up-down,
+.fas-arrows-up-down,
+.far-arrows-v,
+.fas-arrows-v {
+  --fa: "\f07d";
+}
+
+.far-face-grimace,
+.fas-face-grimace,
+.far-grimace,
+.fas-grimace {
+  --fa: "\f57f";
+}
+
+.far-wheelchair-alt,
+.fas-wheelchair-alt,
+.far-wheelchair-move,
+.fas-wheelchair-move {
+  --fa: "\e2ce";
+}
+
+.far-level-down-alt,
+.fas-level-down-alt,
+.far-turn-down,
+.fas-turn-down {
+  --fa: "\f3be";
+}
+
+.far-person-walking-arrow-right,
+.fas-person-walking-arrow-right {
+  --fa: "\e552";
+}
+
+.far-envelope-square,
+.fas-envelope-square,
+.far-square-envelope,
+.fas-square-envelope {
+  --fa: "\f199";
+}
+
+.far-dice,
+.fas-dice {
+  --fa: "\f522";
+}
+
+.far-bowling-ball,
+.fas-bowling-ball {
+  --fa: "\f436";
+}
+
+.far-brain,
+.fas-brain {
+  --fa: "\f5dc";
+}
+
+.far-band-aid,
+.fas-band-aid,
+.far-bandage,
+.fas-bandage {
+  --fa: "\f462";
+}
+
+.far-calendar-minus,
+.fas-calendar-minus {
+  --fa: "\f272";
+}
+
+.far-circle-xmark,
+.fas-circle-xmark,
+.far-times-circle,
+.fas-times-circle,
+.far-xmark-circle,
+.fas-xmark-circle {
+  --fa: "\f057";
+}
+
+.far-gifts,
+.fas-gifts {
+  --fa: "\f79c";
+}
+
+.far-hotel,
+.fas-hotel {
+  --fa: "\f594";
+}
+
+.far-earth-asia,
+.fas-earth-asia,
+.far-globe-asia,
+.fas-globe-asia {
+  --fa: "\f57e";
+}
+
+.far-id-card-alt,
+.fas-id-card-alt,
+.far-id-card-clip,
+.fas-id-card-clip {
+  --fa: "\f47f";
+}
+
+.far-magnifying-glass-plus,
+.fas-magnifying-glass-plus,
+.far-search-plus,
+.fas-search-plus {
+  --fa: "\f00e";
+}
+
+.far-thumbs-up,
+.fas-thumbs-up {
+  --fa: "\f164";
+}
+
+.far-user-clock,
+.fas-user-clock {
+  --fa: "\f4fd";
+}
+
+.far-allergies,
+.fas-allergies,
+.far-hand-dots,
+.fas-hand-dots {
+  --fa: "\f461";
+}
+
+.far-file-invoice,
+.fas-file-invoice {
+  --fa: "\f570";
+}
+
+.far-window-minimize,
+.fas-window-minimize {
+  --fa: "\f2d1";
+}
+
+.far-coffee,
+.fas-coffee,
+.far-mug-saucer,
+.fas-mug-saucer {
+  --fa: "\f0f4";
+}
+
+.far-brush,
+.fas-brush {
+  --fa: "\f55d";
+}
+
+.far-file-half-dashed,
+.fas-file-half-dashed {
+  --fa: "\e698";
+}
+
+.far-mask,
+.fas-mask {
+  --fa: "\f6fa";
+}
+
+.far-magnifying-glass-minus,
+.fas-magnifying-glass-minus,
+.far-search-minus,
+.fas-search-minus {
+  --fa: "\f010";
+}
+
+.far-ruler-vertical,
+.fas-ruler-vertical {
+  --fa: "\f548";
+}
+
+.far-user-alt,
+.fas-user-alt,
+.far-user-large,
+.fas-user-large {
+  --fa: "\f406";
+}
+
+.far-train-tram,
+.fas-train-tram {
+  --fa: "\e5b4";
+}
+
+.far-user-nurse,
+.fas-user-nurse {
+  --fa: "\f82f";
+}
+
+.far-syringe,
+.fas-syringe {
+  --fa: "\f48e";
+}
+
+.far-cloud-sun,
+.fas-cloud-sun {
+  --fa: "\f6c4";
+}
+
+.far-stopwatch-20,
+.fas-stopwatch-20 {
+  --fa: "\e06f";
+}
+
+.far-square-full,
+.fas-square-full {
+  --fa: "\f45c";
+}
+
+.far-magnet,
+.fas-magnet {
+  --fa: "\f076";
+}
+
+.far-jar,
+.fas-jar {
+  --fa: "\e516";
+}
+
+.far-note-sticky,
+.fas-note-sticky,
+.far-sticky-note,
+.fas-sticky-note {
+  --fa: "\f249";
+}
+
+.far-bug-slash,
+.fas-bug-slash {
+  --fa: "\e490";
+}
+
+.far-arrow-up-from-water-pump,
+.fas-arrow-up-from-water-pump {
+  --fa: "\e4b6";
+}
+
+.far-bone,
+.fas-bone {
+  --fa: "\f5d7";
+}
+
+.far-table-cells-row-unlock,
+.fas-table-cells-row-unlock {
+  --fa: "\e691";
+}
+
+.far-user-injured,
+.fas-user-injured {
+  --fa: "\f728";
+}
+
+.far-face-sad-tear,
+.fas-face-sad-tear,
+.far-sad-tear,
+.fas-sad-tear {
+  --fa: "\f5b4";
+}
+
+.far-plane,
+.fas-plane {
+  --fa: "\f072";
+}
+
+.far-tent-arrows-down,
+.fas-tent-arrows-down {
+  --fa: "\e581";
+}
+
+.far-exclamation,
+.fas-exclamation {
+  --fa: "\21";
+}
+
+.far-arrows-spin,
+.fas-arrows-spin {
+  --fa: "\e4bb";
+}
+
+.far-print,
+.fas-print {
+  --fa: "\f02f";
+}
+
+.far-try,
+.fas-try,
+.far-turkish-lira,
+.fas-turkish-lira,
+.far-turkish-lira-sign,
+.fas-turkish-lira-sign {
+  --fa: "\e2bb";
+}
+
+.far-dollar,
+.fas-dollar,
+.far-dollar-sign,
+.fas-dollar-sign,
+.far-usd,
+.fas-usd {
+  --fa: "\24";
+}
+
+.far-x,
+.fas-x {
+  --fa: "\58";
+}
+
+.far-magnifying-glass-dollar,
+.fas-magnifying-glass-dollar,
+.far-search-dollar,
+.fas-search-dollar {
+  --fa: "\f688";
+}
+
+.far-users-cog,
+.fas-users-cog,
+.far-users-gear,
+.fas-users-gear {
+  --fa: "\f509";
+}
+
+.far-person-military-pointing,
+.fas-person-military-pointing {
+  --fa: "\e54a";
+}
+
+.far-bank,
+.fas-bank,
+.far-building-columns,
+.fas-building-columns,
+.far-institution,
+.fas-institution,
+.far-museum,
+.fas-museum,
+.far-university,
+.fas-university {
+  --fa: "\f19c";
+}
+
+.far-umbrella,
+.fas-umbrella {
+  --fa: "\f0e9";
+}
+
+.far-trowel,
+.fas-trowel {
+  --fa: "\e589";
+}
+
+.far-d,
+.fas-d {
+  --fa: "\44";
+}
+
+.far-stapler,
+.fas-stapler {
+  --fa: "\e5af";
+}
+
+.far-masks-theater,
+.fas-masks-theater,
+.far-theater-masks,
+.fas-theater-masks {
+  --fa: "\f630";
+}
+
+.far-kip-sign,
+.fas-kip-sign {
+  --fa: "\e1c4";
+}
+
+.far-hand-point-left,
+.fas-hand-point-left {
+  --fa: "\f0a5";
+}
+
+.far-handshake-alt,
+.fas-handshake-alt,
+.far-handshake-simple,
+.fas-handshake-simple {
+  --fa: "\f4c6";
+}
+
+.far-fighter-jet,
+.fas-fighter-jet,
+.far-jet-fighter,
+.fas-jet-fighter {
+  --fa: "\f0fb";
+}
+
+.far-share-alt-square,
+.fas-share-alt-square,
+.far-square-share-nodes,
+.fas-square-share-nodes {
+  --fa: "\f1e1";
+}
+
+.far-barcode,
+.fas-barcode {
+  --fa: "\f02a";
+}
+
+.far-plus-minus,
+.fas-plus-minus {
+  --fa: "\e43c";
+}
+
+.far-video,
+.fas-video,
+.far-video-camera,
+.fas-video-camera {
+  --fa: "\f03d";
+}
+
+.far-graduation-cap,
+.fas-graduation-cap,
+.far-mortar-board,
+.fas-mortar-board {
+  --fa: "\f19d";
+}
+
+.far-hand-holding-medical,
+.fas-hand-holding-medical {
+  --fa: "\e05c";
+}
+
+.far-person-circle-check,
+.fas-person-circle-check {
+  --fa: "\e53e";
+}
+
+.far-level-up-alt,
+.fas-level-up-alt,
+.far-turn-up,
+.fas-turn-up {
+  --fa: "\f3bf";
+}
+
+.far-sr-only,
+.fas-sr-only,
+.far-sr-only-focusable:not(:focus),
+.fas-sr-only-focusable:not(:focus),
+.sr-only,
+.sr-only-focusable:not(:focus) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+:host,
+:root {
+  --fa-style-family-brands: "Font Awesome 6 Brands";
+  --fa-font-brands: normal 400 1em/1 "Font Awesome 6 Brands";
+}
+
+.far-brands,
+.fas-brands,
+.fab {
+  font-weight: 400;
+}
+
+.far-monero,
+.fas-monero {
+  --fa: "\f3d0";
+}
+
+.far-hooli,
+.fas-hooli {
+  --fa: "\f427";
+}
+
+.far-yelp,
+.fas-yelp {
+  --fa: "\f1e9";
+}
+
+.far-cc-visa,
+.fas-cc-visa {
+  --fa: "\f1f0";
+}
+
+.far-lastfm,
+.fas-lastfm {
+  --fa: "\f202";
+}
+
+.far-shopware,
+.fas-shopware {
+  --fa: "\f5b5";
+}
+
+.far-creative-commons-nc,
+.fas-creative-commons-nc {
+  --fa: "\f4e8";
+}
+
+.far-aws,
+.fas-aws {
+  --fa: "\f375";
+}
+
+.far-redhat,
+.fas-redhat {
+  --fa: "\f7bc";
+}
+
+.far-yoast,
+.fas-yoast {
+  --fa: "\f2b1";
+}
+
+.far-cloudflare,
+.fas-cloudflare {
+  --fa: "\e07d";
+}
+
+.far-ups,
+.fas-ups {
+  --fa: "\f7e0";
+}
+
+.far-pixiv,
+.fas-pixiv {
+  --fa: "\e640";
+}
+
+.far-wpexplorer,
+.fas-wpexplorer {
+  --fa: "\f2de";
+}
+
+.far-dyalog,
+.fas-dyalog {
+  --fa: "\f399";
+}
+
+.far-bity,
+.fas-bity {
+  --fa: "\f37a";
+}
+
+.far-stackpath,
+.fas-stackpath {
+  --fa: "\f842";
+}
+
+.far-buysellads,
+.fas-buysellads {
+  --fa: "\f20d";
+}
+
+.far-first-order,
+.fas-first-order {
+  --fa: "\f2b0";
+}
+
+.far-modx,
+.fas-modx {
+  --fa: "\f285";
+}
+
+.far-guilded,
+.fas-guilded {
+  --fa: "\e07e";
+}
+
+.far-vnv,
+.fas-vnv {
+  --fa: "\f40b";
+}
+
+.far-js-square,
+.fas-js-square,
+.far-square-js,
+.fas-square-js {
+  --fa: "\f3b9";
+}
+
+.far-microsoft,
+.fas-microsoft {
+  --fa: "\f3ca";
+}
+
+.far-qq,
+.fas-qq {
+  --fa: "\f1d6";
+}
+
+.far-orcid,
+.fas-orcid {
+  --fa: "\f8d2";
+}
+
+.far-java,
+.fas-java {
+  --fa: "\f4e4";
+}
+
+.far-invision,
+.fas-invision {
+  --fa: "\f7b0";
+}
+
+.far-creative-commons-pd-alt,
+.fas-creative-commons-pd-alt {
+  --fa: "\f4ed";
+}
+
+.far-centercode,
+.fas-centercode {
+  --fa: "\f380";
+}
+
+.far-glide-g,
+.fas-glide-g {
+  --fa: "\f2a6";
+}
+
+.far-drupal,
+.fas-drupal {
+  --fa: "\f1a9";
+}
+
+.far-jxl,
+.fas-jxl {
+  --fa: "\e67b";
+}
+
+.far-dart-lang,
+.fas-dart-lang {
+  --fa: "\e693";
+}
+
+.far-hire-a-helper,
+.fas-hire-a-helper {
+  --fa: "\f3b0";
+}
+
+.far-creative-commons-by,
+.fas-creative-commons-by {
+  --fa: "\f4e7";
+}
+
+.far-unity,
+.fas-unity {
+  --fa: "\e049";
+}
+
+.far-whmcs,
+.fas-whmcs {
+  --fa: "\f40d";
+}
+
+.far-rocketchat,
+.fas-rocketchat {
+  --fa: "\f3e8";
+}
+
+.far-vk,
+.fas-vk {
+  --fa: "\f189";
+}
+
+.far-untappd,
+.fas-untappd {
+  --fa: "\f405";
+}
+
+.far-mailchimp,
+.fas-mailchimp {
+  --fa: "\f59e";
+}
+
+.far-css3-alt,
+.fas-css3-alt {
+  --fa: "\f38b";
+}
+
+.far-reddit-square,
+.fas-reddit-square,
+.far-square-reddit,
+.fas-square-reddit {
+  --fa: "\f1a2";
+}
+
+.far-vimeo-v,
+.fas-vimeo-v {
+  --fa: "\f27d";
+}
+
+.far-contao,
+.fas-contao {
+  --fa: "\f26d";
+}
+
+.far-square-font-awesome,
+.fas-square-font-awesome {
+  --fa: "\e5ad";
+}
+
+.far-deskpro,
+.fas-deskpro {
+  --fa: "\f38f";
+}
+
+.far-brave,
+.fas-brave {
+  --fa: "\e63c";
+}
+
+.far-sistrix,
+.fas-sistrix {
+  --fa: "\f3ee";
+}
+
+.far-instagram-square,
+.fas-instagram-square,
+.far-square-instagram,
+.fas-square-instagram {
+  --fa: "\e055";
+}
+
+.far-battle-net,
+.fas-battle-net {
+  --fa: "\f835";
+}
+
+.far-the-red-yeti,
+.fas-the-red-yeti {
+  --fa: "\f69d";
+}
+
+.far-hacker-news-square,
+.fas-hacker-news-square,
+.far-square-hacker-news,
+.fas-square-hacker-news {
+  --fa: "\f3af";
+}
+
+.far-edge,
+.fas-edge {
+  --fa: "\f282";
+}
+
+.far-threads,
+.fas-threads {
+  --fa: "\e618";
+}
+
+.far-napster,
+.fas-napster {
+  --fa: "\f3d2";
+}
+
+.far-snapchat-square,
+.fas-snapchat-square,
+.far-square-snapchat,
+.fas-square-snapchat {
+  --fa: "\f2ad";
+}
+
+.far-google-plus-g,
+.fas-google-plus-g {
+  --fa: "\f0d5";
+}
+
+.far-artstation,
+.fas-artstation {
+  --fa: "\f77a";
+}
+
+.far-markdown,
+.fas-markdown {
+  --fa: "\f60f";
+}
+
+.far-sourcetree,
+.fas-sourcetree {
+  --fa: "\f7d3";
+}
+
+.far-google-plus,
+.fas-google-plus {
+  --fa: "\f2b3";
+}
+
+.far-diaspora,
+.fas-diaspora {
+  --fa: "\f791";
+}
+
+.far-foursquare,
+.fas-foursquare {
+  --fa: "\f180";
+}
+
+.far-stack-overflow,
+.fas-stack-overflow {
+  --fa: "\f16c";
+}
+
+.far-github-alt,
+.fas-github-alt {
+  --fa: "\f113";
+}
+
+.far-phoenix-squadron,
+.fas-phoenix-squadron {
+  --fa: "\f511";
+}
+
+.far-pagelines,
+.fas-pagelines {
+  --fa: "\f18c";
+}
+
+.far-algolia,
+.fas-algolia {
+  --fa: "\f36c";
+}
+
+.far-red-river,
+.fas-red-river {
+  --fa: "\f3e3";
+}
+
+.far-creative-commons-sa,
+.fas-creative-commons-sa {
+  --fa: "\f4ef";
+}
+
+.far-safari,
+.fas-safari {
+  --fa: "\f267";
+}
+
+.far-google,
+.fas-google {
+  --fa: "\f1a0";
+}
+
+.far-font-awesome-alt,
+.fas-font-awesome-alt,
+.far-square-font-awesome-stroke,
+.fas-square-font-awesome-stroke {
+  --fa: "\f35c";
+}
+
+.far-atlassian,
+.fas-atlassian {
+  --fa: "\f77b";
+}
+
+.far-linkedin-in,
+.fas-linkedin-in {
+  --fa: "\f0e1";
+}
+
+.far-digital-ocean,
+.fas-digital-ocean {
+  --fa: "\f391";
+}
+
+.far-nimblr,
+.fas-nimblr {
+  --fa: "\f5a8";
+}
+
+.far-chromecast,
+.fas-chromecast {
+  --fa: "\f838";
+}
+
+.far-evernote,
+.fas-evernote {
+  --fa: "\f839";
+}
+
+.far-hacker-news,
+.fas-hacker-news {
+  --fa: "\f1d4";
+}
+
+.far-creative-commons-sampling,
+.fas-creative-commons-sampling {
+  --fa: "\f4f0";
+}
+
+.far-adversal,
+.fas-adversal {
+  --fa: "\f36a";
+}
+
+.far-creative-commons,
+.fas-creative-commons {
+  --fa: "\f25e";
+}
+
+.far-watchman-monitoring,
+.fas-watchman-monitoring {
+  --fa: "\e087";
+}
+
+.far-fonticons,
+.fas-fonticons {
+  --fa: "\f280";
+}
+
+.far-weixin,
+.fas-weixin {
+  --fa: "\f1d7";
+}
+
+.far-shirtsinbulk,
+.fas-shirtsinbulk {
+  --fa: "\f214";
+}
+
+.far-codepen,
+.fas-codepen {
+  --fa: "\f1cb";
+}
+
+.far-git-alt,
+.fas-git-alt {
+  --fa: "\f841";
+}
+
+.far-lyft,
+.fas-lyft {
+  --fa: "\f3c3";
+}
+
+.far-rev,
+.fas-rev {
+  --fa: "\f5b2";
+}
+
+.far-windows,
+.fas-windows {
+  --fa: "\f17a";
+}
+
+.far-wizards-of-the-coast,
+.fas-wizards-of-the-coast {
+  --fa: "\f730";
+}
+
+.far-square-viadeo,
+.fas-square-viadeo,
+.far-viadeo-square,
+.fas-viadeo-square {
+  --fa: "\f2aa";
+}
+
+.far-meetup,
+.fas-meetup {
+  --fa: "\f2e0";
+}
+
+.far-centos,
+.fas-centos {
+  --fa: "\f789";
+}
+
+.far-adn,
+.fas-adn {
+  --fa: "\f170";
+}
+
+.far-cloudsmith,
+.fas-cloudsmith {
+  --fa: "\f384";
+}
+
+.far-opensuse,
+.fas-opensuse {
+  --fa: "\e62b";
+}
+
+.far-pied-piper-alt,
+.fas-pied-piper-alt {
+  --fa: "\f1a8";
+}
+
+.far-dribbble-square,
+.fas-dribbble-square,
+.far-square-dribbble,
+.fas-square-dribbble {
+  --fa: "\f397";
+}
+
+.far-codiepie,
+.fas-codiepie {
+  --fa: "\f284";
+}
+
+.far-node,
+.fas-node {
+  --fa: "\f419";
+}
+
+.far-mix,
+.fas-mix {
+  --fa: "\f3cb";
+}
+
+.far-steam,
+.fas-steam {
+  --fa: "\f1b6";
+}
+
+.far-cc-apple-pay,
+.fas-cc-apple-pay {
+  --fa: "\f416";
+}
+
+.far-scribd,
+.fas-scribd {
+  --fa: "\f28a";
+}
+
+.far-debian,
+.fas-debian {
+  --fa: "\e60b";
+}
+
+.far-openid,
+.fas-openid {
+  --fa: "\f19b";
+}
+
+.far-instalod,
+.fas-instalod {
+  --fa: "\e081";
+}
+
+.far-files-pinwheel,
+.fas-files-pinwheel {
+  --fa: "\e69f";
+}
+
+.far-expeditedssl,
+.fas-expeditedssl {
+  --fa: "\f23e";
+}
+
+.far-sellcast,
+.fas-sellcast {
+  --fa: "\f2da";
+}
+
+.far-square-twitter,
+.fas-square-twitter,
+.far-twitter-square,
+.fas-twitter-square {
+  --fa: "\f081";
+}
+
+.far-r-project,
+.fas-r-project {
+  --fa: "\f4f7";
+}
+
+.far-delicious,
+.fas-delicious {
+  --fa: "\f1a5";
+}
+
+.far-freebsd,
+.fas-freebsd {
+  --fa: "\f3a4";
+}
+
+.far-vuejs,
+.fas-vuejs {
+  --fa: "\f41f";
+}
+
+.far-accusoft,
+.fas-accusoft {
+  --fa: "\f369";
+}
+
+.far-ioxhost,
+.fas-ioxhost {
+  --fa: "\f208";
+}
+
+.far-fonticons-fi,
+.fas-fonticons-fi {
+  --fa: "\f3a2";
+}
+
+.far-app-store,
+.fas-app-store {
+  --fa: "\f36f";
+}
+
+.far-cc-mastercard,
+.fas-cc-mastercard {
+  --fa: "\f1f1";
+}
+
+.far-itunes-note,
+.fas-itunes-note {
+  --fa: "\f3b5";
+}
+
+.far-golang,
+.fas-golang {
+  --fa: "\e40f";
+}
+
+.far-kickstarter,
+.fas-kickstarter,
+.far-square-kickstarter,
+.fas-square-kickstarter {
+  --fa: "\f3bb";
+}
+
+.far-grav,
+.fas-grav {
+  --fa: "\f2d6";
+}
+
+.far-weibo,
+.fas-weibo {
+  --fa: "\f18a";
+}
+
+.far-uncharted,
+.fas-uncharted {
+  --fa: "\e084";
+}
+
+.far-firstdraft,
+.fas-firstdraft {
+  --fa: "\f3a1";
+}
+
+.far-square-youtube,
+.fas-square-youtube,
+.far-youtube-square,
+.fas-youtube-square {
+  --fa: "\f431";
+}
+
+.far-wikipedia-w,
+.fas-wikipedia-w {
+  --fa: "\f266";
+}
+
+.far-rendact,
+.fas-rendact,
+.far-wpressr,
+.fas-wpressr {
+  --fa: "\f3e4";
+}
+
+.far-angellist,
+.fas-angellist {
+  --fa: "\f209";
+}
+
+.far-galactic-republic,
+.fas-galactic-republic {
+  --fa: "\f50c";
+}
+
+.far-nfc-directional,
+.fas-nfc-directional {
+  --fa: "\e530";
+}
+
+.far-skype,
+.fas-skype {
+  --fa: "\f17e";
+}
+
+.far-joget,
+.fas-joget {
+  --fa: "\f3b7";
+}
+
+.far-fedora,
+.fas-fedora {
+  --fa: "\f798";
+}
+
+.far-stripe-s,
+.fas-stripe-s {
+  --fa: "\f42a";
+}
+
+.far-meta,
+.fas-meta {
+  --fa: "\e49b";
+}
+
+.far-laravel,
+.fas-laravel {
+  --fa: "\f3bd";
+}
+
+.far-hotjar,
+.fas-hotjar {
+  --fa: "\f3b1";
+}
+
+.far-bluetooth-b,
+.fas-bluetooth-b {
+  --fa: "\f294";
+}
+
+.far-square-letterboxd,
+.fas-square-letterboxd {
+  --fa: "\e62e";
+}
+
+.far-sticker-mule,
+.fas-sticker-mule {
+  --fa: "\f3f7";
+}
+
+.far-creative-commons-zero,
+.fas-creative-commons-zero {
+  --fa: "\f4f3";
+}
+
+.far-hips,
+.fas-hips {
+  --fa: "\f452";
+}
+
+.far-css,
+.fas-css {
+  --fa: "\e6a2";
+}
+
+.far-behance,
+.fas-behance {
+  --fa: "\f1b4";
+}
+
+.far-reddit,
+.fas-reddit {
+  --fa: "\f1a1";
+}
+
+.far-discord,
+.fas-discord {
+  --fa: "\f392";
+}
+
+.far-chrome,
+.fas-chrome {
+  --fa: "\f268";
+}
+
+.far-app-store-ios,
+.fas-app-store-ios {
+  --fa: "\f370";
+}
+
+.far-cc-discover,
+.fas-cc-discover {
+  --fa: "\f1f2";
+}
+
+.far-wpbeginner,
+.fas-wpbeginner {
+  --fa: "\f297";
+}
+
+.far-confluence,
+.fas-confluence {
+  --fa: "\f78d";
+}
+
+.far-shoelace,
+.fas-shoelace {
+  --fa: "\e60c";
+}
+
+.far-mdb,
+.fas-mdb {
+  --fa: "\f8ca";
+}
+
+.far-dochub,
+.fas-dochub {
+  --fa: "\f394";
+}
+
+.far-accessible-icon,
+.fas-accessible-icon {
+  --fa: "\f368";
+}
+
+.far-ebay,
+.fas-ebay {
+  --fa: "\f4f4";
+}
+
+.far-amazon,
+.fas-amazon {
+  --fa: "\f270";
+}
+
+.far-unsplash,
+.fas-unsplash {
+  --fa: "\e07c";
+}
+
+.far-yarn,
+.fas-yarn {
+  --fa: "\f7e3";
+}
+
+.far-square-steam,
+.fas-square-steam,
+.far-steam-square,
+.fas-steam-square {
+  --fa: "\f1b7";
+}
+
+.far-500px,
+.fas-500px {
+  --fa: "\f26e";
+}
+
+.far-square-vimeo,
+.fas-square-vimeo,
+.far-vimeo-square,
+.fas-vimeo-square {
+  --fa: "\f194";
+}
+
+.far-asymmetrik,
+.fas-asymmetrik {
+  --fa: "\f372";
+}
+
+.far-font-awesome,
+.fas-font-awesome,
+.far-font-awesome-flag,
+.fas-font-awesome-flag,
+.far-font-awesome-logo-full,
+.fas-font-awesome-logo-full {
+  --fa: "\f2b4";
+}
+
+.far-gratipay,
+.fas-gratipay {
+  --fa: "\f184";
+}
+
+.far-apple,
+.fas-apple {
+  --fa: "\f179";
+}
+
+.far-hive,
+.fas-hive {
+  --fa: "\e07f";
+}
+
+.far-gitkraken,
+.fas-gitkraken {
+  --fa: "\f3a6";
+}
+
+.far-keybase,
+.fas-keybase {
+  --fa: "\f4f5";
+}
+
+.far-apple-pay,
+.fas-apple-pay {
+  --fa: "\f415";
+}
+
+.far-padlet,
+.fas-padlet {
+  --fa: "\e4a0";
+}
+
+.far-amazon-pay,
+.fas-amazon-pay {
+  --fa: "\f42c";
+}
+
+.far-github-square,
+.fas-github-square,
+.far-square-github,
+.fas-square-github {
+  --fa: "\f092";
+}
+
+.far-stumbleupon,
+.fas-stumbleupon {
+  --fa: "\f1a4";
+}
+
+.far-fedex,
+.fas-fedex {
+  --fa: "\f797";
+}
+
+.far-phoenix-framework,
+.fas-phoenix-framework {
+  --fa: "\f3dc";
+}
+
+.far-shopify,
+.fas-shopify {
+  --fa: "\e057";
+}
+
+.far-neos,
+.fas-neos {
+  --fa: "\f612";
+}
+
+.far-square-threads,
+.fas-square-threads {
+  --fa: "\e619";
+}
+
+.far-hackerrank,
+.fas-hackerrank {
+  --fa: "\f5f7";
+}
+
+.far-researchgate,
+.fas-researchgate {
+  --fa: "\f4f8";
+}
+
+.far-swift,
+.fas-swift {
+  --fa: "\f8e1";
+}
+
+.far-angular,
+.fas-angular {
+  --fa: "\f420";
+}
+
+.far-speakap,
+.fas-speakap {
+  --fa: "\f3f3";
+}
+
+.far-angrycreative,
+.fas-angrycreative {
+  --fa: "\f36e";
+}
+
+.far-y-combinator,
+.fas-y-combinator {
+  --fa: "\f23b";
+}
+
+.far-empire,
+.fas-empire {
+  --fa: "\f1d1";
+}
+
+.far-envira,
+.fas-envira {
+  --fa: "\f299";
+}
+
+.far-google-scholar,
+.fas-google-scholar {
+  --fa: "\e63b";
+}
+
+.far-gitlab-square,
+.fas-gitlab-square,
+.far-square-gitlab,
+.fas-square-gitlab {
+  --fa: "\e5ae";
+}
+
+.far-studiovinari,
+.fas-studiovinari {
+  --fa: "\f3f8";
+}
+
+.far-pied-piper,
+.fas-pied-piper {
+  --fa: "\f2ae";
+}
+
+.far-wordpress,
+.fas-wordpress {
+  --fa: "\f19a";
+}
+
+.far-product-hunt,
+.fas-product-hunt {
+  --fa: "\f288";
+}
+
+.far-firefox,
+.fas-firefox {
+  --fa: "\f269";
+}
+
+.far-linode,
+.fas-linode {
+  --fa: "\f2b8";
+}
+
+.far-goodreads,
+.fas-goodreads {
+  --fa: "\f3a8";
+}
+
+.far-odnoklassniki-square,
+.fas-odnoklassniki-square,
+.far-square-odnoklassniki,
+.fas-square-odnoklassniki {
+  --fa: "\f264";
+}
+
+.far-jsfiddle,
+.fas-jsfiddle {
+  --fa: "\f1cc";
+}
+
+.far-sith,
+.fas-sith {
+  --fa: "\f512";
+}
+
+.far-themeisle,
+.fas-themeisle {
+  --fa: "\f2b2";
+}
+
+.far-page4,
+.fas-page4 {
+  --fa: "\f3d7";
+}
+
+.far-hashnode,
+.fas-hashnode {
+  --fa: "\e499";
+}
+
+.far-react,
+.fas-react {
+  --fa: "\f41b";
+}
+
+.far-cc-paypal,
+.fas-cc-paypal {
+  --fa: "\f1f4";
+}
+
+.far-squarespace,
+.fas-squarespace {
+  --fa: "\f5be";
+}
+
+.far-cc-stripe,
+.fas-cc-stripe {
+  --fa: "\f1f5";
+}
+
+.far-creative-commons-share,
+.fas-creative-commons-share {
+  --fa: "\f4f2";
+}
+
+.far-bitcoin,
+.fas-bitcoin {
+  --fa: "\f379";
+}
+
+.far-keycdn,
+.fas-keycdn {
+  --fa: "\f3ba";
+}
+
+.far-opera,
+.fas-opera {
+  --fa: "\f26a";
+}
+
+.far-itch-io,
+.fas-itch-io {
+  --fa: "\f83a";
+}
+
+.far-umbraco,
+.fas-umbraco {
+  --fa: "\f8e8";
+}
+
+.far-galactic-senate,
+.fas-galactic-senate {
+  --fa: "\f50d";
+}
+
+.far-ubuntu,
+.fas-ubuntu {
+  --fa: "\f7df";
+}
+
+.far-draft2digital,
+.fas-draft2digital {
+  --fa: "\f396";
+}
+
+.far-stripe,
+.fas-stripe {
+  --fa: "\f429";
+}
+
+.far-houzz,
+.fas-houzz {
+  --fa: "\f27c";
+}
+
+.far-gg,
+.fas-gg {
+  --fa: "\f260";
+}
+
+.far-dhl,
+.fas-dhl {
+  --fa: "\f790";
+}
+
+.far-pinterest-square,
+.fas-pinterest-square,
+.far-square-pinterest,
+.fas-square-pinterest {
+  --fa: "\f0d3";
+}
+
+.far-xing,
+.fas-xing {
+  --fa: "\f168";
+}
+
+.far-blackberry,
+.fas-blackberry {
+  --fa: "\f37b";
+}
+
+.far-creative-commons-pd,
+.fas-creative-commons-pd {
+  --fa: "\f4ec";
+}
+
+.far-playstation,
+.fas-playstation {
+  --fa: "\f3df";
+}
+
+.far-quinscape,
+.fas-quinscape {
+  --fa: "\f459";
+}
+
+.far-less,
+.fas-less {
+  --fa: "\f41d";
+}
+
+.far-blogger-b,
+.fas-blogger-b {
+  --fa: "\f37d";
+}
+
+.far-opencart,
+.fas-opencart {
+  --fa: "\f23d";
+}
+
+.far-vine,
+.fas-vine {
+  --fa: "\f1ca";
+}
+
+.far-signal-messenger,
+.fas-signal-messenger {
+  --fa: "\e663";
+}
+
+.far-paypal,
+.fas-paypal {
+  --fa: "\f1ed";
+}
+
+.far-gitlab,
+.fas-gitlab {
+  --fa: "\f296";
+}
+
+.far-typo3,
+.fas-typo3 {
+  --fa: "\f42b";
+}
+
+.far-reddit-alien,
+.fas-reddit-alien {
+  --fa: "\f281";
+}
+
+.far-yahoo,
+.fas-yahoo {
+  --fa: "\f19e";
+}
+
+.far-dailymotion,
+.fas-dailymotion {
+  --fa: "\e052";
+}
+
+.far-affiliatetheme,
+.fas-affiliatetheme {
+  --fa: "\f36b";
+}
+
+.far-pied-piper-pp,
+.fas-pied-piper-pp {
+  --fa: "\f1a7";
+}
+
+.far-bootstrap,
+.fas-bootstrap {
+  --fa: "\f836";
+}
+
+.far-odnoklassniki,
+.fas-odnoklassniki {
+  --fa: "\f263";
+}
+
+.far-nfc-symbol,
+.fas-nfc-symbol {
+  --fa: "\e531";
+}
+
+.far-mintbit,
+.fas-mintbit {
+  --fa: "\e62f";
+}
+
+.far-ethereum,
+.fas-ethereum {
+  --fa: "\f42e";
+}
+
+.far-speaker-deck,
+.fas-speaker-deck {
+  --fa: "\f83c";
+}
+
+.far-creative-commons-nc-eu,
+.fas-creative-commons-nc-eu {
+  --fa: "\f4e9";
+}
+
+.far-patreon,
+.fas-patreon {
+  --fa: "\f3d9";
+}
+
+.far-avianex,
+.fas-avianex {
+  --fa: "\f374";
+}
+
+.far-ello,
+.fas-ello {
+  --fa: "\f5f1";
+}
+
+.far-gofore,
+.fas-gofore {
+  --fa: "\f3a7";
+}
+
+.far-bimobject,
+.fas-bimobject {
+  --fa: "\f378";
+}
+
+.far-brave-reverse,
+.fas-brave-reverse {
+  --fa: "\e63d";
+}
+
+.far-facebook-f,
+.fas-facebook-f {
+  --fa: "\f39e";
+}
+
+.far-google-plus-square,
+.fas-google-plus-square,
+.far-square-google-plus,
+.fas-square-google-plus {
+  --fa: "\f0d4";
+}
+
+.far-web-awesome,
+.fas-web-awesome {
+  --fa: "\e682";
+}
+
+.far-mandalorian,
+.fas-mandalorian {
+  --fa: "\f50f";
+}
+
+.far-first-order-alt,
+.fas-first-order-alt {
+  --fa: "\f50a";
+}
+
+.far-osi,
+.fas-osi {
+  --fa: "\f41a";
+}
+
+.far-google-wallet,
+.fas-google-wallet {
+  --fa: "\f1ee";
+}
+
+.far-d-and-d-beyond,
+.fas-d-and-d-beyond {
+  --fa: "\f6ca";
+}
+
+.far-periscope,
+.fas-periscope {
+  --fa: "\f3da";
+}
+
+.far-fulcrum,
+.fas-fulcrum {
+  --fa: "\f50b";
+}
+
+.far-cloudscale,
+.fas-cloudscale {
+  --fa: "\f383";
+}
+
+.far-forumbee,
+.fas-forumbee {
+  --fa: "\f211";
+}
+
+.far-mizuni,
+.fas-mizuni {
+  --fa: "\f3cc";
+}
+
+.far-schlix,
+.fas-schlix {
+  --fa: "\f3ea";
+}
+
+.far-square-xing,
+.fas-square-xing,
+.far-xing-square,
+.fas-xing-square {
+  --fa: "\f169";
+}
+
+.far-bandcamp,
+.fas-bandcamp {
+  --fa: "\f2d5";
+}
+
+.far-wpforms,
+.fas-wpforms {
+  --fa: "\f298";
+}
+
+.far-cloudversify,
+.fas-cloudversify {
+  --fa: "\f385";
+}
+
+.far-usps,
+.fas-usps {
+  --fa: "\f7e1";
+}
+
+.far-megaport,
+.fas-megaport {
+  --fa: "\f5a3";
+}
+
+.far-magento,
+.fas-magento {
+  --fa: "\f3c4";
+}
+
+.far-spotify,
+.fas-spotify {
+  --fa: "\f1bc";
+}
+
+.far-optin-monster,
+.fas-optin-monster {
+  --fa: "\f23c";
+}
+
+.far-fly,
+.fas-fly {
+  --fa: "\f417";
+}
+
+.far-square-bluesky,
+.fas-square-bluesky {
+  --fa: "\e6a3";
+}
+
+.far-aviato,
+.fas-aviato {
+  --fa: "\f421";
+}
+
+.far-itunes,
+.fas-itunes {
+  --fa: "\f3b4";
+}
+
+.far-cuttlefish,
+.fas-cuttlefish {
+  --fa: "\f38c";
+}
+
+.far-blogger,
+.fas-blogger {
+  --fa: "\f37c";
+}
+
+.far-flickr,
+.fas-flickr {
+  --fa: "\f16e";
+}
+
+.far-viber,
+.fas-viber {
+  --fa: "\f409";
+}
+
+.far-soundcloud,
+.fas-soundcloud {
+  --fa: "\f1be";
+}
+
+.far-digg,
+.fas-digg {
+  --fa: "\f1a6";
+}
+
+.far-tencent-weibo,
+.fas-tencent-weibo {
+  --fa: "\f1d5";
+}
+
+.far-letterboxd,
+.fas-letterboxd {
+  --fa: "\e62d";
+}
+
+.far-symfony,
+.fas-symfony {
+  --fa: "\f83d";
+}
+
+.far-maxcdn,
+.fas-maxcdn {
+  --fa: "\f136";
+}
+
+.far-etsy,
+.fas-etsy {
+  --fa: "\f2d7";
+}
+
+.far-facebook-messenger,
+.fas-facebook-messenger {
+  --fa: "\f39f";
+}
+
+.far-audible,
+.fas-audible {
+  --fa: "\f373";
+}
+
+.far-think-peaks,
+.fas-think-peaks {
+  --fa: "\f731";
+}
+
+.far-bilibili,
+.fas-bilibili {
+  --fa: "\e3d9";
+}
+
+.far-erlang,
+.fas-erlang {
+  --fa: "\f39d";
+}
+
+.far-x-twitter,
+.fas-x-twitter {
+  --fa: "\e61b";
+}
+
+.far-cotton-bureau,
+.fas-cotton-bureau {
+  --fa: "\f89e";
+}
+
+.far-dashcube,
+.fas-dashcube {
+  --fa: "\f210";
+}
+
+.far-42-group,
+.fas-42-group,
+.far-innosoft,
+.fas-innosoft {
+  --fa: "\e080";
+}
+
+.far-stack-exchange,
+.fas-stack-exchange {
+  --fa: "\f18d";
+}
+
+.far-elementor,
+.fas-elementor {
+  --fa: "\f430";
+}
+
+.far-pied-piper-square,
+.fas-pied-piper-square,
+.far-square-pied-piper,
+.fas-square-pied-piper {
+  --fa: "\e01e";
+}
+
+.far-creative-commons-nd,
+.fas-creative-commons-nd {
+  --fa: "\f4eb";
+}
+
+.far-palfed,
+.fas-palfed {
+  --fa: "\f3d8";
+}
+
+.far-superpowers,
+.fas-superpowers {
+  --fa: "\f2dd";
+}
+
+.far-resolving,
+.fas-resolving {
+  --fa: "\f3e7";
+}
+
+.far-xbox,
+.fas-xbox {
+  --fa: "\f412";
+}
+
+.far-square-web-awesome-stroke,
+.fas-square-web-awesome-stroke {
+  --fa: "\e684";
+}
+
+.far-searchengin,
+.fas-searchengin {
+  --fa: "\f3eb";
+}
+
+.far-tiktok,
+.fas-tiktok {
+  --fa: "\e07b";
+}
+
+.far-facebook-square,
+.fas-facebook-square,
+.far-square-facebook,
+.fas-square-facebook {
+  --fa: "\f082";
+}
+
+.far-renren,
+.fas-renren {
+  --fa: "\f18b";
+}
+
+.far-linux,
+.fas-linux {
+  --fa: "\f17c";
+}
+
+.far-glide,
+.fas-glide {
+  --fa: "\f2a5";
+}
+
+.far-linkedin,
+.fas-linkedin {
+  --fa: "\f08c";
+}
+
+.far-hubspot,
+.fas-hubspot {
+  --fa: "\f3b2";
+}
+
+.far-deploydog,
+.fas-deploydog {
+  --fa: "\f38e";
+}
+
+.far-twitch,
+.fas-twitch {
+  --fa: "\f1e8";
+}
+
+.far-flutter,
+.fas-flutter {
+  --fa: "\e694";
+}
+
+.far-ravelry,
+.fas-ravelry {
+  --fa: "\f2d9";
+}
+
+.far-mixer,
+.fas-mixer {
+  --fa: "\e056";
+}
+
+.far-lastfm-square,
+.fas-lastfm-square,
+.far-square-lastfm,
+.fas-square-lastfm {
+  --fa: "\f203";
+}
+
+.far-vimeo,
+.fas-vimeo {
+  --fa: "\f40a";
+}
+
+.far-mendeley,
+.fas-mendeley {
+  --fa: "\f7b3";
+}
+
+.far-uniregistry,
+.fas-uniregistry {
+  --fa: "\f404";
+}
+
+.far-figma,
+.fas-figma {
+  --fa: "\f799";
+}
+
+.far-creative-commons-remix,
+.fas-creative-commons-remix {
+  --fa: "\f4ee";
+}
+
+.far-cc-amazon-pay,
+.fas-cc-amazon-pay {
+  --fa: "\f42d";
+}
+
+.far-dropbox,
+.fas-dropbox {
+  --fa: "\f16b";
+}
+
+.far-instagram,
+.fas-instagram {
+  --fa: "\f16d";
+}
+
+.far-cmplid,
+.fas-cmplid {
+  --fa: "\e360";
+}
+
+.far-upwork,
+.fas-upwork {
+  --fa: "\e641";
+}
+
+.far-facebook,
+.fas-facebook {
+  --fa: "\f09a";
+}
+
+.far-gripfire,
+.fas-gripfire {
+  --fa: "\f3ac";
+}
+
+.far-jedi-order,
+.fas-jedi-order {
+  --fa: "\f50e";
+}
+
+.far-uikit,
+.fas-uikit {
+  --fa: "\f403";
+}
+
+.far-fort-awesome-alt,
+.fas-fort-awesome-alt {
+  --fa: "\f3a3";
+}
+
+.far-phabricator,
+.fas-phabricator {
+  --fa: "\f3db";
+}
+
+.far-ussunnah,
+.fas-ussunnah {
+  --fa: "\f407";
+}
+
+.far-earlybirds,
+.fas-earlybirds {
+  --fa: "\f39a";
+}
+
+.far-trade-federation,
+.fas-trade-federation {
+  --fa: "\f513";
+}
+
+.far-autoprefixer,
+.fas-autoprefixer {
+  --fa: "\f41c";
+}
+
+.far-whatsapp,
+.fas-whatsapp {
+  --fa: "\f232";
+}
+
+.far-square-upwork,
+.fas-square-upwork {
+  --fa: "\e67c";
+}
+
+.far-slideshare,
+.fas-slideshare {
+  --fa: "\f1e7";
+}
+
+.far-google-play,
+.fas-google-play {
+  --fa: "\f3ab";
+}
+
+.far-viadeo,
+.fas-viadeo {
+  --fa: "\f2a9";
+}
+
+.far-line,
+.fas-line {
+  --fa: "\f3c0";
+}
+
+.far-google-drive,
+.fas-google-drive {
+  --fa: "\f3aa";
+}
+
+.far-servicestack,
+.fas-servicestack {
+  --fa: "\f3ec";
+}
+
+.far-simplybuilt,
+.fas-simplybuilt {
+  --fa: "\f215";
+}
+
+.far-bitbucket,
+.fas-bitbucket {
+  --fa: "\f171";
+}
+
+.far-imdb,
+.fas-imdb {
+  --fa: "\f2d8";
+}
+
+.far-deezer,
+.fas-deezer {
+  --fa: "\e077";
+}
+
+.far-raspberry-pi,
+.fas-raspberry-pi {
+  --fa: "\f7bb";
+}
+
+.far-jira,
+.fas-jira {
+  --fa: "\f7b1";
+}
+
+.far-docker,
+.fas-docker {
+  --fa: "\f395";
+}
+
+.far-screenpal,
+.fas-screenpal {
+  --fa: "\e570";
+}
+
+.far-bluetooth,
+.fas-bluetooth {
+  --fa: "\f293";
+}
+
+.far-gitter,
+.fas-gitter {
+  --fa: "\f426";
+}
+
+.far-d-and-d,
+.fas-d-and-d {
+  --fa: "\f38d";
+}
+
+.far-microblog,
+.fas-microblog {
+  --fa: "\e01a";
+}
+
+.far-cc-diners-club,
+.fas-cc-diners-club {
+  --fa: "\f24c";
+}
+
+.far-gg-circle,
+.fas-gg-circle {
+  --fa: "\f261";
+}
+
+.far-pied-piper-hat,
+.fas-pied-piper-hat {
+  --fa: "\f4e5";
+}
+
+.far-kickstarter-k,
+.fas-kickstarter-k {
+  --fa: "\f3bc";
+}
+
+.far-yandex,
+.fas-yandex {
+  --fa: "\f413";
+}
+
+.far-readme,
+.fas-readme {
+  --fa: "\f4d5";
+}
+
+.far-html5,
+.fas-html5 {
+  --fa: "\f13b";
+}
+
+.far-sellsy,
+.fas-sellsy {
+  --fa: "\f213";
+}
+
+.far-square-web-awesome,
+.fas-square-web-awesome {
+  --fa: "\e683";
+}
+
+.far-sass,
+.fas-sass {
+  --fa: "\f41e";
+}
+
+.far-wirsindhandwerk,
+.fas-wirsindhandwerk,
+.far-wsh,
+.fas-wsh {
+  --fa: "\e2d0";
+}
+
+.far-buromobelexperte,
+.fas-buromobelexperte {
+  --fa: "\f37f";
+}
+
+.far-salesforce,
+.fas-salesforce {
+  --fa: "\f83b";
+}
+
+.far-octopus-deploy,
+.fas-octopus-deploy {
+  --fa: "\e082";
+}
+
+.far-medapps,
+.fas-medapps {
+  --fa: "\f3c6";
+}
+
+.far-ns8,
+.fas-ns8 {
+  --fa: "\f3d5";
+}
+
+.far-pinterest-p,
+.fas-pinterest-p {
+  --fa: "\f231";
+}
+
+.far-apper,
+.fas-apper {
+  --fa: "\f371";
+}
+
+.far-fort-awesome,
+.fas-fort-awesome {
+  --fa: "\f286";
+}
+
+.far-waze,
+.fas-waze {
+  --fa: "\f83f";
+}
+
+.far-bluesky,
+.fas-bluesky {
+  --fa: "\e671";
+}
+
+.far-cc-jcb,
+.fas-cc-jcb {
+  --fa: "\f24b";
+}
+
+.far-snapchat,
+.fas-snapchat,
+.far-snapchat-ghost,
+.fas-snapchat-ghost {
+  --fa: "\f2ab";
+}
+
+.far-fantasy-flight-games,
+.fas-fantasy-flight-games {
+  --fa: "\f6dc";
+}
+
+.far-rust,
+.fas-rust {
+  --fa: "\e07a";
+}
+
+.far-wix,
+.fas-wix {
+  --fa: "\f5cf";
+}
+
+.far-behance-square,
+.fas-behance-square,
+.far-square-behance,
+.fas-square-behance {
+  --fa: "\f1b5";
+}
+
+.far-supple,
+.fas-supple {
+  --fa: "\f3f9";
+}
+
+.far-webflow,
+.fas-webflow {
+  --fa: "\e65c";
+}
+
+.far-rebel,
+.fas-rebel {
+  --fa: "\f1d0";
+}
+
+.far-css3,
+.fas-css3 {
+  --fa: "\f13c";
+}
+
+.far-staylinked,
+.fas-staylinked {
+  --fa: "\f3f5";
+}
+
+.far-kaggle,
+.fas-kaggle {
+  --fa: "\f5fa";
+}
+
+.far-space-awesome,
+.fas-space-awesome {
+  --fa: "\e5ac";
+}
+
+.far-deviantart,
+.fas-deviantart {
+  --fa: "\f1bd";
+}
+
+.far-cpanel,
+.fas-cpanel {
+  --fa: "\f388";
+}
+
+.far-goodreads-g,
+.fas-goodreads-g {
+  --fa: "\f3a9";
+}
+
+.far-git-square,
+.fas-git-square,
+.far-square-git,
+.fas-square-git {
+  --fa: "\f1d2";
+}
+
+.far-square-tumblr,
+.fas-square-tumblr,
+.far-tumblr-square,
+.fas-tumblr-square {
+  --fa: "\f174";
+}
+
+.far-trello,
+.fas-trello {
+  --fa: "\f181";
+}
+
+.far-creative-commons-nc-jp,
+.fas-creative-commons-nc-jp {
+  --fa: "\f4ea";
+}
+
+.far-get-pocket,
+.fas-get-pocket {
+  --fa: "\f265";
+}
+
+.far-perbyte,
+.fas-perbyte {
+  --fa: "\e083";
+}
+
+.far-grunt,
+.fas-grunt {
+  --fa: "\f3ad";
+}
+
+.far-weebly,
+.fas-weebly {
+  --fa: "\f5cc";
+}
+
+.far-connectdevelop,
+.fas-connectdevelop {
+  --fa: "\f20e";
+}
+
+.far-leanpub,
+.fas-leanpub {
+  --fa: "\f212";
+}
+
+.far-black-tie,
+.fas-black-tie {
+  --fa: "\f27e";
+}
+
+.far-themeco,
+.fas-themeco {
+  --fa: "\f5c6";
+}
+
+.far-python,
+.fas-python {
+  --fa: "\f3e2";
+}
+
+.far-android,
+.fas-android {
+  --fa: "\f17b";
+}
+
+.far-bots,
+.fas-bots {
+  --fa: "\e340";
+}
+
+.far-free-code-camp,
+.fas-free-code-camp {
+  --fa: "\f2c5";
+}
+
+.far-hornbill,
+.fas-hornbill {
+  --fa: "\f592";
+}
+
+.far-js,
+.fas-js {
+  --fa: "\f3b8";
+}
+
+.far-ideal,
+.fas-ideal {
+  --fa: "\e013";
+}
+
+.far-git,
+.fas-git {
+  --fa: "\f1d3";
+}
+
+.far-dev,
+.fas-dev {
+  --fa: "\f6cc";
+}
+
+.far-sketch,
+.fas-sketch {
+  --fa: "\f7c6";
+}
+
+.far-yandex-international,
+.fas-yandex-international {
+  --fa: "\f414";
+}
+
+.far-cc-amex,
+.fas-cc-amex {
+  --fa: "\f1f3";
+}
+
+.far-uber,
+.fas-uber {
+  --fa: "\f402";
+}
+
+.far-github,
+.fas-github {
+  --fa: "\f09b";
+}
+
+.far-php,
+.fas-php {
+  --fa: "\f457";
+}
+
+.far-alipay,
+.fas-alipay {
+  --fa: "\f642";
+}
+
+.far-youtube,
+.fas-youtube {
+  --fa: "\f167";
+}
+
+.far-skyatlas,
+.fas-skyatlas {
+  --fa: "\f216";
+}
+
+.far-firefox-browser,
+.fas-firefox-browser {
+  --fa: "\e007";
+}
+
+.far-replyd,
+.fas-replyd {
+  --fa: "\f3e6";
+}
+
+.far-suse,
+.fas-suse {
+  --fa: "\f7d6";
+}
+
+.far-jenkins,
+.fas-jenkins {
+  --fa: "\f3b6";
+}
+
+.far-twitter,
+.fas-twitter {
+  --fa: "\f099";
+}
+
+.far-rockrms,
+.fas-rockrms {
+  --fa: "\f3e9";
+}
+
+.far-pinterest,
+.fas-pinterest {
+  --fa: "\f0d2";
+}
+
+.far-buffer,
+.fas-buffer {
+  --fa: "\f837";
+}
+
+.far-npm,
+.fas-npm {
+  --fa: "\f3d4";
+}
+
+.far-yammer,
+.fas-yammer {
+  --fa: "\f840";
+}
+
+.far-btc,
+.fas-btc {
+  --fa: "\f15a";
+}
+
+.far-dribbble,
+.fas-dribbble {
+  --fa: "\f17d";
+}
+
+.far-stumbleupon-circle,
+.fas-stumbleupon-circle {
+  --fa: "\f1a3";
+}
+
+.far-internet-explorer,
+.fas-internet-explorer {
+  --fa: "\f26b";
+}
+
+.far-stubber,
+.fas-stubber {
+  --fa: "\e5c7";
+}
+
+.far-telegram,
+.fas-telegram,
+.far-telegram-plane,
+.fas-telegram-plane {
+  --fa: "\f2c6";
+}
+
+.far-old-republic,
+.fas-old-republic {
+  --fa: "\f510";
+}
+
+.far-odysee,
+.fas-odysee {
+  --fa: "\e5c6";
+}
+
+.far-square-whatsapp,
+.fas-square-whatsapp,
+.far-whatsapp-square,
+.fas-whatsapp-square {
+  --fa: "\f40c";
+}
+
+.far-node-js,
+.fas-node-js {
+  --fa: "\f3d3";
+}
+
+.far-edge-legacy,
+.fas-edge-legacy {
+  --fa: "\e078";
+}
+
+.far-slack,
+.fas-slack,
+.far-slack-hash,
+.fas-slack-hash {
+  --fa: "\f198";
+}
+
+.far-medrt,
+.fas-medrt {
+  --fa: "\f3c8";
+}
+
+.far-usb,
+.fas-usb {
+  --fa: "\f287";
+}
+
+.far-tumblr,
+.fas-tumblr {
+  --fa: "\f173";
+}
+
+.far-vaadin,
+.fas-vaadin {
+  --fa: "\f408";
+}
+
+.far-quora,
+.fas-quora {
+  --fa: "\f2c4";
+}
+
+.far-square-x-twitter,
+.fas-square-x-twitter {
+  --fa: "\e61a";
+}
+
+.far-reacteurope,
+.fas-reacteurope {
+  --fa: "\f75d";
+}
+
+.far-medium,
+.fas-medium,
+.far-medium-m,
+.fas-medium-m {
+  --fa: "\f23a";
+}
+
+.far-amilia,
+.fas-amilia {
+  --fa: "\f36d";
+}
+
+.far-mixcloud,
+.fas-mixcloud {
+  --fa: "\f289";
+}
+
+.far-flipboard,
+.fas-flipboard {
+  --fa: "\f44d";
+}
+
+.far-viacoin,
+.fas-viacoin {
+  --fa: "\f237";
+}
+
+.far-critical-role,
+.fas-critical-role {
+  --fa: "\f6c9";
+}
+
+.far-sitrox,
+.fas-sitrox {
+  --fa: "\e44a";
+}
+
+.far-discourse,
+.fas-discourse {
+  --fa: "\f393";
+}
+
+.far-joomla,
+.fas-joomla {
+  --fa: "\f1aa";
+}
+
+.far-mastodon,
+.fas-mastodon {
+  --fa: "\f4f6";
+}
+
+.far-airbnb,
+.fas-airbnb {
+  --fa: "\f834";
+}
+
+.far-wolf-pack-battalion,
+.fas-wolf-pack-battalion {
+  --fa: "\f514";
+}
+
+.far-buy-n-large,
+.fas-buy-n-large {
+  --fa: "\f8a6";
+}
+
+.far-gulp,
+.fas-gulp {
+  --fa: "\f3ae";
+}
+
+.far-creative-commons-sampling-plus,
+.fas-creative-commons-sampling-plus {
+  --fa: "\f4f1";
+}
+
+.far-strava,
+.fas-strava {
+  --fa: "\f428";
+}
+
+.far-ember,
+.fas-ember {
+  --fa: "\f423";
+}
+
+.far-canadian-maple-leaf,
+.fas-canadian-maple-leaf {
+  --fa: "\f785";
+}
+
+.far-teamspeak,
+.fas-teamspeak {
+  --fa: "\f4f9";
+}
+
+.far-pushed,
+.fas-pushed {
+  --fa: "\f3e1";
+}
+
+.far-wordpress-simple,
+.fas-wordpress-simple {
+  --fa: "\f411";
+}
+
+.far-nutritionix,
+.fas-nutritionix {
+  --fa: "\f3d6";
+}
+
+.far-wodu,
+.fas-wodu {
+  --fa: "\e088";
+}
+
+.far-google-pay,
+.fas-google-pay {
+  --fa: "\e079";
+}
+
+.far-intercom,
+.fas-intercom {
+  --fa: "\f7af";
+}
+
+.far-zhihu,
+.fas-zhihu {
+  --fa: "\f63f";
+}
+
+.far-korvue,
+.fas-korvue {
+  --fa: "\f42f";
+}
+
+.far-pix,
+.fas-pix {
+  --fa: "\e43a";
+}
+
+.far-steam-symbol,
+.fas-steam-symbol {
+  --fa: "\f3f6";
+}
+
+:host,
+:root {
+  --fa-font-regular: normal 400 1em/1 "Font Awesome 6 Free";
+}
+
+@font-face {
+  font-family: "Font Awesome 6 Free";
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url(https://res.cdn.avepointonlineservices.com/apaui/fonts/fontawesome/6.4.0/fa-regular-400.woff2) format("woff2");
+}
+
+.far-regular,
+.fas-regular,
+.far {
+  font-weight: 400;
+}
+
+:host,
+:root {
+  --fa-style-family-classic: "Font Awesome 6 Free";
+  --fa-font-solid: normal 900 1em/1 "Font Awesome 6 Free";
+}
+
+@font-face {
+  font-family: "Font Awesome 6 Free";
+  font-style: normal;
+  font-weight: 900;
+  font-display: block;
+  src: url(https://res.cdn.avepointonlineservices.com/apaui/fonts/fontawesome/6.4.0/fa-solid-900.woff2) format("woff2");
+}
+
+.far-solid,
+.fas-solid,
+.fas {
+  font-weight: 900;
+}

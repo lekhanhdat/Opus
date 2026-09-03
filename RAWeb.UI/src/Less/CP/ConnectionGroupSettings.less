@@ -1,0 +1,113 @@
+#ra-connection-management,
+#ra-conn-group-settings-panel,
+#ra-connection-settings-panel,
+#ra-correlate-connections-panel,
+#ra-add-correlate-connections-panel,
+#ra-correlate-connection,
+#ra-connection-group-edit,
+#ra-connection-edit,
+#ra-add-correlate-connection {
+    .input-label {
+        margin-top: 20px;
+        margin-bottom: 8px;
+        font-size: 15px;
+        font-family: "Segoe UI", sans-serif;
+        letter-spacing: 0.33px;
+        color: #555555;
+    }
+
+    .validate-test-success-span{
+        color: var(--green-4);
+        font-size: 14px;
+    }
+
+    .validate-test-failed-span{
+        color: var(--red-6);
+        font-size: 14px;
+    }
+
+    .table-foot {
+        margin-top: 8px;
+    }
+    .table-foot-left {
+        display: inline-block;
+        height: 32px;
+        line-height: 32px;
+    }
+    .table-foot-right {
+        float: right;
+    }
+
+    .panel-description-placeholder {
+        display: block;
+        visibility: hidden;
+    }
+
+    .panel-description-container {
+        position: absolute;
+        // height: 18px;
+    }
+
+    .panel-description-form{
+        margin-top: 5px;
+        padding: 0 8px;
+
+    }
+
+    .panel-description-header{
+        color: #27313C;
+        font-size: 13px;
+        font-weight: normal;
+        display: block;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .ra-fs-require {
+        position: relative;
+    }
+
+    .ra-fs-require:after {
+        position: relative;
+        left: 5px;
+        content: "*";
+        color: red;
+        font-size: 16px;
+    }
+
+    .aui-messagebar{
+        margin-left: 0;
+    }
+
+    .connections-list-span {
+        line-height: 34px;
+        height: 34px;
+        display: inline;
+        vertical-align: bottom;
+    }
+
+    .reco-group-panel-footer {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .ra-tab-header-wrapper {
+        padding: 24px 24px 0;
+    }
+
+    .ra-table-main {
+        padding: 16px 0;
+    }
+}
+#ra-connection-settings-panel-testbutton {
+  float: right;
+
+  .panel-testbutton {
+    display: inline-block;
+  }
+
+  .button-default {
+    border: 1px solid #415364 !important;
+  }
+}

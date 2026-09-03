@@ -1,0 +1,515 @@
+﻿<!--/********************************************************************
+ *
+ *  PROPRIETARY and CONFIDENTIAL
+ *
+ *  This file is licensed from, and is a trade secret of:
+ *
+ *                   AvePoint, Inc.
+ *                   525 Washington Blvd, Suite 1400
+ *                   Jersey City, NJ 07310
+ *                   United States of America
+ *                   Telephone: +1-201-793-1111
+ *                   WWW: www.avepoint.com
+ *
+ *  Refer to your License Agreement for restrictions on use,
+ *  duplication, or disclosure.
+ *
+ *  RESTRICTED RIGHTS LEGEND
+ *
+ *  Use, duplication, or disclosure by the Government is
+ *  subject to restrictions as set forth in subdivision
+ *  (c)(1)(ii) of the Rights in Technical Data and Computer
+ *  Software clause at DFARS 252.227-7013 (Oct. 1988) and
+ *  FAR 52.227-19 (C) (June 1987).
+ *
+ *  Copyright © 2017-2026 AvePoint® Inc. All Rights Reserved. 
+ *
+ *  Unpublished - All rights reserved under the copyright laws of the United States.
+ */-->
+<Page
+    x:Class="StandaloneTool.View.ExportLocationPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:resource="clr-namespace:DataExportCore.Resources;assembly=DataExportCore"
+    xmlns:src="clr-namespace:AvePoint.Deployment.CommonGUI;assembly=AvePoint.CallAssist.CommonDeploymentGUI"
+    Title="ExportLocationPage"
+    d:DesignHeight="450"
+    d:DesignWidth="800"
+    mc:Ignorable="d">
+    <Page.Resources>
+        <src:BooleanInverterConverter x:Key="BooleanInverterConverter" />
+        <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
+        <src:BooleanToInverseVisibilityConverter x:Key="BooleanToInverseVisibilityConverter" />
+    </Page.Resources>
+    <i:Interaction.Triggers>
+        <i:EventTrigger EventName="Loaded">
+            <i:InvokeCommandAction Command="{Binding LoadCommand}" />
+        </i:EventTrigger>
+    </i:Interaction.Triggers>
+
+    <Grid>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50" />
+                <RowDefinition Height="4" />
+                <RowDefinition Height="370" />
+            </Grid.RowDefinitions>
+            <Grid Background="#FF1188EE">
+                <Grid
+                    Name="WizardTextBlock"
+                    Grid.Row="1"
+                    Background="#FF1188EE">
+                    <TextBlock
+                        Grid.Row="1"
+                        Margin="0,0,0,20"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Bottom"
+                        FontFamily="Segoe UI"
+                        FontSize="16"
+                        FontWeight="SemiBold"
+                        Foreground="White"
+                        Style="{StaticResource PageDescriptionTextBlock}"
+                        Text="{x:Static resource:CommonResourceManager.SATool_ExportLocationPageTitle}" />
+                </Grid>
+            </Grid>
+            <Grid Grid.Row="3" Margin="0,10,0,0">
+                <ScrollViewer  VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
+                    <Grid Grid.Row="3" HorizontalAlignment="Center">
+                    <Grid.ColumnDefinitions>
+                        <!--  Intro  -->
+                        <ColumnDefinition Width="Auto" MinWidth="100" />
+                        <!--  Space  -->
+                        <ColumnDefinition Width="50" />
+                        <!--  Value  -->
+                        <ColumnDefinition Width="300" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="15" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="15" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <TextBlock
+                        Grid.Row="2"
+                        Grid.Column="0"
+                        Margin="0,6,0,0"
+                        VerticalAlignment="Top"
+                        Style="{StaticResource PageIntroTextBlock}"
+                        Text="{x:Static resource:CommonResourceManager.SATool_SelectLocationTitle}" />
+                    <ComboBox
+                        Name="comboBoxLocationType"
+                        Grid.Row="2"
+                        Grid.Column="2"
+                        SelectionChanged="ComboBoxLocationType_SelectionChanged"
+                        Text="{Binding LocationType}" />
+
+                    <!--  Microsoft Azure Blob Storage  -->
+                    <Grid
+                        Name="AzurePageName"
+                        Grid.Row="4"
+                        Grid.ColumnSpan="3"
+                        HorizontalAlignment="Center"
+                        Visibility="{Binding Path=IsSelectedAzure, Converter={StaticResource BooleanToVisibilityConverter}, ConverterParameter=true}">
+                        <!--  Visibility="Hidden">  -->
+                        <Grid.ColumnDefinitions>
+                            <!--  Intro  -->
+                            <ColumnDefinition Width="Auto" MinWidth="100" />
+                            <!--  Space  -->
+                            <ColumnDefinition Width="64" />
+                            <!--  Value  -->
+                            <ColumnDefinition Width="320" />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="15" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="15" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="15" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="15" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="15" />
+                        </Grid.RowDefinitions>
+                        <Grid
+                            Grid.Row="0"
+                            Grid.Column="0"
+                            Margin="0,6,0,0">
+                            <TextBlock
+                                VerticalAlignment="Top"
+                                Style="{StaticResource PageIntroTextBlock}"
+                                Text="{x:Static resource:CommonResourceManager.SATool_AccessPointTitle}" />
+                            <TextBlock
+                                Margin="78,3,0,0"
+                                HorizontalAlignment="Left"
+                                Foreground="Red"
+                                Text="*" />
+                        </Grid>
+                        <src:TextBoxEx
+                            Grid.Row="0"
+                            Grid.Column="2"
+                            ErrorMsg="{Binding AccessPointMsg}"
+                            ShowMsgOnBottom="True"
+                            Text="{Binding AccessPoint}" />
+                        <Grid
+                            Grid.Row="2"
+                            Grid.Column="0"
+                            Margin="0,6,0,0">
+                            <TextBlock
+                                VerticalAlignment="Top"
+                                Style="{StaticResource PageIntroTextBlock}"
+                                Text="{x:Static resource:CommonResourceManager.SATool_ContainerNameTitle}" />
+                            <TextBlock
+                                Margin="102,3,0,0"
+                                HorizontalAlignment="Left"
+                                Foreground="Red"
+                                Text="*" />
+                        </Grid>
+                        <src:TextBoxEx
+                            Grid.Row="2"
+                            Grid.Column="2"
+                            ErrorMsg="{Binding ContainerNameMsg}"
+                            ShowMsgOnBottom="True"
+                            Text="{Binding ContainerName}" />
+                        <Grid
+                            Grid.Row="4"
+                            Grid.Column="0"
+                            Margin="0,6,0,0">
+                            <TextBlock
+                                VerticalAlignment="Top"
+                                Style="{StaticResource PageIntroTextBlock}"
+                                Text="{x:Static resource:CommonResourceManager.SATool_AccountNameTitle}" />
+                            <TextBlock
+                                Margin="92,3,0,0"
+                                HorizontalAlignment="Left"
+                                Foreground="Red"
+                                Text="*" />
+                        </Grid>
+                        <src:TextBoxEx
+                            Grid.Row="4"
+                            Grid.Column="2"
+                            ErrorMsg="{Binding AccountNameMsg}"
+                            ShowMsgOnBottom="True"
+                            Text="{Binding AccountName}" />
+                        <Grid
+                            Grid.Row="6"
+                            Grid.Column="0"
+                            Margin="0,6,0,0">
+                            <TextBlock
+                                VerticalAlignment="Top"
+                                Style="{StaticResource PageIntroTextBlock}"
+                                Text="{x:Static resource:CommonResourceManager.SATool_AccountKeyTitle}" />
+                            <TextBlock
+                                Margin="80,3,0,0"
+                                HorizontalAlignment="Left"
+                                Foreground="Red"
+                                Text="*" />
+                        </Grid>
+                        <PasswordBox
+                            Grid.Row="6"
+                            Grid.Column="2"
+                            VerticalAlignment="Center"
+                            src:PasswordBoxBindingHelper.BoundPassword="{Binding Path=AccountKey, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                            src:PasswordBoxBindingHelper.IsPasswordBindingEnabled="True"
+                            AllowDrop="True"
+                            d:LayoutOverrides="GridBox" />
+                        <TextBlock
+                            Grid.Row="8"
+                            Grid.Column="2"
+                            Margin="0,5,0,0"
+                            FontSize="13"
+                            Foreground="Red"
+                            Text="{Binding AccountKeyMsg, Mode=TwoWay}"
+                            TextWrapping="Wrap" />
+                    </Grid>
+
+                    <!--  SFTP  -->
+                    <Grid
+                        Name="SftpPageName"
+                        Grid.Row="4"
+                        Grid.ColumnSpan="3"
+                        HorizontalAlignment="Center"
+                        Visibility="{Binding Path=IsSelectedSftp, Converter={StaticResource BooleanToVisibilityConverter}, ConverterParameter=true}">
+                        <!--  Visibility="Hidden">  -->
+                        <Grid.ColumnDefinitions>
+                            <!--  Intro  -->
+                            <ColumnDefinition Width="Auto" MinWidth="100" />
+                            <!--  Space  -->
+                            <ColumnDefinition Width="37" />
+                            <!--  Value  -->
+                            <ColumnDefinition Width="320" />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="15" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="15" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="15" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="15" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="15" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="15" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="26" />
+                        </Grid.RowDefinitions>
+                        <Grid
+                            Grid.Row="0"
+                            Grid.Column="0"
+                            Margin="0,6,0,0">
+                            <TextBlock
+                                VerticalAlignment="Top"
+                                Style="{StaticResource PageIntroTextBlock}"
+                                Text="{x:Static resource:CommonResourceManager.SATool_HostTitle}" />
+                            <TextBlock
+                                Margin="34,3,0,0"
+                                HorizontalAlignment="Left"
+                                Foreground="Red"
+                                Text="*" />
+                        </Grid>
+                        <src:TextBoxEx
+                            Grid.Row="0"
+                            Grid.Column="2"
+                            ErrorMsg="{Binding SftpHostMsg}"
+                            ShowMsgOnBottom="True"
+                            Text="{Binding SftpHost}" />
+                        <Grid
+                            Grid.Row="2"
+                            Grid.Column="0"
+                            Margin="0,6,0,0">
+                            <TextBlock
+                                VerticalAlignment="Top"
+                                Style="{StaticResource PageIntroTextBlock}"
+                                Text="{x:Static resource:CommonResourceManager.SATool_PortTitle}" />
+                            <TextBlock
+                                Margin="32,3,0,0"
+                                HorizontalAlignment="Left"
+                                Foreground="Red"
+                                Text="*" />
+                        </Grid>
+                        <src:TextBoxEx
+                            Grid.Row="2"
+                            Grid.Column="2"
+                            ErrorMsg="{Binding SftpPortMsg}"
+                            ShowMsgOnBottom="True"
+                            Text="{Binding SftpPort}" />
+                        <Grid
+                            Grid.Row="4"
+                            Grid.Column="0"
+                            Margin="0,6,0,0">
+                            <TextBlock
+                                VerticalAlignment="Top"
+                                Style="{StaticResource PageIntroTextBlock}"
+                                Text="{x:Static resource:CommonResourceManager.SATool_RootFolderTitle}" />
+                            <TextBlock
+                                Margin="76,3,0,0"
+                                HorizontalAlignment="Left"
+                                Foreground="Red"
+                                Text="*"
+                                Visibility="Hidden" />
+                        </Grid>
+                        <src:TextBoxEx
+                            Grid.Row="4"
+                            Grid.Column="2"
+                            ErrorMsg="{Binding SftpFolderMsg}"
+                            ShowMsgOnBottom="True"
+                            Text="{Binding SftpFolder}" />
+                        <Grid
+                            Grid.Row="6"
+                            Grid.Column="0"
+                            Margin="0,6,0,0">
+                            <TextBlock
+                                VerticalAlignment="Top"
+                                Style="{StaticResource PageIntroTextBlock}"
+                                Text="{x:Static resource:CommonResourceManager.SATool_UsernameTitle}" />
+                            <TextBlock
+                                Margin="66,3,0,0"
+                                HorizontalAlignment="Left"
+                                Foreground="Red"
+                                Text="*" />
+                        </Grid>
+                        <src:TextBoxEx
+                            Grid.Row="6"
+                            Grid.Column="2"
+                            ErrorMsg="{Binding SftpUsernameMsg}"
+                            ShowMsgOnBottom="True"
+                            Text="{Binding SftpUsername}" />
+                        <Grid
+                            Grid.Row="8"
+                            Grid.Column="0"
+                            Margin="0,6,0,0">
+                            <TextBlock
+                                VerticalAlignment="Top"
+                                Style="{StaticResource PageIntroTextBlock}"
+                                Text="{x:Static resource:CommonResourceManager.SATool_PasswordTitle}" />
+                            <TextBlock
+                                Margin="62,3,0,0"
+                                HorizontalAlignment="Left"
+                                Foreground="Red"
+                                    Text="*"
+                                    Visibility="Hidden" />
+                        </Grid>
+                        <src:TextBoxEx
+                            Grid.Row="8"
+                            Grid.Column="2"
+                            Width="320"
+                            Margin="0,0,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            ErrorMsg="{Binding SftpPasswordMsg}"
+                            ShowMsgOnBottom="True"
+                            Text="{Binding SftpPassword, UpdateSourceTrigger=PropertyChanged}"
+                            TextChanged="TextBoxPassword_TextChanged"
+                            d:LayoutOverrides="GridBox" />
+                        <Grid
+                            Grid.Row="10"
+                            Grid.Column="0"
+                            Margin="0,6,0,0">
+                            <TextBlock
+                                VerticalAlignment="Top"
+                                Style="{StaticResource PageIntroTextBlock}"
+                                Text="{x:Static resource:CommonResourceManager.SATool_PrivateKeyFileTitle}" />
+                            <TextBlock
+                                Margin="90,3,0,0"
+                                HorizontalAlignment="Left"
+                                Foreground="Red"
+                                Text="*"
+                                Visibility="Hidden" />
+                        </Grid>
+                        <src:TextBoxEx
+                            Grid.Row="10"
+                            Grid.Column="2"
+                            Width="320"
+                            Margin="0,0,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            ErrorMsg="{Binding SftpPrivateKeyFileMsg}"
+                            ShowMsgOnBottom="True"
+                            Text="{Binding SftpPrivateKeyFile, UpdateSourceTrigger=PropertyChanged}"
+                            d:LayoutOverrides="GridBox" />
+                        <Button
+                            Grid.Row="10"
+                            Grid.Column="3"
+                            Margin="0,0,-80,0"
+                            HorizontalAlignment="Right"
+                            VerticalAlignment="Top"
+                                Command="{Binding SelectFileCommand}"
+                            Content="{x:Static resource:CommonResourceManager.SATool_BrowseButtonTitle}"
+                            Visibility="{Binding IsLocalLocation, Converter={StaticResource BooleanToVisibilityConverter}}" />
+                        <Grid
+                            Grid.Row="12"
+                            Grid.Column="0"
+                            Margin="0,6,0,0">
+                            <TextBlock
+                                VerticalAlignment="Top"
+                                Style="{StaticResource PageIntroTextBlock}"
+                                Text="{x:Static resource:CommonResourceManager.SATool_PrivateKeyPasswordTitle}" />
+                            <TextBlock
+                                Margin="128,3,0,0"
+                                HorizontalAlignment="Left"
+                                Foreground="Red"
+                                Text="*"
+                                Visibility="Hidden" />
+                        </Grid>
+                        <PasswordBox
+                            Grid.Row="12"
+                            Grid.Column="2"
+                            VerticalAlignment="Center"
+                            src:PasswordBoxBindingHelper.BoundPassword="{Binding Path=SftpPrivateKeyPassword, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                            src:PasswordBoxBindingHelper.IsPasswordBindingEnabled="True"
+                            AllowDrop="True"
+                            d:LayoutOverrides="GridBox" />
+                        <TextBlock
+                            Grid.Row="13"
+                            Grid.Column="2"
+                            Margin="0,5,0,0"
+                            FontSize="13"
+                            Foreground="Red"
+                            Text="{Binding SftpPrivateKeyPasswordMsg, Mode=TwoWay}"
+                            TextWrapping="Wrap" />
+                    </Grid>
+
+                    <!--  Local location  -->
+                    <Grid
+                        Name="LocalPageName"
+                        Grid.Row="4"
+                        Grid.ColumnSpan="3"
+                        HorizontalAlignment="Center"
+                        Visibility="{Binding Path=IsSelectedLocal, Converter={StaticResource BooleanToVisibilityConverter}, ConverterParameter=true}">
+                        <!--  Visibility="Hidden"  -->
+                        <Grid.ColumnDefinitions>
+                            <!--  Intro  -->
+                            <ColumnDefinition Width="Auto" MinWidth="100" />
+                            <!--  Space  -->
+                            <ColumnDefinition Width="53" />
+                            <!--  Value  -->
+                            <ColumnDefinition Width="338" />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="15" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="15" />
+                        </Grid.RowDefinitions>
+                        <Grid 
+                            Grid.Row="0"
+                            Grid.Column="0"
+                            Margin="0,6,0,0">
+                            <TextBlock
+                                VerticalAlignment="Top"
+                                Style="{StaticResource PageIntroTextBlock}"
+                                Text="{x:Static resource:CommonResourceManager.SATool_PathTitle}" />
+                            <TextBlock
+                                Margin="30,3,0,0"
+                                HorizontalAlignment="Left"
+                                Foreground="Red"
+                                Text="*" />
+                        </Grid>
+                        <src:TextBoxEx
+                            Grid.Row="0"
+                            Grid.Column="2"
+                            Width="320"
+                            Margin="18,0,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            ErrorMsg="{Binding ExportLocationErrorMsg}"
+                            ShowMsgOnBottom="True"
+                            Text="{Binding ExportLocation, UpdateSourceTrigger=PropertyChanged}"
+                            Visibility="{Binding IsSelectedLocal, Converter={StaticResource BooleanToVisibilityConverter}}"
+                            d:LayoutOverrides="GridBox" />
+                        <Button
+                            Grid.Row="0"
+                            Grid.Column="3"
+                            Margin="0,0,-80,0"
+                            HorizontalAlignment="Right"
+                            VerticalAlignment="Top"
+                            Command="{Binding SelectFolderCommand}"
+                            Content="{x:Static resource:CommonResourceManager.SATool_BrowseButtonTitle}"
+                            Visibility="{Binding IsSelectedLocal, Converter={StaticResource BooleanToVisibilityConverter}}" />
+                    </Grid>
+                    </Grid>
+                </ScrollViewer>
+            </Grid>
+        </Grid>
+        <StackPanel
+            Margin="0,50,0,-100"
+            Background="#50333333"
+            IsVisibleChanged="StackPanel_IsVisibleChanged"
+            Visibility="{Binding Path=IsCheckingConfig, Converter={StaticResource BooleanToVisibilityConverter}, ConverterParameter=true}" />
+        <src:GifImage
+            Width="60"
+            Height="60"
+            Margin="0,231,0,0"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Top"
+            RenderTransformOrigin="0.483,-0.317"
+            Source="..\Images\loading.gif"
+            Visibility="{Binding Path=IsCheckingConfig, Converter={StaticResource BooleanToVisibilityConverter}, ConverterParameter=true}" />
+    </Grid>
+</Page>

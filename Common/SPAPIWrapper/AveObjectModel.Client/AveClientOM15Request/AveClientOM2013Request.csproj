@@ -1,0 +1,110 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <OutputType>Library</OutputType>
+    <RootNamespace>AveClientOM15Request</RootNamespace>
+    <AssemblyName>SP2013ClientOMRequest</AssemblyName>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>..\..\..\..\bin\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <OutputPath>..\..\..\..\bin\Release\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+    <DelaySign>false</DelaySign>
+    <AssemblyOriginatorKeyFile>..\..\..\..\DocaveReference\DocAveStandard.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+	<PropertyGroup>
+		<EnableUnsafeBinaryFormatterSerialization>true</EnableUnsafeBinaryFormatterSerialization>
+	</PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="AveClientOM2013RequestForQueryList.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\AveObjectModel.Common\WebPart\AveWebPartUrlHanlder.cs">
+      <Link>AveWebPartUrlHanlder.cs</Link>
+    </Compile>
+    <Compile Include="..\AveObjectModel.Common\WebPart\WebPartPropertiesUpdater\AveBusinessDataWebPartUpdater.cs">
+      <Link>AveBusinessDataWebPartUpdater.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\..\..\DocaveReference\DocAveStandard.snk">
+      <Link>DocAveStandard.snk</Link>
+    </None>
+    <None Include="NintexAPIConfiguration.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\Common\GlobalCommon\GCommonContract\DocAve.GCommonContract.csproj" />
+    <ProjectReference Include="..\..\..\..\Common\GlobalCommon\GCommonUtility\DocAve.GCommonUtility.csproj" />
+    <ProjectReference Include="..\..\..\Microsoft365\Authentication\Microsoft365.Authentication.csproj" />
+    <ProjectReference Include="..\..\..\Microsoft365\SharePoint\Microsoft365.SharePoint.csproj" />
+    <ProjectReference Include="..\..\..\Wrapper\Wrapper.Common\Wrapper.Common.csproj" />
+    <ProjectReference Include="..\..\..\Wrapper\Wrapper.Resource\Wrapper.Resource.csproj" />
+    <ProjectReference Include="..\AveClientRequest.Common\AveClientRequest.Common.csproj" />
+    <ProjectReference Include="..\AvePSIRequest\AvePSIRequest.csproj" />
+    <ProjectReference Include="..\AveWebServiceRequest\AveWebServiceRequest.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="FeatureMapping\site.features1031.txt" />
+    <EmbeddedResource Include="FeatureMapping\web.features1031.txt" />
+    <EmbeddedResource Include="FeatureMapping\site.features1033.txt" />
+    <EmbeddedResource Include="FeatureMapping\web.features1033.txt" />
+    <EmbeddedResource Include="FeatureMapping\site.features1036.txt" />
+    <EmbeddedResource Include="FeatureMapping\web.features1036.txt" />
+    <EmbeddedResource Include="FeatureMapping\site.features1041.txt" />
+    <EmbeddedResource Include="FeatureMapping\web.features1041.txt" />
+    <EmbeddedResource Include="FeatureMapping\site.features1043.txt" />
+    <EmbeddedResource Include="FeatureMapping\web.features1043.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="AvePoint.CloudInsights.SDK" Version="20.12.21" />
+    <PackageReference Include="Cloud.Sdk.Amls.Ics" Version="4.12.30" />
+    <PackageReference Include="Cloud.Sdk.Aos" Version="5.6.17" />
+    <PackageReference Include="Cloud.Sdk.AosModernApi" Version="6.8.39" />
+    <PackageReference Include="Cloud.Sdk.CloudInsights" Version="5.4.70" />
+    <PackageReference Include="Cloud.Sdk.Core" Version="6.10.102" />
+    <PackageReference Include="Cloud.Sdk.Dao" Version="5.2.22" />
+    <PackageReference Include="Cloud.Sdk.Token" Version="6.8.81" />
+    <PackageReference Include="Duende.IdentityModel" Version="8.1.0" />
+    <PackageReference Include="log4net" Version="3.3.1" />
+    <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
+    <PackageReference Include="Microsoft.Data.Services.Client" Version="5.8.5" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="10.0.2" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="10.0.2" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.EnvironmentVariables" Version="10.0.2" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="10.0.2" />
+    <PackageReference Include="Microsoft.Extensions.Http.Polly" Version="10.0.2" />
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="10.0.2" />
+    <PackageReference Include="Microsoft.SharePointOnline.CSOM" Version="16.1.26712.12000" />
+    <PackageReference Include="NintexO365API.CloudBackup" Version="2.0.0-beta" />
+    <PackageReference Include="Polly" Version="8.6.5" />
+    <PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0" />
+    <PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.9.0" />
+    <PackageReference Include="System.Data.SQLite.AvePoint" Version="1.0.119.2" />
+    <PackageReference Include="System.Diagnostics.DiagnosticSource" Version="10.0.3" />
+    <PackageReference Include="System.DirectoryServices" Version="10.0.2" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="8.19.1" />
+    <PackageReference Include="System.Reflection.Emit" Version="4.7.0" />
+    <PackageReference Include="System.Reflection.Emit.ILGeneration" Version="4.7.0" />
+    <PackageReference Include="System.Reflection.TypeExtensions" Version="4.7.0" />
+    <PackageReference Include="System.Text.Encodings.Web" Version="10.0.10" />
+    <PackageReference Include="System.ServiceModel.Duplex" Version="6.0.0" />
+    <PackageReference Include="System.ServiceModel.NetTcp" Version="8.1.2" />
+    <PackageReference Include="System.ServiceModel.Federation" Version="8.1.2" />
+	<PackageReference Include="Newtonsoft.Json" Version="13.0.4" />
+    <PackageReference Include="Microsoft.DotNet.UpgradeAssistant.Extensions.Default.Analyzers" Version="0.4.421302">
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="System.Dynamic.Runtime" Version="4.3.0" />
+    <PackageReference Include="System.Linq.Queryable" Version="4.3.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Context\" />
+  </ItemGroup>
+</Project>

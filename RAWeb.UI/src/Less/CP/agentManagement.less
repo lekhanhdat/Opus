@@ -1,0 +1,539 @@
+@sourceMar: 3px;
+@imgUrl: "/Images/Base/action_button.png";
+
+#raAgentManagement {
+  .aui-messagebar{
+    margin-bottom: 16px;
+  }
+  .button.button-link{
+    .button-text-part{
+      text-align: left;
+      text-decoration: underline;
+      font: italic normal normal 13px/18px "Open Sans", sans-serif;
+      letter-spacing: 0px;
+      color: #0072d0;
+      opacity: 1;
+    }
+  }  
+  .ra-section {
+    margin-bottom: 0;
+  }
+
+  .table-foot-left {
+    float: left;
+  }
+
+  .table-foot-right {
+    float: right;
+  }
+
+  .ra-nav-bar {
+    overflow: hidden;
+    margin-bottom: 16px;  
+  }
+  
+  #raCpAgentRegistBtnInNavBar,
+  #raCpAgentClientIdBtnInNavBar,
+  #raCpAgentCertBtnInNavBar,
+  #raCpAgentDownloadInstallerBtnInNavBar {
+    margin-right: 8px;
+    margin-left: 0 !important;
+  }
+
+  .aui-table {
+    box-shadow: none;
+  }
+  .not-installed-img,
+  .active-img,
+  .inActive-img,
+  .disabled-img {
+    width: 17px;
+    height: 18px;
+    background: url(@imgUrl);
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .fa-download::before{
+    color:#27313c;
+  }
+  .fa-trash-alt::before{
+    color:#27313c;
+  }
+  .fia-disable-agent::before{
+    color:#27313c;
+  }
+  .button-icon-part.fia-status-info::before{
+    color: #27313c !important;
+  }
+  .not-installed-img {
+    background-position: -198px -294px;
+  }
+
+  .active-img {
+    background-position: -252px -294px;
+  }
+
+  .inActive-img {
+    background-position: -180px -294px;
+  }
+
+  .disabled-img {
+    background-position: -234px -294px;
+  }
+
+  .ra-nav-bar-left {
+    display: flex;
+    flex-wrap: nowrap;
+    .button-icon::before {
+      background-image: url(@imgUrl);
+      background-repeat: no-repeat;
+      width: 24px;
+      height: 24px;
+      overflow: hidden;
+    }
+
+    .btn1-icon::before {
+      background-position: -312px -196px;
+    }
+
+    .btn2-icon::before {
+      background-position: -338px -196px;
+    }
+
+    .btn3-icon::before {
+      background-position: -390px -196px;
+    }
+
+    .btn4-icon::before {
+      background-position: -364px -196px;
+    }
+  }
+
+  .ra-nav-bar-right {
+    float: right;
+  }
+
+  .download-file,
+  .delete-file,
+  .disable-agent,
+  .enable-agent,
+  .downloadConfig-refresh {
+    display: inline-block;
+  }
+
+  .delete-file,
+  .download-file,
+  .disable-agent,
+  .enable-agent {
+    margin-right: 36px;
+  }
+
+  .downloadConfig-refresh {
+    margin-left: 24px;
+  }
+
+  .agent-status-img,
+  .disable-agent-img,
+  .enable-agent-img,
+  .downloadConfig-refresh-img {
+    width: 18px;
+    height: 18px;
+    background: url(@imgUrl);
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .downloadConfig-refresh-name {
+    display: inline-block;
+    vertical-align: middle;
+    font-weight: 600;
+    margin-left: 5px;
+  }
+
+  .agent-status-name,
+  .disable-agent-name,
+  .enable-agent-name {
+    display: inline-block;
+    vertical-align: middle;
+    font-weight: 600;
+    margin-left: 4px;
+  }
+
+  .disable-agent-img {
+    background-position: -290px -294px;
+  }
+
+  .enable-agent-img {
+    background-position: -270px -294px;
+    position: relative;
+    left: -2px;
+  }
+
+  .downloadConfig-refresh-img {
+    background-position: -306px -294px;
+  }
+
+  .aui-dialog-header {
+    padding-bottom: 5px;
+  }
+
+  .fia-mismatched {
+    font-size: 16px;
+    vertical-align: middle;
+    color: red;
+  }
+
+  .fia-error {
+    font-size: 16px;
+    vertical-align: middle;
+    color: #f37813;
+  }
+		.version-mr {
+			margin-right: 5px;
+		}
+	
+		.column-version-latest {
+			background-color: rgb(245, 250, 255);
+			border: 1px solid #0072D0;
+		}
+	
+		.column-version-new {
+			background-color: rgb(245, 255, 249);
+			border: 1px solid #078240;
+		}
+}
+
+#raCreateOrEditForm {
+    padding: 0 8px;
+    .source-option{
+        margin-top: 8px;
+    }
+
+    .source-name {
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: 4px;
+    }
+
+    .aui-messagebar {
+        margin: 0 50px 15px 0px;
+    }
+	.collect-switch {
+		margin-left: 10px;
+	}
+}
+
+#raRemindDialog {
+    a {
+        color: #004488;
+        text-decoration: underline;
+        cursor: pointer;
+    }
+
+  .ra-remind-content {
+    margin-left: -12px;
+    width: 604px !important;
+  }
+
+    .aui-dialog-header {
+        background-color: rgb(229, 233, 238);
+        border: 0;
+        margin: 0;
+    }
+
+    .aui-dialog-footer {
+        padding: 0;
+    }
+
+    .aui-dialog-close {
+        position: relative;
+        left: -20px;
+    }
+
+    .process-area {
+        width: 100%;
+        background-color: rgb(229, 233, 238);
+        padding-bottom: 25px;
+    }
+
+    .process-icon {
+        width: 100%;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .process-icon div {
+        float: left;
+        width: 90px;
+        height: 90px;
+        margin: 0 5px;
+        background-color: #fff;
+        vertical-align: middle;
+        border-radius: 5px;
+        box-sizing: border-box;
+        border: 1px solid #CAD5E2;
+        //box-shadow: 0 2px 8px rgba(0, 0, 0, 0.29);
+    }
+
+    .process-img1::before {
+        display: block;
+        width: 58px;
+        height: 58px;
+        background-image: url(@imgUrl);
+        background-repeat: no-repeat;
+        background-position: -394px -330px !important;
+        overflow: hidden;
+        position: relative;
+        left: 12px;
+        top: 12px;
+        content: "";
+    }
+
+    .process-img2::before {
+        display: block;
+        width: 64px;
+        height: 60px;
+        background-image: url(@imgUrl);
+        background-repeat: no-repeat;
+        background-position: -196px -330px !important;
+        overflow: hidden;
+        position: relative;
+        top: 16px;
+        left: 16px;
+        content: "";
+    }
+
+    .process-img3::before {
+        display: block;
+        width: 60px;
+        height: 60px;
+        background-image: url(@imgUrl);
+        background-repeat: no-repeat;
+        background-position: -262px -330px !important;
+        overflow: hidden;
+        position: relative;
+        top: 14px;
+        left: 14px;
+        content: "";
+    }
+
+    .process-img4::before {
+        display: block;
+        width: 62px;
+        height: 58px;
+        background-image: url(@imgUrl);
+        background-repeat: no-repeat;
+        background-position: -130px -330px !important;
+        overflow: hidden;
+        position: relative;
+        left: 11px;
+        top: 16px;
+        content: "";
+    }
+
+    .process-img5::before {
+        display: block;
+        width: 62px;
+        height: 58px;
+        background-image: url(@imgUrl);
+        background-repeat: no-repeat;
+        background-position: -328px -330px !important;
+        overflow: hidden;
+        position: relative;
+        left: 11px;
+        top: 16px;
+        content: "";
+    }
+
+    .process-name {
+        width: 100%;
+        font-size: 18px;
+        font-weight: 600;
+        text-align: center;
+        color: #092F57;
+        margin-top: 30px;
+    }
+
+    .selected-process {
+        border: 1px solid #0065CF !important;
+        background-color: #F1F7FF !important;
+    }
+
+    .introduce-area {
+        padding-top: 20px;
+        width: 490px;
+        word-wrap: break-word;
+        margin: 0 auto;
+        letter-spacing: 0px;
+        color: #27313C;
+    }
+
+    .foot-btn {
+        width: 100%;
+        padding: 0 20px;
+        position: absolute;
+        bottom: 20px;
+        left: 0;
+        color: #004488;
+        margin: 0 auto;
+        font-weight: 600;
+
+        .back {
+            float: left;
+            cursor: pointer;
+            vertical-align: middle;
+            line-height: 34px;
+        }
+
+        .next {
+            float: right;
+            cursor: pointer;
+            vertical-align: middle;
+            line-height: 34px;
+        }
+
+        .download {
+            float: left;
+            margin-left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .letgo {
+            float: right;
+        }
+    }
+
+  //修改aui
+  .aui-dialog-body {
+    margin: 0px;
+    width: 100% !important;
+  }
+
+    .aui-dialog-body>div {
+        padding: 0;
+    }
+}
+
+#raDownloadConfigFile {
+    input {
+        font: normal normal 600 14px/19px "Open Sans", sans-serif;
+        letter-spacing: 0px;
+        color: #27313C !important;
+        opacity: 1;
+        text-align: center;
+    }
+
+    .aui-input.aui-input-text {
+        vertical-align: middle;
+    }
+
+    .agent-install-intro {
+        font-size: 13px;
+    }
+}
+
+#raCPAgentCertificate {
+  .agent-certificate-action{
+    margin: 24px 0 16px 0;
+  }
+
+  .red-circle{
+    width: 8px;
+    height: 8px;
+    border-radius: 8px;
+    background-color: #C91D1D;
+  }
+
+  .green-circle{
+    width: 8px;
+    height: 8px;
+    border-radius: 8px;
+    background-color: #28CC74;
+  }
+
+  .set-default-mask{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    z-index: 100;
+  }
+}
+
+#raDownloadConfigFile {
+    .raDownloadConfigFile_InstallationCode{
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content:flex-start;
+      align-items: center;
+    }
+    .downloadConfig-copy {
+        display: inline-block;
+        margin-left: 16px;
+        font-size: 13px;
+    }
+}
+
+#raCPAgentClientIdDialog,
+#raDownloadConfigFile {
+    .aui-dialog-header {
+        flex-wrap: wrap;
+    }
+
+    .ra-dialog-des {
+        font-size: 13px;
+        font-weight: normal !important;
+        letter-spacing: 0px;
+        color: #27313C;
+        opacity: 1;
+        word-wrap: break-word;
+        width: 100%
+    }
+}
+
+.ra-agent-source-icon {
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 8px;
+    background-image: url(@imgUrl);
+}
+
+.ra-agent-fs-source-icon{
+    background-position: -432px -222px;
+}
+
+.ra-agent-sp-source-icon{
+    background-position: -378px -258px;
+}
+
+.reco-conn-cfg-item-section {
+  width: 100%;
+  margin-bottom: 24px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.reco-conn-cfg-item-button {
+  margin-bottom: 16px;
+}
+
+.reco-conn-cfg-item-title {
+  margin-bottom: 8px;
+  font: normal normal 600 14px "Open Sans", sans-serif;
+  font-family: "Segoe UI", sans-serif;
+  color: #323E4D;
+}
+
+.require {
+  &::after {
+    content: "*";
+    right: -8px;
+    top: 0;
+    font: normal normal 600 13px "Open Sans", sans-serif;
+    color: #FF4444;
+  }
+}

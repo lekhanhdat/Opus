@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="key_090b97af_fb52_4a97_93b4_bfeb26dfaf83" xml:space="preserve">
+    <value>Welcome to agent installation wizard</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="key_257e3086_b755_4a8d_a694_451b6ab02aa7" xml:space="preserve">
+    <value>Cloud Agent Download Manager</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="key_43f63948_5986_415b_9036_7b74ba2759b9" xml:space="preserve">
+    <value>Prerequisites check</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="key_6ce3d6b2_2203_43c0_918b_ac9955e6ef40" xml:space="preserve">
+    <value>Download Manager is used to download the AvePoint Opus installation package and pre-configure the required settings.</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="key_7315adb9_0e80_42ec_9e98_f1b0a14ecf4d" xml:space="preserve">
+    <value>Cancel</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="key_75584acc_6208_43b5_b8d9_8cfaab54f03e" xml:space="preserve">
+    <value>Download agent</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="key_aa23e68a_835e_47bb_8968_bc332fc96efa" xml:space="preserve">
+    <value>Rule</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="key_aa75fb0b_a805_4e77_a040_d753e2507b04" xml:space="preserve">
+    <value>Status</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="key_b864387b_ddff_483b_8c32_7c8c6fd03c22" xml:space="preserve">
+    <value>Warning</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="key_d37c506f_791f_4037_ba5c_700f7330d38a" xml:space="preserve">
+    <value>Start</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="key_07462cc5_2685_4595_923a_9c4a71fd5364" xml:space="preserve">
+    <value>Network</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="key_89b3350b_2410_4533_aa29_2700d5dfd2b2" xml:space="preserve">
+    <value>Waiting</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="key_ac1166cf_e270_43dc_b0ff_a43b79ff1af2" xml:space="preserve">
+    <value>Failed</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="key_55740329_a988_47c6_9c64_bab0aa27c7f8" xml:space="preserve">
+    <value>.NET Framework</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="key_f2d4f453_4434_4200_8525_4b839c30de2a" xml:space="preserve">
+    <value>Rescan</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="key_ccd03b9d_93d4_4b38_bb45_4390a76558db" xml:space="preserve">
+    <value>Passed</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="key_f71372ab_4a1e_40b1_b8b9_e8fd24ee856f" xml:space="preserve">
+    <value>Cancel</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="key_e1996ec7_ef33_4ab8_8998_e3935200db03" xml:space="preserve">
+    <value>Cancel</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="key_721008dd_96c3_4819_a95b_aa3ac6041131" xml:space="preserve">
+    <value>Available disk space</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="key_42e3c7e5_ec8d_46f8_a367_292db9c1035d" xml:space="preserve">
+    <value>Available physical memory</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="key_0c249c11_99eb_4c69_8759_3da320485e0f" xml:space="preserve">
+    <value>Download agent installation package</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="key_69a82598_134d_4ed3_830e_e2bb7baffc5a" xml:space="preserve">
+    <value>Please wait while downloading the agent installation package.</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="key_f43a31c4_bdcb_4a47_8bfa_12e1db8d3de3" xml:space="preserve">
+    <value>Install</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="key_c3402428_52ee_4a95_a4f3_da7693c8624d" xml:space="preserve">
+    <value>Install agent to:</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="key_51c5bc50_e7f7_4309_8720_3f5d49a26e94" xml:space="preserve">
+    <value>Installation location</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="key_456a1568_4227_4e55_ad7c_87e0d4085535" xml:space="preserve">
+    <value>Cancel</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="key_bc00875b_d1cd_47e1_8e6a_508c871a82ad" xml:space="preserve">
+    <value>Next</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="key_6066fb46_a878_4d44_b3df_6c10942e8fda" xml:space="preserve">
+    <value>Back</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="key_76ee35c6_8e5d_44f0_b1ba_046cee19e6e7" xml:space="preserve">
+    <value>Back</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="key_8b71ed7f_af35_4151_942c_7e1c756eda41" xml:space="preserve">
+    <value>Change</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="key_a5ce2d83_e6a5_4aa6_9893_b4eab31ab9dd" xml:space="preserve">
+    <value>Select a location to install the agent.</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="key_ac4d7b37_c3a5_4c16_913b_9e90d3656c7d" xml:space="preserve">
+    <value>The installation path '{0}' is invalid.</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="key_3e6b5d22_4b85_48aa_bb83_473eee71ff61" xml:space="preserve">
+    <value>The configuration has not completed. Are you sure you want to exit?</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="key_5c9f2d7f_aa92_4332_bed1_9e9910dbcb92" xml:space="preserve">
+    <value>Retry</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="key_0cf5afca_a5b2_4f91_b0c1_69b0d2ba1737" xml:space="preserve">
+    <value>Install agent</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="key_c2479e85_f4bb_45d8_b64a_38aa761ce9bc" xml:space="preserve">
+    <value>Please wait while installing the agent.</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="key_51a906d9_7bad_4489_b99a_d4450dd177b4" xml:space="preserve">
+    <value>Start configuration</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="key_75aaabed_5b63_4d43_a5a6_1b4dabab0693" xml:space="preserve">
+    <value>Retry</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="key_f33a29d5_e169_46a5_8283_01adad651dc6" xml:space="preserve">
+    <value>Error</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="key_79c2e46a_a05b_4bc4_bc83_93b15799b650" xml:space="preserve">
+    <value>The agent has already been installed.</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="key_0505679f_b4a8_41b2_8b69_414a6a91292e" xml:space="preserve">
+    <value>Close</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="key_c1963aed_33e6_4d1d_9a37_da1cb6776f17" xml:space="preserve">
+    <value>Subscription agreement</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="key_a09a3188_857f_4d1e_93db_b96bc3f80d5b" xml:space="preserve">
+    <value>Please read the following subscription agreement carefully. To continue, you must accept the terms in this agreement.</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="key_af5c691d_cf4a_4b79_86cf_48adb076c4f6" xml:space="preserve">
+    <value>Back</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="key_43da6143_df4e_4b0f_90dc_df418bd896ec" xml:space="preserve">
+    <value>Next</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="key_569c0236_6a67_4bd3_a950_ed6b2cb3c668" xml:space="preserve">
+    <value>Cancel</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="key_5c4f8e4d_bab8_48fa_8cc0_4311589f6cb7" xml:space="preserve">
+    <value>I accept the terms in the subscription agreement</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="key_8e2ebd87_931c_4d40_9571_52cdc408e63a" xml:space="preserve">
+    <value>The network is not available.</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="key_6f5a6290_b14d_4104_9061_a0a27b6e0209" xml:space="preserve">
+    <value>At least {0} GB of disk space is required.</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="key_8f862b95_5033_4680_9b5d_42a3309d052c" xml:space="preserve">
+    <value>At least {0} GB of physical memory is required.</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="key_38a3784d_9749_4635_8459_a5f5fb11ed87" xml:space="preserve">
+    <value>.Net Framework 4.8 or above is required.</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="key_b53fb0e6_0645_408b_a7af_8318a40a35e2" xml:space="preserve">
+    <value>Please wait while updating the agent.</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="key_1df5afca_b6b2_4f91_b1d1_69b0d2ba1748" xml:space="preserve">
+    <value>Update agent</value>
+    <comment>Resolved</comment>
+  </data>
+</root>

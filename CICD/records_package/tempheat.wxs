@@ -1,0 +1,1085 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+    <Fragment>
+        <DirectoryRef Id="INSTALLFOLDER">
+            <Directory Id="dirB2485A0B9E3B6CE18CB992EE25E2D9BF" Name="new" />
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <ComponentGroup Id="FileComponents">
+            <Component Id="cmpBC0CCFAC28CA372EA825F2A6FA5430FD" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{D7C30C4B-1144-4375-93C2-8D976A6B7EE9}">
+                <File Id="filF6DB40F3B1A08CE6454D1860D34B3E19" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\AgentCommonUtility.dll" />
+            </Component>
+            <Component Id="cmpA042FECDEDE3BC9CCF819D6E81BB2F84" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{E5E606F8-B8F1-42BD-94BD-0F0C96CD18B1}">
+                <File Id="fil87D18AAD5574E3D71D36F9AE66D54663" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\AlphaFS.dll" />
+            </Component>
+            <Component Id="cmp9F73342ED2D385CCADF190A553E024C2" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{66A672B0-6970-4650-BC46-C4485A0D4EDA}">
+                <File Id="filB2E3047ABE423583107FC1560F1F6BFD" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\Aos.Sdk.dll" />
+            </Component>
+            <Component Id="cmp0AF66D39427E0C7312C4413C22D2FB1C" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{69694A71-869C-461F-A69B-238072526667}">
+                <File Id="fil1BECBEC4BE239C0291D22445254FDDA2" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\AOSReportingSDK.dll" />
+            </Component>
+            <Component Id="cmp6312DDE752B222056FECFC0F300FC5BB" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{15485AE0-F80F-41B4-8E16-1A99E3988F50}">
+                <File Id="fil5A0F6812FEF0D78A98E8A2079F3B1E25" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\App.config" />
+            </Component>
+            <Component Id="cmp9E182FC3A87A7DFA6F54E46C77D8C6CD" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{B70382B2-877F-4682-B80E-4F41EE34BA45}">
+                <File Id="filF2446A56002EFD7DC8ECEC0D4FF593D5" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\AvePoint.ContainerService.dll" />
+            </Component>
+            <Component Id="cmpA0D1A0B0BEEE835389E5C58C7B0CDC21" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{26D622F2-4311-4583-99D3-3DFF2B04376F}">
+                <File Id="fil78725288AD36FC500624C07751FF5189" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\Castle.Core.dll" />
+            </Component>
+            <Component Id="cmpE5BE1A831A793ED587288BA63C954771" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{1D9E51BB-BCDB-4722-A47F-CDA3D50763D2}">
+                <File Id="fil58B15C3B184CCFE5AB50AA2AA3A7801D" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\Castle.Core.xml" />
+            </Component>
+            <Component Id="cmpC4A0818FA842AF4EADBE848699DE1D50" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{B0466B14-FE01-4977-8A1D-83B8DBBD6467}">
+                <File Id="fil510D92AB84620038CCF07B184AAE0B3E" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\Castle.Windsor.dll" />
+            </Component>
+            <Component Id="cmp552C7D1D65E3A46D6F38B7E24F433EAB" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{3F4DD064-E094-4C40-AE6D-0E5E74C79237}">
+                <File Id="fil1340860804A52E996E7F2EF7E6940F28" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\Castle.Windsor.xml" />
+            </Component>
+            <Component Id="cmp90D30BB1E7AD9017166D342F6571C0DB" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{86461B3A-BF56-4862-9C37-FF7D1F9EF33E}">
+                <File Id="filA5C8CB05F954A5D9854F0FFB651C6C3A" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\Cloud.Sdk.Aos.dll" />
+            </Component>
+            <Component Id="cmpC1DEE65DF8E460E3E06AAFB5446A61BB" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{3BF34840-2591-410B-9CEA-FC904157BAB9}">
+                <File Id="filBE41A5A9FB38A279B104041F809CFEEA" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\Cloud.Sdk.Core.dll" />
+            </Component>
+            <Component Id="cmp9FAB4E316AC4C1207BD434CC4AFBAA00" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{46421A9B-40E8-4FB8-83BC-483D9C880F58}">
+                <File Id="filF7BDBA320B272EFA83B4B075CF88BC9F" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\Cloud.Sdk.Data.Aos.dll" />
+            </Component>
+            <Component Id="cmp2B0C4747CC160FB555FC4C882BE59273" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{10B76411-B118-4F0B-8FB2-A7C056293043}">
+                <File Id="fil0B5956F0B98FF1F296C10223E39EA242" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\Cloud.Sdk.Token.dll" />
+            </Component>
+            <Component Id="cmpC68B0554148FF9D61CB6C07F38BF918E" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{A0BDDB25-AD87-474F-B845-FAD98E381777}">
+                <File Id="fil69F51314665ABD72DABE946112CE9436" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\CommonContract.dll" />
+            </Component>
+            <Component Id="cmp61BA547491C8DFFFA5ADA304F0E9B7F4" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{5DD6F446-10FD-4006-9BF7-215CD8FE5569}">
+                <File Id="filF04A55F111884434C0D1CFD5A6D4A251" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\CommonCryptographyAlgorithm.dll" />
+            </Component>
+            <Component Id="cmpA22456264C39D808E53CDD1E2E9C62DB" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{B1C11613-2841-4883-A79A-A11EF45E4965}">
+                <File Id="fil4251E7567F7EA65272E1E9EADE5FF343" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\CommonExtension.dll" />
+            </Component>
+            <Component Id="cmp62A7B38764C2361FBB154FF0BDEE7068" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{F5427208-21FE-456A-BF07-89B0CF1C2E89}">
+                <File Id="fil1C0E03E90C735FF1FEDE26C265BCD669" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\CommonMicroKernel.dll" />
+            </Component>
+            <Component Id="cmp309881E6E2BF0C8EE26C5CB65A609AB9" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{4FCCA94C-8AFC-4434-B9B6-9F506F5AED2F}">
+                <File Id="fil6276B5027A24DBA647349FE5CFD77067" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\CommonMicroKernelIocConfigurations.config" />
+            </Component>
+            <Component Id="cmp6D350C1C6B574146EB2C15E8C020FFBB" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{22575E8C-6419-4C53-BA71-03A3AB9C69B1}">
+                <File Id="fil98C63D73F8BF5743EA6BA10817B11CED" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\CommonResources.dll" />
+            </Component>
+            <Component Id="cmpFED8D866AE79B8BF4210E81B6A3D6756" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{882F880C-9BEA-4F3D-96AC-6E9693F729E9}">
+                <File Id="fil0E0B2DFA3726481BE8897C11187B0147" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\CommonUtility.dll" />
+            </Component>
+            <Component Id="cmp670126D7425E95B44B3827750DED33D5" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{C90BCFCF-D351-4746-9358-C2AE03DF7800}">
+                <File Id="filA0C6BC1AE68B29574BE9A483D0418A4A" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\Cosmos.CRTCompat.dll" />
+            </Component>
+            <Component Id="cmp1529ECF319C1E08E37B0E05AADD7C818" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{A47A3426-13E1-4EC5-B800-2EBCC1FDB7F6}">
+                <File Id="fil07607CFDE515858F22CF219D1A15AA91" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\DefaultMicroKernelInterseptionConfigurations.config" />
+            </Component>
+            <Component Id="cmp02322BFB10A75705E93F73F22A3A35DA" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{46124E8F-34DD-4A40-84AE-274DE1EC79A3}">
+                <File Id="fil7AAA93FAF1BC689BAEAFC91FC563E218" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\DocumentFormat.OpenXml.dll" />
+            </Component>
+            <Component Id="cmpC20B6305CD86010FED0308B7B13B0607" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{1CB7CF9A-532F-42FE-B386-E247E2830820}">
+                <File Id="fil51B7DD8371BD097CAD6E6FC8365040F3" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\EntityFramework.dll" />
+            </Component>
+            <Component Id="cmp5DAF478E9CB1C4D84C6FBBBD2335BD83" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{2C5B17CC-0337-45D9-8B98-9248882A1FF9}">
+                <File Id="fil1A77F2A7389A4FDE1E653B10227D5B79" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\EntityFramework.SqlServer.dll" />
+            </Component>
+            <Component Id="cmp5BF24447A60D51CFFCFD0E277EB15355" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{D1A17E69-0FC7-4C63-9813-E8B4DF05CCD2}">
+                <File Id="fil88D2A6FFD76ED1F9378EFEB805C51744" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\EntityFramework.SqlServer.xml" />
+            </Component>
+            <Component Id="cmp0E37EBE5D733A40ABA095848CFD5D93A" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{B517B5B7-F4FD-4369-81FA-241CFFAACA84}">
+                <File Id="fil311C8E6772F33352CB3D7EB9CA88717B" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\EntityFramework.xml" />
+            </Component>
+            <Component Id="cmpB3070AF339108B3109C554D4F3D5A9ED" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{9DE4F772-16E1-4AF1-B0B1-6C90123EB197}">
+                <File Id="fil688DF3A171B1141A00E60A1C8273EB98" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\FSBrowser.exe" />
+            </Component>
+            <Component Id="cmp4CEBC7DAB764317DA895CC7DADF7E9BA" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{7BD63685-435B-458C-8EE2-B0DD57BA5B08}">
+                <File Id="fil4F35BB7E0C23A8F1338F9568CA80BDA2" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\FSBrowser.exe.config" />
+            </Component>
+            <Component Id="cmpA828155EBAD568E4103DD1DA00136CE7" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{FFD953A2-9FF3-4279-8A9A-42B2289EA86C}">
+                <File Id="fil44FD9B898BA03817BAAB561EB145A6DB" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\GCommon.JobManagement.dll" />
+            </Component>
+            <Component Id="cmp4A013CD49B16565AA71A0AAC9410EED1" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{8A3931F5-A160-40E6-9AD3-F6585FCACB2C}">
+                <File Id="fil076370D0966D5D3B7D22990F5E494DEE" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\GCommon.JobManagement.dll.config" />
+            </Component>
+            <Component Id="cmp1CC0A35342EC58F9A43C4F6DE83B3113" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{B9BD831E-FE43-4488-B0A5-018473C0469B}">
+                <File Id="fil4255D8AED8A5DB468EA9F8A8FADC6A2D" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\Hyak.Common.dll" />
+            </Component>
+            <Component Id="cmpC19ED18BEE405C74569D4665E72E19D4" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{7E9FBF67-71C8-470B-8564-ED3FDD1B0634}">
+                <File Id="filA48241C152E98627DD1F50AE998F9F21" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\Hyak.Common.xml" />
+            </Component>
+            <Component Id="cmpE80588E69FEE1C9F3A1A9B0A3C62A051" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{032A212A-20B4-4FF7-9DE6-1BE7F8ED86CB}">
+                <File Id="fil86D4141045CB53B0D695E6DA6301D934" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\HybridAgentService.exe" />
+            </Component>
+            <Component Id="cmpF16013E7525D20BB84801476EC883451" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{64DDA2F4-241E-4DD9-B3EE-ABCEBDDE448C}">
+                <File Id="fil345E7906BA4E73110992EF5F085F52B1" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\HybridAgentService.exe.config" />
+            </Component>
+            <Component Id="cmp3E6411B81CD25FE9F8E8DBDBA0A4A3AB" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{37C7F1AC-8933-49D5-A2CA-DFD5A695E8BB}">
+                <File Id="fil042A9C62135861C1B3E52CEBDEB8768A" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\HybridClientLibrary.dll" />
+            </Component>
+            <Component Id="cmpF7CA1FB2346292385F4125D194C0D6DA" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{0E52BF9C-8100-4B55-BCAE-1C34F12908A1}">
+                <File Id="filC040CAE4A78AFC490B728959D04AD371" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\HybridCommonModel.dll" />
+            </Component>
+            <Component Id="cmpB4A53DA8A21A588A15BD87EC63BC27EA" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{210E7822-4C7A-4B72-9A5F-A3904CCCDAEE}">
+                <File Id="fil6F7984FFB45D69D36520EF81D9A79D43" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\HybridContract.dll" />
+            </Component>
+            <Component Id="cmp66C89290C9FF837389B2DA273D50AD5A" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{30CC14AE-4110-4C87-BDCA-ED632576BF85}">
+                <File Id="fil8677899209D2B9E246D4A6486ED269B7" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\HybridProxy.dll" />
+            </Component>
+            <Component Id="cmpFE8005FA64F3AB2AC175CE0680AA4F5E" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{11FCF653-5AF7-43EC-8999-B3BD77DBE94B}">
+                <File Id="filE0F091950F223F568F9E23653FD604BC" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\HybridResource.dll" />
+            </Component>
+            <Component Id="cmp9F2DDA2DEEEF193457E1E53634AA916A" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{11A223CF-005F-4F56-A91A-BFD0C076A25F}">
+                <File Id="fil278F81F4FF814551254E05A290719178" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\HybridUtility.dll" />
+            </Component>
+            <Component Id="cmpAF4F2F08B511AEBD856DEA0151409A0F" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{7010AAE6-704F-43E9-96CF-FA3CE609476E}">
+                <File Id="fil5AF6BABAB113137B1CE54101858AE761" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\HybridUtility.dll.config" />
+            </Component>
+            <Component Id="cmpB74B05952256826F676019B8222B113C" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{137BC947-DB5B-4D8D-A8F3-EEF72794BCC5}">
+                <File Id="fil210C1D95BA278FCD04B67F170EC10442" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\IdentityModel.dll" />
+            </Component>
+            <Component Id="cmpF928A86F8ED65B7CA6EF5AD83B0DFE9B" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{E30E6C82-C9D8-4571-A6D7-112E1DBF0845}">
+                <File Id="fil6EE34DA16336D478D84BCC2183B7077E" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\IdentityModel.xml" />
+            </Component>
+            <Component Id="cmpD71FCE0D1FDFD281A754601A052191AF" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{ABB4D62D-59A4-4415-A52D-049D143BED4E}">
+                <File Id="fil27875206D749643B424D097BC0A394D9" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\Ionic.Zip.dll" />
+            </Component>
+            <Component Id="cmp8E5F5E09DAE54D771214D0FCC6865553" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{81D397F4-860B-4D4D-91BC-8415CB5B69B5}">
+                <File Id="filC29DB19330DDA2784B6EDA219C5AF382" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\log4net.dll" />
+            </Component>
+            <Component Id="cmp56D1853B9F27ADFAD4D075EA30838219" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{705C22BB-9C89-46F1-A9E5-58786E90FC17}">
+                <File Id="filDFFB0950FD76DD47C805F7C1EC898C32" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\log4net.xml" />
+            </Component>
+            <Component Id="cmp5750824954541271553902EC9E4E1C99" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{6300F3AD-C6A5-4A70-9856-107435858C57}">
+                <File Id="filCECC515363C211AA37F069F9BA29A994" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\Microsoft.AspNetCore.Connections.Abstractions.dll" />
+            </Component>
+            <Component Id="cmp81D6D634B829C79F1216765CEE229B6B" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{4E679701-8E31-4844-B076-C93FFC7E295B}">
+                <File Id="fil8CB437A8567C62B00898C27A7A07CD88" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\Microsoft.AspNetCore.Connections.Abstractions.xml" />
+            </Component>
+            <Component Id="cmp5012021E94634245240B1E43C5205CCA" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{A051316A-5FA9-40DB-ADC0-B4825BDB3CA5}">
+                <File Id="fil6B51ED8A5D19E8D81C8584F5DFF62A49" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\Microsoft.AspNetCore.Http.Connections.Client.dll" />
+            </Component>
+            <Component Id="cmp1AB08ED2D4644982DF732E1C03E81B6F" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{D1C1C08B-6CE6-42B6-95C7-CFF66939A6FF}">
+                <File Id="filD84378C18ACFB03CCA3DA7ECCD2DC398" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\Microsoft.AspNetCore.Http.Connections.Client.xml" />
+            </Component>
+            <Component Id="cmpC9D14EFA65AC602F1F4CA03FEF8E4F54" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{6D86BCA5-206F-4C71-A7F3-43F69E25AB0C}">
+                <File Id="fil2D6ABDDE17B8DE7D00D292AD5C6D46BE" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\Microsoft.AspNetCore.Http.Connections.Common.dll" />
+            </Component>
+            <Component Id="cmp34431EC7246EF2BF2901D383C013A283" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{03B42F52-3C78-4D37-8289-9A7A24771450}">
+                <File Id="fil7255C5C977B80902EB41A5CA576FACBA" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\Microsoft.AspNetCore.Http.Connections.Common.xml" />
+            </Component>
+            <Component Id="cmpAE111B97D7FA5D3E76EF8D4F2C8DBB65" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{3102F13C-66AA-416F-B61B-2C79D8D0834D}">
+                <File Id="filE7CEB658D98DF3BDDBA033600E22E1E9" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\Microsoft.AspNetCore.Http.Features.dll" />
+            </Component>
+            <Component Id="cmp7721A3B94530F3F54E0908BC10FF325F" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{5377C1AD-EBDD-4A1B-8E4B-4C4ECC706801}">
+                <File Id="fil0A49144F7DE6CF8EAF3BE2D9B4F78497" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\Microsoft.AspNetCore.Http.Features.xml" />
+            </Component>
+            <Component Id="cmpF5B9A9D5BFC4A94E201051BC0739DDFA" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{773B09AD-50BA-47BF-9950-3F1825EA5FFD}">
+                <File Id="filBAB55198C5867A4A02BB5E4D51BA6AF0" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\Microsoft.AspNetCore.SignalR.Client.Core.dll" />
+            </Component>
+            <Component Id="cmp3831C4891B6D5382136DF52B3DDC2E41" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{FE551647-9405-4015-B3A6-7B840B7CA1C1}">
+                <File Id="filC077F9C003ADF5731398CAAC8B1A83EE" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\Microsoft.AspNetCore.SignalR.Client.Core.xml" />
+            </Component>
+            <Component Id="cmp4FA21DE17D2F90581E68001C8E1BD25B" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{C6E15924-07D9-40E0-BDF8-1E8E76C7D712}">
+                <File Id="filB561084FC438B1592BABEB33DBB7820D" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\Microsoft.AspNetCore.SignalR.Client.dll" />
+            </Component>
+            <Component Id="cmp9E526B98D9EAE87AB1EE3F350DF4EAD0" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{FBD82E21-DF18-450B-9BFA-D366749CB760}">
+                <File Id="filF8E7656F131DE00748C6BC22C2A9EE29" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\Microsoft.AspNetCore.SignalR.Client.xml" />
+            </Component>
+            <Component Id="cmp6B7DF05F1147C109D2FB3DF22F1B4D01" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{98EF140F-40B5-4C02-BDF7-7FD50FD1EE2C}">
+                <File Id="fil99BA61E0971B197B3DCD2BD62679F7BC" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\Microsoft.AspNetCore.SignalR.Common.dll" />
+            </Component>
+            <Component Id="cmp0574FE50F280ED4E8B933FC6358ED630" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{80263317-C908-4ECD-806A-ACC92A4E1BB1}">
+                <File Id="fil57F62B65DF5CE37BA324286FEDF40252" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\Microsoft.AspNetCore.SignalR.Common.xml" />
+            </Component>
+            <Component Id="cmpE7EE0CCFC7DCFC72A6DD8033A4924F1A" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{2DB7A873-3002-4C86-A2C4-17D83886FF01}">
+                <File Id="filCCEB8A5A8117D37278A3D204B56F6260" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\Microsoft.AspNetCore.SignalR.Protocols.Json.dll" />
+            </Component>
+            <Component Id="cmp98680FE4F5C90785CD09CE1C4B699DF9" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{BCD6F095-4B6C-4C65-B16A-F327ABB18739}">
+                <File Id="fil1D26854748F29D3DEED058DADDDFD598" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\Microsoft.AspNetCore.SignalR.Protocols.Json.xml" />
+            </Component>
+            <Component Id="cmp16E0990E9660C9629DB0ECA85121FA38" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{4181A8FE-7A9A-4407-8996-B726E6726561}">
+                <File Id="filA5EC3590AF1DDD982FCBAE96A2F3808C" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\Microsoft.Azure.ActiveDirectory.Client.Framework.dll" />
+            </Component>
+            <Component Id="cmp6142D2880FFDF901D99D14CF74CB5088" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{5A8244C9-AA85-42D0-B185-B4D3C0684D39}">
+                <File Id="filA70691DCD067F43B3CE620DEBD11CA2D" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\Microsoft.Azure.Amqp.dll" />
+            </Component>
+            <Component Id="cmpF07E4BF04B9EF8B4A8833BD885E9A20A" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{BFFBA666-5CB3-486C-84CC-739A3AA4D1CD}">
+                <File Id="fil89FC6B3A1BEBDC8DC6E173A0B5E41961" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\Microsoft.Azure.Common.dll" />
+            </Component>
+            <Component Id="cmp0907BEC539DDA8AF35CD3FFF2329926A" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{07E7B629-DF56-4429-BEBC-3104DFE846C7}">
+                <File Id="fil82DBBF6E212EDFEFFF7769A5F4BD18E0" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\Microsoft.Azure.Common.NetFramework.dll" />
+            </Component>
+            <Component Id="cmpEA27684E445B841C81DA3F81B7F05B58" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{080FED8F-BCE9-4CFD-9BCC-B6C89B36A5C0}">
+                <File Id="fil2C4733675234F4168AF5696890D4ABBE" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\Microsoft.Azure.Common.NetFramework.xml" />
+            </Component>
+            <Component Id="cmp9A70F3A559200744164B91DE7E40E267" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{BB0B25B9-719A-4A42-B4F4-56DB029DAEF6}">
+                <File Id="fil29296B312368DA7E5A160B145BABC06A" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\Microsoft.Azure.Common.xml" />
+            </Component>
+            <Component Id="cmpF5280A45E87F68A474E4F69C777FB57F" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{7E415791-A73E-4DEC-BD8A-6FD816192438}">
+                <File Id="fil3F60AC7981C5A342AD396B8D4452AF7D" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\Microsoft.Azure.Documents.Client.dll" />
+            </Component>
+            <Component Id="cmp728B28BBA6F04285321922DBFF17BFD9" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{1B57B857-9B57-4F35-BD96-D5F7E0FB367A}">
+                <File Id="fil899464C4AEBB46683056C22DCCA9626F" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\Microsoft.Azure.Documents.Client.xml" />
+            </Component>
+            <Component Id="cmp694321A27DF00E99E748DF092EBF66E4" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{24C0A57B-0BBB-42A4-9714-D4060E3C4DAA}">
+                <File Id="fil29C44BA5FF11542DE9758E19ED42F615" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\Microsoft.Azure.Documents.ServiceInterop.dll" />
+            </Component>
+            <Component Id="cmpB8693770B482D5AC030954C06EC9A7A6" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{45964CE2-664C-4BC5-9196-68DA53EB88C6}">
+                <File Id="fil5BE09D7CC782F98C1DECE240FE186111" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\Microsoft.Azure.KeyVault.Core.dll" />
+            </Component>
+            <Component Id="cmpEBCCFCB5D875C5FC3CB58E549B3417B2" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{27857A93-389F-4709-B156-3552447899C6}">
+                <File Id="filCA84160E0527B26E23EF465BE6BDAFC3" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\Microsoft.Azure.KeyVault.dll" />
+            </Component>
+            <Component Id="cmpCD66F67AF8C65743D24B42AF120C4EDD" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{CACE0A87-5620-4471-AC16-C77AFACD6704}">
+                <File Id="fil4806F5809F1930D653848F35A5EF686F" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\Microsoft.Azure.KeyVault.WebKey.dll" />
+            </Component>
+            <Component Id="cmpDE739E44EEB35ADA1407BCDE27F4899F" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{778E441A-E5CE-491E-9519-C21E32D13229}">
+                <File Id="fil764969F00A26126656AFEB2F45B638D1" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\Microsoft.Azure.KeyVault.xml" />
+            </Component>
+            <Component Id="cmpAB3631A447C4D020E5D66FAB5D7C0734" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{CABE87C4-59FF-48B2-9446-3B2035F819B3}">
+                <File Id="fil01E63ABC0F1F8F11CF84A0AA986F7A1B" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\Microsoft.Azure.ServiceBus.dll" />
+            </Component>
+            <Component Id="cmp8A966F2A9D5544D59809E663610B459E" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{0B9D32F4-6FE7-4F6C-822D-469D5707F5D8}">
+                <File Id="filC8368A6B13061C8AFB1F21D382C51B7D" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\Microsoft.Azure.Services.AppAuthentication.dll" />
+            </Component>
+            <Component Id="cmpA160834532644A9B4503B39B5377C841" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{33BF1C10-6CE4-4627-A6A7-E2464D507FEA}">
+                <File Id="fil7F09E305D14AED2A7C257C621FD4607C" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\Microsoft.Azure.Services.AppAuthentication.xml" />
+            </Component>
+            <Component Id="cmpD0D138FDDF9FB150E6EA6532359D7791" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{13D90712-1B7F-4DE2-8727-1AE4B1EA5499}">
+                <File Id="fil6D15B7FD811851C9479CC6326E738782" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\Microsoft.Bcl.AsyncInterfaces.dll" />
+            </Component>
+            <Component Id="cmp77B0E3CF2197089950BB4FDC1DF3D5E8" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{4CD1E372-43F9-4C29-860B-F1FAE50A3EBF}">
+                <File Id="filFA0BC63AB604D6A899B1307FA4806B9C" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\Microsoft.Bcl.AsyncInterfaces.xml" />
+            </Component>
+            <Component Id="cmpC553C27AEA96BF13CA5C3730937A57D5" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{E4B07F19-A698-495E-9749-02B2B58F8848}">
+                <File Id="fil280F26FDE59FE4279EE05A7ADC55B99D" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\Microsoft.Data.Edm.dll" />
+            </Component>
+            <Component Id="cmp57BCAE97AEF51EEA00FC8238C71EB990" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{8C571ECA-6A62-4C09-A7B0-3FDB41D3F8DA}">
+                <File Id="fil4E8C8248DD9D4B21CA4F44359DFD9CAE" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\Microsoft.Data.Edm.xml" />
+            </Component>
+            <Component Id="cmp5A06D84E98F754040944105B984B1A8A" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{92716EBB-9B9D-45CB-B3E4-134144C63AA1}">
+                <File Id="fil7C3F096C42CD8710991C75FBB3435B51" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\Microsoft.Data.OData.dll" />
+            </Component>
+            <Component Id="cmp03DD355D10057A93B8C61F79BB249512" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{57FD7715-434F-4A5E-B478-EC1D8CC483B3}">
+                <File Id="fil8DA7187BC173BB676179EA67F9471F8A" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\Microsoft.Data.OData.xml" />
+            </Component>
+            <Component Id="cmpE36483720FE6237AB730C17495561EFC" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{92151242-51BC-4AB9-AF6B-143B2CED45DD}">
+                <File Id="fil87D24CE2966FEB822EF9E628E20590F3" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\Microsoft.Data.Services.Client.dll" />
+            </Component>
+            <Component Id="cmpD463C7B3CFEACF86CF79561F1C8C20A2" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{A94700FB-8606-4189-86F0-8B5568C93A87}">
+                <File Id="fil1CB4DEC67E6CE1DD4272783B4C311242" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\Microsoft.Data.Services.Client.xml" />
+            </Component>
+            <Component Id="cmp88D10318CDADC366CAAE094992F2F389" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{EA04AF01-6BE9-4CCE-B7DC-D09C2141F8D5}">
+                <File Id="fil1D243067EC09A97E6C56E9B4776D2813" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\Microsoft.Extensions.Caching.Abstractions.dll" />
+            </Component>
+            <Component Id="cmpA1472AC39889A626C595079F4001BAD3" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{577A3AA1-DEE5-4D68-8607-7F8250B3F715}">
+                <File Id="fil6F8744A9AFE24B1FD69A628F3A1261B1" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\Microsoft.Extensions.Caching.Abstractions.xml" />
+            </Component>
+            <Component Id="cmp79C8F10D52E48F152F6210896A3B51C9" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{B480BE1B-31AA-4494-A019-93BC19AE7202}">
+                <File Id="filE0EF88536A60436E3FFC37A79C399A10" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\Microsoft.Extensions.Caching.Memory.dll" />
+            </Component>
+            <Component Id="cmp6380639CBA90D23360701F327611B3B6" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{242DEE45-BDB2-47EF-99E7-4CB9526F776D}">
+                <File Id="filF05D9785E486736BDFD62DE26FB795B7" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\Microsoft.Extensions.Caching.Memory.xml" />
+            </Component>
+            <Component Id="cmpB0B2C2485CBB76F5CC1CFBB2815514F0" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{10CC5A89-8C3E-440F-BE01-7770863F464D}">
+                <File Id="filC24E74EE6D7716F01A60B23E7305092D" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\Microsoft.Extensions.Configuration.Abstractions.dll" />
+            </Component>
+            <Component Id="cmp6A581433CF09E2CF56B3C79965FDEE86" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{1E0549FB-F52B-496E-9639-83D350D811D6}">
+                <File Id="fil497B7210F858388E81715C63A3E5B4C8" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\Microsoft.Extensions.Configuration.Abstractions.xml" />
+            </Component>
+            <Component Id="cmp846C1A0F2CC975C431F539C8EDB42B3F" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{4BD48704-DB9F-4C42-AA8D-3672EE2E31CF}">
+                <File Id="fil7ADFB389BC951DE619131B1643245693" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\Microsoft.Extensions.Configuration.Binder.dll" />
+            </Component>
+            <Component Id="cmp6CBD210886369C603298BD95DF04C7A2" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{DD763588-7E5D-46BA-B00E-68AA3CF31278}">
+                <File Id="fil160B3D5675A52972A0E423585A05C0E3" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\Microsoft.Extensions.Configuration.Binder.xml" />
+            </Component>
+            <Component Id="cmpBCED9AD72591D3CACE539EC5468916EC" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{FA558CE6-5719-4520-80AD-CF787B0A052C}">
+                <File Id="filFD23EA81F16A470DBC3F03D733E89734" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\Microsoft.Extensions.Configuration.dll" />
+            </Component>
+            <Component Id="cmp6E1D9CBD1DCA39A2A6D8F036C16E2A7A" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{B27E3B8C-B6B9-4735-90DF-8146A6440DB4}">
+                <File Id="fil94B97E8FE1326E6850C0BEFAFBAF1A79" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\Microsoft.Extensions.Configuration.xml" />
+            </Component>
+            <Component Id="cmpBC139ACBD3FB1F1EAB5EE8CE01081A66" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{5C3F7538-8917-4D1B-A31C-84277CFF6F70}">
+                <File Id="filD2463B908F661A083882D05644F238C9" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\Microsoft.Extensions.DependencyInjection.Abstractions.dll" />
+            </Component>
+            <Component Id="cmp75014058BF7A8FB90A8035BEA5913802" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{B6C16158-3F63-4027-8BDF-217B105ECDF9}">
+                <File Id="fil473AD965D847892FF3B366F578E8482B" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\Microsoft.Extensions.DependencyInjection.Abstractions.xml" />
+            </Component>
+            <Component Id="cmpC84DE4D8CEF71B26D3992235BA7FC999" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{160BEFD3-6A0C-4F6E-BEE7-EFCA135E760B}">
+                <File Id="filAF3303589AE4321CCD1F78F027BA12B8" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\Microsoft.Extensions.DependencyInjection.dll" />
+            </Component>
+            <Component Id="cmp2E8982DA19677D49E91D7E8115FCA09B" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{06484F87-8F5E-4FD2-8247-F07D1F5226CF}">
+                <File Id="fil275746AAD60FF2F64663A925C3032C1E" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\Microsoft.Extensions.DependencyInjection.xml" />
+            </Component>
+            <Component Id="cmp3AB0A2EC88F15CF85DB661A0AA8A632F" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{10BCC039-D4A5-4AA9-B42F-8658277F9EB5}">
+                <File Id="fil492B3C0286E70AEAA9585C80F7CD6FE0" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\Microsoft.Extensions.Http.dll" />
+            </Component>
+            <Component Id="cmp90E099AE0FD8896A5652789EC49111BF" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{E0A856E4-14FB-4026-9271-1441B4A63705}">
+                <File Id="fil270AE5C8AD48CE1AA5B81F0397383CE4" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\Microsoft.Extensions.Http.Polly.dll" />
+            </Component>
+            <Component Id="cmpE6103905DD9A06C90A467D245874B087" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{9B531DA9-3318-4746-B98A-CBAD40E91D50}">
+                <File Id="filC12DC4C83B2A47CF5D74AF925E481C38" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\Microsoft.Extensions.Http.Polly.xml" />
+            </Component>
+            <Component Id="cmp0EC008CB11480F1A3FAB9B9B23470B45" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{3E5706FB-CE14-46A9-AA46-F6AC1FB55E11}">
+                <File Id="filB04B36B850936CF742950055E43B85E5" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\Microsoft.Extensions.Http.xml" />
+            </Component>
+            <Component Id="cmp0CFFDF0010DCA788E2786B08BB3ED2CD" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{F3153748-7E65-4BF7-96FD-C48120C5D747}">
+                <File Id="fil464312040931FB9A1D2A6AD8042E31F9" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\Microsoft.Extensions.Logging.Abstractions.dll" />
+            </Component>
+            <Component Id="cmpBFFCE1D930EF6B740DED617554FDE717" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{577E3A72-2D39-4EFB-AD3C-A5474E5CB8BA}">
+                <File Id="fil83605FCC8CCCD62EEA7C6F5B75FE9694" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\Microsoft.Extensions.Logging.Abstractions.xml" />
+            </Component>
+            <Component Id="cmp3C8A60D002717470A4923383607A6A83" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{54B23869-005F-4472-B723-5CD2DA08817B}">
+                <File Id="fil79BEBD1B738710AE6191585269642BDB" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\Microsoft.Extensions.Logging.Configuration.dll" />
+            </Component>
+            <Component Id="cmp8ABEF5774769BD460A48D337053D7F5A" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{27931345-CAC6-4856-A7D0-E2CFF6BBD6E7}">
+                <File Id="fil4C550C22E077112DA39741BFF7FCC2D9" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\Microsoft.Extensions.Logging.Configuration.xml" />
+            </Component>
+            <Component Id="cmpD33A83F927D5752418694B4894C0C48B" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{C97BEA28-654E-4B83-93CE-51DEBD2FF196}">
+                <File Id="fil227F4EDE5C9DE4AD2B58BA0BF4186DDA" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\Microsoft.Extensions.Logging.Console.dll" />
+            </Component>
+            <Component Id="cmp4FB61A7CAD7978431EA32BFD69FEFB2C" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{442077A5-DB32-489D-80DD-D4DA598BD365}">
+                <File Id="filDE7D7E4351CDAA4082FD1CAEBCA999CD" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\Microsoft.Extensions.Logging.Console.xml" />
+            </Component>
+            <Component Id="cmp0DC20F3B99B59A353C9E6E5F93470CDB" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{ADC68576-5288-4767-A051-A148393FA13A}">
+                <File Id="fil1DA29354E0EAFE6CAD7292C6A4196CCD" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\Microsoft.Extensions.Logging.dll" />
+            </Component>
+            <Component Id="cmp73D25BF39FE4E298B7070B37E1A3F5B9" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{2C557EBC-F5A3-4CBE-A6A5-343801489929}">
+                <File Id="fil6FD653C60F1B788997BACFE58988CAC2" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\Microsoft.Extensions.Logging.xml" />
+            </Component>
+            <Component Id="cmp45671D25F94D21657E59018D0090F1BA" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{ADB0752F-8A91-4090-BE7A-7D492385661B}">
+                <File Id="fil7CAE14CCDD6B5915BB27F9A30BA520F9" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\Microsoft.Extensions.Options.ConfigurationExtensions.dll" />
+            </Component>
+            <Component Id="cmp71109A3B4C587F1D9734AD96218924C2" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{98539DF8-C2D8-45FB-99A4-1A924A5D01B0}">
+                <File Id="filDCFD4FE3391F7E7FFCAB6863CF2504EC" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\Microsoft.Extensions.Options.ConfigurationExtensions.xml" />
+            </Component>
+            <Component Id="cmp17B8E5E76F43640FE5391C126D585E86" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{9E029776-EF72-42BE-B5F0-FA590DD2E04C}">
+                <File Id="fil0E677473CC08A40EEB928DD82A63FA18" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\Microsoft.Extensions.Options.dll" />
+            </Component>
+            <Component Id="cmpE4CC630A7445FD6367AA6FED18A5329F" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{96C32FAC-80C0-46CD-9A44-C7A375FEE6A3}">
+                <File Id="filD5CB455E467D734069E83CA6848AC579" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\Microsoft.Extensions.Options.xml" />
+            </Component>
+            <Component Id="cmp531261D64DD10AB4105E16C014F20CEE" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{DF5A1D8B-5E79-4472-8A02-3E4739458EA5}">
+                <File Id="filADDCF7728D63F77F40DA56F747CC6710" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\Microsoft.Extensions.Primitives.dll" />
+            </Component>
+            <Component Id="cmpDDE54ABCEFF1E5C11CAD6CD3619A7F84" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{731DA7A1-296A-4F25-A802-178737F0B7A8}">
+                <File Id="fil0AF828364A4EDC55295F61CDB0168015" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\Microsoft.Extensions.Primitives.xml" />
+            </Component>
+            <Component Id="cmp687E9BD5D4301EADB1AD50B9B88407BF" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{749FE77F-93FE-40BE-B60B-F256E8E824CF}">
+                <File Id="filCCC2260CAD33EA805C00E458291FADA2" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\Microsoft.IdentityModel.Clients.ActiveDirectory.dll" />
+            </Component>
+            <Component Id="cmp0852204CD5B35B4AF0AA3073003EEEFB" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{5BB390F3-1B5B-4F54-86DF-B6228C2E8A2C}">
+                <File Id="fil4201D9B5A3F43D980E2B00CD827154C2" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\Microsoft.IdentityModel.Clients.ActiveDirectory.Platform.dll" />
+            </Component>
+            <Component Id="cmp30AECC643F956BB9C80815CF808947B8" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{94A7BFFC-9234-44C6-ADDA-74870911A61C}">
+                <File Id="fil994429DBB84BE09CA0F58B5900E651EC" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\Microsoft.IdentityModel.Clients.ActiveDirectory.Platform.xml" />
+            </Component>
+            <Component Id="cmp896E3753708AACE97C0664B2B4F78F3F" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{267FB3E4-B356-497D-9D05-F77373E6B092}">
+                <File Id="filEF873CEAFAC91CF01D6C2C3286C08C48" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\Microsoft.IdentityModel.Clients.ActiveDirectory.xml" />
+            </Component>
+            <Component Id="cmp9275482FE2C60024EAC5EC3275551082" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{169B325D-AA2B-4452-B574-15AB188482D5}">
+                <File Id="filEB9D855994C93A9DD8512823D2E7235C" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\Microsoft.IdentityModel.JsonWebTokens.dll" />
+            </Component>
+            <Component Id="cmpFD1285A190722687BFB5177C2BE722AD" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{E7B0E78A-BE63-407D-94F2-E1573226FFC1}">
+                <File Id="fil137BACAFCC77878D3705B62CB0F7BA83" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\Microsoft.IdentityModel.JsonWebTokens.xml" />
+            </Component>
+            <Component Id="cmp2759EFF865F2A3F13B257F9246784108" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{46D237AF-7C00-437B-9F9D-E4CDB2782C0E}">
+                <File Id="fil41EA25C36539D0C2B655164C9C76FFE1" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\Microsoft.IdentityModel.Logging.dll" />
+            </Component>
+            <Component Id="cmpD69D2714CBB794CDFDB07285A5877D2A" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{9D64F844-CB0D-471F-844A-091984E0BF55}">
+                <File Id="fil8B575837AED2CAAB17C8E05624F275E1" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\Microsoft.IdentityModel.Logging.xml" />
+            </Component>
+            <Component Id="cmpF5489B6FC427F8AD9254E01D37650E93" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{D5D5901D-5A52-456C-8377-3E154C45F6C2}">
+                <File Id="filF69C4A4AE824AFAA90878BF4AEFC90DC" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\Microsoft.IdentityModel.Tokens.dll" />
+            </Component>
+            <Component Id="cmp0753D9346D0342E3D53A0CA791DD1B76" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{7B8C36EB-5605-4EDE-9A9F-EAD85EEED313}">
+                <File Id="fil1F3454DF22A0C1B732ED33122141AE2E" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\Microsoft.IdentityModel.Tokens.xml" />
+            </Component>
+            <Component Id="cmpD3449A62A45149FE0C27C5B8883CC9A8" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{5660EFC6-A315-4E7C-B881-FC2F2A156E66}">
+                <File Id="filA51C79937A982CEBA921B84835746BE8" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\Microsoft.Online.Administration.Automation.PSModule.dll" />
+            </Component>
+            <Component Id="cmp4335F47F1CA51906B81A933F4B159644" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{BFA073CB-C1E7-4F2A-A089-9897C56D68EA}">
+                <File Id="fil4E7FB8106B0056AFBF7FA8B69768DD11" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\Microsoft.Online.Administration.Automation.PSModule.Resources.dll" />
+            </Component>
+            <Component Id="cmp631BB94B2CBD1061DC22104695637DE4" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{C0590095-032E-4C37-818D-C351C2881DC1}">
+                <File Id="fil3731F44A08D33917EF104D2206F2D3F2" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\Microsoft.Online.Identity.Federation.PowerShell.dll" />
+            </Component>
+            <Component Id="cmpB88EDB855048342257426C8E33B5EB24" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{0954DBC7-6BE4-479E-8D93-8A18DA37EAF4}">
+                <File Id="fil24051D9132F996AECB9D3B15F5F54B68" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\Microsoft.Online.Identity.Federation.PowerShell.Strings.dll" />
+            </Component>
+            <Component Id="cmpBFD038DBAC3F7F03456840CA1BD1FB4E" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{7A266FBC-084A-465A-9AB7-DE2219952946}">
+                <File Id="filA0F45B0964716D1350F77FBE16710E70" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\Microsoft.Rest.ClientRuntime.Azure.dll" />
+            </Component>
+            <Component Id="cmp593F5CF187E403CEE6C57B023CCD09DF" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{A701AD5F-81CE-406C-8833-AD21CECC9F23}">
+                <File Id="filC97D3F17B4E6D838C011FF4964D99B1E" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\Microsoft.Rest.ClientRuntime.Azure.xml" />
+            </Component>
+            <Component Id="cmpAD5F73632479DFA1F4525F5CC14AB2AC" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{31EEA5B3-4842-4F29-B1A5-13BE92BF7DD6}">
+                <File Id="filCEC66E309DF03463FC499C6185D3FC98" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\Microsoft.Rest.ClientRuntime.dll" />
+            </Component>
+            <Component Id="cmp820C12BC3C52CDCDA53A99F92BEFCC62" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{2DAF9638-0438-4F70-8D3E-E02871424205}">
+                <File Id="fil87D18B1711FCF4691226D1CA85F30809" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\Microsoft.ServiceBus.dll" />
+            </Component>
+            <Component Id="cmpA8D001D9AF709172879DF9A44D6B79F9" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{6A308CCA-1749-405C-8146-AE3B67104DD2}">
+                <File Id="filCB065D368797C0CBA2B52ACABDA186D5" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\Microsoft.ServiceBus.xml" />
+            </Component>
+            <Component Id="cmp9F53B667AF14068115218BD39CCEFD92" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{4332F21C-068D-4306-9D72-A27587FCBD1A}">
+                <File Id="fil55AE593AA6C35A1D69782EC6987C36CD" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\Microsoft.Threading.Tasks.dll" />
+            </Component>
+            <Component Id="cmp821837962B4BC7E5F42E2399C4A46EBF" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{18AFBAC1-3A01-44BF-A6C1-2CC66E6ADBBF}">
+                <File Id="filE0D8F19C120E89DB6EC223EC5EC54E05" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\Microsoft.Threading.Tasks.Extensions.Desktop.dll" />
+            </Component>
+            <Component Id="cmpB96576A2707018E750D5BD5045ABD34D" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{3F42B3A7-09D2-40C2-BF7B-6F540BF0BC2A}">
+                <File Id="filD3FFA3234C941D61E38D82DF081A22B5" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\Microsoft.Threading.Tasks.Extensions.Desktop.xml" />
+            </Component>
+            <Component Id="cmp2EDB3895FB1956B5433DACA8E10DD45E" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{823A2896-CEA3-41EC-829B-AF873BBB2AE8}">
+                <File Id="fil7E7E22527AFC24DD8D70CAC67267C381" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\Microsoft.Threading.Tasks.Extensions.dll" />
+            </Component>
+            <Component Id="cmp5D7B444171D49DC199E366A156B949A5" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{84212636-E378-49D8-A37B-84E25A4AF6EF}">
+                <File Id="fil303BE021FBE0685CEDEDCC7C7724472F" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\Microsoft.Threading.Tasks.Extensions.xml" />
+            </Component>
+            <Component Id="cmp6AA593E810A686DF6916E7CBADE3CF97" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{3CB95C50-FAC3-46ED-AD40-8B82B4804CF8}">
+                <File Id="filB19F7166832EF5CC1C82C3C29205EA81" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\Microsoft.Threading.Tasks.xml" />
+            </Component>
+            <Component Id="cmpBDC05FE37BA6E6CAF944B502B67CFFB0" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{C144B6BB-5954-48CD-857E-E604F533ACD7}">
+                <File Id="fil580897249A0D0669D6F0983408C1CA4A" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\Microsoft.Web.Infrastructure.dll" />
+            </Component>
+            <Component Id="cmpA58DB82ED792C4C84CE538925D85D2A0" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{A8F31CE8-4C6E-4C89-8B7B-671395F5C36C}">
+                <File Id="filF5D70B038C7D7D9DFBEE0BDCD9EFCCB8" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\Microsoft.WindowsAzure.Configuration.dll" />
+            </Component>
+            <Component Id="cmp24AC596E12CC3317D3ADD6BE2F1A4F5E" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{BEF58C4D-FE07-4874-8A19-9A019342A8B9}">
+                <File Id="fil951267417729CD0139904546E97C4DA1" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\Microsoft.WindowsAzure.Storage.dll" />
+            </Component>
+            <Component Id="cmp23327350D118FA9971615E513EF0CCBC" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{12021862-C13A-4E97-8CAB-25E8C3C58FF6}">
+                <File Id="fil2F73ECE408A39EA76CF9DA4B88D5DBFE" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\Microsoft.WindowsAzure.Storage.xml" />
+            </Component>
+            <Component Id="cmp479C2A0199F59EA3B5B8D48629AF4F7F" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{8E6C7188-85BD-416C-81C9-586DEB8648A9}">
+                <File Id="filDC3FF82C5EDB4D660BBE777E5D1F9157" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\Newtonsoft.Json.dll" />
+            </Component>
+            <Component Id="cmp3EFA325D50DB439C8178402B80FC8F25" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{C042DFDC-7C66-4B2E-8076-EA4360C5A438}">
+                <File Id="fil0D267E507A71E53F4FC1C7B47D2670EF" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\Newtonsoft.Json.xml" />
+            </Component>
+            <Component Id="cmp0AC51FA455A5BA346752A02281200535" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{7710F968-0483-46BF-89A1-F1F2422EB59D}">
+                <File Id="fil8A8DA9C24D3F567053F036C6BEBC7C3D" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\NVelocity.dll" />
+            </Component>
+            <Component Id="cmpB05DE15BD3CCB4BE5E2B32FA40A5639D" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{787C7CF6-ADDD-440F-BDE7-A1E7420E4927}">
+                <File Id="fil661A97A6AC3F3C27E34C0B5A38371F33" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\NVelocity.xml" />
+            </Component>
+            <Component Id="cmp72EC1B9D0C04EBD54FA849C12FC811A9" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{EBA2F69B-1F10-4BBB-8B79-7AC8B2237CF7}">
+                <File Id="fil92C1101A8899412EE0835A779CEF9172" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\Polly.dll" />
+            </Component>
+            <Component Id="cmp5697856EA7A0AD00421F2AEFE42EBEAD" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{4E0F6D34-2393-457B-9FB4-6BCAED465133}">
+                <File Id="fil19382FBC91A051A8E2BBD10DED93140D" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\Polly.Extensions.Http.dll" />
+            </Component>
+            <Component Id="cmp0625BBE6913B203C9DD6236EC395AD6D" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{19CABE5A-80AE-4DAF-BE23-25A75003C3DC}">
+                <File Id="fil689E62F83A37B82E63998150409161D0" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\Polly.Extensions.Http.xml" />
+            </Component>
+            <Component Id="cmp68E7F7803770D3973FC376E694865A1A" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{89946CEB-6778-4ABC-AC75-D10008575A51}">
+                <File Id="fil8627FEAA21ECBDC34510727D6F06F9CD" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\Polly.xml" />
+            </Component>
+            <Component Id="cmp3AE707206A1B398583D7A8E9AFAC92B0" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{B231B2CE-BC5F-4762-9595-E08D1C4A1122}">
+                <File Id="fil2A5A929051E2A3AD5ADF41D7DAD14EB3" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\RAApi.Contract.dll" />
+            </Component>
+            <Component Id="cmp8460F74C6316B350AD5BD00D5A513274" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{999BCB32-0BD7-441D-A908-5289AA084C00}">
+                <File Id="fil8C9E1EB48E169757587BF6014BD7401E" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\RAFileSystemCore.dll" />
+            </Component>
+            <Component Id="cmp8EB63BFD9FFCADD4A7DD2C25402458A0" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{064A92F4-A6CE-44C7-9F28-8DF8346BBDB9}">
+                <File Id="fil761E5D092F9220EEBA1177AB5A5C105D" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\RAFileSystemCore.dll.config" />
+            </Component>
+            <Component Id="cmp10DBC94104F611C3D3917994462717D4" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{7EFFD0C8-43A0-423A-8251-AFDD6ACD382F}">
+                <File Id="fil442C923D12FBA82C514A325D71E39FBB" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\RAFileSystemWorker.exe" />
+            </Component>
+            <Component Id="cmpAAA9DD4D6DA2A0A61F1AACDA8BC62EED" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{DAEF15C8-5EFA-4FE6-BE68-4CBA62A75F8A}">
+                <File Id="filE40DA84D3E67B37262F6EA89A90B4DD7" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\RAFileSystemWorker.exe.config" />
+            </Component>
+            <Component Id="cmp7E3F5A41FDB0B42412659353D189E034" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{6A4D359D-2DFE-497E-9204-22A35A2F1A00}">
+                <File Id="fil173CA4ADCBFBA3C33FDB3345153EA772" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\RazorEngine.dll" />
+            </Component>
+            <Component Id="cmp6DDDF7DC5597D34C0C5077FD7B2E2263" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{A237B9DF-FB80-41E1-AF91-CFCE3EA56427}">
+                <File Id="fil4B8CC00C9D808CB9C6DB8A9CCA888833" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\RazorEngine.xml" />
+            </Component>
+            <Component Id="cmpB7E630E696A58EF77B1899480A6FE726" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{F66E9E58-F93A-4C72-A22C-78632759085F}">
+                <File Id="filE7123B7CCE56FC4017647299B7FD81F3" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\RevIMCommon.dll" />
+            </Component>
+            <Component Id="cmpC27931AAC5CA3000A9C17C1FF98DB736" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{F25091C8-58B2-4B7A-B53A-829AED880C1C}">
+                <File Id="fil0B9A4AA532B625E7DA36420C01C52550" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\RevIMContract.dll" />
+            </Component>
+            <Component Id="cmpA3EA4901D433A61B9466E58F9E185967" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{497BE38F-56CA-494B-83C1-5E30B70C4446}">
+                <File Id="filEB67D8DA7C8D8A58DEFD49A5794B4329" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\RevIMDB.dll" />
+            </Component>
+            <Component Id="cmp248FE71DC0B5A59B418747FB8B876343" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{0662353A-432A-405A-935A-DC59573FFFC5}">
+                <File Id="fil9085469B463E66D8CF4635AC6C7FF0AA" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\RevIMDB.dll.config" />
+            </Component>
+            <Component Id="cmp52D5165779D87DDA03539052024CDADD" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{C4068E53-8451-4A6D-AC47-32E9746BF1E0}">
+                <File Id="fil8DE82313622D94B074781B3BC3C305F0" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\RevIMI18N.dll" />
+            </Component>
+            <Component Id="cmp534643FE54FD474F7883E15CAB2CCBE0" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{3C64B0F3-9238-46FD-918B-1754C2C2AD1B}">
+                <File Id="fil4D8DA65D4B69B100C2D9B67EEA825F32" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\ScspCS.dll" />
+            </Component>
+            <Component Id="cmp0DB5758EF619968DC632F500C5B73FF2" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{AF9E6E84-1796-42A1-9B61-2A0867D3B034}">
+                <File Id="fil51F366169CC2362377B479B2D92E3717" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\ServiceVersion.config" />
+            </Component>
+            <Component Id="cmp1A71194817416062378CD4972D5061F8" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{FB45F19A-3AC5-43BF-81BC-6F2ED2D1A260}">
+                <File Id="filAF45EF8F1119BB9F1EC5C6288CE6EF61" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\SmartThreadPool.dll" />
+            </Component>
+            <Component Id="cmp712B30348A3637C5E8D28A03CF09DDA8" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{F4EA1F84-05B1-46EA-AC43-D36F888F8CC7}">
+                <File Id="fil81355F846C56F84E97B863B6BB892E2E" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\Storage.config" />
+            </Component>
+            <Component Id="cmp0F275C12ABBB12A41417F1503B6A6212" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{A8EF6358-4FA6-4A6C-80B3-FAA9D0B50DE3}">
+                <File Id="fil986C3EF51CD5C730A228EA99930C4459" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\Storage.dll" />
+            </Component>
+            <Component Id="cmp596F22F4F60D118EC427A08834901409" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{B6C4EA6F-69B3-4E0D-8D6D-0180673E58C2}">
+                <File Id="fil0535F9A6780FB006A28D55CC301A3DFA" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\Storage.dll.config" />
+            </Component>
+            <Component Id="cmp946B7CEB2168B13927991E1858D6FF84" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{A55BD3E2-A9D0-40E1-9201-7A50A05EDD40}">
+                <File Id="filBDA14F2E3656FD20E9E8670CF2D0878C" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\System.Buffers.dll" />
+            </Component>
+            <Component Id="cmpC55B004A7A0F07673F15693AD0E8258D" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{67E30075-5FB7-45F7-928B-4E00A0223005}">
+                <File Id="filEC5AE0AF8F8DA6F4D22ABFB2D535E7AC" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\System.Buffers.xml" />
+            </Component>
+            <Component Id="cmp7BE030F0D7A1D5A9F83FC25A74017FC5" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{9246A5B5-51DC-4B2C-BCB9-FE9C9AC3AC8C}">
+                <File Id="fil92BB55F1D5E051CD7F43CBDDF2C26D56" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\System.ComponentModel.Annotations.dll" />
+            </Component>
+            <Component Id="cmpFB66157D9568721875E7794242050085" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{01EE9C3F-B95E-424D-8533-1A379F760343}">
+                <File Id="filE19E56F0855D7BE234D26505CE042333" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\System.Data.SQLite.dll" />
+            </Component>
+            <Component Id="cmpE86243B6AD0F6FB0E91F3F725FE56278" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{04E2503D-964C-4C9C-96FE-D70632687F80}">
+                <File Id="fil589010929E7AF905B1259F023F9B3430" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\System.Data.SQLite.dll.config" />
+            </Component>
+            <Component Id="cmpB14063306558490D6B56005ABC8B5101" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{C34E3597-BBE6-44F7-B664-062B02E4A990}">
+                <File Id="filECBF2A65720719E0CFF7F944F665F90C" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\System.Data.SQLite.EF6.dll" />
+            </Component>
+            <Component Id="cmp760F6268D2C540F96865ED659D080309" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{79C3102F-799D-409E-83FF-EB040119496C}">
+                <File Id="filD10C8233F2EE2F73A8B374C1A7DBC860" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\System.Data.SQLite.Linq.dll" />
+            </Component>
+            <Component Id="cmpE40DC69A2572502F2E30732C46885333" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{A40ED446-146E-478E-B97B-4A18800DE4E9}">
+                <File Id="fil0DF0B11C70FAE6FC0067E1E9C76CC7AF" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\System.Data.SQLite.xml" />
+            </Component>
+            <Component Id="cmp3FCDE805F13C35D63700EF6760E54030" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{CA65FB46-2DA6-4D84-9435-5F0935965D9D}">
+                <File Id="fil5F3E6A1136CFA9E538391E1829E800AB" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\System.Diagnostics.DiagnosticSource.dll" />
+            </Component>
+            <Component Id="cmpD784E2E5E4A3EB03376A020AF73CD379" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{60B2ED84-A244-432F-B309-84DBFA7CC246}">
+                <File Id="fil39F0A60A1E6B77FE6B843C81C40EFBC5" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\System.Diagnostics.DiagnosticSource.xml" />
+            </Component>
+            <Component Id="cmp4C6202446A15CF90118978F2D556230E" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{F221F746-9FBF-48E3-A131-8A293221AE4E}">
+                <File Id="fil80BF643AC89E9CCAF42FD9EC3BBFC641" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\System.IdentityModel.Tokens.Jwt.dll" />
+            </Component>
+            <Component Id="cmp662589DD007C3FA776C5F2B700B80F85" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{9591AF2C-77DD-4762-B195-6125215AC55E}">
+                <File Id="filD0B01EF18497E4CE765938E63D45D502" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\System.IdentityModel.Tokens.Jwt.xml" />
+            </Component>
+            <Component Id="cmp2B4AEFB0ABE45AD5B27D0D6040EA2646" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{10185A3B-A1A9-4AC1-85F5-9D5489AF0939}">
+                <File Id="filC460B1254A99B119AC96D7037B349F34" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\System.IO.Pipelines.dll" />
+            </Component>
+            <Component Id="cmp52A489F4EB69B7059411893DBEB8C853" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{EE31854B-6817-4265-8D5B-64AB725A4988}">
+                <File Id="filD836019ABAD63A473BD67322010CAF7C" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\System.IO.Pipelines.xml" />
+            </Component>
+            <Component Id="cmp45FD9EEC65CD0F9EA0313B5C20B04161" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{20E48FE3-C1AC-4AA9-B0F2-1AE9E3F80C77}">
+                <File Id="fil24D53370E32C4FC4995CD0433F7998C5" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\System.Memory.dll" />
+            </Component>
+            <Component Id="cmp3B6A40BF9AA9F688ECAF780C1C0EBA9F" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{4C8EBD89-1D82-4B59-8EFF-A8C40AB10E29}">
+                <File Id="filDD9DBCBD8C0DA4A68DBA5EDBEEE069E2" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\System.Memory.xml" />
+            </Component>
+            <Component Id="cmpE3CAACCD5CEBBB6CB5E41E648BC72916" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{03C3AB00-D686-4896-B2F9-C00E10B08C35}">
+                <File Id="fil114A2BED591124B7DD6D8F74B9CFC68A" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\System.Net.Http.Extensions.dll" />
+            </Component>
+            <Component Id="cmp9DB241D99664A900BA0467EA18E87050" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{6A136224-83BB-4323-BD60-1114EB41943E}">
+                <File Id="fil201CCB322A7301BE00754B66006C1811" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\System.Net.Http.Extensions.xml" />
+            </Component>
+            <Component Id="cmp1D0A34B8C951D026EEA1302131E55BEE" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{69DCA685-245B-4147-805C-FC3C89B0DCA0}">
+                <File Id="filF550574713CDCE8313BFAB3F83B35754" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\System.Net.Http.Primitives.dll" />
+            </Component>
+            <Component Id="cmp64384CA0F6C1247E2F4C1CD193F20690" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{4F1870EA-8E9B-4D4C-9301-C6AB966F4B6F}">
+                <File Id="fil4ED1445092A174339134E0F07DCE7147" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\System.Net.Http.Primitives.xml" />
+            </Component>
+            <Component Id="cmpDEF35E30AF7193446B246C189DFE9D0C" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{9E78AF7B-BE77-4950-966B-B8B260CCA6C5}">
+                <File Id="fil32A715C1E47D81D8A4009F3063C20E2C" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\System.Net.Http.WinHttpHandler.dll" />
+            </Component>
+            <Component Id="cmp2120F2FF8BB3AC8CEC2CE376FAE4B438" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{F87C4C72-4A41-438C-B6A9-52EABB7F0B19}">
+                <File Id="filA0A26CC1A75FA219EC4DD8CBD32CAD66" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\System.Net.WebSockets.Client.dll" />
+            </Component>
+            <Component Id="cmp040E05938221943224F62C2B5FF34BBD" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{594D7877-5B4A-4111-A1CF-DFD0049534ED}">
+                <File Id="filC697BF2DCF6DA1FE77BB9791ECE1C738" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\System.Net.WebSockets.dll" />
+            </Component>
+            <Component Id="cmpFCA817234D65A88CB222DF2EA4D6E8B6" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{DF07DBEA-7FB7-4D41-AA9D-F2F994471732}">
+                <File Id="filA18BF22EDA52BB38D0C1253E811BFBBD" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\System.Numerics.Vectors.dll" />
+            </Component>
+            <Component Id="cmp9CD11F3BD351B8F17C9E4F682588BF0B" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{DC763E60-FB43-413D-8E63-B23B70111805}">
+                <File Id="fil3284F3DF371C6EB7CF6E6CCF01D8DF63" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\System.Numerics.Vectors.xml" />
+            </Component>
+            <Component Id="cmp3E16ECB5E392021E40DF4EAAF2103F67" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{1CC3BF04-2FCA-4AEB-8262-6FF1D81C69AE}">
+                <File Id="fil71B82230CBA7CBCA0FF46D52BEB7B863" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\System.Reflection.TypeExtensions.dll" />
+            </Component>
+            <Component Id="cmp13E8E0B8F9E192D6001F6C33B2B18CA5" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{C82151EF-55EE-4D40-865C-78F6234E932E}">
+                <File Id="fil2CEB36693FF342863A89C4E30F2C00E7" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\System.Reflection.TypeExtensions.xml" />
+            </Component>
+            <Component Id="cmp02D4090419FF4559BA9CC757A25396AF" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{BF0286E2-2020-4195-A4C4-83BD9F9C332D}">
+                <File Id="fil7DE79C3B03B4EB583D86264598BD53F2" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\System.Runtime.CompilerServices.Unsafe.dll" />
+            </Component>
+            <Component Id="cmp343D99ABE39B42123232C5D52A61B286" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{EA8EF208-DF2B-44EE-A40A-712258B5DD98}">
+                <File Id="fil9940FA9D4EDE27C062B3398DE451BB99" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\System.Runtime.CompilerServices.Unsafe.xml" />
+            </Component>
+            <Component Id="cmp7A7C5FA09826A7CC3E3C85F203B2E82E" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{249E831A-7A31-45AE-8DFD-2DA2247B5BBE}">
+                <File Id="fil06AE8795971C64D1AFECBC2FC1175B61" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\System.Runtime.Serialization.Primitives.dll" />
+            </Component>
+            <Component Id="cmpC0C1113AB5C5C61899090FF82A905B42" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{04FAC3F3-2B25-46AA-B0AB-427172805C72}">
+                <File Id="filDBC62F2B6723528058C8B5D883E1686E" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\System.Security.Cryptography.Algorithms.dll" />
+            </Component>
+            <Component Id="cmp188A31D6DDD50F178B695DCF7522DC79" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{20E1265B-3460-4E0B-A0BB-D1EBA684ABEF}">
+                <File Id="fil5FAE7A7C5D16307CC10FD2A212036108" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\System.Security.Cryptography.Encoding.dll" />
+            </Component>
+            <Component Id="cmpBA014BE8053CA50BAB0D2302C5CE6135" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{C7989A09-AF69-4666-ACEE-3CF6A7E17A00}">
+                <File Id="fil9B6787220D231C1A50CD812FCB160AB4" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\System.Security.Cryptography.Primitives.dll" />
+            </Component>
+            <Component Id="cmp47F8D2CBA076163E3373832922E20CF1" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{AFBDD46C-DB43-4D2A-9017-932C549CC469}">
+                <File Id="fil080DA1BC8262EFE130956469C3BA9B4A" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\System.Security.Cryptography.X509Certificates.dll" />
+            </Component>
+            <Component Id="cmp8A2573B5EDCE7B67C2A9DDE39D75FA25" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{F5EF3888-937C-48B0-A117-A58FD6985110}">
+                <File Id="filF05DFF4A2208C2D00E7E58B385AE9B52" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\System.Spatial.dll" />
+            </Component>
+            <Component Id="cmp39675E6FD0B88531EB38E4936B6C9672" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{4C8558A9-F76D-4EB5-A3AC-7296753BC345}">
+                <File Id="fil970DAA61254D1FF8A1E66862C447507B" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\System.Spatial.xml" />
+            </Component>
+            <Component Id="cmp776BD17A86A5DDB16C58BDC138CC1009" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{D68E6E02-A03A-4DAA-8C8C-955EC16FA699}">
+                <File Id="fil5E386656865A2552C1E1CCF7C7EE07E3" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\System.Text.Encodings.Web.dll" />
+            </Component>
+            <Component Id="cmp384D5456F60C110A6842BB34AFF96391" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{A87E894B-5B4B-442D-975A-87A62600E3C4}">
+                <File Id="fil8023A1A0BBB142F8B041A8BAA57B87AE" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\System.Text.Encodings.Web.xml" />
+            </Component>
+            <Component Id="cmp11AB34F5A0D3230122339273B23618D0" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{2701D9A4-58CF-43E5-94A5-94DC7FBE95DA}">
+                <File Id="fil0AD8C9C17EE9FD3E1024F6FBFC66AA1D" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\System.Text.Json.dll" />
+            </Component>
+            <Component Id="cmpB3FAA42CB14038B3D9845229D5BCDD6E" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{62C033B3-4134-4DCE-B8D7-CA4EA8E0A907}">
+                <File Id="fil2A60EE885DDE0D3C173E8251BBB609D9" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\System.Text.Json.xml" />
+            </Component>
+            <Component Id="cmp670FDAAEC7E30C42E3EEFE54DF9A55E9" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{5FB45B14-3BDE-4128-8A08-ABD5C7F31F99}">
+                <File Id="fil930A7655AD7403B27A2DAD6D11D9692C" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\System.Threading.Channels.dll" />
+            </Component>
+            <Component Id="cmpC2FC09F34DDAB312FF6F43C49CEDE105" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{90866216-4D24-47BF-853C-11B7DF5BDA64}">
+                <File Id="filB2BD5D217CCBE8558AD5CB231BA7C7CC" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\System.Threading.Channels.xml" />
+            </Component>
+            <Component Id="cmp30E4A6D186B4780757CCB472F306EFD0" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{6866F954-88A2-4363-B90D-EC2F815E725A}">
+                <File Id="fil9D1F6608457FD3D33D5885502484F145" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\System.Threading.Tasks.Extensions.dll" />
+            </Component>
+            <Component Id="cmp25CB515E6F273BAAD41F017B25B186D4" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{8919946C-D02D-4CB6-8305-BEAD2EBCE6D4}">
+                <File Id="fil78258A5696B30A3FE4598DC6BF91DB73" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\System.Threading.Tasks.Extensions.xml" />
+            </Component>
+            <Component Id="cmpB4D22B1B3C8C8A6D5743E859FDF973CA" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{3F1D49AF-E782-486E-ADF0-F710E5E89493}">
+                <File Id="fil74E2AAEB63B09F103ED5BEC428160C19" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\System.ValueTuple.dll" />
+            </Component>
+            <Component Id="cmpB7117C32C941E1B409758C13D8470FD3" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{481D8944-15CE-4C16-92D2-1B230CA42715}">
+                <File Id="fil3142C827A6A7A103DA72C647FA512DDB" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\System.ValueTuple.xml" />
+            </Component>
+            <Component Id="cmp72213660FB78EDD16830EA18BC4F0975" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{841954A5-BDFE-4E11-A92C-0E2F67758490}">
+                <File Id="filE39458B9D67504767A422EFAD9F5CF20" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\System.Web.Helpers.dll" />
+            </Component>
+            <Component Id="cmp5F6BB4AA6355F856583433C117D86FDF" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{9F692C14-9F17-4E33-AA10-EC8D52F05914}">
+                <File Id="fil845D8890F9EB4F5D99F1CAF9A88E1E6F" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\System.Web.Helpers.xml" />
+            </Component>
+            <Component Id="cmp2BA958B67B9541E9DB4206D90F24391F" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{E1D5EEA6-1E12-4842-AD12-50000D3295DE}">
+                <File Id="filD4B79BE36A47F546F0FF2657434365BE" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\System.Web.Mvc.dll" />
+            </Component>
+            <Component Id="cmp5585F7DFB539FF2DAED44AD77BE3B8E9" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{B7AC4CF2-1380-4314-963D-F98CC73370CA}">
+                <File Id="filBAEEF2ABAE608737BCF0DF48BFADA4E0" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\System.Web.Mvc.xml" />
+            </Component>
+            <Component Id="cmpB2C61F4BCED8DDE35EDEFF30B6B07596" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{431B2589-D423-44CD-94F6-2265C0468789}">
+                <File Id="filBF4EEBD99EFC540157374B9CCFAAE82D" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\System.Web.Razor.dll" />
+            </Component>
+            <Component Id="cmp50D4AC44C9833861257838FE082B909F" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{A5D93D72-1E75-4C27-969D-E0D6C39DD789}">
+                <File Id="fil29549AE9994E735EEB00A854C6FED756" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\System.Web.Razor.xml" />
+            </Component>
+            <Component Id="cmp50485B1D410DF4DD00B1C8809D788FA2" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{6DE69850-E5C5-41E0-82B7-437565CD8A4E}">
+                <File Id="filDB17D3E99B26D137E80A1DB888E87BDF" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\System.Web.WebPages.Deployment.dll" />
+            </Component>
+            <Component Id="cmpC2497B83D26E18D05C40AAEE90AD16C3" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{21E0B599-8E72-4E83-BE4C-6FC5E5A9B2E3}">
+                <File Id="fil6C0E8744E58DA568EE0BC6802F2AF797" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\System.Web.WebPages.Deployment.xml" />
+            </Component>
+            <Component Id="cmp1FB30017D09ABF6EDFA87B3C8EE12447" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{FB85884F-FC1D-467F-AB97-4E00E7716442}">
+                <File Id="fil306028ADF244E9997A27069FF89A8B93" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\System.Web.WebPages.dll" />
+            </Component>
+            <Component Id="cmp21F51F66C25254BA2A29DFF6F19F3D0E" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{80A72949-8D1C-4838-9BD1-EAE6FC58F977}">
+                <File Id="filE00873325F417CF446B58966576A7757" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\System.Web.WebPages.Razor.dll" />
+            </Component>
+            <Component Id="cmpB4FD595B173F451FF97555427F67505C" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{488A7FFC-2C73-4765-8653-C54197E36ECE}">
+                <File Id="filFD1A9AA19C72C7134911D73A5B916F95" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\System.Web.WebPages.Razor.xml" />
+            </Component>
+            <Component Id="cmpFC9BA138F5BFA8B1859EFB8569D22040" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{5941DF89-A8F6-4C60-8997-885688F2F4D1}">
+                <File Id="fil8F8B96AF78E33596FE69C1002A4C54D1" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\System.Web.WebPages.xml" />
+            </Component>
+            <Component Id="cmpFE51F748A7FF38D2A99F2B5EA0F3877B" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{E20750A1-549E-433E-99CD-B9B9F81381D6}">
+                <File Id="fil387FC77399BFE4681956AD8530822988" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\Z.EntityFramework.Plus.EF6.dll" />
+            </Component>
+            <Component Id="cmp1178FDBB2A0C3C4D7DBB8E6CE08B9050" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{D436ADDE-C4A3-40B4-8A6E-3FF21835F60C}">
+                <File Id="fil5076D5BA3CF460CBF1B1D3309A14CE9D" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\Z.EntityFramework.Plus.EF6.xml" />
+            </Component>
+            <Component Id="cmp9C4A92EFC6B6F00E06429FA86203168A" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{645F70FF-FE6F-4D8A-BD8E-495508C0BFDD}">
+                <File Id="fil62E98AE37B49C851409D1439AB496DAD" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\zlib.net.dll" />
+            </Component>
+            <Component Id="cmpEF80BDE51F64D55359EB149A2311A0D3" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{920EF9FE-FB74-4069-BC6F-5B7298FA4E88}">
+                <File Id="fil80E954E3125FD79C252AEA021B640D89" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\zxing.dll" />
+            </Component>
+            <Component Id="cmp1145BAC76AF23353DE02B3B742F35D91" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{96C1494C-BA59-4ACF-84A6-661DCEEE8D02}">
+                <File Id="fil3DFBD6B9D55E15CC1B287614D09885FF" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\zxing.presentation.dll" />
+            </Component>
+            <Component Id="cmp88D0FAA201508BAAF4144BD7855DCA91" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{BE07ADBD-35BB-4044-8216-E1C2B2292D89}">
+                <File Id="fil5D01A127F7DDA1B54B30A3130B80D340" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\zxing.presentation.xml" />
+            </Component>
+            <Component Id="cmp5DB7CF2EA253D142E7C4FBD3E280D7ED" Directory="dir881C8DEA0518EFF0974F076E3EAB57FC" Guid="{6FE803E1-BAE3-4881-A686-04D2A39A6CC4}">
+                <File Id="filF4302EF1F7C408048419C29466F63B0D" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\zxing.xml" />
+            </Component>
+            <Component Id="cmpD2CBCD98A25F9F988637357F3D2BF8F6" Directory="dir71DB3A507F43D6BADB23E5510C0E087F" Guid="{28381109-EDD5-4CE2-9636-D27E80EF0ADF}">
+                <File Id="filD3A8F56E4F9648025650FD3A3F07C579" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\AppConfig\AppSettings.config" />
+            </Component>
+            <Component Id="cmpC406475BDC2CAEA20C245FE7708598A8" Directory="dirA370CE247394E0CDBF8298624AC96B58" Guid="{AD941AFD-CBAA-494D-8416-BB95C4F6CBCA}">
+                <File Id="filEB0D07894FC83A16B2B0BCA85603E3DF" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\Config\AgentCommonVCEnv.config" />
+            </Component>
+            <Component Id="cmpADEFB093612B64FAD06E9750DBE5A347" Directory="dirA370CE247394E0CDBF8298624AC96B58" Guid="{D059548B-0786-4037-8D15-0958A6CE3355}">
+                <File Id="fil8DF9FE7AD4A332847E059E85F462D416" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\Config\AgentLog4net.config" />
+            </Component>
+            <Component Id="cmpADFD6843A5AF7D15903BDEB2F9CD8F3F" Directory="dirA370CE247394E0CDBF8298624AC96B58" Guid="{023F9CD5-0EEE-45C7-B0D4-7783C519305F}">
+                <File Id="fil7DEE13325755CE8C7B95963F0B2A6779" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\Config\BrowserLog4net.config" />
+            </Component>
+            <Component Id="cmp39590AAD232F199529F2ED1EC2C63ECA" Directory="dirA370CE247394E0CDBF8298624AC96B58" Guid="{DF2D6A9F-DBCD-4B23-B497-25468421B716}">
+                <File Id="filB59EF71A2CFBA7F69B8F811A9DB34383" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\Config\recotest.pfx" />
+            </Component>
+            <Component Id="cmp175B1EF556A00E81A93D8768C602CD8F" Directory="dirA370CE247394E0CDBF8298624AC96B58" Guid="{1948B162-0F37-44CB-A38B-4CBB9C4E5EB1}">
+                <File Id="filB0156441D2C33FA280DC90429EDDAEBA" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\Config\ServiceVersion.config" />
+            </Component>
+            <Component Id="cmpDF19066B713D8A3ED1884284CC9D1B07" Directory="dirC2D6DA239DC7F895AC756BA3C06E1EF9" Guid="{4679A0BD-5880-4FB6-8D30-6BDB00D3A548}">
+                <File Id="fil96487C73673DEF5DF908448093BCE2B3" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\Config\Castle\AgentServiceCastle.config" />
+            </Component>
+            <Component Id="cmp4A496A82E70384E0AC94AFC64F22C522" Directory="dirE941E1F3B34D56411B5230B2B1CB3A0A" Guid="{0E4AA967-A05B-4879-972F-66DE5F098AC8}">
+                <File Id="fil23D3BD3AA08C1C88AEB26C0EB0D254CA" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\de\CommonResources.resources.dll" />
+            </Component>
+            <Component Id="cmp2BFC3DCBF50173628330D41BDE0D4233" Directory="dirE941E1F3B34D56411B5230B2B1CB3A0A" Guid="{CAB4E1A1-AD33-4289-B7B6-3576A00EDC52}">
+                <File Id="fil42127AF9FF4A14CC1F97FE2503C8AC6A" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\de\Microsoft.Data.Edm.resources.dll" />
+            </Component>
+            <Component Id="cmp35087413AE4F12444A36C0C7D22D8E72" Directory="dirE941E1F3B34D56411B5230B2B1CB3A0A" Guid="{D759F8B9-1D52-45B4-A6DC-B8E2537DAA34}">
+                <File Id="fil005873FD126C03F8EDDB738F662EB8FF" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\de\Microsoft.Data.OData.resources.dll" />
+            </Component>
+            <Component Id="cmpD334FCA992AA22BB8DC2F3010AC548AF" Directory="dirE941E1F3B34D56411B5230B2B1CB3A0A" Guid="{6307801B-4391-4484-ACE7-0BB4BAD81A76}">
+                <File Id="fil766479BE08961A0BA05E4767AE886783" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\de\Microsoft.Data.Services.Client.resources.dll" />
+            </Component>
+            <Component Id="cmp98A71EB41C7FB2F5BFC3100B9C37E7D6" Directory="dirE941E1F3B34D56411B5230B2B1CB3A0A" Guid="{D8E4235A-584E-46AE-AB24-8CFBF90331B0}">
+                <File Id="fil531C7038A110A0BCD1440B39EEB5EE6C" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\de\Storage.resources.dll" />
+            </Component>
+            <Component Id="cmp067CC7111AB917CBF0B7A03BCA6BB908" Directory="dirE941E1F3B34D56411B5230B2B1CB3A0A" Guid="{0D237286-6821-4CB2-AE23-1BDEB8D1C657}">
+                <File Id="filB7C6FFC4F0463AE05DA8BC82F497CD32" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\de\System.Spatial.resources.dll" />
+            </Component>
+            <Component Id="cmp0202DF4A5EC159180C14661E711FC815" Directory="dir985C317B4D3D911C6AAA04B366F87203" Guid="{B2C7F914-95DF-4338-B623-1D74512AF497}">
+                <File Id="fil51972EB5C8E7EA8A263C7A95F882100E" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\de-DE\Storage.resources.dll" />
+            </Component>
+            <Component Id="cmpC1554B1A0A2979F60BB06649C367F11D" Directory="dirF32B7CED93A4930A0DD03299699BFA1F" Guid="{D932DD03-D7E1-438D-8B7B-B47E4A5EA97A}">
+                <File Id="fil8C432B501DB0C5104373A2086B19CBFF" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\en\CommonResources.resources.dll" />
+            </Component>
+            <Component Id="cmp10E629B7C29259BD7E54E6C54754BB8B" Directory="dirF32B7CED93A4930A0DD03299699BFA1F" Guid="{231E229C-9994-4A9A-93E8-82B382DCA026}">
+                <File Id="fil8563E18DDCC81C3938C9078AE1E21A56" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\en\Storage.resources.dll" />
+            </Component>
+            <Component Id="cmp8EA9557242F4FA0D90B860AEE2039063" Directory="dir2861B9F8539E8DAD0ED20A963E52DFBB" Guid="{E88AEB86-E9DD-4733-B084-B88A3DC47F20}">
+                <File Id="filC63289F5EF2888474B16195766FC000D" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\en-US\RevIMI18N.resources.dll" />
+            </Component>
+            <Component Id="cmpB45E57489321E688D8D802E1EC953780" Directory="dir2861B9F8539E8DAD0ED20A963E52DFBB" Guid="{0D269C63-20A2-47ED-B78F-9B2973AF37AA}">
+                <File Id="fil464DB27ADF4F3A5E22543636BDFDE49F" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\en-US\Storage.resources.dll" />
+            </Component>
+            <Component Id="cmpD0A60032C6991B0F73F6FA58C9D28359" Directory="dirF7E889E1BD5D171B2CDF2C543B0C9748" Guid="{3760AF65-A0F9-4DAF-B206-BBF22FFB4764}">
+                <File Id="fil71C3D42DCE1675AA8E9A20AA81B59D51" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\es\Microsoft.Data.Edm.resources.dll" />
+            </Component>
+            <Component Id="cmp8EBD15FEFC61E958B3D046191887C0C4" Directory="dirF7E889E1BD5D171B2CDF2C543B0C9748" Guid="{9BCCE6F0-CC41-4E4F-AB6D-5C77442B912A}">
+                <File Id="fil8B8272E6FBD619B51EFF2F8179EAECEE" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\es\Microsoft.Data.OData.resources.dll" />
+            </Component>
+            <Component Id="cmp26E4B156638FE93186DEAA575466175A" Directory="dirF7E889E1BD5D171B2CDF2C543B0C9748" Guid="{8707D9DA-BA88-4F24-B129-47411BE9E0ED}">
+                <File Id="fil33B1D673C3B041959CF2E7E18ABCA1F7" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\es\Microsoft.Data.Services.Client.resources.dll" />
+            </Component>
+            <Component Id="cmp67CE20EAA525B39D7CCBF4DEB190C03D" Directory="dirF7E889E1BD5D171B2CDF2C543B0C9748" Guid="{F1C2BC55-80D6-4D67-8855-22BFE8AD7584}">
+                <File Id="fil2BBB8A939BAC2C3BEB367E7A89F03BD0" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\es\System.Spatial.resources.dll" />
+            </Component>
+            <Component Id="cmp6B522CD6E1C098CFF2BB17DDBABE812E" Directory="dirABFEB66CDCE27AA97889D62EF14B991E" Guid="{D093B40A-C8FC-4DAE-AF86-73A02EB30A27}">
+                <File Id="fil75D723A5ECCC09C537FA71E62BED9FD7" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\fr\Microsoft.Data.Edm.resources.dll" />
+            </Component>
+            <Component Id="cmp668FD8586349D3A90FD334DCAF1F3FBE" Directory="dirABFEB66CDCE27AA97889D62EF14B991E" Guid="{8ADA8C00-B3D6-4938-A621-B386AE67DD96}">
+                <File Id="filE1994F03A495B4E1D280B0F6D301F368" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\fr\Microsoft.Data.OData.resources.dll" />
+            </Component>
+            <Component Id="cmp1AB77944E3A56570DC12D35DAC5BA62B" Directory="dirABFEB66CDCE27AA97889D62EF14B991E" Guid="{94ACDB84-277A-44A8-9F2E-6BA06ED04085}">
+                <File Id="filEA30A5D6D7AD048BB1B45911CB602A2E" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\fr\Microsoft.Data.Services.Client.resources.dll" />
+            </Component>
+            <Component Id="cmp5006A572161DE481D7085D5FFD85582F" Directory="dirABFEB66CDCE27AA97889D62EF14B991E" Guid="{59373F0D-AE95-4AD7-A898-249930F6CAB2}">
+                <File Id="fil0C0C2052146F1D287898EAD67347FEA6" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\fr\System.Spatial.resources.dll" />
+            </Component>
+            <Component Id="cmp9A719241A6D5192845C16441B5665471" Directory="dirA93C2C3C168292D1CDC94A37A903FCBB" Guid="{AA2FD8FA-66DE-481D-A2F9-D9CC4FDD61CF}">
+                <File Id="fil199F697FDA4178F0CDCAA7DA635A4CB3" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\fr-FR\Storage.resources.dll" />
+            </Component>
+            <Component Id="cmp56F90C20C24BE1ACE7C49F5847A2F55A" Directory="dir9D44AC80D34869FA93CDA0A3D1AEF4F0" Guid="{C120B460-0CEF-482A-8C59-EAE6763B1A6C}">
+                <File Id="fil4339E1392C66A85D6FCD9AC85F422EFB" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\it\Microsoft.Data.Edm.resources.dll" />
+            </Component>
+            <Component Id="cmp71CC9F8C7198B0E3BAE8C7E0A9FA84CD" Directory="dir9D44AC80D34869FA93CDA0A3D1AEF4F0" Guid="{65F087FF-6DDC-4013-A8F8-2E94B2EE5661}">
+                <File Id="fil3F5F52D44F082A7EB932495D4AC61A65" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\it\Microsoft.Data.OData.resources.dll" />
+            </Component>
+            <Component Id="cmpC3E6C2BE86F322F62BAC2C38EC708128" Directory="dir9D44AC80D34869FA93CDA0A3D1AEF4F0" Guid="{72DB57A7-5D01-495C-8AC7-DF49EEE55DF0}">
+                <File Id="fil6210FD869786B42755B7DCE489E34193" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\it\Microsoft.Data.Services.Client.resources.dll" />
+            </Component>
+            <Component Id="cmp3483FD421070AAAA5207CAE4AA20F849" Directory="dir9D44AC80D34869FA93CDA0A3D1AEF4F0" Guid="{43EF881B-50F1-409C-B502-2A98173A0637}">
+                <File Id="fil067817E3BE63F7DDE34D64C5EB8B7374" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\it\System.Spatial.resources.dll" />
+            </Component>
+            <Component Id="cmp56BEB4B66EAA7C5982253F9035C2F04F" Directory="dirB2C2B8CBEAD20F26254C968C0176B041" Guid="{D7752A83-06A9-4F6C-9DEF-B8382C90B212}">
+                <File Id="fil78E5B640F530AEF7635792D1AAE2386E" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\ja\CommonResources.resources.dll" />
+            </Component>
+            <Component Id="cmp5A6EA59486EF8C58EACE0C41C24B66D3" Directory="dirB2C2B8CBEAD20F26254C968C0176B041" Guid="{07698A2D-D46A-4B61-A9C3-C024CE204714}">
+                <File Id="filFE2B2BCDE9B359463CC324D50CDE8D4F" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\ja\Microsoft.Data.Edm.resources.dll" />
+            </Component>
+            <Component Id="cmpB098F5680BB0E4A17D48358AAB47C6C8" Directory="dirB2C2B8CBEAD20F26254C968C0176B041" Guid="{FADB0ED7-A58C-4D1E-B51F-C946C64333E6}">
+                <File Id="fil9A2D9F34A3F4AED4FCB121F883AB4FC1" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\ja\Microsoft.Data.OData.resources.dll" />
+            </Component>
+            <Component Id="cmp686A9099902177BB766A6CE6A6BAED34" Directory="dirB2C2B8CBEAD20F26254C968C0176B041" Guid="{8C89785B-81EB-4325-9F9A-E292799C066C}">
+                <File Id="filF1A1224E149C8B1A34A32E20DA5613A9" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\ja\Microsoft.Data.Services.Client.resources.dll" />
+            </Component>
+            <Component Id="cmp0240EE4940559B52783F9A4814C6D10D" Directory="dirB2C2B8CBEAD20F26254C968C0176B041" Guid="{7DBB3A5C-DB5A-42B3-A2E5-5C623AD370B0}">
+                <File Id="filDF124964136419E34D6386D535E433E3" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\ja\Storage.resources.dll" />
+            </Component>
+            <Component Id="cmp5330BE371CCFF74D1DF133259E1A9341" Directory="dirB2C2B8CBEAD20F26254C968C0176B041" Guid="{B353E9E0-5773-4A4C-B84B-1592F1277AEE}">
+                <File Id="filC2605CFF183EF1AC149CF6FA96981992" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\ja\System.Spatial.resources.dll" />
+            </Component>
+            <Component Id="cmp5B66B4C7EDF2B2618EA42763B991FB81" Directory="dirD31A4871330ADEEC37F1E25B8FD3506C" Guid="{BBD79ABF-E592-46C0-A742-A131E47D36F5}">
+                <File Id="fil917AE1AB17617D82049D4F6DF9C738D1" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\ja-JP\RevIMI18N.resources.dll" />
+            </Component>
+            <Component Id="cmpB58736F5441F7E0253383E0BD2A84885" Directory="dirD31A4871330ADEEC37F1E25B8FD3506C" Guid="{C91B3C68-9DE7-44B1-8C79-334977076982}">
+                <File Id="fil9820DE84F2F5AE419F9678203100AE9A" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\ja-JP\Storage.resources.dll" />
+            </Component>
+            <Component Id="cmp79F0BF97FDB6AEA0773A97B233E9A8AC" Directory="dir9552B22EFF12D1F6071239212FA84625" Guid="{AB823FA5-5639-4739-967F-AF0655484D57}">
+                <File Id="filE8ECA3C9241C7DE95EF5FC13457C21EE" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\ko\Microsoft.Data.Edm.resources.dll" />
+            </Component>
+            <Component Id="cmp0BE579C568051EFC90FC2307DF9838A2" Directory="dir9552B22EFF12D1F6071239212FA84625" Guid="{EAEEF1FA-297E-4E19-B46C-0EEDE1E90E9B}">
+                <File Id="fil86789BEF9BEBD7D203743018A2266C72" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\ko\Microsoft.Data.OData.resources.dll" />
+            </Component>
+            <Component Id="cmp52727109F6480AE3EA6A30C2EF329B03" Directory="dir9552B22EFF12D1F6071239212FA84625" Guid="{484C531B-7FC0-4D49-88D5-D94F5417E740}">
+                <File Id="fil2FC376A22F0AB65961A40BA8E2A70AE7" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\ko\Microsoft.Data.Services.Client.resources.dll" />
+            </Component>
+            <Component Id="cmp5847DE5552A10DB49148E1FDA6B60517" Directory="dir9552B22EFF12D1F6071239212FA84625" Guid="{C10EE3FD-E88D-400F-A46A-B8ECB7A62E12}">
+                <File Id="fil37E0C6B43156476820DD55A631D9E764" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\ko\System.Spatial.resources.dll" />
+            </Component>
+            <Component Id="cmp50C58F30CF97095483939FFFCF256DC2" Directory="dir9D658A264DE297AC0D78A193FB966CB3" Guid="{985F38D4-AD03-440F-88A7-C93DD18D88F8}">
+                <File Id="filFB699B449703041E57751C8034C5A241" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\Resources\CommonResources.dll" />
+            </Component>
+            <Component Id="cmpEBE8BCE4D3EF526591C8CC844F8B50F9" Directory="dir1AADAB6004DD4473742829D31E2E3D49" Guid="{E3D8A720-0A94-4553-B93B-9CF9F000F945}">
+                <File Id="filE7CDE67B9FD897C708C2E7EBFCE86B6C" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\Resources\de\CommonResources.resources.dll" />
+            </Component>
+            <Component Id="cmp3F347231BB356BE3DA2183564D4CB947" Directory="dir74FC7384A2DEFA4C8AAA606938175C89" Guid="{B98A93B8-1329-4072-A140-54AB1DE6ECDD}">
+                <File Id="fil30EE17D9FD267D0441BA135ED9394DC3" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\Resources\en\CommonResources.resources.dll" />
+            </Component>
+            <Component Id="cmpB78717E92B585F4EC276592714055AF6" Directory="dir49659C101FC89BCA09E45683653C5EA1" Guid="{FEE05F27-D1D7-453D-A550-FFC80C5FD096}">
+                <File Id="filC100DC8E2387CEEF6567DB6D00C75DC4" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\Resources\ja\CommonResources.resources.dll" />
+            </Component>
+            <Component Id="cmpE85FCFCEBD7F607C3D8FF8F20C006100" Directory="dir48497E97B096BEE1F6B869EF9CBB8D01" Guid="{A74F6036-8CD8-4749-897F-F5367A5AE743}">
+                <File Id="fil821F2965879793726951D5FE1462F543" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\Resources\zh\CommonResources.resources.dll" />
+            </Component>
+            <Component Id="cmp6F57DF0404C744D443260659B18199D8" Directory="dir7283E26842E0085071217ECAFAE93CBE" Guid="{8706C518-3851-41E1-85E3-E911A6D61033}">
+                <File Id="fil9FF7CB6450F52EC548363B3CF77D3A82" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\ru\Microsoft.Data.Edm.resources.dll" />
+            </Component>
+            <Component Id="cmp037A1B8078117F011C715203C0FF1381" Directory="dir7283E26842E0085071217ECAFAE93CBE" Guid="{07822311-9578-46FE-AB1B-DE86D9F7CAFB}">
+                <File Id="fil09F70DE460E359EEB5AEA0FA919C2BB5" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\ru\Microsoft.Data.OData.resources.dll" />
+            </Component>
+            <Component Id="cmp8A9062F1B1A71129A85A9BD176F1BDF4" Directory="dir7283E26842E0085071217ECAFAE93CBE" Guid="{CC659535-1FFE-4B06-80EF-B3B7841B1A23}">
+                <File Id="fil6A5594562077C13647E593657A16AF2E" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\ru\Microsoft.Data.Services.Client.resources.dll" />
+            </Component>
+            <Component Id="cmp74763CBD0A377CCB1F72BA07B34607CF" Directory="dir7283E26842E0085071217ECAFAE93CBE" Guid="{21B21758-422A-43E3-908A-105E3665103C}">
+                <File Id="fil56BB5E3B3601701AB0B6770E6876EAE6" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\ru\System.Spatial.resources.dll" />
+            </Component>
+            <Component Id="cmpE550712A23C70A7099DBFDA6B05F573F" Directory="dir62F4BB630B2E2E4E594570EF440423A7" Guid="{309BC37B-5AF3-4F51-A921-F6D95247F6DB}">
+                <File Id="fil4FACB2EF23D08F7582F88A6CAB735A39" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\x64\SQLite.Interop.dll" />
+            </Component>
+            <Component Id="cmp107E490F386C4065D03AA9B07B3D9E24" Directory="dir2EE91FAD54DC727F2C268E454085964A" Guid="{32C9962E-214D-4059-BDC9-D7A25E58301A}">
+                <File Id="filDD68EFAF130EBFC0D264D23E88B46919" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\x86\SQLite.Interop.dll" />
+            </Component>
+            <Component Id="cmp5CEA83C67407719BB0D0DF5A6A984077" Directory="dir28EF7778E021216FCC2365E850FF233A" Guid="{E3B6F7E9-756F-4387-B181-D7A264D22CBC}">
+                <File Id="fil12A7BAAD3D54B9452F15D6A3EEC11F49" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\zh\CommonResources.resources.dll" />
+            </Component>
+            <Component Id="cmpEAFB4896AC6B4E25094002569D117EE2" Directory="dir28EF7778E021216FCC2365E850FF233A" Guid="{C53CEA72-2D4B-4A89-A802-69F706C43712}">
+                <File Id="fil93D7019A7736008527ADE9CC7AE84231" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\zh\Storage.resources.dll" />
+            </Component>
+            <Component Id="cmp341D92A2DDE294F0D7AB6D1214B23147" Directory="dirEFF86AB17778AC84A68FB9DAA9F0FC49" Guid="{5439BBEA-C20F-46F7-9A8C-BB1C48AF38BC}">
+                <File Id="fil93593375E3279F3CB36A4D3A6426A656" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\zh-CN\Storage.resources.dll" />
+            </Component>
+            <Component Id="cmpFABB0746C9D6B37573A96E654D91348A" Directory="dirC5EEF772FEB34DFBBB8067F9B9E4FF99" Guid="{B6769143-3E05-44B9-AB9C-192020F596F6}">
+                <File Id="fil1196E7BBD47B717AD5FE2F9036E05804" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\zh-Hans\Microsoft.Data.Edm.resources.dll" />
+            </Component>
+            <Component Id="cmp8D594EA0D223B97D2692D21E10A3801C" Directory="dirC5EEF772FEB34DFBBB8067F9B9E4FF99" Guid="{51C35A40-A743-4E9F-BB76-70E264E82A00}">
+                <File Id="filF220B8BFF7D176868762AC5DC4ADC119" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\zh-Hans\Microsoft.Data.OData.resources.dll" />
+            </Component>
+            <Component Id="cmp1846F351E75B35388C3A4928A30FD3B0" Directory="dirC5EEF772FEB34DFBBB8067F9B9E4FF99" Guid="{6FEE88EA-53C2-4A79-95CA-44DAA0BADF70}">
+                <File Id="fil2E44019189E75D383500F589B9C3F263" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\zh-Hans\Microsoft.Data.Services.Client.resources.dll" />
+            </Component>
+            <Component Id="cmp59193B328AE01670A3DEEB0D57D931BD" Directory="dirC5EEF772FEB34DFBBB8067F9B9E4FF99" Guid="{E3219573-083C-44A9-A13C-C10013980AA3}">
+                <File Id="filC4B403AB15641FE39C92289E28BCDE1B" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\zh-Hans\System.Spatial.resources.dll" />
+            </Component>
+            <Component Id="cmpEA0B0805936F939A0349E3A64AA977E9" Directory="dirB20F10B5F0343EB6F133D39B73A5DDEB" Guid="{1A34199A-3F55-46A5-8F97-A34BC44AB54D}">
+                <File Id="fil8E2F53BE04AA8A193C38596D9A0DC2A4" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\zh-Hant\Microsoft.Data.Edm.resources.dll" />
+            </Component>
+            <Component Id="cmp38537EB3A0B14E4C87B00243251A6242" Directory="dirB20F10B5F0343EB6F133D39B73A5DDEB" Guid="{5BB0CC2E-DBE5-47FB-B5BB-73828ADC7650}">
+                <File Id="fil6499CFBA44EF67148F68EC5831D129AC" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\zh-Hant\Microsoft.Data.OData.resources.dll" />
+            </Component>
+            <Component Id="cmpB78CF9028AD1CAE14ED0F08F890EA057" Directory="dirB20F10B5F0343EB6F133D39B73A5DDEB" Guid="{89192A42-C23C-4B29-8D7A-D6F3DB1FF9D4}">
+                <File Id="fil1B13C5F3B5F4219487C8EBEC05D72922" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\zh-Hant\Microsoft.Data.Services.Client.resources.dll" />
+            </Component>
+            <Component Id="cmpF6E6B96B9E724BFB55A4FC9FB897C4EE" Directory="dirB20F10B5F0343EB6F133D39B73A5DDEB" Guid="{7140F086-CCA6-4D32-A54F-A6DB1B1A4031}">
+                <File Id="filB093E7CFB909A8A7EEB0429C3913A6B9" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\bin\zh-Hant\System.Spatial.resources.dll" />
+            </Component>
+            <Component Id="cmp31D2E0F7BB5D6FE655DC219C2349062C" Directory="dirCC7C0A0077D1BDCF5EF3887D05EBDF1B" Guid="{9C5FB2DC-678E-4445-874B-AABFAF8F366F}">
+                <File Id="filD189CD2AC3D6A6D898D92F898725D216" KeyPath="yes" Source="$(var.Type)\AvePoint\HybridModule\Agent\lic\license.pdf" />
+            </Component>
+        </ComponentGroup>
+    </Fragment>
+    <Fragment>
+        <DirectoryRef Id="dir9D658A264DE297AC0D78A193FB966CB3">
+            <Directory Id="dir1AADAB6004DD4473742829D31E2E3D49" Name="de" />
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <DirectoryRef Id="dir881C8DEA0518EFF0974F076E3EAB57FC">
+            <Directory Id="dir2861B9F8539E8DAD0ED20A963E52DFBB" Name="en-US" />
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <DirectoryRef Id="dir881C8DEA0518EFF0974F076E3EAB57FC">
+            <Directory Id="dir28EF7778E021216FCC2365E850FF233A" Name="zh" />
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <DirectoryRef Id="dir881C8DEA0518EFF0974F076E3EAB57FC">
+            <Directory Id="dir2EE91FAD54DC727F2C268E454085964A" Name="x86" />
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <DirectoryRef Id="dir9D658A264DE297AC0D78A193FB966CB3">
+            <Directory Id="dir48497E97B096BEE1F6B869EF9CBB8D01" Name="zh" />
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <DirectoryRef Id="dir9D658A264DE297AC0D78A193FB966CB3">
+            <Directory Id="dir49659C101FC89BCA09E45683653C5EA1" Name="ja" />
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <DirectoryRef Id="dir881C8DEA0518EFF0974F076E3EAB57FC">
+            <Directory Id="dir62F4BB630B2E2E4E594570EF440423A7" Name="x64" />
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <DirectoryRef Id="dir881C8DEA0518EFF0974F076E3EAB57FC">
+            <Directory Id="dir71DB3A507F43D6BADB23E5510C0E087F" Name="AppConfig" />
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <DirectoryRef Id="dir881C8DEA0518EFF0974F076E3EAB57FC">
+            <Directory Id="dir7283E26842E0085071217ECAFAE93CBE" Name="ru" />
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <DirectoryRef Id="dir9D658A264DE297AC0D78A193FB966CB3">
+            <Directory Id="dir74FC7384A2DEFA4C8AAA606938175C89" Name="en" />
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <DirectoryRef Id="dirA09359243BB998EA1EA4612FDFCA09D0">
+            <Directory Id="dir881C8DEA0518EFF0974F076E3EAB57FC" Name="bin" />
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <DirectoryRef Id="dir881C8DEA0518EFF0974F076E3EAB57FC">
+            <Directory Id="dir9552B22EFF12D1F6071239212FA84625" Name="ko" />
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <DirectoryRef Id="dir881C8DEA0518EFF0974F076E3EAB57FC">
+            <Directory Id="dir985C317B4D3D911C6AAA04B366F87203" Name="de-DE" />
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <DirectoryRef Id="dir881C8DEA0518EFF0974F076E3EAB57FC">
+            <Directory Id="dir9D44AC80D34869FA93CDA0A3D1AEF4F0" Name="it" />
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <DirectoryRef Id="dir881C8DEA0518EFF0974F076E3EAB57FC">
+            <Directory Id="dir9D658A264DE297AC0D78A193FB966CB3" Name="Resources" />
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <DirectoryRef Id="dirBB764EAF498698AE380F11147CB73E41">
+            <Directory Id="dirA09359243BB998EA1EA4612FDFCA09D0" Name="Agent" />
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <DirectoryRef Id="dir881C8DEA0518EFF0974F076E3EAB57FC">
+            <Directory Id="dirA370CE247394E0CDBF8298624AC96B58" Name="Config" />
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <DirectoryRef Id="dir881C8DEA0518EFF0974F076E3EAB57FC">
+            <Directory Id="dirA93C2C3C168292D1CDC94A37A903FCBB" Name="fr-FR" />
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <DirectoryRef Id="dir881C8DEA0518EFF0974F076E3EAB57FC">
+            <Directory Id="dirABFEB66CDCE27AA97889D62EF14B991E" Name="fr" />
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <DirectoryRef Id="dir881C8DEA0518EFF0974F076E3EAB57FC">
+            <Directory Id="dirB20F10B5F0343EB6F133D39B73A5DDEB" Name="zh-Hant" />
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <DirectoryRef Id="dir881C8DEA0518EFF0974F076E3EAB57FC">
+            <Directory Id="dirB2C2B8CBEAD20F26254C968C0176B041" Name="ja" />
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <DirectoryRef Id="dirEB5EFE0D8123FB01C203567C4CFC15CC">
+            <Directory Id="dirBB764EAF498698AE380F11147CB73E41" Name="HybridModule" />
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <DirectoryRef Id="dirA370CE247394E0CDBF8298624AC96B58">
+            <Directory Id="dirC2D6DA239DC7F895AC756BA3C06E1EF9" Name="Castle" />
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <DirectoryRef Id="dir881C8DEA0518EFF0974F076E3EAB57FC">
+            <Directory Id="dirC5EEF772FEB34DFBBB8067F9B9E4FF99" Name="zh-Hans" />
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <DirectoryRef Id="dirA09359243BB998EA1EA4612FDFCA09D0">
+            <Directory Id="dirCC7C0A0077D1BDCF5EF3887D05EBDF1B" Name="lic" />
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <DirectoryRef Id="dir881C8DEA0518EFF0974F076E3EAB57FC">
+            <Directory Id="dirD31A4871330ADEEC37F1E25B8FD3506C" Name="ja-JP" />
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <DirectoryRef Id="dir881C8DEA0518EFF0974F076E3EAB57FC">
+            <Directory Id="dirE941E1F3B34D56411B5230B2B1CB3A0A" Name="de" />
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <DirectoryRef Id="dirB2485A0B9E3B6CE18CB992EE25E2D9BF">
+            <Directory Id="dirEB5EFE0D8123FB01C203567C4CFC15CC" Name="AvePoint" />
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <DirectoryRef Id="dir881C8DEA0518EFF0974F076E3EAB57FC">
+            <Directory Id="dirEFF86AB17778AC84A68FB9DAA9F0FC49" Name="zh-CN" />
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <DirectoryRef Id="dir881C8DEA0518EFF0974F076E3EAB57FC">
+            <Directory Id="dirF32B7CED93A4930A0DD03299699BFA1F" Name="en" />
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <DirectoryRef Id="dir881C8DEA0518EFF0974F076E3EAB57FC">
+            <Directory Id="dirF7E889E1BD5D171B2CDF2C543B0C9748" Name="es" />
+        </DirectoryRef>
+    </Fragment>
+</Wix>

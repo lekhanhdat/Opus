@@ -1,0 +1,49 @@
+#raCPCompliantExportsMetadataMapping {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  .content-wrapper {
+    display: flex;
+    border: 1px solid #e8e9ea;
+  }
+
+  .tree-wrapper {
+    min-width: 210px;
+    width: 25%;
+    padding: 10px 12px;
+    overflow: auto;
+
+    .ra-tree-list:first-child {
+      margin-top: 0;
+    }
+  }
+
+  .column-table-wrapper {
+    flex: 1;
+    width: 0;
+    border-left: 1px solid #e8e9ea;
+    padding-top: 16px;
+  }
+
+  .column-add-wrapper {
+    min-width: 520px;
+    font: normal normal 600 13px/40px "Open Sans", sans-serif;
+    color: #323e4d;
+    margin-top: 2px;
+    border: 1px dashed #e8e9ea;
+    cursor: pointer;
+  }
+
+  .action-buttons{
+    display: flex;
+    justify-items: flex-end;
+    gap: 8px;
+    width: 100%;
+  }
+
+  .flex-auto {
+    flex: 1;
+    width: 0;
+  }
+}

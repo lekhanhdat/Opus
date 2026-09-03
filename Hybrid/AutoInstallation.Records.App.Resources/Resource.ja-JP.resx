@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="APPINSTALLATION_MESSAGE_SINGLEINSTANCEERROR" xml:space="preserve">
+    <value>クラウド エージェント構成ツールは既に実行中です。</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="COMMON_BTN_BROWSE" xml:space="preserve">
+    <value>参照</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="COMMON_Key_ToolRunAdmin" xml:space="preserve">
+    <value>ツールを実行するユーザーは、ローカル Administrators グループのメンバーである必要があります。</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="ConfigurationTool_Key_GUI_Configuration_File" xml:space="preserve">
+    <value>構成ファイル:</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="ConfigurationTool_Key_GUI_Installation_Code" xml:space="preserve">
+    <value>インストール コード:</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="ConfigurationTool_Key_GUI_Agent_Action_Close" xml:space="preserve">
+    <value>閉じる</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="ConfigurationTool_Key_GUI_Agent_Action_Finish" xml:space="preserve">
+    <value>完了</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="ConfigurationTool_Key_GUI_Agent_Action_Next" xml:space="preserve">
+    <value>次へ</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="ConfigurationTool_Key_GUI_Agent_Action_Previous" xml:space="preserve">
+    <value>戻る</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="ConfigurationTool_Key_GUI_Agent_Service_Account" xml:space="preserve">
+    <value>エージェント アカウント名:</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="ConfigurationTool_Key_GUI_Agent_Service_Account_Password" xml:space="preserve">
+    <value>エージェント アカウント パスワード:</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="ConfigurationTool_Key_GUI_Agent_Configuration" xml:space="preserve">
+    <value>エージェントの構成</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="ConfigurationTool_Key_GUI_Configuration_File_Already_Used" xml:space="preserve">
+    <value>この構成ファイルは既に他のエージェントによって使用されています。</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="ConfigurationTool_Key_GUI_Configuration_File_Not_Exists" xml:space="preserve">
+    <value>構成ファイルが存在しません。</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="ConfigurationTool_Key_GUI_Configuration_File_Save_Failed" xml:space="preserve">
+    <value>構成ファイルおよびインストール コードの保存に失敗しました。詳細については、ログ ファイルを参照してください。</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="ConfigurationTool_Key_GUI_Configuration_File_Scope_Invalid" xml:space="preserve">
+    <value>AvePoint Online Services で作成された API アプリには必須権限が付与されていることを確認してください。クライアント ID: {0}必須権限:{1}</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="ConfigurationTool_Key_GUI_Enter_Installation_Code" xml:space="preserve">
+    <value>インストール コードを入力してください。</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="ConfigurationTool_Key_GUI_Installation_Code_Or_File_Invalid" xml:space="preserve">
+    <value>構成ファイルが無効であるか、インストール コードが正しくありません。</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="ConfigurationTool_Key_GUI_Select_Configuration_File" xml:space="preserve">
+    <value>構成ファイルを選択してください。</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="ConfigurationTool_Key_GUI_Change_Service_Account_Failed" xml:space="preserve">
+    <value>サービス アカウントの変更に失敗しました。詳細については、ログ ファイルを参照してください。</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="ConfigurationTool_Key_GUI_Change_Service_Account_Failed_With_Return_Code" xml:space="preserve">
+    <value>サービス アカウントの変更に失敗しました。エラー コード: {0}。詳細については、{1} を参照してください。</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="ConfigurationTool_Key_GUI_Enter_Service_Account_Name" xml:space="preserve">
+    <value>domain\username の形式でユーザー名を入力してください。</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="ConfigurationTool_Key_GUI_Enter_Service_Account_Password" xml:space="preserve">
+    <value>パスワードを入力してください。</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="ConfigurationTool_Key_GUI_Start_Service_Failed" xml:space="preserve">
+    <value>エージェント サービスの開始に失敗しました。パスワードが正しいことおよびエージェント アカウントに 'サービスとしてログオン' 権限が付与されていることを確認してください。</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="ConfigurationTool_Key_GUI_Configuration_File_Check_Failed" xml:space="preserve">
+    <value>構成ファイルおよびインストール コードの検証に失敗しました。詳細については、ログ ファイルを参照してください。</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="ConfigurationTool_Key_GUI_Change_Service_Account_Invalid_Account" xml:space="preserve">
+    <value>エージェント アカウントが見つかりません。ユーザー名が正しいことを確認してください。</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="ConfigurationTool_Key_GUI_Configuration_Complete" xml:space="preserve">
+    <value>構成が完了しました。</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="ConfigurationTool_Key_GUI_Configuration_File_Keep_Existing" xml:space="preserve">
+    <value>既存の構成ファイルの利用を維持する</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="ConfigurationTool_Key_GUI_Exisitng_Configuration_Invalid" xml:space="preserve">
+    <value>構成ファイルが見つからないか、無効です。</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="ConfigurationTool_Key_GUI_Agent_Service_Account_Water_Mark" xml:space="preserve">
+    <value>ドメイン\ユーザー名</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="ConfigurationTool_Key_GUI_App_Title" xml:space="preserve">
+    <value>クラウド エージェント構成ツール</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="ConfigurationTool_Key_GUI_Proxy_Host" xml:space="preserve">
+    <value>プロキシ ホスト:</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="ConfigurationTool_Key_GUI_Proxy_Password" xml:space="preserve">
+    <value>パスワード:</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="ConfigurationTool_Key_GUI_Proxy_Port" xml:space="preserve">
+    <value>プロキシ ポート:</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="ConfigurationTool_Key_GUI_Proxy_UserName" xml:space="preserve">
+    <value>ユーザー名:</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="ConfigurationTool_Key_GUI_Proxy_Using_Proxy" xml:space="preserve">
+    <value>プロキシ サーバーを使用する</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="ConfigurationTool_Key_GUI_Enter_Valid_Proxy_Host" xml:space="preserve">
+    <value>有効なプロキシ ホストを入力してください。</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="ConfigurationTool_Key_GUI_Enter_Valid_Proxy_Port" xml:space="preserve">
+    <value>有効なポート番号を入力してください。</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="ConfigurationTool_Key_GUI_Test_Proxy_Failed" xml:space="preserve">
+    <value>プロキシ サーバーへの接続に失敗しました。入力した情報を確認して、再試行してください。</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="ConfigurationTool_Key_GUI_License_Expired" xml:space="preserve">
+    <value>AvePoint Opus サブスクリプションの有効期限が切れています。管理者に連絡してください。</value>
+    <comment>Resolved</comment>
+  </data>
+</root>

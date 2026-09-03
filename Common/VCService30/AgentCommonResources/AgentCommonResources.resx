@@ -1,0 +1,322 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AgentBasicServiceStartPostHosting" xml:space="preserve">
+    <value>Begin to run the post hosting operation.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="AgentBasicServiceStartPreHosting" xml:space="preserve">
+    <value>Begin to run the pre-hosting operation.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="AgentBasicServiceStartProcessHosting" xml:space="preserve">
+    <value>Begin to run the processes hosting operation.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="AgentBasicServiceStartThreadHosting" xml:space="preserve">
+    <value>Begin to run the process threads hosting operation.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="AgentBasicServiceStopPostStopHosting" xml:space="preserve">
+    <value>The post stopping hosting operation is already started.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="AgentBasicServiceStopPreStopHosting" xml:space="preserve">
+    <value>The process pre-stopping hosting operation is already started.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="AgentBasicServiceStopProcessHosting" xml:space="preserve">
+    <value>The processe stopping hosting operation is already started.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="AgentBasicServiceStopThreadHosting" xml:space="preserve">
+    <value>Threads stopping hosting operation is already started.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="AgentMicroKernelHostStartClosed" xml:space="preserve">
+    <value>Closed the agent common service microkernel host: {0} successfully.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="AgentMicroKernelHostStartClosing" xml:space="preserve">
+    <value>Begin to close the agent common service microkernel host: {0}.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="AgentMicroKernelHostStartErrorOccurred" xml:space="preserve">
+    <value>An error occurred while starting the agent common service. Error: {0}</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="AgentMicroKernelHostStartFaulted" xml:space="preserve">
+    <value>An error occurred in the agent common service microkernel host: {0}.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="AgentMicroKernelHostStartOpened" xml:space="preserve">
+    <value>Started the agent common service microkernel host: {0} successfully at address: {1}.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="AgentMicroKernelHostStartOpening" xml:space="preserve">
+    <value>Starting the agent common service microkernel host: {0} at address: {1}...</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="AgentMicroKernelHostStopErrorOccurred" xml:space="preserve">
+    <value>An error occurred while stopping the agent common control service {0}. Error: {1}</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="AgentStartProcessFailed" xml:space="preserve">
+    <value>Start process failed.</value>
+  </data>
+  <data name="AgentVisitProcessFailed" xml:space="preserve">
+    <value>Error because of insufficient permissions to start process on Agent</value>
+  </data>
+  <data name="AveEnvInitEnvFailed" xml:space="preserve">
+    <value>Initialized AveEnv failed. Error: {0}</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="CommunicationServiceCurrentDomainUnhandledExceptionEixtUnexpected" xml:space="preserve">
+    <value>Exit the Agent Windows Service for unexpected situation. Error: {0}</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="CommunicationServiceOnStartErrorOccurred" xml:space="preserve">
+    <value>An error occurred while starting the Agent Windows Service. Error: {0}</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="CommunicationServiceOnStartStartting" xml:space="preserve">
+    <value>Starting the Agent Windows Service...</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="CommunicationServiceOnStartSucceed" xml:space="preserve">
+    <value>Started the Agent Windows Service successfully.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="CommunicationServiceOnStopErrorOccurred" xml:space="preserve">
+    <value>An error occurred while shutting down the Agent Windows Service. Error: {0}</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="CommunicationServiceOnStopStopping" xml:space="preserve">
+    <value>Stopping the Agent Windows Service...</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="CommunicationServiceOnStopSucceed" xml:space="preserve">
+    <value>Stopped the Agent Windows Service successfully.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="HostingProcessesStartHostingErrorOccurredWhileRetrievingAccountInfo" xml:space="preserve">
+    <value>An error occurred while retrieving the agent account from manager. Error: {0}</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="HostingProcessesStartHostingErrorOccurredWhileStartProcess" xml:space="preserve">
+    <value>An error occurred while starting hosting {0}. Error: {1}</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="HostingProcessesStartHostingStartProcessInfo" xml:space="preserve">
+    <value>Starting process [{0}] by account [{1}\\{2}]...</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="HostingProcessesStopHostingErrorOccurred" xml:space="preserve">
+    <value>An error occurred while stopping hosting {0}. Error: {1}</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="HostingThreadsJobsRetentionDeleteFile" xml:space="preserve">
+    <value>Deleting the file: {0}...</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="HostingThreadsJobsRetentionDeleteFileFailed" xml:space="preserve">
+    <value>Deleted the file {0} failed. Error: {1}</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="HostingThreadsJobsRetentionDeleteFolder" xml:space="preserve">
+    <value>Deleting the folder: {0} ...</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="HostingThreadsJobsRetentionDeleteSubContentFailed" xml:space="preserve">
+    <value>Deleted sub folders and files in folder {0} failed.  Error: {1}.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="HostingThreadsJobsRetentionErrorOccurred" xml:space="preserve">
+    <value>An error occurred in job retention. Error: {0}</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="HostingThreadsJobsRetentionThreadStarted" xml:space="preserve">
+    <value>The job retention thread was started.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="HostingThreadsLogRetentionDeleteFile" xml:space="preserve">
+    <value>Deleting the log file: {0}...</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="HostingThreadsLogRetentionErrorOccurred" xml:space="preserve">
+    <value>An error occurred in log retention. Error: {0}</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="HostingThreadsLogRetentionThreadStarted" xml:space="preserve">
+    <value>The log retention thread was started.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="HostingThreadsStartHostingStartThread" xml:space="preserve">
+    <value>The thread: {0} is starting...</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="HostingThreadsStartHostingStartThreadErrorOccurred" xml:space="preserve">
+    <value>An error occurred while starting thread: {0}. Error: {1}</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="HostingThreadsStartHostingStartThreadSucceed" xml:space="preserve">
+    <value>Started the thread: {0} successfully.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="HostingThreadsStopHostingAbortThread" xml:space="preserve">
+    <value>The thread [{0}] doesn't exit, so abort it.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="HostingThreadsStopHostingAbortThreadErrorOccurred" xml:space="preserve">
+    <value>An error occurred while stopping thread: {0}. Error: {1}</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="HostingThreadsStopHostingStopThread" xml:space="preserve">
+    <value>Start stopping thread: {0}...</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="HostingThreadsStopHostingStopThreadErrorOccurred" xml:space="preserve">
+    <value>An error occurred while stopping thread: {0}. Exception: {1}</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="HostingThreadsStopHostingStopThreadSucceed" xml:space="preserve">
+    <value>Stopped thread: {0} successfully.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="PostHostingPostStartHostingAgentRegistedSucceed" xml:space="preserve">
+    <value>Registered the agent successfully.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="PostHostingPostStartHostingAgentRegisteredException" xml:space="preserve">
+    <value>An error occurred while registering the agent. Exception: {0}</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="PostHostingPostStartHostingRegisteringAgent" xml:space="preserve">
+    <value>Start registering the agent...</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="PreHostingEnsureDocAveGroupErrorOccurred" xml:space="preserve">
+    <value>An error occurred while creating a DocAve local group.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="PreHostingStopProcessesErrorOccurredWhileKillingProcess" xml:space="preserve">
+    <value>An error occurred while stopping process: {0}. Exception: {1}</value>
+    <comment>Verified</comment>
+  </data>
+</root>

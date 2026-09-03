@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFramework>net10.0</TargetFramework>
+		<VersionPrefix>0.0.0.1</VersionPrefix>
+		<OutputType>Library</OutputType>
+		<RootNamespace>Microsoft365Backup.Metadata</RootNamespace>
+		<AssemblyName>microsoft365backup.metadata</AssemblyName>
+	</PropertyGroup>
+	<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+		<OutputPath>..\..\..\bin\Debug\</OutputPath>
+	</PropertyGroup>
+	<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+		<OutputPath>..\..\..\bin\Release\</OutputPath>
+	</PropertyGroup>
+	<ItemGroup>
+	  <ProjectReference Include="..\..\RACommon.Global\RACommon.Global.csproj" />
+	</ItemGroup>
+  <ItemGroup>
+  <PackageReference Include="log4net" Version="3.3.1" />
+  <PackageReference Include="Microsoft.IdentityModel.JsonWebTokens" Version="8.15.0" />
+  <PackageReference Include="util" Version="5.4.6" PrivateAssets="analyzers" />
+  </ItemGroup>
+</Project>

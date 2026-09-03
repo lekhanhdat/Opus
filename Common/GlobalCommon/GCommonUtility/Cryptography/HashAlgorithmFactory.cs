@@ -1,0 +1,84 @@
+﻿/********************************************************************
+ *
+ *  PROPRIETARY and CONFIDENTIAL
+ *
+ *  This file is licensed from, and is a trade secret of:
+ *
+ *                   AvePoint, Inc.
+ *                   525 Washington Blvd, Suite 1400
+ *                   Jersey City, NJ 07310
+ *                   United States of America
+ *                   Telephone: +1-201-793-1111
+ *                   WWW: www.avepoint.com
+ *
+ *  Refer to your License Agreement for restrictions on use,
+ *  duplication, or disclosure.
+ *
+ *  RESTRICTED RIGHTS LEGEND
+ *
+ *  Use, duplication, or disclosure by the Government is
+ *  subject to restrictions as set forth in subdivision
+ *  (c)(1)(ii) of the Rights in Technical Data and Computer
+ *  Software clause at DFARS 252.227-7013 (Oct. 1988) and
+ *  FAR 52.227-19 (C) (June 1987).
+ *
+ *  Copyright © 2017-2026 AvePoint® Inc. All Rights Reserved. 
+ *
+ *  Unpublished - All rights reserved under the copyright laws of the United States.
+ */
+
+
+
+using System.Security;
+using System.Text;
+using AvePoint.GCommon.Utility.Cryptography.Hash;
+
+namespace AvePoint.GCommon.Utility.Cryptography
+{
+    public static class HashAlgorithmFactory
+    {
+        public static IHashAlgorithm CreateHashAlgorithm(HashAlgorithm type, SecureString key)
+        {
+            return CreateHashAlgorithm(type, CryptoUtil.ConvertSecureStringToBytes(key));
+            
+        }
+
+        public static IHashAlgorithm CreateHashAlgorithm(HashAlgorithm type, byte[] key)
+        {
+            CryptographyManagement.CheckAccess();
+
+            switch (type)
+            {
+                case HashAlgorithm.SHA1: return new AveSha1();
+                case HashAlgorithm.HMACSHA1: return new HmacSha1(key);
+                case HashAlgorithm.MD5:
+                    if (CryptographyManagement.CryptoMode == CryptoMode.FIPS)
+                    {
+                        return new AveMD5Provider();
+                    }
+                    return new AveMd5();
+            }
+            return null;
+
+        }
+
+
+        public static IHashAlgorithm CreateHashAlgorithm(HashAlgorithm type)
+        {
+
+            switch (type)
+            {
+                case HashAlgorithm.SHA1: return new AveSha1();
+                case HashAlgorithm.HMACSHA1: return new HmacSha1(Encoding.UTF8.GetBytes("AvePoint Test Key"));
+                case HashAlgorithm.MD5: 
+                    if (CryptographyManagement.CryptoMode == CryptoMode.FIPS)
+                    {
+                        return new AveMD5Provider();
+                    }
+                    return new AveMd5();
+            }
+            return null;
+
+        }
+    }
+}

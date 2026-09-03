@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--/********************************************************************
+ *
+ *  PROPRIETARY and CONFIDENTIAL
+ *
+ *  This file is licensed from, and is a trade secret of:
+ *
+ *                   AvePoint, Inc.
+ *                   525 Washington Blvd, Suite 1400
+ *                   Jersey City, NJ 07310
+ *                   United States of America
+ *                   Telephone: +1-201-793-1111
+ *                   WWW: www.avepoint.com
+ *
+ *  Refer to your License Agreement for restrictions on use,
+ *  duplication, or disclosure.
+ *
+ *  RESTRICTED RIGHTS LEGEND
+ *
+ *  Use, duplication, or disclosure by the Government is
+ *  subject to restrictions as set forth in subdivision
+ *  (c)(1)(ii) of the Rights in Technical Data and Computer
+ *  Software clause at DFARS 252.227-7013 (Oct. 1988) and
+ *  FAR 52.227-19 (C) (June 1987).
+ *
+ *  Copyright © 2017-2026 AvePoint® Inc. All Rights Reserved. 
+ *
+ *  Unpublished - All rights reserved under the copyright laws of the United States.
+ */-->
+<PublishedProject>
+  <EnterpriseProjectTypes>
+    <EnterpriseProjectType>
+      <!-- enterprise project type details-->
+    </EnterpriseProjectType>
+    <EnterpriseProjectType>
+      <!-- enterprise project type details-->
+    </EnterpriseProjectType>
+  </EnterpriseProjectTypes>
+  
+  <Calendars>
+    <Calendar>
+      <!-- calendar details -->
+    </Calendar>
+    <Calendar>
+      <!-- calendar details -->
+    </Calendar>
+  </Calendars>
+  
+  <LookupTables>
+    <LookupTable>
+      <!-- lookup table details-->
+    </LookupTable>
+    <LookupTable>
+      <!-- lookup table details-->
+    </LookupTable>
+  </LookupTables>
+  
+  <CustomFields>
+    <CustomField>
+      <!-- custom field details -->
+    </CustomField>
+    <CustomField>
+      <!-- custom field details -->
+    </CustomField>
+  </CustomFields>
+
+  <EnterpriseResources>
+    <EnterpriseResource>
+      <!-- enterprise resource details-->
+    </EnterpriseResource>
+    <EnterpriseResource>
+      <!-- enterprise resource details-->
+    </EnterpriseResource>
+  </EnterpriseResources>
+
+  <Stages>
+    <Stage>
+      <!-- stage details-->
+    </Stage>
+    <Stage>
+      <!-- stage details-->
+    </Stage>
+  </Stages>
+  
+  <Phases>
+    <Phase>
+      <!-- phase details-->
+    </Phase>
+    <Phase>
+      <!-- phase details-->
+    </Phase>
+  </Phases>
+  
+  <PublishedTasks>
+    <Task>
+      <!-- published task details-->
+      <!-- published task details-->
+    </Task>
+    <Task>
+      <!-- published task details-->
+      <!-- published task details-->
+    </Task>
+  </PublishedTasks>
+  
+  <DraftProject>
+    <!-- draft project details-->
+  </DraftProject>
+  
+  <DraftTasks>
+    <Task>
+      <!-- draft task details-->
+      <!-- draft task details-->
+    </Task>
+    <Task>
+      <!-- draft task details-->
+      <!-- draft task details-->
+    </Task>
+  </DraftTasks>
+</PublishedProject>

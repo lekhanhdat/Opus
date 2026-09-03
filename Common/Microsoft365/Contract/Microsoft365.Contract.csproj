@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<Company>AvePoint, Inc.</Company>
+		<ProductName>AvePoint Cloud Backup</ProductName>
+		<AssemblyFileVersion>6.0.0.1001</AssemblyFileVersion>
+		<AssemblyInformationalVersion>1.0.0.4001</AssemblyInformationalVersion>
+		<Copyright>Copyright © 2021 AvePoint® Inc. All Rights Reserved.</Copyright>
+	</PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>net10.0</TargetFramework>
+		<VersionPrefix>0.0.0.1</VersionPrefix>
+		<OutputType>Library</OutputType>
+		<RootNamespace>Microsoft365.Contract</RootNamespace>
+		<AssemblyName>Microsoft365.Contract</AssemblyName>
+		<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+		<SignAssembly>false</SignAssembly>
+		<AssemblyOriginatorKeyFile>..\..\Shared\DocAveStandard.snk</AssemblyOriginatorKeyFile>
+	</PropertyGroup>
+	<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+		<OutputPath>..\..\..\bin\Debug\</OutputPath>
+	</PropertyGroup>
+	<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+		<OutputPath>..\..\..\bin\Release\</OutputPath>
+	</PropertyGroup>
+	<PropertyGroup>
+		<EnableUnsafeBinaryFormatterSerialization>true</EnableUnsafeBinaryFormatterSerialization>
+	</PropertyGroup>
+</Project>

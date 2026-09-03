@@ -1,0 +1,285 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1F0003E0-A328-4334-966F-07BE2D19A142}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AveClientOM2016Request</RootNamespace>
+    <AssemblyName>SP2016ClientOMRequest</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\..\bin\Agent\Debug\2016\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\..\bin\Agent\Release\2016\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>DocAveStandard.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Azure.ActiveDirectory.GraphClient, Version=2.1.10.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\Packages\Microsoft.Azure.ActiveDirectory.GraphClient.2.1.1\lib\portable-net4+sl5+win+wpa+wp8\Microsoft.Azure.ActiveDirectory.GraphClient.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.Edm, Version=5.8.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\Packages\Microsoft.Data.Edm.5.8.4\lib\net40\Microsoft.Data.Edm.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.OData, Version=5.8.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\Packages\Microsoft.Data.OData.5.8.4\lib\net40\Microsoft.Data.OData.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.Services.Client, Version=5.8.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\Packages\Microsoft.Data.Services.Client.5.8.4\lib\net40\Microsoft.Data.Services.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Client, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\Packages\Microsoft.SharePoint2016.CSOM.16.0.4690.1000\lib\net45\Microsoft.SharePoint.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Client.DocumentManagement, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\Packages\Microsoft.SharePoint2016.CSOM.16.0.4690.1000\lib\net45\Microsoft.SharePoint.Client.DocumentManagement.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Client.Publishing, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\Packages\Microsoft.SharePoint2016.CSOM.16.0.4690.1000\lib\net45\Microsoft.SharePoint.Client.Publishing.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Client.Runtime, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\Packages\Microsoft.SharePoint2016.CSOM.16.0.4690.1000\lib\net45\Microsoft.SharePoint.Client.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Client.Taxonomy, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\Packages\Microsoft.SharePoint2016.CSOM.16.0.4690.1000\lib\net45\Microsoft.SharePoint.Client.Taxonomy.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Client.UserProfiles, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\Packages\Microsoft.SharePoint2016.CSOM.16.0.4690.1000\lib\net45\Microsoft.SharePoint.Client.UserProfiles.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Client.WorkflowServices, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\Packages\Microsoft.SharePoint2016.CSOM.16.0.4690.1000\lib\net45\Microsoft.SharePoint.Client.WorkflowServices.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Spatial, Version=5.8.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\Packages\System.Spatial.5.8.4\lib\net40\System.Spatial.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\AveClientOM2013Request\AveAppRestore.cs">
+      <Link>15\AveAppRestore.cs</Link>
+    </Compile>
+    <Compile Include="..\AveClientOM2013Request\AveAttachmentRestore.cs">
+      <Link>15\AveAttachmentRestore.cs</Link>
+    </Compile>
+    <Compile Include="..\AveClientOM2013Request\AveClientOM2013Request.cs">
+      <Link>15\AveClientOM2013Request.cs</Link>
+    </Compile>
+    <Compile Include="..\AveClientOM2013Request\AveDocumentRestore.cs">
+      <Link>15\AveDocumentRestore.cs</Link>
+    </Compile>
+    <Compile Include="..\AveClientOM2013Request\AveDocumentRestore\AveFileVersionHandler.cs">
+      <Link>15\AveDrivenDocumentRestore\AveFileVersionHandler.cs</Link>
+    </Compile>
+    <Compile Include="..\AveClientOM2013Request\AveDocumentRestore\AveMasterPageDocumentRestore.cs">
+      <Link>15\AveDrivenDocumentRestore\AveMasterPageDocumentRestore.cs</Link>
+    </Compile>
+    <Compile Include="..\AveClientOM2013Request\AveDocumentRestore\AveOrdinaryFileRestore.cs">
+      <Link>15\AveDrivenDocumentRestore\AveOrdinaryFileRestore.cs</Link>
+    </Compile>
+    <Compile Include="..\AveClientOM2013Request\AveDocumentRestore\AvePageFileRestore.cs">
+      <Link>15\AveDrivenDocumentRestore\AvePageFileRestore.cs</Link>
+    </Compile>
+    <Compile Include="..\AveClientOM2013Request\AveDocumentRestore\AveSystemFileRestore.cs">
+      <Link>15\AveDrivenDocumentRestore\AveSystemFileRestore.cs</Link>
+    </Compile>
+    <Compile Include="..\AveClientOM2013Request\AveDocumentRestore\AveViewRestore.cs">
+      <Link>15\AveDrivenDocumentRestore\AveViewRestore.cs</Link>
+    </Compile>
+    <Compile Include="..\AveClientOM2013Request\AveDocumentRestore\AveXmlFileRestore.cs">
+      <Link>15\AveDrivenDocumentRestore\AveXmlFileRestore.cs</Link>
+    </Compile>
+    <Compile Include="..\AveClientOM2013Request\AveDocumentRestore\BaseDocumentRestore.cs">
+      <Link>15\AveDrivenDocumentRestore\BaseDocumentRestore.cs</Link>
+    </Compile>
+    <Compile Include="..\AveClientOM2013Request\AveDocumentRestore\OneDriveDocumentRestore\AveOneDriveDocumentRestore.cs">
+      <Link>15\AveDrivenDocumentRestore\OneDriveDocumentRestore\AveOneDriveDocumentRestore.cs</Link>
+    </Compile>
+    <Compile Include="..\AveClientOM2013Request\AveDocumentRestore\OneDriveDocumentRestore\AveVersionConflictException.cs">
+      <Link>15\AveDrivenDocumentRestore\OneDriveDocumentRestore\AveVersionConflictException.cs</Link>
+    </Compile>
+    <Compile Include="..\AveClientOM2013Request\AveDocumentRestore\OneDriveDocumentRestore\MajorOnlyIncreseVersion.cs">
+      <Link>15\AveDrivenDocumentRestore\OneDriveDocumentRestore\MajorOnlyIncreseVersion.cs</Link>
+    </Compile>
+    <Compile Include="..\AveClientOM2013Request\AveDocumentRestore\OneDriveDocumentRestore\MjaorAndMinorIncreseVersion.cs">
+      <Link>15\AveDrivenDocumentRestore\OneDriveDocumentRestore\MjaorAndMinorIncreseVersion.cs</Link>
+    </Compile>
+    <Compile Include="..\AveClientOM2013Request\AveDocumentRestore\OneDriveDocumentRestore\OneDriveDefault.cs">
+      <Link>15\AveDrivenDocumentRestore\OneDriveDocumentRestore\OneDriveDefault.cs</Link>
+    </Compile>
+    <Compile Include="..\AveClientOM2013Request\AveDocumentRestore\OneDriveDocumentRestore\OneDriveInreaseVersionbase.cs">
+      <Link>15\AveDrivenDocumentRestore\OneDriveDocumentRestore\OneDriveInreaseVersionbase.cs</Link>
+    </Compile>
+    <Compile Include="..\AveClientOM2013Request\AveFolderRestore.cs">
+      <Link>15\AveFolderRestore.cs</Link>
+    </Compile>
+    <Compile Include="..\AveClientOM2013Request\AveFolderVersionIncreaser.cs">
+      <Link>15\AveFolderVersionIncreaser.cs</Link>
+    </Compile>
+    <Compile Include="..\AveClientOM2013Request\AveHttpWebRequestCommon2013.cs">
+      <Link>15\AveHttpWebRequestCommon2013.cs</Link>
+    </Compile>
+    <Compile Include="..\AveClientOM2013Request\AveListItemRestore.cs">
+      <Link>15\AveListItemRestore.cs</Link>
+    </Compile>
+    <Compile Include="..\AveClientOM2013Request\AveWebPartRestore.cs">
+      <Link>15\AveWebPartRestore.cs</Link>
+    </Compile>
+    <Compile Include="..\AveClientOM2013Request\Digest\Cache\AccessTimeCache.cs">
+      <Link>Digest\Cache\AccessTimeCache.cs</Link>
+    </Compile>
+    <Compile Include="..\AveClientOM2013Request\Digest\Cache\IKeyValueCache.cs">
+      <Link>Digest\Cache\IKeyValueCache.cs</Link>
+    </Compile>
+    <Compile Include="..\AveClientOM2013Request\Digest\FormDigest.cs">
+      <Link>Digest\FormDigest.cs</Link>
+    </Compile>
+    <Compile Include="..\AveClientOM2013Request\Digest\FormDigestProvider.cs">
+      <Link>Digest\FormDigestProvider.cs</Link>
+    </Compile>
+    <Compile Include="..\AveClientOMRequest\AveAttachmentRestore.cs">
+      <Link>14\AveAttachmentRestore.cs</Link>
+    </Compile>
+    <Compile Include="..\AveClientOMRequest\AveCamlQueryString.cs">
+      <Link>14\AveCamlQueryString.cs</Link>
+    </Compile>
+    <Compile Include="..\AveClientOMRequest\AveClientOMRequest.cs">
+      <Link>14\AveClientOMRequest.cs</Link>
+    </Compile>
+    <Compile Include="..\AveClientOMRequest\AveDocumentRestore.cs">
+      <Link>14\AveDocumentRestore.cs</Link>
+    </Compile>
+    <Compile Include="..\AveClientOMRequest\AveFolderRestore.cs">
+      <Link>14\AveFolderRestore.cs</Link>
+    </Compile>
+    <Compile Include="..\AveClientOMRequest\AveListItemRestore.cs">
+      <Link>14\AveListItemRestore.cs</Link>
+    </Compile>
+    <Compile Include="..\AveClientOMRequest\AveListMemento.cs">
+      <Link>14\AveListMemento.cs</Link>
+    </Compile>
+    <Compile Include="..\AveClientOMRequest\AveRestoreUtility.cs">
+      <Link>14\AveRestoreUtility.cs</Link>
+    </Compile>
+    <Compile Include="..\AveClientOMRequest\AveWebPartPostUpdater.cs">
+      <Link>14\AveWebPartPostUpdater.cs</Link>
+    </Compile>
+    <Compile Include="..\AveClientOMRequest\AveWebPartRestore.cs">
+      <Link>14\AveWebPartRestore.cs</Link>
+    </Compile>
+    <Compile Include="..\AveClientOMRequest\AveWebPartXMLHandler.cs">
+      <Link>14\AveWebPartXMLHandler.cs</Link>
+    </Compile>
+    <Compile Include="..\AveClientOMRequest\AveXmlView.cs">
+      <Link>14\AveXmlView.cs</Link>
+    </Compile>
+    <Compile Include="..\AveClientOMRequest\ListItemUpdateMethodKind.cs">
+      <Link>14\ListItemUpdateMethodKind.cs</Link>
+    </Compile>
+    <Compile Include="..\AveClientOMRequest\TrafficStatistics\AveClientContext.cs">
+      <Link>14\TrafficStatistics\AveClientContext.cs</Link>
+    </Compile>
+    <Compile Include="..\AveClientOMRequest\TrafficStatistics\AveWebRequestExecutor.cs">
+      <Link>14\TrafficStatistics\AveWebRequestExecutor.cs</Link>
+    </Compile>
+    <Compile Include="..\AveClientOMRequest\TrafficStatistics\AveWebRequestExecutorFactory.cs">
+      <Link>14\TrafficStatistics\AveWebRequestExecutorFactory.cs</Link>
+    </Compile>
+    <Compile Include="..\AveClientOMRequest\TypeHelper.cs">
+      <Link>14\TypeHelper.cs</Link>
+    </Compile>
+    <Compile Include="Ave2016BaseDocumentRestore.cs" />
+    <Compile Include="Ave2016DocumentRestore.cs" />
+    <Compile Include="Ave2016FolderRestore.cs" />
+    <Compile Include="Ave2016ListItemRestore.cs" />
+    <Compile Include="AveClientOM2016Request.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\GCommon\GCommonContract\DocAve.GCommonContract.csproj">
+      <Project>{361f3c7c-abbf-42d5-975a-65e4e9866068}</Project>
+      <Name>DocAve.GCommonContract</Name>
+      <Private>True</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\GCommon\GCommonUtility\DocAve.GCommonUtility.csproj">
+      <Project>{7151e862-a761-4a90-ace6-37d7442047a6}</Project>
+      <Name>DocAve.GCommonUtility</Name>
+      <Private>True</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Wrapper.Core\Wrapper.Common\Wrapper.Common.csproj">
+      <Project>{9380e15e-5f69-4f2c-889f-e04756f6ccca}</Project>
+      <Name>Wrapper.Common</Name>
+      <Private>True</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Wrapper.Core\Wrapper.CustomUtility\Wrapper.CustomUtility.csproj">
+      <Project>{5ff18312-8da2-4abf-bc20-805a18065db6}</Project>
+      <Name>Wrapper.CustomUtility</Name>
+      <Private>True</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Wrapper.Core\Wrapper.Resource\Wrapper.Resource.csproj">
+      <Project>{f977bd26-9dd0-4b6d-95da-58096dca1913}</Project>
+      <Name>Wrapper.Resource</Name>
+      <Private>True</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\AveClientRequest.Common\AveClientRequest.Common.csproj">
+      <Project>{869debb8-9bf4-4fa6-8a39-de588d5ba1f5}</Project>
+      <Name>AveClientRequest.Common</Name>
+      <Private>True</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\AveWebServiceRequest\AveWebServiceRequest.csproj">
+      <Project>{50cbeab6-1a53-4f03-9078-d7e224dac10c}</Project>
+      <Name>AveWebServiceRequest</Name>
+      <Private>True</Private>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="DocAveStandard.snk" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--/********************************************************************
+ *
+ *  PROPRIETARY and CONFIDENTIAL
+ *
+ *  This file is licensed from, and is a trade secret of:
+ *
+ *                   AvePoint, Inc.
+ *                   525 Washington Blvd, Suite 1400
+ *                   Jersey City, NJ 07310
+ *                   United States of America
+ *                   Telephone: +1-201-793-1111
+ *                   WWW: www.avepoint.com
+ *
+ *  Refer to your License Agreement for restrictions on use,
+ *  duplication, or disclosure.
+ *
+ *  RESTRICTED RIGHTS LEGEND
+ *
+ *  Use, duplication, or disclosure by the Government is
+ *  subject to restrictions as set forth in subdivision
+ *  (c)(1)(ii) of the Rights in Technical Data and Computer
+ *  Software clause at DFARS 252.227-7013 (Oct. 1988) and
+ *  FAR 52.227-19 (C) (June 1987).
+ *
+ *  Copyright © 2017-2026 AvePoint® Inc. All Rights Reserved. 
+ *
+ *  Unpublished - All rights reserved under the copyright laws of the United States.
+ */-->
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Comment CommentText="提供给外围控制层使用的传输层接口.这个是唯一的一个连接外围和底层传输服务的接口。&#xD;&#xA;外围直接使用IDataSender，IDataReceiver。&#xD;&#xA;&#xD;&#xA;对于OffLine有两种方法实现：&#xD;&#xA;1、直接切换ITransferChannel，实现一个文件操作类。&#xD;&#xA;2、直接使用文件流实现IDataSender和IDataReceiver。">
+    <Position X="9.75" Y="5.25" Height="1.756" Width="2.721" />
+  </Comment>
+  <Comment CommentText="最底层的数举传输服务定义">
+    <Position X="9.885" Y="0.5" Height="0.906" Width="2.617" />
+  </Comment>
+  <Comment CommentText="实现各种类型的通讯信道实现，提供给内部数据传输逻辑切换使用">
+    <Position X="9.822" Y="1.677" Height="2.486" Width="2.575" />
+  </Comment>
+  <Class Name="AvePoint.GCommon.Transfer.Data.BaseDataTransferLogic" Collapsed="true">
+    <Position X="6" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>yEQIpAgBSioIZEIOCggAQAAJFAAUADCFEAAgAYQVCgA=</HashCode>
+      <FileName>Data\BaseDataTransferLogic.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="AvePoint.GCommon.Transfer.Data.Service.RelayService" Collapsed="true">
+    <Position X="2.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAACAACEAQAAACAAGAAABAAAAAAAAAAQAAAAAAAA=</HashCode>
+      <FileName>Data\Service\ReplayService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="AvePoint.GCommon.Transfer.Data.Service.WCFDataTransferService" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="10" Width="2" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAgAACAAAA=</HashCode>
+      <FileName>Data\Service\WCFDataTransferService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AvePoint.GCommon.Transfer.Data.Channel.WCFDataTransferChannel" Collapsed="true">
+    <Position X="0.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACQAAAAIAAACAgAAAAAQAAAAAQAAAQAAAAAAAA=</HashCode>
+      <FileName>Data\Channel\WCFDataChannel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AvePoint.GCommon.Transfer.Data.CMDataSender" Collapsed="true">
+    <Position X="4.75" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAMAIAAAEIAAAAAAABAAAAAgAAgAAABAAAAAACAAAA=</HashCode>
+      <FileName>Data\CMDataSender.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="AvePoint.GCommon.Transfer.Data.CMDataReceiver" Collapsed="true">
+    <Position X="7" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAIAIAAAAIAAAAAAAAAAAAAAAAAAEAhAACAAACAIAA=</HashCode>
+      <FileName>Data\CMDataReceiver.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="AvePoint.GCommon.Transfer.Data.Channel.InProcessChannel" Collapsed="true">
+    <Position X="4.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACQICAAIAAACQgAAAAAQAQAAAQEAAQAAICAAAA=</HashCode>
+      <FileName>Data\Channel\InProcessChannel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.235" />
+  </Class>
+  <Class Name="AvePoint.GCommon.Transfer.Data.Service.FileTransferService" Collapsed="true">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAABAAABAAAABAAAAAAAAAAAAAACAAAA=</HashCode>
+      <FileName>Data\Service\FileTransferService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="AvePoint.GCommon.Transfer.Data.Channel.FileSystemDataChannel" Collapsed="true">
+    <Position X="6.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACQICAEIAACCAgAAAAAQAAQAEQEAAQAAACAAAA=</HashCode>
+      <FileName>Data\Channel\FileSystemDataChannel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="AvePoint.GCommon.Transfer.Data.Channel.WCFFileTransferChannel" Collapsed="true">
+    <Position X="2.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACQAAAAIAAACAgAAAAAQAAAAAQAAAQAAAAAAAA=</HashCode>
+      <FileName>Data\Channel\WCFFileTransferChannel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AvePoint.GCommon.Transfer.Data.Channel.BaseWCFTransferChannel&lt;T&gt;" Collapsed="true">
+    <Position X="1.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAACwACAAIAAACAgAAAgIUAAAAAREAAQARACAAAA=</HashCode>
+      <FileName>Data\Channel\BaseWCFTransferChannel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="AvePoint.GCommon.Transfer.Data.Interface.ITransferChannel" Collapsed="true">
+    <Position X="4" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACQAAAAIAAACAgAAAAAQAAAAAQEAAQAAACAAAA=</HashCode>
+      <FileName>Data\Interface\ITransferChannel.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="AvePoint.GCommon.Transfer.Data.Interface.IDataTransfer" Collapsed="true">
+    <Position X="1.5" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAIAAAAAAAQAAAAAAAAAAAAAAAAACAAAA=</HashCode>
+      <FileName>Data\Interface\IDataTransfer.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="AvePoint.GCommon.Transfer.Data.Interface.IDataSender" Collapsed="true">
+    <Position X="0.5" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAEAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Data\Interface\IDataSender.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="AvePoint.GCommon.Transfer.Data.Interface.IDataReceiver" Collapsed="true">
+    <Position X="2.25" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAAAAAAAAAAAAAAAAAAAAAEAgAAAAAAAAAAA=</HashCode>
+      <FileName>Data\Interface\IDataReceiver.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="AvePoint.GCommon.Transfer.Data.Interface.IRelay" Collapsed="true">
+    <Position X="0.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAACAAAEAQAAACAAGAAABAAAAAAAAAAQAAAAAAAA=</HashCode>
+      <FileName>Data\Interface\IRelay.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="AvePoint.GCommon.Transfer.Data.Interface.IFileTransferService" Collapsed="true">
+    <Position X="5.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAABAAAABAAAAAAAAAAAAAACAAAA=</HashCode>
+      <FileName>Data\Interface\IFileTransferService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Tahoma" Size="8.25" />
+</ClassDiagram>

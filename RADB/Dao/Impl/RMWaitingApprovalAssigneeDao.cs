@@ -1,0 +1,80 @@
+﻿/********************************************************************
+ *
+ *  PROPRIETARY and CONFIDENTIAL
+ *
+ *  This file is licensed from, and is a trade secret of:
+ *
+ *                   AvePoint, Inc.
+ *                   525 Washington Blvd, Suite 1400
+ *                   Jersey City, NJ 07310
+ *                   United States of America
+ *                   Telephone: +1-201-793-1111
+ *                   WWW: www.avepoint.com
+ *
+ *  Refer to your License Agreement for restrictions on use,
+ *  duplication, or disclosure.
+ *
+ *  RESTRICTED RIGHTS LEGEND
+ *
+ *  Use, duplication, or disclosure by the Government is
+ *  subject to restrictions as set forth in subdivision
+ *  (c)(1)(ii) of the Rights in Technical Data and Computer
+ *  Software clause at DFARS 252.227-7013 (Oct. 1988) and
+ *  FAR 52.227-19 (C) (June 1987).
+ *
+ *  Copyright © 2017-2026 AvePoint® Inc. All Rights Reserved. 
+ *
+ *  Unpublished - All rights reserved under the copyright laws of the United States.
+ */
+using AvePoint.RA.DB.Model;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using AvePoint.RA.Contract.RMWeb.ReportCenter;
+
+namespace AvePoint.RA.DB.Dao.Impl
+{
+    public class RMWaitingApprovalAssigneeDao : BaseDao<RMWaitingApprovalAssignee>, IRMWaitingApprovalAssigneeDao
+    {
+        public void AddDatas(List<PieChartDto> dataDtos)
+        {
+            var datas = ConvertToRMWaitingApprovalAssignee(dataDtos);
+            using (var context = this.GetNewContext())
+            {
+                context.WaitingApprovalAssignee.AddRange(datas);
+                context.SaveChanges();
+            }
+        }
+
+        public void RemoveAll()
+        {
+            using (var context = this.GetNewContext())
+            {
+                var wAssignees = context.WaitingApprovalAssignee.ToList();
+                if (wAssignees.Count() > 0)
+                {
+                    context.WaitingApprovalAssignee.RemoveRange(wAssignees);
+                    context.SaveChanges();
+                }
+            }
+        }
+
+        public List<RMWaitingApprovalAssignee> GetDatas(BoardQueryOption options)
+        {
+            List<RMWaitingApprovalAssignee> result = new List<RMWaitingApprovalAssignee>();
+            using (var context = this.GetNewContext())
+            {
+                 result = context.WaitingApprovalAssignee.ToList();
+            }
+            return result;
+        }
+
+        public List<RMWaitingApprovalAssignee> ConvertToRMWaitingApprovalAssignee(List<PieChartDto> dataDtos)
+        {
+            return dataDtos.ConvertAll(a => new RMWaitingApprovalAssignee()
+            {  Id = a.Id, Asssignee = a.name, Count = a.data,  });
+        }
+    }
+}

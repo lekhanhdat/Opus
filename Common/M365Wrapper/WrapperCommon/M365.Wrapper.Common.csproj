@@ -1,0 +1,68 @@
+<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFramework>net10.0</TargetFramework>
+		<OutputType>Library</OutputType>
+	</PropertyGroup>
+	<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+		<OutputPath>..\..\..\bin\Debug\</OutputPath>
+	</PropertyGroup>
+	<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+		<OutputPath>..\..\..\bin\Release\</OutputPath>
+	</PropertyGroup>
+	<ItemGroup>
+	  <None Remove="TeamHtml\Template\AttachmentUrlsTemplate.html" />
+	  <None Remove="TeamHtml\Template\CodeSnippetBodyTemplate.html" />
+	  <None Remove="TeamHtml\Template\CodeSnippetTemplate.html" />
+	  <None Remove="TeamHtml\Template\ColorThemeAnnouncementBannerTemplate.html" />
+	  <None Remove="TeamHtml\Template\ConversationHeaderTemplate.html" />
+	  <None Remove="TeamHtml\Template\ConversationReactionTemplate.html" />
+	  <None Remove="TeamHtml\Template\ConversationReplyTemplate.html" />
+	  <None Remove="TeamHtml\Template\ConversationTopicTemplate.html" />
+	  <None Remove="TeamHtml\Template\emotions.json" />
+	  <None Remove="TeamHtml\Template\FileWithoutIconTemplate.html" />
+	  <None Remove="TeamHtml\Template\MeetingAsHtmlTemplate.html" />
+	  <None Remove="TeamHtml\Template\MeetingAsPostTemplate.html" />
+	  <None Remove="TeamHtml\Template\MergeReplyTemplate.html" />
+	  <None Remove="TeamHtml\Template\MergeTopicTemplate.html" />
+	  <None Remove="TeamHtml\Template\MessageHeadingTemplate.html" />
+	  <None Remove="TeamHtml\Template\MessageRefrence.html" />
+	  <None Remove="TeamHtml\Template\PostCard\AdaptiveCardTemplate.html" />
+	  <None Remove="TeamHtml\Template\PostCard\HeroCardTemplate.html" />
+	  <None Remove="TeamHtml\Template\UploadedImageAnnouncementBannerTemplate.html" />
+	  <None Remove="TeamHtml\Template\WebPartRedBangTemplate.html" />
+	  <None Remove="TeamHtml\Template\WebPartSweetHeartTemplate.html" />
+	</ItemGroup>
+	<ItemGroup>
+	  <EmbeddedResource Include="TeamHtml\Template\CodeSnippetBodyTemplate.html" />
+	  <EmbeddedResource Include="TeamHtml\Template\CodeSnippetTemplate.html" />
+	  <EmbeddedResource Include="TeamHtml\Template\ColorThemeAnnouncementBannerTemplate.html" />
+	  <EmbeddedResource Include="TeamHtml\Template\ConversationHeaderTemplate.html" />
+	  <EmbeddedResource Include="TeamHtml\Template\ConversationReactionTemplate.html" />
+	  <EmbeddedResource Include="TeamHtml\Template\ConversationReplyTemplate.html" />
+	  <EmbeddedResource Include="TeamHtml\Template\ConversationTopicTemplate.html" />
+	  <EmbeddedResource Include="TeamHtml\Template\emotions.json" />
+	  <EmbeddedResource Include="TeamHtml\Template\FileWithoutIconTemplate.html" />
+	  <EmbeddedResource Include="TeamHtml\Template\MeetingAsHtmlTemplate.html" />
+	  <EmbeddedResource Include="TeamHtml\Template\MeetingAsPostTemplate.html" />
+	  <EmbeddedResource Include="TeamHtml\Template\MergeReplyTemplate.html" />
+	  <EmbeddedResource Include="TeamHtml\Template\MergeTopicTemplate.html" />
+	  <EmbeddedResource Include="TeamHtml\Template\MessageHeadingTemplate.html" />
+	  <EmbeddedResource Include="TeamHtml\Template\MessageRefrence.html" />
+	  <EmbeddedResource Include="TeamHtml\Template\PostCard\HeroCardTemplate.html" />
+	</ItemGroup>
+	<ItemGroup>
+	  <EmbeddedResource Include="TeamHtml\Template\AttachmentUrlsTemplate.html" />
+	  <EmbeddedResource Include="TeamHtml\Template\PostCard\AdaptiveCardTemplate.html" />
+	  <EmbeddedResource Include="TeamHtml\Template\UploadedImageAnnouncementBannerTemplate.html" />
+	  <EmbeddedResource Include="TeamHtml\Template\WebPartRedBangTemplate.html" />
+	  <EmbeddedResource Include="TeamHtml\Template\WebPartSweetHeartTemplate.html" />
+	</ItemGroup>
+	<ItemGroup>
+	  <PackageReference Include="HtmlAgilityPack" Version="1.12.4" />
+	  <PackageReference Include="log4net" Version="3.3.1" />
+	  <PackageReference Include="System.Security.Cryptography.Xml" Version="10.0.10" />
+	</ItemGroup>
+	<ItemGroup>		
+		<ProjectReference Include="..\..\..\Common\GlobalCommon\GCommonContract\DocAve.GCommonContract.csproj" />
+	</ItemGroup>
+</Project>

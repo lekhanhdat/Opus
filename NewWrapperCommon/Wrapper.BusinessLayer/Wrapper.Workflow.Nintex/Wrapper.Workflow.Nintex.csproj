@@ -1,0 +1,568 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{99167A05-172B-4C59-8676-5A3FE4018849}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Wrapper.Workflow.Nintex</RootNamespace>
+    <AssemblyName>AgentCommonWrapperNintexWorkflow</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\bin\Agent\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\bin\Agent\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'DebugWithoutUnitTest|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\..\..\bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;DebugWF</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>DocAveStandard.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="HtmlAgilityPack, Version=1.12.4.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Packages\HtmlAgilityPack.1.12.4\lib\Net45\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=1.4.2.13, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Packages\SharpZipLib.1.4.2\lib\netstandard2.0\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Packages\Newtonsoft.Json.13.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.5.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Packages\System.Buffers.4.6.1\lib\net462\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Memory, Version=4.0.5.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Packages\System.Memory.4.6.3\lib\net462\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.6.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Packages\System.Numerics.Vectors.4.6.1\lib\net462\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Packages\System.Runtime.CompilerServices.Unsafe.6.1.2\lib\net462\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.4.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Packages\System.Threading.Tasks.Extensions.4.6.3\lib\net462\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\Wrapper.Restore\NintexForm\Common\FormControlProcessor.cs">
+      <Link>NinTexWorkflowUpgradeProcessor\NintexForm\Common\FormControlProcessor.cs</Link>
+    </Compile>
+    <Compile Include="..\Wrapper.Restore\NintexForm\Common\FormControlTypeIdConst.cs">
+      <Link>NinTexWorkflowUpgradeProcessor\NintexForm\Common\FormControlTypeIdConst.cs</Link>
+    </Compile>
+    <Compile Include="..\Wrapper.Restore\NintexForm\Common\NintexFormContentProcessorBase.cs">
+      <Link>NinTexWorkflowUpgradeProcessor\NintexForm\Common\NintexFormContentProcessorBase.cs</Link>
+    </Compile>
+    <Compile Include="..\Wrapper.Restore\NintexForm\Common\NintexFormException.cs">
+      <Link>NinTexWorkflowUpgradeProcessor\NintexForm\Common\NintexFormException.cs</Link>
+    </Compile>
+    <Compile Include="..\Wrapper.Restore\NintexForm\Common\NintexFormServiceBase.cs">
+      <Link>NinTexWorkflowUpgradeProcessor\NintexForm\Common\NintexFormServiceBase.cs</Link>
+    </Compile>
+    <Compile Include="..\Wrapper.Restore\NintexForm\Interface\INintexFormContentProcessor.cs">
+      <Link>NinTexWorkflowUpgradeProcessor\NintexForm\Interface\INintexFormContentProcessor.cs</Link>
+    </Compile>
+    <Compile Include="..\Wrapper.Restore\NintexForm\Interface\INintexFormService.cs">
+      <Link>NinTexWorkflowUpgradeProcessor\NintexForm\Interface\INintexFormService.cs</Link>
+    </Compile>
+    <Compile Include="..\Wrapper.Restore\NintexForm\Online\Controls\AttachmentControl.cs">
+      <Link>NinTexWorkflowUpgradeProcessor\NintexForm\Online\Controls\AttachmentControl.cs</Link>
+    </Compile>
+    <Compile Include="..\Wrapper.Restore\NintexForm\Online\Controls\BaseControl.cs">
+      <Link>NinTexWorkflowUpgradeProcessor\NintexForm\Online\Controls\BaseControl.cs</Link>
+    </Compile>
+    <Compile Include="..\Wrapper.Restore\NintexForm\Online\Controls\CalculatedValueControl.cs">
+      <Link>NinTexWorkflowUpgradeProcessor\NintexForm\Online\Controls\CalculatedValueControl.cs</Link>
+    </Compile>
+    <Compile Include="..\Wrapper.Restore\NintexForm\Online\Controls\Common\MediaSize.cs">
+      <Link>NinTexWorkflowUpgradeProcessor\NintexForm\Online\Controls\Common\MediaSize.cs</Link>
+    </Compile>
+    <Compile Include="..\Wrapper.Restore\NintexForm\Online\Controls\HtmlControl.cs">
+      <Link>NinTexWorkflowUpgradeProcessor\NintexForm\Online\Controls\HtmlControl.cs</Link>
+    </Compile>
+    <Compile Include="..\Wrapper.Restore\NintexForm\Online\Controls\ImageControl.cs">
+      <Link>NinTexWorkflowUpgradeProcessor\NintexForm\Online\Controls\ImageControl.cs</Link>
+    </Compile>
+    <Compile Include="..\Wrapper.Restore\NintexForm\Online\Controls\LabelControl.cs">
+      <Link>NinTexWorkflowUpgradeProcessor\NintexForm\Online\Controls\LabelControl.cs</Link>
+    </Compile>
+    <Compile Include="..\Wrapper.Restore\NintexForm\Online\Controls\ManagedMetadataControl..cs">
+      <Link>NinTexWorkflowUpgradeProcessor\NintexForm\Online\Controls\ManagedMetadataControl..cs</Link>
+    </Compile>
+    <Compile Include="..\Wrapper.Restore\NintexForm\Online\Controls\PageViewerControl.cs">
+      <Link>NinTexWorkflowUpgradeProcessor\NintexForm\Online\Controls\PageViewerControl.cs</Link>
+    </Compile>
+    <Compile Include="..\Wrapper.Restore\NintexForm\Online\Controls\PanelControl.cs">
+      <Link>NinTexWorkflowUpgradeProcessor\NintexForm\Online\Controls\PanelControl.cs</Link>
+    </Compile>
+    <Compile Include="..\Wrapper.Restore\NintexForm\Online\Controls\PeopleControl.cs">
+      <Link>NinTexWorkflowUpgradeProcessor\NintexForm\Online\Controls\PeopleControl.cs</Link>
+    </Compile>
+    <Compile Include="..\Wrapper.Restore\NintexForm\Online\Controls\RepeatingSectionControl.cs">
+      <Link>NinTexWorkflowUpgradeProcessor\NintexForm\Online\Controls\RepeatingSectionControl.cs</Link>
+    </Compile>
+    <Compile Include="..\Wrapper.Restore\NintexForm\Online\Controls\SharePointLookupControl.cs">
+      <Link>NinTexWorkflowUpgradeProcessor\NintexForm\Online\Controls\SharePointLookupControl.cs</Link>
+    </Compile>
+    <Compile Include="..\Wrapper.Restore\NintexForm\Online\Mapping\CommonPropertyMapping.cs">
+      <Link>NinTexWorkflowUpgradeProcessor\NintexForm\Online\Mapping\CommonPropertyMapping.cs</Link>
+    </Compile>
+    <Compile Include="..\Wrapper.Restore\NintexForm\Online\Mapping\DataTypeMapping.cs">
+      <Link>NinTexWorkflowUpgradeProcessor\NintexForm\Online\Mapping\DataTypeMapping.cs</Link>
+    </Compile>
+    <Compile Include="..\Wrapper.Restore\NintexForm\Online\NintexFormContentProcessorOnline.cs">
+      <Link>NinTexWorkflowUpgradeProcessor\NintexForm\Online\NintexFormContentProcessorOnline.cs</Link>
+    </Compile>
+    <Compile Include="..\Wrapper.Restore\NintexForm\Online\NintexFormServiceOnline.cs">
+      <Link>NinTexWorkflowUpgradeProcessor\NintexForm\Online\NintexFormServiceOnline.cs</Link>
+    </Compile>
+    <Compile Include="..\Wrapper.Restore\NintexForm\Server\Controls\BaseControl.cs">
+      <Link>NinTexWorkflowUpgradeProcessor\NintexForm\Server\Controls\BaseControl.cs</Link>
+    </Compile>
+    <Compile Include="..\Wrapper.Restore\NintexForm\Server\Controls\ButtonControl.cs">
+      <Link>NinTexWorkflowUpgradeProcessor\NintexForm\Server\Controls\ButtonControl.cs</Link>
+    </Compile>
+    <Compile Include="..\Wrapper.Restore\NintexForm\Server\Controls\HtmlControl.cs">
+      <Link>NinTexWorkflowUpgradeProcessor\NintexForm\Server\Controls\HtmlControl.cs</Link>
+    </Compile>
+    <Compile Include="..\Wrapper.Restore\NintexForm\Server\Controls\ImageControl.cs">
+      <Link>NinTexWorkflowUpgradeProcessor\NintexForm\Server\Controls\ImageControl.cs</Link>
+    </Compile>
+    <Compile Include="..\Wrapper.Restore\NintexForm\Server\Controls\LabelControl.cs">
+      <Link>NinTexWorkflowUpgradeProcessor\NintexForm\Server\Controls\LabelControl.cs</Link>
+    </Compile>
+    <Compile Include="..\Wrapper.Restore\NintexForm\Server\Controls\ListItemControl.cs">
+      <Link>NinTexWorkflowUpgradeProcessor\NintexForm\Server\Controls\ListItemControl.cs</Link>
+    </Compile>
+    <Compile Include="..\Wrapper.Restore\NintexForm\Server\Controls\ListViewControl.cs">
+      <Link>NinTexWorkflowUpgradeProcessor\NintexForm\Server\Controls\ListViewControl.cs</Link>
+    </Compile>
+    <Compile Include="..\Wrapper.Restore\NintexForm\Server\Controls\ManagedMetadataControl.cs">
+      <Link>NinTexWorkflowUpgradeProcessor\NintexForm\Server\Controls\ManagedMetadataControl.cs</Link>
+    </Compile>
+    <Compile Include="..\Wrapper.Restore\NintexForm\Server\Controls\PageViewerControl.cs">
+      <Link>NinTexWorkflowUpgradeProcessor\NintexForm\Server\Controls\PageViewerControl.cs</Link>
+    </Compile>
+    <Compile Include="..\Wrapper.Restore\NintexForm\Server\Controls\PanelControl.cs">
+      <Link>NinTexWorkflowUpgradeProcessor\NintexForm\Server\Controls\PanelControl.cs</Link>
+    </Compile>
+    <Compile Include="..\Wrapper.Restore\NintexForm\Server\Controls\WebRequestControl.cs">
+      <Link>NinTexWorkflowUpgradeProcessor\NintexForm\Server\Controls\WebRequestControl.cs</Link>
+    </Compile>
+    <Compile Include="..\Wrapper.Restore\NintexForm\Server\Controls\WorkflowDiagramControl.cs">
+      <Link>NinTexWorkflowUpgradeProcessor\NintexForm\Server\Controls\WorkflowDiagramControl.cs</Link>
+    </Compile>
+    <Compile Include="..\Wrapper.Restore\NintexForm\Server\NintexFormContentProcessorServer.cs">
+      <Link>NinTexWorkflowUpgradeProcessor\NintexForm\Server\NintexFormContentProcessorServer.cs</Link>
+    </Compile>
+    <Compile Include="..\Wrapper.Restore\NintexForm\Server\NintexFormServiceServer.cs">
+      <Link>NinTexWorkflowUpgradeProcessor\NintexForm\Server\NintexFormServiceServer.cs</Link>
+    </Compile>
+    <Compile Include="AveSoapHttpClientProtocol.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\Exception\NWListNotFoundException.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\Exception\NWNeedPostActionException.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\Exception\UnSupportedDataException.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\Exception\UnSupportedOperatorException.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\Exception\UnSupportedSettingException.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\Native13NinTexWorkflowEntity\ContentTypeReference.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\Native13NinTexWorkflowEntity\ContentTypeReferenceCollection.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\Native13NinTexWorkflowEntity\FieldReference.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\Native13NinTexWorkflowEntity\FieldReferenceCollection.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\Native13NinTexWorkflowEntity\ListReference.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\Native13NinTexWorkflowEntity\ListReferenceCollection.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NintexAppProcessor.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NintexWorkflowActionMappingConvert\ActionMappingManager\ActionMappingManagerBase.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NintexWorkflowActionMappingConvert\ActionMappingManager\ConditionActionMappingManager.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NintexWorkflowActionMappingConvert\ActionMappingManager\CreateListItemActionMappingManager.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NintexWorkflowActionMappingConvert\ActionMappingManager\QueryListActionMappingManager.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NintexWorkflowActionMappingConvert\ActionMappingManager\QueryUserProfileActionMappingmanager.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NintexWorkflowActionMappingConvert\ActionMappingManager\SendEmailActionMappingManager.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NintexWorkflowActionMappingConvert\ActionMappingManager\SetFieldActionMappingManager.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NintexWorkflowActionMappingConvert\ActionMappingManager\SetItemPermissionsActionMappingManager.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NintexWorkflowActionMappingConvert\ActionMappingManager\UpdateListItemActionMappingManager.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NintexWorkflowActionMappingConvert\ActionMappingManager\CopyItemActionMappingManager.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NintexWorkflowActionMappingConvert\ActionDataMappingManager\INintexDataMappingManager.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NintexWorkflowActionMappingConvert\ActionDataMappingManager\ListLookupMappingManger.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NintexWorkflowActionMappingConvert\ActionMappingManager\WaitForItemUpdateActionMappingManager.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NintexWorkflowActionMappingConvert\NWActionMappingManager.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NintexWorkflowActionMappingConvert\NWActionMappingManagerrAdapter.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NintexWorkflowActionProcessor\Integration\NWQueryUserProfileActionProcessor.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NintexWorkflowActionProcessor\Libraries and Lists\CopyFileToFileShare\NWCopyFileToFileShareActionProcessor.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NintexWorkflowActionProcessor\Libraries and Lists\NWQueryListActionProcessor.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NintexWorkflowActionProcessor\Libraries and Lists\NWSetFieldValueActionProcessor.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NintexWorkflowActionProcessor\Libraries and Lists\SetDocumentSetApprovalStatus\NWSetDSApprovalStatusActionProcessor.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NintexWorkflowActionProcessor\Logic and Flow\NWActionSetActionProcessor.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NintexWorkflowActionProcessor\Logic and Flow\NWConditionRuleChecker.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NintexWorkflowActionProcessor\Logic and Flow\NWConditionUtility.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NintexWorkflowActionProcessor\NintexOffice365ActionBase.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NintexWorkflowActionProcessor\Operations\NWWaitForItemUpdateActionProcessor.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NintexWorkflowActionProcessor\User Interaction\NWAssignFlexiTaskActionProcessor.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NintexWorkflowActionProcessor\User Interaction\NWAssignToDoTaskActionProcessor.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NintexWorkflowActionProcessor\User Interaction\NWRequestActionUtility.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NintexWorkflowActionProcessor\User Interaction\NWRequestReviewActionProcessor.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NintexWorkflowActionProcessor\User Interaction\NWStartATaskProcessActionBase.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NintexWorkflowActionMappingConvert\ActionDataMappingManager\NWListLookupCacheManager.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NintexWorkflowActionProcessor\Logic and Flow\NWConditionActionBase.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NintexWorkflowActionProcessor\Logic and Flow\NWContainerActionBase.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\Exception\UnSupportedActionTypeException.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NintexWorkflowActionProcessor\Logic and Flow\NWRunParallelActionsActionProcessor.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NintexWorkflowActionProcessor\Operations\CollectionOperation\CollectionOperationGenerator.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NintexWorkflowActionProcessor\Operations\CollectionOperation\CollectionOperationGeneratorAdd.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NintexWorkflowActionProcessor\Operations\CollectionOperation\CollectionOperationGeneratorClear.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NintexWorkflowActionProcessor\Operations\CollectionOperation\CollectionOperationGeneratorCount.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NintexWorkflowActionProcessor\Operations\CollectionOperation\CollectionOperationGeneratorDeduplicate.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NintexWorkflowActionProcessor\Operations\CollectionOperation\CollectionOperationGeneratorExists.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NintexWorkflowActionProcessor\Operations\CollectionOperation\CollectionOperationGeneratorGet.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NintexWorkflowActionProcessor\Operations\CollectionOperation\CollectionOperationGeneratorJoin.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NintexWorkflowActionProcessor\Operations\CollectionOperation\CollectionOperationGeneratorPop.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NintexWorkflowActionProcessor\Operations\CollectionOperation\CollectionOperationGeneratorRemove.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NintexWorkflowActionProcessor\Operations\CollectionOperation\CollectionOperationGeneratorRemoveValue.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NintexWorkflowActionProcessor\Operations\CollectionOperation\CollectionOperationGeneratorSort.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NintexWorkflowActionProcessor\Operations\CollectionOperation\NWCollectionOperationProcessor.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NintexWorkflowActionProcessor\Operations\NWEndWorkflowProcessor.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NintexWorkflowActionProcessor\Operations\NWRegularExpressionProcessor.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NintexWorkflowActionProcessor\Operations\NWStartWorkflowProcessor.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NintexWorkflowActionProcessor\Operations\NWTerminateWorkflowActionProcessor.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NintexWorkflowActionProcessor\User Interaction\NWRequestApprovalActionProcessor.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NintexWorkflowActionMappingConvert\ActionDataMappingManager\NWDataMappingManager.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NintexWorkflowActionMappingConvert\ActionDataMappingManager\NWUserMappingManager.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NintexWorkflowUtility\NWCommonUtility.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NintexWorkflowUtility\NWConditionConfigParamUtility.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NintexWorkflowUtility\NWFieldTypeMapping.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NintexWorkflowUtility\NWVariablesCacheManager.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NinTexWorkflowEntity\ContentType.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NinTexWorkflowEntity\FormatValues.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NinTexWorkflowEntity\NintexVariables\PersonGroupConfiguration.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NinTexWorkflowEntity\NintexVariables\Variable.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NinTexWorkflowEntity\Options.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NinTexWorkflowEntity\TaskProperty.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NinTexWorkflowEntity\TypeFilter.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NinTexWorkflowEntity\WorkflowSettings.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NintexWorkflowUtility\Converter\NWDateTimeInfoConverter.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NintexWorkflowUtility\Converter\NWPrimitiveValueConverter.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NintexWorkflowUtility\Converter\NWUserConverter.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NintexWorkflowUtility\Converter\NWValueConverter.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NintexWorkflowUtility\Converter\NWWorkflowContextDataConverter.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NintexWorkflowUtility\NWCoercionStringProcessor.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NintexWorkflowUtility\Converter\NWListLookupConverter.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NintexWorkflowVariablesProcessor\VaruablesProcessors\NumberVariablesProcessor.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NintexWorkflowVariablesProcessor\VaruablesProcessors\UserVariableProcessor.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NintexWorkflowActionProcessor\Other\NWPlaceHolderActionProcesor.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NWFormFileProcessor.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\SerializerHelper.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\Native13NinTexWorkflowEntity\ActivityParameter.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\Native13NinTexWorkflowEntity\AssociationColumn.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\Native13NinTexWorkflowEntity\AssociationColumnCollection.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\Native13NinTexWorkflowEntity\AssociationColumnSource.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\Native13NinTexWorkflowEntity\Coercion.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\Native13NinTexWorkflowEntity\CommentsMode.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\Native13NinTexWorkflowEntity\CommentType.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\Native13NinTexWorkflowEntity\ConditionConfig.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\Native13NinTexWorkflowEntity\ConditionOperator.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\Native13NinTexWorkflowEntity\ConditionPair.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\Native13NinTexWorkflowEntity\ConditionUse.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\Native13NinTexWorkflowEntity\ConfiguredOutcome.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\Native13NinTexWorkflowEntity\ConfiguredOutcomeCollection.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\Native13NinTexWorkflowEntity\DataLookup.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\Native13NinTexWorkflowEntity\DeliveryMechanism.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\Native13NinTexWorkflowEntity\ErrorHandling.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\Native13NinTexWorkflowEntity\ExportedWorkflow.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\Native13NinTexWorkflowEntity\ExtensionProperty.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\Native13NinTexWorkflowEntity\Field.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\Native13NinTexWorkflowEntity\LazyApprovalFlags.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\Native13NinTexWorkflowEntity\Message.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\Native13NinTexWorkflowEntity\MessageAttachment.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\Native13NinTexWorkflowEntity\MessageAttachmentCollection.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\Native13NinTexWorkflowEntity\MessageAttachmentType.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\Native13NinTexWorkflowEntity\MessageImportance.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\Native13NinTexWorkflowEntity\MessageOptions.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\Native13NinTexWorkflowEntity\MultiOutputValueInfo.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\Native13NinTexWorkflowEntity\NWActionConfig.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\Native13NinTexWorkflowEntity\NWActionConfigurations.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\Native13NinTexWorkflowEntity\NWApprover.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\Native13NinTexWorkflowEntity\NWConditionConfig.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\Native13NinTexWorkflowEntity\NWConditionConfigParam.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\Native13NinTexWorkflowEntity\NWFieldReference.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\Native13NinTexWorkflowEntity\NWWorkflowVariable.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\Native13NinTexWorkflowEntity\ParameterDirection.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\Native13NinTexWorkflowEntity\PrimitiveValue.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\Native13NinTexWorkflowEntity\ProfileLookup.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\Native13NinTexWorkflowEntity\SLLookupType.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\Native13NinTexWorkflowEntity\ToolboxData.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\Native13NinTexWorkflowEntity\User.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\Native13NinTexWorkflowEntity\UserCollection.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\Native13NinTexWorkflowEntity\ValueLookup.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\Native13NinTexWorkflowEntity\ValueStorage.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\Native13NinTexWorkflowEntity\ValueStorageCollection.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\Native13NinTexWorkflowEntity\WorkflowConstantLookup.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\Native13NinTexWorkflowEntity\WorkflowContextData.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\Native13NinTexWorkflowEntity\WorkflowInitiationControlType.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\Native13NinTexWorkflowEntity\WorkflowPart.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NintexWorkflowUtility\NintexWFCompressor.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NintexWFListsProcessor.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NintexWFManifestProcessor.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NintexWFMetadataProcessor.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NintexWFSettingsProcessor.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NintexWorkflowActionProcessor\Integration\NWWebRequestActionProcessor.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NintexWorkflowActionProcessor\INWActionProcessor.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NintexWorkflowActionProcessor\Libraries and Lists\NWCheckInItemActionProcessor.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NintexWorkflowActionProcessor\Libraries and Lists\NWCheckOutItemActionProcessor.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NintexWorkflowActionProcessor\Libraries and Lists\NWCopyItemActionProcessor.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NintexWorkflowActionProcessor\Libraries and Lists\NWCreateItemActionProcessor.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NintexWorkflowActionProcessor\Libraries and Lists\NWDeleteItemActionProcessor.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NintexWorkflowActionProcessor\Libraries and Lists\NWDeleteItemsActionProcessor.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NintexWorkflowActionProcessor\Libraries and Lists\NWDiscardCheckOutItemActionProcessor.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NintexWorkflowActionProcessor\Libraries and Lists\NWLibariesAndListsActionProcessor.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NintexWorkflowActionProcessor\Libraries and Lists\SetApprovalStatus\NWSetApprovalStatusActionProcessor.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NintexWorkflowActionProcessor\Libraries and Lists\NWUpdateListItemActionProcessor.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NintexWorkflowActionProcessor\Logic and Flow\NWSetAConditionProcessor.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NintexWorkflowActionProcessor\Logic and Flow\NWFilterActionProcessor.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NintexWorkflowActionProcessor\Logic and Flow\NWForeachActionProcessor.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NintexWorkflowActionProcessor\Logic and Flow\NWLoopActionProcessor.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NintexWorkflowActionProcessor\Logic and Flow\NWRunIfActoinProcessor.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NintexWorkflowActionProcessor\Logic and Flow\NWChangeStateActionProcessor.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NintexWorkflowActionProcessor\Logic and Flow\NWStateMachineActionProcessor.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NintexWorkflowActionProcessor\Logic and Flow\NWSwitchActionProcessor.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NintexWFActionProcessor.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NintexWorkflowActionProcessor\NWActionAdapter.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NintexWorkflowActionProcessor\NWActionProcessorBase.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NintexWorkflowActionProcessor\Other\NWRootActionProcessor.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NintexWorkflowActionProcessor\Other\NWSequenceActivityActionProcessor.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NintexWorkflowActionProcessor\Operations\NWBuildStringProcessor.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NintexWorkflowActionProcessor\Operations\NWCalculateDateProcessor.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NintexWorkflowActionProcessor\Operations\NWConvertValueProcessor.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NintexWorkflowActionProcessor\Operations\NWPauseForAtionProcessor.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NintexWorkflowActionProcessor\Operations\NWLogInHistoryListProcessor.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NintexWorkflowActionProcessor\Operations\NWMathOperationProcessor.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NintexWorkflowActionProcessor\Operations\NWPauseUntilProcessor.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NintexWorkflowActionProcessor\Operations\NWSetVariableProcessor.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NintexWorkflowActionProcessor\Operations\NWSetWorkflowStatusActionProcessor.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NintexWorkflowActionProcessor\User Interaction\NWSendEmailActionProcessor.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NinTexWorkflowEntity\ListsEntity\FieldInfo.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NinTexWorkflowEntity\ListsEntity\Fields.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NinTexWorkflowEntity\ListsEntity\ListInfo.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NinTexWorkflowEntity\ListsEntity\ArrayOfListInfo.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NinTexWorkflowEntity\Live.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NinTexWorkflowEntity\MetaData.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NinTexWorkflowEntity\MetaDataCollection.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NinTexWorkflowEntity\NintexVariables\ChoiceConfiguration.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NinTexWorkflowEntity\NintexVariables\DateTimeConfiguration.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NinTexWorkflowEntity\NintexVariables\StringConfiguration.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NinTexWorkflowEntity\StateConfiguration.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NinTexWorkflowEntity\NintexVariables\VariableConfiguration.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NinTexWorkflowEntity\Collection.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NinTexWorkflowEntity\Configuration.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NinTexWorkflowEntity\WorkflowContext.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NinTexWorkflowEntity\DateTimeInfo.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NinTexWorkflowEntity\DictionaryValue.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NinTexWorkflowEntity\Image.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NinTexWorkflowEntity\ListLookup.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NinTexWorkflowEntity\Parameters.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NinTexWorkflowEntity\ParametersValue.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NinTexWorkflowEntity\PrimitiveValue.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NinTexWorkflowEntity\Property.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NinTexWorkflowEntity\SelectedValue.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NinTexWorkflowEntity\ServerInfo.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NinTexWorkflowEntity\State.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NinTexWorkflowEntity\User.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NinTexWorkflowEntity\Value.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NinTexWorkflowEntity\WorkflowAction.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NinTexWorkflowEntity\ParametersProperties.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NinTexWorkflowEntity\NintexVariables\ArrayOfVariable.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NinTexWorkflowEntity\SubscriptionInfo.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NintexWorkflowVariablesProcessor\VaruablesProcessors\BooleanVariablesProcessor.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NintexWorkflowVariablesProcessor\VaruablesProcessors\ChoiceVariablesProcessor.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NintexWorkflowVariablesProcessor\VaruablesProcessors\CollectionVariableProcessor.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NintexWorkflowVariablesProcessor\VaruablesProcessors\DatetimeVariablesProcessor.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NintexWorkflowVariablesProcessor\VaruablesProcessors\IntegerVariablesProcessor.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NintexWorkflowVariablesProcessor\NintexVariablesProcessor.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NintexWorkflowVariablesProcessor\VaruablesProcessors\VariablesProcessorBase.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\NintexWorkflowVariablesProcessor\VaruablesProcessors\StringVariablesProcessor.cs" />
+    <Compile Include="NinTexWorkflowUpgradeProcessor\XMLUtility.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\NintexWFService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\GCommon\GCommonContract\DocAve.GCommonContract.csproj">
+      <Project>{361f3c7c-abbf-42d5-975a-65e4e9866068}</Project>
+      <Name>DocAve.GCommonContract</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\GCommon\GCommonUtility\DocAve.GCommonUtility.csproj">
+      <Project>{7151e862-a761-4a90-ace6-37d7442047a6}</Project>
+      <Name>DocAve.GCommonUtility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Wrapper.Core\Wrapper.Common\Wrapper.Common.csproj">
+      <Project>{9380e15e-5f69-4f2c-889f-e04756f6ccca}</Project>
+      <Name>Wrapper.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Wrapper.Core\Wrapper.Contract\Wrapper.Contract.csproj">
+      <Project>{b6805753-b35a-4df5-a3a4-27e6868dee09}</Project>
+      <Name>Wrapper.Contract</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Wrapper.Core\Wrapper.CustomUtility\Wrapper.CustomUtility.csproj">
+      <Project>{5ff18312-8da2-4abf-bc20-805a18065db6}</Project>
+      <Name>Wrapper.CustomUtility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Wrapper.Mapping\Wrapper.Mapping.csproj">
+      <Project>{1619d977-f606-4ffd-9e2b-3a80984bd397}</Project>
+      <Name>Wrapper.Mapping</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Wrapper.Core\Wrapper.Resource\Wrapper.Resource.csproj">
+      <Project>{f977bd26-9dd0-4b6d-95da-58096dca1913}</Project>
+      <Name>Wrapper.Resource</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <EmbeddedResource Include="NWActionProcessor.config">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="Classes.cd" />
+    <None Include="DocAveStandard.snk" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\NintexWFService\ConfiguredOutcome.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\NintexWFService\ContentType.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\NintexWFService\Folder.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\NintexWFService\ItemsPendingApproval.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\NintexWFService\MessageBoxItem.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\NintexWFService\NameInUseStatus.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\NintexWFService\ProcessTaskResponseResult.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\NintexWFService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\NintexWFService\TaskStub.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\NintexWFService\UserTask.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\NintexWFService\Workflow.wsdl" />
+    <None Include="Web References\NintexWFService\WorkflowLog.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\NintexWFService\WorkflowMetaData.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\NintexWFService\WorkflowTaskDetail.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://sp13workflow13/sites/NWTest/_vti_bin/NintexWorkflow/Workflow.asmx%3fwsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\NintexWFService\</RelPath>
+      <UpdateFromURL>http://sp13workflow13/sites/NWTest/_vti_bin/NintexWorkflow/Workflow.asmx%3fwsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Wrapper_Workflow_Nintex_NintexWFService_NintexWorkflowWS</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="NinTexWorkflowUpgradeProcessor\NintexWorkflowActionProcessor\Integration\DisplayExpression.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="NinTexWorkflowUpgradeProcessor\NintexWorkflowActionProcessor\Libraries and Lists\SetApprovalStatus\ApproveStausTemplate.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="NinTexWorkflowUpgradeProcessor\NintexWorkflowActionProcessor\Libraries and Lists\SetDocumentSetApprovalStatus\DocumentSetApprovalStatusTemplate.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="NinTexWorkflowUpgradeProcessor\NintexWorkflowActionProcessor\Libraries and Lists\CopyFileToFileShare\Office365DownloadFileTemplate.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="NinTexWorkflowUpgradeProcessor\NintexWorkflowActionProcessor\Libraries and Lists\SetItemPermissions\DisplayExpression.txt" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

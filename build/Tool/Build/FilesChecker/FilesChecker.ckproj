@@ -1,0 +1,101 @@
+<?xml version="1.0"?>
+<Project xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <IsOutputConsoleReport Value="False" />
+  <ProjectBasePath Value="" />
+  <CheckFileType Value="*.exe;*.dll" />
+  <Integrity IsCheck="True">
+    <FolderSettings>
+      <Folder Path="CloudRecords" IsCheckWSP="False" WSPFolder="" SQLFilePath="Tool\FilesChecker\SQL\Integrity.sql" />
+      <Folder Path="CloudRecords\RevIMWorker.Web\lic" IsCheckWSP="False" WSPFolder="" SQLFilePath="Tool\FilesChecker\SQL\PKGLicense.sql" />
+    </FolderSettings>
+    <Settings>
+      <IsDeleteNotAppliedFile Value="False" />
+    </Settings>
+    <UnzipFileType Value="" />
+    <WspListSqlFile Value="" />
+    <CompressFileType Value="" />
+    <Except>
+      <ExceptItem Path="[Integrity]aui\" />
+    </Except>
+  </Integrity>
+  <MemoryLeak IsCheck="False">
+    <FolderSettings>
+      <FolderInfo Path="" IsCheckWSP="False" WSPFolder="" />
+    </FolderSettings>
+    <SpecialParameter Value="" />
+    <UnzipType Value="" />
+  </MemoryLeak>
+  <FileProperties IsCheck="False" IsCheckDllFileDescription="False">
+    <FolderSettings>
+      <Folder Path="" IsCheckWSP="False" WSPFolder="" SQLFilePath="" />
+    </FolderSettings>
+    <UnzipType Value="" />
+    <Copyright Value="" />
+    <Company Value="" />
+    <ProductName Value="" />
+    <VersionFile Value="" />
+    <Except />
+  </FileProperties>
+  <FileProtected IsCheck="False">
+    <FolderSettings>
+      <Folder Path="" IsCheckWSP="False" WSPFolder="" SQLFilePath="" />
+    </FolderSettings>
+    <UnzipFileType Value="" />
+  </FileProtected>
+  <SpVersion IsCheck="False">
+    <FolderSettings>
+      <CheckFolder Path="" IsCheckWSP="False" WSPFolder="" />
+    </FolderSettings>
+    <UnzipFileType Value="" />
+    <CheckFileType Value="" />
+    <SQLFile Path="" />
+    <Except />
+    <SPFiles />
+    <SPVersionMapping />
+  </SpVersion>
+  <DigitalSign IsCheck="False">
+    <FolderSettings>
+      <CheckFolder Path="CloudRecords\EndUserSolution" IsCheckWSP="False" WSPFolder="" />
+    </FolderSettings>
+    <UnzipFileType Value="" />
+    <CheckFileType Value="*.ps1" />
+    <DigitalSignValue Value='CN="AvePoint, Inc.", O="AvePoint, Inc.", L=Jersey City, S=New Jersey, C=US' />
+    <Except />
+  </DigitalSign>
+  <StrongSign IsCheck="False">
+    <FolderSettings>
+      <Folder Path="" WSPFolder="" />
+    </FolderSettings>
+    <UnzipFileType Value="" />
+    <Except>
+      <ExceptItem Path="StorageTSMAPI.dll" />
+    </Except>
+  </StrongSign>
+  <ConfigrationMode IsCheck="True">
+    <FolderSettings>
+      <Folder Path="CloudRecords" WSPFolder="" />
+    </FolderSettings>
+    <UnzipFileType Value="" />
+    <Except>
+      <ExceptItem Path="EmRuntime_X64.dll" />
+      <ExceptItem Path="EmRuntime_X86.dll" />
+    </Except>
+  </ConfigrationMode>
+  <DatabaseSettings IsLocal="True" IsNetwork="False">
+    <SQLiteDatabase Value="Tool\BinaryList.db" />
+    <DatabaseServer Value="scmdb.avepoint.net" />
+    <Failover Value="" />
+    <DatabaseName Value="PackagingData" />
+    <Username Value="sa" />
+    <Password Value="SLfEzz1e6k8IB8NLjQPQpg==" />
+    <ThirdPartySQL Path="Tool\FilesChecker\SQL\Third.sql" />
+  </DatabaseSettings>
+  <OutputSettings IsInsert="False">
+    <ReportDatabaseServer Value="" />
+    <DatabaseName Value="" />
+    <Username Value="" />
+    <Password />
+    <LogFile Path="Reports" />
+    <ReportFile Path="Reports" IsMergerReport="True" />
+  </OutputSettings>
+</Project>

@@ -1,0 +1,881 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3180AE0E-D8E3-4B4D-903B-4AF57D16CAF5}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AvePoint.Media.Storage</RootNamespace>
+    <AssemblyName>Storage</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\bin\Agent\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+    <CodeAnalysisRuleSet>..\..\..\server\ManagerBuild\AvePointRuleSets.ruleset</CodeAnalysisRuleSet>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <CodeAnalysisIgnoreGeneratedCode>false</CodeAnalysisIgnoreGeneratedCode>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\bin\Agent\Release\</OutputPath>
+    <DefineConstants>TRACE;CODE_ANALYSIS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>DocAveStandard.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AlphaFS, Version=2.2.0.0, Culture=neutral, PublicKeyToken=4d31a58f7d7ad5c9, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Packages\AlphaFS.2.2.6\lib\net452\AlphaFS.dll</HintPath>
+    </Reference>
+    <Reference Include="BouncyCastle.Cryptography, Version=2.0.0.0, Culture=neutral, PublicKeyToken=072edcf4a5328938, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Packages\BouncyCastle.Cryptography.2.6.2\lib\net461\BouncyCastle.Cryptography.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=10.0.0.11, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Packages\Microsoft.Bcl.AsyncInterfaces.10.0.11\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions, Version=10.0.0.2, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Packages\Microsoft.Extensions.DependencyInjection.Abstractions.10.0.2\lib\net462\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging.Abstractions, Version=10.0.0.2, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Packages\Microsoft.Extensions.Logging.Abstractions.10.0.2\lib\net462\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Renci.SshNet, Version=2025.1.0.1, Culture=neutral, PublicKeyToken=1cee9f8bde3db106, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Packages\SSH.NET.2025.1.0\lib\net462\Renci.SshNet.dll</HintPath>
+    </Reference>
+    <Reference Include="ScspCS, Version=1.0.0.0, Culture=neutral, PublicKeyToken=fffb45e56dd478e3, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Packages\ScspCS.1.0.0\lib\ScspCS.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.5.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Packages\System.Buffers.4.6.1\lib\net462\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=10.0.0.3, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Packages\System.Diagnostics.DiagnosticSource.10.0.3\lib\net462\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Formats.Asn1, Version=10.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Packages\System.Formats.Asn1.10.0.2\lib\net462\System.Formats.Asn1.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Memory, Version=4.0.5.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Packages\System.Memory.4.6.3\lib\net462\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.6.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Packages\System.Numerics.Vectors.4.6.1\lib\net462\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Packages\System.Runtime.CompilerServices.Unsafe.6.1.2\lib\net462\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.4.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Packages\System.Threading.Tasks.Extensions.4.6.3\lib\net462\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.XML" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Devices\Storage.Box\BoxConfigFileHandler.cs" />
+    <Compile Include="Devices\Storage.Box\BoxFeature.cs" />
+    <Compile Include="Devices\Storage.Box\BoxFileInfo.cs" />
+    <Compile Include="Devices\Storage.Box\BoxOpenParameter.cs" />
+    <Compile Include="Devices\Storage.Box\BoxStream.cs" />
+    <Compile Include="Devices\Storage.Box\BoxSystem.cs" />
+    <Compile Include="Devices\Storage.Box\BoxUtil.cs" />
+    <Compile Include="Devices\Storage.Box\BoxVIM.cs" />
+    <Compile Include="Devices\Storage.CAStor\CAStorFeature.cs" />
+    <Compile Include="Devices\Storage.CAStor\CAStorFileInfo.cs" />
+    <Compile Include="Devices\Storage.CAStor\CAStorOpenParameter.cs" />
+    <Compile Include="Devices\Storage.CAStor\CAStorStream.cs" />
+    <Compile Include="Devices\Storage.CAStor\CAStorSystem.cs" />
+    <Compile Include="Devices\Storage.CAStor\CAStorTest.cs" />
+    <Compile Include="Devices\Storage.CAStor\CAStorUtil.cs" />
+    <Compile Include="Devices\Storage.CAStor\CAStorVIM.cs" />
+    <Compile Include="Devices\Storage.CAStor\REST\CAStorClient.cs" />
+    <Compile Include="Devices\Storage.CAStor\REST\CAStorConstants.cs" />
+    <Compile Include="Devices\Storage.Centera\CenteraClient.cs" />
+    <Compile Include="Devices\Storage.Centera\CenteraDirectory.cs" />
+    <Compile Include="Devices\Storage.Centera\CenteraFeature.cs" />
+    <Compile Include="Devices\Storage.Centera\CenteraFileInfo.cs" />
+    <Compile Include="Devices\Storage.Centera\Stream\CenteraInputStream.cs" />
+    <Compile Include="Devices\Storage.Centera\Stream\CenteraOutputStream.cs" />
+    <Compile Include="Devices\Storage.Centera\Stream\CenteraSingleBlobInputStream.cs" />
+    <Compile Include="Devices\Storage.Centera\CenteraSystem.cs" />
+    <Compile Include="Devices\Storage.Centera\CenteraTest.cs" />
+    <Compile Include="Devices\Storage.Centera\CenteraUtil.cs" />
+    <Compile Include="Devices\Storage.Centera\CenteraVIM.cs" />
+    <Compile Include="Devices\Storage.Centera\FPApi.cs" />
+    <Compile Include="Devices\Storage.Centera\FPConsts.cs" />
+    <Compile Include="Devices\Storage.Centera\FPObjects.cs" />
+    <Compile Include="Devices\Storage.Cloud.Amazon\AmazonFeature.cs" />
+    <Compile Include="Devices\Storage.Cloud.Amazon\AmazonOpenParameter.cs" />
+    <Compile Include="Devices\Storage.Cloud.Amazon\AmazonMultipartUploadStream.cs" />
+    <Compile Include="Devices\Storage.Cloud.Amazon\AmazonSystem.cs" />
+    <Compile Include="Devices\Storage.Cloud.Amazon\AmazonUploadStream.cs" />
+    <Compile Include="Devices\Storage.Cloud.Amazon\AmazonUploadStream2.cs" />
+    <Compile Include="Devices\Storage.Cloud.Amazon\AmazonVIM.cs" />
+    <Compile Include="Devices\Storage.Cloud.Amazon\REST\AmazonClient.cs" />
+    <Compile Include="Devices\Storage.Cloud.Amazon\REST\AmazonConstants.cs" />
+    <Compile Include="Devices\Storage.Cloud.Amazon\REST\AmazonHttpClient.cs" />
+    <Compile Include="Devices\Storage.Cloud.Amazon\REST\AmazonRequest.cs" />
+    <Compile Include="Devices\Storage.Cloud.Amazon\REST\AmazonUtils.cs" />
+    <Compile Include="Devices\Storage.Cloud.Amazon\REST\AWS4Signature.cs" />
+    <Compile Include="Devices\Storage.Cloud.Amazon\REST\CryptoUtil.cs" />
+    <Compile Include="Devices\Storage.Cloud.Amazon\REST\MySHA256.cs" />
+    <Compile Include="Devices\Storage.Cloud.Amazon\SystemWrapper\AmazonSystemWrapper.cs" />
+    <Compile Include="Devices\Storage.Cloud.Atmos\AtmosFeature.cs" />
+    <Compile Include="Devices\Storage.Cloud.Atmos\AtmosOpenParameter.cs" />
+    <Compile Include="Devices\Storage.Cloud.Atmos\AtmosSystem.cs" />
+    <Compile Include="Devices\Storage.Cloud.Atmos\AtmosVIM.cs" />
+    <Compile Include="Devices\Storage.Cloud.Atmos\REST\AtmosClient.cs" />
+    <Compile Include="Devices\Storage.Cloud.Atmos\REST\AtmosConstants.cs" />
+    <Compile Include="Devices\Storage.Cloud.Atmos\REST\AtmosHttpClient.cs" />
+    <Compile Include="Devices\Storage.Cloud.Atmos\REST\AtmosRequest.cs" />
+    <Compile Include="Devices\Storage.Cloud.Atmos\REST\AtmosUtils.cs" />
+    <Compile Include="Devices\Storage.Cloud.Atmos\SystemWrapper\AtmosSystemWrapper.cs" />
+    <Compile Include="Devices\Storage.Cloud.Azure\AzureFeature.cs" />
+    <Compile Include="Devices\Storage.Cloud.Azure\AzureOpenParameter.cs" />
+    <Compile Include="Devices\Storage.Cloud.Azure\AzureSystem.cs" />
+    <Compile Include="Devices\Storage.Cloud.Azure\AzureVIM.cs" />
+    <Compile Include="Devices\Storage.Cloud.Azure\REST\AzureClient.cs" />
+    <Compile Include="Devices\Storage.Cloud.Azure\REST\MSAzureConstants.cs" />
+    <Compile Include="Devices\Storage.Cloud.Azure\REST\MSAzureHttpClient.cs" />
+    <Compile Include="Devices\Storage.Cloud.Azure\REST\MSAzureRequest.cs" />
+    <Compile Include="Devices\Storage.Cloud.Azure\REST\MSAzureUtils.cs" />
+    <Compile Include="Devices\Storage.Cloud.Azure\REST\XPathQueryHelper.cs" />
+    <Compile Include="Devices\Storage.Cloud.Azure\StreamOption\AbstractStreamOption.cs" />
+    <Compile Include="Devices\Storage.Cloud.Azure\StreamOption\BigStreamOption.cs" />
+    <Compile Include="Devices\Storage.Cloud.Azure\StreamOption\BigStreamUpload.cs" />
+    <Compile Include="Devices\Storage.Cloud.Azure\StreamOption\IChangeStreamOption.cs" />
+    <Compile Include="Devices\Storage.Cloud.Azure\StreamOption\SmallStreamOption.cs" />
+    <Compile Include="Devices\Storage.Cloud.Azure\StreamOption\StreamSelectContext.cs" />
+    <Compile Include="Devices\Storage.Cloud.Azure\SystemWrapper\AzureSystemWrapper.cs" />
+    <Compile Include="Devices\Storage.Cloud.Cleversafe\CleversafeFeature.cs" />
+    <Compile Include="Devices\Storage.Cloud.Cleversafe\CleversafeMultipartUploadStream.cs" />
+    <Compile Include="Devices\Storage.Cloud.Cleversafe\CleversafeOpenParameter.cs" />
+    <Compile Include="Devices\Storage.Cloud.Cleversafe\CleversafeSystem.cs" />
+    <Compile Include="Devices\Storage.Cloud.Cleversafe\CleversafeUploadStream.cs" />
+    <Compile Include="Devices\Storage.Cloud.Cleversafe\CleversafeVIM.cs" />
+    <Compile Include="Devices\Storage.Cloud.Cleversafe\REST\AccesserIPHealth.cs" />
+    <Compile Include="Devices\Storage.Cloud.Cleversafe\REST\CleversafeClient.cs" />
+    <Compile Include="Devices\Storage.Cloud.Cleversafe\REST\CleversafeConstant.cs" />
+    <Compile Include="Devices\Storage.Cloud.Cleversafe\REST\CleversafeHttpClient.cs" />
+    <Compile Include="Devices\Storage.Cloud.Cleversafe\REST\CleversafeRequest.cs" />
+    <Compile Include="Devices\Storage.Cloud.Cleversafe\REST\CleversafeUtils.cs" />
+    <Compile Include="Devices\Storage.Cloud.Common\Client\AbstractRESTOprationExecutor.cs" />
+    <Compile Include="Devices\Storage.Cloud.Common\Client\ICloudOprationExecutor.cs" />
+    <Compile Include="Devices\Storage.Cloud.Common\Client\IHttpRequestPrepare.cs" />
+    <Compile Include="Devices\Storage.Cloud.Common\Client\IHttpResponseHandler.cs" />
+    <Compile Include="Devices\Storage.Cloud.Common\Client\IListener.cs" />
+    <Compile Include="Devices\Storage.Cloud.Common\CloudFileInfo.cs" />
+    <Compile Include="Devices\Storage.Cloud.Common\CloudStream.cs" />
+    <Compile Include="Devices\Storage.Cloud.Common\CloudSystem.cs" />
+    <Compile Include="Devices\Storage.Cloud.Common\CloudTest.cs" />
+    <Compile Include="Devices\Storage.Cloud.Common\CloudType.cs" />
+    <Compile Include="Devices\Storage.Cloud.Common\CommCloudFeature.cs" />
+    <Compile Include="Devices\Storage.Cloud.Common\Config\CloudConfig.cs" />
+    <Compile Include="Devices\Storage.Cloud.Common\Config\CloudOpenParameter.cs" />
+    <Compile Include="Devices\Storage.Cloud.Common\GetCount\GetSubDirsAndFilesCount.cs" />
+    <Compile Include="Devices\Storage.Cloud.Common\HttpDownloadStream.cs" />
+    <Compile Include="Devices\Storage.Cloud.Common\HttpHelper\AbstractHttpClient.cs" />
+    <Compile Include="Devices\Storage.Cloud.Common\HttpHelper\IHttpClient.cs" />
+    <Compile Include="Devices\Storage.Cloud.Common\HttpUploadStream.cs" />
+    <Compile Include="Devices\Storage.Cloud.Common\IRetryMethod.cs" />
+    <Compile Include="Devices\Storage.Cloud.Common\Request\BasicRequest.cs" />
+    <Compile Include="Devices\Storage.Cloud.Common\Request\RESTCommands.cs" />
+    <Compile Include="Devices\Storage.Cloud.Common\Retry.cs" />
+    <Compile Include="Devices\Storage.Cloud.Common\Utilities\CommonUtility.cs" />
+    <Compile Include="Devices\Storage.Cloud.Common\Utilities\MimeHelper.cs" />
+    <Compile Include="Devices\Storage.Cloud.Common\Warpper\ListWrapper\AbstractArrayListWrapper.cs" />
+    <Compile Include="Devices\Storage.Cloud.Common\Warpper\ListWrapper\ArrayListFilesWrapper.cs" />
+    <Compile Include="Devices\Storage.Cloud.Common\Warpper\ListWrapper\ArrayListSubDirsWrapper.cs" />
+    <Compile Include="Devices\Storage.Cloud.Common\Warpper\SystemWrapper\AbstractCloudSystemWrapper.cs" />
+    <Compile Include="Devices\Storage.Cloud.Dropbox\DropboxDirectoryInfo.cs" />
+    <Compile Include="Devices\Storage.Cloud.Dropbox\DropboxFeature.cs" />
+    <Compile Include="Devices\Storage.Cloud.Dropbox\DropboxFileInfo.cs" />
+    <Compile Include="Devices\Storage.Cloud.Dropbox\DropboxRetry.cs" />
+    <Compile Include="Devices\Storage.Cloud.Dropbox\DropboxStream.cs" />
+    <Compile Include="Devices\Storage.Cloud.Dropbox\DropboxSystem.cs" />
+    <Compile Include="Devices\Storage.Cloud.Dropbox\DropboxUtil.cs" />
+    <Compile Include="Devices\Storage.Cloud.Dropbox\DropboxVIM.cs" />
+    <Compile Include="Devices\Storage.Cloud.Dropbox\REST\DropboxConstants.cs" />
+    <Compile Include="Devices\Storage.Cloud.Dropbox\REST\DropboxObject.cs" />
+    <Compile Include="Devices\Storage.Cloud.ObjectAtmos\ObjectAtmosFeature.cs" />
+    <Compile Include="Devices\Storage.Cloud.ObjectAtmos\ObjectAtmosFileInfo.cs" />
+    <Compile Include="Devices\Storage.Cloud.ObjectAtmos\ObjectAtmosOpenParameter.cs" />
+    <Compile Include="Devices\Storage.Cloud.ObjectAtmos\ObjectAtmosStream.cs" />
+    <Compile Include="Devices\Storage.Cloud.ObjectAtmos\ObjectAtmosSystem.cs" />
+    <Compile Include="Devices\Storage.Cloud.ObjectAtmos\ObjectAtmosTest.cs" />
+    <Compile Include="Devices\Storage.Cloud.ObjectAtmos\ObjectAtmosUtil.cs" />
+    <Compile Include="Devices\Storage.Cloud.ObjectAtmos\ObjectAtmosVIM.cs" />
+    <Compile Include="Devices\Storage.Cloud.ObjectAtmos\REST\AtmosUtils.cs" />
+    <Compile Include="Devices\Storage.Cloud.ObjectAtmos\REST\ObjectAtmosClient.cs" />
+    <Compile Include="Devices\Storage.Cloud.ObjectAtmos\REST\ObjectAtmosConstants.cs" />
+    <Compile Include="Devices\Storage.Cloud.Openstack\AveHttpWebRequestUtil.cs" />
+    <Compile Include="Devices\Storage.Cloud.Openstack\HttpRetryParameter.cs" />
+    <Compile Include="Devices\Storage.Cloud.Openstack\HttpUtil.cs" />
+    <Compile Include="Devices\Storage.Cloud.Openstack\Identity\KeystoneIdentityService.cs" />
+    <Compile Include="Devices\Storage.Cloud.Openstack\Identity\OpenStackIdentityInfo.cs" />
+    <Compile Include="Devices\Storage.Cloud.Openstack\Identity\OpenStackIdentityService.cs" />
+    <Compile Include="Devices\Storage.Cloud.Openstack\Identity\OpenStackV1IdentityService.cs" />
+    <Compile Include="Devices\Storage.Cloud.Openstack\Identity\RackspaceKeystoneIdentityService.cs" />
+    <Compile Include="Devices\Storage.Cloud.Openstack\JsonConvertor.cs" />
+    <Compile Include="Devices\Storage.Cloud.Openstack\OpenStackBaseOperationClient.cs" />
+    <Compile Include="Devices\Storage.Cloud.Openstack\OpenStackBaseRestClient.cs" />
+    <Compile Include="Devices\Storage.Cloud.Openstack\OpenStackFeature.cs" />
+    <Compile Include="Devices\Storage.Cloud.Openstack\OpenStackFileInfo.cs" />
+    <Compile Include="Devices\Storage.Cloud.Openstack\OpenStackOpenParameter.cs" />
+    <Compile Include="Devices\Storage.Cloud.Openstack\OpenStackSystem.cs" />
+    <Compile Include="Devices\Storage.Cloud.Openstack\OpenStackUtil.cs" />
+    <Compile Include="Devices\Storage.Cloud.Openstack\OpenStackVIM.cs" />
+    <Compile Include="Devices\Storage.Cloud.Openstack\Stream\HttpDownloadStream.cs" />
+    <Compile Include="Devices\Storage.Cloud.Openstack\Stream\HttpUploadStream.cs" />
+    <Compile Include="Devices\Storage.Cloud.Openstack\Stream\MultiHttpUploadStream.cs" />
+    <Compile Include="Devices\Storage.Cloud.Openstack\Stream\OpenStackStream.cs" />
+    <Compile Include="Devices\Storage.Cloud.Rackspace\RackspaceFeature.cs" />
+    <Compile Include="Devices\Storage.Cloud.Rackspace\RackspaceOpenParameter.cs" />
+    <Compile Include="Devices\Storage.Cloud.Rackspace\RackspaceSystem.cs" />
+    <Compile Include="Devices\Storage.Cloud.Rackspace\RackspaceSystemWrapper\RackspaceSystemWrapper.cs" />
+    <Compile Include="Devices\Storage.Cloud.Rackspace\RackspaceVIM.cs" />
+    <Compile Include="Devices\Storage.Cloud.Rackspace\REST\RackspaceClient.cs" />
+    <Compile Include="Devices\Storage.Cloud.Rackspace\REST\RackspaceConstants.cs" />
+    <Compile Include="Devices\Storage.Cloud.Rackspace\REST\RackspaceHttpClient.cs" />
+    <Compile Include="Devices\Storage.Cloud.Rackspace\REST\RackspaceHttpRequest.cs" />
+    <Compile Include="Devices\Storage.Egnyte\EgnyteFeature.cs" />
+    <Compile Include="Devices\Storage.Egnyte\EgnyteFileInfo.cs" />
+    <Compile Include="Devices\Storage.Egnyte\EgnyteOpenParameter.cs" />
+    <Compile Include="Devices\Storage.Egnyte\EgnyteStream.cs" />
+    <Compile Include="Devices\Storage.Egnyte\EgnyteSystem.cs" />
+    <Compile Include="Devices\Storage.Egnyte\EgnyteUtil.cs" />
+    <Compile Include="Devices\Storage.Egnyte\EgnyteVIM.cs" />
+    <Compile Include="Devices\Storage.FS\AbstractFSClient.cs" />
+    <Compile Include="Devices\Storage.FS\AlphaFS\AlphaFSClient.cs" />
+    <Compile Include="Devices\Storage.FS\AlphaFS\AlphaFSDirectoryInfo.cs" />
+    <Compile Include="Devices\Storage.FS\AlphaFS\AlphaFSFileInfo.cs" />
+    <Compile Include="Devices\Storage.FS\AlphaFS\AlphaFSStream.cs" />
+    <Compile Include="Devices\Storage.FS\AlphaFS\AlphaFSUtil.cs" />
+    <Compile Include="Devices\Storage.FS\DFSUtility.cs" />
+    <Compile Include="Devices\Storage.FS\FSFeature.cs" />
+    <Compile Include="Devices\Storage.FS\FSSystem.cs" />
+    <Compile Include="Devices\Storage.FS\FSTest.cs" />
+    <Compile Include="Devices\Storage.FS\FSUtil.cs" />
+    <Compile Include="Devices\Storage.FS\FSVIM.cs" />
+    <Compile Include="Devices\Storage.FS\FS\FSClient.cs" />
+    <Compile Include="Devices\Storage.FS\FS\FSDirectoryInfo.cs" />
+    <Compile Include="Devices\Storage.FS\FS\FSFileInfo.cs" />
+    <Compile Include="Devices\Storage.FS\FS\FSStream.cs" />
+    <Compile Include="Devices\Storage.FS\IFSClient.cs" />
+    <Compile Include="Devices\Storage.FTP\FluentFTP\Extensions\GetChecksum.cs" />
+    <Compile Include="Devices\Storage.FTP\FluentFTP\Extensions\MD5.cs" />
+    <Compile Include="Devices\Storage.FTP\FluentFTP\Extensions\XCRC.cs" />
+    <Compile Include="Devices\Storage.FTP\FluentFTP\Extensions\XMD5.cs" />
+    <Compile Include="Devices\Storage.FTP\FluentFTP\Extensions\XSHA1.cs" />
+    <Compile Include="Devices\Storage.FTP\FluentFTP\Extensions\XSHA256.cs" />
+    <Compile Include="Devices\Storage.FTP\FluentFTP\Extensions\XSHA512.cs" />
+    <Compile Include="Devices\Storage.FTP\FluentFTP\WrapperFtpClient.cs" />
+    <Compile Include="Devices\Storage.FTP\FluentFTP\FtpDataStream.cs" />
+    <Compile Include="Devices\Storage.FTP\FluentFTP\FtpEnums.cs" />
+    <Compile Include="Devices\Storage.FTP\FluentFTP\FtpExceptions.cs" />
+    <Compile Include="Devices\Storage.FTP\FluentFTP\FtpExtensionAttribute.cs" />
+    <Compile Include="Devices\Storage.FTP\FluentFTP\FtpExtensions.cs" />
+    <Compile Include="Devices\Storage.FTP\FluentFTP\FtpHash.cs" />
+    <Compile Include="Devices\Storage.FTP\FluentFTP\FtpListItem.cs" />
+    <Compile Include="Devices\Storage.FTP\FluentFTP\FtpReply.cs" />
+    <Compile Include="Devices\Storage.FTP\FluentFTP\FtpSocketStream.cs" />
+    <Compile Include="Devices\Storage.FTP\FluentFTP\FtpTrace.cs" />
+    <Compile Include="Devices\Storage.FTP\FluentFTP\Proxy\FtpClientHttpProxy.cs" />
+    <Compile Include="Devices\Storage.FTP\FluentFTP\Proxy\FtpClientProxy.cs" />
+    <Compile Include="Devices\Storage.FTP\FluentFTP\Proxy\FtpClientUserAtHostProxy.cs" />
+    <Compile Include="Devices\Storage.FTP\FluentFTP\Proxy\ProxyInfo.cs" />
+    <Compile Include="Devices\Storage.FTP\FTPClient.cs" />
+    <Compile Include="Devices\Storage.FTP\FTPClientWin32ApiImpl\FtpConnection.cs" />
+    <Compile Include="Devices\Storage.FTP\FTPClientWin32ApiImpl\FtpDirectoryInfo.cs" />
+    <Compile Include="Devices\Storage.FTP\FTPClientWin32ApiImpl\FtpException.cs" />
+    <Compile Include="Devices\Storage.FTP\FTPClientWin32ApiImpl\FtpFileInfo.cs" />
+    <Compile Include="Devices\Storage.FTP\FTPClientWin32ApiImpl\NativeMethods.cs" />
+    <Compile Include="Devices\Storage.FTP\FTPDirectory.cs" />
+    <Compile Include="Devices\Storage.FTP\FTPDirectoryListParser.cs" />
+    <Compile Include="Devices\Storage.FTP\FTPDotNetExtend.cs" />
+    <Compile Include="Devices\Storage.FTP\FTPFeature.cs" />
+    <Compile Include="Devices\Storage.FTP\FTPFileInfo.cs" />
+    <Compile Include="Devices\Storage.FTP\FTPNodeInfo.cs" />
+    <Compile Include="Devices\Storage.FTP\FTPRetry.cs" />
+    <Compile Include="Devices\Storage.FTP\FtpSchema.cs" />
+    <Compile Include="Devices\Storage.FTP\FTPStream.cs" />
+    <Compile Include="Devices\Storage.FTP\FTPSystem.cs" />
+    <Compile Include="Devices\Storage.FTP\FTPTest.cs" />
+    <Compile Include="Devices\Storage.FTP\FTPVIM.cs" />
+    <Compile Include="Devices\Storage.GoogelDrive\GoogleDriveFeature.cs" />
+    <Compile Include="Devices\Storage.GoogelDrive\GoogleDriveFileInfo.cs" />
+    <Compile Include="Devices\Storage.GoogelDrive\GoogleDriveOpenParameter.cs" />
+    <Compile Include="Devices\Storage.GoogelDrive\GoogleDriveStream.cs" />
+    <Compile Include="Devices\Storage.GoogelDrive\GoogleDriveSystem.cs" />
+    <Compile Include="Devices\Storage.GoogelDrive\GoogleDriveUtil.cs" />
+    <Compile Include="Devices\Storage.GoogelDrive\GoogleDriveVIM.cs" />
+    <Compile Include="Devices\Storage.HCP\HCPConsts.cs" />
+    <Compile Include="Devices\Storage.HCP\HCPFeature.cs" />
+    <Compile Include="Devices\Storage.HCP\HCPOpenParameter.cs" />
+    <Compile Include="Devices\Storage.HCP\HCPStream.cs" />
+    <Compile Include="Devices\Storage.HCP\HCPSystem.cs" />
+    <Compile Include="Devices\Storage.HCP\HCPVIM.cs" />
+    <Compile Include="Devices\Storage.HCP\REST\HCPClient.cs" />
+    <Compile Include="Devices\Storage.HCP\REST\HCPHttpClient.cs" />
+    <Compile Include="Devices\Storage.HCP\REST\HCPUtility.cs" />
+    <Compile Include="Devices\Storage.MirrorFS\MirrorFSFeature.cs" />
+    <Compile Include="Devices\Storage.MirrorFS\MirrorFSStream.cs" />
+    <Compile Include="Devices\Storage.MirrorFS\MirrorFSSynchronizer.cs" />
+    <Compile Include="Devices\Storage.MirrorFS\MirrorFSSystem.cs" />
+    <Compile Include="Devices\Storage.MirrorFS\MirrorFSTest.cs" />
+    <Compile Include="Devices\Storage.MirrorFS\MirrorFSVIM.cs" />
+    <Compile Include="Devices\Storage.OneDrive\OneDriveFeature.cs" />
+    <Compile Include="Devices\Storage.OneDrive\OneDriveFileInfo.cs" />
+    <Compile Include="Devices\Storage.OneDrive\OneDriveOpenParameter.cs" />
+    <Compile Include="Devices\Storage.OneDrive\OneDriveStream.cs" />
+    <Compile Include="Devices\Storage.OneDrive\OneDriveSystem.cs" />
+    <Compile Include="Devices\Storage.OneDrive\OneDriveUtil.cs" />
+    <Compile Include="Devices\Storage.OneDrive\OneDriveVIM.cs" />
+    <Compile Include="Devices\Storage.Cloud.S3Compatible\REST\S3CompatibleClient.cs" />
+    <Compile Include="Devices\Storage.Cloud.S3Compatible\REST\S3CompatibleConstants.cs" />
+    <Compile Include="Devices\Storage.Cloud.S3Compatible\REST\S3CompatibleHttpClient.cs" />
+    <Compile Include="Devices\Storage.Cloud.S3Compatible\REST\S3CompatibleRequest.cs" />
+    <Compile Include="Devices\Storage.Cloud.S3Compatible\REST\S3CompatibleUtils.cs" />
+    <Compile Include="Devices\Storage.Cloud.S3Compatible\S3CompatibleFeature.cs" />
+    <Compile Include="Devices\Storage.Cloud.S3Compatible\S3CompatibleMultipartUploadStream.cs" />
+    <Compile Include="Devices\Storage.Cloud.S3Compatible\S3CompatibleOpenParameter.cs" />
+    <Compile Include="Devices\Storage.Cloud.S3Compatible\S3CompatibleSystem.cs" />
+    <Compile Include="Devices\Storage.Cloud.S3Compatible\S3CompatibleUploadStream.cs" />
+    <Compile Include="Devices\Storage.Cloud.S3Compatible\S3CompatibleVIM.cs" />
+    <Compile Include="Devices\Storage.Cloud.S3Compatible\SystemWrapper\S3CompatibleSystemWrapper.cs" />
+    <Compile Include="Devices\Storage.SFTP\FileStruct.cs" />
+    <Compile Include="Devices\Storage.SFTP\SFTPClient.cs" />
+    <Compile Include="Devices\Storage.SFTP\SFTPDirectory.cs" />
+    <Compile Include="Devices\Storage.SFTP\SFTPFeature.cs" />
+    <Compile Include="Devices\Storage.SFTP\SFTPFileInfo.cs" />
+    <Compile Include="Devices\Storage.SFTP\SFTPNodeInfo.cs" />
+    <Compile Include="Devices\Storage.SFTP\SFTPStream.cs" />
+    <Compile Include="Devices\Storage.SFTP\SFTPSystem.cs" />
+    <Compile Include="Devices\Storage.SFTP\SFTPVIM.cs" />
+    <Compile Include="Devices\Storage.SFTP\SFTPXRIParameterKeys.cs" />
+    <Compile Include="Devices\Storage.TSM\TSMApi.cs" />
+    <Compile Include="Devices\Storage.TSM\TSMClient.cs" />
+    <Compile Include="Devices\Storage.TSM\TSMConfiguration.cs" />
+    <Compile Include="Devices\Storage.TSM\TSMFeature.cs" />
+    <Compile Include="Devices\Storage.TSM\TSMHelperInfo\TSMAddressMap.cs" />
+    <Compile Include="Devices\Storage.TSM\TSMHelperInfo\TSMDirectoryInfo.cs" />
+    <Compile Include="Devices\Storage.TSM\TSMHelperInfo\TSMFileInfo.cs" />
+    <Compile Include="Devices\Storage.TSM\TSMHelperInfo\TSMNodeInfo.cs" />
+    <Compile Include="Devices\Storage.TSM\TSMHelperInfo\TSMOpenParameter.cs" />
+    <Compile Include="Devices\Storage.TSM\TSMIOException.cs" />
+    <Compile Include="Devices\Storage.TSM\TSMRetry.cs" />
+    <Compile Include="Devices\Storage.TSM\TSMSession.cs" />
+    <Compile Include="Devices\Storage.TSM\TSMStream.cs" />
+    <Compile Include="Devices\Storage.TSM\TSMSystem.cs" />
+    <Compile Include="Devices\Storage.TSM\TSMSystemSafeguard.cs" />
+    <Compile Include="Devices\Storage.TSM\TSMTest.cs" />
+    <Compile Include="Devices\Storage.TSM\TSMUtil.cs" />
+    <Compile Include="Devices\Storage.TSM\TSMVIM.cs" />
+    <Compile Include="Entity\FeatureCustomized.cs" />
+    <Compile Include="Entity\SystemPropertyKeys.cs" />
+    <Compile Include="Enum\CASLevel.cs" />
+    <Compile Include="Enum\IOType.cs" />
+    <Compile Include="Enum\SpaceThresholdUnit.cs" />
+    <Compile Include="IntentionImpl\XDirectoryInfoEx.cs" />
+    <Compile Include="IntentionImpl\XFileInfoEx.cs" />
+    <Compile Include="Intention\AbstractXSystem.cs" />
+    <Compile Include="Resources\AmazonI18N\AmazonI18N.Designer.cs">
+      <DependentUpon>AmazonI18N.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\AtmosI18N\AtmosI18N.Designer.cs">
+      <DependentUpon>AtmosI18N.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\AzureI18N\AzureI18N.Designer.cs">
+      <DependentUpon>AzureI18N.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\BoxI18N\BoxI18N.Designer.cs">
+      <DependentUpon>BoxI18N.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\CAStorI18N\CAStorI18N.Designer.cs">
+      <DependentUpon>CAStorI18N.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\CenteraI18N\CenteraI18N.Designer.cs">
+      <DependentUpon>CenteraI18N.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\CleversafeI18N\CleversafeI18N.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CleversafeI18N.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\CloudCommonI18N\CloudCommonI18N.Designer.cs">
+      <DependentUpon>CloudCommonI18N.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\DropboxI18N\DropboxI18N.Designer.cs">
+      <DependentUpon>DropboxI18N.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\EgnyteI18N\EgnyteI18N.de-DE.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EgnyteI18N.de-DE.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\EgnyteI18N\EgnyteI18N.Designer.cs">
+      <DependentUpon>EgnyteI18N.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\EgnyteI18N\EgnyteI18N.en-US.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EgnyteI18N.en-US.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\EgnyteI18N\EgnyteI18N.ja-JP.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EgnyteI18N.ja-JP.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\EgnyteI18N\EgnyteI18N.zh-CN.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EgnyteI18N.zh-CN.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\FSI18N\FSI18N.Designer.cs">
+      <DependentUpon>FSI18N.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\FTPI18N\FTPI18N.Designer.cs">
+      <DependentUpon>FTPI18N.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\FTPI18N\FTPI18N.fr-FR.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FTPI18N.fr-FR.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\GoogleDriveI18N\GoogleDriveI18N.Designer.cs">
+      <DependentUpon>GoogleDriveI18N.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\HCPI18N\HCPI18N.Designer.cs">
+      <DependentUpon>HCPI18N.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\MirrorFSI18N\MirrorFSI18N.Designer.cs">
+      <DependentUpon>MirrorFSI18N.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\OpenStackI18N\OpenStackI18N.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OpenStackI18N.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\RackspaceI18N\RackspaceI18N.Designer.cs">
+      <DependentUpon>RackspaceI18N.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\S3CompatibleI18N\S3CompatibleI18N.Designer.cs">
+      <DependentUpon>S3CompatibleI18N.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\SFTPI18N\SFTPI18N.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SFTPI18N.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\SkyDriveI18N\SkyDriveI18N.Designer.cs">
+      <DependentUpon>SkyDriveI18N.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\StorageI18N\I18N.Designer.cs">
+      <DependentUpon>I18N.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\TSMI18N\TSMI18N.Designer.cs">
+      <DependentUpon>TSMI18N.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="StorageConstants.cs" />
+    <Compile Include="StorageUrl.cs" />
+    <Compile Include="Util\CacheUtil.cs" />
+    <Compile Include="DeviceSynchronizer\DeviceSynchronizer.cs" />
+    <Compile Include="Service\PhysicalDeviceChecker.cs" />
+    <Compile Include="Utilities\SmartDictionaryPool.cs" />
+    <Compile Include="Inner\VIM.cs" />
+    <Compile Include="IntentionImpl\XDirectoryInfo.cs" />
+    <Compile Include="Util\XExceptions.cs" />
+    <Compile Include="IntentionImpl\XFileInfo.cs" />
+    <Compile Include="IntentionImpl\XLibrary.cs" />
+    <Compile Include="Util\XRI.cs" />
+    <Compile Include="Util\XUtil.cs" />
+    <Compile Include="Inner\XConfiguration.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Intention\XFeature.cs" />
+    <Compile Include="IntentionImpl\XParam.cs" />
+    <Compile Include="IntentionImpl\XResult.cs" />
+    <Compile Include="Intention\XStream.cs" />
+    <Compile Include="Intention\IXSystem.cs" />
+    <Compile Include="XFactory.cs" />
+    <Compile Include="XRIParameterKeys.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="DocAveStandard.snk" />
+    <None Include="Documents\DocAve 6 Physical Device GUI.docx" />
+    <None Include="packages.config" />
+    <None Include="Service\Component.config" />
+    <None Include="Storage.config">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GCommonContract\DocAve.GCommonContract.csproj">
+      <Project>{361F3C7C-ABBF-42D5-975A-65E4E9866068}</Project>
+      <Name>DocAve.GCommonContract</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GCommonUtility\DocAve.GCommonUtility.csproj">
+      <Project>{7151E862-A761-4A90-ACE6-37D7442047A6}</Project>
+      <Name>DocAve.GCommonUtility</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Devices\Storage.TSM\ThirdDLL\x86\apienu32.dll" />
+    <Content Include="Readme.txt" />
+    <Content Include="Devices\Storage.Centera\ThirdDLL\x64\FPCore.dll" />
+    <Content Include="Devices\Storage.Centera\ThirdDLL\x64\FPLibrary.dll" />
+    <Content Include="Devices\Storage.Centera\ThirdDLL\x64\fpos64.dll" />
+    <Content Include="Devices\Storage.Centera\ThirdDLL\x64\fpparser.dll" />
+    <Content Include="Devices\Storage.Centera\ThirdDLL\x64\FPStreams.dll" />
+    <Content Include="Devices\Storage.Centera\ThirdDLL\x64\FPUtils.dll" />
+    <Content Include="Devices\Storage.Centera\ThirdDLL\x64\FPXML.dll" />
+    <Content Include="Devices\Storage.Centera\ThirdDLL\x64\pai_module.dll" />
+    <Content Include="Devices\Storage.Centera\ThirdDLL\x86\FPCore.dll" />
+    <Content Include="Devices\Storage.Centera\ThirdDLL\x86\FPLibrary.dll" />
+    <Content Include="Devices\Storage.Centera\ThirdDLL\x86\fpos32.dll" />
+    <Content Include="Devices\Storage.Centera\ThirdDLL\x86\fpparser.dll" />
+    <Content Include="Devices\Storage.Centera\ThirdDLL\x86\FPStreams.dll" />
+    <Content Include="Devices\Storage.Centera\ThirdDLL\x86\FPUtils.dll" />
+    <Content Include="Devices\Storage.Centera\ThirdDLL\x86\FPXML.dll" />
+    <Content Include="Devices\Storage.Centera\ThirdDLL\x86\pai_module.dll" />
+    <Content Include="Devices\Storage.TSM\ThirdDLL\x64\apienu.dll" />
+    <Content Include="Devices\Storage.TSM\ThirdDLL\x64\dscenu.txt" />
+    <Content Include="Devices\Storage.TSM\ThirdDLL\x64\dsmntapi64.dll" />
+    <Content Include="Devices\Storage.TSM\ThirdDLL\x64\fcmenu.txt" />
+    <Content Include="Devices\Storage.TSM\ThirdDLL\x64\tsmapi64.dll" />
+    <Content Include="Devices\Storage.TSM\ThirdDLL\x64\tsmutil164.dll" />
+    <Content Include="Devices\Storage.TSM\ThirdDLL\x86\adsmv3.dll" />
+    <Content Include="Devices\Storage.TSM\ThirdDLL\x86\dscenu.txt" />
+    <Content Include="Devices\Storage.TSM\ThirdDLL\x86\dsmntapi.dll" />
+    <Content Include="Devices\Storage.TSM\ThirdDLL\x86\fcmenu.txt" />
+    <Content Include="Devices\Storage.TSM\ThirdDLL\x86\tsmapi.dll" />
+    <Content Include="Devices\Storage.TSM\ThirdDLL\x86\tsmutil1.dll" />
+    <Content Include="Resources\AmazonI18N\ResourceFileMapping.xml" />
+    <Content Include="Resources\AtmosI18N\ResourceFileMapping.xml" />
+    <Content Include="Resources\AzureI18N\ResourceFileMapping.xml" />
+    <Content Include="Resources\BoxI18N\ResourceFileMapping.xml" />
+    <Content Include="Resources\CAStorI18N\ResourceFileMapping.xml" />
+    <Content Include="Resources\CenteraI18N\ResourceFileMapping.xml" />
+    <Content Include="Resources\CleversafeI18N\ResourceFileMapping.xml" />
+    <Content Include="Resources\CloudCommonI18N\ResourceFileMapping.xml" />
+    <Content Include="Resources\DropboxI18N\ResourceFileMapping.xml" />
+    <Content Include="Resources\EgnyteI18N\ResourceFileMapping.xml" />
+    <Content Include="Resources\FSI18N\ResourceFileMapping.xml" />
+    <Content Include="Resources\FTPI18N\ResourceFileMapping.xml" />
+    <Content Include="Resources\GoogleDriveI18N\ResourceFileMapping.xml" />
+    <Content Include="Resources\HCPI18N\ResourceFileMapping.xml" />
+    <Content Include="Resources\MirrorFSI18N\ResourceFileMapping.xml" />
+    <Content Include="Resources\OpenStackI18N\ResourceFileMapping.xml" />
+    <Content Include="Resources\RackspaceI18N\ResourceFileMapping.xml" />
+    <Content Include="Resources\S3CompatibleI18N\ResourceFileMapping.xml" />
+    <Content Include="Resources\SFTPI18N\ResourceFileMapping.xml" />
+    <Content Include="Resources\SkyDriveI18N\ResourceFileMapping.xml" />
+    <Content Include="Resources\StorageI18N\ResourceFileMapping.xml" />
+    <Content Include="Resources\TSMI18N\ResourceFileMapping.xml">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Devices\Storage.Cloud.Common\Response\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\AmazonI18N\AmazonI18N.de-DE.resx" />
+    <EmbeddedResource Include="Resources\AmazonI18N\AmazonI18N.en-US.resx" />
+    <EmbeddedResource Include="Resources\AmazonI18N\AmazonI18N.fr-FR.resx" />
+    <EmbeddedResource Include="Resources\AmazonI18N\AmazonI18N.ja-JP.resx" />
+    <EmbeddedResource Include="Resources\AmazonI18N\AmazonI18N.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>AmazonI18N.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\AmazonI18N\AmazonI18N.zh-CN.resx" />
+    <EmbeddedResource Include="Resources\AtmosI18N\AtmosI18N.de-DE.resx" />
+    <EmbeddedResource Include="Resources\AtmosI18N\AtmosI18N.en-US.resx" />
+    <EmbeddedResource Include="Resources\AtmosI18N\AtmosI18N.fr-FR.resx" />
+    <EmbeddedResource Include="Resources\AtmosI18N\AtmosI18N.ja-JP.resx" />
+    <EmbeddedResource Include="Resources\AtmosI18N\AtmosI18N.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>AtmosI18N.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\AtmosI18N\AtmosI18N.zh-CN.resx" />
+    <EmbeddedResource Include="Resources\AzureI18N\AzureI18N.de-DE.resx" />
+    <EmbeddedResource Include="Resources\AzureI18N\AzureI18N.en-US.resx" />
+    <EmbeddedResource Include="Resources\AzureI18N\AzureI18N.fr-FR.resx" />
+    <EmbeddedResource Include="Resources\AzureI18N\AzureI18N.ja-JP.resx" />
+    <EmbeddedResource Include="Resources\AzureI18N\AzureI18N.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>AzureI18N.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\AzureI18N\AzureI18N.zh-CN.resx" />
+    <EmbeddedResource Include="Resources\BoxI18N\BoxI18N.de-DE.resx" />
+    <EmbeddedResource Include="Resources\BoxI18N\BoxI18N.en-US.resx" />
+    <EmbeddedResource Include="Resources\BoxI18N\BoxI18N.fr-FR.resx" />
+    <EmbeddedResource Include="Resources\BoxI18N\BoxI18N.ja-JP.resx" />
+    <EmbeddedResource Include="Resources\BoxI18N\BoxI18N.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>BoxI18N.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\BoxI18N\BoxI18N.zh-CN.resx" />
+    <EmbeddedResource Include="Resources\CAStorI18N\CAStorI18N.de-DE.resx" />
+    <EmbeddedResource Include="Resources\CAStorI18N\CAStorI18N.en-US.resx" />
+    <EmbeddedResource Include="Resources\CAStorI18N\CAStorI18N.ja-JP.resx" />
+    <EmbeddedResource Include="Resources\CAStorI18N\CAStorI18N.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>CAStorI18N.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\CAStorI18N\CAStorI18N.zh-CN.resx" />
+    <EmbeddedResource Include="Resources\CenteraI18N\CenteraI18N.de-DE.resx" />
+    <EmbeddedResource Include="Resources\CenteraI18N\CenteraI18N.en-US.resx" />
+    <EmbeddedResource Include="Resources\CenteraI18N\CenteraI18N.ja-JP.resx" />
+    <EmbeddedResource Include="Resources\CenteraI18N\CenteraI18N.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>CenteraI18N.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\CenteraI18N\CenteraI18N.zh-CN.resx" />
+    <EmbeddedResource Include="Resources\CleversafeI18N\Cleversafe.ja-JP.resx" />
+    <EmbeddedResource Include="Resources\CleversafeI18N\CleversafeI18N.de-DE.resx" />
+    <EmbeddedResource Include="Resources\CleversafeI18N\CleversafeI18N.en-US.resx" />
+    <EmbeddedResource Include="Resources\CleversafeI18N\CleversafeI18N.fr-FR.resx" />
+    <EmbeddedResource Include="Resources\CleversafeI18N\CleversafeI18N.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>CleversafeI18N.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\CleversafeI18N\CleversafeI18N.zh-CN.resx" />
+    <EmbeddedResource Include="Resources\CloudCommonI18N\CloudCommonI18N.de-DE.resx" />
+    <EmbeddedResource Include="Resources\CloudCommonI18N\CloudCommonI18N.en-US.resx" />
+    <EmbeddedResource Include="Resources\CloudCommonI18N\CloudCommonI18N.fr-FR.resx" />
+    <EmbeddedResource Include="Resources\CloudCommonI18N\CloudCommonI18N.ja-JP.resx" />
+    <EmbeddedResource Include="Resources\CloudCommonI18N\CloudCommonI18N.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>CloudCommonI18N.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\CloudCommonI18N\CloudCommonI18N.zh-CN.resx" />
+    <EmbeddedResource Include="Resources\DropboxI18N\DropboxI18N.de-DE.resx" />
+    <EmbeddedResource Include="Resources\DropboxI18N\DropboxI18N.en-US.resx" />
+    <EmbeddedResource Include="Resources\DropboxI18N\DropboxI18N.fr-FR.resx" />
+    <EmbeddedResource Include="Resources\DropboxI18N\DropboxI18N.ja-JP.resx" />
+    <EmbeddedResource Include="Resources\DropboxI18N\DropboxI18N.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>DropboxI18N.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\DropboxI18N\DropboxI18N.zh-CN.resx" />
+    <EmbeddedResource Include="Resources\EgnyteI18N\EgnyteI18N.de-DE.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>EgnyteI18N.de-DE.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\EgnyteI18N\EgnyteI18N.en-US.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>EgnyteI18N.en-US.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\EgnyteI18N\EgnyteI18N.fr-FR.resx" />
+    <EmbeddedResource Include="Resources\EgnyteI18N\EgnyteI18N.ja-JP.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>EgnyteI18N.ja-JP.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\EgnyteI18N\EgnyteI18N.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>EgnyteI18N.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\EgnyteI18N\EgnyteI18N.zh-CN.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>EgnyteI18N.zh-CN.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\FSI18N\FSI18N.de-DE.resx" />
+    <EmbeddedResource Include="Resources\FSI18N\FSI18N.en-US.resx" />
+    <EmbeddedResource Include="Resources\FSI18N\FSI18N.fr-FR.resx" />
+    <EmbeddedResource Include="Resources\FSI18N\FSI18N.ja-JP.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\FSI18N\FSI18N.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>FSI18N.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\FSI18N\FSI18N.zh-CN.resx" />
+    <EmbeddedResource Include="Resources\FTPI18N\FTPI18N.de-DE.resx" />
+    <EmbeddedResource Include="Resources\FTPI18N\FTPI18N.en-US.resx" />
+    <EmbeddedResource Include="Resources\FTPI18N\FTPI18N.fr-FR.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>FTPI18N.fr-FR.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\FTPI18N\FTPI18N.ja-JP.resx" />
+    <EmbeddedResource Include="Resources\FTPI18N\FTPI18N.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>FTPI18N.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\FTPI18N\FTPI18N.zh-CN.resx" />
+    <EmbeddedResource Include="Resources\GoogleDriveI18N\GoogleDriveI18N.de-DE.resx" />
+    <EmbeddedResource Include="Resources\GoogleDriveI18N\GoogleDriveI18N.en-US.resx" />
+    <EmbeddedResource Include="Resources\GoogleDriveI18N\GoogleDriveI18N.ja-JP.resx" />
+    <EmbeddedResource Include="Resources\GoogleDriveI18N\GoogleDriveI18N.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>GoogleDriveI18N.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\GoogleDriveI18N\GoogleDriveI18N.zh-CN.resx" />
+    <EmbeddedResource Include="Resources\HCPI18N\HCPI18N.de-DE.resx" />
+    <EmbeddedResource Include="Resources\HCPI18N\HCPI18N.en-US.resx" />
+    <EmbeddedResource Include="Resources\HCPI18N\HCPI18N.fr-FR.resx" />
+    <EmbeddedResource Include="Resources\HCPI18N\HCPI18N.ja-JP.resx" />
+    <EmbeddedResource Include="Resources\HCPI18N\HCPI18N.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>HCPI18N.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\HCPI18N\HCPI18N.zh-CN.resx" />
+    <EmbeddedResource Include="Resources\MirrorFSI18N\MirrorFSI18N.de-DE.resx" />
+    <EmbeddedResource Include="Resources\MirrorFSI18N\MirrorFSI18N.en-US.resx" />
+    <EmbeddedResource Include="Resources\MirrorFSI18N\MirrorFSI18N.ja-JP.resx" />
+    <EmbeddedResource Include="Resources\MirrorFSI18N\MirrorFSI18N.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>MirrorFSI18N.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\MirrorFSI18N\MirrorFSI18N.zh-CN.resx" />
+    <EmbeddedResource Include="Resources\OpenStackI18N\OpenStackI18N.de-DE.resx" />
+    <EmbeddedResource Include="Resources\OpenStackI18N\OpenStackI18N.en-US.resx" />
+    <EmbeddedResource Include="Resources\OpenStackI18N\OpenStackI18N.fr-FR.resx" />
+    <EmbeddedResource Include="Resources\OpenStackI18N\OpenStackI18N.ja-JP.resx" />
+    <EmbeddedResource Include="Resources\OpenStackI18N\OpenStackI18N.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>OpenStackI18N.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\OpenStackI18N\OpenStackI18N.zh-CN.resx" />
+    <EmbeddedResource Include="Resources\RackspaceI18N\RackspaceI18N.de-DE.resx" />
+    <EmbeddedResource Include="Resources\RackspaceI18N\RackspaceI18N.en-US.resx" />
+    <EmbeddedResource Include="Resources\RackspaceI18N\RackspaceI18N.fr-FR.resx" />
+    <EmbeddedResource Include="Resources\RackspaceI18N\RackspaceI18N.ja-JP.resx" />
+    <EmbeddedResource Include="Resources\RackspaceI18N\RackspaceI18N.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>RackspaceI18N.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\RackspaceI18N\RackspaceI18N.zh-CN.resx" />
+    <EmbeddedResource Include="Resources\S3CompatibleI18N\S3CompatibleI18N.de-DE.resx" />
+    <EmbeddedResource Include="Resources\S3CompatibleI18N\S3CompatibleI18N.en-US.resx" />
+    <EmbeddedResource Include="Resources\S3CompatibleI18N\S3CompatibleI18N.fr-FR.resx" />
+    <EmbeddedResource Include="Resources\S3CompatibleI18N\S3CompatibleI18N.ja-JP.resx" />
+    <EmbeddedResource Include="Resources\S3CompatibleI18N\S3CompatibleI18N.zh-CN.resx" />
+    <EmbeddedResource Include="Resources\S3CompatibleI18N\S3CompatibleI18N.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>S3CompatibleI18N.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\SFTPI18N\SFTPI18N.de-DE.resx" />
+    <EmbeddedResource Include="Resources\SFTPI18N\SFTPI18N.en-US.resx" />
+    <EmbeddedResource Include="Resources\SFTPI18N\SFTPI18N.fr-FR.resx" />
+    <EmbeddedResource Include="Resources\SFTPI18N\SFTPI18N.ja-JP.resx" />
+    <EmbeddedResource Include="Resources\SFTPI18N\SFTPI18N.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>SFTPI18N.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\SFTPI18N\SFTPI18N.zh-CN.resx" />
+    <EmbeddedResource Include="Resources\SkyDriveI18N\RSkyDriveI18N.zh-CN.resx" />
+    <EmbeddedResource Include="Resources\SkyDriveI18N\SkyDriveI18N.de-DE.resx" />
+    <EmbeddedResource Include="Resources\SkyDriveI18N\SkyDriveI18N.en-US.resx" />
+    <EmbeddedResource Include="Resources\SkyDriveI18N\SkyDriveI18N.ja-JP.resx" />
+    <EmbeddedResource Include="Resources\SkyDriveI18N\SkyDriveI18N.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>SkyDriveI18N.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\StorageI18N\I18N.de-DE.resx" />
+    <EmbeddedResource Include="Resources\StorageI18N\I18N.en-US.resx" />
+    <EmbeddedResource Include="Resources\StorageI18N\I18N.ja-JP.resx" />
+    <EmbeddedResource Include="Resources\StorageI18N\I18N.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>I18N.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\StorageI18N\I18N.zh-CN.resx" />
+    <EmbeddedResource Include="Resources\TSMI18N\TSMI18N.de-DE.resx" />
+    <EmbeddedResource Include="Resources\TSMI18N\TSMI18N.en-US.resx" />
+    <EmbeddedResource Include="Resources\TSMI18N\TSMI18N.ja-JP.resx" />
+    <EmbeddedResource Include="Resources\TSMI18N\TSMI18N.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>TSMI18N.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\TSMI18N\TSMI18N.zh-CN.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <Target Name="CopyStorageAPIDlls">
+  </Target>
+  <Import Project="..\..\..\Packages\System.ValueTuple.4.6.2\build\net471\System.ValueTuple.targets" Condition="Exists('..\..\..\Packages\System.ValueTuple.4.6.2\build\net471\System.ValueTuple.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\..\..\Packages\System.ValueTuple.4.6.2\build\net471\System.ValueTuple.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\..\Packages\System.ValueTuple.4.6.2\build\net471\System.ValueTuple.targets'))" />
+  </Target>
+</Project>

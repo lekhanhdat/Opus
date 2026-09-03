@@ -1,0 +1,487 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7151E862-A761-4A90-ACE6-37D7442047A6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AvePoint.GCommon.Utility</RootNamespace>
+    <AssemblyName>CommonUtility</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\bin\Agent\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;CODE_ANALYSIS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <CodeAnalysisRuleSet>..\..\..\server\Shared\AvePointRuleSets.ruleset</CodeAnalysisRuleSet>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <CodeAnalysisIgnoreGeneratedCode>false</CodeAnalysisIgnoreGeneratedCode>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\bin\Agent\Release\</OutputPath>
+    <DefineConstants>TRACE;CODE_ANALYSIS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <CodeAnalysisRuleSet>..\..\..\..\docave6\server\Shared\AvePointRuleSets.ruleset</CodeAnalysisRuleSet>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>DocAveStandard.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'ReleaseWithoutUnitTest|AnyCPU'">
+    <OutputPath>..\..\..\bin\Release\</OutputPath>
+    <DefineConstants>TRACE;CODE_ANALYSIS</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Optimize>true</Optimize>
+    <DebugType>none</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>..\..\..\..\docave6\server\Shared\AvePointRuleSets.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DocumentationFile>..\..\..\bin\Debug\CommonUtility.xml</DocumentationFile>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreGeneratedCode>false</CodeAnalysisIgnoreGeneratedCode>
+    <CodeAnalysisRuleSet>..\..\..\server\Shared\AvePointRuleSets.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE;CODE_ANALYSIS</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Optimize>true</Optimize>
+    <DebugType>none</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>..\..\..\..\docave6\server\Shared\AvePointRuleSets.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'ReleaseWithoutUnitTest|x64'">
+    <OutputPath>..\..\..\bin\Release\</OutputPath>
+    <DefineConstants>TRACE;CODE_ANALYSIS</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Optimize>true</Optimize>
+    <DebugType>none</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>..\..\..\..\docave6\server\Shared\AvePointRuleSets.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net, Version=3.3.1.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Packages\log4net.3.3.1\lib\net462\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="ScspCS, Version=1.0.0.0, Culture=neutral, PublicKeyToken=fffb45e56dd478e3, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Packages\ScspCS.1.0.0\lib\ScspCS.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.DirectoryServices.AccountManagement" />
+    <Reference Include="System.IdentityModel" />
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.IO.Compression.ZipFile, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Packages\System.IO.Compression.ZipFile.4.3.0\lib\net46\System.IO.Compression.ZipFile.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Management" />
+    <Reference Include="System.Management.Automation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ThirdDlls\System.Management.Automation.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="zlib.net, Version=1.0.3.0, Culture=neutral, PublicKeyToken=47d7877cb3620160">
+      <HintPath>..\..\..\Packages\zlib.net.1.0.4.0\lib\zlib.net.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccountProfile\AccountProfileHelper.cs" />
+    <Compile Include="Agent\AveAgentType.cs" />
+    <Compile Include="Agent\AveAgentUtil.cs" />
+    <Compile Include="AppProfile\Office365AppProfileUtil.cs" />
+    <Compile Include="AveCircularTraceListener.cs" />
+    <Compile Include="AveCustomerInfoHelper.cs" />
+    <Compile Include="AveLicense\SetupFileUtil.cs" />
+    <Compile Include="AveLicense\SetupConfig.cs" />
+    <Compile Include="AveLogger\AveLoggerImpInternal\AveLoggerAbstractImp.cs" />
+    <Compile Include="AveLogger\AveLoggerImpInternal\AveLoggerRawFileImp.cs" />
+    <Compile Include="AveLogger\AveLoggerImpInternal\AveLoggerULS2010Imp.cs" />
+    <Compile Include="AveLogger\AvePerformanceLogging.cs" />
+    <Compile Include="AveLogger\Log4netAppenders\AveHighLevelEventLogAppender.cs" />
+    <Compile Include="AveLogger\Log4netAppenders\AveHighLevelFileLogAppender.cs" />
+    <Compile Include="AveLogger\Log4netAppenders\AvePatternLayout.cs" />
+    <Compile Include="AveLogger\Log4netAppenders\AveSeparativeLogAppender.cs" />
+    <Compile Include="AveLogger\StringExtensions.cs" />
+    <Compile Include="BufferedMemoryOutputStream.cs" />
+    <Compile Include="Certificate\CertificateUtil.cs" />
+    <Compile Include="Certificate\SelfSignedCertificate.cs" />
+    <Compile Include="ConditionChecker.cs" />
+    <Compile Include="Config\AppConfigWarpper.cs" />
+    <Compile Include="Config\DocAveConfigurationSectionDesigner.csd.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DocAveConfigurationSectionDesigner.csd</DependentUpon>
+    </Compile>
+    <Compile Include="Config\DocAveCongiguration.cs" />
+    <Compile Include="Cryptography\AsymmetricEncryptionFactory.cs" />
+    <Compile Include="Cryptography\AsymmetricEncryption\RSAEncryption.cs" />
+    <Compile Include="Cryptography\AveProtectedData.cs" />
+    <Compile Include="Cryptography\ConfigurationProtectionUtil.cs" />
+    <Compile Include="Cryptography\CspCommunicationWrapper.cs" />
+    <Compile Include="Cryptography\CryptographyManagement.cs" />
+    <Compile Include="Cryptography\CryptoModuleStateMachine.cs" />
+    <Compile Include="Cryptography\CryptoStatus.cs" />
+    <Compile Include="Cryptography\CryptoUtil.cs" />
+    <Compile Include="Cryptography\CspCrossPlatformExchangeWrapper.cs" />
+    <Compile Include="Cryptography\DatabaseEncryptionHelper.cs" />
+    <Compile Include="Cryptography\DataEncryptionManagement\DataEncryptionInfoManager.cs" />
+    <Compile Include="Cryptography\DataEncryptionManagement\DataEncryptionUtil.cs" />
+    <Compile Include="Cryptography\DataEncryptionManagement\IDynamicKeyDecrypter.cs" />
+    <Compile Include="Cryptography\EncryptionFactory.cs" />
+    <Compile Include="Cryptography\Encryption\AESEncryption.cs" />
+    <Compile Include="Cryptography\Encryption\BlowfishEncryption.cs" />
+    <Compile Include="Cryptography\Encryption\CryptoWithIVStream.cs" />
+    <Compile Include="Cryptography\Encryption\DESEncryption.cs" />
+    <Compile Include="Cryptography\Encryption\AbstractEncryption.cs" />
+    <Compile Include="Cryptography\Encryption\Blowfish\BlowfishAlgorithm.cs" />
+    <Compile Include="Cryptography\FipsModeUtil.cs" />
+    <Compile Include="Cryptography\HashAlgorithmFactory.cs" />
+    <Compile Include="Cryptography\Hash\AveHMACSHA256Provider.cs" />
+    <Compile Include="Cryptography\Hash\AveMd5.cs" />
+    <Compile Include="Cryptography\Hash\AveMD5Provider.cs" />
+    <Compile Include="Cryptography\Hash\AveSha1.cs" />
+    <Compile Include="Cryptography\Hash\AveSha256.cs" />
+    <Compile Include="Cryptography\Hash\AveSha384.cs" />
+    <Compile Include="Cryptography\Hash\AveSha512.cs" />
+    <Compile Include="Cryptography\Hash\HmacSha1.cs" />
+    <Compile Include="Cryptography\Hash\HmacSHA256.cs" />
+    <Compile Include="Cryptography\IAsymmetricEncryption.cs" />
+    <Compile Include="Cryptography\ICryptography.cs" />
+    <Compile Include="Cryptography\IEncryption.cs" />
+    <Compile Include="Cryptography\IHashAlgorithm.cs" />
+    <Compile Include="Cryptography\IKeyGenerate.cs" />
+    <Compile Include="Cryptography\IUserCredentialIdentify.cs" />
+    <Compile Include="Cryptography\KeyGenerateProviderFactory.cs" />
+    <Compile Include="Cryptography\KeyGenerate\AveKeyGenerateProvider.cs" />
+    <Compile Include="Cryptography\MemoryCleaner.cs" />
+    <Compile Include="Cryptography\ProductInfoUtil.cs" />
+    <Compile Include="Cryptography\SecurityModeUtil.cs" />
+    <Compile Include="DateTime\AveDateTimeUtility.cs" />
+    <Compile Include="DateTime\Rfc822DateTime.cs" />
+    <Compile Include="DeployIDUtility.cs" />
+    <Compile Include="DistinctUtil.cs" />
+    <Compile Include="EmRumtime\EmRuntime.cs" />
+    <Compile Include="Enum\EnumParser.cs" />
+    <Compile Include="EventHandler\EventHandlerConverter.cs" />
+    <Compile Include="EventHandler\EventRegister.cs" />
+    <Compile Include="EventHandler\IEventHandlerConverter.cs" />
+    <Compile Include="EventLog\EventLogManager.cs" />
+    <Compile Include="Exceptions\Authentication.cs" />
+    <Compile Include="Exceptions\AveException.cs" />
+    <Compile Include="Exceptions\Communication.cs" />
+    <Compile Include="Exceptions\Configuration.cs" />
+    <Compile Include="Exceptions\Database.cs" />
+    <Compile Include="Exceptions\Job.cs" />
+    <Compile Include="Exceptions\License.cs" />
+    <Compile Include="Exceptions\Process.cs" />
+    <Compile Include="Exceptions\Service.cs" />
+    <Compile Include="Exceptions\SharePoint.cs" />
+    <Compile Include="Exceptions\Snapshot.cs" />
+    <Compile Include="Exceptions\Storage.cs" />
+    <Compile Include="Exceptions\Util.cs" />
+    <Compile Include="FileArchiverManager.cs" />
+    <Compile Include="FileOperationUtil.cs" />
+    <Compile Include="FolderAttributeUtil.cs" />
+    <Compile Include="FrameworkVersionDetection.cs" />
+    <Compile Include="Http\HttpApi.cs" />
+    <Compile Include="Http\HttpConfiguration.cs" />
+    <Compile Include="I18N\ContextKeys.cs" />
+    <Compile Include="I18N\ContextValues.cs" />
+    <Compile Include="I18N\EventCategorys.cs" />
+    <Compile Include="I18N\EventSources.cs" />
+    <Compile Include="IISRecycleManager.cs" />
+    <Compile Include="InstallationUtility.cs" />
+    <Compile Include="IocContainer\IIocContainerManager.cs" />
+    <Compile Include="IocContainer\IStartable.cs" />
+    <Compile Include="LicenseFilter.cs" />
+    <Compile Include="LogFileStream.cs" />
+    <Compile Include="MIME\IMimeCompatibleFormatGenerator.cs" />
+    <Compile Include="MIME\MimeCompatibleFormatGenerator.cs" />
+    <Compile Include="OperatingSystem\IOperatingSystem.cs" />
+    <Compile Include="OperatingSystem\IProfilerChecker.cs" />
+    <Compile Include="OperatingSystem\OperatingSystemInfo.cs" />
+    <Compile Include="OperatingSystem\ProcessEventArgs.cs" />
+    <Compile Include="OperatingSystem\ProcessAction.cs" />
+    <Compile Include="OperatingSystem\ProfilerChecker.cs" />
+    <Compile Include="OperatingSystem\Windows\Win32\WindowsOperatingSystem.cs" />
+    <Compile Include="OperatingSystem\Windows\WindowsOperatingSystemBase.cs" />
+    <Compile Include="OperatingSystem\Windows\WindowsOSHelper.cs" />
+    <Compile Include="OperatingSystem\Windows\Wmi\WindowsOperatingSystem.cs" />
+    <Compile Include="PerformanceMonitor\NetWorkAdapter.cs" />
+    <Compile Include="PerformanceMonitor\NetWorkDetail.cs" />
+    <Compile Include="PerformanceScope.cs" />
+    <Compile Include="PerformanceScope\MetricLoggerPerformanceSink.cs" />
+    <Compile Include="PerformanceScope\CpuUsageCount.cs" />
+    <Compile Include="PerformanceScope\CpuUsageProviderFactory.cs" />
+    <Compile Include="PerformanceScope\ICpuUsageProvider.cs" />
+    <Compile Include="PerformanceScope\CommonPlatformProcessCpuUsageProvider.cs" />
+    <Compile Include="PerformanceScope\JobMetrics.cs" />
+    <Compile Include="PerformanceScope\PerformanceMetric.cs" />
+    <Compile Include="PerformanceScope\PerformanceTelemetryContext.cs" />
+    <Compile Include="PerformanceScope\PerformanceTelemetryOptions.cs" />
+    <Compile Include="PerformanceScope\ScopeFrame.cs" />
+    <Compile Include="PerformanceScope\WindowsCpuUsageProvider.cs" />
+    <Compile Include="Powershell\CustomizedPowerShell.cs" />
+    <Compile Include="ReliabilityProgramming\TraceSourceGarbageCollector.cs" />
+    <Compile Include="Replicator\ItemCommentUtil.cs" />
+    <Compile Include="Security\AccessControl\AccessControlEntry.cs" />
+    <Compile Include="Security\AccessControl\AccessControlList.cs" />
+    <Compile Include="Security\AccessControl\SecurityDescriptor.cs" />
+    <Compile Include="Security\AccessControl\SecurityIdentity.cs" />
+    <Compile Include="Security\AccessControl\Util.cs" />
+    <Compile Include="Security\AveAppPoolExecuter.cs" />
+    <Compile Include="Converter\AveConverter.cs" />
+    <Compile Include="CRC\AveCRC32.cs" />
+    <Compile Include="Security\AveCredentialManager .cs" />
+    <Compile Include="Converter\AveErrorCodeConverter.cs" />
+    <Compile Include="AveFileSystemUtil.cs" />
+    <Compile Include="GAC\AveGACUtil.cs" />
+    <Compile Include="Security\AveImpersonator.cs" />
+    <Compile Include="AveLoadBalanceInfoUtility.cs" />
+    <Compile Include="AveLogger\AveLoggerImpInternal\IAveLoggerImp.cs" />
+    <Compile Include="AveLogger\AveLogger.cs" />
+    <Compile Include="AveLogger\AveLoggerImpInternal\AveLoggerLog4netImp.cs" />
+    <Compile Include="AveLogger\AveLogLevel.cs" />
+    <Compile Include="AveLogger\IAveLogger.cs" />
+    <Compile Include="Network\AveNetworkInterfaceInformation.cs" />
+    <Compile Include="AveVersionAttribute.cs" />
+    <Compile Include="Exceptions\MethodMayLeadToStackOverflowException.cs" />
+    <Compile Include="Hash\HashCodeHelper.cs" />
+    <Compile Include="Security\AveInputValidationHelper.cs" />
+    <Compile Include="ServiceVersion\ServiceHelper.cs" />
+    <Compile Include="ServiceVersion\ServiceVersionHelper.cs" />
+    <Compile Include="SPVersionDetection.cs" />
+    <Compile Include="SslStreamSecurity\XAsyncResult.cs" />
+    <Compile Include="SslStreamSecurity\XDiagnosticUtility.cs" />
+    <Compile Include="SslStreamSecurity\XExceptionUtility.cs" />
+    <Compile Include="SslStreamSecurity\XSecurityUtils.cs" />
+    <Compile Include="SslStreamSecurity\XServiceModelActivity.cs" />
+    <Compile Include="SslStreamSecurity\XSR.cs" />
+    <Compile Include="SslStreamSecurity\XSslProtocols.cs" />
+    <Compile Include="SslStreamSecurity\XSslStreamSecurity.cs" />
+    <Compile Include="SslStreamSecurity\XSslStreamSecurityBindingElement.cs" />
+    <Compile Include="SslStreamSecurity\XSslStreamSecurityElement.cs" />
+    <Compile Include="SslStreamSecurity\XSslStreamSecurityUpgradeAcceptor.cs" />
+    <Compile Include="SslStreamSecurity\XSslStreamSecurityUpgradeInitiator.cs" />
+    <Compile Include="SslStreamSecurity\XSslStreamSecurityUpgradeProvider.cs" />
+    <Compile Include="SslStreamSecurity\XStreamSecurityUpgradeAcceptorAsyncResult.cs" />
+    <Compile Include="SslStreamSecurity\XStreamSecurityUpgradeInitiatorAsyncResult.cs" />
+    <Compile Include="SslStreamSecurity\XTest.cs" />
+    <Compile Include="SslStreamSecurity\XThumbprintUtility.cs" />
+    <Compile Include="SslStreamSecurity\XTimeoutHelper.cs" />
+    <Compile Include="SslStreamSecurity\XTraceAsyncResult.cs" />
+    <Compile Include="SslStreamSecurity\XTraceUtility.cs" />
+    <Compile Include="SslStreamSecurity\XUtility.cs" />
+    <Compile Include="SslStreamSecurity\XX509ClientCertificateAuthentication.cs" />
+    <Compile Include="StructureUtil.cs" />
+    <Compile Include="Synchronization\LockRecursionException.cs" />
+    <Compile Include="Synchronization\SR.cs" />
+    <Compile Include="Synchronization\LockRecursionPolicy.cs" />
+    <Compile Include="Synchronization\AveMutex.cs" />
+    <Compile Include="Network\AveNetworkingUtil.cs" />
+    <Compile Include="PerformanceCounter\AvePerformanceCounter.cs" />
+    <Compile Include="PerformanceCounter\AvePerformanceTimer.cs" />
+    <Compile Include="AveRollingTraceListener.cs" />
+    <Compile Include="Security\LsaUtility.cs" />
+    <Compile Include="Synchronization\ReaderWriterLockSlim.cs" />
+    <Compile Include="Synchronization\RecursiveCounts.cs" />
+    <Compile Include="Synchronization\ReaderWriterCount.cs" />
+    <Compile Include="Threads\AveThreadPoolItemBase.cs" />
+    <Compile Include="Threads\AveThreadPoolRunner.cs" />
+    <Compile Include="Threads\AveThreadUtility.cs" />
+    <Compile Include="VSS\iSCSIUtility.cs" />
+    <Compile Include="WCF\CustomizeMessageInspector.cs" />
+    <Compile Include="WCF\MessageInspectorBehaviorExtensionElement.cs" />
+    <Compile Include="WCF\MessageInspectorServiceBehavior.cs" />
+    <Compile Include="WCF\LogContractOperationPerformanceAttribute.cs" />
+    <Compile Include="Encoding\EncodingStringWriter.cs" />
+    <Compile Include="Threads\AveThreadWrapper.cs" />
+    <Compile Include="Database\DbHelper.cs" />
+    <Compile Include="Security\DirectorySearcherFactory.cs" />
+    <Compile Include="Reflection\Invoker.cs" />
+    <Compile Include="Singleton\ISingleton.cs" />
+    <Compile Include="Singleton\ISingletonProcess.cs" />
+    <Compile Include="Serializer\MediaTCPRequestSerializerHelper.cs" />
+    <Compile Include="MIME\MIMETypeHelper.cs" />
+    <Compile Include="OperatingSystem\OSInformation.cs" />
+    <Compile Include="PerformanceMonitor\NetworkInfo.cs" />
+    <Compile Include="PerformanceMonitor\NetworkMonitorInfo.cs" />
+    <Compile Include="PerformanceMonitor\ProcessInfo.cs" />
+    <Compile Include="PerformanceMonitor\PerformanceMonitorService.cs" />
+    <Compile Include="PerformanceMonitor\ProcessController.cs" />
+    <Compile Include="PerformanceMonitor\Win32_ComputerSystem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PerformanceMonitor\Win32_DiskDrive.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PerformanceMonitor\Win32_NetworkAdapter.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PerformanceMonitor\Win32_OperatingSystem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PerformanceMonitor\Win32_PerfFormattedData_PerfProc_Process.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PerformanceMonitor\Win32_PerfFormattedData_Tcpip_NetworkInterface.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PerformanceMonitor\Win32_PerfRawData_PerfProc_Process.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PerformanceMonitor\Win32_PhysicalMemory.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PerformanceMonitor\Win32_Process.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PerformanceMonitor\Win32_Processor.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reflection\ReflectHelper.cs" />
+    <Compile Include="Registry\Registry64.cs" />
+    <Compile Include="Registry\RegistryManager.cs" />
+    <Compile Include="ReliabilityProgramming\StackOverflowReliability.cs" />
+    <Compile Include="Singleton\Singleton.cs" />
+    <Compile Include="Singleton\SingletonProcess.cs" />
+    <Compile Include="OperatingSystem\StartProcess.cs" />
+    <Compile Include="Validator.cs" />
+    <Compile Include="NativeMethods\Win32Native.cs" />
+    <Compile Include="Certificate\CertificateValidator.cs" />
+    <Compile Include="I18N\EventIDs.cs" />
+    <Compile Include="FilteringBox\CompressionMethods.cs" />
+    <Compile Include="FilteringBox\DataFilteringBoxFactory.cs" />
+    <Compile Include="FilteringBox\EncryptionFilteringBox.cs" />
+    <Compile Include="FilteringBox\FilteringStream\CompressedInputStream.cs" />
+    <Compile Include="FilteringBox\FilteringStream\CompressedOutputStream.cs" />
+    <Compile Include="FilteringBox\FilteringStream\EncryptedInputStream.cs" />
+    <Compile Include="FilteringBox\FilteringStream\EncryptedOutputStream.cs" />
+    <Compile Include="FilteringBox\FilteringStream\FilterInputStream.cs" />
+    <Compile Include="FilteringBox\FilteringStream\FilterOutputStream.cs" />
+    <Compile Include="FilteringBox\FilteringStream\FilterStreamTestCase.cs" />
+    <Compile Include="FilteringBox\IDataFilteringBox.cs" />
+    <Compile Include="FilteringBox\MemoryPipeStream.cs" />
+    <Compile Include="FilteringBox\ZlibCompressionFilteringBox.cs" />
+    <Compile Include="FilteringBox\MixedFilteringBox.cs" />
+    <Compile Include="GConstants.cs" />
+    <Compile Include="I18N\I18NUtility.cs" />
+    <Compile Include="Security\IAccountManager.cs" />
+    <Compile Include="Security\LDAPLookup.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Serializer\SerializerHelper.cs" />
+    <Compile Include="Synchronization\SyncQueue.cs" />
+    <Compile Include="WCF\WCFSharedConfiguration.cs" />
+    <Compile Include="WindowsService\ServiceUtilities.cs" />
+    <Compile Include="ZipUtil.cs" />
+    <Compile Include="ZlibUtil.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ThirdDlls\log4net.dll" />
+    <Content Include="ThirdDlls\Microsoft.Data.SqlRemoteBlobs.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\RACommon.Global\RACommon.Global.csproj">
+      <Project>{C463F6EB-0F6F-465E-9275-EA24B404ED95}</Project>
+      <Name>RACommon.Global</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GCommonContract\DocAve.GCommonContract.csproj">
+      <Project>{361F3C7C-ABBF-42D5-975A-65E4E9866068}</Project>
+      <Name>DocAve.GCommonContract</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GI18NResources\GI18NResources.csproj">
+      <Project>{B92A472D-4F48-40C8-8910-AD9F35FDDAFA}</Project>
+      <Name>GI18NResources</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="certificate.cer" />
+    <None Include="Config\DocAveConfigurationSectionDesigner.csd">
+      <Generator>CsdFileGenerator</Generator>
+      <LastGenOutput>DocAveConfigurationSectionDesigner.csd.cs</LastGenOutput>
+    </None>
+    <None Include="Config\DocAveConfigurationSectionDesigner.csd.config">
+      <DependentUpon>DocAveConfigurationSectionDesigner.csd</DependentUpon>
+    </None>
+    <None Include="Config\DocAveConfigurationSectionDesigner.csd.diagram">
+      <DependentUpon>DocAveConfigurationSectionDesigner.csd</DependentUpon>
+    </None>
+    <None Include="Config\DocAveConfigurationSectionDesigner.csd.xsd">
+      <DependentUpon>DocAveConfigurationSectionDesigner.csd</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DocAve.config" />
+    <None Include="DocAveStandard.snk" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="OperatingSystem\Linux\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

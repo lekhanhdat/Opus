@@ -1,0 +1,5525 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suppressions xmlns="https://jeremylong.github.io/DependencyCheck/dependency-suppression.1.3.xsd">
+  <suppress>
+    <!-- now use mvc 5.2.7-->
+    <notes>
+      <![CDATA[
+      file name: Microsoft.AspNet.Mvc:5.0.0
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:nuget/Microsoft\.AspNet\.Mvc@.*$</packageUrl>
+    <cpe>cpe:/a:microsoft:asp.net</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: Microsoft.AspNet.Mvc:5.2.7
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:nuget/Microsoft\.AspNet\.Mvc@.*$</packageUrl>
+    <cpe>cpe:/a:microsoft:asp.net</cpe>
+  </suppress>
+  <suppress>
+    <!-- mvc 1.0 publish-->
+    <notes>
+      <![CDATA[
+      file name: Microsoft.AspNet.Mvc:5.0.0
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:nuget/Microsoft\.AspNet\.Mvc@.*$</packageUrl>
+    <cve>CVE-2005-2224</cve>
+  </suppress>
+  <suppress>
+    <!-- Updated:May 07 2015 05:33PM-->
+    <notes>
+      <![CDATA[
+      file name: Microsoft.AspNet.Mvc:5.0.0
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:nuget/Microsoft\.AspNet\.Mvc@.*$</packageUrl>
+    <cpe>cpe:/a:microsoft:asp.net_mvc</cpe>
+  </suppress>
+  <suppress>
+    <!-- Vulnerable:	Microsoft ASP.NET 1.1 SP1-->
+    <notes>
+      <![CDATA[
+      file name: Microsoft.AspNet.OData.dll
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:generic/Microsoft\.AspNet\.OData@.*$</packageUrl>
+    <cpe>cpe:/a:asp-project:asp-project</cpe>
+  </suppress>
+  <suppress>
+    <!-- Updated:May 07 2015 05:33PM-->
+    <notes>
+      <![CDATA[
+      file name: Microsoft.AspNet.OData.dll
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:generic/Microsoft\.AspNet\.OData@.*$</packageUrl>
+    <cpe>cpe:/a:microsoft:asp.net</cpe>
+  </suppress>
+  <suppress>
+    <!-- Vulnerable:Microsoft ASP.NET 1.1 SP1-->
+    <notes>
+      <![CDATA[
+      file name: Microsoft.AspNet.Razor:3.0.0
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:nuget/Microsoft\.AspNet\.Razor@.*$</packageUrl>
+    <cpe>cpe:/a:microsoft:asp.net</cpe>
+  </suppress>
+  <suppress>
+    <!-- Updated:May 07 2015 05:33PM-->
+    <notes>
+      <![CDATA[
+      file name: Microsoft.AspNet.Razor:3.1.1
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:nuget/Microsoft\.AspNet\.Razor@.*$</packageUrl>
+    <cpe>cpe:/a:microsoft:asp.net</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: Microsoft.AspNet.Web.Optimization:1.1.1
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:nuget/Microsoft\.AspNet\.Web\.Optimization@.*$</packageUrl>
+    <cpe>cpe:/a:microsoft:asp.net</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: Microsoft.AspNet.WebApi.Client:5.0.0
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:nuget/Microsoft\.AspNet\.WebApi\.Client@.*$</packageUrl>
+    <cpe>cpe:/a:microsoft:asp.net</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: Microsoft.AspNet.WebApi.Client:5.2.3
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:nuget/Microsoft\.AspNet\.WebApi\.Client@.*$</packageUrl>
+    <cpe>cpe:/a:microsoft:asp.net</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: Microsoft.AspNet.WebApi.Client:5.2.7
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:nuget/Microsoft\.AspNet\.WebApi\.Client@.*$</packageUrl>
+    <cpe>cpe:/a:microsoft:asp.net</cpe>
+  </suppress>
+
+  <suppress>
+    <!-- now user 5.2.7-->
+    <notes>
+      <![CDATA[
+      file name: Microsoft.AspNet.WebApi.Core:5.0.0
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:nuget/Microsoft\.AspNet\.WebApi\.Core@.*$</packageUrl>
+    <cpe>cpe:/a:microsoft:.net_core</cpe>
+  </suppress>
+  <suppress>
+    <!-- now user 5.2.7-->
+    <notes>
+      <![CDATA[
+      file name: Microsoft.AspNet.WebApi.Core:5.0.0
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:nuget/Microsoft\.AspNet\.WebApi\.Core@.*$</packageUrl>
+    <cpe>cpe:/a:microsoft:asp.net</cpe>
+  </suppress>
+  <suppress>
+    <!-- now user 5.2.7-->
+    <notes>
+      <![CDATA[
+      file name: Microsoft.AspNet.WebApi.Core:5.0.0
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:nuget/Microsoft\.AspNet\.WebApi\.Core@.*$</packageUrl>
+    <cpe>cpe:/a:microsoft:asp.net_core</cpe>
+  </suppress>
+  <suppress>
+    <!-- now user 5.2.7-->
+    <notes>
+      <![CDATA[
+      file name: Microsoft.AspNet.WebApi.Core:5.2.3
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:nuget/Microsoft\.AspNet\.WebApi\.Core@.*$</packageUrl>
+    <cpe>cpe:/a:microsoft:.net_core</cpe>
+  </suppress>
+  <suppress>
+    <!-- now user 5.2.7-->
+    <notes>
+      <![CDATA[
+      file name: Microsoft.AspNet.WebApi.Core:5.2.3
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:nuget/Microsoft\.AspNet\.WebApi\.Core@.*$</packageUrl>
+    <cpe>cpe:/a:microsoft:asp.net</cpe>
+  </suppress>
+  <suppress>
+    <!-- now user 5.2.7-->
+    <notes>
+      <![CDATA[
+      file name: Microsoft.AspNet.WebApi.Core:5.2.3
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:nuget/Microsoft\.AspNet\.WebApi\.Core@.*$</packageUrl>
+    <cpe>cpe:/a:microsoft:asp.net_core</cpe>
+  </suppress>
+
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: Microsoft.AspNet.WebApi.Core:5.2.7
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:nuget/Microsoft\.AspNet\.WebApi\.Core@.*$</packageUrl>
+    <cpe>cpe:/a:microsoft:.net_core</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: Microsoft.AspNet.WebApi.Core:5.2.7
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:nuget/Microsoft\.AspNet\.WebApi\.Core@.*$</packageUrl>
+    <cpe>cpe:/a:microsoft:asp.net</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: Microsoft.AspNet.WebApi.Core:5.2.7
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:nuget/Microsoft\.AspNet\.WebApi\.Core@.*$</packageUrl>
+    <cpe>cpe:/a:microsoft:asp.net_core</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: Microsoft.AspNet.WebApi.WebHost:5.0.0
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:nuget/Microsoft\.AspNet\.WebApi\.WebHost@.*$</packageUrl>
+    <cpe>cpe:/a:microsoft:asp.net</cpe>
+  </suppress>
+
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: Microsoft.AspNet.WebApi:5.0.0
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:nuget/Microsoft\.AspNet\.WebApi@.*$</packageUrl>
+    <cpe>cpe:/a:microsoft:asp.net</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: Microsoft.AspNet.WebPages:3.0.0
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:nuget/Microsoft\.AspNet\.WebPages@.*$</packageUrl>
+    <cpe>cpe:/a:microsoft:asp.net</cpe>
+  </suppress>
+
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: Microsoft.AspNet.WebPages:3.0.0
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:nuget/Microsoft\.AspNet\.WebPages@.*$</packageUrl>
+    <cpe>cpe:/a:microsoft:asp.net_webpages</cpe>
+  </suppress>
+
+  <suppress>
+    <!-- now use 3.0.5-->
+    <notes>
+      <![CDATA[
+      file name: Microsoft.Azure.KeyVault.Core.dll
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:generic/Microsoft\.Azure\.KeyVault\.Core@.*$</packageUrl>
+    <cpe>cpe:/a:microsoft:.net_core_sdk</cpe>
+  </suppress>
+  <suppress>
+    <!-- now use 3.0.5-->
+    <notes>
+      <![CDATA[
+      file name: Microsoft.Azure.KeyVault.Core.dll
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:generic/Microsoft\.Azure\.KeyVault\.Core@.*$</packageUrl>
+    <cpe>cpe:/a:microsoft:.net_core</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: Microsoft.Azure.KeyVault.Core:3.0.5
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:nuget/Microsoft\.Azure\.KeyVault\.Core@.*$</packageUrl>
+    <cpe>cpe:/a:microsoft:.net_core</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: Microsoft.Azure.KeyVault.Core:3.0.5
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:nuget/Microsoft\.Azure\.KeyVault\.Core@.*$</packageUrl>
+    <cpe>cpe:/a:microsoft:.net_core_sdk</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: Microsoft.Azure.Services.AppAuthentication.1.0.3.nupkg
+      ]]>
+    </notes>
+    <sha1>76178592901ee9211c993cdddc72d4411ac1f935</sha1>
+    <cpe>cpe:/a:services_project:services</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: Microsoft.Azure.Services.AppAuthentication.1.0.3.nupkg
+      ]]>
+    </notes>
+    <sha1>76178592901ee9211c993cdddc72d4411ac1f935</sha1>
+    <cpe>cpe:/a:microsoft:services</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0.nupkg
+      ]]>
+    </notes>
+    <sha1>a0b6fe5c7c6dad1de4732f1a1d637bc20a98377a</sha1>
+    <cpe>cpe:/a:dot_project:dot</cpe>
+  </suppress>
+
+  <suppress>
+    <!-- now use 5.8.4-->
+    <notes>
+      <![CDATA[
+      file name: Microsoft.Data.Services.Client.5.6.4.nupkg
+      ]]>
+    </notes>
+    <sha1>4b83cdbf2c2454108fb8fe72258c5f4393cf68d9</sha1>
+    <cpe>cpe:/a:microsoft:services</cpe>
+  </suppress>
+  <suppress>
+    <!-- now use 5.8.4-->
+    <notes>
+      <![CDATA[
+      file name: Microsoft.Data.Services.Client.5.6.4.nupkg
+      ]]>
+    </notes>
+    <sha1>4b83cdbf2c2454108fb8fe72258c5f4393cf68d9</sha1>
+    <cpe>cpe:/a:services_project:services</cpe>
+  </suppress>
+
+  <suppress>
+    <!-- now use 5.8.4-->
+    <notes>
+      <![CDATA[
+      file name: Microsoft.Data.Services.Client.5.8.2.nupkg
+      ]]>
+    </notes>
+    <sha1>830e1bba5ee3b6f45d3a1d03d28a907ff8168668</sha1>
+    <cpe>cpe:/a:microsoft:services</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: Microsoft.Data.Services.Client.5.8.2.nupkg
+      ]]>
+    </notes>
+    <sha1>830e1bba5ee3b6f45d3a1d03d28a907ff8168668</sha1>
+    <cpe>cpe:/a:services_project:services</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: Microsoft.Data.Services.Client.5.8.4.nupkg
+      ]]>
+    </notes>
+    <sha1>ca6faf8a507d13ca023187d5ce1c037d4ff74b17</sha1>
+    <cpe>cpe:/a:services_project:services</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: Microsoft.Data.Services.Client.5.8.4.nupkg
+      ]]>
+    </notes>
+    <sha1>ca6faf8a507d13ca023187d5ce1c037d4ff74b17</sha1>
+    <cpe>cpe:/a:microsoft:services</cpe>
+  </suppress>
+  <suppress>
+    <!-- now use 6.8.0-->
+    <notes>
+      <![CDATA[
+      file name: Microsoft.IdentityModel.Protocols.OpenIdConnect.5.2.0.nupkg
+      ]]>
+    </notes>
+    <sha1>a8db90ef06023a9c0fafff093d5d016b765b73e6</sha1>
+    <cpe>cpe:/a:microsoft:identitymodel</cpe>
+  </suppress>
+  <suppress>
+    <!-- now use 6.8.0-->
+    <notes>
+      <![CDATA[
+      file name: Microsoft.IdentityModel.Protocols.OpenIdConnect.5.2.0.nupkg
+      ]]>
+    </notes>
+    <sha1>a8db90ef06023a9c0fafff093d5d016b765b73e6</sha1>
+    <cpe>cpe:/a:openid:openid</cpe>
+  </suppress>
+  <suppress>
+    <!-- now use 6.8.0-->
+    <notes>
+      <![CDATA[
+      file name: Microsoft.IdentityModel.Protocols.OpenIdConnect.5.2.0.nupkg
+      ]]>
+    </notes>
+    <sha1>a8db90ef06023a9c0fafff093d5d016b765b73e6</sha1>
+    <cpe>cpe:/a:openid:openid_connect</cpe>
+  </suppress>
+  <suppress>
+    <!-- now use 6.8.0-->
+    <notes>
+      <![CDATA[
+      file name: Microsoft.IdentityModel.Protocols.OpenIdConnect.5.3.0.nupkg
+      ]]>
+    </notes>
+    <sha1>8d5f2237377e89c520a2a0761dbac23192bac76c</sha1>
+    <cpe>cpe:/a:microsoft:identitymodel</cpe>
+  </suppress>
+  <suppress>
+    <!-- now use 6.8.0-->
+    <notes>
+      <![CDATA[
+      file name: Microsoft.IdentityModel.Protocols.OpenIdConnect.5.3.0.nupkg
+      ]]>
+    </notes>
+    <sha1>8d5f2237377e89c520a2a0761dbac23192bac76c</sha1>
+    <cpe>cpe:/a:openid:openid</cpe>
+  </suppress>
+  <suppress>
+    <!-- now use 6.8.0-->
+    <notes>
+      <![CDATA[
+      file name: Microsoft.IdentityModel.Protocols.OpenIdConnect.5.3.0.nupkg
+      ]]>
+    </notes>
+    <sha1>8d5f2237377e89c520a2a0761dbac23192bac76c</sha1>
+    <cpe>cpe:/a:openid:openid_connect</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: Microsoft.IdentityModel.Protocols.OpenIdConnect.6.8.0.nupkg
+      ]]>
+    </notes>
+    <sha1>b476cf7fe0a64efc36c358a4811983a65b2360cf</sha1>
+    <cpe>cpe:/a:microsoft:identitymodel</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: Microsoft.IdentityModel.Protocols.OpenIdConnect.6.8.0.nupkg
+      ]]>
+    </notes>
+    <sha1>b476cf7fe0a64efc36c358a4811983a65b2360cf</sha1>
+    <cpe>cpe:/a:openid:openid</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: Microsoft.IdentityModel.Protocols.OpenIdConnect.6.8.0.nupkg
+      ]]>
+    </notes>
+    <sha1>b476cf7fe0a64efc36c358a4811983a65b2360cf</sha1>
+    <cpe>cpe:/a:openid:openid_connect</cpe>
+  </suppress>
+  <suppress>
+    <!-- it's office-->
+    <notes>
+      <![CDATA[
+      file name: Microsoft.Office.Client.TranslationServices.dll
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:generic/Microsoft\.Office\.Client\.TranslationServices@.*$</packageUrl>
+    <cpe>cpe:/a:microsoft:office</cpe>
+  </suppress>
+  <suppress>
+    <!-- it's office-->
+    <notes>
+      <![CDATA[
+      file name: Microsoft.Office.Client.TranslationServices.dll
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:generic/Microsoft\.Office\.Client\.TranslationServices@.*$</packageUrl>
+    <cpe>cpe:/a:microsoft:office_project</cpe>
+  </suppress>
+  <suppress>
+    <!-- it's office-->
+    <notes>
+      <![CDATA[
+      file name: Microsoft.Office.Client.TranslationServices.dll
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:generic/Microsoft\.Office\.Client\.TranslationServices@.*$</packageUrl>
+    <cpe>cpe:/a:microsoft:project_2016</cpe>
+  </suppress>
+  <suppress>
+    <!-- it's office-->
+    <notes>
+      <![CDATA[
+      file name: Microsoft.Office.Client.TranslationServices.dll
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:generic/Microsoft\.Office\.Client\.TranslationServices@.*$</packageUrl>
+    <cpe>cpe:/a:microsoft:services</cpe>
+  </suppress>
+
+  <suppress>
+    <!-- it's office-->
+    <notes>
+      <![CDATA[
+      file name: Microsoft.Office.Client.Policy.Portable.dll
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:generic/Microsoft\.Office\.Client\.Policy\.Portable@.*$</packageUrl>
+    <cpe>cpe:/a:microsoft:office</cpe>
+  </suppress>
+
+  <suppress>
+    <!-- it's office-->
+    <notes>
+      <![CDATA[
+      file name: Microsoft.Office.Client.Policy.Portable.dll
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:generic/Microsoft\.Office\.Client\.Policy\.Portable@.*$</packageUrl>
+    <cpe>cpe:/a:microsoft:office_project</cpe>
+  </suppress>
+
+  <suppress>
+    <!-- it's office-->
+    <notes>
+      <![CDATA[
+      file name: Microsoft.Office.Client.Policy.dll
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:generic/Microsoft\.Office\.Client\.Policy@.*$</packageUrl>
+    <cpe>cpe:/a:microsoft:office</cpe>
+  </suppress>
+
+  <suppress>
+    <!-- it's office-->
+    <notes>
+      <![CDATA[
+      file name: Microsoft.Office.Client.Policy.dll
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:generic/Microsoft\.Office\.Client\.Policy@.*$</packageUrl>
+    <cpe>cpe:/a:microsoft:office_project</cpe>
+  </suppress>
+
+  <suppress>
+    <!-- it's office-->
+    <notes>
+      <![CDATA[
+      file name: Microsoft.Office.Project.Schema.16.0.4312.1000.nupkg
+      ]]>
+    </notes>
+    <sha1>3360f00dae203a21b5f158bbcfb9678e10a43ef6</sha1>
+    <cpe>cpe:/a:microsoft:office</cpe>
+  </suppress>
+  <suppress>
+    <!-- it's office-->
+    <notes>
+      <![CDATA[
+      file name: Microsoft.Office.Project.Schema.16.0.4312.1000.nupkg
+      ]]>
+    </notes>
+    <sha1>3360f00dae203a21b5f158bbcfb9678e10a43ef6</sha1>
+    <cpe>cpe:/a:microsoft:office_project</cpe>
+  </suppress>
+
+  <suppress>
+    <!-- it's office-->
+    <notes>
+      <![CDATA[
+      file name: Microsoft.Office.Project.Schema:16.0.4312.1000
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:nuget/Microsoft\.Office\.Project\.Schema@.*$</packageUrl>
+    <cpe>cpe:/a:microsoft:office</cpe>
+  </suppress>
+
+  <suppress>
+    <!-- it's office-->
+    <notes>
+      <![CDATA[
+      file name: Microsoft.Office.Project.Schema:16.0.4312.1000
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:nuget/Microsoft\.Office\.Project\.Schema@.*$</packageUrl>
+    <cpe>cpe:/a:microsoft:office_project</cpe>
+  </suppress>
+
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: Microsoft.Office.Project.Server.16.0.4330.1000.nupkg
+      ]]>
+    </notes>
+    <sha1>fe33a7460c6b39d57da277d14e10b47061c29554</sha1>
+    <cpe>cpe:/a:microsoft:office</cpe>
+  </suppress>
+
+  <suppress>
+    <!-- it's office-->
+    <notes>
+      <![CDATA[
+      file name: Microsoft.Office.Project.Server.Communications.16.0.4309.1000.nupkg
+      ]]>
+    </notes>
+    <sha1>977b84a01fb95696d6c2fceeef92dc4103526deb</sha1>
+    <cpe>cpe:/a:microsoft:office</cpe>
+  </suppress>
+  <suppress>
+    <!-- it's office-->
+    <notes>
+      <![CDATA[
+      file name: Microsoft.Office.Project.Server.Communications.16.0.4309.1000.nupkg
+      ]]>
+    </notes>
+    <sha1>977b84a01fb95696d6c2fceeef92dc4103526deb</sha1>
+    <cpe>cpe:/a:microsoft:office_communications_server</cpe>
+  </suppress>
+
+  <suppress>
+    <!-- it's office-->
+    <notes>
+      <![CDATA[
+      file name: Microsoft.Office.Project.Server.Communications.16.0.4309.1000.nupkg
+      ]]>
+    </notes>
+    <sha1>977b84a01fb95696d6c2fceeef92dc4103526deb</sha1>
+    <cpe>cpe:/a:microsoft:office_project</cpe>
+  </suppress>
+
+  <suppress>
+    <!-- it's office-->
+    <notes>
+      <![CDATA[
+      file name: Microsoft.Office.Project.Server.Communications:16.0.4309.1000
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:nuget/Microsoft\.Office\.Project\.Server\.Communications@.*$</packageUrl>
+    <cpe>cpe:/a:microsoft:office</cpe>
+  </suppress>
+
+  <suppress>
+    <!-- it's office-->
+    <notes>
+      <![CDATA[
+      file name: Microsoft.Office.Project.Server.Communications:16.0.4309.1000
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:nuget/Microsoft\.Office\.Project\.Server\.Communications@.*$</packageUrl>
+    <cpe>cpe:/a:microsoft:office_communications_server</cpe>
+  </suppress>
+
+  <suppress>
+    <!-- it's office-->
+    <notes>
+      <![CDATA[
+      file name: Microsoft.Office.Project.Server.Communications:16.0.4309.1000
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:nuget/Microsoft\.Office\.Project\.Server\.Communications@.*$</packageUrl>
+    <cpe>cpe:/a:microsoft:office_project</cpe>
+  </suppress>
+
+  <suppress>
+    <!-- it's office-->
+    <notes>
+      <![CDATA[
+      file name: Microsoft.Office.Project.Server.Library.16.0.4309.1000.nupkg
+      ]]>
+    </notes>
+    <sha1>94a19142662e0c0707127b14dc7694630ca99010</sha1>
+    <cpe>cpe:/a:microsoft:office</cpe>
+  </suppress>
+
+  <suppress>
+    <!-- it's office-->
+    <notes>
+      <![CDATA[
+      file name: Microsoft.Office.Project.Server.Library.16.0.4309.1000.nupkg
+      ]]>
+    </notes>
+    <sha1>94a19142662e0c0707127b14dc7694630ca99010</sha1>
+    <cpe>cpe:/a:microsoft:office_project</cpe>
+  </suppress>
+
+  <suppress>
+    <!-- it's office-->
+    <notes>
+      <![CDATA[
+      file name: Microsoft.Office.Project.Server.Library:16.0.4309.1000
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:nuget/Microsoft\.Office\.Project\.Server\.Library@.*$</packageUrl>
+    <cpe>cpe:/a:microsoft:office</cpe>
+  </suppress>
+
+  <suppress>
+    <!-- it's office-->
+    <notes>
+      <![CDATA[
+      file name: Microsoft.Office.Project.Server.Library:16.0.4309.1000
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:nuget/Microsoft\.Office\.Project\.Server\.Library@.*$</packageUrl>
+    <cpe>cpe:/a:microsoft:office_project</cpe>
+  </suppress>
+
+  <suppress>
+    <!-- it's office-->
+    <notes>
+      <![CDATA[
+      file name: Microsoft.Office.Project.Server:16.0.4330.1000
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:nuget/Microsoft\.Office\.Project\.Server@.*$</packageUrl>
+    <cpe>cpe:/a:microsoft:office</cpe>
+  </suppress>
+
+  <suppress>
+    <!-- it's office-->
+    <notes>
+      <![CDATA[
+      file name: Microsoft.Office.Project.Server:16.0.4330.1000
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:nuget/Microsoft\.Office\.Project\.Server@.*$</packageUrl>
+    <cpe>cpe:/a:microsoft:office_project</cpe>
+  </suppress>
+
+  <suppress>
+    <!-- it's office-->
+    <notes>
+      <![CDATA[
+      file name: Microsoft.Office.Project.Shared.16.0.4309.1000.nupkg
+      ]]>
+    </notes>
+    <sha1>36829a779cb413e254747eeec546ee54f4ef1fcc</sha1>
+    <cpe>cpe:/a:microsoft:office</cpe>
+  </suppress>
+
+  <suppress>
+    <!-- it's office-->
+    <notes>
+      <![CDATA[
+      file name: Microsoft.Office.Project.Shared.16.0.4309.1000.nupkg
+      ]]>
+    </notes>
+    <sha1>36829a779cb413e254747eeec546ee54f4ef1fcc</sha1>
+    <cpe>cpe:/a:microsoft:office_project</cpe>
+  </suppress>
+
+  <suppress>
+    <!-- it's office-->
+    <notes>
+      <![CDATA[
+      file name: Microsoft.Office.Project.Shared:16.0.4309.1000
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:nuget/Microsoft\.Office\.Project\.Shared@.*$</packageUrl>
+    <cpe>cpe:/a:microsoft:office</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: Microsoft.Office.Project.Shared:16.0.4309.1000
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:nuget/Microsoft\.Office\.Project\.Shared@.*$</packageUrl>
+    <cpe>cpe:/a:microsoft:office_project</cpe>
+  </suppress>
+
+  <suppress>
+    <!-- it's office-->
+    <notes>
+      <![CDATA[
+      file name: Microsoft.Office.SharePoint.Tools.dll
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:generic/Microsoft\.Office\.SharePoint\.Tools@.*$</packageUrl>
+    <cpe>cpe:/a:microsoft:office</cpe>
+  </suppress>
+
+  <suppress>
+    <!-- it's office-->
+    <notes>
+      <![CDATA[
+      file name: Microsoft.Office.SharePoint.Tools.dll
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:generic/Microsoft\.Office\.SharePoint\.Tools@.*$</packageUrl>
+    <cpe>cpe:/a:microsoft:office_2013</cpe>
+  </suppress>
+
+  <suppress>
+    <!-- it's office-->
+    <notes>
+      <![CDATA[
+      file name: Microsoft.Office.SharePoint.Tools.dll
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:generic/Microsoft\.Office\.SharePoint\.Tools@.*$</packageUrl>
+    <cpe>cpe:/a:microsoft:office_project</cpe>
+  </suppress>
+
+  <suppress>
+    <!-- it's office-->
+    <notes>
+      <![CDATA[
+      file name: Microsoft.Office.SharePoint.Tools.dll
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:generic/Microsoft\.Office\.SharePoint\.Tools@.*$</packageUrl>
+    <cpe>cpe:/a:microsoft:sharepoint_foundation</cpe>
+  </suppress>
+
+  <suppress>
+    <!--version 4.1.1-->
+    <notes>
+      <![CDATA[
+      file name: Microsoft.Owin.Security.OpenIdConnect.4.0.0.nupkg
+      ]]>
+    </notes>
+    <sha1>3307142c7baba0d441f3187cb949e20869fdd83e</sha1>
+    <cpe>cpe:/a:openid:openid</cpe>
+  </suppress>
+
+  <suppress>
+    <!--version 4.1.1-->
+    <notes>
+      <![CDATA[
+      file name: Microsoft.Owin.Security.OpenIdConnect.4.0.0.nupkg
+      ]]>
+    </notes>
+    <sha1>3307142c7baba0d441f3187cb949e20869fdd83e</sha1>
+    <cpe>cpe:/a:openid:openid_connect</cpe>
+  </suppress>
+
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: Microsoft.ProjectServer.Client.Portable.dll
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:generic/Microsoft\.ProjectServer\.Client\.Portable@.*$</packageUrl>
+    <cpe>cpe:/a:microsoft:office</cpe>
+  </suppress>
+
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: Microsoft.ProjectServer.Client.Portable.dll
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:generic/Microsoft\.ProjectServer\.Client\.Portable@.*$</packageUrl>
+    <cpe>cpe:/a:microsoft:office_project</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: Microsoft.ProjectServer.Client.Portable.dll
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:generic/Microsoft\.ProjectServer\.Client\.Portable@.*$</packageUrl>
+    <cpe>cpe:/a:microsoft:project_2016</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: Microsoft.ProjectServer.Client.Portable.dll
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:generic/Microsoft\.ProjectServer\.Client\.Portable@.*$</packageUrl>
+    <cpe>cpe:/a:microsoft:proxy_server</cpe>
+  </suppress>
+
+  <suppress>
+    <!--it's office cpe-->
+    <notes>
+      <![CDATA[
+      file name: Microsoft.ProjectServer.Client.dll
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:generic/Microsoft\.ProjectServer\.Client@.*$</packageUrl>
+    <cpe>cpe:/a:microsoft:office</cpe>
+  </suppress>
+  <suppress>
+    <!--it's office cpe-->
+    <notes>
+      <![CDATA[
+      file name: Microsoft.ProjectServer.Client.dll
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:generic/Microsoft\.ProjectServer\.Client@.*$</packageUrl>
+    <cpe>cpe:/a:microsoft:office_project</cpe>
+  </suppress>
+
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: Microsoft.ProjectServer.Client.dll
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:generic/Microsoft\.ProjectServer\.Client@.*$</packageUrl>
+    <cpe>cpe:/a:microsoft:project_2016</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: Microsoft.ProjectServer.Client.dll
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:generic/Microsoft\.ProjectServer\.Client@.*$</packageUrl>
+    <cpe>cpe:/a:microsoft:proxy_server</cpe>
+  </suppress>
+
+  <suppress>
+    <!--it's office cpe-->
+    <notes>
+      <![CDATA[
+      file name: Microsoft.SharePoint.Client.DocumentManagement.Portable.dll
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:generic/Microsoft\.SharePoint\.Client\.DocumentManagement\.Portable@.*$</packageUrl>
+    <cpe>cpe:/a:microsoft:office</cpe>
+  </suppress>
+
+  <suppress>
+    <!--it's office cpe-->
+    <notes>
+      <![CDATA[
+      file name: Microsoft.SharePoint.Client.DocumentManagement.Portable.dll
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:generic/Microsoft\.SharePoint\.Client\.DocumentManagement\.Portable@.*$</packageUrl>
+    <cpe>cpe:/a:microsoft:office_project</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: Microsoft.SharePoint.Client.DocumentManagement.Portable.dll
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:generic/Microsoft\.SharePoint\.Client\.DocumentManagement\.Portable@.*$</packageUrl>
+    <cpe>cpe:/a:microsoft:sharepoint_foundation</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: Microsoft.SharePoint.Client.DocumentManagement.Portable.dll
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:generic/Microsoft\.SharePoint\.Client\.DocumentManagement\.Portable@.*$</packageUrl>
+    <cpe>cpe:/a:microsoft:sharepoint_server</cpe>
+  </suppress>
+
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: Microsoft.SharePoint.Client.Search.Portable.dll
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:generic/Microsoft\.SharePoint\.Client\.Search\.Portable@.*$</packageUrl>
+    <cpe>cpe:/a:microsoft:office</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: Microsoft.SharePoint.Client.Search.Portable.dll
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:generic/Microsoft\.SharePoint\.Client\.Search\.Portable@.*$</packageUrl>
+    <cpe>cpe:/a:microsoft:office_project</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: Microsoft.SharePoint.Client.Search.Portable.dll
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:generic/Microsoft\.SharePoint\.Client\.Search\.Portable@.*$</packageUrl>
+    <cpe>cpe:/a:microsoft:project_2016</cpe>
+  </suppress>
+  <suppress>
+    <!--it's office cpe-->
+    <notes>
+      <![CDATA[
+      file name: Microsoft.SharePoint.Client.Search.dll
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:generic/Microsoft\.SharePoint\.Client\.Search@.*$</packageUrl>
+    <cpe>cpe:/a:microsoft:office</cpe>
+  </suppress>
+  <suppress>
+    <!--it's office cpe-->
+    <notes>
+      <![CDATA[
+      file name: Microsoft.SharePoint.Client.Search.dll
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:generic/Microsoft\.SharePoint\.Client\.Search@.*$</packageUrl>
+    <cpe>cpe:/a:microsoft:office_project</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: Microsoft.SharePoint.Client.Search.dll
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:generic/Microsoft\.SharePoint\.Client\.Search@.*$</packageUrl>
+    <cpe>cpe:/a:microsoft:project_2016</cpe>
+  </suppress>
+  <suppress>
+    <!--it's office cpe-->
+    <notes>
+      <![CDATA[
+      file name: Microsoft.SharePoint.Client.Search.dll
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:generic/Microsoft\.SharePoint\.Client\.Search@.*$</packageUrl>
+    <cpe>cpe:/a:microsoft:office_2013</cpe>
+  </suppress>
+
+  <suppress>
+    <!--it's not client cpe-->
+    <notes>
+      <![CDATA[
+      file name: Microsoft.SharePoint.Client.ServerRuntime:16.0.4297.1000
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:nuget/Microsoft\.SharePoint\.Client\.ServerRuntime@.*$</packageUrl>
+    <cpe>cpe:/a:microsoft:sharepoint_foundation</cpe>
+  </suppress>
+
+  <suppress>
+    <!--it's not client cpe-->
+    <notes>
+      <![CDATA[
+      file name: Microsoft.SharePoint.Client.ServerRuntime:16.0.4297.1000
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:nuget/Microsoft\.SharePoint\.Client\.ServerRuntime@.*$</packageUrl>
+    <cpe>cpe:/a:microsoft:sharepoint_server</cpe>
+  </suppress>
+
+  <suppress>
+    <!--it's office dll-->
+    <notes>
+      <![CDATA[
+      file name: Microsoft.SharePoint.Client.Taxonomy.Portable.dll
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:generic/Microsoft\.SharePoint\.Client\.Taxonomy\.Portable@.*$</packageUrl>
+    <cpe>cpe:/a:microsoft:office</cpe>
+  </suppress>
+  <suppress>
+    <!--it's office dll-->
+    <notes>
+      <![CDATA[
+      file name: Microsoft.SharePoint.Client.Taxonomy.Portable.dll
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:generic/Microsoft\.SharePoint\.Client\.Taxonomy\.Portable@.*$</packageUrl>
+    <cpe>cpe:/a:microsoft:office_2013</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: Microsoft.SharePoint.Client.Taxonomy.Portable.dll
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:generic/Microsoft\.SharePoint\.Client\.Taxonomy\.Portable@.*$</packageUrl>
+    <cpe>cpe:/a:microsoft:office_project</cpe>
+  </suppress>
+  <suppress>
+    <!--it's office dll-->
+    <notes>
+      <![CDATA[
+      file name: Microsoft.SharePoint.Client.Taxonomy.dll
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:generic/Microsoft\.SharePoint\.Client\.Taxonomy@.*$</packageUrl>
+    <cpe>cpe:/a:microsoft:office</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: Microsoft.SharePoint.Client.Taxonomy.dll
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:generic/Microsoft\.SharePoint\.Client\.Taxonomy@.*$</packageUrl>
+    <cpe>cpe:/a:microsoft:office_project</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: Microsoft.SharePoint.Client.Taxonomy.dll
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:generic/Microsoft\.SharePoint\.Client\.Taxonomy@.*$</packageUrl>
+    <cpe>cpe:/a:microsoft:sharepoint_foundation</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: Microsoft.SharePoint.Client.Taxonomy.dll
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:generic/Microsoft\.SharePoint\.Client\.Taxonomy@.*$</packageUrl>
+    <cpe>cpe:/a:microsoft:sharepoint_server</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: Microsoft.Owin.Security.OpenIdConnect.4.1.1.nupkg
+      ]]>
+    </notes>
+    <sha1>1b5a7d0d15242f84f56719bb2c4740e087e33f30</sha1>
+    <cpe>cpe:/a:openid:openid</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: Microsoft.Owin.Security.OpenIdConnect.4.1.1.nupkg
+      ]]>
+    </notes>
+    <sha1>1b5a7d0d15242f84f56719bb2c4740e087e33f30</sha1>
+    <cpe>cpe:/a:openid:openid_connect</cpe>
+  </suppress>
+  <suppress>
+    <!--it's office dll-->
+    <notes>
+      <![CDATA[
+      file name: Microsoft.SharePoint.Client.DocumentManagement.dll
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:generic/Microsoft\.SharePoint\.Client\.DocumentManagement@.*$</packageUrl>
+    <cpe>cpe:/a:microsoft:office</cpe>
+  </suppress>
+  <suppress>
+    <!--it's office dll-->
+    <notes>
+      <![CDATA[
+      file name: Microsoft.SharePoint.Client.DocumentManagement.dll
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:generic/Microsoft\.SharePoint\.Client\.DocumentManagement@.*$</packageUrl>
+    <cpe>cpe:/a:microsoft:office_project</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: Microsoft.SharePoint.Client.DocumentManagement.dll
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:generic/Microsoft\.SharePoint\.Client\.DocumentManagement@.*$</packageUrl>
+    <cpe>cpe:/a:microsoft:sharepoint_foundation</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: Microsoft.SharePoint.Client.DocumentManagement.dll
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:generic/Microsoft\.SharePoint\.Client\.DocumentManagement@.*$</packageUrl>
+    <cpe>cpe:/a:microsoft:sharepoint_server</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: Microsoft.SharePoint.Client.ServerRuntime.16.0.4297.1000.nupkg
+      ]]>
+    </notes>
+    <sha1>a48f9d599a1b0c097a2011cba6437f53d00f390a</sha1>
+    <cpe>cpe:/a:microsoft:sharepoint_foundation</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: Microsoft.SharePoint.Client.ServerRuntime.16.0.4297.1000.nupkg
+      ]]>
+    </notes>
+    <sha1>a48f9d599a1b0c097a2011cba6437f53d00f390a</sha1>
+    <cpe>cpe:/a:microsoft:sharepoint_server</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: Microsoft.SharePoint.Client.ServerRuntime.16.0.4297.1000.nupkg
+      ]]>
+    </notes>
+    <sha1>a48f9d599a1b0c097a2011cba6437f53d00f390a</sha1>
+    <cpe>cpe:/a:point-cli_project:point-cli</cpe>
+  </suppress>
+
+  <suppress>
+    <!--it's office dll-->
+    <notes>
+      <![CDATA[
+      file name: Microsoft.SharePoint.Client.UserProfiles.Portable.dll
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:generic/Microsoft\.SharePoint\.Client\.UserProfiles\.Portable@.*$</packageUrl>
+    <cpe>cpe:/a:microsoft:office</cpe>
+  </suppress>
+  <suppress>
+    <!--it's office dll-->
+    <notes>
+      <![CDATA[
+      file name: Microsoft.SharePoint.Client.UserProfiles.Portable.dll
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:generic/Microsoft\.SharePoint\.Client\.UserProfiles\.Portable@.*$</packageUrl>
+    <cpe>cpe:/a:microsoft:office_project</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: Microsoft.SharePoint.Client.UserProfiles.Portable.dll
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:generic/Microsoft\.SharePoint\.Client\.UserProfiles\.Portable@.*$</packageUrl>
+    <cpe>cpe:/a:microsoft:project_2016</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: Microsoft.SharePoint.Client.UserProfiles.Portable.dll
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:generic/Microsoft\.SharePoint\.Client\.UserProfiles\.Portable@.*$</packageUrl>
+    <cpe>cpe:/a:microsoft:sharepoint_foundation</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: Microsoft.SharePoint.Client.UserProfiles.Portable.dll
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:generic/Microsoft\.SharePoint\.Client\.UserProfiles\.Portable@.*$</packageUrl>
+    <cpe>cpe:/a:microsoft:office_2013</cpe>
+  </suppress>
+
+
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: Microsoft.SharePoint.Client.UserProfiles.dll
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:generic/Microsoft\.SharePoint\.Client\.UserProfiles@.*$</packageUrl>
+    <cpe>cpe:/a:microsoft:office</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: Microsoft.SharePoint.Client.UserProfiles.dll
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:generic/Microsoft\.SharePoint\.Client\.UserProfiles@.*$</packageUrl>
+    <cpe>cpe:/a:microsoft:office_project</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: Microsoft.SharePoint.Client.UserProfiles.dll
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:generic/Microsoft\.SharePoint\.Client\.UserProfiles@.*$</packageUrl>
+    <cpe>cpe:/a:microsoft:sharepoint_foundation</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: Microsoft.SharePoint.Client.UserProfiles.dll
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:generic/Microsoft\.SharePoint\.Client\.UserProfiles@.*$</packageUrl>
+    <cpe>cpe:/a:microsoft:sharepoint_server</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: Microsoft.SharePoint.Client.UserProfiles.dll
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:generic/Microsoft\.SharePoint\.Client\.UserProfiles@.*$</packageUrl>
+    <cpe>cpe:/a:user_project:user</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: Microsoft.Threading.Tasks.Extensions.Silverlight.dll
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:generic/Microsoft\.Threading\.Tasks\.Extensions\.Silverlight@.*$</packageUrl>
+    <cpe>cpe:/a:microsoft:silverlight</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: Microsoft.Web.Infrastructure.dll
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:generic/Microsoft\.Web\.Infrastructure@.*$</packageUrl>
+    <cpe>cpe:/a:microsoft:asp.net</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: Microsoft.Web.Infrastructure.dll
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:generic/Microsoft\.Web\.Infrastructure@.*$</packageUrl>
+    <cpe>cpe:/a:microsoft:asp.net_webpages</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: System.Runtime.CompilerServices.Unsafe.4.7.0.nupkg
+      ]]>
+    </notes>
+    <sha1>5fa38e2b2fa0116d8ee2d19380a270db913afee7</sha1>
+    <cpe>cpe:/a:services_project:services</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: System.Runtime.CompilerServices.Unsafe.4.7.1.nupkg
+      ]]>
+    </notes>
+    <sha1>e01f83a5c3e06aabd1459ec6bb771abe613537fb</sha1>
+    <cpe>cpe:/a:services_project:services</cpe>
+  </suppress>
+  <suppress>
+    <!--now version is 3.3.1-->
+    <notes>
+      <![CDATA[
+      file name: jQuery.1.9.1.nupkg
+      ]]>
+    </notes>
+    <sha1>34752decad3b82d41e3fed62f9293634bf47e633</sha1>
+    <cpe>cpe:/a:jquery:jquery</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: jQuery.Validation.1.17.0.nupkg
+      ]]>
+    </notes>
+    <sha1>db0c92689220f78b03c1a86883df1b03ef0b7fba</sha1>
+    <cpe>cpe:/a:jquery:jquery</cpe>
+  </suppress>
+  <suppress>
+    <!--now user 3.5.0-->
+    <notes>
+      <![CDATA[
+      file name: jquery-1.12.4.js
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:javascript/jquery@.*$</packageUrl>
+    <cve>CVE-2015-9251</cve>
+  </suppress>
+  <suppress>
+    <!--now user 3.5.0-->
+    <notes>
+      <![CDATA[
+      file name: jquery-1.12.4.js
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:javascript/jquery@.*$</packageUrl>
+    <cve>CVE-2019-11358</cve>
+  </suppress>
+  <suppress>
+    <!--now use 3.5.0-->
+    <notes>
+      <![CDATA[
+      file name: jquery-1.12.4.js
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:javascript/jquery@.*$</packageUrl>
+    <cve>CVE-2020-11022</cve>
+  </suppress>
+  <suppress>
+    <!--now use 3.5.0-->
+    <notes>
+      <![CDATA[
+      file name: jquery-1.12.4.min.js
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:javascript/jquery@.*$</packageUrl>
+    <cve>CVE-2015-9251</cve>
+  </suppress>
+  <suppress>
+    <!--now use 3.5.0-->
+    <notes>
+      <![CDATA[
+      file name: jquery-1.12.4.min.js
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:javascript/jquery@.*$</packageUrl>
+    <cve>CVE-2019-11358</cve>
+  </suppress>
+  <suppress>
+    <!--now use 3.5.0-->
+    <notes>
+      <![CDATA[
+      file name: jquery-1.12.4.min.js
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:javascript/jquery@.*$</packageUrl>
+    <cve>CVE-2020-11022</cve>
+  </suppress>
+  <suppress>
+    <!--now use 3.5.0-->
+    <notes>
+      <![CDATA[
+      file name: jquery-1.12.4.min.js
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:javascript/jquery@.*$</packageUrl>
+    <cve>CVE-2020-11023</cve>
+  </suppress>
+  <suppress>
+    <!--now use 3.5.1-->
+    <notes>
+      <![CDATA[
+      file name: jquery-1.9.1-vsdoc.js
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:javascript/jquery@.*$</packageUrl>
+    <cve>CVE-2015-9251</cve>
+  </suppress>
+  <suppress>
+    <!--now use 3.5.1-->
+    <notes>
+      <![CDATA[
+      file name: jquery-1.9.1-vsdoc.js
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:javascript/jquery@.*$</packageUrl>
+    <cve>CVE-2019-11358</cve>
+  </suppress>
+  <suppress>
+    <!--now use 3.5.1-->
+    <notes>
+      <![CDATA[
+      file name: jquery-1.9.1-vsdoc.js
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:javascript/jquery@.*$</packageUrl>
+    <cve>CVE-2020-11022</cve>
+  </suppress>
+  <suppress>
+    <!--now use 3.5.1-->
+    <notes>
+      <![CDATA[
+      file name: jquery-1.9.1-vsdoc.js
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:javascript/jquery@.*$</packageUrl>
+    <cve>CVE-2020-11023</cve>
+  </suppress>
+  <suppress>
+    <!--now use 3.5.1-->
+    <notes>
+      <![CDATA[
+      file name: jquery-1.9.1.js
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:javascript/jquery@.*$</packageUrl>
+    <cve>CVE-2015-9251</cve>
+  </suppress>
+  <suppress>
+    <!--now use 3.5.1-->
+    <notes>
+      <![CDATA[
+      file name: jquery-1.9.1.js
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:javascript/jquery@.*$</packageUrl>
+    <cve>CVE-2019-11358</cve>
+  </suppress>
+  <suppress>
+    <!--now use 3.5.1-->
+    <notes>
+      <![CDATA[
+      file name: jquery-1.9.1.js
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:javascript/jquery@.*$</packageUrl>
+    <cve>CVE-2020-11022</cve>
+  </suppress>
+  <suppress>
+    <!--now use 3.5.1-->
+    <notes>
+      <![CDATA[
+      file name: jquery-1.9.1.js
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:javascript/jquery@.*$</packageUrl>
+    <cve>CVE-2020-11023</cve>
+  </suppress>
+  <suppress>
+    <!--now use 3.5.1-->
+    <notes>
+      <![CDATA[
+      file name: jquery-1.9.1.min.js
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:javascript/jquery@.*$</packageUrl>
+    <cve>CVE-2015-9251</cve>
+  </suppress>
+  <suppress>
+    <!--now use 3.5.1-->
+    <notes>
+      <![CDATA[
+      file name: jquery-1.9.1.min.js
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:javascript/jquery@.*$</packageUrl>
+    <cve>CVE-2019-11358</cve>
+  </suppress>
+  <suppress>
+    <!--now use 3.5.1-->
+    <notes>
+      <![CDATA[
+      file name: jquery-1.9.1.min.js
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:javascript/jquery@.*$</packageUrl>
+    <cve>CVE-2020-11022</cve>
+  </suppress>
+  <suppress>
+    <!--now use 3.5.1-->
+    <notes>
+      <![CDATA[
+      file name: jquery-1.9.1.min.js
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:javascript/jquery@.*$</packageUrl>
+    <cve>CVE-2020-11023</cve>
+  </suppress>
+  <suppress>
+    <!--now use 3.5.1-->
+    <notes>
+      <![CDATA[
+      file name: jquery-3.0.0.min.js
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:javascript/jquery@.*$</packageUrl>
+    <cve>CVE-2019-11358</cve>
+  </suppress>
+  <suppress>
+    <!--now use 3.5.1-->
+    <notes>
+      <![CDATA[
+      file name: jquery-3.0.0.min.js
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:javascript/jquery@.*$</packageUrl>
+    <cve>CVE-2020-11022</cve>
+  </suppress>
+  <suppress>
+    <!--now use 3.5.1-->
+    <notes>
+      <![CDATA[
+      file name: jquery-3.0.0.min.js
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:javascript/jquery@.*$</packageUrl>
+    <cve>CVE-2020-11023</cve>
+  </suppress>
+  <suppress>
+    <!--now use 3.5.1-->
+    <notes>
+      <![CDATA[
+      file name: jquery-3.3.1-vsdoc.js
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:javascript/jquery@.*$</packageUrl>
+    <cve>CVE-2019-11358</cve>
+  </suppress>
+  <suppress>
+    <!--now use 3.5.1-->
+    <notes>
+      <![CDATA[
+      file name: jquery-3.3.1-vsdoc.js
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:javascript/jquery@.*$</packageUrl>
+    <cve>CVE-2020-11022</cve>
+  </suppress>
+  <suppress>
+    <!--now use 3.5.1-->
+    <notes>
+      <![CDATA[
+      file name: jquery-3.3.1-vsdoc.js
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:javascript/jquery@.*$</packageUrl>
+    <cve>CVE-2020-11023</cve>
+  </suppress>
+  <suppress>
+    <!--now use 3.5.1-->
+    <notes>
+      <![CDATA[
+      file name: jquery-3.3.1.intellisense.js
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:javascript/jquery@.*$</packageUrl>
+    <cve>CVE-2019-11358</cve>
+  </suppress>
+  <suppress>
+    <!--now use 3.5.1-->
+    <notes>
+      <![CDATA[
+      file name: jquery-3.3.1.intellisense.js
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:javascript/jquery@.*$</packageUrl>
+    <cve>CVE-2020-11022</cve>
+  </suppress>
+  <suppress>
+    <!--now use 3.5.1-->
+    <notes>
+      <![CDATA[
+      file name: jquery-3.3.1.intellisense.js
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:javascript/jquery@.*$</packageUrl>
+    <cve>CVE-2020-11023</cve>
+  </suppress>
+  <suppress>
+    <!--now use 3.5.1-->
+    <notes>
+      <![CDATA[
+      file name: jquery-3.3.1.js
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:javascript/jquery@.*$</packageUrl>
+    <cve>CVE-2019-11358</cve>
+  </suppress>
+  <suppress>
+    <!--now use 3.5.1-->
+    <notes>
+      <![CDATA[
+      file name: jquery-3.3.1.js
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:javascript/jquery@.*$</packageUrl>
+    <cve>CVE-2020-11022</cve>
+  </suppress>
+  <suppress>
+    <!--now use 3.5.1-->
+    <notes>
+      <![CDATA[
+      file name: jquery-3.3.1.js
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:javascript/jquery@.*$</packageUrl>
+    <cve>CVE-2020-11023</cve>
+  </suppress>
+  <suppress>
+    <!--now use 3.5.1-->
+    <notes>
+      <![CDATA[
+      file name: jquery-3.3.1.min.js
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:javascript/jquery@.*$</packageUrl>
+    <cve>CVE-2019-11358</cve>
+  </suppress>
+  <suppress>
+    <!--now use 3.5.1-->
+    <notes>
+      <![CDATA[
+      file name: jquery-3.3.1.min.js
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:javascript/jquery@.*$</packageUrl>
+    <cve>CVE-2020-11022</cve>
+  </suppress>
+  <suppress>
+    <!--now use 3.5.1-->
+    <notes>
+      <![CDATA[
+      file name: jquery-3.3.1.min.js
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:javascript/jquery@.*$</packageUrl>
+    <cve>CVE-2020-11023</cve>
+  </suppress>
+  <suppress>
+    <!--now use 3.5.1-->
+    <notes>
+      <![CDATA[
+      file name: jquery-3.3.1.slim.js
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:javascript/jquery@.*$</packageUrl>
+    <cve>CVE-2019-11358</cve>
+  </suppress>
+  <suppress>
+    <!--now use 3.5.1-->
+    <notes>
+      <![CDATA[
+      file name: jquery-3.3.1.slim.js
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:javascript/jquery@.*$</packageUrl>
+    <cve>CVE-2020-11022</cve>
+  </suppress>
+  <suppress>
+    <!--now use 3.5.1-->
+    <notes>
+      <![CDATA[
+      file name: jquery-3.3.1.slim.js
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:javascript/jquery@.*$</packageUrl>
+    <cve>CVE-2020-11023</cve>
+  </suppress>
+  <suppress>
+    <!--now use 3.5.1-->
+    <notes>
+      <![CDATA[
+      file name: jquery-3.3.1.slim.min.js
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:javascript/jquery@.*$</packageUrl>
+    <cve>CVE-2019-11358</cve>
+  </suppress>
+  <suppress>
+    <!--now use 3.5.1-->
+    <notes>
+      <![CDATA[
+      file name: jquery-3.3.1.slim.min.js
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:javascript/jquery@.*$</packageUrl>
+    <cve>CVE-2020-11022</cve>
+  </suppress>
+  <suppress>
+    <!--now use 3.5.1-->
+    <notes>
+      <![CDATA[
+      file name: jquery-3.3.1.slim.min.js
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:javascript/jquery@.*$</packageUrl>
+    <cve>CVE-2020-11023</cve>
+  </suppress>
+  <suppress>
+    <!--now use 3.5.1-->
+    <notes>
+      <![CDATA[
+      file name: jquery-3.4.1.js
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:javascript/jquery@.*$</packageUrl>
+    <cve>CVE-2020-11022</cve>
+  </suppress>
+  <suppress>
+    <!--now use 3.5.1-->
+    <notes>
+      <![CDATA[
+      file name: jquery-3.4.1.js
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:javascript/jquery@.*$</packageUrl>
+    <cve>CVE-2020-11023</cve>
+  </suppress>
+  <suppress>
+    <!--now use 3.5.1-->
+    <notes>
+      <![CDATA[
+      file name: jquery-3.4.1.min.js
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:javascript/jquery@.*$</packageUrl>
+    <cve>CVE-2020-11022</cve>
+  </suppress>
+  <suppress>
+    <!--now use 3.5.1-->
+    <notes>
+      <![CDATA[
+      file name: jquery-3.4.1.min.js
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:javascript/jquery@.*$</packageUrl>
+    <cve>CVE-2020-11023</cve>
+  </suppress>
+  <suppress>
+    <!--now use 3.1.0-->
+    <notes>
+      <![CDATA[
+      file name: knockout-2.2.1.debug.js
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:javascript/knockout@.*$</packageUrl>
+    <vulnerabilityName>XSS injection point in attr name binding for browser IE7 and older</vulnerabilityName>
+  </suppress>
+  <suppress>
+    <!--now use 3.1.0-->
+    <notes>
+      <![CDATA[
+      file name: knockout-2.2.1.js
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:javascript/knockout@.*$</packageUrl>
+    <vulnerabilityName>XSS injection point in attr name binding for browser IE7 and older</vulnerabilityName>
+  </suppress>
+  <suppress>
+    <!--it's jquery cpe-->
+    <notes>
+      <![CDATA[
+      file name: Microsoft.jQuery.Unobtrusive.Validation.3.2.4.nupkg
+      ]]>
+    </notes>
+    <sha1>2bf4eb87c92e8fe799dbed6bddc557d7f38163a8</sha1>
+    <cpe>cpe:/a:jquery:jquery</cpe>
+  </suppress>
+  <suppress>
+    <!--it's SQLite cpe-->
+    <notes>
+      <![CDATA[
+      file name: Stub.System.Data.SQLite.Core.NetFramework.1.0.113.0.nupkg
+      ]]>
+    </notes>
+    <sha1>9d0313b489c2f0f847d8d31c7a9c189535dd2e40</sha1>
+    <cpe>cpe:/a:sqlite:sqlite</cpe>
+  </suppress>
+  <suppress>
+    <!--it's SQLite cpe-->
+    <notes>
+      <![CDATA[
+      file name: System.Data.SQLite.1.0.105.2.nupkg
+      ]]>
+    </notes>
+    <sha1>369eaa95c54bd82fd1c44fbe9ddf27ceaa03c893</sha1>
+    <cpe>cpe:/a:sqlite:sqlite</cpe>
+  </suppress>
+  <suppress>
+    <!--it's SQLite cpe-->
+    <notes>
+      <![CDATA[
+      file name: System.Data.SQLite.1.0.113.2.nupkg
+      ]]>
+    </notes>
+    <sha1>676e70b0ad017e5f01b61bce862cce7a48ec3abf</sha1>
+    <cpe>cpe:/a:sqlite:sqlite</cpe>
+  </suppress>
+  <suppress>
+    <!--it's SQLite cpe-->
+    <notes>
+      <![CDATA[
+      file name: System.Data.SQLite.Core.1.0.105.2.nupkg
+      ]]>
+    </notes>
+    <sha1>9b707a420ee112f246309eef4ab48d77d61a69f6</sha1>
+    <cpe>cpe:/a:sqlite:sqlite</cpe>
+  </suppress>
+  <suppress>
+    <!--it's SQLite cpe-->
+    <notes>
+      <![CDATA[
+      file name: System.Data.SQLite.Core.1.0.113.2.nupkg
+      ]]>
+    </notes>
+    <sha1>344190fa46bea1ba97a3b43cfcaa4b793c2fabc8</sha1>
+    <cpe>cpe:/a:sqlite:sqlite</cpe>
+  </suppress>
+  <suppress>
+    <!--it's SQLite cpe-->
+    <notes>
+      <![CDATA[
+      file name: System.Data.SQLite.Linq.1.0.105.2.nupkg
+      ]]>
+    </notes>
+    <sha1>166af795a47676318cf40f274b5c7b4147184c0e</sha1>
+    <cpe>cpe:/a:sqlite:sqlite</cpe>
+  </suppress>
+  <suppress>
+    <!--it's SQLite cpe-->
+    <notes>
+      <![CDATA[
+      file name: System.Data.SQLite.Linq.1.0.113.0.nupkg
+      ]]>
+    </notes>
+    <sha1>627707e5baa304bfa5a5250ff65087ccee391484</sha1>
+    <cpe>cpe:/a:sqlite:sqlite</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+     file name: Microsoft.Office.Client.TranslationServices.Portable.dll
+     ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:generic/Microsoft\.Office\.Client\.TranslationServices\.Portable@.*$</packageUrl>
+    <cpe>cpe:/a:microsoft:office</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+     file name: Microsoft.Office.Client.TranslationServices.Portable.dll
+     ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:generic/Microsoft\.Office\.Client\.TranslationServices\.Portable@.*$</packageUrl>
+    <cpe>cpe:/a:microsoft:office_project</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+     file name: Microsoft.Office.Client.TranslationServices.Portable.dll
+     ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:generic/Microsoft\.Office\.Client\.TranslationServices\.Portable@.*$</packageUrl>
+    <cpe>cpe:/a:microsoft:project_2016</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+     file name: Microsoft.Office.Client.TranslationServices.Portable.dll
+     ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:generic/Microsoft\.Office\.Client\.TranslationServices\.Portable@.*$</packageUrl>
+    <cpe>cpe:/a:microsoft:services</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: Microsoft.Office.Client.TranslationServices.Portable.dll
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:generic/Microsoft\.Office\.Client\.TranslationServices\.Portable@.*$</packageUrl>
+    <cpe>cpe:/a:microsoft:office_2013</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: Microsoft.Office.Client.TranslationServices.Portable.dll
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:generic/Microsoft\.Office\.Client\.TranslationServices\.Portable@.*$</packageUrl>
+    <cpe>cpe:/a:microsoft:project_2016</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: Microsoft.SharePoint.Client.Search.Applications.dll
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:generic/Microsoft\.SharePoint\.Client\.Search\.Applications@.*$</packageUrl>
+    <cpe>cpe:/a:microsoft:office</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: Microsoft.SharePoint.Client.Search.Applications.dll
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:generic/Microsoft\.SharePoint\.Client\.Search\.Applications@.*$</packageUrl>
+    <cpe>cpe:/a:microsoft:office_2013</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: Microsoft.SharePoint.Client.Search.Applications.dll
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:generic/Microsoft\.SharePoint\.Client\.Search\.Applications@.*$</packageUrl>
+    <cpe>cpe:/a:microsoft:office_project</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: Microsoft.SharePoint.Client.Search.Applications.dll
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:generic/Microsoft\.SharePoint\.Client\.Search\.Applications@.*$</packageUrl>
+    <cpe>cpe:/a:microsoft:sharepoint_foundation</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: Microsoft.SharePoint.Client.Search.Applications.dll
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:generic/Microsoft\.SharePoint\.Client\.Search\.Applications@.*$</packageUrl>
+    <cpe>cpe:/a:microsoft:project_2016</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: Microsoft.SharePoint.Client.Search.Applications.Portable.dll
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:generic/Microsoft\.SharePoint\.Client\.Search\.Applications\.Portable@.*$</packageUrl>
+    <cpe>cpe:/a:microsoft:office</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: Microsoft.SharePoint.Client.Search.Applications.Portable.dll
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:generic/Microsoft\.SharePoint\.Client\.Search\.Applications\.Portable@.*$</packageUrl>
+    <cpe>cpe:/a:microsoft:office_2013</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: Microsoft.SharePoint.Client.Search.Applications.Portable.dll
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:generic/Microsoft\.SharePoint\.Client\.Search\.Applications\.Portable@.*$</packageUrl>
+    <cpe>cpe:/a:microsoft:office_project</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: Microsoft.SharePoint.Client.Search.Applications.Portable.dll
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:generic/Microsoft\.SharePoint\.Client\.Search\.Applications\.Portable@.*$</packageUrl>
+    <cpe>cpe:/a:microsoft:sharepoint_foundation</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: Microsoft.SharePoint.Client.Search.Applications.Portable.dll
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:generic/Microsoft\.SharePoint\.Client\.Search\.Applications\.Portable@.*$</packageUrl>
+    <cpe>cpe:/a:microsoft:project_2016</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+	   file name: DocAveOnline_Hotfix_6.7.0.5762701_20140620.zip: PatchInstallControl.zip: System.Xml.Linq.dll
+	   sliverlight is not used in Cloud Backup
+	   ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:generic/System\.Xml\.Linq@.*$</packageUrl>
+    <cpe>cpe:/a:microsoft:silverlight</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+	   file name: DocAveOnline_Hotfix_6.7.0.5762701_20140620.zip: PatchInstallControl.zip: System.Xml.Serialization.dll
+	   ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:generic/System\.Xml\.Serialization@.*$</packageUrl>
+    <cpe>cpe:/a:microsoft:silverlight</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+	   file name: Microsoft.Exchange.WebServices.ModifiedByAvePoint:3.0.0
+	   Cloud Backup use EWS in windows system
+	   ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:nuget/Microsoft\.Exchange\.WebServices\.ModifiedByAvePoint@.*$</packageUrl>
+    <cpe>cpe:/a:microsoft:services</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+	   file name: Microsoft.Office.Interop.Excel:15.0.4795.1000
+	   office is not used in CB, so this didn't have any affect
+	   ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:nuget/Microsoft\.Office\.Interop\.Excel@.*$</packageUrl>
+    <cpe>cpe:/a:microsoft:excel</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+	   file name: Microsoft.Office.Interop.Excel:15.0.4795.1000
+	   ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:nuget/Microsoft\.Office\.Interop\.Excel@.*$</packageUrl>
+    <cpe>cpe:/a:microsoft:office_excel</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+	   file name: Microsoft.Office.Interop.Excel:15.0.4795.1000
+	   ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:nuget/Microsoft\.Office\.Interop\.Excel@.*$</packageUrl>
+    <cpe>cpe:/a:microsoft:office_project</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+	   file name: Microsoft.Office.Interop.Excel:15.0.4795.1000
+	   ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:nuget/Microsoft\.Office\.Interop\.Excel@.*$</packageUrl>
+    <cpe>cpe:/a:microsoft:office</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+	   file name: Microsoft.Office.Server.UserProfiles.dll
+	   ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:generic/Microsoft\.Office\.Server\.UserProfiles@.*$</packageUrl>
+    <cpe>cpe:/a:microsoft:office</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+	   file name: Microsoft.Office.Server.UserProfiles.dll
+	   ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:generic/Microsoft\.Office\.Server\.UserProfiles@.*$</packageUrl>
+    <cpe>cpe:/a:microsoft:office_project</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+	   file name: Microsoft.Office.Server.dll
+	   ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:generic/Microsoft\.Office\.Server@.*$</packageUrl>
+    <cpe>cpe:/a:microsoft:office</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+	   file name: Microsoft.Office.Server.dll
+	   ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:generic/Microsoft\.Office\.Server@.*$</packageUrl>
+    <cpe>cpe:/a:microsoft:office_project</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+	   file name: Office.dll
+	   ]]>
+    </notes>
+    <sha1>9940cedfb3526e12744c6f358ff90fcbf2cd5bba</sha1>
+    <cpe>cpe:/a:microsoft:office</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+	   file name: Office.dll
+	   ]]>
+    </notes>
+    <sha1>9940cedfb3526e12744c6f358ff90fcbf2cd5bba</sha1>
+    <cpe>cpe:/a:microsoft:office_2007</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+	   file name: Office.dll
+	   ]]>
+    </notes>
+    <sha1>9940cedfb3526e12744c6f358ff90fcbf2cd5bba</sha1>
+    <cpe>cpe:/a:microsoft:office_project</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+	   file name: Microsoft.SharePoint.Client.ServerRuntime.dll
+	   sharepoint on-prem is not used in Cloud Backup
+	   ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:generic/Microsoft\.SharePoint\.Client\.ServerRuntime@.*$</packageUrl>
+    <cpe>cpe:/a:microsoft:sharepoint_foundation</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+	   file name: Microsoft.SharePoint.Client.ServerRuntime.dll
+	   ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:generic/Microsoft\.SharePoint\.Client\.ServerRuntime@.*$</packageUrl>
+    <cpe>cpe:/a:microsoft:sharepoint_server</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+	   file name: Microsoft.VisualStudio.Web.CodeGeneration.Design:2.1.0
+	   visual studio is not used directly in Production environment
+	   ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:nuget/Microsoft\.VisualStudio\.Web\.CodeGeneration\.Design@.*$</packageUrl>
+    <cpe>cpe:/a:microsoft:visual_studio_code</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+	   file name: log4net.dll
+	   not affect production environment
+	   ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:generic/log4net@.*$</packageUrl>
+    <cpe>cpe:/a:apache:log4net</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+	   file name: sqlite3.dll
+	   ]]>
+    </notes>
+    <sha1>438fde2939bbb9b5b437f64f21c316c17ce4a7f6</sha1>
+    <cpe>cpe:/a:sqlite:sqlite</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: ParseDCJsonReport.dll
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:generic/ParseDCJsonReport@.*$</packageUrl>
+    <cpe>cpe:/a:report_project:report</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: ParseDCJsonReport.dll
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:generic/ParseDCJsonReport@.*$</packageUrl>
+    <cve>CVE-2021-21275</cve>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: CryptographyAlgorithm.0.1.6.nupkg
+      ]]>
+    </notes>
+    <sha1>53b5af3f73138671c87e7bd483fb89f591cee291</sha1>
+    <cpe>cpe:/a:cryptography_project:cryptography</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: CryptographyAlgorithm.0.1.6.nupkg
+      ]]>
+    </notes>
+    <sha1>53b5af3f73138671c87e7bd483fb89f591cee291</sha1>
+    <cve>CVE-2020-36242</cve>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+       file name: Microsoft.IdentityModel.Protocol.Extensions.dll
+       ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:generic/Microsoft\.IdentityModel\.Protocol\.Extensions@.*$</packageUrl>
+    <cpe>cpe:/a:identitymodel_project:identitymodel</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+       file name: Microsoft.IdentityModel.Protocol.Extensions.dll
+       ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:generic/Microsoft\.IdentityModel\.Protocol\.Extensions@.*$</packageUrl>
+    <cpe>cpe:/a:microsoft:identitymodel</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+       file name: Microsoft.IdentityModel.Protocol.Extensions.1.0.0.nupkg
+       ]]>
+    </notes>
+    <sha1>052dace195325db030128a88d13c47f9c2c5a6ef</sha1>
+    <cpe>cpe:/a:identitymodel_project:identitymodel</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+       file name: Microsoft.IdentityModel.Protocol.Extensions.1.0.0.nupkg
+       ]]>
+    </notes>
+    <sha1>052dace195325db030128a88d13c47f9c2c5a6ef</sha1>
+    <cpe>cpe:/a:microsoft:identitymodel</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+       file name: SharePointPnP.IdentityModel.Extensions.1.2.3.nupkg
+       ]]>
+    </notes>
+    <sha1>f244d62d34fa6292423c3686f90534768ddce621</sha1>
+    <cpe>cpe:/a:identitymodel_project:identitymodel</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+       file name: SharePointPnP.IdentityModel.Extensions:1.2.3
+       ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:nuget/SharePointPnP\.IdentityModel\.Extensions@.*$</packageUrl>
+    <cpe>cpe:/a:identitymodel_project:identitymodel</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+	   file name: SharePointPnP.IdentityModel.Extensions.1.2.3.nupkg
+	   ]]>
+    </notes>
+    <sha1>2942dba9ff290bcbfd6e9cf65cb53051c1069848</sha1>
+    <cpe>cpe:/a:identitymodel_project:identitymodel</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+       file name: Microsoft.DiaSymReader.Native.amd64.dll
+       ]]>
+    </notes>
+    <sha1>8f3331d93a45beb42dd51a2e8de7a989413eb4ce</sha1>
+    <cpe>cpe:/a:dia:dia</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+        file name: Microsoft.DiaSymReader.Native.amd64.dll
+        ]]>
+    </notes>
+    <sha1>36ed049328fe585f2053a7e20be4b98a3c3a1f24</sha1>
+    <cpe>cpe:/a:dia:dia</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+       file name: Microsoft.DiaSymReader.Native.x86.dll
+       ]]>
+    </notes>
+    <sha1>c6f3c9d81713687dc3820d8cabf14c2a32208d27</sha1>
+    <cpe>cpe:/a:dia:dia</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+        file name: Microsoft.DiaSymReader.Native.x86.dll
+        ]]>
+    </notes>
+    <sha1>554b1310be1818fb770703c7a095c9df076a176a</sha1>
+    <cpe>cpe:/a:dia:dia</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+       file name: System.Runtime.CompilerServices.Unsafe.5.0.0.nupkg
+       ]]>
+    </notes>
+    <sha1>1ee3c1c102d9a88adee257bb07c5714d2566fc74</sha1>
+    <cpe>cpe:/a:services_project:services</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+       file name: System.Runtime.InteropServices.RuntimeInformation.4.3.0.nupkg
+       ]]>
+    </notes>
+    <sha1>f92137d883bd9d1b318ac17b6fcc8187a43265ed</sha1>
+    <cpe>cpe:/a:services_project:services</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+       file name: NLog.4.7.9.nupkg
+       ]]>
+    </notes>
+    <sha1>df595ab9009361063609a0dc9b1e5af123e0d28b</sha1>
+    <cpe>cpe:/a:nlog:nlog</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+       file name: System.Runtime.InteropServices.4.3.0.nupkg
+       ]]>
+    </notes>
+    <sha1>20521141d9c8a1ea086821c3c846f92a4074c8fd</sha1>
+    <cpe>cpe:/a:services_project:services</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+       file name: WindowsAzureTelemetryEvents.dll
+       ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:generic/WindowsAzureTelemetryEvents@.*$</packageUrl>
+    <cpe>cpe:/a:telemetry_project:telemetry</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+       file name: Microsoft.Bcl.Build.Tasks.dll
+       The published vulnerability information does not match the scanned dll
+       ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:generic/Microsoft\.Bcl\.Build\.Tasks@.*$</packageUrl>
+    <cpe>cpe:/a:tasks:tasks</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+       file name: Microsoft.Build.Tasks.CodeAnalysis.dll
+       ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:generic/Microsoft\.Build\.Tasks\.CodeAnalysis@.*$</packageUrl>
+    <cpe>cpe:/a:tasks:tasks</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+       file name: Microsoft.Data.Entity.Build.Tasks.dll
+       ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:generic/Microsoft\.Data\.Entity\.Build\.Tasks@.*$</packageUrl>
+    <cpe>cpe:/a:tasks:tasks</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+       file name: Microsoft.Threading.Tasks.dll
+       ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:generic/Microsoft\.Threading\.Tasks@.*$</packageUrl>
+    <cpe>cpe:/a:tasks:tasks</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+       file name: SonarScanner.MSBuild.Tasks.dll
+       ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:generic/SonarScanner\.MSBuild\.Tasks@.*$</packageUrl>
+    <cpe>cpe:/a:tasks:tasks</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+       file name: System.Threading.Tasks.Extensions.4.5.4.nupkg
+       ]]>
+    </notes>
+    <sha1>5ca708480099eeeace094f25df1b16614da2aac1</sha1>
+    <cpe>cpe:/a:tasks:tasks</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+       file name: System.Threading.Tasks.Extensions.dll
+       ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:generic/System\.Threading\.Tasks\.Extensions@.*$</packageUrl>
+    <cpe>cpe:/a:tasks:tasks</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+       file name: System.Threading.Tasks.Extensions:4.5.4
+       ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:nuget/System\.Threading\.Tasks\.Extensions@.*$</packageUrl>
+    <cpe>cpe:/a:tasks:tasks</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+       file name: System.Threading.Tasks.dll
+       ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:generic/System\.Threading\.Tasks@.*$</packageUrl>
+    <cpe>cpe:/a:tasks:tasks</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+       file name: Microsoft.AspNet.WebApi.HelpPage:5.2.7
+       ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:nuget/Microsoft\.AspNet\.WebApi\.HelpPage@.*$</packageUrl>
+    <cpe>cpe:/a:microsoft:asp.net</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+       file name: System.Threading.Tasks.Dataflow.dll
+       ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:generic/System\.Threading\.Tasks\.Dataflow@.*$</packageUrl>
+    <cpe>cpe:/a:tasks:tasks</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+       file name: System.Threading.Tasks.4.3.0.nupkg
+       ]]>
+    </notes>
+    <sha1>b467be2f9c92017fef3a6b98fed3bc65ddbb7c72</sha1>
+    <cpe>cpe:/a:tasks:tasks</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+       file name: System.Threading.Tasks:4.3.0
+       ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:nuget/System\.Threading\.Tasks@.*$</packageUrl>
+    <cpe>cpe:/a:tasks:tasks</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+        file name: Microsoft.Threading.Tasks.Extensions.dll
+        ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:generic/Microsoft\.Threading\.Tasks\.Extensions@.*$</packageUrl>
+    <cpe>cpe:/a:tasks:tasks</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+        file name: Microsoft.Threading.Tasks.Extensions.Desktop.dll
+        ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:generic/Microsoft\.Threading\.Tasks\.Extensions\.Desktop@.*$</packageUrl>
+    <cpe>cpe:/a:tasks:tasks</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+       file name: Microsoft.Threading.Tasks.Extensions.Phone.dll
+       ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:generic/Microsoft\.Threading\.Tasks\.Extensions\.Phone@.*$</packageUrl>
+    <cpe>cpe:/a:tasks:tasks</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+       file name: Microsoft.Threading.Tasks.Extensions.Silverlight.dll
+       ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:generic/Microsoft\.Threading\.Tasks\.Extensions\.Silverlight@.*$</packageUrl>
+    <cpe>cpe:/a:tasks:tasks</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: I18NResourceGenerator.exe
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:generic/I18NResourceGenerator@.*$</packageUrl>
+    <cpe>cpe:/a:i18n_project:i18n</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: RevIMI18N.dll
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:generic/RevIMI18N@.*$</packageUrl>
+    <cpe>cpe:/a:i18n_project:i18n</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: RevIMI18N.resources.dll
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:generic/RevIMI18N\.resources@.*$</packageUrl>
+    <cpe>cpe:/a:i18n_project:i18n</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: System.Runtime.InteropServices.4.3.0.nupkg
+      ]]>
+    </notes>
+    <sha1>f1c77c6ccc7116babf93f4a38cc0b649e44c406c</sha1>
+    <cpe>cpe:/a:services_project:services</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: System.Runtime.InteropServices.RuntimeInformation.4.3.0.nupkg
+      ]]>
+    </notes>
+    <sha1>1472055ae23d5dc721a239a40e30d4da1c4c3e03</sha1>
+    <cpe>cpe:/a:services_project:services</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: System.Threading.Tasks.4.3.0.nupkg
+      ]]>
+    </notes>
+    <sha1>9e436856f0bff3fd55edbba52a8429d33461afd1</sha1>
+    <cpe>cpe:/a:tasks:tasks</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: glob-parent:3.1.0
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:npm/glob\-parent@.*$</packageUrl>
+    <vulnerabilityName>1751</vulnerabilityName>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: js-yaml:3.7.0
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:npm/js\-yaml@.*$</packageUrl>
+    <vulnerabilityName>788</vulnerabilityName>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: js-yaml:3.7.0
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:npm/js\-yaml@.*$</packageUrl>
+    <vulnerabilityName>813</vulnerabilityName>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: js-yaml:3.7.0
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:npm/js\-yaml@.*$</packageUrl>
+    <vulnerabilityName>CWE-400: Uncontrolled Resource Consumption ('Resource Exhaustion')</vulnerabilityName>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: js-yaml:3.7.0
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:npm/js\-yaml@.*$</packageUrl>
+    <vulnerabilityName>CWE-94: Improper Control of Generation of Code ('Code Injection')</vulnerabilityName>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: minimist:0.2.1
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:npm/minimist@.*$</packageUrl>
+    <vulnerabilityName>CWE-94: Improper Control of Generation of Code ('Code Injection')</vulnerabilityName>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: node-fetch:1.7.3
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:npm/node\-fetch@.*$</packageUrl>
+    <vulnerabilityName>1556</vulnerabilityName>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: node-fetch:1.7.3
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:npm/node\-fetch@.*$</packageUrl>
+    <vulnerabilityName>CWE-400: Uncontrolled Resource Consumption ('Resource Exhaustion')</vulnerabilityName>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: normalize-url:1.9.1
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:npm/normalize\-url@.*$</packageUrl>
+    <vulnerabilityName>1755</vulnerabilityName>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: postcss:5.2.18
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:npm/postcss@.*$</packageUrl>
+    <vulnerabilityName>CWE-400: Uncontrolled Resource Consumption ('Resource Exhaustion')</vulnerabilityName>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: serialize-javascript:1.9.1
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:npm/serialize\-javascript@.*$</packageUrl>
+    <vulnerabilityName>CWE-502: Deserialization of Untrusted Data</vulnerabilityName>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: serialize-javascript:1.9.1
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:npm/serialize\-javascript@.*$</packageUrl>
+    <vulnerabilityName>CWE-79: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')</vulnerabilityName>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: serialize-javascript:4.0.0
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:npm/serialize\-javascript@.*$</packageUrl>
+    <vulnerabilityName>1426</vulnerabilityName>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: serialize-javascript:4.0.0
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:npm/serialize\-javascript@.*$</packageUrl>
+    <vulnerabilityName>1548</vulnerabilityName>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: ssri:5.3.0
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:npm/ssri@.*$</packageUrl>
+    <vulnerabilityName>CVE-2021-27290</vulnerabilityName>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: ssri:6.0.2
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:npm/ssri@.*$</packageUrl>
+    <vulnerabilityName>565</vulnerabilityName>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: trim-newlines:1.0.0
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:npm/trim\-newlines@.*$</packageUrl>
+    <vulnerabilityName>1753</vulnerabilityName>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: yargs-parser:5.0.1
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:npm/yargs\-parser@.*$</packageUrl>
+    <vulnerabilityName>1500</vulnerabilityName>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: yargs-parser:5.0.1
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:npm/yargs\-parser@.*$</packageUrl>
+    <vulnerabilityName>CVE-2020-7608</vulnerabilityName>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: yargs-parser:5.0.1
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:npm/yargs\-parser@.*$</packageUrl>
+    <vulnerabilityName>CWE-400: Uncontrolled Resource Consumption ('Resource Exhaustion')</vulnerabilityName>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: DotNetZip:1.9
+   DotNetZip.Semvered no use
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:nuget/DotNetZip@.*$</packageUrl>
+    <vulnerabilityName>CVE-2018-1002205</vulnerabilityName>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: MessagePack.dll
+   no use
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:generic/MessagePack@.*$</packageUrl>
+    <cpe>cpe:/a:messagepack:messagepack</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: FileEncodingTool.exe
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:generic/FileEncodingTool@.*$</packageUrl>
+    <cpe>cpe:/a:file_project:file</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: FileEncodingTool.exe
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:generic/FileEncodingTool@.*$</packageUrl>
+    <cve>CVE-2014-8117</cve>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: FileEncodingTool.exe
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:generic/FileEncodingTool@.*$</packageUrl>
+    <cve>CVE-2014-9652</cve>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: FileEncodingTool.exe
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:generic/FileEncodingTool@.*$</packageUrl>
+    <cve>CVE-2014-9653</cve>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: FileEncodingTool.exe
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:generic/FileEncodingTool@.*$</packageUrl>
+    <cve>CVE-2019-18218</cve>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: FileProtectedChecker.exe
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:generic/FileProtectedChecker@.*$</packageUrl>
+    <cpe>cpe:/a:file_project:file</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: FileProtectedChecker.exe
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:generic/FileProtectedChecker@.*$</packageUrl>
+    <cve>CVE-2014-8117</cve>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: FileProtectedChecker.exe
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:generic/FileProtectedChecker@.*$</packageUrl>
+    <cve>CVE-2014-9652</cve>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: FileProtectedChecker.exe
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:generic/FileProtectedChecker@.*$</packageUrl>
+    <cve>CVE-2014-9653</cve>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: FileProtectedChecker.exe
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:generic/FileProtectedChecker@.*$</packageUrl>
+    <cve>CVE-2019-18218</cve>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: Microsoft.AspNetCore.Authentication.OpenIdConnect.dll
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:generic/Microsoft\.AspNetCore\.Authentication\.OpenIdConnect@.*$</packageUrl>
+    <cpe>cpe:/a:asp-project:asp-project</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: Microsoft.AspNetCore.Authentication.OpenIdConnect.dll
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:generic/Microsoft\.AspNetCore\.Authentication\.OpenIdConnect@.*$</packageUrl>
+    <cpe>cpe:/a:microsoft:.net_core</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: Microsoft.AspNetCore.Authentication.OpenIdConnect.dll
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:generic/Microsoft\.AspNetCore\.Authentication\.OpenIdConnect@.*$</packageUrl>
+    <cpe>cpe:/a:openid:openid</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: Microsoft.AspNetCore.Authentication.OpenIdConnect.dll
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:generic/Microsoft\.AspNetCore\.Authentication\.OpenIdConnect@.*$</packageUrl>
+    <cpe>cpe:/a:openid:openid_connect</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: Microsoft.AspNetCore.Authentication.OpenIdConnect.dll
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:generic/Microsoft\.AspNetCore\.Authentication\.OpenIdConnect@.*$</packageUrl>
+    <cve>CVE-2007-1651</cve>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: Microsoft.AspNetCore.Authentication.OpenIdConnect.dll
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:generic/Microsoft\.AspNetCore\.Authentication\.OpenIdConnect@.*$</packageUrl>
+    <cve>CVE-2007-1652</cve>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: Microsoft.Office.Project.Server.Communications.16.0.4309.1000.nupkg: Microsoft.Office.Project.Server.Communications.dll
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:generic/Microsoft\.Office\.Project\.Server\.Communications@.*$</packageUrl>
+    <cpe>cpe:/a:microsoft:office_communications_server</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: Microsoft.Office.Project.Server.Communications.16.0.4309.1000.nupkg: Microsoft.Office.Project.Server.Communications.dll
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:generic/Microsoft\.Office\.Project\.Server\.Communications@.*$</packageUrl>
+    <cpe>cpe:/a:microsoft:office_project</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: Microsoft.Office.Project.Server.Communications.16.0.4309.1000.nupkg: Microsoft.Office.Project.Server.Communications.dll
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:generic/Microsoft\.Office\.Project\.Server\.Communications@.*$</packageUrl>
+    <cve>CVE-2008-5179</cve>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: Microsoft.Owin.Security.OpenIdConnect.4.1.1.nupkg: Microsoft.Owin.Security.OpenIdConnect.dll
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:generic/Microsoft\.Owin\.Security\.OpenIdConnect@.*$</packageUrl>
+    <cpe>cpe:/a:openid:openid</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: Microsoft.Owin.Security.OpenIdConnect.4.1.1.nupkg: Microsoft.Owin.Security.OpenIdConnect.dll
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:generic/Microsoft\.Owin\.Security\.OpenIdConnect@.*$</packageUrl>
+    <cpe>cpe:/a:openid:openid_connect</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: Microsoft.Owin.Security.OpenIdConnect.4.1.1.nupkg: Microsoft.Owin.Security.OpenIdConnect.dll
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:generic/Microsoft\.Owin\.Security\.OpenIdConnect@.*$</packageUrl>
+    <cve>CVE-2007-1651</cve>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: Microsoft.Owin.Security.OpenIdConnect.4.1.1.nupkg: Microsoft.Owin.Security.OpenIdConnect.dll
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:generic/Microsoft\.Owin\.Security\.OpenIdConnect@.*$</packageUrl>
+    <cve>CVE-2007-1652</cve>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: Microsoft.Owin.Security.OpenIdConnect:4.1.1
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:nuget/Microsoft\.Owin\.Security\.OpenIdConnect@.*$</packageUrl>
+    <cpe>cpe:/a:openid:openid</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: Microsoft.Owin.Security.OpenIdConnect:4.1.1
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:nuget/Microsoft\.Owin\.Security\.OpenIdConnect@.*$</packageUrl>
+    <cpe>cpe:/a:openid:openid_connect</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: Microsoft.Owin.Security.OpenIdConnect:4.1.1
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:nuget/Microsoft\.Owin\.Security\.OpenIdConnect@.*$</packageUrl>
+    <cve>CVE-2007-1651</cve>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: Microsoft.Owin.Security.OpenIdConnect:4.1.1
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:nuget/Microsoft\.Owin\.Security\.OpenIdConnect@.*$</packageUrl>
+    <cve>CVE-2007-1652</cve>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: SharePointPnP.IdentityModel.Extensions.1.2.3.nupkg: SharePointPnP.IdentityModel.Extensions.dll
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:generic/SharePointPnP\.IdentityModel\.Extensions@.*$</packageUrl>
+    <cpe>cpe:/a:identitymodel_project:identitymodel</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: SharePointPnP.IdentityModel.Extensions.1.2.3.nupkg: SharePointPnP.IdentityModel.Extensions.dll
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:generic/SharePointPnP\.IdentityModel\.Extensions@.*$</packageUrl>
+    <cve>CVE-2020-36255</cve>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: System.Net.WebSockets.4.0.0.nupkg: System.Net.WebSockets.dll
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:generic/System\.Net\.WebSockets@.*$</packageUrl>
+    <cpe>cpe:/a:websockets_project:websockets</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: System.Net.WebSockets.4.0.0.nupkg: System.Net.WebSockets.dll
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:generic/System\.Net\.WebSockets@.*$</packageUrl>
+    <cve>CVE-2021-33880</cve>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: System.Net.WebSockets.Client.dll
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:generic/System\.Net\.WebSockets\.Client@.*$</packageUrl>
+    <cpe>cpe:/a:microsoft:system.net.websockets.client</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: System.Net.WebSockets.Client.dll
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:generic/System\.Net\.WebSockets\.Client@.*$</packageUrl>
+    <cpe>cpe:/a:websockets_project:websockets</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: System.Net.WebSockets.Client.dll
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:generic/System\.Net\.WebSockets\.Client@.*$</packageUrl>
+    <cve>CVE-2021-33880</cve>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: System.Net.WebSockets.dll
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:generic/System\.Net\.WebSockets@.*$</packageUrl>
+    <cpe>cpe:/a:websockets_project:websockets</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: System.Net.WebSockets.dll
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:generic/System\.Net\.WebSockets@.*$</packageUrl>
+    <cve>CVE-2021-33880</cve>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: System.Net.WebSockets:4.0.0
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:nuget/System\.Net\.WebSockets@.*$</packageUrl>
+    <cpe>cpe:/a:websockets_project:websockets</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: System.Net.WebSockets:4.0.0
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:nuget/System\.Net\.WebSockets@.*$</packageUrl>
+    <cve>CVE-2021-33880</cve>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: color-string:0.3.0
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:npm/color\-string@.*$</packageUrl>
+    <cpe>cpe:/a:color-string_project:color-string</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: color-string:0.3.0
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:npm/color\-string@.*$</packageUrl>
+    <cve>CVE-2021-29060</cve>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: is-svg:2.1.0
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:npm/is\-svg@.*$</packageUrl>
+    <cpe>cpe:/a:is-svg_project:is-svg</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: is-svg:2.1.0
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:npm/is\-svg@.*$</packageUrl>
+    <cve>CVE-2021-28092</cve>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: is-svg:2.1.0
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:npm/is\-svg@.*$</packageUrl>
+    <cve>CVE-2021-29059</cve>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: minimist:0.2.1
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:npm/minimist@.*$</packageUrl>
+    <cpe>cpe:/a:substack:minimist</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: minimist:0.2.1
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:npm/minimist@.*$</packageUrl>
+    <cve>CVE-2020-7598</cve>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: node-fetch:1.7.3
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:npm/node\-fetch@.*$</packageUrl>
+    <cpe>cpe:/a:node-fetch_project:node-fetch</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: node-fetch:1.7.3
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:npm/node\-fetch@.*$</packageUrl>
+    <cve>CVE-2020-15168</cve>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: postcss:5.2.18
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:npm/postcss@.*$</packageUrl>
+    <cpe>cpe:/a:postcss:postcss</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: postcss:5.2.18
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:npm/postcss@.*$</packageUrl>
+    <cve>CVE-2021-23382</cve>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: postcss:6.0.23
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:npm/postcss@.*$</packageUrl>
+    <cpe>cpe:/a:postcss:postcss</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: postcss:6.0.23
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:npm/postcss@.*$</packageUrl>
+    <cve>CVE-2021-23382</cve>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: postcss:6.0.23
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:npm/postcss@.*$</packageUrl>
+    <cpe>cpe:/a:postcss:postcss</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: postcss:6.0.23
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:npm/postcss@.*$</packageUrl>
+    <cve>CVE-2021-23382</cve>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: postcss:6.0.23
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:npm/postcss@.*$</packageUrl>
+    <cpe>cpe:/a:postcss:postcss</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: postcss:6.0.23
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:npm/postcss@.*$</packageUrl>
+    <cve>CVE-2021-23382</cve>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: postcss:6.0.23
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:npm/postcss@.*$</packageUrl>
+    <cpe>cpe:/a:postcss:postcss</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: postcss:6.0.23
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:npm/postcss@.*$</packageUrl>
+    <cve>CVE-2021-23382</cve>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: trim-newlines:1.0.0
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:npm/trim\-newlines@.*$</packageUrl>
+    <cpe>cpe:/a:trim-newlines_project:trim-newlines</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: trim-newlines:1.0.0
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:npm/trim\-newlines@.*$</packageUrl>
+    <cve>CVE-2021-33623</cve>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: y18n:3.2.2
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:npm/y18n@.*$</packageUrl>
+    <cpe>cpe:/a:y18n_project:y18n</cpe>
+  </suppress>
+  <suppress>
+    <notes>
+      <![CDATA[
+      file name: y18n:3.2.2
+      ]]>
+    </notes>
+    <packageUrl regex="true">^pkg:npm/y18n@.*$</packageUrl>
+    <cve>CVE-2020-7774</cve>
+  </suppress>
+  <suppress>
+   <notes><![CDATA[
+   file name: glob-parent:3.1.0
+   ]]></notes>
+   <packageUrl regex="true">^pkg:npm/glob\-parent@.*$</packageUrl>
+   <vulnerabilityName>CWE-400: Uncontrolled Resource Consumption ('Resource Exhaustion')</vulnerabilityName>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.SharePoint.Server.2013:15.0.0
+   ]]></notes>
+   <packageUrl regex="true">^pkg:nuget/Microsoft\.SharePoint\.Server\.2013@.*$</packageUrl>
+   <cpe>cpe:/a:microsoft:project_server</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.SharePoint.Server.2013:15.0.0
+   ]]></notes>
+   <packageUrl regex="true">^pkg:nuget/Microsoft\.SharePoint\.Server\.2013@.*$</packageUrl>
+   <cpe>cpe:/a:microsoft:server</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.SharePoint.Server.2013:15.0.0
+   ]]></notes>
+   <packageUrl regex="true">^pkg:nuget/Microsoft\.SharePoint\.Server\.2013@.*$</packageUrl>
+   <cpe>cpe:/a:microsoft:sharepoint_foundation</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.SharePoint.Server.2013:15.0.0
+   ]]></notes>
+   <packageUrl regex="true">^pkg:nuget/Microsoft\.SharePoint\.Server\.2013@.*$</packageUrl>
+   <cpe>cpe:/a:microsoft:sharepoint_server</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.SharePoint.Server.2013:15.0.0
+   ]]></notes>
+   <packageUrl regex="true">^pkg:nuget/Microsoft\.SharePoint\.Server\.2013@.*$</packageUrl>
+   <cve>CVE-2008-5026</cve>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.SharePoint.Server.2013:15.0.0
+   ]]></notes>
+   <packageUrl regex="true">^pkg:nuget/Microsoft\.SharePoint\.Server\.2013@.*$</packageUrl>
+   <cve>CVE-2010-0716</cve>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.SharePoint.Server.2016:16.0.0
+   ]]></notes>
+   <packageUrl regex="true">^pkg:nuget/Microsoft\.SharePoint\.Server\.2016@.*$</packageUrl>
+   <cpe>cpe:/a:microsoft:project_2016</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.SharePoint.Server.2016:16.0.0
+   ]]></notes>
+   <packageUrl regex="true">^pkg:nuget/Microsoft\.SharePoint\.Server\.2016@.*$</packageUrl>
+   <cpe>cpe:/a:microsoft:sharepoint_foundation</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.SharePoint.Server.2016:16.0.0
+   ]]></notes>
+   <packageUrl regex="true">^pkg:nuget/Microsoft\.SharePoint\.Server\.2016@.*$</packageUrl>
+   <cpe>cpe:/a:microsoft:sharepoint_server</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.SharePoint.Server.2016:16.0.0
+   ]]></notes>
+   <packageUrl regex="true">^pkg:nuget/Microsoft\.SharePoint\.Server\.2016@.*$</packageUrl>
+   <cve>CVE-2008-5026</cve>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.SharePoint.Server.2016:16.0.0
+   ]]></notes>
+   <packageUrl regex="true">^pkg:nuget/Microsoft\.SharePoint\.Server\.2016@.*$</packageUrl>
+   <cve>CVE-2010-0716</cve>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.SharePoint.Server.2019:16.0.0
+   ]]></notes>
+   <packageUrl regex="true">^pkg:nuget/Microsoft\.SharePoint\.Server\.2019@.*$</packageUrl>
+   <cpe>cpe:/a:microsoft:project_server</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.SharePoint.Server.2019:16.0.0
+   ]]></notes>
+   <packageUrl regex="true">^pkg:nuget/Microsoft\.SharePoint\.Server\.2019@.*$</packageUrl>
+   <cpe>cpe:/a:microsoft:server</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.SharePoint.Server.2019:16.0.0
+   ]]></notes>
+   <packageUrl regex="true">^pkg:nuget/Microsoft\.SharePoint\.Server\.2019@.*$</packageUrl>
+   <cpe>cpe:/a:microsoft:sharepoint_foundation</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.SharePoint.Server.2019:16.0.0
+   ]]></notes>
+   <packageUrl regex="true">^pkg:nuget/Microsoft\.SharePoint\.Server\.2019@.*$</packageUrl>
+   <cpe>cpe:/a:microsoft:sharepoint_server</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.SharePoint.Server.2019:16.0.0
+   ]]></notes>
+   <packageUrl regex="true">^pkg:nuget/Microsoft\.SharePoint\.Server\.2019@.*$</packageUrl>
+   <cve>CVE-2008-5026</cve>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.SharePoint.Server.2019:16.0.0
+   ]]></notes>
+   <packageUrl regex="true">^pkg:nuget/Microsoft\.SharePoint\.Server\.2019@.*$</packageUrl>
+   <cve>CVE-2010-0716</cve>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: ansi-regex:0.2.1-5.0.0
+   ]]></notes>
+   <packageUrl regex="true">^pkg:npm/ansi\-regex@.*$</packageUrl>
+   <cpe>cpe:/a:ansi-regex_project:ansi-regex</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: ansi-regex:0.2.1-5.0.0
+   ]]></notes>
+   <packageUrl regex="true">^pkg:npm/ansi\-regex@.*$</packageUrl>
+   <cve>CVE-2021-3807</cve>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: lodash:4.17.21
+   ]]></notes>
+   <packageUrl regex="true">^pkg:npm/lodash@.*$</packageUrl>
+   <cpe>cpe:/a:lodash:lodash</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: lodash:4.17.21
+   ]]></notes>
+   <packageUrl regex="true">^pkg:npm/lodash@.*$</packageUrl>
+   <cve>CVE-2021-41720</cve>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: nth-check:2.0.0
+   ]]></notes>
+   <packageUrl regex="true">^pkg:npm/nth\-check@.*$</packageUrl>
+   <cpe>cpe:/a:nth-check_project:nth-check</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: nth-check:2.0.0
+   ]]></notes>
+   <packageUrl regex="true">^pkg:npm/nth\-check@.*$</packageUrl>
+   <cve>CVE-2021-3803</cve>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: set-value:2.0.1
+   ]]></notes>
+   <packageUrl regex="true">^pkg:npm/set\-value@.*$</packageUrl>
+   <cpe>cpe:/a:set-value_project:set-value</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: set-value:2.0.1
+   ]]></notes>
+   <packageUrl regex="true">^pkg:npm/set\-value@.*$</packageUrl>
+   <cve>CVE-2021-23440</cve>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: AveObjectModel.Server13.csproj
+   ]]></notes>
+   <sha1>cf5743bd8daa6f7eac070eabbf4408882af73959</sha1>
+   <cpe>cpe:/a:model_project:model</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: AveObjectModel.Server13.csproj
+   ]]></notes>
+   <sha1>cf5743bd8daa6f7eac070eabbf4408882af73959</sha1>
+   <cve>CVE-2020-36460</cve>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: AveObjectModel.Server16.csproj
+   ]]></notes>
+   <sha1>158d114d8fe69c50a40891d3a34e8bc900ccdfb3</sha1>
+   <cpe>cpe:/a:model_project:model</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: AveObjectModel.Server16.csproj
+   ]]></notes>
+   <sha1>158d114d8fe69c50a40891d3a34e8bc900ccdfb3</sha1>
+   <cve>CVE-2020-36460</cve>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: AveObjectModel.Server19.csproj
+   ]]></notes>
+   <sha1>dc5faff3c87ad0e0a918acf5d8967c9369dd6981</sha1>
+   <cpe>cpe:/a:model_project:model</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: AveObjectModel.Server19.csproj
+   ]]></notes>
+   <sha1>dc5faff3c87ad0e0a918acf5d8967c9369dd6981</sha1>
+   <cve>CVE-2020-36460</cve>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.AspNetCore.SignalR.StackExchangeRedis.dll
+   ]]></notes>
+   <packageUrl regex="true">^pkg:generic/Microsoft\.AspNetCore\.SignalR\.StackExchangeRedis@.*$</packageUrl>
+   <cve>CVE-2021-32626</cve>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: AveObjectModel.Server13.csproj
+   ]]></notes>
+   <sha1>22796b42892bc837a8d0c83ef91102e4a8b2cf9c</sha1>
+   <cpe>cpe:/a:model_project:model</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: AveObjectModel.Server13.csproj
+   ]]></notes>
+   <sha1>22796b42892bc837a8d0c83ef91102e4a8b2cf9c</sha1>
+   <cve>CVE-2020-36460</cve>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: AveObjectModel.Server16.csproj
+   ]]></notes>
+   <sha1>a6daa35ff6775c31c4b267d296c6a73bace336b2</sha1>
+   <cpe>cpe:/a:model_project:model</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: AveObjectModel.Server16.csproj
+   ]]></notes>
+   <sha1>a6daa35ff6775c31c4b267d296c6a73bace336b2</sha1>
+   <cve>CVE-2020-36460</cve>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: AveObjectModel.Server19.csproj
+   ]]></notes>
+   <sha1>255b1920339facfdb55ab5b069eb1104316b529c</sha1>
+   <cpe>cpe:/a:model_project:model</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: AveObjectModel.Server19.csproj
+   ]]></notes>
+   <sha1>255b1920339facfdb55ab5b069eb1104316b529c</sha1>
+   <cve>CVE-2020-36460</cve>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.AspNet.OData:7.0.1
+   ]]></notes>
+   <packageUrl regex="true">^pkg:nuget/Microsoft\.AspNet\.OData@.*$</packageUrl>
+   <cve>CVE-2005-2224</cve>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.AspNet.OData:7.0.1
+   ]]></notes>
+   <packageUrl regex="true">^pkg:nuget/Microsoft\.AspNet\.OData@.*$</packageUrl>
+   <cve>CVE-2008-0333</cve>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: System.Threading.Tasks.Parallel.dll
+   ]]></notes>
+   <packageUrl regex="true">^pkg:generic/System\.Threading\.Tasks\.Parallel@.*$</packageUrl>
+   <cve>CVE-2020-22475</cve>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: lodash.template:2.4.1
+   ]]></notes>
+   <packageUrl regex="true">^pkg:npm/lodash\.template@.*$</packageUrl>
+   <vulnerabilityName>1006307</vulnerabilityName>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: node-fetch:1.7.3
+   ]]></notes>
+   <packageUrl regex="true">^pkg:npm/node\-fetch@.*$</packageUrl>
+   <vulnerabilityName>1005560</vulnerabilityName>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: glob-parent:3.1.0
+   ]]></notes>
+   <packageUrl regex="true">^pkg:npm/glob\-parent@.*$</packageUrl>
+   <vulnerabilityName>1005154</vulnerabilityName>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: is-svg:2.1.0
+   ]]></notes>
+   <packageUrl regex="true">^pkg:npm/is\-svg@.*$</packageUrl>
+   <vulnerabilityName>1005427</vulnerabilityName>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: js-yaml:3.7.0
+   ]]></notes>
+   <packageUrl regex="true">^pkg:npm/js\-yaml@.*$</packageUrl>
+   <vulnerabilityName>1006351</vulnerabilityName>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: js-yaml:3.7.0
+   ]]></notes>
+   <packageUrl regex="true">^pkg:npm/js\-yaml@.*$</packageUrl>
+   <vulnerabilityName>1006356</vulnerabilityName>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: serialize-javascript:4.0.0
+   ]]></notes>
+   <packageUrl regex="true">^pkg:npm/serialize\-javascript@.*$</packageUrl>
+   <vulnerabilityName>1006073</vulnerabilityName>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: serialize-javascript:4.0.0
+   ]]></notes>
+   <packageUrl regex="true">^pkg:npm/serialize\-javascript@.*$</packageUrl>
+   <vulnerabilityName>1006230</vulnerabilityName>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: ssri:6.0.2
+   ]]></notes>
+   <packageUrl regex="true">^pkg:npm/ssri@.*$</packageUrl>
+   <vulnerabilityName>1005323</vulnerabilityName>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: trim-newlines:1.0.0
+   ]]></notes>
+   <packageUrl regex="true">^pkg:npm/trim\-newlines@.*$</packageUrl>
+   <vulnerabilityName>1005151</vulnerabilityName>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Azure.Messaging.ServiceBus.7.0.1.nupkg: Azure.Messaging.ServiceBus.dll
+   ]]></notes>
+   <packageUrl regex="true">^pkg:generic/Azure\.Messaging\.ServiceBus@.*$</packageUrl>
+   <cpe>cpe:/a:microsoft:azure_service_broker</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Azure.Messaging.ServiceBus.7.0.1.nupkg: Azure.Messaging.ServiceBus.dll
+   ]]></notes>
+   <packageUrl regex="true">^pkg:generic/Azure\.Messaging\.ServiceBus@.*$</packageUrl>
+   <cpe>cpe:/a:microsoft:platform_sdk</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Azure.Messaging.ServiceBus.7.0.1.nupkg: Azure.Messaging.ServiceBus.dll
+   ]]></notes>
+   <packageUrl regex="true">^pkg:generic/Azure\.Messaging\.ServiceBus@.*$</packageUrl>
+   <cpe>cpe:/a:microsoft:service_bus</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Castle.NVelocity:1.1.1
+   ]]></notes>
+   <packageUrl regex="true">^pkg:nuget/Castle\.NVelocity@.*$</packageUrl>
+   <cpe>cpe:/a:apache:velocity_engine</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Castle.NVelocity:1.1.1
+   ]]></notes>
+   <packageUrl regex="true">^pkg:nuget/Castle\.NVelocity@.*$</packageUrl>
+   <cpe>cpe:/a:git-bug_project:git-bug</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: DocumentFormat.OpenXml.2.13.0.nupkg: DocumentFormat.OpenXml.dll
+   ]]></notes>
+   <packageUrl regex="true">^pkg:generic/DocumentFormat\.OpenXml@.*$</packageUrl>
+   <cpe>cpe:/a:microsoft:office_word</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: DocumentFormat.OpenXml.2.13.0.nupkg: DocumentFormat.OpenXml.dll
+   ]]></notes>
+   <packageUrl regex="true">^pkg:generic/DocumentFormat\.OpenXml@.*$</packageUrl>
+   <cpe>cpe:/a:microsoft:word</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: MSTest.TestAdapter:2.1.1
+   ]]></notes>
+   <packageUrl regex="true">^pkg:nuget/MSTest\.TestAdapter@.*$</packageUrl>
+   <cpe>cpe:/a:microsoft:.net_core</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: MSTest.TestAdapter:2.1.1
+   ]]></notes>
+   <packageUrl regex="true">^pkg:nuget/MSTest\.TestAdapter@.*$</packageUrl>
+   <cpe>cpe:/a:microsoft:asp.net</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: MSTest.TestAdapter:2.1.1
+   ]]></notes>
+   <packageUrl regex="true">^pkg:nuget/MSTest\.TestAdapter@.*$</packageUrl>
+   <cpe>cpe:/a:microsoft:asp.net_core</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: MSTest.TestAdapter:2.1.1
+   ]]></notes>
+   <packageUrl regex="true">^pkg:nuget/MSTest\.TestAdapter@.*$</packageUrl>
+   <cpe>cpe:/a:microsoft:visual_studio_.net</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: MSTest.TestAdapter:2.1.1
+   ]]></notes>
+   <packageUrl regex="true">^pkg:nuget/MSTest\.TestAdapter@.*$</packageUrl>
+   <cpe>cpe:/a:microsoft:visual_studio_2017</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: MSTest.TestFramework:2.1.1
+   ]]></notes>
+   <packageUrl regex="true">^pkg:nuget/MSTest\.TestFramework@.*$</packageUrl>
+   <cpe>cpe:/a:evolution:evolution</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: MSTest.TestFramework:2.1.1
+   ]]></notes>
+   <packageUrl regex="true">^pkg:nuget/MSTest\.TestFramework@.*$</packageUrl>
+   <cpe>cpe:/a:microsoft:.net_core</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: MSTest.TestFramework:2.1.1
+   ]]></notes>
+   <packageUrl regex="true">^pkg:nuget/MSTest\.TestFramework@.*$</packageUrl>
+   <cpe>cpe:/a:microsoft:asp.net</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: MSTest.TestFramework:2.1.1
+   ]]></notes>
+   <packageUrl regex="true">^pkg:nuget/MSTest\.TestFramework@.*$</packageUrl>
+   <cpe>cpe:/a:microsoft:asp.net_core</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.AspNet.WebApi:5.2.7
+   ]]></notes>
+   <packageUrl regex="true">^pkg:nuget/Microsoft\.AspNet\.WebApi@.*$</packageUrl>
+   <cpe>cpe:/a:microsoft:web_applications</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.Azure.Active.Directory.PowerShell.Module.1.0.6694.87.nupkg: Microsoft.Azure.ActiveDirectory.Client.Framework.dll
+   ]]></notes>
+   <packageUrl regex="true">^pkg:generic/Microsoft\.Azure\.ActiveDirectory\.Client\.Framework@.*$</packageUrl>
+   <cpe>cpe:/a:microsoft:active_directory</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.Azure.Active.Directory.PowerShell.Module.1.0.6694.87.nupkg: Microsoft.Azure.ActiveDirectory.Client.Framework.dll
+   ]]></notes>
+   <packageUrl regex="true">^pkg:generic/Microsoft\.Azure\.ActiveDirectory\.Client\.Framework@.*$</packageUrl>
+   <cpe>cpe:/a:microsoft:azure_active_directory</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.Azure.Active.Directory.PowerShell.Module:1.0.6694.87
+   ]]></notes>
+   <packageUrl regex="true">^pkg:nuget/Microsoft\.Azure\.Active\.Directory\.PowerShell\.Module@.*$</packageUrl>
+   <cpe>cpe:/a:microsoft:active_directory</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.Azure.Active.Directory.PowerShell.Module:1.0.6694.87
+   ]]></notes>
+   <packageUrl regex="true">^pkg:nuget/Microsoft\.Azure\.Active\.Directory\.PowerShell\.Module@.*$</packageUrl>
+   <cpe>cpe:/a:microsoft:azure_active_directory</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.Azure.Active.Directory.PowerShell.Module:1.0.6694.87
+   ]]></notes>
+   <packageUrl regex="true">^pkg:nuget/Microsoft\.Azure\.Active\.Directory\.PowerShell\.Module@.*$</packageUrl>
+   <cpe>cpe:/a:microsoft:powershell</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.Azure.ActiveDirectory.GraphClient.2.1.0.nupkg: Microsoft.Azure.ActiveDirectory.GraphClient.dll
+   ]]></notes>
+   <packageUrl regex="true">^pkg:generic/Microsoft\.Azure\.ActiveDirectory\.GraphClient@.*$</packageUrl>
+   <cpe>cpe:/a:microsoft:active_directory</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.Azure.ActiveDirectory.GraphClient.2.1.0.nupkg: Microsoft.Azure.ActiveDirectory.GraphClient.dll
+   ]]></notes>
+   <packageUrl regex="true">^pkg:generic/Microsoft\.Azure\.ActiveDirectory\.GraphClient@.*$</packageUrl>
+   <cpe>cpe:/a:microsoft:azure_active_directory</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.Azure.ActiveDirectory.GraphClient:2.1.0
+   ]]></notes>
+   <packageUrl regex="true">^pkg:nuget/Microsoft\.Azure\.ActiveDirectory\.GraphClient@.*$</packageUrl>
+   <cpe>cpe:/a:microsoft:active_directory</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.Azure.ActiveDirectory.GraphClient:2.1.0
+   ]]></notes>
+   <packageUrl regex="true">^pkg:nuget/Microsoft\.Azure\.ActiveDirectory\.GraphClient@.*$</packageUrl>
+   <cpe>cpe:/a:microsoft:azure_active_directory</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.Azure.Common:2.1.0
+   ]]></notes>
+   <packageUrl regex="true">^pkg:nuget/Microsoft\.Azure\.Common@.*$</packageUrl>
+   <cpe>cpe:/a:microsoft:azure_active_directory</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.Azure.KeyVault.3.0.2.nupkg: Microsoft.Azure.KeyVault.dll
+   ]]></notes>
+   <packageUrl regex="true">^pkg:generic/Microsoft\.Azure\.KeyVault@.*$</packageUrl>
+   <cpe>cpe:/a:microsoft:azure_active_directory</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.Azure.Services.AppAuthentication:1.0.3
+   ]]></notes>
+   <packageUrl regex="true">^pkg:nuget/Microsoft\.Azure\.Services\.AppAuthentication@.*$</packageUrl>
+   <cpe>cpe:/a:microsoft:active_directory_services</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.Azure.Services.AppAuthentication:1.0.3
+   ]]></notes>
+   <packageUrl regex="true">^pkg:nuget/Microsoft\.Azure\.Services\.AppAuthentication@.*$</packageUrl>
+   <cpe>cpe:/a:microsoft:azure_active_directory</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.Azure.Services.AppAuthentication:1.0.3
+   ]]></notes>
+   <packageUrl regex="true">^pkg:nuget/Microsoft\.Azure\.Services\.AppAuthentication@.*$</packageUrl>
+   <cpe>cpe:/a:microsoft:services</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.Bcl.Async:1.0.168
+   ]]></notes>
+   <packageUrl regex="true">^pkg:nuget/Microsoft\.Bcl\.Async@.*$</packageUrl>
+   <cpe>cpe:/a:microsoft:silverlight</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.Bcl.Async:1.0.168
+   ]]></notes>
+   <packageUrl regex="true">^pkg:nuget/Microsoft\.Bcl\.Async@.*$</packageUrl>
+   <cpe>cpe:/a:microsoft:visual_studio_.net</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.Bcl.HashCode:1.1.0
+   ]]></notes>
+   <packageUrl regex="true">^pkg:nuget/Microsoft\.Bcl\.HashCode@.*$</packageUrl>
+   <cpe>cpe:/a:microsoft:.net_core</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.Bcl.HashCode:1.1.0
+   ]]></notes>
+   <packageUrl regex="true">^pkg:nuget/Microsoft\.Bcl\.HashCode@.*$</packageUrl>
+   <cpe>cpe:/a:microsoft:nuget</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.Bcl.HashCode:1.1.0
+   ]]></notes>
+   <packageUrl regex="true">^pkg:nuget/Microsoft\.Bcl\.HashCode@.*$</packageUrl>
+   <cpe>cpe:/a:microsoft:project_standard</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.Bcl:1.1.9
+   ]]></notes>
+   <packageUrl regex="true">^pkg:nuget/Microsoft\.Bcl@.*$</packageUrl>
+   <cpe>cpe:/a:microsoft:silverlight</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.CodeDom.Providers.DotNetCompilerPlatform:2.0.1
+   ]]></notes>
+   <packageUrl regex="true">^pkg:nuget/Microsoft\.CodeDom\.Providers\.DotNetCompilerPlatform@.*$</packageUrl>
+   <cpe>cpe:/a:microsoft:asp.net</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.Exchange.WebServices.ModifiedByAvePoint:2017.11.7
+   ]]></notes>
+   <packageUrl regex="true">^pkg:nuget/Microsoft\.Exchange\.WebServices\.ModifiedByAvePoint@.*$</packageUrl>
+   <cpe>cpe:/a:microsoft:exchange</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.Exchange.WebServices.ModifiedByAvePoint:2017.11.7
+   ]]></notes>
+   <packageUrl regex="true">^pkg:nuget/Microsoft\.Exchange\.WebServices\.ModifiedByAvePoint@.*$</packageUrl>
+   <cpe>cpe:/a:microsoft:web_applications</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.IdentityModel.Clients.ActiveDirectory:3.19.8
+   ]]></notes>
+   <packageUrl regex="true">^pkg:nuget/Microsoft\.IdentityModel\.Clients\.ActiveDirectory@.*$</packageUrl>
+   <cpe>cpe:/a:microsoft:active_directory</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.IdentityModel.Clients.ActiveDirectory:3.19.8
+   ]]></notes>
+   <packageUrl regex="true">^pkg:nuget/Microsoft\.IdentityModel\.Clients\.ActiveDirectory@.*$</packageUrl>
+   <cpe>cpe:/a:microsoft:active_directory_application_mode</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.IdentityModel.Clients.ActiveDirectory:3.19.8
+   ]]></notes>
+   <packageUrl regex="true">^pkg:nuget/Microsoft\.IdentityModel\.Clients\.ActiveDirectory@.*$</packageUrl>
+   <cpe>cpe:/a:microsoft:active_directory_authentication_library</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.IdentityModel.Clients.ActiveDirectory:3.19.8
+   ]]></notes>
+   <packageUrl regex="true">^pkg:nuget/Microsoft\.IdentityModel\.Clients\.ActiveDirectory@.*$</packageUrl>
+   <cpe>cpe:/a:microsoft:azure_active_directory</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.IdentityModel.Clients.ActiveDirectory:3.19.8
+   ]]></notes>
+   <packageUrl regex="true">^pkg:nuget/Microsoft\.IdentityModel\.Clients\.ActiveDirectory@.*$</packageUrl>
+   <cpe>cpe:/a:microsoft:identitymodel</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.Owin.Host.SystemWeb:4.1.1
+   ]]></notes>
+   <packageUrl regex="true">^pkg:nuget/Microsoft\.Owin\.Host\.SystemWeb@.*$</packageUrl>
+   <cpe>cpe:/a:microsoft:web_applications</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.Owin.Security.Cookies:4.1.1
+   ]]></notes>
+   <packageUrl regex="true">^pkg:nuget/Microsoft\.Owin\.Security\.Cookies@.*$</packageUrl>
+   <cpe>cpe:/a:asp-project:asp-project</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.Owin.Security.Cookies:4.1.1
+   ]]></notes>
+   <packageUrl regex="true">^pkg:nuget/Microsoft\.Owin\.Security\.Cookies@.*$</packageUrl>
+   <cpe>cpe:/a:microsoft:asp.net</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: WindowsAzure.ServiceBus:4.1.3
+   ]]></notes>
+   <packageUrl regex="true">^pkg:nuget/WindowsAzure\.ServiceBus@.*$</packageUrl>
+   <cpe>cpe:/a:microsoft:service_bus</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: WindowsAzure.ServiceBus:4.1.3
+   ]]></notes>
+   <packageUrl regex="true">^pkg:nuget/WindowsAzure\.ServiceBus@.*$</packageUrl>
+   <cpe>cpe:/a:microsoft:windows_messaging</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: ZXing.Net:0.16.5
+   ]]></notes>
+   <packageUrl regex="true">^pkg:nuget/ZXing\.Net@.*$</packageUrl>
+   <cpe>cpe:/a:image-processing_project:image-processing</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: ZXing.Net:0.16.5
+   ]]></notes>
+   <packageUrl regex="true">^pkg:nuget/ZXing\.Net@.*$</packageUrl>
+   <cpe>cpe:/a:image_processing_software:image_processing_software</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: ansi-regex:4.1.0
+   ]]></notes>
+   <packageUrl regex="true">^pkg:npm/ansi\-regex@.*$</packageUrl>
+   <vulnerabilityName>1004946</vulnerabilityName>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: color-string:0.3.0
+   ]]></notes>
+   <packageUrl regex="true">^pkg:npm/color\-string@.*$</packageUrl>
+   <vulnerabilityName>1005112</vulnerabilityName>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: nth-check:2.0.0
+   ]]></notes>
+   <packageUrl regex="true">^pkg:npm/nth\-check@.*$</packageUrl>
+   <vulnerabilityName>1004967</vulnerabilityName>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: trim-newlines:1.0.0
+   ]]></notes>
+   <packageUrl regex="true">^pkg:npm/trim\-newlines@.*$</packageUrl>
+   <vulnerabilityName>1006754</vulnerabilityName>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.AspNet.WebApi.WebHost:5.2.7
+   ]]></notes>
+   <packageUrl regex="true">^pkg:nuget/Microsoft\.AspNet\.WebApi\.WebHost@.*$</packageUrl>
+   <cpe>cpe:/a:microsoft:web_applications</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.Azure.ActiveDirectory.Client.Framework:1.0.8362.1
+   ]]></notes>
+   <packageUrl regex="true">^pkg:nuget/Microsoft\.Azure\.ActiveDirectory\.Client\.Framework@.*$</packageUrl>
+   <cpe>cpe:/a:microsoft:active_directory</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.Azure.ActiveDirectory.Client.Framework:1.0.8362.1
+   ]]></notes>
+   <packageUrl regex="true">^pkg:nuget/Microsoft\.Azure\.ActiveDirectory\.Client\.Framework@.*$</packageUrl>
+   <cpe>cpe:/a:microsoft:azure_active_directory</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.Exchange.WebServices.ModifiedByAvePoint:2017.11.7
+   ]]></notes>
+   <packageUrl regex="true">^pkg:nuget/Microsoft\.Exchange\.WebServices\.ModifiedByAvePoint@.*$</packageUrl>
+   <cpe>cpe:/a:microsoft:office_365</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.Exchange.WebServices.ModifiedByAvePoint:2017.11.7
+   ]]></notes>
+   <packageUrl regex="true">^pkg:nuget/Microsoft\.Exchange\.WebServices\.ModifiedByAvePoint@.*$</packageUrl>
+   <cpe>cpe:/a:microsoft:office_online_server</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.Owin.Host.SystemWeb:4.1.1
+   ]]></notes>
+   <packageUrl regex="true">^pkg:nuget/Microsoft\.Owin\.Host\.SystemWeb@.*$</packageUrl>
+   <cpe>cpe:/a:microsoft:asp.net</cpe>
+</suppress>
+	<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.Bcl.Async:1.0.168
+   ]]></notes>
+   <packageUrl regex="true">^pkg:nuget/Microsoft\.Bcl\.Async@.*$</packageUrl>
+   <cpe>cpe:/a:async_project:async</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.Bcl.AsyncInterfaces:1.0.0
+   ]]></notes>
+   <packageUrl regex="true">^pkg:nuget/Microsoft\.Bcl\.AsyncInterfaces@.*$</packageUrl>
+   <cpe>cpe:/a:async_project:async</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.Bcl.AsyncInterfaces:1.1.1
+   ]]></notes>
+   <packageUrl regex="true">^pkg:nuget/Microsoft\.Bcl\.AsyncInterfaces@.*$</packageUrl>
+   <cpe>cpe:/a:async_project:async</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: RazorEngine.3.10.0.nupkg: RazorEngine.dll
+   ]]></notes>
+   <packageUrl regex="true">^pkg:generic/RazorEngine@.*$</packageUrl>
+   <cpe>cpe:/a:razorengine_project:razorengine</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: System.ComponentModel.EventBasedAsync.4.0.11.nupkg: System.ComponentModel.EventBasedAsync.dll
+   ]]></notes>
+   <packageUrl regex="true">^pkg:generic/System\.ComponentModel\.EventBasedAsync@.*$</packageUrl>
+   <cpe>cpe:/a:async_project:async</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: async:2.6.3
+   ]]></notes>
+   <packageUrl regex="true">^pkg:npm/async@.*$</packageUrl>
+   <cpe>cpe:/a:async_project:async</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: zlib.net.1.0.4.0.nupkg: zlib.net.dll
+   ]]></notes>
+   <packageUrl regex="true">^pkg:generic/zlib\.net@.*$</packageUrl>
+   <cpe>cpe:/a:zlib:zlib</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: zlib.net:1.0.4.0
+   ]]></notes>
+   <packageUrl regex="true">^pkg:nuget/zlib\.net@.*$</packageUrl>
+   <cpe>cpe:/a:zlib:zlib</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.AspNetCore.SignalR.StackExchangeRedis.dll
+   ]]></notes>
+   <packageUrl regex="true">^pkg:generic/Microsoft\.AspNetCore\.SignalR\.StackExchangeRedis@.*$</packageUrl>
+   <cve>CVE-2021-32672</cve>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.AspNetCore.SignalR.StackExchangeRedis.dll
+   ]]></notes>
+   <packageUrl regex="true">^pkg:generic/Microsoft\.AspNetCore\.SignalR\.StackExchangeRedis@.*$</packageUrl>
+   <cve>CVE-2022-24735</cve>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.AspNetCore.SignalR.StackExchangeRedis.dll
+   ]]></notes>
+   <packageUrl regex="true">^pkg:generic/Microsoft\.AspNetCore\.SignalR\.StackExchangeRedis@.*$</packageUrl>
+   <cve>CVE-2022-24736</cve>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: StackExchange.Redis.dll
+   ]]></notes>
+   <packageUrl regex="true">^pkg:generic/StackExchange\.Redis@.*$</packageUrl>
+   <cve>CVE-2022-24735</cve>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: StackExchange.Redis.dll
+   ]]></notes>
+   <packageUrl regex="true">^pkg:generic/StackExchange\.Redis@.*$</packageUrl>
+   <cve>CVE-2022-24736</cve>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: minimist:1.2.6
+   ]]></notes>
+   <packageUrl regex="true">^pkg:npm/minimist@.*$</packageUrl>
+   <vulnerabilityName>1067342</vulnerabilityName>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: color-string:0.3.0
+   ]]></notes>
+   <packageUrl regex="true">^pkg:npm/color\-string@.*$</packageUrl>
+   <vulnerabilityName>1067818</vulnerabilityName>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: js-yaml:3.7.0
+   ]]></notes>
+   <packageUrl regex="true">^pkg:npm/js\-yaml@.*$</packageUrl>
+   <vulnerabilityName>1069598</vulnerabilityName>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: js-yaml:3.7.0
+   ]]></notes>
+   <packageUrl regex="true">^pkg:npm/js\-yaml@.*$</packageUrl>
+   <vulnerabilityName>1069604</vulnerabilityName>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: lodash.template:2.4.1
+   ]]></notes>
+   <packageUrl regex="true">^pkg:npm/lodash\.template@.*$</packageUrl>
+   <vulnerabilityName>CVE-2021-23337</vulnerabilityName>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: lodash.template:2.4.1
+   ]]></notes>
+   <packageUrl regex="true">^pkg:npm/lodash\.template@.*$</packageUrl>
+   <vulnerabilityName>1069553</vulnerabilityName>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: lodash.template:2.4.1
+   ]]></notes>
+   <packageUrl regex="true">^pkg:npm/lodash\.template@.*$</packageUrl>
+   <vulnerabilityName>CVE-2021-23337</vulnerabilityName>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: minimist:1.2.6
+   ]]></notes>
+   <packageUrl regex="true">^pkg:npm/minimist@.*$</packageUrl>
+   <vulnerabilityName>1067342</vulnerabilityName>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: postcss:5.2.18
+   ]]></notes>
+   <packageUrl regex="true">^pkg:npm/postcss@.*$</packageUrl>
+   <vulnerabilityName>CVE-2021-23368</vulnerabilityName>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: postcss:6.0.23
+   ]]></notes>
+   <packageUrl regex="true">^pkg:npm/postcss@.*$</packageUrl>
+   <vulnerabilityName>CVE-2021-23368</vulnerabilityName>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: postcss:6.0.23
+   ]]></notes>
+   <packageUrl regex="true">^pkg:npm/postcss@.*$</packageUrl>
+   <vulnerabilityName>1070012</vulnerabilityName>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: postcss:6.0.23
+   ]]></notes>
+   <packageUrl regex="true">^pkg:npm/postcss@.*$</packageUrl>
+   <vulnerabilityName>CVE-2021-23368</vulnerabilityName>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: serialize-javascript:1.9.1
+   ]]></notes>
+   <packageUrl regex="true">^pkg:npm/serialize\-javascript@.*$</packageUrl>
+   <vulnerabilityName>CVE-2019-16769</vulnerabilityName>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: serialize-javascript:4.0.0
+   ]]></notes>
+   <packageUrl regex="true">^pkg:npm/serialize\-javascript@.*$</packageUrl>
+   <vulnerabilityName>1069320</vulnerabilityName>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: serialize-javascript:4.0.0
+   ]]></notes>
+   <packageUrl regex="true">^pkg:npm/serialize\-javascript@.*$</packageUrl>
+   <vulnerabilityName>1069476</vulnerabilityName>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: ssri:6.0.2
+   ]]></notes>
+   <packageUrl regex="true">^pkg:npm/ssri@.*$</packageUrl>
+   <vulnerabilityName>1068080</vulnerabilityName>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: trim-newlines:1.0.0
+   ]]></notes>
+   <packageUrl regex="true">^pkg:npm/trim\-newlines@.*$</packageUrl>
+   <vulnerabilityName>1070391</vulnerabilityName>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: serialize-javascript:1.9.1
+   ]]></notes>
+   <packageUrl regex="true">^pkg:npm/serialize\-javascript@.*$</packageUrl>
+   <vulnerabilityName>CVE-2020-7660</vulnerabilityName>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: DocumentFormat.OpenXml.2.13.0.nupkg: DocumentFormat.OpenXml.dll
+   ]]></notes>
+   <packageUrl regex="true">^pkg:generic/DocumentFormat\.OpenXml@.*$</packageUrl>
+   <cpe>cpe:/a:microsoft:powerpoint</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: DocumentFormat.OpenXml.2.13.0.nupkg: DocumentFormat.OpenXml.dll
+   ]]></notes>
+   <packageUrl regex="true">^pkg:generic/DocumentFormat\.OpenXml@.*$</packageUrl>
+   <cve>CVE-2007-0913</cve>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: DocumentFormat.OpenXml.2.13.0.nupkg: DocumentFormat.OpenXml.dll
+   ]]></notes>
+   <packageUrl regex="true">^pkg:generic/DocumentFormat\.OpenXml@.*$</packageUrl>
+   <cve>CVE-2001-0718</cve>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.Identity.Client.4.39.0.nupkg: Microsoft.Identity.Client.dll
+   ]]></notes>
+   <packageUrl regex="true">^pkg:generic/Microsoft\.Identity\.Client@.*$</packageUrl>
+   <cpe>cpe:/a:http_authentication_library_project:http_authentication_library</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.Identity.Client.4.39.0.nupkg: Microsoft.Identity.Client.dll
+   ]]></notes>
+   <packageUrl regex="true">^pkg:generic/Microsoft\.Identity\.Client@.*$</packageUrl>
+   <cve>CVE-2019-20138</cve>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: NVelocity.1.2.0.nupkg: NVelocity.dll
+   ]]></notes>
+   <packageUrl regex="true">^pkg:generic/NVelocity@.*$</packageUrl>
+   <cpe>cpe:/a:apache:velocity_engine</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: NVelocity.1.2.0.nupkg: NVelocity.dll
+   ]]></notes>
+   <packageUrl regex="true">^pkg:generic/NVelocity@.*$</packageUrl>
+   <cve>CVE-2020-13936</cve>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.AspNetCore.SignalR.StackExchangeRedis.dll
+   ]]></notes>
+   <packageUrl regex="true">^pkg:generic/Microsoft\.AspNetCore\.SignalR\.StackExchangeRedis@.*$</packageUrl>
+   <cpe>cpe:/a:asp-project:asp-project</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.AspNetCore.SignalR.StackExchangeRedis.dll
+   ]]></notes>
+   <packageUrl regex="true">^pkg:generic/Microsoft\.AspNetCore\.SignalR\.StackExchangeRedis@.*$</packageUrl>
+   <cpe>cpe:/a:microsoft:.net_core</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.AspNetCore.SignalR.StackExchangeRedis.dll
+   ]]></notes>
+   <packageUrl regex="true">^pkg:generic/Microsoft\.AspNetCore\.SignalR\.StackExchangeRedis@.*$</packageUrl>
+   <cpe>cpe:/a:microsoft:exchange</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.AspNetCore.SignalR.StackExchangeRedis.dll
+   ]]></notes>
+   <packageUrl regex="true">^pkg:generic/Microsoft\.AspNetCore\.SignalR\.StackExchangeRedis@.*$</packageUrl>
+   <cpe>cpe:/a:redis:redis</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.AspNetCore.SignalR.StackExchangeRedis.dll
+   ]]></notes>
+   <packageUrl regex="true">^pkg:generic/Microsoft\.AspNetCore\.SignalR\.StackExchangeRedis@.*$</packageUrl>
+   <cve>CVE-2021-32762</cve>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.AspNetCore.SignalR.StackExchangeRedis.dll
+   ]]></notes>
+   <packageUrl regex="true">^pkg:generic/Microsoft\.AspNetCore\.SignalR\.StackExchangeRedis@.*$</packageUrl>
+   <cve>CVE-2022-31144</cve>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.AspNetCore.SignalR.StackExchangeRedis.dll
+   ]]></notes>
+   <packageUrl regex="true">^pkg:generic/Microsoft\.AspNetCore\.SignalR\.StackExchangeRedis@.*$</packageUrl>
+   <cve>CVE-2021-32627</cve>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.AspNetCore.SignalR.StackExchangeRedis.dll
+   ]]></notes>
+   <packageUrl regex="true">^pkg:generic/Microsoft\.AspNetCore\.SignalR\.StackExchangeRedis@.*$</packageUrl>
+   <cve>CVE-2021-32628</cve>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.AspNetCore.SignalR.StackExchangeRedis.dll
+   ]]></notes>
+   <packageUrl regex="true">^pkg:generic/Microsoft\.AspNetCore\.SignalR\.StackExchangeRedis@.*$</packageUrl>
+   <cve>CVE-2021-32675</cve>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.AspNetCore.SignalR.StackExchangeRedis.dll
+   ]]></notes>
+   <packageUrl regex="true">^pkg:generic/Microsoft\.AspNetCore\.SignalR\.StackExchangeRedis@.*$</packageUrl>
+   <cve>CVE-2021-32687</cve>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.AspNetCore.SignalR.StackExchangeRedis.dll
+   ]]></notes>
+   <packageUrl regex="true">^pkg:generic/Microsoft\.AspNetCore\.SignalR\.StackExchangeRedis@.*$</packageUrl>
+   <cve>CVE-2021-41099</cve>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: StackExchange.Redis.dll
+   ]]></notes>
+   <packageUrl regex="true">^pkg:generic/StackExchange\.Redis@.*$</packageUrl>
+   <cpe>cpe:/a:redis:redis</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: StackExchange.Redis.dll
+   ]]></notes>
+   <packageUrl regex="true">^pkg:generic/StackExchange\.Redis@.*$</packageUrl>
+   <cve>CVE-2022-31144</cve>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: jquery.validate.min.js
+   ]]></notes>
+   <packageUrl regex="true">^pkg:javascript/jquery\-validation@.*$</packageUrl>
+   <cve>CVE-2021-21252</cve>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: jquery.validate.min.js
+   ]]></notes>
+   <packageUrl regex="true">^pkg:javascript/jquery\-validation@.*$</packageUrl>
+   <vulnerabilityName>ReDoS vulnerability in URL2 validation</vulnerabilityName>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: jquery-ui.js
+   ]]></notes>
+   <packageUrl regex="true">^pkg:javascript/jquery\-ui@.*$</packageUrl>
+   <cve>CVE-2021-41182</cve>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: jquery-ui.js
+   ]]></notes>
+   <packageUrl regex="true">^pkg:javascript/jquery\-ui@.*$</packageUrl>
+   <cve>CVE-2021-41183</cve>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: jquery-ui.js
+   ]]></notes>
+   <packageUrl regex="true">^pkg:javascript/jquery\-ui@.*$</packageUrl>
+   <cve>CVE-2021-41184</cve>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: jquery-ui.js
+   ]]></notes>
+   <packageUrl regex="true">^pkg:javascript/jquery\-ui@.*$</packageUrl>
+   <cve>CVE-2022-31160</cve>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: jquery-ui.min.js
+   ]]></notes>
+   <packageUrl regex="true">^pkg:javascript/jquery\-ui@.*$</packageUrl>
+   <cve>CVE-2021-41182</cve>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: jquery-ui.min.js
+   ]]></notes>
+   <packageUrl regex="true">^pkg:javascript/jquery\-ui@.*$</packageUrl>
+   <cve>CVE-2021-41183</cve>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: jquery-ui.min.js
+   ]]></notes>
+   <packageUrl regex="true">^pkg:javascript/jquery\-ui@.*$</packageUrl>
+   <cve>CVE-2021-41184</cve>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: jquery-ui.min.js
+   ]]></notes>
+   <packageUrl regex="true">^pkg:javascript/jquery\-ui@.*$</packageUrl>
+   <cve>CVE-2022-31160</cve>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: AveObjectModel.Server13.csproj
+   ]]></notes>
+   <sha1>01a00424a3179a1acde3e9803a89c3598abc6fe6</sha1>
+   <cpe>cpe:/a:model_project:model</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: AveObjectModel.Server16.csproj
+   ]]></notes>
+   <sha1>eea7bde9985a5dee93f9c8c773832c9452791ae7</sha1>
+   <cpe>cpe:/a:model_project:model</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: AveObjectModel.Server19.csproj
+   ]]></notes>
+   <sha1>7755aea6f00708c058d45bd1087e4bfbe701c417</sha1>
+   <cpe>cpe:/a:model_project:model</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Castle.Core.AsyncInterceptor.dll
+   ]]></notes>
+   <packageUrl regex="true">^pkg:generic/Castle\.Core\.AsyncInterceptor@.*$</packageUrl>
+   <cpe>cpe:/a:async_project:async</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.AspNetCore.Hosting.Server.Abstractions.dll
+   ]]></notes>
+   <packageUrl regex="true">^pkg:generic/Microsoft\.AspNetCore\.Hosting\.Server\.Abstractions@.*$</packageUrl>
+   <cpe>cpe:/a:asp-project:asp-project</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.AspNetCore.Hosting.Server.Abstractions.dll
+   ]]></notes>
+   <packageUrl regex="true">^pkg:generic/Microsoft\.AspNetCore\.Hosting\.Server\.Abstractions@.*$</packageUrl>
+   <cpe>cpe:/a:microsoft:.net_core</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.CodeAnalysis.Razor.dll
+   ]]></notes>
+   <packageUrl regex="true">^pkg:generic/Microsoft\.CodeAnalysis\.Razor@.*$</packageUrl>
+   <cpe>cpe:/a:microsoft:.net_core</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.CodeAnalysis.Razor.dll
+   ]]></notes>
+   <packageUrl regex="true">^pkg:generic/Microsoft\.CodeAnalysis\.Razor@.*$</packageUrl>
+   <cpe>cpe:/a:microsoft:asp.net</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.CodeAnalysis.Razor.dll
+   ]]></notes>
+   <packageUrl regex="true">^pkg:generic/Microsoft\.CodeAnalysis\.Razor@.*$</packageUrl>
+   <cpe>cpe:/a:microsoft:asp.net_core</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.IdentityModel:6.1.7600.16394
+   ]]></notes>
+   <packageUrl regex="true">^pkg:nuget/Microsoft\.IdentityModel@.*$</packageUrl>
+   <cpe>cpe:/a:microsoft:identitymodel</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.NETCore.App:2.2.8
+   ]]></notes>
+   <packageUrl regex="true">^pkg:nuget/Microsoft\.NETCore\.App@.*$</packageUrl>
+   <vulnerabilityName>CVE-2021-24112</vulnerabilityName>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.NETCore.App:2.2.8
+   ]]></notes>
+   <packageUrl regex="true">^pkg:nuget/Microsoft\.NETCore\.App@.*$</packageUrl>
+   <vulnerabilityName>CVE-2021-43877</vulnerabilityName>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.NETCore.App:2.2.8
+   ]]></notes>
+   <packageUrl regex="true">^pkg:nuget/Microsoft\.NETCore\.App@.*$</packageUrl>
+   <vulnerabilityName>CVE-2020-1108</vulnerabilityName>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.NETCore.App:2.2.8
+   ]]></notes>
+   <packageUrl regex="true">^pkg:nuget/Microsoft\.NETCore\.App@.*$</packageUrl>
+   <vulnerabilityName>CVE-2021-1723</vulnerabilityName>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.NETCore.App:2.2.8
+   ]]></notes>
+   <packageUrl regex="true">^pkg:nuget/Microsoft\.NETCore\.App@.*$</packageUrl>
+   <vulnerabilityName>CVE-2021-31957</vulnerabilityName>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.Net.Http.Headers.dll
+   ]]></notes>
+   <packageUrl regex="true">^pkg:generic/Microsoft\.Net\.Http\.Headers@.*$</packageUrl>
+   <cpe>cpe:/a:microsoft:.net_core</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: System.Data.SqlClient:4.8.3
+   ]]></notes>
+   <packageUrl regex="true">^pkg:nuget/System\.Data\.SqlClient@.*$</packageUrl>
+   <vulnerabilityName>CVE-2022-41064</vulnerabilityName>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: RazorEngine.NetCore:3.1.0
+   ]]></notes>
+   <packageUrl regex="true">^pkg:nuget/RazorEngine\.NetCore@.*$</packageUrl>
+   <cpe>cpe:/a:razorengine_project:razorengine</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: nuget.exe
+   ]]></notes>
+   <packageUrl regex="true">^pkg:generic/NuGet@.*$</packageUrl>
+   <cpe>cpe:/a:microsoft:nuget</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.AspNetCore.StaticFiles.dll
+   ]]></notes>
+   <packageUrl regex="true">^pkg:generic/Microsoft\.AspNetCore\.StaticFiles@.*$</packageUrl>
+   <cpe>cpe:/a:asp-project:asp-project</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.AspNetCore.StaticFiles.dll
+   ]]></notes>
+   <packageUrl regex="true">^pkg:generic/Microsoft\.AspNetCore\.StaticFiles@.*$</packageUrl>
+   <cpe>cpe:/a:microsoft:.net_core</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.Extensions.Hosting.Abstractions.dll
+   ]]></notes>
+   <packageUrl regex="true">^pkg:generic/Microsoft\.Extensions\.Hosting\.Abstractions@.*$</packageUrl>
+   <cpe>cpe:/a:microsoft:.net_core</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.IdentityModel:6.1.7600.16394
+   ]]></notes>
+   <packageUrl regex="true">^pkg:nuget/Microsoft\.IdentityModel@.*$</packageUrl>
+   <vulnerabilityName>CVE-2019-1006</vulnerabilityName>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.AspNetCore.Http.Extensions.dll
+   ]]></notes>
+   <packageUrl regex="true">^pkg:generic/Microsoft\.AspNetCore\.Http\.Extensions@.*$</packageUrl>
+   <cpe>cpe:/a:asp-project:asp-project</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.AspNetCore.Http.Extensions.dll
+   ]]></notes>
+   <packageUrl regex="true">^pkg:generic/Microsoft\.AspNetCore\.Http\.Extensions@.*$</packageUrl>
+   <cpe>cpe:/a:microsoft:.net_core</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.AspNetCore.Http.Abstractions.dll
+   ]]></notes>
+   <packageUrl regex="true">^pkg:generic/Microsoft\.AspNetCore\.Http\.Abstractions@.*$</packageUrl>
+   <cpe>cpe:/a:asp-project:asp-project</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.AspNetCore.Http.Abstractions.dll
+   ]]></notes>
+   <packageUrl regex="true">^pkg:generic/Microsoft\.AspNetCore\.Http\.Abstractions@.*$</packageUrl>
+   <cpe>cpe:/a:microsoft:.net_core</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Storage.Modern:1.1.3
+   ]]></notes>
+   <packageUrl regex="true">^pkg:nuget/Storage\.Modern@.*$</packageUrl>
+   <cpe>cpe:/a:storage_project:storage</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Storage.dll
+   ]]></notes>
+   <packageUrl regex="true">^pkg:generic/Storage@.*$</packageUrl>
+   <cpe>cpe:/a:storage_project:storage</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: StorageCloudAmazon.dll
+   ]]></notes>
+   <packageUrl regex="true">^pkg:generic/StorageCloudAmazon@.*$</packageUrl>
+   <cpe>cpe:/a:storage_project:storage</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: StorageCloudAzure.dll
+   ]]></notes>
+   <packageUrl regex="true">^pkg:generic/StorageCloudAzure@.*$</packageUrl>
+   <cpe>cpe:/a:storage_project:storage</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: StorageCloudCommon.dll
+   ]]></notes>
+   <packageUrl regex="true">^pkg:generic/StorageCloudCommon@.*$</packageUrl>
+   <cpe>cpe:/a:storage_project:storage</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: StorageCloudDropbox.dll
+   ]]></notes>
+   <packageUrl regex="true">^pkg:generic/StorageCloudDropbox@.*$</packageUrl>
+   <cpe>cpe:/a:dropbox:dropbox</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: StorageCloudDropbox.dll
+   ]]></notes>
+   <packageUrl regex="true">^pkg:generic/StorageCloudDropbox@.*$</packageUrl>
+   <cpe>cpe:/a:storage_project:storage</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: StorageCloudGoogle.dll
+   ]]></notes>
+   <packageUrl regex="true">^pkg:generic/StorageCloudGoogle@.*$</packageUrl>
+   <cpe>cpe:/a:storage_project:storage</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: StorageFS.dll
+   ]]></notes>
+   <packageUrl regex="true">^pkg:generic/StorageFS@.*$</packageUrl>
+   <cpe>cpe:/a:storage_project:storage</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: StorageFTP.dll
+   ]]></notes>
+   <packageUrl regex="true">^pkg:generic/StorageFTP@.*$</packageUrl>
+   <cpe>cpe:/a:storage_project:storage</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: StorageS3Compatible.dll
+   ]]></notes>
+   <packageUrl regex="true">^pkg:generic/StorageS3Compatible@.*$</packageUrl>
+   <cpe>cpe:/a:storage_project:storage</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: StorageSFTP.dll
+   ]]></notes>
+   <packageUrl regex="true">^pkg:generic/StorageSFTP@.*$</packageUrl>
+   <cpe>cpe:/a:storage_project:storage</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: StorageUtil.dll
+   ]]></notes>
+   <packageUrl regex="true">^pkg:generic/StorageUtil@.*$</packageUrl>
+   <cpe>cpe:/a:storage_project:storage</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.AspNetCore.Hosting.Abstractions.dll
+   ]]></notes>
+   <packageUrl regex="true">^pkg:generic/Microsoft\.AspNetCore\.Hosting\.Abstractions@.*$</packageUrl>
+   <cpe>cpe:/a:asp-project:asp-project</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.AspNetCore.Hosting.Abstractions.dll
+   ]]></notes>
+   <packageUrl regex="true">^pkg:generic/Microsoft\.AspNetCore\.Hosting\.Abstractions@.*$</packageUrl>
+   <cpe>cpe:/a:microsoft:.net_core</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: FluentFTP.dll
+   ]]></notes>
+   <packageUrl regex="true">^pkg:generic/FluentFTP@.*$</packageUrl>
+   <cpe>cpe:/a:ftp_project:ftp</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: StorageFTP.dll
+   ]]></notes>
+   <packageUrl regex="true">^pkg:generic/StorageFTP@.*$</packageUrl>
+   <cpe>cpe:/a:ftp_project:ftp</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.AspNetCore.Http.Features.dll
+   ]]></notes>
+   <packageUrl regex="true">^pkg:generic/Microsoft\.AspNetCore\.Http\.Features@.*$</packageUrl>
+   <cpe>cpe:/a:asp-project:asp-project</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.AspNetCore.Http.Features.dll
+   ]]></notes>
+   <packageUrl regex="true">^pkg:generic/Microsoft\.AspNetCore\.Http\.Features@.*$</packageUrl>
+   <cpe>cpe:/a:microsoft:.net_core</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.TestPlatform.AdapterUtilities.dll
+   ]]></notes>
+   <packageUrl regex="true">^pkg:generic/Microsoft\.TestPlatform\.AdapterUtilities@.*$</packageUrl>
+   <cpe>cpe:/a:testplatform_project:testplatform</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.TestPlatform.CrossPlatEngine.dll
+   ]]></notes>
+   <packageUrl regex="true">^pkg:generic/Microsoft\.TestPlatform\.CrossPlatEngine@.*$</packageUrl>
+   <cpe>cpe:/a:testplatform_project:testplatform</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.TestPlatform.CrossPlatEngine.dll
+   ]]></notes>
+   <packageUrl regex="true">^pkg:generic/Microsoft\.TestPlatform\.CrossPlatEngine@.*$</packageUrl>
+   <cpe>cpe:/a:testplatform_project:testplatform</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+   ]]></notes>
+   <packageUrl regex="true">^pkg:generic/Microsoft\.TestPlatform\.CrossPlatEngine\.resources@.*$</packageUrl>
+   <cpe>cpe:/a:testplatform_project:testplatform</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.TestPlatform.CrossPlatEngine.resources.dll
+   ]]></notes>
+   <packageUrl regex="true">^pkg:generic/Microsoft\.TestPlatform\.CrossPlatEngine\.resources@.*$</packageUrl>
+   <cpe>cpe:/a:testplatform_project:testplatform</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+   ]]></notes>
+   <packageUrl regex="true">^pkg:generic/Microsoft\.VisualStudio\.TestPlatform\.MSTestAdapter\.PlatformServices\.Interface@.*$</packageUrl>
+   <cpe>cpe:/a:microsoft:services</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+   ]]></notes>
+   <packageUrl regex="true">^pkg:generic/Microsoft\.VisualStudio\.TestPlatform\.MSTestAdapter\.PlatformServices\.Interface@.*$</packageUrl>
+   <cpe>cpe:/a:testplatform_project:testplatform</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+   ]]></notes>
+   <packageUrl regex="true">^pkg:generic/Microsoft\.VisualStudio\.TestPlatform\.MSTestAdapter\.PlatformServices\.Interface@.*$</packageUrl>
+   <cpe>cpe:/a:microsoft:services</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+   ]]></notes>
+   <packageUrl regex="true">^pkg:generic/Microsoft\.VisualStudio\.TestPlatform\.MSTestAdapter\.PlatformServices\.Interface@.*$</packageUrl>
+   <cpe>cpe:/a:testplatform_project:testplatform</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+   ]]></notes>
+   <packageUrl regex="true">^pkg:generic/Microsoft\.VisualStudio\.TestPlatform\.MSTestAdapter\.PlatformServices@.*$</packageUrl>
+   <cpe>cpe:/a:microsoft:services</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+   ]]></notes>
+   <packageUrl regex="true">^pkg:generic/Microsoft\.VisualStudio\.TestPlatform\.MSTestAdapter\.PlatformServices@.*$</packageUrl>
+   <cpe>cpe:/a:testplatform_project:testplatform</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+   ]]></notes>
+   <packageUrl regex="true">^pkg:generic/Microsoft\.VisualStudio\.TestPlatform\.TestFramework@.*$</packageUrl>
+   <cpe>cpe:/a:testplatform_project:testplatform</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+   ]]></notes>
+   <packageUrl regex="true">^pkg:generic/Microsoft\.VisualStudio\.TestPlatform\.TestFramework@.*$</packageUrl>
+   <cpe>cpe:/a:testplatform_project:testplatform</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: NuGet.Frameworks.dll
+   ]]></notes>
+   <packageUrl regex="true">^pkg:generic/NuGet\.Frameworks@.*$</packageUrl>
+   <cpe>cpe:/a:microsoft:nuget</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: NuGet.Frameworks.dll
+   ]]></notes>
+   <packageUrl regex="true">^pkg:generic/NuGet\.Frameworks@.*$</packageUrl>
+   <cpe>cpe:/a:microsoft:nuget</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.TestPlatform.CoreUtilities.dll
+   ]]></notes>
+   <packageUrl regex="true">^pkg:generic/Microsoft\.TestPlatform\.CoreUtilities@.*$</packageUrl>
+   <cpe>cpe:/a:testplatform_project:testplatform</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.TestPlatform.CoreUtilities.resources.dll
+   ]]></notes>
+   <packageUrl regex="true">^pkg:generic/Microsoft\.TestPlatform\.CoreUtilities\.resources@.*$</packageUrl>
+   <cpe>cpe:/a:testplatform_project:testplatform</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+   ]]></notes>
+   <packageUrl regex="true">^pkg:generic/Microsoft\.VisualStudio\.TestPlatform\.MSTest\.TestAdapter@.*$</packageUrl>
+   <cpe>cpe:/a:testplatform_project:testplatform</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll
+   ]]></notes>
+   <packageUrl regex="true">^pkg:generic/Microsoft\.VisualStudio\.TestPlatform\.TestFramework\.resources@.*$</packageUrl>
+   <cpe>cpe:/a:testplatform_project:testplatform</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.TestPlatform.Utilities.dll
+   ]]></notes>
+   <packageUrl regex="true">^pkg:generic/Microsoft\.TestPlatform\.Utilities@.*$</packageUrl>
+   <cpe>cpe:/a:testplatform_project:testplatform</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+   ]]></notes>
+   <packageUrl regex="true">^pkg:generic/Microsoft\.VisualStudio\.TestPlatform\.Common\.resources@.*$</packageUrl>
+   <cpe>cpe:/a:testplatform_project:testplatform</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+   ]]></notes>
+   <packageUrl regex="true">^pkg:generic/Microsoft\.VisualStudio\.TestPlatform\.TestFramework\.Extensions@.*$</packageUrl>
+   <cpe>cpe:/a:testplatform_project:testplatform</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: postcss:6.0.23
+   ]]></notes>
+   <packageUrl regex="true">^pkg:npm/postcss@.*$</packageUrl>
+   <vulnerabilityName>1089551</vulnerabilityName>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: LiteDB:5.0.11
+   ]]></notes>
+   <packageUrl regex="true">^pkg:nuget/LiteDB@.*$</packageUrl>
+   <cpe>cpe:/a:litedb:litedb</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.AspNetCore.Http:2.2.2
+   ]]></notes>
+   <packageUrl regex="true">^pkg:nuget/Microsoft\.AspNetCore\.Http@.*$</packageUrl>
+   <vulnerabilityName>CVE-2020-1045</vulnerabilityName>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: System.Security.Cryptography.X509Certificates:4.3.0
+   ]]></notes>
+   <packageUrl regex="true">^pkg:nuget/System\.Security\.Cryptography\.X509Certificates@.*$</packageUrl>
+   <vulnerabilityName>CVE-2017-11770</vulnerabilityName>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: glob-parent:3.1.0
+   ]]></notes>
+   <packageUrl regex="true">^pkg:npm/glob\-parent@.*$</packageUrl>
+   <vulnerabilityName>CVE-2020-28469</vulnerabilityName>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: word-wrap:1.2.3
+   ]]></notes>
+   <packageUrl regex="true">^pkg:npm/word\-wrap@.*$</packageUrl>
+   <vulnerabilityName>CVE-2023-26115</vulnerabilityName>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.AspNetCore.Server.Kestrel.Transport.Abstractions.dll
+   ]]></notes>
+   <packageUrl regex="true">^pkg:generic/Microsoft\.AspNetCore\.Server\.Kestrel\.Transport\.Abstractions@.*$</packageUrl>
+   <cpe>cpe:/a:microsoft:.net_core</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: AveObjectModel.Server13.csproj
+   ]]></notes>
+   <sha1>5d5c2befdb2c65d03e9b62d985f347a1640c82ca</sha1>
+   <cpe>cpe:/a:model_project:model</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: AveObjectModel.Server16.csproj
+   ]]></notes>
+   <sha1>c5a8a451c7424777d379900603995aa81866ed7f</sha1>
+   <cpe>cpe:/a:model_project:model</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: AveObjectModel.Server19.csproj
+   ]]></notes>
+   <sha1>d38949894ed12c9f28ae4a0638c64a44fa27c0ba</sha1>
+   <cpe>cpe:/a:model_project:model</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: AveObjectModel.Server19.csproj
+   ]]></notes>
+   <sha1>0cbb759a0172f7a6cc744074f7e7b3f97975e40e</sha1>
+   <cpe>cpe:/a:model_project:model</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: postcss:8.4.25
+   ]]></notes>
+   <packageUrl regex="true">^pkg:npm/postcss@.*$</packageUrl>
+   <vulnerabilityName>CVE-2023-44270</vulnerabilityName>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Azure.Identity.dll
+   ]]></notes>
+   <packageUrl regex="true">^pkg:generic/Azure\.Identity@.*$</packageUrl>
+   <cpe>cpe:/a:microsoft:azure_identity_sdk</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Azure.Identity.dll
+   ]]></notes>
+   <packageUrl regex="true">^pkg:generic/Azure\.Identity@.*$</packageUrl>
+   <cpe>cpe:/a:microsoft:azure_sdk_for_.net</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Azure.Identity.dll
+   ]]></notes>
+   <packageUrl regex="true">^pkg:generic/Azure\.Identity@.*$</packageUrl>
+   <cve>CVE-2023-36415</cve>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Azure.Core.dll
+   ]]></notes>
+   <packageUrl regex="true">^pkg:generic/Azure\.Core@.*$</packageUrl>
+   <cpe>cpe:/a:microsoft:azure_cli</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Azure.Core.dll
+   ]]></notes>
+   <packageUrl regex="true">^pkg:generic/Azure\.Core@.*$</packageUrl>
+   <cpe>cpe:/a:microsoft:azure_sdk_for_.net</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Azure.Core.dll
+   ]]></notes>
+   <packageUrl regex="true">^pkg:generic/Azure\.Core@.*$</packageUrl>
+   <cve>CVE-2023-36052</cve>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.Azure.ActiveDirectory.Client.Framework:1.0.8362.1
+   ]]></notes>
+   <packageUrl regex="true">^pkg:nuget/Microsoft\.Azure\.ActiveDirectory\.Client\.Framework@.*$</packageUrl>
+   <cpe>cpe:/a:microsoft:azure_cli</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.Azure.ActiveDirectory.Client.Framework:1.0.8362.1
+   ]]></notes>
+   <packageUrl regex="true">^pkg:nuget/Microsoft\.Azure\.ActiveDirectory\.Client\.Framework@.*$</packageUrl>
+   <cve>CVE-2023-36052</cve>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.Azure.ActiveDirectory.GraphClient:2.1.0
+   ]]></notes>
+   <packageUrl regex="true">^pkg:nuget/Microsoft\.Azure\.ActiveDirectory\.GraphClient@.*$</packageUrl>
+   <cpe>cpe:/a:microsoft:azure_cli</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.Azure.ActiveDirectory.GraphClient:2.1.0
+   ]]></notes>
+   <packageUrl regex="true">^pkg:nuget/Microsoft\.Azure\.ActiveDirectory\.GraphClient@.*$</packageUrl>
+   <cve>CVE-2023-36052</cve>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.Azure.ActiveDirectory.GraphClient:2.1.1
+   ]]></notes>
+   <packageUrl regex="true">^pkg:nuget/Microsoft\.Azure\.ActiveDirectory\.GraphClient@.*$</packageUrl>
+   <cpe>cpe:/a:microsoft:azure_cli</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.Azure.ActiveDirectory.GraphClient:2.1.1
+   ]]></notes>
+   <packageUrl regex="true">^pkg:nuget/Microsoft\.Azure\.ActiveDirectory\.GraphClient@.*$</packageUrl>
+   <cve>CVE-2023-36052</cve>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.PowerShell.5.ReferenceAssemblies:1.1.0
+   ]]></notes>
+   <packageUrl regex="true">^pkg:nuget/Microsoft\.PowerShell\.5\.ReferenceAssemblies@.*$</packageUrl>
+   <cpe>cpe:/a:microsoft:powershell</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: zlib1.dll
+   ]]></notes>
+   <sha1>a6b7b3e77b30e985d16fcbb2a4258352b8859b6f</sha1>
+   <cpe>cpe:/a:zlib:zlib</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: zlib1.dll
+   ]]></notes>
+   <sha1>faa4987d911fda105521365989d7a1016db3498e</sha1>
+   <cpe>cpe:/a:zlib:zlib</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: index.js
+   ]]></notes>
+   <packageUrl regex="true">^pkg:javascript/lodash@.*$</packageUrl>
+   <cve>CVE-2019-10744</cve>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: index.js
+   ]]></notes>
+   <packageUrl regex="true">^pkg:javascript/lodash@.*$</packageUrl>
+   <vulnerabilityName>CVE-2018-16487</vulnerabilityName>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: index.js
+   ]]></notes>
+   <packageUrl regex="true">^pkg:javascript/lodash@.*$</packageUrl>
+   <vulnerabilityName>CVE-2021-23337</vulnerabilityName>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: index.js
+   ]]></notes>
+   <packageUrl regex="true">^pkg:javascript/lodash@.*$</packageUrl>
+   <vulnerabilityName>CVE-2019-1010266</vulnerabilityName>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: index.js
+   ]]></notes>
+   <packageUrl regex="true">^pkg:javascript/lodash@.*$</packageUrl>
+   <vulnerabilityName>CVE-2020-28500</vulnerabilityName>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: index.js
+   ]]></notes>
+   <packageUrl regex="true">^pkg:javascript/lodash@.*$</packageUrl>
+   <vulnerabilityName>CVE-2018-3721</vulnerabilityName>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: index.js
+   ]]></notes>
+   <packageUrl regex="true">^pkg:javascript/lodash@.*$</packageUrl>
+   <vulnerabilityName>CVE-2020-8203</vulnerabilityName>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: System.Security.Cryptography.X509Certificates:4.3.0
+   ]]></notes>
+   <packageUrl regex="true">^pkg:nuget/System\.Security\.Cryptography\.X509Certificates@.*$</packageUrl>
+   <vulnerabilityName>CVE-2024-0057</vulnerabilityName>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: System.Security.Cryptography.X509Certificates:4.3.1
+   ]]></notes>
+   <packageUrl regex="true">^pkg:nuget/System\.Security\.Cryptography\.X509Certificates@.*$</packageUrl>
+   <vulnerabilityName>CVE-2024-0057</vulnerabilityName>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.Data.SqlClient.SNI:5.1.0
+   ]]></notes>
+   <packageUrl regex="true">^pkg:nuget/Microsoft\.Data\.SqlClient\.SNI@.*$</packageUrl>
+   <cpe>cpe:/a:microsoft:microsoft.data.sqlclient</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.Data.SqlClient.SNI:5.1.0
+   ]]></notes>
+   <packageUrl regex="true">^pkg:nuget/Microsoft\.Data\.SqlClient\.SNI@.*$</packageUrl>
+   <cve>CVE-2024-0056</cve>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.IdentityModel.Abstractions:6.22.0
+   ]]></notes>
+   <packageUrl regex="true">^pkg:nuget/Microsoft\.IdentityModel\.Abstractions@.*$</packageUrl>
+   <cpe>cpe:/a:microsoft:identity_model</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.IdentityModel.Abstractions:6.22.0
+   ]]></notes>
+   <packageUrl regex="true">^pkg:nuget/Microsoft\.IdentityModel\.Abstractions@.*$</packageUrl>
+   <cve>CVE-2024-21319</cve>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.IdentityModel.Logging:6.8.0
+   ]]></notes>
+   <packageUrl regex="true">^pkg:nuget/Microsoft\.IdentityModel\.Logging@.*$</packageUrl>
+   <cpe>cpe:/a:microsoft:identity_model</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.IdentityModel.Logging:6.8.0
+   ]]></notes>
+   <packageUrl regex="true">^pkg:nuget/Microsoft\.IdentityModel\.Logging@.*$</packageUrl>
+   <cve>CVE-2024-21319</cve>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.IdentityModel.Protocols.OpenIdConnect:6.32.1
+   ]]></notes>
+   <packageUrl regex="true">^pkg:nuget/Microsoft\.IdentityModel\.Protocols\.OpenIdConnect@.*$</packageUrl>
+   <cpe>cpe:/a:microsoft:identity_model</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.IdentityModel.Protocols.OpenIdConnect:6.32.1
+   ]]></notes>
+   <packageUrl regex="true">^pkg:nuget/Microsoft\.IdentityModel\.Protocols\.OpenIdConnect@.*$</packageUrl>
+   <cve>CVE-2024-21319</cve>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.IdentityModel.Protocols.WsTrust.dll
+   ]]></notes>
+   <packageUrl regex="true">^pkg:generic/Microsoft\.IdentityModel\.Protocols\.WsTrust@.*$</packageUrl>
+   <cpe>cpe:/a:microsoft:identity_model</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.IdentityModel.Protocols.WsTrust.dll
+   ]]></notes>
+   <packageUrl regex="true">^pkg:generic/Microsoft\.IdentityModel\.Protocols\.WsTrust@.*$</packageUrl>
+   <cve>CVE-2024-21319</cve>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.IdentityModel.Protocols.dll
+   ]]></notes>
+   <packageUrl regex="true">^pkg:generic/Microsoft\.IdentityModel\.Protocols@.*$</packageUrl>
+   <cpe>cpe:/a:microsoft:identity_model</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.IdentityModel.Protocols.dll
+   ]]></notes>
+   <packageUrl regex="true">^pkg:generic/Microsoft\.IdentityModel\.Protocols@.*$</packageUrl>
+   <cve>CVE-2024-21319</cve>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.IdentityModel.Xml.dll
+   ]]></notes>
+   <packageUrl regex="true">^pkg:generic/Microsoft\.IdentityModel\.Xml@.*$</packageUrl>
+   <cpe>cpe:/a:microsoft:identity_model</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.IdentityModel.Xml.dll
+   ]]></notes>
+   <packageUrl regex="true">^pkg:generic/Microsoft\.IdentityModel\.Xml@.*$</packageUrl>
+   <cve>CVE-2024-21319</cve>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.IdentityModel:7.0.0
+   ]]></notes>
+   <packageUrl regex="true">^pkg:nuget/Microsoft\.IdentityModel@.*$</packageUrl>
+   <cpe>cpe:/a:microsoft:identity_model</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.IdentityModel:7.0.0
+   ]]></notes>
+   <packageUrl regex="true">^pkg:nuget/Microsoft\.IdentityModel@.*$</packageUrl>
+   <cve>CVE-2024-21319</cve>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Newtonsoft.Json.Bson.dll
+   ]]></notes>
+   <packageUrl regex="true">^pkg:generic/Newtonsoft\.Json\.Bson@.*$</packageUrl>
+   <cpe>cpe:/a:newtonsoft:json.net</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Newtonsoft.Json.Bson.dll
+   ]]></notes>
+   <packageUrl regex="true">^pkg:generic/Newtonsoft\.Json\.Bson@.*$</packageUrl>
+   <cve>CVE-2024-21907</cve>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Newtonsoft.Json.dll
+   ]]></notes>
+   <packageUrl regex="true">^pkg:generic/Newtonsoft\.Json@.*$</packageUrl>
+   <cpe>cpe:/a:newtonsoft:json.net</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Newtonsoft.Json.dll
+   ]]></notes>
+   <packageUrl regex="true">^pkg:generic/Newtonsoft\.Json@.*$</packageUrl>
+   <cve>CVE-2024-21907</cve>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Newtonsoft.Json.dll
+   ]]></notes>
+   <packageUrl regex="true">^pkg:generic/Newtonsoft\.Json@.*$</packageUrl>
+   <cpe>cpe:/a:newtonsoft:json.net</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Newtonsoft.Json.dll
+   ]]></notes>
+   <packageUrl regex="true">^pkg:generic/Newtonsoft\.Json@.*$</packageUrl>
+   <cve>CVE-2024-21907</cve>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Newtonsoft.Json.dll
+   ]]></notes>
+   <packageUrl regex="true">^pkg:generic/Newtonsoft\.Json@.*$</packageUrl>
+   <cpe>cpe:/a:newtonsoft:json.net</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Newtonsoft.Json.dll
+   ]]></notes>
+   <packageUrl regex="true">^pkg:generic/Newtonsoft\.Json@.*$</packageUrl>
+   <cve>CVE-2024-21907</cve>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+   ]]></notes>
+   <packageUrl regex="true">^pkg:generic/Microsoft\.IdentityModel\.Protocols\.OpenIdConnect@.*$</packageUrl>
+   <cpe>cpe:/a:microsoft:identity_model</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+   ]]></notes>
+   <packageUrl regex="true">^pkg:generic/Microsoft\.IdentityModel\.Protocols\.OpenIdConnect@.*$</packageUrl>
+   <cve>CVE-2024-21319</cve>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.IdentityModel.Protocols:6.32.1
+   ]]></notes>
+   <packageUrl regex="true">^pkg:nuget/Microsoft\.IdentityModel\.Protocols@.*$</packageUrl>
+   <cpe>cpe:/a:microsoft:identity_model</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.IdentityModel.Protocols:6.32.1
+   ]]></notes>
+   <packageUrl regex="true">^pkg:nuget/Microsoft\.IdentityModel\.Protocols@.*$</packageUrl>
+   <cve>CVE-2024-21319</cve>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.IdentityModel.Tokens.Saml.dll
+   ]]></notes>
+   <packageUrl regex="true">^pkg:generic/Microsoft\.IdentityModel\.Tokens\.Saml@.*$</packageUrl>
+   <cpe>cpe:/a:microsoft:identity_model</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.IdentityModel.Tokens.Saml.dll
+   ]]></notes>
+   <packageUrl regex="true">^pkg:generic/Microsoft\.IdentityModel\.Tokens\.Saml@.*$</packageUrl>
+   <cve>CVE-2024-21319</cve>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.IdentityModel.Clients.ActiveDirectory.dll
+   ]]></notes>
+   <packageUrl regex="true">^pkg:generic/Microsoft\.IdentityModel\.Clients\.ActiveDirectory@.*$</packageUrl>
+   <cpe>cpe:/a:microsoft:identity_model</cpe>
+</suppress>
+<suppress>
+   <notes><![CDATA[
+   file name: Microsoft.IdentityModel.Clients.ActiveDirectory.dll
+   ]]></notes>
+   <packageUrl regex="true">^pkg:generic/Microsoft\.IdentityModel\.Clients\.ActiveDirectory@.*$</packageUrl>
+   <cve>CVE-2024-21319</cve>
+</suppress>
+
+</suppressions>

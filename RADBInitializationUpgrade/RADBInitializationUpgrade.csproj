@@ -1,0 +1,40 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <AutoUnifyAssemblyReferences>false</AutoUnifyAssemblyReferences>
+    <OutputType>Exe</OutputType>
+  </PropertyGroup>
+	<PropertyGroup>
+		<EnableUnsafeBinaryFormatterSerialization>true</EnableUnsafeBinaryFormatterSerialization>
+	</PropertyGroup>
+  <!--<PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <SelfContained>true</SelfContained>
+    <RuntimeIdentifier>linux-musl-x64</RuntimeIdentifier>
+    --><!-- Set the RID for your production environment --><!--
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <SelfContained>false</SelfContained>
+    --><!-- Set the RID for your production environment --><!--
+  </PropertyGroup>-->
+  <ItemGroup>
+    <PackageReference Include="AWSSDK.S3" Version="4.0.17.3" />
+    <PackageReference Include="Castle.Windsor" Version="6.0.0" />
+    <PackageReference Include="EntityFramework" Version="6.5.1" />
+    <PackageReference Include="log4net" Version="3.3.1" />
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="6.1.4" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.9.0" />
+    <PackageReference Include="System.Private.Uri" Version="4.3.2" />
+    <PackageReference Include="System.Text.RegularExpressions" Version="4.3.1" />
+    <PackageReference Include="util.ai.text.extractor" Version="6.10.11" />
+    <PackageReference Include="util.upgrade" Version="4.12.7" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\RACommon.Global\RACommon.Global.csproj" />
+    <ProjectReference Include="..\RACommon\RACommon.csproj" />
+    <ProjectReference Include="..\RAService\RAService.csproj" />
+  </ItemGroup>
+
+</Project>

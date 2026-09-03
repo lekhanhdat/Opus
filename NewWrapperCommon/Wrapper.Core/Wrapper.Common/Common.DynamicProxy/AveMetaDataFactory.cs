@@ -1,0 +1,86 @@
+﻿/********************************************************************
+ *
+ *  PROPRIETARY and CONFIDENTIAL
+ *
+ *  This file is licensed from, and is a trade secret of:
+ *
+ *                   AvePoint, Inc.
+ *                   525 Washington Blvd, Suite 1400
+ *                   Jersey City, NJ 07310
+ *                   United States of America
+ *                   Telephone: +1-201-793-1111
+ *                   WWW: www.avepoint.com
+ *
+ *  Refer to your License Agreement for restrictions on use,
+ *  duplication, or disclosure.
+ *
+ *  RESTRICTED RIGHTS LEGEND
+ *
+ *  Use, duplication, or disclosure by the Government is
+ *  subject to restrictions as set forth in subdivision
+ *  (c)(1)(ii) of the Rights in Technical Data and Computer
+ *  Software clause at DFARS 252.227-7013 (Oct. 1988) and
+ *  FAR 52.227-19 (C) (June 1987).
+ *
+ *  Copyright © 2017-2026 AvePoint® Inc. All Rights Reserved. 
+ *
+ *  Unpublished - All rights reserved under the copyright laws of the United States.
+ */
+
+
+
+using System;
+using System.Reflection;
+using System.Collections;
+
+namespace AvePoint.Wrapper.Common
+{
+	/// <summary>
+    /// Factory class used to cache Types instances
+	/// </summary>
+	public class AveMetaDataFactory
+	{
+        private static Hashtable typeMap = new Hashtable(); 
+        
+        /// <summary>
+        /// Class constructor.  Private because this is a static class.
+        /// </summary>
+        private AveMetaDataFactory() {            
+        }
+
+        ///<summary>
+        /// Method to add a new Type to the cache, using the type's fully qualified
+        /// name as the key
+        ///</summary>
+        ///<param name="interfaceType">Type to cache</param>
+        public static void Add( Type interfaceType ) {         
+            if ( interfaceType != null ) {
+                lock ( typeMap.SyncRoot ) {
+                        if ( !typeMap.ContainsKey( interfaceType.FullName ) ) {
+                        typeMap.Add( interfaceType.FullName, interfaceType );
+                    }
+                }
+            }
+        }
+
+        ///<summary>
+        /// Method to return the method of a given type at a specified index.
+        ///</summary>
+        ///<param name="name">Fully qualified name of the method to return</param>
+        ///<param name="i">Index to use to return MethodInfo</param>
+        ///<returns>MethodInfo</returns>
+        public static MethodInfo GetMethod( string name, int i ) {
+            Type type = null;
+            lock ( typeMap.SyncRoot ) {
+                type = (Type) typeMap[ name ];
+            }
+            
+            MethodInfo[] methods = type.GetMethods();
+            if ( i < methods.Length ) {
+                return methods[i];    
+            }
+
+            return null;
+        }
+	}
+}

@@ -1,0 +1,462 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Vault_CPLVaultExportExportLocationErrorKey" xml:space="preserve">
+    <value>one or more export location(s) not available.</value>
+  </data>
+  <data name="Vault_CPLVaultExportPathRepetitionErrorKey" xml:space="preserve">
+    <value>The Export Location Path Repetition.So failed.</value>
+  </data>
+  <data name="Vault_CPLVaultPermissionDeniedError" xml:space="preserve">
+    <value>An Unauthorized error occurred while discovering object,Perhaps managed account is not enough Permission for vault job.</value>
+  </data>
+  <data name="Vault_CPLVaultScanIBDetailChangedLog" xml:space="preserve">
+    <value>The item has been changed after the last vault job.\r\n WebAppURL:{0} \t SiteID:{1} \t Path:{2} \t ID:{3} ModifyBy:{4}</value>
+  </data>
+  <data name="Vault_CPLVaultScanIBDetailFirstTimeLog" xml:space="preserve">
+    <value>The item is included to run a vault job for the first time. \r\n WebAppURL:{0} \t SiteID:{1} \t Path:{2} \t ID:{3}</value>
+  </data>
+  <data name="Vault_CPLVaultScanIBDetailLastFailedLog" xml:space="preserve">
+    <value>The item was failed in the last vault job. \r\n WebAppURL:{0} \t SiteID:{1} \t Path:{2} \t ID:{3}</value>
+  </data>
+  <data name="Vault_CPLVaultScanLastAccessRuleError" xml:space="preserve">
+    <value>Report service is down or license expire</value>
+  </data>
+  <data name="Vault_CPLVaultScanLastAccessRuleErrorKey" xml:space="preserve">
+    <value>Report service is down or license expire. this rule can not be use.</value>
+  </data>
+  <data name="Vault_CPLVaultScanNotMatchRuleLevelKey" xml:space="preserve">
+    <value>The Rules have some filters not matching select node level,so failed.</value>
+  </data>
+  <data name="Vault_CPLVaultScanSiteNoAccessErrorKey" xml:space="preserve">
+    <value>Access to this Web site has been blocked.</value>
+  </data>
+  <data name="Vault_SCUScheduleExceptionsScheduleManualStoppedException" xml:space="preserve">
+    <value>The schedule has been stopped manually.</value>
+  </data>
+  <data name="Vault_SCUScheduleExceptionsSPObjectNotFoundException" xml:space="preserve">
+    <value>Cannot find the SharePoint object.</value>
+  </data>
+  <data name="Vault_SOVTCLReaderDiscoverNode" xml:space="preserve">
+    <value>An error occurred while discovering object.</value>
+  </data>
+  <data name="Vault_SOVTCOMJobProgressDtoProcessThread" xml:space="preserve">
+    <value>An error occurred while sending the process.</value>
+  </data>
+  <data name="Vault_SOVTCOMJobProgressDtoProcessThreadSendJobProcess" xml:space="preserve">
+    <value>Successfully sent the job process {0}.</value>
+  </data>
+  <data name="Vault_SOVTCOMJobProgressDtoProcessThreadSendJobStatus" xml:space="preserve">
+    <value>Successfully sent the status {0}.</value>
+  </data>
+  <data name="Vault_SOVTCOMMONJobProgressDtoDispose" xml:space="preserve">
+    <value>An error occurred while disposing the job progress.</value>
+  </data>
+  <data name="Vault_SOVTExportDocumentOrDocumentVersionSkipSystemFile" xml:space="preserve">
+    <value>Skipped this system file:</value>
+  </data>
+  <data name="Vault_SOVTExportItemOrItemVersionSkipSystemItem" xml:space="preserve">
+    <value>Skipped this system item:</value>
+  </data>
+  <data name="Vault_SOVTExportMainAddExportCommonsItemComments" xml:space="preserve">
+    <value>An error occurred while export item.</value>
+  </data>
+  <data name="Vault_SOVTExportMainAddExportCommonsListComments" xml:space="preserve">
+    <value>An error occurred while export list.</value>
+  </data>
+  <data name="Vault_SOVTExportMainAddExportCommonsSiteCollectionComments" xml:space="preserve">
+    <value>An error occurred while export site collection.</value>
+  </data>
+  <data name="Vault_SOVTExportMainAddExportCommonsSiteComments" xml:space="preserve">
+    <value>An error occurred while export site.</value>
+  </data>
+  <data name="Vault_SOVTExportMainDeleteApproveDB" xml:space="preserve">
+    <value>An error occurred while deleting approve data file, because it may be used.</value>
+  </data>
+  <data name="Vault_SOVTExportMainExportConfigurationProcedureError" xml:space="preserve">
+    <value>The configuration procedure type is unknown.</value>
+  </data>
+  <data name="Vault_SOVTExportMainExportErrorInExport" xml:space="preserve">
+    <value>An error occurred while exporting.</value>
+  </data>
+  <data name="Vault_SOVTExportMainExportErrorInGetRule" xml:space="preserve">
+    <value>An error occurred while getting rule:</value>
+  </data>
+  <data name="Vault_SOVTExportMainExportGetApprovalReportFileError" xml:space="preserve">
+    <value>An error occurred while receiving data.</value>
+  </data>
+  <data name="Vault_SOVTExportMainExportInPreparing" xml:space="preserve">
+    <value>An error occurred while preparing export object.</value>
+  </data>
+  <data name="Vault_SOVTExportMainExportRuleCount" xml:space="preserve">
+    <value>Rule count:</value>
+  </data>
+  <data name="Vault_SOVTExportMainExportWarn" xml:space="preserve">
+    <value>Failed to get approval report file.</value>
+  </data>
+  <data name="Vault_SOVTExportMainGetAttachmentParentCacheNodeException" xml:space="preserve">
+    <value>An error occurred while getting the parent of the attachment from NodeCache.</value>
+  </data>
+  <data name="Vault_SOVTExportMainGetItemCacheNodeTypeException" xml:space="preserve">
+    <value>An error occurred while getting item cacheNodeType.</value>
+  </data>
+  <data name="Vault_SOVTExportMainStopJob" xml:space="preserve">
+    <value>Stop Vault Export Succeed {0},   ExportType:{1}.</value>
+  </data>
+  <data name="Vault_SOVTScheduleStatusManagerEnsureScheduleStatusScheduleManualStoppedException" xml:space="preserve">
+    <value>The current schedule is stopped.</value>
+  </data>
+  <data name="Vault_SOVTSOArchiverSchedulePerformScheduleJobInfo" xml:space="preserve">
+    <value>Performed the schedule job ended.</value>
+  </data>
+  <data name="Vault_SOVTSOVaultScheduleExportError" xml:space="preserve">
+    <value>An error occurred while diposing Export.</value>
+  </data>
+  <data name="Vault_SOVTSOVaultScheduleScanCommonts" xml:space="preserve">
+    <value>An error occurred while performing the scanning job.</value>
+  </data>
+  <data name="Vault_SOVTSOVaultScheduleScanDisposeSuccessfully" xml:space="preserve">
+    <value>Storage Optimization Vault Schedule: Disposed in scan successfully.</value>
+  </data>
+  <data name="Vault_SOVTSOVaultScheduleScanError" xml:space="preserve">
+    <value>An error occurred while scanning. </value>
+  </data>
+  <data name="Vault_SOVTSOVaultScheduleScanException" xml:space="preserve">
+    <value>An exception occurred while scanning node.</value>
+  </data>
+  <data name="Vault_SOVTSPObjectLockedException" xml:space="preserve">
+    <value>The site collection has been locked.</value>
+  </data>
+  <data name="Vault_SOVTSPObjectReadOnlyException" xml:space="preserve">
+    <value>The site collection is read-only.</value>
+  </data>
+  <data name="Vault_SOVTVaultExportAttachment" xml:space="preserve">
+    <value>Start exporting the attachment {0}.</value>
+  </data>
+  <data name="Vault_SOVTVaultExportBuildMHTApplicationException" xml:space="preserve">
+    <value>Maybe the site does not have claims enabled or does not set up a login URL.</value>
+  </data>
+  <data name="Vault_SOVTVaultExportBuildMHTCreateMHTMLBody" xml:space="preserve">
+    <value>The ErrorCode is -2146697191,The SSL certificate is invalid.</value>
+  </data>
+  <data name="Vault_SOVTVaultExportBuildMHTGetAuthentication" xml:space="preserve">
+    <value>Successfully got the cookies with IE host.</value>
+  </data>
+  <data name="Vault_SOVTVaultExportBuildMHTGetCookiesWithWinDefaultPage" xml:space="preserve">
+    <value>Failed to get the cookies with Windows Default Page.</value>
+  </data>
+  <data name="Vault_SOVTVaultExportBuildMHTInitClientMode" xml:space="preserve">
+    <value>Failed to login with Windows Credentials.</value>
+  </data>
+  <data name="Vault_SOVTVaultExportBuildMHTSSLCertificateException" xml:space="preserve">
+    <value>The SSL certificate is invalid.</value>
+  </data>
+  <data name="Vault_SOVTVaultExportClaimsWebAuthArgumentException" xml:space="preserve">
+    <value>The site URL is empty.</value>
+  </data>
+  <data name="Vault_SOVTVaultExportDocument" xml:space="preserve">
+    <value>Start exporting the docuemnt {0} ,version is {1}.</value>
+  </data>
+  <data name="Vault_SOVTVaultExportErrorGetAttachmentAuthor" xml:space="preserve">
+    <value>An error occurred while getting attachment author.</value>
+  </data>
+  <data name="Vault_SOVTVaultExportExportSaveObj" xml:space="preserve">
+    <value>An error occurred while export Attachment Parent.</value>
+  </data>
+  <data name="Vault_SOVTVaultExportFolder" xml:space="preserve">
+    <value>Start porcessing the folder {0}.</value>
+  </data>
+  <data name="Vault_SOVTVaultExportFolderSkipLog" xml:space="preserve">
+    <value>This folder is system item or unsupported type, it will be skipped. Item path is {0}</value>
+  </data>
+  <data name="Vault_SOVTVaultExportFolderSkipStateErrorMessage" xml:space="preserve">
+    <value>This item is skipped because it isn't need to export.</value>
+  </data>
+  <data name="Vault_SOVTVaultExportGetContentExportInfo" xml:space="preserve">
+    <value>Cannot export the object "{0}". The object type is unsupported.</value>
+  </data>
+  <data name="Vault_SOVTVaultExportGetIdxExportInfo" xml:space="preserve">
+    <value>Cannot export the object "{0}" to the idx file. The object type is unsupported.</value>
+  </data>
+  <data name="Vault_SOVTVaultExportGetMHTExportInfo" xml:space="preserve">
+    <value>Cannot export the object "{0}" to the mht file. The object type is unsupported.</value>
+  </data>
+  <data name="Vault_SOVTVaultExportGetMHTRetryConfigException" xml:space="preserve">
+    <value>An error occurred while loading the  Export MHT configuration file.</value>
+  </data>
+  <data name="Vault_SOVTVaultExportGetPerformanceConfigException" xml:space="preserve">
+    <value>An error occurred while loading the performance configuration file.\r\n</value>
+  </data>
+  <data name="Vault_SOVTVaultExportGetPerformanceException" xml:space="preserve">
+    <value>An error occurred while getting the performance switch:\r\n</value>
+  </data>
+  <data name="Vault_SOVTVaultExportGetRoleAssignmentsFailed" xml:space="preserve">
+    <value>Get roleAssignments failed.</value>
+  </data>
+  <data name="Vault_SOVTVaultExportGetWebCacheNodeException" xml:space="preserve">
+    <value>Incorrect web cacheNodeType: web Url{0}, cacheNodeType{1}</value>
+  </data>
+  <data name="Vault_SOVTVaultExportItem" xml:space="preserve">
+    <value>Start exporting the list item {0}.</value>
+  </data>
+  <data name="Vault_SOVTVaultExportList" xml:space="preserve">
+    <value>Start processing the list {0}.</value>
+  </data>
+  <data name="Vault_SOVTVaultExportMHTContentErrorException" xml:space="preserve">
+    <value>The mht file has not been exported, because the content in the mht file is incorrect.</value>
+  </data>
+  <data name="Vault_SOVTVaultExportObjectServiceExceportion" xml:space="preserve">
+    <value>An error occurred while export Item Object.It is Export Service Error.</value>
+  </data>
+  <data name="Vault_SOVTVaultExportSendReportError" xml:space="preserve">
+    <value>An error occurred while sending JobDetails and JobSummary.</value>
+  </data>
+  <data name="Vault_SOVTVaultExportSkipLog" xml:space="preserve">
+    <value>{0} is skipped.</value>
+  </data>
+  <data name="Vault_SOVTVaultExportWeb" xml:space="preserve">
+    <value>Start processing the web {0}.</value>
+  </data>
+  <data name="Vault_SOVTVaultPCContainerConsumeObjectDisposedException" xml:space="preserve">
+    <value>"PCContainer". "The consuming process has been stopped."</value>
+  </data>
+  <data name="Vault_SOVTVaultPCContainerConsumeSynchronizationLockException" xml:space="preserve">
+    <value>Consumer gets an object from an empty container.</value>
+  </data>
+  <data name="Vault_SOVTVaultPCContainerProduceObjectDisposedException" xml:space="preserve">
+    <value>"PCContainer". "The producing process has been stopped."</value>
+  </data>
+  <data name="Vault_SOVTVaultPCContainerProduceSynchronizationLockException" xml:space="preserve">
+    <value>Producer adds an object to the full container.</value>
+  </data>
+  <data name="Vault_SOVTVaultScanCalculateSiteListCount" xml:space="preserve">
+    <value>An unexpected error occurred while scanning site collection node.</value>
+  </data>
+  <data name="Vault_SOVTVaultScanCalculateWebListCount" xml:space="preserve">
+    <value>An unexpected error occurred while scanning Web node.</value>
+  </data>
+  <data name="Vault_SOVTVaultScanDiscoverNodeWorkerException" xml:space="preserve">
+    <value>The query type is unknown.</value>
+  </data>
+  <data name="Vault_SOVTVaultScanDiscoverNodeWorkerInitContainerLevelNodeWithRule" xml:space="preserve">
+    <value>An error occurred while checking criteria at the container level.</value>
+  </data>
+  <data name="Vault_SOVTVaultScanDiscoverNodeWorkerInitItemLevelNodeWithRule" xml:space="preserve">
+    <value>An error occurred while checking ctiteria at the item level.</value>
+  </data>
+  <data name="Vault_SOVTVaultScanDiscoverNodeWorkerIsSystemListWarn" xml:space="preserve">
+    <value>Skip scanning the external list.</value>
+  </data>
+  <data name="Vault_SOVTVaultScanGetListVaultTimeException" xml:space="preserve">
+    <value>Get list vault time failed:</value>
+  </data>
+  <data name="Vault_SOVTVaultScanGetSiteVaultTimeException" xml:space="preserve">
+    <value>Get site vault time failed:</value>
+  </data>
+  <data name="Vault_SOVTVaultScanInitialSPObjectInfoSiteNotFoundException" xml:space="preserve">
+    <value>Cannot find the site collection.</value>
+  </data>
+  <data name="Vault_SOVTVaultScanListCollectionDiscoverError" xml:space="preserve">
+    <value>An Discover Exception occurred while Process List Collection.Error is :{0}</value>
+  </data>
+  <data name="Vault_SOVTVaultScanListCollectionReportServiceError" xml:space="preserve">
+    <value>An ReportService Error occurred while Process List Collection.Error is :{0}</value>
+  </data>
+  <data name="Vault_SOVTVaultScanProcessAttachmentsError" xml:space="preserve">
+    <value>An error occurred while scanning attachments.</value>
+  </data>
+  <data name="Vault_SOVTVaultScanProcessFolder" xml:space="preserve">
+    <value>An unexpected error occurred while processing folder node.</value>
+  </data>
+  <data name="Vault_SOVTVaultScanProcessFolderStop" xml:space="preserve">
+    <value>Stop folder scanning.</value>
+  </data>
+  <data name="Vault_SOVTVaultScanProcessItemsAndFoldersError" xml:space="preserve">
+    <value>An error occurred while processing items and subfolders.</value>
+  </data>
+  <data name="Vault_SOVTVaultScanProcessItemSPObjectNotFoundException" xml:space="preserve">
+    <value>Cannot find the item in the list or library.</value>
+  </data>
+  <data name="Vault_SOVTVaultScanProcessItemsStop" xml:space="preserve">
+    <value>Stop item scanning.</value>
+  </data>
+  <data name="Vault_SOVTVaultScanProcessItemVersionsError" xml:space="preserve">
+    <value>An error occurred while processing versions.</value>
+  </data>
+  <data name="Vault_SOVTVaultScanProcessList" xml:space="preserve">
+    <value>An unexpected error occurred while processing list node.</value>
+  </data>
+  <data name="Vault_SOVTVaultScanProcessListCollectionError" xml:space="preserve">
+    <value>An error occurred while processing list:</value>
+  </data>
+  <data name="Vault_SOVTVaultScanProcessSite" xml:space="preserve">
+    <value>An unexpected error occurred while processing site collection node.</value>
+  </data>
+  <data name="Vault_SOVTVaultScanProcessSiteSPObjectNotFoundException" xml:space="preserve">
+    <value>The site collection is null. Maybe it does not exist in the current SharePoint environment.</value>
+  </data>
+  <data name="Vault_SOVTVaultScanProcessWebProcressSubWeb" xml:space="preserve">
+    <value>An exception occurred while processing subweb.</value>
+  </data>
+  <data name="Vault_SOVTVaultScanProcessWebSPObjectNotFoundException" xml:space="preserve">
+    <value>The Web is null. Maybe it does not exist in current SharePoint environment.</value>
+  </data>
+  <data name="Vault_SOVTVaultScanProcessWebWeb" xml:space="preserve">
+    <value>An unexpected error occurred while processing Web node.</value>
+  </data>
+  <data name="Vault_SOVTVaultScanScanException" xml:space="preserve">
+    <value>The level is unknown.</value>
+  </data>
+  <data name="Vault_SOVTVaultScanScanProcess" xml:space="preserve">
+    <value>Processed one node of the current schedule failed due to a fatal exception.</value>
+  </data>
+  <data name="Vault_SOVTVaultScanScanspecified" xml:space="preserve">
+    <value>The specified node cannot be found in the SharePoint environment.</value>
+  </data>
+  <data name="Vault_SOVTVaultScanStartScanWorker" xml:space="preserve">
+    <value>An error occurred while starting discovering the thread.</value>
+  </data>
+  <data name="Vault_SOVTVaultScanUpdateListProperty" xml:space="preserve">
+    <value>Failed to update Vault List Property:</value>
+  </data>
+  <data name="Vault_SOVTVaultScanUpdateSiteProperty" xml:space="preserve">
+    <value>Failed to update Vault Site Property:</value>
+  </data>
+  <data name="Vault_SOVTVaultUtilityExportServiceException" xml:space="preserve">
+    <value>An error occurred while Export MetaData File.It is Export Service Error.</value>
+  </data>
+  <data name="Vault_SOVTVaultUtilityParameterNullException" xml:space="preserve">
+    <value>The Instance  is null.</value>
+  </data>
+  <data name="Vault_SOVTVaultWorkCheckStatus" xml:space="preserve">
+    <value>Check the service status.</value>
+  </data>
+  <data name="Vault_SOVTVaultWorkMain" xml:space="preserve">
+    <value>Start the 13 Vault Worker...ID:{0}</value>
+  </data>
+  <data name="Vault_SOVTVaultWorkPerformVaultScheduleJob" xml:space="preserve">
+    <value>An error occurred while performing the VaultWork service:</value>
+  </data>
+  <data name="Vault_SOVTVaultWorkSetResponseToLocalAgentService" xml:space="preserve">
+    <value>An error occurred while setting up response:{0}</value>
+  </data>
+  <data name="Vault_SOVTVaultWorkStartVaultJob" xml:space="preserve">
+    <value>An error occurred while starting the Vault scheduled job.</value>
+  </data>
+</root>

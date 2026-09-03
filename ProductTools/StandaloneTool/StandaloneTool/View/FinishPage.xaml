@@ -1,0 +1,170 @@
+﻿<!--/********************************************************************
+ *
+ *  PROPRIETARY and CONFIDENTIAL
+ *
+ *  This file is licensed from, and is a trade secret of:
+ *
+ *                   AvePoint, Inc.
+ *                   525 Washington Blvd, Suite 1400
+ *                   Jersey City, NJ 07310
+ *                   United States of America
+ *                   Telephone: +1-201-793-1111
+ *                   WWW: www.avepoint.com
+ *
+ *  Refer to your License Agreement for restrictions on use,
+ *  duplication, or disclosure.
+ *
+ *  RESTRICTED RIGHTS LEGEND
+ *
+ *  Use, duplication, or disclosure by the Government is
+ *  subject to restrictions as set forth in subdivision
+ *  (c)(1)(ii) of the Rights in Technical Data and Computer
+ *  Software clause at DFARS 252.227-7013 (Oct. 1988) and
+ *  FAR 52.227-19 (C) (June 1987).
+ *
+ *  Copyright © 2017-2026 AvePoint® Inc. All Rights Reserved. 
+ *
+ *  Unpublished - All rights reserved under the copyright laws of the United States.
+ */-->
+<Page
+    x:Class="StandaloneTool.View.FinishPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
+    xmlns:local="clr-namespace:StandaloneTool.View"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:resource="clr-namespace:DataExportCore.Resources;assembly=DataExportCore"
+    xmlns:viewModels="clr-namespace:StandaloneTool.View.Model"
+    Title="FinishPage"
+    d:DesignHeight="450"
+    d:DesignWidth="800"
+    mc:Ignorable="d">
+    <Page.DataContext>
+        <viewModels:FinishViewModel />
+    </Page.DataContext>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50" />
+            <RowDefinition Height="60" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="10" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="40" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid Background="#FF1188EE">
+            <TextBlock
+                Margin="0,0,0,20"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Bottom"
+                FontFamily="Segoe UI"
+                FontSize="16"
+                FontWeight="Bold"
+                Foreground="White"
+                Style="{StaticResource PageDescriptionTextBlock}"
+                Text="{x:Static resource:CommonResourceManager.SATool_FinishPageTitle}" />
+        </Grid>
+        <Image
+            Grid.Row="2"
+            Width="180"
+            Height="120"
+            VerticalAlignment="Center"
+            Source="{Binding FinishImageSource}" />
+        <TextBlock
+            Grid.Row="4"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Top"
+            FontSize="20"
+            FontWeight="Bold"
+            Foreground="#FF444444"
+            Style="{StaticResource PageDescriptionTextBlock}"
+            Text="{Binding FinishText}" />
+        <Grid Grid.Row="6" Width="560">
+            <Grid Margin="20">
+                <Grid.ColumnDefinitions>
+                    <!--  Intro  -->
+                    <ColumnDefinition Width="*" />
+                    <!--  Space  -->
+                    <ColumnDefinition Width="10" />
+                    <!--  Space  -->
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <!--  Radio Button  -->
+                    <RowDefinition Height="Auto" />
+                    <!--  Radio Button  -->
+                    <RowDefinition Height="10" />
+                    <!--  Control Service Port  -->
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <TextBlock
+                    Grid.Row="0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    Style="{StaticResource PageDescriptionTextBlock}"
+                    Text="{Binding ExportOption}" />
+                <TextBlock
+                    Grid.Row="0"
+                    Grid.Column="2"
+                    HorizontalAlignment="Right"
+                    VerticalAlignment="Top"
+                    Style="{StaticResource PageDescriptionTextBlock}"
+                    Text="{x:Static resource:CommonResourceManager.SATool_TotalSizeTextFinishPage}"
+                    Visibility="{Binding Path=OnlySupportExchangeAndNotSpecialCustomer, Converter={StaticResource BooleanToVisibilityConverter}, ConverterParameter=true}" />
+                <TextBlock
+                    Grid.Row="2"
+                    MaxWidth="420"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    Foreground="#FF333333"
+                    Style="{StaticResource PageDescriptionTextBlock}"
+                    Text="{Binding ExportFolder}"
+                    TextWrapping="Wrap" />
+                <TextBlock
+                    Grid.Row="2"
+                    Grid.Column="2"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Top"
+                    Foreground="#FF333333"
+                    Style="{StaticResource PageDescriptionTextBlock}"
+                    Text="{Binding ExportSize}"
+                    Visibility="{Binding Path=OnlySupportExchangeAndNotSpecialCustomer, Converter={StaticResource BooleanToVisibilityConverter}, ConverterParameter=true}" />
+            </Grid>
+            <Border
+                BorderBrush="#FFD1D8DE"
+                BorderThickness="2"
+                CornerRadius="4" />
+        </Grid>
+        <Grid Grid.Row="7" Margin="0,10,0,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="330" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <TextBlock
+                Grid.Column="1"
+                HorizontalAlignment="Left"
+                Style="{StaticResource PageIntroTextBlock}"
+                Text="{x:Static resource:CommonResourceManager.SATool_ViewText}" />
+            <TextBlock Grid.Column="2">
+                <Hyperlink>
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="Click">
+                            <i:InvokeCommandAction Command="{Binding OpenLogFileCommand}" />
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
+                    <TextBlock Text="{x:Static resource:CommonResourceManager.SATool_ReportDetail}" />
+                </Hyperlink>
+            </TextBlock>
+            <TextBlock
+                Grid.Column="3"
+                HorizontalAlignment="Left"
+                Style="{StaticResource PageIntroTextBlock}"
+                Text="{x:Static resource:CommonResourceManager.SATool_ForDetailsText}" />
+        </Grid>
+    </Grid>
+</Page>

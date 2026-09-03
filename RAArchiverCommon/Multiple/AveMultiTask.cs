@@ -1,0 +1,73 @@
+﻿/********************************************************************
+ *
+ *  PROPRIETARY and CONFIDENTIAL
+ *
+ *  This file is licensed from, and is a trade secret of:
+ *
+ *                   AvePoint, Inc.
+ *                   525 Washington Blvd, Suite 1400
+ *                   Jersey City, NJ 07310
+ *                   United States of America
+ *                   Telephone: +1-201-793-1111
+ *                   WWW: www.avepoint.com
+ *
+ *  Refer to your License Agreement for restrictions on use,
+ *  duplication, or disclosure.
+ *
+ *  RESTRICTED RIGHTS LEGEND
+ *
+ *  Use, duplication, or disclosure by the Government is
+ *  subject to restrictions as set forth in subdivision
+ *  (c)(1)(ii) of the Rights in Technical Data and Computer
+ *  Software clause at DFARS 252.227-7013 (Oct. 1988) and
+ *  FAR 52.227-19 (C) (June 1987).
+ *
+ *  Copyright © 2017-2026 AvePoint® Inc. All Rights Reserved. 
+ *
+ *  Unpublished - All rights reserved under the copyright laws of the United States.
+ */
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace AvePoint.RA.SharePoint.ArchiverCommon
+{
+    public abstract class AveMultiTask
+    {
+        public TaskStatus Status { get; internal set; }
+        public int TreeLevel { get; internal set; }
+        public bool IsMultiple { get; internal set; }
+        public AveMultiTask Parent { get; internal set; }
+        public int ChildrenCount { get; internal set; }
+        public List<AveMultiTask> Children { get; internal set; }
+        public AveMultiTask Next { get; internal set; }
+        public bool FabricateComplete { get; internal set; }
+
+        protected AveMultiTask(int treeLevel, bool multiple)
+        {
+            Status = TaskStatus.Waitting;
+            TreeLevel = treeLevel;
+            IsMultiple = multiple;
+        }
+        protected AveMultiTask()
+        {
+            Status = TaskStatus.Waitting;
+        }
+
+        public abstract void PreAction();
+        public abstract void Process();
+        public abstract void Complete();
+        public abstract void Exception(Exception e);
+        public abstract void PostAction();
+
+    }
+
+    public enum TaskStatus : byte
+    {
+        Waitting = 0,
+        Processing,
+        ProcessEnd,
+        Finished,
+    }
+}

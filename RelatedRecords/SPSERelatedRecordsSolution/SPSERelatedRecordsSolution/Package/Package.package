@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="65c463ba-1924-4dc3-a0da-21291591bd1d" solutionId="65c463ba-1924-4dc3-a0da-21291591bd1d" resetWebServer="false" sharePointProductVersion="19.0" name="AvePointRelatedRecordsSPSESolution" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <assemblies>
+    <customAssembly location="SPSERelatedRecordsAssembly.dll" deploymentTarget="GlobalAssemblyCache" sourcePath="..\output\SPSERelatedRecordsAssembly.dll">
+      <safeControls>
+        <safeControl assemblyName="SPSERelatedRecordsAssembly" namespaceName="AvePoint.Opus.RelatedRecords" typeName="*" isSafeAgainstScript="false" />
+      </safeControls>
+    </customAssembly>
+    <customAssembly location="Newtonsoft.Json.dll" deploymentTarget="GlobalAssemblyCache" sourcePath="..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll" />
+  </assemblies>
+  <projectItems>
+    <projectItemReference itemId="9c78369d-cf2c-42b1-b85d-74b44618476c" />
+  </projectItems>
+</package>

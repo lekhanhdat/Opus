@@ -1,0 +1,1934 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--/********************************************************************
+ *
+ *  PROPRIETARY and CONFIDENTIAL
+ *
+ *  This file is licensed from, and is a trade secret of:
+ *
+ *                   AvePoint, Inc.
+ *                   525 Washington Blvd, Suite 1400
+ *                   Jersey City, NJ 07310
+ *                   United States of America
+ *                   Telephone: +1-201-793-1111
+ *                   WWW: www.avepoint.com
+ *
+ *  Refer to your License Agreement for restrictions on use,
+ *  duplication, or disclosure.
+ *
+ *  RESTRICTED RIGHTS LEGEND
+ *
+ *  Use, duplication, or disclosure by the Government is
+ *  subject to restrictions as set forth in subdivision
+ *  (c)(1)(ii) of the Rights in Technical Data and Computer
+ *  Software clause at DFARS 252.227-7013 (Oct. 1988) and
+ *  FAR 52.227-19 (C) (June 1987).
+ *
+ *  Copyright © 2017-2026 AvePoint® Inc. All Rights Reserved. 
+ *
+ *  Unpublished - All rights reserved under the copyright laws of the United States.
+ */-->
+<Dictionary>
+  <Words>
+    <!-- 
+      This is a list of case-insensitive words that exist in the dictionary
+      but you do not want to be recognized by IdentifiersShouldBeSpelledCorrectly.
+      Do not add deprecated terms to this list, instead add these to the 
+      <Deprecated> section below.
+    -->
+    <Unrecognized>
+      <!--<Word>cb</Word>
+      <Word>ch</Word>
+      <Word>csc</Word>
+      <Word>elem</Word>
+      <Word>gt</Word>
+      <Word>idx</Word>
+      <Word>img</Word>
+      <Word>lg</Word>
+      <Word>multi</Word>
+      <Word>num</Word>
+      <Word>ps</Word>
+      <Word>pw</Word>
+      <Word>scp</Word>
+      <Word>si</Word>
+      <Word>sig</Word>
+      <Word>tk</Word>
+      <Word>tw</Word>
+      <Word>val</Word>    -->  
+    </Unrecognized>
+    <!--
+      This is a list of case-insensitive words that do not exist in the dictionary
+      but you still want to be considered as recognized by 
+      IdentifiersShouldBeSpelledCorrectly. Do not add compound words (e.g. 'FileName') 
+      to this list as this will cause CompoundWordsShouldBeBeCasedCorrectly to fire on 
+      usages of the compound word stating that they should be changed to their discrete equivalent 
+      (for example 'FileName' -> 'Filename').
+    -->
+    <OurRecognized>
+      
+    </OurRecognized>
+    
+    <Recognized>
+      <!--vs2012会检查出错误暂时加上 Approver：Oliver Luo-->	 
+      <Word>sp</Word>
+      <Word>Dir</Word>
+      <Word>Num</Word>
+      <Word>proc</Word>
+      <Word>Freq</Word>	  
+      <Word>fn</Word>  
+      <Word>ser</Word>
+	  <Word>Si</Word>
+	  <Word>Calc</Word>
+      <Word>ms-webpart-title</Word>	 
+      <Word>ms-rte</Word>	 
+      <Word>ms-wiki-column</Word>
+      <Word>gov</Word>
+      <Word>auth</Word>
+      <Word>acl</Word>
+	  <Word>pos</Word>
+      <Word>rpt</Word>
+	  <!--原始白名单留下的单词 Approver：PM Zoe-->	 
+      <Word>Almaty</Word>
+      <Word>analyse</Word>
+      <Word>boolean</Word>
+      <Word>Centera </Word>
+      <Word>charset</Word>
+      <Word>encryptor</Word>
+      <Word>unmount</Word>
+      <Word>unmounted</Word>
+      <Word>indexable</Word>
+      <Word>notifier</Word>
+      <Word>pend</Word>
+      <Word>plugin</Word>
+      <Word>readonly </Word>
+      <Word>replicator</Word>
+      <Word>sortable</Word>
+      <Word>upgrading</Word>
+      <Word>deallocate</Word>
+      <Word>Firefox</Word>
+      <Word>multi</Word>
+      <Word>multivalued</Word>
+      <Word>quiesce</Word>
+      <Word>quiesced</Word>
+      <Word>quiescing</Word>
+      <Word>SCOM</Word>
+      <Word>hotfix</Word>
+      <Word>NewsGator</Word>
+      <Word>Nintex</Word>
+      <Word>validators</Word>
+      <Word>Documentum</Word>
+      <Word>Ekaterinburg</Word>
+      <Word>Kathmandu</Word>
+      <Word>Kolkata</Word>
+      <Word>Livelink</Word>
+      <Word>PowerShell</Word>
+      <Word>config</Word>
+      <Word>migrator</Word>
+      <Word>registrable</Word>
+      <Word>accessor</Word>
+      <Word>archiver </Word>
+      <Word>bitrate</Word>
+      <Word>blog</Word>
+      <Word>bootstrapper</Word>
+      <Word>callee</Word>
+      <Word>checkin</Word>
+      <Word>contravariant</Word>
+      <Word>decommission</Word>
+      <Word>delegator</Word>
+      <Word>deserialize</Word>
+      <Word>discardable</Word>
+      <Word>email</Word>
+      <Word>endian</Word>
+      <Word>enum</Word>
+      <Word>finalizer</Word>
+      <Word>fixup</Word>
+      <Word>hashtable</Word>
+      <Word>initializer</Word>
+      <Word>initializers</Word>
+      <Word>interop</Word>
+      <Word>iterator</Word>
+      <Word>lite</Word>
+      <Word>loopback </Word>
+      <Word>mapper</Word>
+      <Word>marshaler</Word>
+      <Word>Mozilla</Word>
+      <Word>multiline</Word>
+      <Word>mutator</Word>
+      <Word>mutex</Word>
+      <Word>passphrase</Word>
+      <Word>prepend</Word>
+      <Word>realtime</Word>
+      <Word>recurse</Word>
+      <Word>refactor</Word>
+      <Word>remoting</Word>
+      <Word>representable</Word>
+      <Word>resolver</Word>
+      <Word>serializable</Word>
+      <Word>serializer</Word>
+      <Word>specifier</Word>
+      <Word>specifiers</Word>
+      <Word>spline</Word>
+      <Word>stickies</Word>
+      <Word>struct</Word>
+      <Word>tuple</Word>
+      <Word>tuples</Word>
+      <Word>weblog</Word>
+      <Word>validator</Word>
+      <Word>uninitialized</Word>
+      <Word>Uninstallation</Word>
+      <Word>unterminated</Word>
+      <Word>unregister</Word>
+      
+      <!--2012.7.24 PM:Niki Chai Module:SO-Archiver-->
+      <Word>Archiver</Word>
+      <Word>xlsx</Word>
+      <Word>param</Word>
+      <Word>desc</Word>
+      <Word>Linq</Word>
+      <Word>dll</Word>
+      <Word>var</Word>
+
+      <!--2012.7.24 PM:Mica Chi Module:Vault-->
+      <Word>scn</Word>
+      
+      <!--2012.7.24 PM:Lydia Wang Module:File System Migration-->
+      <Word>pdf</Word>
+      <Word>bak</Word>
+      <Word>vsd</Word>
+      <Word>ppt</Word>
+      <Word>pptx</Word>
+      <Word>doc</Word>
+      <Word>docx</Word>
+      <Word>xls</Word>
+      <Word>aspx</Word>
+      <Word>csv</Word>
+      <!--2012.7.27 PM:Monica Zhu Module:Installation-->
+      <Word>xaml</Word>
+      <Word>ico</Word>
+      <Word>png</Word>
+      <Word>lnk</Word>
+      <Word>dll</Word>
+      <Word>pfx</Word>
+      <Word>lic</Word>
+      <Word>dat</Word>
+      <Word>ini</Word>
+      <Word>mdf</Word>
+      <Word>css</Word>
+      <Word>Btn</Word>
+      <Word>ja-JP</Word>
+      <Word>zh-CN</Word>
+      <Word>sa</Word>
+      <Word>Tcp</Word>
+      <Word>cmd</Word>
+      <Word>cmdlet</Word>
+      <Word>dbo</Word>
+      <Word>Args</Word>
+      <!--2012.7.31 PM:Lydia Wang Module:File System Migration-->
+      <Word>Silverlight</Word>
+      <Word>Xslt</Word>
+      <Word>nvarchar</Word>
+      <Word>dbo</Word>
+      <Word>Lable</Word>
+      <Word>bool</Word>
+      <Word>int</Word>
+      <!--2012.7.31 PM:Abby Zhang Module:ADM-Replicator-->
+      <Word>Impl</Word>
+      <Word>Dest</Word>
+      <Word>bg</Word>
+      <Word>br</Word>
+      <Word>buffersize</Word>
+      <Word>cellspacing</Word>
+      <Word>docave-xam</Word>
+      <Word>dsn</Word>
+      <Word>Eq</Word>
+      <Word>fs</Word>
+      <Word>Irm</Word>
+      <Word>Kpi</Word>
+      <Word>mso-cellspacing</Word>
+      <Word>mso-yfti-irow</Word>
+      <Word>mso-yfti-tbllook</Word>
+      <Word>nobr</Word>
+      <Word>nowrap</Word>
+      <Word>padat</Word>
+      <Word>progid</Word>
+      <Word>rar</Word>
+      <Word>Repli</Word>
+      <Word>Rss</Word>
+      <Word>rss</Word>
+      <Word>timelastmodified</Word>
+      <Word>アカウント</Word>
+      <Word>システム</Word>
+      <Word>mscordacwks</Word>
+      <Word>mscorwks</Word>
+      <Word>dmp</Word>
+      <Word>emailattachmentfolders</Word>
+      <Word>emailoverwrite</Word>
+      <Word>emailsavemeetings</Word>
+      <Word>emailsaveoriginal</Word>
+      <Word>emailusesecurity</Word>
+      <Word>ws</Word>
+      <Word>vti</Word>
+      <Word>pid</Word>
+      <Word>cfg</Word>
+      <Word>localhost</Word>
+      <Word>ows</Word>
+      <Word>Url</Word>
+      <Word>tp</Word>
+      <Word>Guid</Word>
+      <Word>cts</Word>
+      <Word>pvt</Word>
+      <Word>resx</Word>
+      <Word>src</Word>
+      <Word>Css</Word>
+      <Word>Hijri</Word>
+      <Word>Async</Word>
+      <Word>htm</Word>
+      <Word>th</Word>
+      <Word>tr</Word>
+      <Word>mso-border-top-alt</Word>
+      <Word>mso-border-bottom-alt</Word>
+      <Word>Mso</Word>
+      <Word>ipv</Word>
+      <!--2012.8.1 PM:Elsa Li Module:CA -->
+      <Word>asmx</Word>
+      <Word>associategroups</Word>
+      <Word>avesitemaxdepth</Word>
+      <Word>bpcf</Word>
+      <Word>builtin</Word>
+      <Word>cn</Word>
+      <Word>Desc</Word>
+      <Word>dispformurl</Word>
+      <Word>dt</Word>
+      <Word>ecm</Word>
+      <Word>Fis</Word>
+      <Word>Fr</Word>
+      <Word>Fri</Word>
+      <Word>Galerie</Word>
+      <Word>gt</Word>
+      <Word>href</Word>
+      <Word>i</Word>
+      <Word>Iis</Word>
+      <Word>img</Word>
+      <Word>javascript</Word>
+      <Word>lt</Word>
+      <Word>mngctype</Word>
+      <Word>Mo</Word>
+      <Word>Mon</Word>
+      <Word>msdt</Word>
+      <Word>mso</Word>
+      <Word>nav</Word>
+      <Word>officialfile</Word>
+      <Word>Readown</Word>
+      <Word>rv</Word>
+      <Word>sam</Word>
+      <Word>Sat</Word>
+      <Word>siteurl</Word>
+      <Word>Sku</Word>
+      <Word>Sms</Word>
+      <Word>spcf</Word>
+      <Word>spocachefull</Word>
+      <Word>spocacheread</Word>
+      <Word>spocrawlerfed</Word>
+      <Word>Sql</Word>
+      <Word>Str</Word>
+      <Word>stsadm</Word>
+      <Word>stsadmin</Word>
+      <Word>Su</Word>
+      <Word>Sun</Word>
+      <Word>Thu</Word>
+      <Word>Tr</Word>
+      <Word>Tu</Word>
+      <Word>Tue</Word>
+      <Word>We</Word>
+      <Word>webonderdelen</Word>
+      <Word>webpart</Word>
+      <Word>Wed</Word>
+      <Word>wiki</Word>
+      <Word>Wss</Word>
+      <Word>x-javascript</Word>
+      <Word>xmlns</Word>
+      <Word>Xms</Word>
+      <Word>xsn</Word>
+      <Word>ylo</Word>
+      <Word>パーツ ギャラリー</Word>
+      <Word>Th</Word>
+      <Word>Sa</Word>
+      <Word>Quiesced</Word>
+      <Word>Quiescing</Word>
+      <Word>Upgrading</Word>
+      <Word>Webpart</Word>
+      <!--2012.8.1 PM:Elean Li Module:RC -->
+      <Word>uuid</Word>
+      <Word>Smtp</Word>
+      <Word>Bdc</Word>
+      <Word>Clsid</Word>
+      <Word>xap</Word>
+      <Word>inetinfo</Word>
+      <Word>inetsrv</Word>
+      <Word>IIs</Word>
+      <Word>Eq</Word>
+      <Word>aspx</Word>
+      <Word>Api</Word>
+      <Word>c-ip</Word>
+      <Word>cs-bytes</Word>
+      <Word>cs-method</Word>
+      <Word>cs-uri-query</Word>
+      <Word>cs-uri-stem</Word>
+      <Word>cs-username</Word>
+      <Word>s-computername</Word>
+      <Word>s-ip</Word>
+      <Word>s-sitename</Word>
+      <Word>Referer</Word>
+      <Word>cs</Word>
+      <Word>cs-host</Word>
+      <Word>cs-version</Word>
+      <Word>sc-substatus</Word>
+      <Word>nc</Word>
+      <Word>cimv</Word>
+      <Word>Persec</Word>
+      <Word>modifiedby</Word>
+      <Word>schemas-microsoft-com</Word>
+      <Word>sharepoint</Word>
+      <!--2012.8.1 PM:Amy Lee Module:PR -->
+      <Word>aa</Word>
+      <Word>addlogin</Word>
+      <Word>addrolemember</Word>
+      <Word>addsrvrolemember</Word>
+      <Word>admindatabasename</Word>
+      <Word>admindatabaseserver</Word>
+      <Word>adminserver</Word>
+      <Word>Alphaleonis</Word>
+      <Word>amd</Word>
+      <Word>Api</Word>
+      <Word>apicontext</Word>
+      <Word>appcmd</Word>
+      <Word>ascx</Word>
+      <Word>asplaintext</Word>
+      <Word>aspx</Word>
+      <Word>assocform</Word>
+      <Word>assocformcode</Word>
+      <Word>attribute-cache-ttl</Word>
+      <Word>autosize</Word>
+      <Word>backuphistory</Word>
+      <Word>backupset</Word>
+      <Word>bak</Word>
+      <Word>Bak</Word>
+      <Word>bakfile</Word>
+      <Word>bakfiles</Word>
+      <Word>baseport</Word>
+      <Word>Bdc</Word>
+      <Word>BDCMAs</Word>
+      <Word>BDCMAs</Word>
+      <Word>binpwd</Word>
+      <Word>binvalue</Word>
+      <Word>Bk</Word>
+      <Word>builtin</Word>
+      <Word>bulkadmin</Word>
+      <Word>Caringo</Word>
+      <Word>Cas</Word>
+      <Word>cd</Word>
+      <Word>Centera</Word>
+      <Word>cer</Word>
+      <Word>certificatethumbprint</Word>
+      <Word>certpwd</Word>
+      <Word>cfg</Word>
+      <Word>charvalue</Word>
+      <Word>checktable</Word>
+      <Word>Cifs</Word>
+      <Word>cifs-server</Word>
+      <Word>cl</Word>
+      <Word>Cli</Word>
+      <Word>cluster-uuid</Word>
+      <Word>cmd</Word>
+      <Word>Cmdlet</Word>
+      <Word>cmdshell</Word>
+      <Word>cmdshell'net</Word>
+      <Word>computername</Word>
+      <Word>containing-aggregate-uuid</Word>
+      <Word>contains-lun-clones</Word>
+      <Word>Conterter</Word>
+      <Word>controltemplates</Word>
+      <Word>convertto-securestring</Word>
+      <Word>cpu-ciob-revision-id</Word>
+      <Word>cpu-firmware-release</Word>
+      <Word>cpu-microcode-version</Word>
+      <Word>cpu-part-number</Word>
+      <Word>cpu-processor-id</Word>
+      <Word>cpu-processor-type</Word>
+      <Word>cpu-revision</Word>
+      <Word>cpu-serial-number</Word>
+      <Word>Cred</Word>
+      <Word>Css</Word>
+      <Word>csv</Word>
+      <Word>Ction</Word>
+      <Word>dat</Word>
+      <Word>datanode</Word>
+      <Word>dbcc</Word>
+      <Word>dbcreator</Word>
+      <Word>dbkeys</Word>
+      <Word>dbmsadsn</Word>
+      <Word>dbmslpcn</Word>
+      <Word>dbmsrpcn</Word>
+      <Word>dbmssocn</Word>
+      <Word>dbmsspxn</Word>
+      <Word>Dbmsvinn</Word>
+      <Word>dbname</Word>
+      <Word>dbnmpntw</Word>
+      <Word>dbo</Word>
+      <Word>dbrecover</Word>
+      <Word>dbs</Word>
+      <Word>ddworkflow</Word>
+      <Word>deduplication-space-saved</Word>
+      <Word>defaultdb</Word>
+      <Word>denylogin</Word>
+      <Word>desc</Word>
+      <Word>Dest</Word>
+      <Word>destination-vserver</Word>
+      <Word>dirs</Word>
+      <Word>dir-umask</Word>
+      <Word>diskadmin</Word>
+      <Word>displayname</Word>
+      <Word>dll</Word>
+      <Word>Dlls</Word>
+      <Word>Dp</Word>
+      <Word>dsid</Word>
+      <Word>Dst</Word>
+      <Word>Dto</Word>
+      <Word>dwp</Word>
+      <Word>encryptopt</Word>
+      <Word>enterprisefeatures</Word>
+      <Word>Env</Word>
+      <Word>fba</Word>
+      <Word>featurefinish</Word>
+      <Word>Filesystem</Word>
+      <Word>file-umask</Word>
+      <Word>firstint</Word>
+      <Word>fixml</Word>
+      <Word>forcegroup</Word>
+      <Word>formatted-snaplock-compliance-clock</Word>
+      <Word>Frequncy</Word>
+      <Word>fsid</Word>
+      <Word>Getconfig</Word>
+      <Word>Get-Nc</Word>
+      <Word>getrunning</Word>
+      <Word>grantlogin</Word>
+      <Word>Guid</Word>
+      <Word>hadr</Word>
+      <Word>hasaccess</Word>
+      <Word>hdr</Word>
+      <Word>headeronly</Word>
+      <Word>helpdb</Word>
+      <Word>helpfile</Word>
+      <Word>helplogins</Word>
+      <Word>helpsrvrolemember</Word>
+      <Word>hexstring</Word>
+      <Word>hexvalue</Word>
+      <Word>Hijri</Word>
+      <Word>s</Word>
+      <Word>hostheader</Word>
+      <Word>href</Word>
+      <Word>htm</Word>
+      <Word>i</Word>
+      <Word>ia</Word>
+      <Word>ideamodule</Word>
+      <Word>idx</Word>
+      <Word>IIs</Word>
+      <Word>iisreset</Word>
+      <Word>ilm</Word>
+      <Word>imagelink</Word>
+      <Word>incr</Word>
+      <Word>Incr</Word>
+      <Word>inetinfo</Word>
+      <Word>inetsrv</Word>
+      <Word>inf</Word>
+      <Word>Inf</Word>
+      <Word>ini</Word>
+      <Word>in-nvfailed-state</Word>
+      <Word>inodefile-private-capacity</Word>
+      <Word>inodefile-public-capacity</Word>
+      <Word>InstaMount</Word>
+      <Word>instance-uuid</Word>
+      <Word>ipc</Word>
+      <Word>is-accessbasedenum</Word>
+      <Word>Isapi</Word>
+      <Word>is-atime-update-enabled</Word>
+      <Word>is-autodelete-enabled</Word>
+      <Word>is-convert-ucode-enabled</Word>
+      <Word>is-create-ucode-enabled</Word>
+      <Word>is-filesys-size-fixed</Word>
+      <Word>is-nvfail-enabled</Word>
+      <Word>is-recomputing-parity</Word>
+      <Word>is-resyncing</Word>
+      <Word>is-snaplock</Word>
+      <Word>is-space-alloc-enabled</Word>
+      <Word>is-symlink-strict-security</Word>
+      <Word>is-vol-offline</Word>
+      <Word>is-vscan</Word>
+      <Word>is-vscanread</Word>
+      <Word>is-vserver-root</Word>
+      <Word>is-widelink</Word>
+      <Word>joblist</Word>
+      <Word>Kl</Word>
+      <Word>labelonly</Word>
+      <Word>lcid</Word>
+      <Word>Lcid</Word>
+      <Word>ldf</Word>
+      <Word>listid</Word>
+      <Word>loadbalancer</Word>
+      <Word>localhost</Word>
+      <Word>logbkup</Word>
+      <Word>lsn</Word>
+      <Word>lst</Word>
+      <Word>LUN</Word>
+      <Word>maxdirsize</Word>
+      <Word>maxusers</Word>
+      <Word>max-write-alloc-blocks</Word>
+      <Word>mbackup</Word>
+      <Word>mdf</Word>
+      <Word>Metainfo</Word>
+      <Word>microsoft</Word>
+      <Word>MountPoint</Word>
+      <Word>msdb</Word>
+      <Word>msfteuser</Word>
+      <Word>msid</Word>
+      <Word>mssqluser</Word>
+      <Word>msver</Word>
+      <Word>mtf</Word>
+      <Word>multiprotocol-type</Word>
+      <Word>N'</Word>
+      <Word>ne</Word>
+      <Word>Newsgator</Word>
+      <Word>newsgator</Word>
+      <Word>newsmanager</Word>
+      <Word>nfs-character-set</Word>
+      <Word>nintexworkflow</Word>
+      <Word>nintexworkflow</Word>
+      <Word>nolock</Word>
+      <Word>nonadmin</Word>
+      <Word>np</Word>
+      <Word>nt</Word>
+      <Word>ntext</Word>
+      <Word>nvarchar</Word>
+      <Word>Obect</Word>
+      <Word>oem-character-set</Word>
+      <Word>onet</Word>
+      <Word>Onet</Word>
+      <Word>Ontap</Word>
+      <Word>oplocks</Word>
+      <Word>owning-vserver-name</Word>
+      <Word>owning-vserver-uuid</Word>
+      <Word>ows</Word>
+      <Word>Pand</Word>
+      <Word>Params</Word>
+      <Word>Passwd</Word>
+      <Word>percentage-deduplication-space-saved</Word>
+      <Word>Pfx</Word>
+      <Word>Pid</Word>
+      <Word>plex-count</Word>
+      <Word>plexes</Word>
+      <Word>Postback</Word>
+      <Word>Postbacks</Word>
+      <Word>PowerShell</Word>
+      <Word>Pri</Word>
+      <Word>processadmin</Word>
+      <Word>propsets</Word>
+      <Word>provenance-uuid</Word>
+      <Word>ps</Word>
+      <Word>Ps</Word>
+      <Word>psconfig</Word>
+      <Word>psd</Word>
+      <Word>Psi</Word>
+      <Word>pwd</Word>
+      <Word>qp</Word>
+      <Word>Qtree</Word>
+      <Word>qwer</Word>
+      <Word>read-realloc</Word>
+      <Word>regread</Word>
+      <Word>Rel</Word>
+      <Word>replacedefaultcertificate</Word>
+      <Word>resx</Word>
+      <Word>resyncing-percentage</Word>
+      <Word>revlogin</Word>
+      <Word>rg</Word>
+      <Word>rolemanager</Word>
+      <Word>Rolemanager</Word>
+      <Word>root-dir-gen</Word>
+      <Word>Rstr</Word>
+      <Word>sa</Word>
+      <Word>sbyte</Word>
+      <Word>Sched</Word>
+      <Word>scheduledreportswf</Word>
+      <Word>scriptblock</Word>
+      <Word>Scription</Word>
+      <Word>scsi</Word>
+      <Word>sdcli</Word>
+      <Word>searchengine</Word>
+      <Word>secondint</Word>
+      <Word>secre</Word>
+      <Word>securefastsearchconnector</Word>
+      <Word>securityadmin</Word>
+      <Word>serveradmin</Word>
+      <Word>setupadmin</Word>
+      <Word>Sharepoint</Word>
+      <Word>sharepoint</Word>
+      <Word>sharepointlearningkit</Word>
+      <Word>sid</Word>
+      <Word>Signon</Word>
+      <Word>Siteconfig</Word>
+      <Word>siteconfig</Word>
+      <Word>sitedefinitions</Word>
+      <Word>Sm</Word>
+      <Word>Smo</Word>
+      <Word>Sms</Word>
+      <Word>SMSQL</Word>
+      <Word>snap-autodelete</Word>
+      <Word>snapdir-access-enabled</Word>
+      <Word>Snapin</Word>
+      <Word>Snaplock</Word>
+      <Word>snaplock-compliance-clock</Word>
+      <Word>SnapMirror</Word>
+      <Word>snapmirrorvolume</Word>
+      <Word>snapshot-instance-uuid</Word>
+      <Word>snapshot-version-uuid</Word>
+      <Word>SnapVault</Word>
+      <Word>source-vserver</Word>
+      <Word>spacemon</Word>
+      <Word>spid</Word>
+      <Word>SPObject</Word>
+      <Word>SPServer</Word>
+      <Word>sql</Word>
+      <Word>sqlagentuser</Word>
+      <Word>sqlinfo</Word>
+      <Word>sqlsnap</Word>
+      <Word>src</Word>
+      <Word>srvid</Word>
+      <Word>srvrolename</Word>
+      <Word>ssa</Word>
+      <Word>Sso</Word>
+      <Word>ssp</Word>
+      <Word>Ssp</Word>
+      <Word>Standardwebsite</Word>
+      <Word>str</Word>
+      <Word>sts</Word>
+      <Word>Sv</Word>
+      <Word>Svr</Word>
+      <Word>symlink-properties</Word>
+      <Word>sysadmin</Word>
+      <Word>sysconfig</Word>
+      <Word>sysdatabases</Word>
+      <Word>syslogins</Word>
+      <Word>sysname</Word>
+      <Word>sysprocesses</Word>
+      <Word>sysxlogins</Word>
+      <Word>Taillog</Word>
+      <Word>Tcp</Word>
+      <Word>Tdp</Word>
+      <Word>tempdb</Word>
+      <Word>tempint</Word>
+      <Word>thumprint</Word>
+      <Word>tmp</Word>
+      <Word>tmpstr</Word>
+      <Word>tp</Word>
+      <Word>tsm</Word>
+      <Word>tsql</Word>
+      <Word>txtpwd</Word>
+      <Word>Udc</Word>
+      <Word>uint</Word>
+      <Word>ulong</Word>
+      <Word>umask</Word>
+      <Word>unc</Word>
+      <Word>unmounting</Word>
+      <Word>unprovision</Word>
+      <Word>Unprovision</Word>
+      <Word>Unthrottled</Word>
+      <Word>Url</Word>
+      <Word>ushort</Word>
+      <Word>Utc</Word>
+      <Word>Utils</Word>
+      <Word>uuid</Word>
+      <Word>Val</Word>
+      <Word>var</Word>
+      <Word>Var</Word>
+      <Word>varbinary</Word>
+      <Word>VDB</Word>
+      <Word>vdb</Word>
+      <Word>Vdb</Word>
+      <Word>VDBs</Word>
+      <Word>Vdbs </Word>
+      <Word>vdi</Word>
+      <Word>Vdi</Word>
+      <Word>vds</Word>
+      <Word>Ver</Word>
+      <Word>Vfiler</Word>
+      <Word>Vhresult</Word>
+      <Word>vispr</Word>
+      <Word>visprus</Word>
+      <Word>vol</Word>
+      <Word>volume-autosize-attributes</Word>
+      <Word>volume-inode-attributes</Word>
+      <Word>volume-security-unix-attributes</Word>
+      <Word>volume-snapshot-autodelete-attributes</Word>
+      <Word>Vserver</Word>
+      <Word>vss</Word>
+      <Word>Vss</Word>
+      <Word>vssapi</Word>
+      <Word>webconfig</Word>
+      <Word>webpart</Word>
+      <Word>Webpart</Word>
+      <Word>webtemp</Word>
+      <Word>wfpub</Word>
+      <Word>wsp</Word>
+      <Word>Wss</Word>
+      <Word>wsz</Word>
+      <Word>Xlate</Word>
+      <Word>xp</Word>
+      <Word>xsn</Word>
+      <Word>xstatus</Word>
+      <Word>xsw</Word>
+      <Word>zaq</Word>
+      <Word>サイト</Word>
+      <Word>既定の</Word>
+      <Word>既定の Web サイト</Word>
+      <!--2012.8.1 PM:Niki Chai Module:SO-Archiver;SO-Storage Manager -->
+      <Word>avepoint</Word>
+      <Word>dwf</Word>
+      <Word>mpp</Word>
+      <Word>ps</Word>
+      <Word>px</Word>
+      <!--2012.8.1 PM:Helen Guo Module:MIG-Lotus Notes -->
+      <Word>aab</Word>
+      <Word>aam</Word>
+      <Word>aas</Word>
+      <Word>abc</Word>
+      <Word>acad</Word>
+      <Word>acgi</Word>
+      <Word>actionhotspot</Word>
+      <Word>administ</Word>
+      <Word>afl</Word>
+      <Word>ai</Word>
+      <Word>aif</Word>
+      <Word>aifc</Word>
+      <Word>aiff</Word>
+      <Word>aip</Word>
+      <Word>allowmultivalues</Word>
+      <Word>Almaty</Word>
+      <Word>alphalower</Word>
+      <Word>alphaupper</Word>
+      <Word>altbgcolor</Word>
+      <Word>altcolumns</Word>
+      <Word>altrows</Word>
+      <Word>analyse</Word>
+      <Word>ani</Word>
+      <Word>animaflex</Word>
+      <Word>aos</Word>
+      <Word>apos</Word>
+      <Word>applicaiton</Word>
+      <Word>aps</Word>
+      <Word>asf</Word>
+      <Word>asx</Word>
+      <Word>attachmentref</Word>
+      <Word>avs</Word>
+      <Word>avs-video</Word>
+      <Word>bak</Word>
+      <Word>Bataar</Word>
+      <Word>bcpio</Word>
+      <Word>binhex</Word>
+      <Word>bm</Word>
+      <Word>borderwidth</Word>
+      <Word>boz</Word>
+      <Word>bsh</Word>
+      <Word>busytime</Word>
+      <Word>bz</Word>
+      <Word>ccad</Word>
+      <Word>cco</Word>
+      <Word>cdf</Word>
+      <Word>cellbackground</Word>
+      <Word>cellbordercolor</Word>
+      <Word>cellborderstyle</Word>
+      <Word>Cen</Word>
+      <Word>certlog</Word>
+      <Word>certsrv</Word>
+      <Word>certstore</Word>
+      <Word>clariscad</Word>
+      <Word>cmu-raster</Word>
+      <Word>colorstyle</Word>
+      <Word>colspan</Word>
+      <Word>columnspan</Word>
+      <Word>commonground</Word>
+      <Word>cpio</Word>
+      <Word>cpp</Word>
+      <Word>cpt</Word>
+      <Word>crc</Word>
+      <Word>crl</Word>
+      <Word>crt</Word>
+      <Word>csh</Word>
+      <Word>cxx</Word>
+      <Word>databaselink</Word>
+      <Word>dbdirman</Word>
+      <Word>dcr</Word>
+      <Word>decsdoc</Word>
+      <Word>deepv</Word>
+      <Word>der</Word>
+      <Word>dmf</Word>
+      <Word>doclink</Word>
+      <Word>docm</Word>
+      <Word>doladmin</Word>
+      <Word>domadmin</Word>
+      <Word>drw</Word>
+      <Word>dv</Word>
+      <Word>dvi</Word>
+      <Word>dwf</Word>
+      <Word>dwg</Word>
+      <Word>dxf</Word>
+      <Word>Dxl</Word>
+      <Word>dxl</Word>
+      <Word>dxr</Word>
+      <Word>eccurs</Word>
+      <Word>Ekaterinburg</Word>
+      <Word>elc</Word>
+      <Word>elisp</Word>
+      <Word>Emb</Word>
+      <Word>embeddedcontrol</Word>
+      <Word>embeddeddatepicker</Word>
+      <Word>embeddedoutline</Word>
+      <Word>embeddedview</Word>
+      <Word>Embeded</Word>
+      <Word>eps</Word>
+      <Word>etx</Word>
+      <Word>evy</Word>
+      <Word>fdf</Word>
+      <Word>fif</Word>
+      <Word>filedata</Word>
+      <Word>flexstor</Word>
+      <Word>fli</Word>
+      <Word>flo</Word>
+      <Word>florian</Word>
+      <Word>flx</Word>
+      <Word>fmf</Word>
+      <Word>fmi</Word>
+      <Word>fpx</Word>
+      <Word>frl</Word>
+      <Word>futuresplash</Word>
+      <Word>groupwise</Word>
+      <Word>gsd</Word>
+      <Word>gsm</Word>
+      <Word>gsp</Word>
+      <Word>gss</Word>
+      <Word>gtar</Word>
+      <Word>gz</Word>
+      <Word>gzip</Word>
+      <Word>hdf</Word>
+      <Word>hgl</Word>
+      <Word>hlb</Word>
+      <Word>hlp</Word>
+      <Word>horizrule</Word>
+      <Word>hpg</Word>
+      <Word>hpgl</Word>
+      <Word>hqx</Word>
+      <Word>hrepeat</Word>
+      <Word>hta</Word>
+      <Word>htc</Word>
+      <Word>htmls</Word>
+      <Word>htt</Word>
+      <Word>htx</Word>
+      <Word>idc</Word>
+      <Word>i-deas</Word>
+      <Word>ief</Word>
+      <Word>iefs</Word>
+      <Word>ies</Word>
+      <Word>iges</Word>
+      <Word>igs</Word>
+      <Word>ima</Word>
+      <Word>imagemap</Word>
+      <Word>imageref</Word>
+      <Word>imageresource</Word>
+      <Word>imap</Word>
+      <Word>Infopath</Word>
+      <Word>ini</Word>
+      <Word>isu</Word>
+      <Word>ivr</Word>
+      <Word>i-vrml</Word>
+      <Word>iwa</Word>
+      <Word>jav</Word>
+      <Word>Jayawardenepura</Word>
+      <Word>jcm</Word>
+      <Word>jfif</Word>
+      <Word>jfif-tbnl</Word>
+      <Word>jpe</Word>
+      <Word>jps</Word>
+      <Word>jutvision</Word>
+      <Word>kar</Word>
+      <Word>Kathmandu</Word>
+      <Word>Kolkata</Word>
+      <Word>ksh</Word>
+      <Word>lccon</Word>
+      <Word>leftmargin</Word>
+      <Word>lefttop</Word>
+      <Word>lma</Word>
+      <Word>lndfr</Word>
+      <Word>Lscript</Word>
+      <Word>lsp</Word>
+      <Word>lst</Word>
+      <Word>lsx</Word>
+      <Word>lsxlc</Word>
+      <Word>ls-xpix</Word>
+      <Word>ltx</Word>
+      <Word>Magadan</Word>
+      <Word>managedmetadata</Word>
+      <Word>mbd</Word>
+      <Word>mbedlet</Word>
+      <Word>mcad</Word>
+      <Word>mcd</Word>
+      <Word>mcf</Word>
+      <Word>mcp</Word>
+      <Word>mif</Word>
+      <Word>mjpg</Word>
+      <Word>Mjuice</Word>
+      <Word>mme</Word>
+      <Word>moov</Word>
+      <Word>mpa</Word>
+      <Word>mpc</Word>
+      <Word>mpe</Word>
+      <Word>mpga</Word>
+      <Word>mpp</Word>
+      <Word>mpv</Word>
+      <Word>mpx</Word>
+      <Word>mrc</Word>
+      <Word>ms-pki</Word>
+      <Word>mspowerpoint</Word>
+      <Word>mswrite</Word>
+      <Word>mv</Word>
+      <Word>mzz</Word>
+      <Word>namagent</Word>
+      <Word>namedelementlink</Word>
+      <Word>naplps</Word>
+      <Word>ncm</Word>
+      <Word>netmc</Word>
+      <Word>newpage</Word>
+      <Word>nif</Word>
+      <Word>niff</Word>
+      <Word>nlnotes</Word>
+      <Word>nokia</Word>
+      <Word>notesbitmap</Word>
+      <Word>nsc</Word>
+      <Word>nsf</Word>
+      <Word>nspaudio</Word>
+      <Word>nvd</Word>
+      <Word>objectref</Word>
+      <Word>oda</Word>
+      <Word>omc</Word>
+      <Word>omcd</Word>
+      <Word>omcr</Word>
+      <Word>paleovu</Word>
+      <Word>pardef</Word>
+      <Word>pascal</Word>
+      <Word>pbm</Word>
+      <Word>pcl</Word>
+      <Word>pcx</Word>
+      <Word>perweb</Word>
+      <Word>Petropavlovsk-Kamchatsky</Word>
+      <Word>pfunk</Word>
+      <Word>pgm</Word>
+      <Word>phyton</Word>
+      <Word>pict</Word>
+      <Word>pkcs</Word>
+      <Word>pkg</Word>
+      <Word>pkix-cert</Word>
+      <Word>pkix-crl</Word>
+      <Word>pko</Word>
+      <Word>plx</Word>
+      <Word>popuptext</Word>
+      <Word>pov</Word>
+      <Word>ppa</Word>
+      <Word>ppm</Word>
+      <Word>pps</Word>
+      <Word>pptm</Word>
+      <Word>ppz</Word>
+      <Word>prt</Word>
+      <Word>pvu</Word>
+      <Word>pwz</Word>
+      <Word>py</Word>
+      <Word>pyc</Word>
+      <Word>qcelp</Word>
+      <Word>qcp</Word>
+      <Word>qd</Word>
+      <Word>qif</Word>
+      <Word>qtc</Word>
+      <Word>qti</Word>
+      <Word>qtif</Word>
+      <Word>quicktime</Word>
+      <Word>ra</Word>
+      <Word>rast</Word>
+      <Word>refwidth</Word>
+      <Word>rexx</Word>
+      <Word>rf</Word>
+      <Word>rfc</Word>
+      <Word>rgb</Word>
+      <Word>richtext</Word>
+      <Word>righttop</Word>
+      <Word>rmi</Word>
+      <Word>rmm</Word>
+      <Word>rmp</Word>
+      <Word>rn-realflash</Word>
+      <Word>rn-realmedia</Word>
+      <Word>rn-realpix</Word>
+      <Word>rn-realplayer</Word>
+      <Word>rn-realvideo</Word>
+      <Word>rnx</Word>
+      <Word>roff</Word>
+      <Word>romanlower</Word>
+      <Word>romanupper</Word>
+      <Word>rowspan</Word>
+      <Word>rp</Word>
+      <Word>rt</Word>
+      <Word>rtx</Word>
+      <Word>runing</Word>
+      <Word>sbk</Word>
+      <Word>scaledheight</Word>
+      <Word>scaledwidth</Word>
+      <Word>scm</Word>
+      <Word>scriplet</Word>
+      <Word>sdml</Word>
+      <Word>sdp</Word>
+      <Word>sdr</Word>
+      <Word>seccat</Word>
+      <Word>sectiontitle</Word>
+      <Word>sgm</Word>
+      <Word>sgml</Word>
+      <Word>sh</Word>
+      <Word>shar</Word>
+      <Word>showborder</Word>
+      <Word>shtml</Word>
+      <Word>skd</Word>
+      <Word>skm</Word>
+      <Word>skp</Word>
+      <Word>skt</Word>
+      <Word>sla</Word>
+      <Word>smi</Word>
+      <Word>smil</Word>
+      <Word>snd</Word>
+      <Word>spc</Word>
+      <Word>spl</Word>
+      <Word>spr</Word>
+      <Word>ssi</Word>
+      <Word>ssm</Word>
+      <Word>sst</Word>
+      <Word>statrep</Word>
+      <Word>stl</Word>
+      <Word>streamingmedia</Word>
+      <Word>subform</Word>
+      <Word>subformref</Word>
+      <Word>svf</Word>
+      <Word>svr</Word>
+      <Word>tablabel</Word>
+      <Word>tablecell</Word>
+      <Word>tablecolumn</Word>
+      <Word>tablerow</Word>
+      <Word>tablerowstyle</Word>
+      <Word>tbk</Word>
+      <Word>tcl</Word>
+      <Word>tcsh</Word>
+      <Word>tex</Word>
+      <Word>texi</Word>
+      <Word>texinfo</Word>
+      <Word>tgz</Word>
+      <Word>timezone</Word>
+      <Word>toolbook</Word>
+      <Word>topmargin</Word>
+      <Word>tsi</Word>
+      <Word>tsplayer</Word>
+      <Word>tsv</Word>
+      <Word>uil</Word>
+      <Word>ul</Word>
+      <Word>Ulaan</Word>
+      <Word>uni</Word>
+      <Word>unis</Word>
+      <Word>unv</Word>
+      <Word>urllink</Word>
+      <Word>userreg</Word>
+      <Word>ustar</Word>
+      <Word>uu</Word>
+      <Word>uue</Word>
+      <Word>vasa</Word>
+      <Word>vcd</Word>
+      <Word>vcs</Word>
+      <Word>vda</Word>
+      <Word>vdo</Word>
+      <Word>vew</Word>
+      <Word>viewlink</Word>
+      <Word>viv</Word>
+      <Word>vmd</Word>
+      <Word>vmf</Word>
+      <Word>vocaltec-media-desc</Word>
+      <Word>vocaltec-media-file</Word>
+      <Word>vos</Word>
+      <Word>vosaic</Word>
+      <Word>vox</Word>
+      <Word>voxware</Word>
+      <Word>vqe</Word>
+      <Word>vqf</Word>
+      <Word>vql</Word>
+      <Word>vrepeat</Word>
+      <Word>vrml</Word>
+      <Word>vrt</Word>
+      <Word>vsd</Word>
+      <Word>vst</Word>
+      <Word>vsw</Word>
+      <Word>wap</Word>
+      <Word>wbmp</Word>
+      <Word>webviewhtml</Word>
+      <Word>widthtype</Word>
+      <Word>wmlc</Word>
+      <Word>wmls</Word>
+      <Word>wmlsc</Word>
+      <Word>wmlscript</Word>
+      <Word>wmlscriptc</Word>
+      <Word>wordperfect</Word>
+      <Word>wpd</Word>
+      <Word>wq</Word>
+      <Word>wri</Word>
+      <Word>wrl</Word>
+      <Word>wrz</Word>
+      <Word>wsc</Word>
+      <Word>wsrc</Word>
+      <Word>wtk</Word>
+      <Word>x-amt-demorun</Word>
+      <Word>x-amt-showrun</Word>
+      <Word>xara</Word>
+      <Word>x-audiosoft-intra</Word>
+      <Word>x-authorware-bin</Word>
+      <Word>x-authorware-map</Word>
+      <Word>x-authorware-seg</Word>
+      <Word>x-bcpio</Word>
+      <Word>xbm</Word>
+      <Word>x-bsh</Word>
+      <Word>x-bytecode</Word>
+      <Word>x-bzip</Word>
+      <Word>x-cdlink</Word>
+      <Word>x-cmu-raster</Word>
+      <Word>x-cooltalk</Word>
+      <Word>x-cpio</Word>
+      <Word>x-cpt</Word>
+      <Word>x-csh</Word>
+      <Word>x-deepv</Word>
+      <Word>xdr</Word>
+      <Word>x-dv</Word>
+      <Word>x-dvi</Word>
+      <Word>x-dwf</Word>
+      <Word>x-dwg</Word>
+      <Word>x-elc</Word>
+      <Word>x-esrehber</Word>
+      <Word>xgl</Word>
+      <Word>x-gsm</Word>
+      <Word>x-gsp</Word>
+      <Word>x-gss</Word>
+      <Word>x-gtar</Word>
+      <Word>xgz</Word>
+      <Word>x-gzip</Word>
+      <Word>x-hdf</Word>
+      <Word>x-httpd-imap</Word>
+      <Word>xif</Word>
+      <Word>xiff</Word>
+      <Word>x-ima</Word>
+      <Word>x-internett-signup</Word>
+      <Word>x-isvideo</Word>
+      <Word>x-jg</Word>
+      <Word>x-jps</Word>
+      <Word>x-koan</Word>
+      <Word>xla</Word>
+      <Word>x-la-asf</Word>
+      <Word>xlb</Word>
+      <Word>xlc</Word>
+      <Word>xld</Word>
+      <Word>x-liveaudio</Word>
+      <Word>x-livescreen</Word>
+      <Word>xlk</Word>
+      <Word>xll</Word>
+      <Word>xlm</Word>
+      <Word>x-lotusscreencam</Word>
+      <Word>xlt</Word>
+      <Word>xlw</Word>
+      <Word>xm</Word>
+      <Word>x-mif</Word>
+      <Word>x-mpequrl</Word>
+      <Word>x-mplayer</Word>
+      <Word>x-ms-asf</Word>
+      <Word>xmz</Word>
+      <Word>x-navi-animation</Word>
+      <Word>x-navidoc</Word>
+      <Word>x-navimap</Word>
+      <Word>x-netcdf</Word>
+      <Word>x-newton-compatible-pkg</Word>
+      <Word>x-niff</Word>
+      <Word>x-omc</Word>
+      <Word>x-omcdatamaker</Word>
+      <Word>x-omcregerator</Word>
+      <Word>x-pagemaker</Word>
+      <Word>x-pascal</Word>
+      <Word>x-pcl</Word>
+      <Word>x-pcx</Word>
+      <Word>x-pict</Word>
+      <Word>xpix</Word>
+      <Word>x-pkcs</Word>
+      <Word>xpm</Word>
+      <Word>x-pn-realaudio</Word>
+      <Word>x-pn-realaudio-plugin</Word>
+      <Word>x-portable-anymap</Word>
+      <Word>x-portable-graymap</Word>
+      <Word>x-portable-pixmap</Word>
+      <Word>x-pov</Word>
+      <Word>x-psid</Word>
+      <Word>x-pv</Word>
+      <Word>x-qpro</Word>
+      <Word>x-qtc</Word>
+      <Word>x-quicktime</Word>
+      <Word>x-rgb</Word>
+      <Word>x-seelogo</Word>
+      <Word>x-setext</Word>
+      <Word>x-sgi-movie</Word>
+      <Word>xsr</Word>
+      <Word>x-tbook</Word>
+      <Word>x-tex</Word>
+      <Word>x-texinfo</Word>
+      <Word>x-troff</Word>
+      <Word>x-troff-man</Word>
+      <Word>x-troff-me</Word>
+      <Word>x-troff-ms</Word>
+      <Word>x-twinvq</Word>
+      <Word>x-twinvq-plugin</Word>
+      <Word>x-uil</Word>
+      <Word>x-ustar</Word>
+      <Word>x-visio</Word>
+      <Word>x-vrml</Word>
+      <Word>x-vrt</Word>
+      <Word>xwd</Word>
+      <Word>x-wintalk</Word>
+      <Word>x-xbitmap</Word>
+      <Word>x-xpixmap</Word>
+      <Word>x-xwd</Word>
+      <Word>zsh</Word>
+      <Word>Src</Word>
+      <Word>uid</Word>
+      <Word>gt</Word>
+      <Word>lt</Word>
+      <Word>quot</Word>
+      <Word>xmlns</Word>
+      <Word>href</Word>
+      <Word>docx</Word>
+      <Word>ppt</Word>
+      <Word>xls</Word>
+      <Word>fr</Word>
+      <Word>sa</Word>
+      <Word>su</Word>
+      <Word>th</Word>
+      <Word>tu</Word>
+      <Word>ip</Word>
+      <Word>cimv</Word>
+      <Word>ui</Word>
+      <!--2012.8.1 PM:Helen Guo Module:ExchangePublicFolderMigration -->
+      <Word>Msg</Word>
+      <Word>Url</Word>
+      <Word>url</Word>
+      <!--2012.8.3 PM:Monica Zhu Module:Wrapper -->
+      <Word>href</Word>
+      <Word>img</Word>
+      <Word>src</Word>
+      <Word>resx</Word>
+      <Word>mht</Word>
+      <Word>ppt</Word>
+      <Word>pptx</Word>
+      <Word>png</Word>
+      <Word>aspx</Word>
+      <Word>evtx</Word>
+      <Word>cs</Word>
+      <Word>pfx</Word>
+      <Word>asmx</Word>
+      <Word>Silverlight</Word>
+      <Word>Xsl</Word>
+      <Word>Rbs</Word>
+      <Word>rbs</Word>
+      <Word>Xoml</Word>
+      <Word>nolock</Word>
+      <Word>readonly</Word>
+      <Word>cmd</Word>
+      <Word>ntext</Word>
+      <Word>uniqueidentifier</Word>
+      <Word>nvarchar</Word>
+      <!--2012.8.3 PM:Lydia Wang Module:DP-GranularBackup&Restore -->
+      <Word>hostheaderwebapplicationurl</Word>
+      <Word>nofilecompression</Word>
+      <Word>includeusersecurity</Word>
+      <Word>createsite</Word>
+      <Word>deletesite</Word>
+      <Word>addpath</Word>
+      <Word>explicitinclusion</Word>
+      <Word>nologfile</Word>
+      <Word>owneremail</Word>
+      <Word>ownerlogin</Word>
+      <Word>siteowner</Word>
+      <Word>sitetemplate</Word>
+      <Word>quot</Word>
+      <Word>tb</Word>
+
+     <!--2012.8.7 PM:Amy Lee Module:CP-Storag Configuratione -->
+      <Word>allo</Word>
+      <Word>rnfr</Word>
+      <Word>tmp</Word>
+      <Word>tsm</Word>
+      <Word>dsm</Word>
+      <Word>dat</Word>
+      <Word>amazon</Word>
+      <Word>Params</Word>
+      <Word>utc</Word>
+      <Word>ipv</Word>
+      <Word>tmp</Word>
+      <Word>sid</Word>
+      <Word>mosso</Word>
+      <Word>api</Word>
+      <Word>cdn</Word>
+      <Word>X-Storage-Url</Word>
+      <Word>Rackspace</Word>
+      <Word>Params</Word>
+      <Word>dns</Word>
+      <Word>atmos</Word>
+      <Word>xmlns</Word>
+      <Word>amazonaws</Word>
+      <Word>url</Word>
+      <Word>restype</Word>
+      <Word>x-emc-meta</Word>
+      <Word>x-emc-uid</Word>
+      <Word>x-emc-signature</Word>
+      <Word>x-emc-date</Word>
+      <Word>x-emc</Word>
+      <Word>emccis</Word>
+      <Word>att</Word>
+      <Word>x-amz</Word>
+      <Word>x-amz-date</Word>
+      <Word>apac</Word>
+      <Word>eu</Word>
+      <Word>tokyo</Word>
+      <Word>usstandard</Word>
+      <Word>uswest</Word>
+      <Word>centera</Word>
+      <Word>castor</Word>
+      <Word>caringo</Word>
+      <Word>netapp</Word>
+      <Word>sauth</Word>
+
+     <!--2012.8.15 PM:Amy Lee Module:Media -->
+      <Word>idx</Word>
+      <Word>dat</Word>
+      <Word>cpl</Word>
+      <Word>docave</Word>
+      <Word>xmlns</Word>
+      <Word>apos</Word>
+      <Word>gt</Word>
+      <Word>lt</Word>
+      <Word>quot</Word>
+      <Word>sqlite</Word>
+      <Word>tcp</Word>
+      <Word>Archiver</Word>
+      <Word>Ioc</Word>
+      <Word>Ip</Word>
+      <Word>Tcp</Word>
+      <Word>archiver</Word>
+      <Word>Guid</Word>
+      <Word>guid</Word>
+      <Word>Volumn</Word>
+      <Word>infos</Word>
+      <Word>param</Word>
+      <Word>Asc</Word>
+      <Word>Doclibrow</Word>
+      <Word>Wfe</Word>
+      <Word>Eindex</Word>
+      <Word>Sql</Word>
+      <Word>Dto</Word>
+      <Word>bool</Word>
+      <Word>datetime</Word>
+      <Word>int</Word>
+      <Word>sbyte</Word>
+      <Word>uint</Word>
+      <Word>ulong</Word>
+      <Word>uri</Word>
+      <Word>ushort</Word>
+      <Word>desc</Word>
+      <Word>Url</Word>
+      <Word>vti</Word>
+      <Word>ppt</Word>
+      <Word>htm</Word>
+      <Word>pdf</Word>
+      <Word>Lucene</Word>
+      <Word>lun</Word>
+      <Word>Lun</Word>
+      <Word>vs</Word>
+      <Word>filegroup</Word>
+      <Word>filespec</Word>
+      <Word>dat</Word>
+      <Word>csv</Word>
+      <Word>idx</Word>
+      <Word>tmp</Word>
+      <Word>MD</Word>
+      <Word>Conn</Word>
+      <Word>Vdb</Word>
+      <Word>incre</Word>
+      <Word>Vss</Word>
+      <Word>idx</Word>
+      <Word>vdi</Word>
+      <Word>vss</Word>
+      <Word>datanode</Word>
+      <Word>Guid</Word>
+      <Word>ldf</Word>
+      <Word>Rolemanager</Word>
+      <Word>fba</Word>
+      <Word>rolemanager</Word>
+      <Word>Iis</Word>
+      <Word>mdf</Word>
+      <Word>Lun</Word>
+      <Word>Url</Word>
+      <Word>lun</Word>
+      <Word>vs</Word>
+      <Word>incr</Word>
+      <Word>incre</Word>
+     <!--2012.8.16 PM:Shelley Liu Module:[Manager Common][Control Service] -->
+      <Word>csdl</Word>
+      <Word>ssdl</Word>
+      <Word>msl</Word>
+      <Word>edmx</Word>
+      <Word>xhtml</Word>
+      <Word>misc</Word>
+      <Word>Misc</Word>
+      <Word>Ceip</Word>
+      <Word>Fips</Word>
+      <Word>netbios</Word>
+      <Word>sessiontime</Word>
+      <Word>internalmanager</Word>
+      <Word>internalname</Word>
+      <Word>internalquestion</Word>
+      <Word>internalstatus</Word>
+      <Word>internaldisplayname</Word>
+      <Word>internaldepartment</Word>
+      <Word>internalemail</Word>
+      <Word>Frontend</Word>
+      <Word>servicewires</Word>
+      <Word>extensionpoint</Word>
+      <Word>authenticationtype</Word>
+      <Word>domainname</Word>
+      <Word>subserver</Word>
+      <Word>ireply</Word>
+      <Word>adfs</Word>
+      <Word>cron</Word>
+      <Word>millis</Word>
+      <Word>microsofttranslator</Word>
+      <Word>bing</Word>
+      <Word>ajax</Word>
+      <Word>googleapis</Word>
+      <Word>langpair</Word>
+      <Word>userip</Word>
+      <Word>IIs</Word>
+      <Word>Wcf</Word>
+      <Word>wcf</Word>
+      <Word>eventpublisher</Word>
+      <Word>eventpublishers</Word>
+      <Word>asc</Word>
+      <Word>desc</Word>
+      <Word>asup</Word>
+      <Word>createtable</Word>
+      <Word>bigint</Word>
+      <Word>smallint</Word>
+      <Word>tinyint</Word>
+      <Word>oneway</Word>
+      <Word>ja</Word>
+      <Word>ja-JP</Word>
+      <Word>Tagalog</Word>
+      <Word>af</Word>
+      <Word>ar</Word>
+      <Word>da</Word>
+      <Word>es</Word>
+      <Word>fa</Word>
+      <Word>fi</Word>
+      <Word>fil</Word>
+      <Word>ga</Word>
+      <Word>gl</Word>
+      <Word>hu</Word>
+      <Word>iw</Word>
+      <Word>ko</Word>
+      <Word>lv</Word>
+      <Word>mk</Word>
+      <Word>mt</Word>
+      <Word>nl</Word>
+      <Word>ro</Word>
+      <Word>ru</Word>
+      <Word>sk</Word>
+      <Word>sl</Word>
+      <Word>sr</Word>
+      <Word>sw</Word>
+      <Word>tl</Word>
+      <Word>uk</Word>
+      <Word>yi</Word>
+      <Word>zh</Word>
+      <Word>zh-CN</Word>
+      <Word>zh-TW</Word>
+      <!--2012.8.22 PM:Monica Zhu Module:Wrapper -->
+	  <Word>ctl</Word>
+      <Word>reportinggallerymetadataid</Word>
+      <Word>reportinggallerytemplateid</Word>
+	  <Word>x-www-form-urlencoded</Word>
+      <Word>dlc</Word>
+      <Word>mssqlrbs</Word>
+      <Word>mscorlib</Word>
+      <Word>datetime</Word>
+      <Word>DoclibRowId</Word>
+      <Word>wpp</Word>
+      <Word>rsds</Word>
+      <Word>rdl</Word>
+      <Word>iff</Word>
+      <Word>lbm</Word>
+      <Word>mac</Word>
+      <Word>mag</Word>
+      <Word>mhtml</Word>
+      <Word>mpt</Word>
+      <Word>pic</Word>
+      <Word>wsp</Word>
+      <Word>thmx</Word>
+      <Word>xsi</Word>
+      <Word>xsd</Word>
+      <Word>masterpage</Word>
+      <Word>accdt</Word>
+      <Word>bigint</Word>
+      <Word>ImmedSubscriptions</Word>
+      <!--2012.11.22 PM:Elena Dong  Module:Migration-->
+      <Word>Eml</Word>
+      <Word>Migratee</Word>
+      <Word>Quickr</Word>
+	   <!--2012.11.30 PM:Coco Ma  Module:CP-Storage Configuration-->
+	  <Word>ab</Word>
+     <Word>apis</Word>
+     <Word>basicinfo</Word>
+     <Word>cbo</Word>
+     <Word>chk</Word>
+     <Word>deletable</Word>
+     <Word>Dropbox</Word>
+     <Word>emc</Word>
+     <Word>Fauth</Word>
+     <Word>fcfs</Word>
+     <Word>Fdrive</Word>
+     <Word>Fwww</Word>
+     <Word>gbx</Word>
+     <Word>getinfo</Word>
+     <Word>getrefreshtoken</Word>
+     <Word>google</Word>
+     <Word>Google</Word>
+     <Word>googledrive</Word>
+     <Word>GoogleDrive</Word>
+     <Word>hcp</Word>
+     <Word>HCP</Word>
+     <Word>ietf</Word>
+     <Word>lbl</Word>
+     <Word>lifepoint</Word>
+     <Word>loginbox</Word>
+     <Word>loginskydrive</Word>
+     <Word>luns</Word>
+     <Word>maincontenttemplate</Word>
+     <Word>mainwindow</Word>
+     <Word>messageboxshow</Word>
+     <Word>oauth</Word>
+     <Word>oob</Word>
+     <Word>prefetch</Word>
+     <Word>rbtn</Word>
+     <Word>skydrive</Word>
+     <Word>SkyDrive</Word>
+     <Word>srf</Word>
+     <Word>tvw</Word>
+     <Word>util</Word>
+     <Word>wg</Word>
+     <Word>wizardpage</Word>
+
+      <!--2013.02.26 PM:Yulin Li  Module:Storage Manager-->
+      <Word>Aspnet</Word>
+      <Word>Regiis</Word>
+      <Word>Properity</Word>
+
+      <!--2013.03.16 PM:Nikki Li  Module:Wrapper2013-->
+      <Word>dotx</Word>
+      <Word>Doclib</Word>
+      <Word>Hist</Word>
+      <Word>Unicode</Word>
+
+      <!--2013.03.16 PM:Nikki Li  Module:Wrapper2013-->
+      <Word>rtsp</Word>
+      <Word>tel</Word>
+      <Word>Deserializer</Word>
+    
+      <!--2013.04.11 PM:Edo Li  Module:Office365-->
+      <Word>Rad</Word>
+      <Word>ctl</Word>
+      <Word>vti</Word>
+      <Word>pfx</Word>
+      <Word>thmx</Word>
+      <Word>evtx</Word>
+      <Word>xoml</Word>
+      <Word>x-www-form-urlencoded</Word>
+      <Word>tr</Word>
+      <Word>tp</Word>
+      <Word>tl</Word>
+      <Word>str</Word>
+      <Word>Ssp</Word>
+      <Word>src</Word>
+      <Word>reportinggallerytemplateid</Word>
+      <Word>rel</Word>
+      <Word>rdo</Word>
+      <Word>projectpolicyconfig</Word>
+      <Word>Nav</Word>
+      <Word>Multi</Word>
+      <Word>microsoft</Word>
+      <Word>hdn</Word>
+      <Word>Eq</Word>
+      <Word>Ddl</Word>
+      <Word>datetime</Word>
+      <Word>ctype</Word>
+      <Word>Btn</Word>
+      <Word>boolean</Word>
+      <Word>bgsound</Word>
+      <Word>ss</Word>
+      <Word>yyyy</Word>
+      <Word>yyyy-MM-dd</Word>
+      <Word>viewid</Word>
+      <Word>Spn</Word>
+      <Word>Rw</Word>
+      <Word>onmouseover</Word>
+      <Word>onmouseout</Word>
+      <Word>onmousedown</Word>
+      <Word>oncontextmenu</Word>
+      <Word>Neq</Word>
+      <Word>nbsp</Word>
+      <Word>isresolved</Word>
+      <Word>hh</Word>
+      <Word>filterindex</Word>
+      <Word>displaytext</Word>
+      <Word>ctx</Word>
+      <Word>wfpub</Word>
+      <Word>準備完了</Word>
+      <Word>ulong</Word>
+      <Word>Sms</Word>
+      <Word>Multivalued</Word>
+      <Word>mso-info</Word>
+      <Word>Irm</Word>
+      <Word>Indexable</Word>
+      <Word>Hostheader</Word>
+      <Word>Checkin</Word>
+      <Word>Autodiscovery</Word>
+      <Word>wsa</Word>
+      <Word>ows</Word>
+      <Word>Mysubs</Word>
+      <Word>hdn</Word>
+      <Word>aspnet</Word>
+      <Word>ushort</Word>
+
+      <!--2013.08.20 PM:Candy Hao  Module:BaseWrapperControl-->
+      <Word>comproc</Word>
+      <Word>eventpla</Word>
+      <Word>eventplan</Word>
+      <Word>exreports</Word>
+      <Word>itteam</Word>
+      <Word>projchange</Word>
+      <Word>projmulti</Word>
+      <Word>projsing</Word>
+      <Word>Tablix</Word>
+      <Word>windir</Word>
+
+      <!--2013.08.20 PM:Candy Hao  Module:DPMCommandExecutePrimary-->
+      <Word>wrk</Word>
+      <Word>ave</Word>
+      <Word>taxonomyhiddenlist</Word>
+      <Word>setuppath</Word>
+      <Word>Leafname</Word>
+
+      <!--2013.08.20 PM:Candy Hao  Module:CommonBrowser-->
+      <Word>uniqueid</Word>
+      <Word>webnavigationsettings</Word>
+      <Word>bkimage</Word>
+
+      <!--2013.08.20 PM:Candy Hao  Module:TaxonomyWrapperControl-->
+      <Word>dbid</Word>
+      <Word>varchar</Word>
+
+      <!--2013.08.20 PM:Candy Hao  Module:WFEDMWrapper-->
+      <Word>IIs</Word>
+      <Word>bgcolor</Word>
+      <Word>Hmmss</Word>
+      <Word>Mdd</Word>
+      <Word>eventplan</Word>
+      <Word>securitytoken</Word>
+      <Word>webservices</Word>
+    </Recognized>
+    <Deprecated>
+      <!-- 
+        This is a list of deprecated terms with their preferred alternates and is 
+        used by UsePreferredTerms. The deprecated terms are case-insensitive, 
+        however, make sure to pascal-case the preferred alternates. If a word 
+        does not have a preferred alternate, simply leave it blank.                                           
+      -->
+      <Term PreferredAlternate="EnterpriseServices">complus</Term>
+      <Term PreferredAlternate="Canceled">cancelled</Term>
+      <Term PreferredAlternate="Indexes">indices</Term>
+      <Term PreferredAlternate="LogOn">login</Term>
+      <Term PreferredAlternate="LogOff">logout</Term>
+      <Term PreferredAlternate="SignIn">signon</Term>
+      <Term PreferredAlternate="SignOut">signoff</Term>
+      <Term PreferredAlternate="Writable">writeable</Term>
+      <Term PreferredAlternate="Cannot">cant</Term>
+      <Term PreferredAlternate="AreNot">arent</Term>
+      <Term PreferredAlternate="DoNot">dont</Term>
+      <Term PreferredAlternate="DoesNot">doesnt</Term>
+      <Term PreferredAlternate="DidNot">didnt</Term>
+      <Term PreferredAlternate="CouldNot">couldnt</Term>
+      <Term PreferredAlternate="WouldNot">wouldnt</Term>
+      <Term PreferredAlternate="ShouldNot">shouldnt</Term>
+      <Term PreferredAlternate="WillNot">wont</Term>
+      <Term PreferredAlternate="HaveNot">havent</Term>
+      <Term PreferredAlternate="HasNot">hasnt</Term>
+      <Term PreferredAlternate="HadNot">hadnt</Term>
+      <Term PreferredAlternate="IsNot">isnt</Term>
+      <Term PreferredAlternate="WasNot">wasnt</Term>
+      <Term PreferredAlternate="WereNot">werent</Term>
+      <Term PreferredAlternate="">flag</Term>
+      <Term PreferredAlternate="">flags</Term>
+    </Deprecated>
+    <Compound>
+      <!-- 
+        This is a list of discrete terms with their compound alternates and is used by 
+        CompoundWordsShouldBeCasedCorrectly. These are words that exist in the 
+        dictionary as discrete terms, however, should actually be cased as compound words. 
+        For example, 'Filename' exists in the dictionary and hence the spelling rules will 
+        not see it as unrecognized but its actual preferred usage is 'FileName'; adding it
+        below causes CompoundWordsShouldBeCasedCorrectly to fire. The discrete terms are 
+        case-insensitive, however, be sure to pascal-case the compound alternates.
+        Any discrete terms added below automatically get added to the list of discrete
+        exceptions to prevent CompoundWordsShouldBeCasedCorrectly from firing both on the
+        compound word (for example 'WhiteSpace') and its discrete alternate (for example 
+        'Whitespace').
+      -->
+      <Term CompoundAlternate="DataStore">datastore</Term>
+      <Term CompoundAlternate="DataStores">datastores</Term>
+      <Term CompoundAlternate="DataSet">dataset</Term>
+      <Term CompoundAlternate="DataSets">datasets</Term>
+      <Term CompoundAlternate="TextBox">textbox</Term>
+      <Term CompoundAlternate="TextBoxes">textboxes</Term>
+      <Term CompoundAlternate="CodePage">codepage</Term>
+      <Term CompoundAlternate="CodePages">codepages</Term>
+      <Term CompoundAlternate="CheckBox">checkbox</Term>
+      <Term CompoundAlternate="CheckBoxes">checkboxes</Term>
+      <Term CompoundAlternate="PushButton">pushbutton</Term>
+      <Term CompoundAlternate="PushButtons">pushbuttons</Term>
+      <Term CompoundAlternate="DropDown">dropdown</Term>
+      <Term CompoundAlternate="DropDowns">dropdowns</Term>
+      <Term CompoundAlternate="ToolBar">toolbar</Term>
+      <Term CompoundAlternate="ToolBars">toolbars</Term>
+      <Term CompoundAlternate="ScrollBar">scrollbar</Term>
+      <Term CompoundAlternate="ScrollBars">scrollbars</Term>
+      <Term CompoundAlternate="BitFlag">bitflag</Term>
+      <Term CompoundAlternate="BitFlags">bitflags</Term>
+      <Term CompoundAlternate="FileName">filename</Term>
+      <Term CompoundAlternate="FileNames">filenames</Term>
+      <Term CompoundAlternate="FileServer">fileserver</Term>
+      <Term CompoundAlternate="FileServers">fileservers</Term>
+      <Term CompoundAlternate="UserName">username</Term>
+      <Term CompoundAlternate="UserNames">usernames</Term>
+      <Term CompoundAlternate="HostName">hostname</Term>
+      <Term CompoundAlternate="HostNames">hostnames</Term>
+      <Term CompoundAlternate="FieldName">fieldname</Term>
+      <Term CompoundAlternate="FieldNames">fieldnames</Term>
+      <Term CompoundAlternate="PathName">pathname</Term>
+      <Term CompoundAlternate="PathNames">pathnames</Term>
+      <Term CompoundAlternate="WhiteSpace">whitespace</Term>
+      <Term CompoundAlternate="WhiteSpaces">whitespaces</Term>
+      <Term CompoundAlternate="LogOn">logon</Term>
+      <Term CompoundAlternate="LogOns">logons</Term>
+      <Term CompoundAlternate="LogOff">logoff</Term>
+      <Term CompoundAlternate="LogOffs">logoffs</Term>
+      <Term CompoundAlternate="SignIn">signin</Term>
+      <Term CompoundAlternate="SignIns">signins</Term>
+      <Term CompoundAlternate="SignOut">signout</Term>
+      <Term CompoundAlternate="SignOuts">signouts</Term>
+      <Term CompoundAlternate="FrontEnd">frontend</Term>
+      <Term CompoundAlternate="FrontEnds">frontends</Term>
+      <Term CompoundAlternate="BackEnd">backend</Term>
+      <Term CompoundAlternate="BackEnds">backends</Term>
+      <Term CompoundAlternate="SiteMap">sitemap</Term>
+      <Term CompoundAlternate="SiteMaps">sitemaps</Term>
+      <Term CompoundAlternate="DataType">datatype</Term>
+      <Term CompoundAlternate="DataTypes">datatypes</Term>
+      <Term CompoundAlternate="DesignTime">designtime</Term>
+      <Term CompoundAlternate="DesignTimes">designtimes</Term>
+      <Term CompoundAlternate="ReadOnly">readonly</Term>
+      <Term CompoundAlternate="TrueType">truetype</Term>
+      <Term CompoundAlternate="NetBios">netbios</Term>
+      <Term CompoundAlternate="AutoDetect">autodetect</Term>
+      <Term CompoundAlternate="AutoDetects">autodetects</Term>
+      <Term CompoundAlternate="AutoScroll">autoscroll</Term>
+      <Term CompoundAlternate="AutoScrolls">autoscrolls</Term>
+      <Term CompoundAlternate="AutoComplete">autocomplete</Term>
+      <Term CompoundAlternate="AutoCompletes">autocompletes</Term>
+      <Term CompoundAlternate="AutoSave">autosave</Term>
+      <Term CompoundAlternate="AutoSaves">autosaves</Term>
+      <Term CompoundAlternate="JavaScript">javascript</Term>
+      <Term CompoundAlternate="JScript">jscript</Term>
+      <Term CompoundAlternate="VoiceView">voiceview</Term>
+      <Term CompoundAlternate="AppleTalk">appletalk</Term>
+      <Term CompoundAlternate="MapInfo">mapinfo</Term>
+      <Term CompoundAlternate="NewLine">newline</Term>
+      <Term CompoundAlternate="NewLines">newlines</Term>
+      <Term CompoundAlternate="QWord">qword</Term>
+      <Term CompoundAlternate="QWords">qwords</Term>
+      <Term CompoundAlternate="KeySet">keyset</Term>
+      <Term CompoundAlternate="KeySets">keysets</Term>
+    </Compound>
+    <DiscreteExceptions>
+      <!--
+        This is a list of case-insensitive exceptions to the CompoundWordsShouldBeCasedCorrectly 
+        discrete term check. As this check works solely on the basis of whether two consecutive
+        tokens exists in the dictionary, it can have a high false positive rate. For example, 
+        'onset' exists in the dictionary but the user probably intended it to be 'OnSet'. 
+        Adding this word below prevents this rule from firing telling the user to change 'OnSet' 
+        to 'Onset'.
+      -->         
+      <Term>onset</Term>
+      <Term>inset</Term>
+      <Term>byname</Term>
+      <Term>setout</Term>
+      <Term>countertype</Term>
+      <Term>editor</Term>
+      <Term>longtime</Term>
+      <Term>drawstring</Term>
+      <Term>hookup</Term>
+      <Term>cleanup</Term>
+      <Term>breakout</Term>
+      <Term>setline</Term>
+      <Term>maybe</Term>
+      <Term>nods</Term>
+      <Term>classis</Term>
+      <Term>gettable</Term>
+      <Term>inform</Term>
+      <Term>beset</Term>
+      <Term>settable</Term>
+      <Term>standalone</Term>
+      <Term>threadlike</Term>
+      <Term>infield</Term>
+      <Term>infields</Term>
+      <Term>meantime</Term>
+      <Term>mackey</Term>
+      <Term>jscript</Term>
+      <Term>ipv</Term>        <!-- IPv4, IPv6 -->
+      <Term>tooltip</Term>
+      <Term>tooltips</Term>
+      <Term>indispose</Term>
+    </DiscreteExceptions>
+  </Words>
+  <Acronyms>
+    <CasingExceptions>
+      <Acronym>Pi</Acronym>
+      <Acronym>Na</Acronym>   <!-- NaN -->
+      <Acronym>NESW</Acronym> <!-- North East South West -->
+      <Acronym>NWSE</Acronym> <!-- North West South East -->
+    </CasingExceptions>
+  </Acronyms>
+</Dictionary>

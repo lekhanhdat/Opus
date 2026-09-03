@@ -1,0 +1,69 @@
+﻿/********************************************************************
+ *
+ *  PROPRIETARY and CONFIDENTIAL
+ *
+ *  This file is licensed from, and is a trade secret of:
+ *
+ *                   AvePoint, Inc.
+ *                   525 Washington Blvd, Suite 1400
+ *                   Jersey City, NJ 07310
+ *                   United States of America
+ *                   Telephone: +1-201-793-1111
+ *                   WWW: www.avepoint.com
+ *
+ *  Refer to your License Agreement for restrictions on use,
+ *  duplication, or disclosure.
+ *
+ *  RESTRICTED RIGHTS LEGEND
+ *
+ *  Use, duplication, or disclosure by the Government is
+ *  subject to restrictions as set forth in subdivision
+ *  (c)(1)(ii) of the Rights in Technical Data and Computer
+ *  Software clause at DFARS 252.227-7013 (Oct. 1988) and
+ *  FAR 52.227-19 (C) (June 1987).
+ *
+ *  Copyright © 2017-2026 AvePoint® Inc. All Rights Reserved. 
+ *
+ *  Unpublished - All rights reserved under the copyright laws of the United States.
+ */
+
+
+
+
+namespace AvePoint.Media.Service.DomainModel
+{
+    #region using directives
+
+    using System;
+
+    #endregion using directives
+
+    public class ItemDetailMessage
+    {
+        public String Message { get; set; }
+
+        public String Name { get; set; }
+
+        public String Title { get; set; }
+
+        public Int32 Status { get; set; }
+
+        public Int64 ContentLength { get; set; }
+
+        public String DirPath { get; set; }
+
+        public String Type { get; set; }
+
+        public Int32 EntityType { get; set; }
+
+        public String Action { get; set; }
+
+        public String Version { get; set; }
+
+        public override string ToString()
+        {
+            return string.Format("ItemDetailMessage : Message : {0}, Name: {1}, Type: {2}",
+               Message, Name, Type);
+        }
+    }
+}

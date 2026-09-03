@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--/********************************************************************
+ *
+ *  PROPRIETARY and CONFIDENTIAL
+ *
+ *  This file is licensed from, and is a trade secret of:
+ *
+ *                   AvePoint, Inc.
+ *                   525 Washington Blvd, Suite 1400
+ *                   Jersey City, NJ 07310
+ *                   United States of America
+ *                   Telephone: +1-201-793-1111
+ *                   WWW: www.avepoint.com
+ *
+ *  Refer to your License Agreement for restrictions on use,
+ *  duplication, or disclosure.
+ *
+ *  RESTRICTED RIGHTS LEGEND
+ *
+ *  Use, duplication, or disclosure by the Government is
+ *  subject to restrictions as set forth in subdivision
+ *  (c)(1)(ii) of the Rights in Technical Data and Computer
+ *  Software clause at DFARS 252.227-7013 (Oct. 1988) and
+ *  FAR 52.227-19 (C) (June 1987).
+ *
+ *  Copyright © 2017-2026 AvePoint® Inc. All Rights Reserved. 
+ *
+ *  Unpublished - All rights reserved under the copyright laws of the United States.
+ */-->
+<!-- _lcid="1033" _version="12.0.4518.1014" _dal="1" -->
+<!-- _LocalBinding -->
+<root>
+	<Data Name="Monitorable" Level="0" Message="Monitorable" Category=""/>
+	<Data Name="Medium" Level="0" Message="Medium" Category=""/>
+	<Data Name="High" Level="0" Message="High" Category=""/>
+	<Data Name="Exception" Level="0" Message="Exception" Category=""/>
+	<Data Name="Critical" Level="0" Message="Critical" Category=""/>
+	<Data Name="MonitorScope" Level="0" Message="Entering monitored scope ({0})" Category="Monitor"/>
+	<Data Name="MonitorScopeLeave" Level="0" Message="Leaving Monitored Scope ({0}). Execution Time={1}" Category="Monitor"/>
+	<Data Name="ResourceItemMissing" Level="2" Message="Cannot find the resource. Id: " Category="Resources"/>
+	<Data Name="Markup_FoundListByTitle" Level="0" Message="Found the list({0}). Id: {1}" Category="Markup Workflow"/>
+	<Data Name="Markup_CannotHandleGUID" Level="1" Message="Cannot handle the GUID. Id: {0}" Category="Markup Workflow"/>
+	<Data Name="Markup_MissingList" Level="1" Message="Cannot find the list. {0}" Category="Markup Workflow"/>
+	<Data Name="Markup_CannotHandleGUIDUnknown" Level="3" Message="Unknown Exception: {0}" Category="Markup Workflow"/>
+	<Data Name="NoCustomAssociationProc" Level="0" Message="No custom association processor." Category="Custom Processor"/>
+	<Data Name="NoCustomInstanceProc" Level="0" Message="No custom instance processor." Category="Custom Processor"/>
+	<Data Name="NoCustomData" Level="0" Message="No custom data." Category="Custom Processor"/>
+	<Data Name="AssociationCustomDataBackupException" Level="3" Message="Backup custom association data failed. Exception: {0}" Category="Custom Processor"/>
+	<Data Name="AssociationCustomDataRestoreException" Level="3" Message="Restore custom association data failed. Exception: {0}" Category="Custom Processor"/>
+	<Data Name="InstanceCustomDataBackupException" Level="3" Message="Backup custom instance data failed. Exception: {0}" Category="Custom Processor"/>
+	<Data Name="InstanceCustomDataRestoreException" Level="3" Message="Restore custom instance data failed. Exception: {0}" Category="Custom Processor"/>
+	<Data Name="NintexWorkflow_ConfigDBConnString" Level="0" Message="Config database connection string is {0}" Category="Nintex Workflow"/>
+	<Data Name="NintexWorkflow_GetConfigDBException" Level="3" Message="Get config database connection string failed. Exception: {0}" Category="Nintex Workflow"/>
+	<Data Name="NintexWorkflow_ContentDBConnString" Level="0" Message="Content database connection string is {0}" Category="Nintex Workflow"/>
+	<Data Name="NintexWorkflow_GetContentDBException" Level="3" Message="Get content database failed. Exception: {0}" Category="Nintex Workflow"/>
+	<Data Name="NintexWorkflow_TemplateLibraryMissing" Level="1" Message="Cannot find Nintex workflow template library. Title: {0}" Category="Nintex Workflow"/>
+	<Data Name="NintexWorkflow_TemplateFileMissing" Level="1" Message="Cannot find Nintex workflow template Files. Maybe it is not a Nintex workflow. Associaton name is {0}" Category="Nintex Workflow"/>
+	<Data Name="NintexWorkflow_BackupUnknownException" Level="3" Message="Backup Nintex workflow association data failed. Exception: {0}" Category="Nintex Workflow"/>
+	<Data Name="NintexWorkflow_NoBackupData" Level="0" Message="Not find any backed up data." Category="Nintex Workflow"/>
+	<Data Name="NintexWorkflow_SPFileMissing" Level="2" Message="Cannot find SPFile object of FileUnit {0}." Category="Nintex Workflow"/>
+	<Data Name="NintexWorkflow_GetActionException" Level="2" Message="Cannot get Nintex workflow action parameters. Exception: {0}" Category="Nintex Workflow"/>
+	<Data Name="NintexWorkflow_ActionParams" Level="0" Message="Nintex workflow action parameter: {0}" Category="Nintex Workflow"/>
+	<Data Name="NintexWorkflow_RestoreUnknownException" Level="3" Message="Restore Nintex workflow association data failed. Exception: {0}" Category="Nintex Workflow"/>
+	<Data Name="NintexWorkflow_IsInstalled" Level="0" Message="Does the Nintex workflow assembly exist? {0}" Category="Nintex Workflow"/>
+	<Data Name="NintexWorkflow_DBFieldValue" Level="0" Message="{0} is {1}.{2}" Category="Nintex Workflow"/>
+	<Data Name="NintexWorkflow_NativeBackupException" Level="3" Message="Native backup failed. Exception: {0}" Category="Nintex Workflow"/>
+	<Data Name="NintexWorkflow_NativeRestoreException" Level="3" Message="Native restore failed. Exception: {0}" Category="Nintex Workflow"/>
+	<Data Name="NintexWorkflow_HandleTableException" Level="3" Message="Process native data {0} failed. Exception: {1}" Category="Nintex Workflow"/>
+	<Data Name="NintexWorkflow_UpdTempFilePropsException" Level="3" Message="Update Nintex workflow template file properties failed. Exception: {0}" Category="Nintex Workflow"/>
+	<Data Name="NintexWorkflow_UpdTempItemPropsException" Level="3" Message="Update Nintex workflow template item properties failed. Exception: {0}" Category="Nintex Workflow"/>
+	<Data Name="NintexWorkflow_UpdTempFilePropsUnknownException" Level="3" Message="Update Nintex workflow template file properties failed. Unknown Exception: {0}" Category="Nintex Workflow"/>
+	<Data Name="CT_RestoreUnknownException" Level="3" Message="Restore the content type {0} failed. Exception: {1}" Category="Content Types"/>
+	<Data Name="CT_MissingContentTypes" Level="1" Message="The list has no content type. List Title: {0}" Category="Content Types"/>
+	<Data Name="FLD_CollectionInitializeException" Level="3" Message="Filed collection initialize failed. Exception: {0}" Category="Field Processor"/>
+	<Data Name="FLD_FieldAttribute" Level="0" Message="Filed Attribute {0}. Value is {1}" Category="Field Processor"/>
+	<Data Name="FLD_CreateFieldException" Level="3" Message="Cannot create this field. Exception: {0}" Category="Field Processor"/>
+	<Data Name="FLD_ConvertDBFieldException" Level="3" Message="Cannot convert database field to SharePoint field. Exception: {0}" Category="Field Processor"/>
+	<Data Name="FLD_ConvertPropsException" Level="3" Message="Convert one property failed. Property: {0}. Exception: {1}" Category="Field Processor"/>
+	<Data Name="FLD_Property" Level="0" Message="Property: {0}" Category="Field Processor"/>
+	<Data Name="FLD_PropertyAttributes" Level="0" Message="Type: {0}, Column Index: {1}, Required: {2}" Category="Field Processor"/>
+	<Data Name="AP_SetIssueTrackingFieldException" Level="3" Message="Process issue tracking workflow choice fields failed. Exception: {0}" Category="Association Processor"/>
+	<Data Name="AP_StatusFieldName" Level="0" Message="Status field name: {0}" Category="Association Processor"/>
+	<Data Name="AP_StatusFieldSchema" Level="0" Message="Status field schema: {0}" Category="Association Processor"/>
+	<Data Name="AP_GetStatusFieldSchemaException" Level="3" Message="Cannot get status field schema. Exception: {0}" Category="Association Processor"/>
+	<Data Name="AP_SetAssociationUintPropertiesException" Level="3" Message="Set association properties failed. Exception: {0}" Category="Association Processor"/>
+	<Data Name="AP_GetAssociationUintPropertiesException" Level="3" Message="Get association properties failed. Exception: {0}" Category="Association Processor"/>
+
+	<Data Name="AP_AssociationProperty" Level="0" Message="Property {0}. Value is {1}" Category="Association Processor"/>
+	<Data Name="AP_BackupBegin" Level="0" Message="Backup {0} begin" Category="Association Processor"/>
+	<Data Name="AP_BackupFinish" Level="0" Message="Backup {0} finish" Category="Association Processor"/>
+	<Data Name="AP_BackupSubListFinish" Level="0" Message="Backup relative list {0} finish" Category="Association Processor"/>
+	<Data Name="AP_RestoreBegin" Level="0" Message="Restore {0} begin" Category="Association Processor"/>
+	<Data Name="AP_RestoreFinish" Level="0" Message="Restore {0} finish" Category="Association Processor"/>
+	<Data Name="AP_RestoreSubListFinish" Level="0" Message="Restore relative list {0} finish" Category="Association Processor"/>
+	<Data Name="AP_ConflictStatu" Level="0" Message="Conflict status is {0}" Category="Association Processor"/>
+	<Data Name="AP_CreateStatusFieldException" Level="3" Message="Cannot create status field. Exception: {0}" Category="Association Processor"/>
+	<Data Name="AP_UnitSaveException" Level="3" Message="Cannot save association unit data. Exception: {0}" Category="Association Processor"/>
+	<Data Name="AP_UnitLoadException" Level="3" Message="Cannot load association unit data. Exception: {0}" Category="Association Processor"/>
+	<Data Name="AP_GetXomlAndRulesVersionLabelException" Level="3" Message="Get xoml and rules version label failed. Exception: {0}" Category="Association Processor"/>
+	<Data Name="FileContentProc_CustomProcAssemblyName" Level="0" Message="File content processor. Type: {0}. Assembly: {1}" Category="Markup Workflow"/>
+	<Data Name="FileContentProc_FileCharsetName" Level="0" Message="File Name: {0}. Charset Name: {1}" Category="Markup Workflow"/>
+	<Data Name="IP_GetHistoryFieldException" Level="3" Message="Cannot get history list field. Exception: {0}" Category="Instance Processor"/>
+	<Data Name="IP_GetItemInstanceException" Level="3" Message="Cannot get instances of this item. Exception: {0}" Category="Instance Processor"/>
+	<Data Name="IP_InstanceCount" Level="0" Message="Instance count: {0}" Category="Instance Processor"/>
+	<Data Name="IP_BackupInstanceException" Level="3" Message="Backup a instance failed. Id: {0}. Exception: {1}" Category="Instance Processor"/>
+	<Data Name="IP_BackupInstanceSelfException" Level="3" Message="Backup instance self failed. Exception: {0}" Category="Instance Processor"/>
+	<Data Name="IP_BackupTaskItemsException" Level="3" Message="Backup task items failed. Exception: {0}" Category="Instance Processor"/>
+	<Data Name="IP_BackupEventReceiversException" Level="3" Message="Backup event receivers failed. Exception: {0}" Category="Instance Processor"/>
+	<Data Name="IP_BackupHistoriesException" Level="3" Message="Backup histories failed. Exception: {0}" Category="Instance Processor"/>
+	<Data Name="IP_BackupCustomUnitsException" Level="3" Message="Backup custom data failed. Exception: {0}" Category="Instance Processor"/>
+	<Data Name="IP_BackupPermissionsException" Level="3" Message="Backup permissions failed. Exception: {0}" Category="Instance Processor"/>
+	<Data Name="IP_RestoreParentNotFoundMessage" Level="0" Message="Parent association cannot be found." Category="Instance Processor"/>
+	<Data Name="IP_RestoreParentNotFoundException" Level="3" Message="Parent association cannot be found. Reason: {0}" Category="Instance Processor"/>
+	<Data Name="IP_RestoreConflictStatus" Level="0" Message="Instance conflict status is {0}" Category="Instance Processor"/>
+	<Data Name="IP_RestoreInstanceException" Level="3" Message="Restore a instance failed. Id: {0}. Exception: {1}" Category="Instance Processor"/>
+	<Data Name="IP_EmptyStatusFieldName" Level="2" Message="Status field name is empty." Category="Instance Processor"/>
+	<Data Name="IP_StatusFieldName" Level="0" Message="Status field name is {0}." Category="Instance Processor"/>
+	<Data Name="IP_CreateInstanceException" Level="3" Message="Create instance failed. Exception: {0}" Category="Instance Processor"/>
+	<Data Name="IP_RestoreInstanceSelfException" Level="3" Message="Restore instance self failed. Exception: {0}" Category="Instance Processor"/>
+	<Data Name="IP_RestoreTaskItemsException" Level="3" Message="Restore task items failed. Exception: {0}" Category="Instance Processor"/>
+	<Data Name="IP_RestoreEventReceiversException" Level="3" Message="Restore event receivers failed. Exception: {0}" Category="Instance Processor"/>
+	<Data Name="IP_RestoreHistoriesException" Level="3" Message="Restore histories failed. Exception: {0}" Category="Instance Processor"/>
+	<Data Name="IP_RestoreCustomUnitsException" Level="3" Message="Restore custom data failed. Exception: {0}" Category="Instance Processor"/>
+	<Data Name="IP_HasInstanceData" Level="0" Message="Has instance data: {0}" Category="Instance Processor"/>
+	<Data Name="IP_ReplaceInstanceDataException" Level="3" Message="Replace instance data failed. Exception: {0}" Category="Instance Processor"/>
+	<Data Name="IP_CreateSPItemException" Level="3" Message="Create list item failed. Exception: {0}" Category="Instance Processor"/>
+	<Data Name="IP_MissingPermissions" Level="1" Message="Cannot find any permission of this item." Category="Instance Processor"/>
+	<Data Name="IP_RestorePermissionsException" Level="3" Message="Restore permissions failed. Exception: {0}" Category="Instance Processor"/>
+	<Data Name="IP_UpdateException" Level="3" Message="Update record failed. Exception: {0}" Category="Instance Processor"/>
+	<Data Name="IP_InsertException" Level="3" Message="Insert record failed. Exception: {0}" Category="Instance Processor"/>
+	<Data Name="IP_GetPropertiesFromReaderException" Level="3" Message="Fetch properties failed. Exception: {0}" Category="Instance Processor"/>
+	<Data Name="IP_ResetStatusFieldException" Level="3" Message="Reset status field failed. Exception: {0}" Category="Instance Processor"/>
+	<Data Name="Markup_ProcessTemplateFilesException" Level="3" Message="Process template files failed. Exception: {0}" Category="Markup Workflow"/>
+	<Data Name="Markup_APIResultException" Level="3" Message="API returns failure status. Message: {0}" Category="Markup Workflow"/>
+
+	<Data Name="Common_SPFileCheckInException" Level="3" Message="Check in the file failed. Exception: {0}" Category="Common"/>
+	<Data Name="Common_XmlFileHandleException" Level="3" Message="Handle xml file failed. Exception: {0}" Category="Common"/>
+</root>

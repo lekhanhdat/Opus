@@ -1,0 +1,1099 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="GranularAdvanceSearchServiceGetFullPathUnknownFileTypeExceptionIndex" xml:space="preserve">
+    <value>Unknown index type : {0}</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularAdvanceSearchServiceProcessExceptionTreeModeError" xml:space="preserve">
+    <value>Advanced search error : {0}.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularAdvanceSearchServiceGranularAdvanceSearchForTreeModeResult" xml:space="preserve">
+    <value>The result child after filters : {0}{1}.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularAdvanceSearchServiceSearchSiteCollectionTreeModeStartSearch" xml:space="preserve">
+    <value>Starting advanced search on node {0}.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularBackupDataWriterAssembleIndexHeaderIndex" xml:space="preserve">
+    <value>Start assembling header index... Parent path is [{0}], full path is [{1}].</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularBackupDataWriterAssembleIndexUnknownFileTypeExceptionUnknownHeaderType" xml:space="preserve">
+    <value>Unknown header type: {0}</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularBackupDataWriterCloseDataWriterClose" xml:space="preserve">
+    <value>Closed data writer successfully.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularBackupDataWriterCommitAgentIndexToDBFinishCommit" xml:space="preserve">
+    <value>Committing agent index to database finished.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularBackupDataWriterCommitGranularIndexesFinishCommit" xml:space="preserve">
+    <value>Committing indexes to device finished.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularBackupDataWriterCommitMainIndexFinishUpdate" xml:space="preserve">
+    <value>Site master index is finished to be updated, prune state is [{0}].</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularBackupDataWriterGetBackupOrderGetError" xml:space="preserve">
+    <value>An error occurred while getting backup order, details: [{0}].</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularBackupDataWriterGetBackupOrderPutError" xml:space="preserve">
+    <value>An error occurred while putting backup order in index, details: {0}.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularBackupDataWriterGetDataFileNameUnknownFileTypeExceptionUnknownDataType" xml:space="preserve">
+    <value>Unknown file type {0}</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularBackupDataWriterGetResumePointGetResumePoint" xml:space="preserve">
+    <value>Getting resume point finished, backup order is {0}, backup action is {1}.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularBackupDataWriterHandleContentDataReceiveS" xml:space="preserve">
+    <value>S type has been received from agent.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularBackupDataWriterHandleDataReceiveS" xml:space="preserve">
+    <value>S type has been received from agent.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularBackupDataWriterHandleHeaderHeaderXml" xml:space="preserve">
+    <value>Handle header [{0}].</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularBackupDataWriterHandleHeaderReceiveS" xml:space="preserve">
+    <value>S type has been received from agent.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularBackupDataWriterHandleTailReceiveS" xml:space="preserve">
+    <value>S type has been received from agent.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularBackupDataWriterInsertControlSiteInfoStartInsert" xml:space="preserve">
+    <value>Start inserting site master and sub index into control site master index.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularBackupDataWriterInsertSiteMasterIndexFinishInsert" xml:space="preserve">
+    <value>Inserting site master index finished, site is [{0}].</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularBackupDataWriterInsertSiteMasterIndexInsertError" xml:space="preserve">
+    <value>Inserting site master index completed with exception, details: [{0}].</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularBackupDataWriterInsertSiteMasterIndexInsertWarn" xml:space="preserve">
+    <value>An error occurred while inserting site master, site URL is null.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularBackupDataWriterOpenAgentIndexStreamOpenStream" xml:space="preserve">
+    <value>Start opening agent index stream... Type: [{0}], header path: [{1}].</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularBackupDataWriterOpenDataWriterOpen" xml:space="preserve">
+    <value>Start opening granular backup data writer...</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularBackupDataWriterOpenDeviceOpen" xml:space="preserve">
+    <value>Initiated and opened logical device and cache successfully.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularBackupDataWriterOpenIndexServiceOpen" xml:space="preserve">
+    <value>Opened index service successfully.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularBackupDataWriterOpenOutputStreamOpen" xml:space="preserve">
+    <value>Opened output stream successfully.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularBackupDataWriterParserAgentIndexBeginParse" xml:space="preserve">
+    <value>Begin parsing agent index...</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularBackupDataWriterParserAgentIndexIncorrectFileExceptionAgentIndexIncorrect" xml:space="preserve">
+    <value>Agent index is not correct.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularBackupDataWriterUpdateControlSiteInfoUpdateControl" xml:space="preserve">
+    <value>Control site master index is updated successfully: job ID is [{0}].</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularBackupDataWriterUpdateControlSiteInfoUpdateError" xml:space="preserve">
+    <value>An error occurred while updating control site master index, details: {0}.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularBackupDataWriterUpdateJobInfoWorkingSiteFinishUpdate" xml:space="preserve">
+    <value>Job info is updated successfully.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularBackupServiceOpenJobStart" xml:space="preserve">
+    <value>Starting granular backup job...</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularBackupServiceOpenTestRun" xml:space="preserve">
+    <value>Test run.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularBackupServiceSendLastContentDetail" xml:space="preserve">
+    <value>Last content : [{0}].</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularBackupServiceSendLastIndexDetail" xml:space="preserve">
+    <value>LastFullBackup: {0} {1}, LastBackup: {2}.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularBackupServiceSendLastIndexNoSend" xml:space="preserve">
+    <value>Job ID is [{0}], last index does not need to sent.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularBackupCoalescingServiceDisposeFinishCoalescing" xml:space="preserve">
+    <value>Coalescing finished.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularBackupCoalescingServiceProcessExceptionError" xml:space="preserve">
+    <value>An error occurred running coalescing job, details: {0}.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularBackupCoalescingServiceOpenPreCoalescing" xml:space="preserve">
+    <value>Start coalescing...</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularDataCalculatorGetGranularDataInfoCalculateSize" xml:space="preserve">
+    <value>Calculated {0} successfully, ID: {1}, size: {2}.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularDataCalculatorGetGranularDataInfoFinishCalculate" xml:space="preserve">
+    <value>Calculation is complete.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularDataCalculatorGetLogicalDeviceGranularDataInfoError" xml:space="preserve">
+    <value>Calculated data in physical device {0} failed, details: {1}.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularDataCalculatorGetPlanSizeError" xml:space="preserve">
+    <value>Calculated {0} failed, ID: {1}, details: {2}.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularDataCalculatorGetPlanSizePlanSize" xml:space="preserve">
+    <value>Calculated {0} successfully, ID: {1}, size: {2}.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularFiltersHandlerGetRealNameUnknownFileTypeExceptionSPType" xml:space="preserve">
+    <value>Unknown SharePoint type : {0}</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularFiltersHandlerRealDoFilterUnknownFileTypeExceptionFilter" xml:space="preserve">
+    <value>Unknown filter type : {0}</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularFiltersHandlerValidateByConditionAndRuleUnknownFileTypeExceptionFilterCondition" xml:space="preserve">
+    <value>Unknown filter condition : {0}</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularFiltersHandlerValidateByConditionAndRuleUnknownFileTypeExceptionFilterFlag" xml:space="preserve">
+    <value>Unknown filter flag : {0}</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularHeadAndBodyIndexServiceGetItemByTableNameFilePathNullExceptionParentPathNull" xml:space="preserve">
+    <value>An error occurred while loading items: parent path is null.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularIndexServiceLoadFoldersDetail" xml:space="preserve">
+    <value>Start loading folders in [{0}]... only one job: [{1}], start time: [{2}], end time: [{3}].</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularHeadAndBodyIndexServiceGetSubFoldersFilePathNullExceptionParentPathNull" xml:space="preserve">
+    <value>An error occurred while loading folders: parent path is null.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularIndexServiceLoadItemsDetail" xml:space="preserve">
+    <value>Start loading items in [{0}], only one job: [{1}], start time: [{2}], end time: [{3}].</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularHeadAndBodyIndexServiceGetSubItemsFilePathNullExceptionParentPathNull" xml:space="preserve">
+    <value>An error occurred while loading items: parent path is null.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularIndexServiceOpenFinishOpen" xml:space="preserve">
+    <value>Opened index service successfully.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularIndexServiceOpenIndexProcessorOpen" xml:space="preserve">
+    <value>Start opening index processor...</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularIndexServiceOpenIndexServiceOpen" xml:space="preserve">
+    <value>Begin opening index service...</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularIndexServiceOpenNonLocal" xml:space="preserve">
+    <value>Index service is working on non-local system.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularIndexServiceUpdateJobInfoIndexDetail" xml:space="preserve">
+    <value>Start updating job info key: [{0}], value: [{1}].</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularJobFilterServiceDoFilterUnknownFileTypeExceptionSPLevel" xml:space="preserve">
+    <value>Unknown SharePoint level : {0}.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularJobFilterServiceFilterJobGranularBackupError" xml:space="preserve">
+    <value>Content filter error : {0}.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularJobFilterServiceFilterJobGranularBackupResult" xml:space="preserve">
+    <value>The filtered job's count is {0}.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularJobFilterServiceFilterJobGranularBackupStart" xml:space="preserve">
+    <value>Starting job filter by the condition [{0}], the count of jobs is [{1}].</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularJobFilterServiceValidateByAdvanceFilterHandleFilter" xml:space="preserve">
+    <value>Start handling advanced filter [{0}] for each job.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularRestoreDataReaderDataBlockGetSizeBlockSize" xml:space="preserve">
+    <value>The block size of the file {0} is {1}.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularRestoreDataReaderDataBlockGetSizeGetError" xml:space="preserve">
+    <value>An error occurred while getting the block size of the file {0}.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularRestoreDataReaderGetFileNameByAveVersionNotSupportedExceptionVersion" xml:space="preserve">
+    <value>This version data does not support content.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularRestoreDataReaderGetFileNameByAveVersionUnknownFileTypeExceptionDataBlockOpen" xml:space="preserve">
+    <value>DataBlockOpening unknown type : {0}.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularBackupBrowserServiceDisposeFinish" xml:space="preserve">
+    <value>Browse tree node completed.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularBackupBrowserServiceProcessExceptionError" xml:space="preserve">
+    <value>An error occurred while loading tree, details: {0}.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularBackupBrowserServiceBrowseStart" xml:space="preserve">
+    <value>Browsing tree under node {0}...</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularRestoreServiceOpenCalculateTotleItemNumDataCount" xml:space="preserve">
+    <value>The data count that this restore job needs to restore: {0}.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularRestoreServiceOpenCalculateTotleItemNumStartCalculate" xml:space="preserve">
+    <value>Start calculating restore data...</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularRestoreServiceGetStreamOpenTypeNotSupportedExceptionVersion" xml:space="preserve">
+    <value>The version {0} is not supported.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularRestoreServiceMakeFakeTreeStart" xml:space="preserve">
+    <value>All data needs to be restored, a fake tree is needed to make.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularRestoreServiceCloseFinish" xml:space="preserve">
+    <value>Restore job finished successfully.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularRestoreServicePreRestoreCutTree" xml:space="preserve">
+    <value>The restore tree after cutting : {0} {1}</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularRestoreServiceOpenPreRestoreInitTree" xml:space="preserve">
+    <value>Init tree : {0} {1}</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularRestoreServiceGranularIndexHandledSendData" xml:space="preserve">
+    <value>Start restoring the data of [{0}], the version flag of this item is : {1}...</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularRestoreServiceUpdateJobProgressStartUpdate" xml:space="preserve">
+    <value>Start updating job progress {0}...</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularRestoreServiceUpdateJobProgressUpdateError" xml:space="preserve">
+    <value>An error occurred while updating job progress, details: {0}.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularRestoreStatisticsCalculatorOpenGetRestoreStatisticsCutTree" xml:space="preserve">
+    <value>The restore tree after cutting : {0}{1}.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularRestoreStatisticsCalculatorProcessExceptionGetRestoreStatisticsError" xml:space="preserve">
+    <value>An error occurred while calculating restore statistics: {0}.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularRestoreStatisticsCalculatorOpenGetRestoreStatisticsInitTree" xml:space="preserve">
+    <value>Init tree : {0}{1}.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularRestoreStatisticsCalculatorGetRestoreStatisticsResult" xml:space="preserve">
+    <value>the result statistics is : {0}SiteCollection:   Count: {1}  {0}                  Size:  {2}  {0}Site:             Count: {3}  {0}                  Size:  {4}  {0}List:             Count: {5}  {0}                  Size:  {6}  {0}Folder:           Count: {7}  {0}                  Size:  {8}  {0}Document:         Count: {9}  {0}                  Size:  {10} {0}DocumentVersion:  Count: {11} {0}                  Size:  {12} {0}Item:             Count: {13} {0}                  Size:  {14} {0}ItemVersion:      Count: {15} {0}                  Size:  {16} {0}Attachment:       Count: {17} {0}                  Size:  {18} {0}</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularRestoreStatisticsCalculatorOpenGetRestoreStatisticsStart" xml:space="preserve">
+    <value>Start calculating restore statistics...</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularRestoreToStorageServiceOpenCalculateTotleItemNumDataCount" xml:space="preserve">
+    <value>The data count that this restore job need to restore: {0}.</value>
+    <comment>Modified</comment>
+  </data>
+  <data name="GranularRestoreToStorageServiceOpenCalculateTotleItemNumStartCalculate" xml:space="preserve">
+    <value>Start calculating restore data...</value>
+    <comment>Modified</comment>
+  </data>
+  <data name="GranularRestoreToStorageServiceCreateDirectoryPathTooLongExceptionDirectoryPath" xml:space="preserve">
+    <value>Root directory path is too long to create more directories.</value>
+    <comment>Modified</comment>
+  </data>
+  <data name="GranularRestoreToStorageServiceCreateFolderOrFileCreateDirectory" xml:space="preserve">
+    <value>Created directory [{0}] successfully.</value>
+    <comment>Modified</comment>
+  </data>
+  <data name="GranularRestoreToStorageServiceCreateFolderOrFileNotWrite" xml:space="preserve">
+    <value>The type of this file do not need to write to storage policy:[{0}] [{1}].</value>
+    <comment>Modified</comment>
+  </data>
+  <data name="GranularRestoreToStorageServiceCreateFolderOrFileWithAttachment" xml:space="preserve">
+    <value>Created directory(item with attachment) [{0}] successfully.</value>
+    <comment>Modified</comment>
+  </data>
+  <data name="GranularRestoreToStorageServiceGetStreamOpenTypeNotSupportedExceptionVersion" xml:space="preserve">
+    <value>The version {0} is not supported.</value>
+    <comment>Modified</comment>
+  </data>
+  <data name="GranularRestoreToStorageServiceDisposeRestoreDone" xml:space="preserve">
+    <value>Restored to storage policy successfully.</value>
+    <comment>Modified</comment>
+  </data>
+  <data name="GranularRestoreToStorageServicePreRestoreCutTree" xml:space="preserve">
+    <value>The restore tree after cutting : {0} {1}</value>
+    <comment>Modified</comment>
+  </data>
+  <data name="GranularRestoreToStorageServiceOpenPreRestoreInitTree" xml:space="preserve">
+    <value>Init tree : {0} {1}</value>
+    <comment>Modified</comment>
+  </data>
+  <data name="GranularRestoreToStorageServiceOpenPreRestoreStart" xml:space="preserve">
+    <value>Begin restoring to files system, job ID is {0}.</value>
+    <comment>Modified</comment>
+  </data>
+  <data name="GranularRestoreToStorageServiceUpdateJobProgressError" xml:space="preserve">
+    <value>An error occurred while updating job progress: {0}.</value>
+    <comment>Modified</comment>
+  </data>
+  <data name="GranularRestoreToStorageServiceUpdateJobProgressStartUpdate" xml:space="preserve">
+    <value>Updating job progress {0}...</value>
+    <comment>Modified</comment>
+  </data>
+  <data name="GranularRestoreToStorageServiceWriteDataToFileStartWrite" xml:space="preserve">
+    <value>Writing data into [{0}]...</value>
+    <comment>Modified</comment>
+  </data>
+  <data name="GranularRestoreTreeHandlerProcessNodeDtoInternalNodeCheckStateExceptionNodeUnchecked" xml:space="preserve">
+    <value>Leaf node cannot be unchecked.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularRestoreTreeHandlerSendAllChildrenDtoSendChildren" xml:space="preserve">
+    <value>Start sending all children under [{0}]...</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularRestoreTreeHandlerSendSelectedItemsDtoStartSend" xml:space="preserve">
+    <value>Start sending selected items data...</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularBackupDataWriterAssembleIndexNotExist" xml:space="preserve">
+    <value>Old backup item {0} does not exist.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularBackupDataWriterGetAgentIndexCount" xml:space="preserve">
+    <value>Getting agent index {0}...</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularBackupDataWriterGetAgentIndexNull" xml:space="preserve">
+    <value>The obtained agent index is null or the count is 0.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularBackupDataWriterHandleTailTailXml" xml:space="preserve">
+    <value>Handle tail : [{0}], backup type is [{1}].</value>
+    <comment>modified</comment>
+  </data>
+  <data name="GranularBackupDataWriterUpdateAgentIndexUpdate" xml:space="preserve">
+    <value>Start updating agent index [{0}]...</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularRestoreStatisticsCalculatorGranularIndexHandledUnknownType" xml:space="preserve">
+    <value>Unknown index type : {0}.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularIndexServiceGetTableNameByTypeUnknownFileTypeExceptionSPType" xml:space="preserve">
+    <value>Unknown SharePoint type : {0}</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularIndexServiceUpdateAgentIndexStart" xml:space="preserve">
+    <value>Start updating agent index [{0}]... db needs to be switched.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularRestoreTreeHandlerSendSubItemsDtoStartSend" xml:space="preserve">
+    <value>Start sending sub items data [{0}]...</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularFullTextIndexServiceRestoreEnd" xml:space="preserve">
+    <value>Granular fulltext index finished with {0} item(s) failed.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularFullTextIndexServiceSendIndexDataError" xml:space="preserve">
+    <value>An error occurred while indexing fulltext {0}, the type is: {1}, details: {0}.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularBackupDataWriterGetLastBackupItemError" xml:space="preserve">
+    <value>An error occurred while getting last backup item, details: {0}.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularBackupDataWriterGetLastBackupItemUnknownFileTypeExceptionHeader" xml:space="preserve">
+    <value>Unknown header type: {0}</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularBackupServiceSendLastIndexStart" xml:space="preserve">
+    <value>Start sending index file to the agent...</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularRestoreToStorageServiceDisposeRestoreError" xml:space="preserve">
+    <value>An error occurred while closing restore to storage policy job, details: {0}.</value>
+    <comment>Modified</comment>
+  </data>
+  <data name="GranularBackupDataWriterCloseGetPerformanceError" xml:space="preserve">
+    <value>An error occurred while getting current job performance : {0}.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularBackupServiceDataWriterClosedError" xml:space="preserve">
+    <value>An error occurred while inserting current job performance into control table, details: {0}.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularRestoreDataReaderDisposeGetPerformanceError" xml:space="preserve">
+    <value>An error occurred while getting current job performance : {0}.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularRestoreServiceDataReaderClosedError" xml:space="preserve">
+    <value>An error occurred while inserting current job performance into control table, detail is : {0}.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularRestoreToStorageServiceFillBRJobSummaryUpdateJobSummaryError" xml:space="preserve">
+    <value>An error occurred while updating job summary.</value>
+    <comment>Modified</comment>
+  </data>
+  <data name="GranularBackupDataWriterInsertBodyTableDeleteItemVersionInfo" xml:space="preserve">
+    <value>Start inserting item version which has been deleted, item name: {0}, parent path: {1}.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularAdvanceSearchServiceGetBranchesByFiltersResult" xml:space="preserve">
+    <value>Filter {0} has {1} result(s).</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularRestoreToStorageServiceUpdateJobReportError" xml:space="preserve">
+    <value>An error occurred while updating job report, details: {0}.</value>
+    <comment>Modified</comment>
+  </data>
+  <data name="GranularRestoreToStorageServiceReportServiceRemoveUnnecessaryString" xml:space="preserve">
+    <value>An error occurred while trying to remove unnecessary string for updating job report, details: {0}.</value>
+    <comment>Modified</comment>
+  </data>
+  <data name="GranularRestoreDataReaderOpenDataBlockBegin" xml:space="preserve">
+    <value>Begin opening stream {0}... The file size is {1}.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularAdvancedSearchServiceSearchSiteCollectionError" xml:space="preserve">
+    <value>An error occurred while searching site collection {0},{1}.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularRestoreToStorageServiceProcessExceptionError" xml:space="preserve">
+    <value>An error occurred while restore to file system,details:{0}.</value>
+    <comment>Modified</comment>
+  </data>
+  <data name="GranularBackupRetentionServiceOpenStart" xml:space="preserve">
+    <value>Successfully started retention job [{0}] and opened the logical device.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularBackupRetentionServiceProcessExceptionError" xml:space="preserve">
+    <value>An error occurred while doing the retention job, details: {0}.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularBackupRetentionServiceRetainStart" xml:space="preserve">
+    <value>Start retaining granular data by {0} rule...</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularBackupRetentionServiceRetainUnknownFileTypeExceptionUnknownRetentionRule" xml:space="preserve">
+    <value>Unknown retention rule: {0}</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularBackupRetentionServiceDeleteDataError" xml:space="preserve">
+    <value>An error occurred in deleting job: {0}, details: {1}.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularBackupRetentionServiceDeleteDataInfo" xml:space="preserve">
+    <value>The job [{0}] has been deleted successfully.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularBackupRetentionServiceDeleteIndexInfo" xml:space="preserve">
+    <value>Successfully deleted the database {0} in {1}.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularBackupRetentionServiceDisposeFinished" xml:space="preserve">
+    <value>The retention job finished.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularBackupRetentionServiceMoveDataError" xml:space="preserve">
+    <value>An error occurred in moving job: {0}, details: {1}.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularBackupRetentionServiceMoveDataInfo" xml:space="preserve">
+    <value>Successfully moved the file [{0}].</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularBackupRetentionServiceMoveIndexInfo" xml:space="preserve">
+    <value>The database [{0}] has been moved successfully.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularBackupRetentionServiceRealMoveInvalidDevice" xml:space="preserve">
+    <value>Current storage system is not valid,details : {0}.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularBackupDataCalculatorCalculateInfo" xml:space="preserve">
+    <value>Calculated {0} successfully, ID: {1}, size: {2}.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularBackupDataCalculatorDisposeFinishCalculate" xml:space="preserve">
+    <value>Calculation is complete.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularBackupDataCalculatorProcessExceptionError" xml:space="preserve">
+    <value>Calculated data in physical device {0} failed, details: {1}.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularRestoreServiceGranularIndexHandledSendDataError" xml:space="preserve">
+    <value>An error occurred while sending data, details: {0}.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularRestoreToStorageServiceSendItemDataDtoError" xml:space="preserve">
+    <value>An error occurred while sending the data, details: {0}.</value>
+    <comment>Modified</comment>
+  </data>
+  <data name="GranularBackupDataWriterHandleHeaderInfo" xml:space="preserve">
+    <value>Start backing up the data of [{0}]...</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularDataCalculatorGetGranularDataInfoError" xml:space="preserve">
+    <value>An error occurred while calculating data, details: {0}.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularDataCalculatorGetGranularDataInfoStart" xml:space="preserve">
+    <value>Start calculating granular data size...</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularBackupRetentionServiceDeleteFileByStorageInfoError" xml:space="preserve">
+    <value>An error occurred while deleting the data, details: {0}.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularBackupRetentionServiceDeleteFileByStorageInfoInfo" xml:space="preserve">
+    <value>Successfully deleted the data whose storage info is [{0}].</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularBackupRetentionServiceOpenStorageInfoCount" xml:space="preserve">
+    <value>The count of the storage info is [{0}].</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularRestoreToStorageServiceDisposeSendJobSummaryError" xml:space="preserve">
+    <value>An error occurred while updating the job summary, details: {0}</value>
+    <comment>Modified</comment>
+  </data>
+  <data name="GranularBackupRetentionServiceRetainEntireCycleDataOpenIndex" xml:space="preserve">
+    <value>Successfully opened [{0}].</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularBackupRetentionServiceRetainEntireCycleDataStartDelete" xml:space="preserve">
+    <value>Begin deleting data in [{0}]...</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularBackupRetentionServiceRetainResult" xml:space="preserve">
+    <value>The count of successful jobs is {0}. The count of failed jobs is {1}. And this retention job result is [{2}].</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularBackupDataWriterCloseError" xml:space="preserve">
+    <value>An error occurred while closing the data writer, details: {0}.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularBackupRetentionServiceDeleteMediaDatasFinish" xml:space="preserve">
+    <value>Finished deleting media data from the control database.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularBackupRetentionServiceMoveEntireCycleDataError" xml:space="preserve">
+    <value>An error occurred while copying the data, details: {0}.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularBackupRetentionServiceMoveIndexUpdateMediaData" xml:space="preserve">
+    <value>Finished updating media data to control database.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularFullTextIndexServiceOpenBegin" xml:space="preserve">
+    <value>Media starts preparing data for search.exe.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularFullTextIndexServiceRestoreError" xml:space="preserve">
+    <value>An error occurred while indexing fulltext, details: {0}.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularFullTextIndexServiceCloseFailed" xml:space="preserve">
+    <value>Failed to release resources, details: {0}.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularFullTextIndexServiceCloseSuccessfully" xml:space="preserve">
+    <value>Successfully released all the resources.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularFullTextIndexServiceSendIndexDataBegin" xml:space="preserve">
+    <value>Begin sending item {0}. The item type is: {1}.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularBackupRetentionServiceDeleteDataFileInfo" xml:space="preserve">
+    <value>Successfully deleted the file [{0}].</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularBackupRetentionServiceDeleteIndexError" xml:space="preserve">
+    <value>An error occurred while deleting the index {0}, details: {1}.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularIndexServiceCommitDBInfo" xml:space="preserve">
+    <value>Start committing database {0}...</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularBackupRetentionServiceDeleteDataProgress" xml:space="preserve">
+    <value>{0} blocks need to be removed and now {1} blocks have been removed.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularBackupRetentionServiceMoveDataJobInfo" xml:space="preserve">
+    <value>Successfully moved the job [{0}].</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularBackupUpgradeBrowseServiceBrowseInfo" xml:space="preserve">
+    <value>Start browsing the node under [{0}]...</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularBackupUpgradeBrowseServiceBrowseRootDataType" xml:space="preserve">
+    <value>Browsing data in {0}...</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularBackupUpgradeBrowseServiceDisposeFinish" xml:space="preserve">
+    <value>Browsing the tree node completed.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularBackupUpgradeBrowseServiceOpenDevice" xml:space="preserve">
+    <value>Successfully initiated and opened the logical device.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularBackupUpgradeServiceDisposeError" xml:space="preserve">
+    <value>An error occurred while releasing resource, details: {0}.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularBackupUpgradeServiceGenerateJobReportBegin" xml:space="preserve">
+    <value>Start generating granular data import job report...</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularBackupUpgradeServiceGenerateJobReportComplete" xml:space="preserve">
+    <value>Generating granular data import job report finished.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularBackupUpgradeServiceGenerateJobReportError" xml:space="preserve">
+    <value>An error occurred while generating  job details, details: {0}.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularBackupUpgradeServiceInsertControlTableError" xml:space="preserve">
+    <value>An error occurred while inserting data into the control table, details: {0}.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularBackupUpgradeServiceOpenBegin" xml:space="preserve">
+    <value>Start importing DocAve granular data...</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularBackupUpgradeServiceUpgradeJobComplete" xml:space="preserve">
+    <value>Importing DocAve granular data finished.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularBackupUpgradeServiceUpgradeSubJobEnd" xml:space="preserve">
+    <value>Successfully imported the sub job {0} of granular data.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularBackupUpgradeServiceOpenBeginAssembleTree" xml:space="preserve">
+    <value>Granular data is importing tree structure {0}.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularBackupUpgradeServiceOpenError" xml:space="preserve">
+    <value>An error occurred while preparing importing granular data, details: {0}.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularBackupUpgradeServiceProcessExceptionOccur" xml:space="preserve">
+    <value>Failed to import granular data, details: {0} .</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularBackupUpgradeServiceUpgradeBegin" xml:space="preserve">
+    <value>Start importing granular data...</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularBackupUpgradeServiceUpgradeError" xml:space="preserve">
+    <value>An error occurred while upgrading sub job {0}, details: {1}.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularBackupUpgradeServiceSaveIndexFileNameAndLastModifyTimeToControlError" xml:space="preserve">
+    <value>An error occurred while trying to save index file name and the last modified time to control, details: {0}.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="SelectAndInsertControlTableNoAvailableData" xml:space="preserve">
+    <value>The cycle {0} has no available job.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="UpdateCacheTreeServiceUpdateControlCacheTreeSuccessfully" xml:space="preserve">
+    <value>Successfully updated the control cache tree, the count is {0}.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularIndexServiceOpenWarn" xml:space="preserve">
+    <value>Index {0} was not found. Changing index name to index.db, details: {1}.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularBackupDataVerifyServiceDisposeFinish" xml:space="preserve">
+    <value>Verifying data finished.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularBackupDataVerifyServiceProcessExceptionError" xml:space="preserve">
+    <value>An error occurred while verifying the data, details: {0}.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularBackupDataVerifyServiceVerifyResult" xml:space="preserve">
+    <value>{0} file(s) in {1}. {2} file(s) in {3}.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularBackupDataVerifyServiceVerifyStart" xml:space="preserve">
+    <value>Start verifying data in {0}...</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularBackupRetentionServiceProcessCustomActionError" xml:space="preserve">
+    <value>An error occurred while processing {0} by the custom action, details: {1}.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularBackupRetentionServiceProcessCustomActionFinishProcess" xml:space="preserve">
+    <value>Processing {0}\{1} by the custom action to the data finished.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularRebuildIndexCommandExecuteCommandError" xml:space="preserve">
+    <value>An error occurred while rebuilding index, details: {0}.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularRestoreStatisticsCalculatorCalculateResult" xml:space="preserve">
+    <value>The calculated result is {0}.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="GranularBackupRetentionServiceExcuteCustomActionError" xml:space="preserve">
+    <value>An error occurred in processing custom action with {0}\{1} and the exit code is {2}.</value>
+    <comment>Added</comment>
+  </data>
+  <data name="GranularBackupRetentionServiceGetDataSizeInfo" xml:space="preserve">
+    <value>Finish calculating {0} and size is {1}.</value>
+    <comment>Added</comment>
+  </data>
+  <data name="GranularBackupRetentionServiceGetDataSizeWarn" xml:space="preserve">
+    <value>An error occurred in calculating data size in {0}, details: {1}.</value>
+    <comment>Added</comment>
+  </data>
+  <data name="GranularBackupUpgradeServiceInsertControlTableInfo" xml:space="preserve">
+    <value>JobID [{0}],SiteUrl [{1}],ModifyData [{2}]</value>
+    <comment>Added</comment>
+  </data>
+  <data name="GranularRestoreServiceGranularIndexHandledFinish" xml:space="preserve">
+    <value>Finish sending header: {0}.</value>
+    <comment>Added</comment>
+  </data>
+  <data name="GranularHeadAndBodyIndexServiceSearchStartExecutingStructuredQueryLanguage" xml:space="preserve">
+    <value>Start executing structured query language: [{0}], and parameters is {1}.</value>
+    <comment>Added</comment>
+  </data>
+  <data name="GranularRestoreServiceRestoreNeedStop" xml:space="preserve">
+    <value>Current restore job is stopped.</value>
+    <comment>Added</comment>
+  </data>
+  <data name="GranularBackupDataTransferServiceCalculateDataBlocksNumberError" xml:space="preserve">
+    <value>An error occurred while calculating total data blocks, details: {0}.</value>
+    <comment>Added</comment>
+  </data>
+  <data name="GranularBackupDataTransferServiceDeleteFileSuccessfully" xml:space="preserve">
+    <value>Successfully deleted the file [{0}].</value>
+    <comment>Added</comment>
+  </data>
+  <data name="GranularBackupDataTransferServiceDeleteJobDataSuccessfully" xml:space="preserve">
+    <value>Successfully deleted the data of job [{0}].</value>
+    <comment>Added</comment>
+  </data>
+  <data name="GranularBackupDataTransferServiceDeleteSourceDataError" xml:space="preserve">
+    <value>An error occurred while deleting the data of cycle [{0}], details: {1}.</value>
+    <comment>Added</comment>
+  </data>
+  <data name="GranularBackupDataTransferServiceDeleteStart" xml:space="preserve">
+    <value>Start to delete source data.</value>
+    <comment>Added</comment>
+  </data>
+  <data name="GranularBackupDataTransferServiceErrorMessage" xml:space="preserve">
+    <value>An unexpected error occurred, please try again later. If the problem persists, please contact AvePoint Support.</value>
+    <comment>Added</comment>
+  </data>
+  <data name="GranularBackupDataTransferServiceOpenDeviceOpenSuccessfully" xml:space="preserve">
+    <value>Succeed to open source and destination logical device.</value>
+    <comment>Added</comment>
+  </data>
+  <data name="GranularBackupDataTransferServiceProcessException" xml:space="preserve">
+    <value>An error occurred while processing this job, details: {0}.</value>
+    <comment>Added</comment>
+  </data>
+  <data name="GranularBackupDataTransferServiceRealTransferError" xml:space="preserve">
+    <value>An error occurred while transferring the data [{0}], details: {1}</value>
+    <comment>Added</comment>
+  </data>
+  <data name="GranularBackupDataTransferServiceTransferByCycleLevelError" xml:space="preserve">
+    <value>An error occurred while transferring the data of cycle [{0}], details: {1}.</value>
+    <comment>Added</comment>
+  </data>
+  <data name="GranularBackupDataTransferServiceTransferByCycleLevelTransferCycleDataSuccessfully" xml:space="preserve">
+    <value>Successfully transferred the data of cycle [{0}].</value>
+    <comment>Added</comment>
+  </data>
+  <data name="GranularBackupDataTransferServiceTransferByCycleLevelTransferJobDataSuccessfully" xml:space="preserve">
+    <value>Successfully transferred the data of job [{0}].</value>
+    <comment>Added</comment>
+  </data>
+  <data name="GranularBackupDataTransferServiceTransferFilesSuccessfully" xml:space="preserve">
+    <value>Successfully transferred the file [{0}].</value>
+    <comment>Added</comment>
+  </data>
+  <data name="GranularBackupDataTransferServiceTransferStart" xml:space="preserve">
+    <value>Start to transfer data.</value>
+    <comment>Added</comment>
+  </data>
+  <data name="GranularBackupDataWriterCloseDataWriterCloseIndexServiceError" xml:space="preserve">
+    <value>An error occurred while closing index service, detail: {0}.</value>
+    <comment>Added</comment>
+  </data>
+  <data name="GranularBackupDataWriterCloseDataWriterCloseStreamError" xml:space="preserve">
+    <value>An error occurred while closing output stream, detail: {0}.</value>
+    <comment>Added</comment>
+  </data>
+  <data name="GranularRestoreServiceRestoreError" xml:space="preserve">
+    <value>An error occurred while restoring  data, details:{0}.</value>
+    <comment>Added</comment>
+  </data>
+  <data name="GranularRestoreToStorageServiceDeleteCachenfoWarn" xml:space="preserve">
+    <value>An error occured while deleteing temp data of job:{0} in cache,details: {1}</value>
+    <comment>Added</comment>
+  </data>
+  <data name="GranularRestoreToStorageServiceHandleRestoreRequestError" xml:space="preserve">
+    <value>An error occurred while restore data to storage policy, details: {0}.</value>
+    <comment>Added</comment>
+  </data>
+  <data name="GranularRestoreToStorageServiceRestoreFinished" xml:space="preserve">
+    <value>Restore to storage policy finished.</value>
+    <comment>Added</comment>
+  </data>
+  <data name="GranularBackupDataWriterBackupDataException" xml:space="preserve">
+    <value>An error occurred while backing up data, details: {0}.</value>
+    <comment>Added</comment>
+  </data>
+  <data name="GranularBackupDataWriterUpdateControlSiteInfoUpdateControlSubInfo" xml:space="preserve">
+    <value>Control site master sub index is updated successfully: job ID is [{0}].</value>
+    <comment>Added</comment>
+  </data>
+  <data name="GranularBackupDataWriterUpdateControlSiteInfoUpdateSubInfoError" xml:space="preserve">
+    <value>An error occurred while updating control site master sub index, details: {0}.</value>
+    <comment>Added</comment>
+  </data>
+  <data name="GranularRestoreToStorageServiceUpdateJobReportInfo" xml:space="preserve">
+    <value>Current item name is {0}, type is {1}, content length is {2}.</value>
+    <comment>Added</comment>
+  </data>
+  <data name="GranularBackupDataWriterDeleteTimeoutDataFileNotExist" xml:space="preserve">
+    <value>The file {0} was not exist，details: {1}.</value>
+    <comment>Added</comment>
+  </data>
+  <data name="GranularBackupDataWriterNeedBackupTimeOutDataBegin" xml:space="preserve">
+    <value>Judging need backup timeout data again.</value>
+    <comment>Added</comment>
+  </data>
+  <data name="GranularBackupDataWriterNeedBackupTimeOutDataDeleteData" xml:space="preserve">
+    <value>Start deleting timeout data whose pfefixnum is {0}.</value>
+    <comment>Added</comment>
+  </data>
+  <data name="GranularBackupDataWriterNeedBackupTimeOutDataNeedResendData" xml:space="preserve">
+    <value>The result of need resend timeout data is {0}.</value>
+    <comment>Added</comment>
+  </data>
+  <data name="GranularIndexServiceOpenBeginOpenIndex" xml:space="preserve">
+    <value>Begin Opening index,param is {0}.</value>
+    <comment>Added</comment>
+  </data>
+  <data name="GranularBackupDataWriterIsAgentIndexUploadedErrorOccurred" xml:space="preserve">
+    <value>An error occurred while processing timeout data,details:{0}.</value>
+    <comment>Added</comment>
+  </data>
+  <data name="GranularBackupDataWriterIsAgentIndexUploadedIndexFileExist" xml:space="preserve">
+    <value>Is the index file {0} exist :{1}.</value>
+    <comment>Added</comment>
+  </data>
+  <data name="GranularBackupDataWriterIsAgentIndexUploadedProcessIndex" xml:space="preserve">
+    <value>Begin processing timeout job index.</value>
+    <comment>Added</comment>
+  </data>
+  <data name="GranularBackupDataWriterGetFirstOnlinePhysicalDriveId" xml:space="preserve">
+    <value>Current backup data physical deviceID is:{0}.</value>
+    <comment>Added</comment>
+  </data>
+  <data name="StorageDeviceManagerOpenFailed" xml:space="preserve">
+    <value>An error occured while opening device, details:{0}.</value>
+    <comment>Added</comment>
+  </data>
+  <data name="GranularIndexServiceDownLoadFailedItemIndexBeginDownload" xml:space="preserve">
+    <value>Begin downloading failed item index.</value>
+    <comment>Added</comment>
+  </data>
+  <data name="GranularIndexServiceDownLoadFailedItemIndexFinishDownload" xml:space="preserve">
+    <value>Download failed item index successfully.</value>
+    <comment>Added</comment>
+  </data>
+  <data name="GranularRestoreToStorageServiceSkipFile" xml:space="preserve">
+    <value>The file :{0} has been skipped due to it is system file or it need to be skipped.</value>
+  </data>
+</root>

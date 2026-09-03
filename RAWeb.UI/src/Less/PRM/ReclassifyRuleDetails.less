@@ -1,0 +1,247 @@
+﻿.right-rule-panel {
+
+  /*-----------rule detail---------*/
+
+  .ra-popup-cover {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 10000;
+  }
+
+  .ra-popup-detail {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 855px;
+    background-color: white;
+    z-index: 10001;
+  }
+
+  .ra-popup-detail-content {
+    padding-top: 20px;
+    max-height: 410px;
+    overflow-y: auto;
+  }
+
+  .ra-popup-detail-content tr {
+    display: block;
+  }
+
+  .ra-popup-detail-content-key {
+    display: inline-block;
+    width: 230px;
+    padding-bottom: 15px;
+    // text-align: right;
+    vertical-align: top;
+    font-family: "Segoe UI", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #1c1c1c;
+  }
+
+  .ra-popup-detail-content-value {
+    display: inline-block;
+    //width: 575px;
+    padding-left: 20px;
+    padding-bottom: 15px;
+    word-wrap: break-word;
+    vertical-align: bottom;
+    font-family: "Segoe UI", sans-serif;
+    font-size: 14px;
+    color: #1c1c1c;
+  }
+
+  .ra-popup-detail-content-value-long {
+    max-width: 546px;
+  }
+  .ra-popup-detail-bar {
+    height: 35px;
+    line-height: 35px;
+    color: white;
+    background-color: #0079DD;
+  }
+
+  .ra-popup-detail-title {
+    float: left;
+    margin-left: 10px;
+    font-family: "Segoe UI", sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    color: #ffffff;
+  }
+
+  .clear::after {
+    content: '';
+    clear: both;
+    visibility: hidden;
+  }
+
+  .sharepointPng {
+    left: -180px;
+    top: 0px;
+  }
+
+  .filesystemPng {
+    left: -216px;
+    top: 0px;
+  }
+
+  .CretiaText {
+    line-height: 24px;
+    margin-left: 4px;
+  }
+
+  .ra-popup-detail-content {
+    padding-top: 20px;
+    max-height: 410px;
+    overflow-y: auto;
+  }
+
+  .ra-popup-detail-content tr {
+    display: block;
+  }
+
+  .ra-popup-detail-content-key {
+    display: inline-block;
+    width: 230px;
+    padding-bottom: 15px;
+    text-align: right;
+    vertical-align: top;
+    font-family: "Segoe UI", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #1c1c1c;
+  }
+
+  .ra-popup-detail-content-value {
+    display: inline-block;
+    //width: 575px;
+    padding-left: 20px;
+    padding-bottom: 15px;
+    word-wrap: break-word;
+    vertical-align: bottom;
+    font-family: "Segoe UI", sans-serif;
+    font-size: 14px;
+    color: #1c1c1c;
+  }
+
+  .ra-criteria-key{
+      display: none;
+  }
+
+  .ra-popup-detail-content-value-long {
+    max-width: 546px;
+  }
+  .ra-popup-detail-bar {
+    height: 35px;
+    line-height: 35px;
+    color: white;
+    background-color: #0079DD;
+  }
+
+  .ra-popup-detail-title {
+    float: left;
+    margin-left: 10px;
+    font-family: "Segoe UI", sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    color: #ffffff;
+  }
+
+  .ra-popup-detail-close-icon {
+    float: right;
+    margin-right: 10px;
+    cursor: pointer;
+    line-height: 35px;
+  }
+
+  .ra-popup-detail-close {
+    position: relative;
+    bottom: 0px;
+    width: 100%;
+    text-align: right;
+    padding-top: 30px;
+  }
+
+  .ra-popup-detail-close input {
+    position: relative;
+    width: 85px;
+    height: 30px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    line-height: 30px;
+    color: #ffffff;
+    border: none;
+    background-color: #0079DD;
+    font-family: "Segoe UI", sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+  }
+
+  .ra-popup-detail-close input:hover {
+    background-color: #1b5599;
+  }
+
+  .ra-popup-detail-close input:focus {
+    background-color: #1b5599;
+  }
+}
+
+.ra-rule-term-icon {
+  background-image: url("/Images/Base/action_button.png");
+  background-position: -108px -178px;
+  background-repeat: no-repeat;
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+  margin-left: 5px;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+.extend-icon {
+  background-position: -90px -178px;
+}
+
+#rm_rule_title {
+  font-size: 14px;
+  color: #0026b3;
+  display: inline-block;
+  cursor: pointer;
+}
+
+#rm_rule_content, #rm_label_content {
+  border: 1px solid #ededed;
+  padding: 15px 10px;
+  height: 120px;
+  overflow-y: auto;
+  font-size: 14px;
+  color: #585858;
+  line-height: 16px;
+}
+
+.ra-term-group, .ra-label-group {
+  margin-bottom: 15px;
+}
+
+.ra-term-ruleName, .ra-label-ruleName {
+  margin-bottom: 8px;
+}
+
+.ra-term-Name {
+  width: 44px;
+  display: inline-block;
+  text-align: right;
+  vertical-align: top;
+}
+
+.ra-term-title, .ra-label-title {
+  margin-left: 4px;
+  display: inline-block;
+  width: 340px;
+}

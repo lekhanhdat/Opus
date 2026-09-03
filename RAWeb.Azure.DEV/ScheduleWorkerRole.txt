@@ -1,0 +1,28 @@
+@echo off
+title Records Auto Replace
+color A
+echo %date% %time%
+
+set source=D:\Records\OnlineTrunk
+set roleFolder=D:\Records\OnlineTrunk\RAWeb.Azure.DEV\csx\Debug\roles\RAScheduleJobWorkerRole
+set dest=D:\Records\OnlineTrunk\RAWeb.Azure.DEV\csx\Debug\roles\RAScheduleJobWorkerRole\approot
+
+set msbuild2017=C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\MSBuild\15.0\Bin
+set svn=C:\Program Files\TortoiseSVN\bin
+
+echo =================stop process====================
+taskkill /F /IM RevIMScheduleJob.exe
+
+echo =================Start to copy files====================
+xcopy "%source%\DocaveReference\*.dll" "%dest%\"   /y /S /C
+xcopy "%source%\DocaveReference\*.exe" "%dest%\"   /y /S /C
+xcopy "%source%\DocaveReference\*.config" "%dest%\"   /y /S /C /EXCLUDE:ServiceVersion.config
+
+xcopy "%source%\RACommon\ServiceVersion\ServiceVersion.config" "%roleFolder%\"   /y /S /C
+xcopy "%source%\RAScheduleJobWorkerRole\bin\Debug" "%dest%\"   /y /S /C
+xcopy "%source%\RAScheduleJob\bin\*.dll" "%dest%\" /d:05-20-2019  /y /S /C
+xcopy "%source%\RAScheduleJob\bin\*.exe" "%dest%\" /d:05-20-2019  /y /S /C
+xcopy "%source%\RAScheduleJob\bin\RevIMScheduleJob.exe" "%dest%\"  /y /S /C
+xcopy "%source%\RAScheduleJob\bin\RevIMScheduleJob.exe.config" "%dest%\"  /y /S /C
+xcopy "%source%\RAScheduleJob\bin\RevIMSharePoint.dll" "%dest%\"  /y /S /C
+echo. & pause

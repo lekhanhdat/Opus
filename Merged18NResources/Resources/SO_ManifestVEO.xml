@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<!--/********************************************************************
+ *
+ *  PROPRIETARY and CONFIDENTIAL
+ *
+ *  This file is licensed from, and is a trade secret of:
+ *
+ *                   AvePoint, Inc.
+ *                   525 Washington Blvd, Suite 1400
+ *                   Jersey City, NJ 07310
+ *                   United States of America
+ *                   Telephone: +1-201-793-1111
+ *                   WWW: www.avepoint.com
+ *
+ *  Refer to your License Agreement for restrictions on use,
+ *  duplication, or disclosure.
+ *
+ *  RESTRICTED RIGHTS LEGEND
+ *
+ *  Use, duplication, or disclosure by the Government is
+ *  subject to restrictions as set forth in subdivision
+ *  (c)(1)(ii) of the Rights in Technical Data and Computer
+ *  Software clause at DFARS 252.227-7013 (Oct. 1988) and
+ *  FAR 52.227-19 (C) (June 1987).
+ *
+ *  Copyright © 2017-2026 AvePoint® Inc. All Rights Reserved. 
+ *
+ *  Unpublished - All rights reserved under the copyright laws of the United States.
+ */-->
+ 
+	<!--When editing this file, please make sure the content format is not changed. Changing the content format may cause errors.-->
+	
+	<!--Some of SharePoint properties can be customized as the SharePointMetadata parameter value in the following format: @Property@-->
+	
+		<!--Use @TimeNow@ to retrieve the time when the object is exported into a VEO file. The time is in the time zone of the server where the Archiver job is run.-->
+
+<ManifestXML>
+<!--<created_timestamp DefaultValue = "" />-->
+<agency_identifier DefaultValue = "2015"/>
+<!--<series_type DefaultValue = "VPRS"/>The DefaultValue cannot be edited.-->
+<series_number DefaultValue = "2015"/>
+<consignment_type  DefaultValue = "P"/>
+<consignment_number DefaultValue = "0001"/>
+<job_id DefaultValue = "TR 2006/0001"/>
+
+
+<!--<computer_filename ElementName = ""  DefaultValue = ""/>-->
+<file_identifier ElementName = "vers:FileIdentifier"  DefaultValue = ""/>
+<vers_record_identifier ElementName = "vers:VERSRecordIdentifier"  DefaultValue = ""/>
+<veo_title ElementName = "naa:TitleWords"  DefaultValue = ""/>
+<veo_classification ElementName = ""  DefaultValue = "No classification"/>
+<veo_access_category ElementName = ""  DefaultValue = "Not specified"/>
+<veo_disposal_authority ElementName = "naa:Sentence"  DefaultValue = ""/>
+<veo_date_range >
+		<veo_start_date ElementName = "naa:DateTimeCreated"  DefaultValue = ""/>
+        <veo_end_date ElementName = "vers:DateTimeClosed"  DefaultValue = "" />
+</veo_date_range>
+<!--<size_kb  ElementName = "" DefaultValue = ""/>-->
+</ManifestXML>

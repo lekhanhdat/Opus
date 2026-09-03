@@ -1,0 +1,73 @@
+﻿<!--/********************************************************************
+ *
+ *  PROPRIETARY and CONFIDENTIAL
+ *
+ *  This file is licensed from, and is a trade secret of:
+ *
+ *                   AvePoint, Inc.
+ *                   525 Washington Blvd, Suite 1400
+ *                   Jersey City, NJ 07310
+ *                   United States of America
+ *                   Telephone: +1-201-793-1111
+ *                   WWW: www.avepoint.com
+ *
+ *  Refer to your License Agreement for restrictions on use,
+ *  duplication, or disclosure.
+ *
+ *  RESTRICTED RIGHTS LEGEND
+ *
+ *  Use, duplication, or disclosure by the Government is
+ *  subject to restrictions as set forth in subdivision
+ *  (c)(1)(ii) of the Rights in Technical Data and Computer
+ *  Software clause at DFARS 252.227-7013 (Oct. 1988) and
+ *  FAR 52.227-19 (C) (June 1987).
+ *
+ *  Copyright © 2017-2026 AvePoint® Inc. All Rights Reserved. 
+ *
+ *  Unpublished - All rights reserved under the copyright laws of the United States.
+ */-->
+<Window x:Class="CommonDevTools.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CommonDevTools"
+        mc:Ignorable="d"
+        Title="DEV Tools" Height="450" Width="600">
+    <Grid>
+        <TabControl>
+            <TabItem Name="tb_DecodeSensitiveLog" Header="Base64 String">
+                <StackPanel>
+                    <TextBox x:Name="log_input" MaxLines="100" Height="200"/>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Button Margin="5 0 5 0" x:Name="log_decode" Content="Decode" Width="80" Click="log_convert_Click"/>
+                        <Button Margin="5 0 5 0" x:Name="log_encode" Content="Encode" Width="80" Click="log_convert_Click"/>
+                    </StackPanel>
+                    <TextBox x:Name="log_output" MaxLines="100" Height="200"/>
+                </StackPanel>
+            </TabItem>
+            <TabItem Name="tb_timeConverter" Header="DateTime Convert">
+                <StackPanel>
+                    <TextBox x:Name="time_input" MaxLines="100" Height="200"/>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Button Margin="5 0 5 0" x:Name="time_encode" Content="Convert" Width="80" Click="time_convert__Click"/>
+                    </StackPanel>
+                    <TextBox x:Name="time_output" MaxLines="100" Height="200"/>
+                </StackPanel>
+            </TabItem>
+            <TabItem Header="Generate GUID">
+                <StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="5 10 5 0">
+                        <Button Margin="5 0 5 0" x:Name="guid_new" Content="Generate New" Click="guid_new_Click"/>
+                        <Button Margin="5 0 5 0" x:Name="guid_new_copy" Content="New And Copy" Click="guid_new_Click"/>
+                        <CheckBox x:Name="guid_case" Margin="5 0 5 0" Content="Lower case" />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBox x:Name="guid_result" Width="240" HorizontalAlignment="Left" Margin="5 10 5 0"/>
+                        <Button Margin="5 10 5 0" Content="Copy" x:Name="guid_copy" Click="guid_copy_Click"/>
+                    </StackPanel>
+                </StackPanel>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>

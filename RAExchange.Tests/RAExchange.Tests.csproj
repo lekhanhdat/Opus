@@ -1,0 +1,54 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net10.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+
+        <IsPackable>false</IsPackable>
+        <IsTestProject>true</IsTestProject>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="coverlet.collector" Version="6.0.0" />
+        <PackageReference Include="log4net" Version="3.3.1" />
+        <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.8.0" />
+        <PackageReference Include="Shouldly" Version="4.3.0" />
+        <PackageReference Include="util.ai.text.extractor" Version="6.10.11" />
+        <PackageReference Include="xunit" Version="2.5.3" />
+        <PackageReference Include="xunit.runner.visualstudio" Version="2.5.3" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <Using Include="Xunit" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\RACommonUtility\RACommonUtility.csproj" />
+        <ProjectReference Include="..\RACommon\RACommon.csproj" />
+        <ProjectReference Include="..\RAContract\RAContract.csproj" />
+        <ProjectReference Include="..\RADB\RADB.csproj" />
+        <ProjectReference Include="..\RAService\RAService.csproj" />
+        <ProjectReference Include="..\RMExternalSynchronize\RMSynchronize.csproj" />
+	</ItemGroup>
+
+    <ItemGroup>
+        <None Update="appsettings.json">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </None>
+        <Content Include="Castle\ServiceCastle.config">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+            <SubType>Designer</SubType>
+            <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+            <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+        </Content>
+        <Content Update="TimerLog4net.config">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+            <SubType>Designer</SubType>
+        </Content>
+        <None Update="appsettings.json">
+          <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </None>
+    </ItemGroup>
+
+</Project>

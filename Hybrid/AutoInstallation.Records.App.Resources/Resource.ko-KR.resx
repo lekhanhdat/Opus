@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="APPINSTALLATION_MESSAGE_SINGLEINSTANCEERROR" xml:space="preserve">
+    <value>클라우드 에이전트 구성 도구가 이미 실행 중입니다.</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="COMMON_BTN_BROWSE" xml:space="preserve">
+    <value>찾아보기</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="COMMON_Key_ToolRunAdmin" xml:space="preserve">
+    <value>도구를 실행하는 사용자는 로컬 Administrators 그룹의 구성원이어야 합니다.</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="ConfigurationTool_Key_GUI_Configuration_File" xml:space="preserve">
+    <value>구성 파일:</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="ConfigurationTool_Key_GUI_Installation_Code" xml:space="preserve">
+    <value>설치 코드:</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="ConfigurationTool_Key_GUI_Agent_Action_Close" xml:space="preserve">
+    <value>닫기</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="ConfigurationTool_Key_GUI_Agent_Action_Finish" xml:space="preserve">
+    <value>완료</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="ConfigurationTool_Key_GUI_Agent_Action_Next" xml:space="preserve">
+    <value>다음</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="ConfigurationTool_Key_GUI_Agent_Action_Previous" xml:space="preserve">
+    <value>뒤로</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="ConfigurationTool_Key_GUI_Agent_Service_Account" xml:space="preserve">
+    <value>에이전트 계정 이름:</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="ConfigurationTool_Key_GUI_Agent_Service_Account_Password" xml:space="preserve">
+    <value>에이전트 계정 비밀번호:</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="ConfigurationTool_Key_GUI_Agent_Configuration" xml:space="preserve">
+    <value>에이전트 구성</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="ConfigurationTool_Key_GUI_Configuration_File_Already_Used" xml:space="preserve">
+    <value>구성 파일은 이미 다른 에이전트에서 사용하고 있습니다.</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="ConfigurationTool_Key_GUI_Configuration_File_Not_Exists" xml:space="preserve">
+    <value>구성 파일이 존재하지 않습니다.</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="ConfigurationTool_Key_GUI_Configuration_File_Save_Failed" xml:space="preserve">
+    <value>구성 파일 및 설치 코드를 저장하지 못했습니다. 자세한 내용은 로그 파일을 참조하세요.</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="ConfigurationTool_Key_GUI_Configuration_File_Scope_Invalid" xml:space="preserve">
+    <value>AvePoint Online Services에서 생성된 API 앱이 필수 권한이 있는지 확인하세요.
+클라이언트 ID:{0}
+필수 권한:
+{1}</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="ConfigurationTool_Key_GUI_Enter_Installation_Code" xml:space="preserve">
+    <value>설치 코드를 입력하세요.</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="ConfigurationTool_Key_GUI_Installation_Code_Or_File_Invalid" xml:space="preserve">
+    <value>구성 파일이 유효하지 않거나 설치 코드가 올바르지 않습니다.</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="ConfigurationTool_Key_GUI_Select_Configuration_File" xml:space="preserve">
+    <value>구성 파일을 선택하세요.</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="ConfigurationTool_Key_GUI_Change_Service_Account_Failed" xml:space="preserve">
+    <value>서비스 계정을 변경하지 못했습니다. 자세한 내용은 로그 파일을 참조하세요.</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="ConfigurationTool_Key_GUI_Change_Service_Account_Failed_With_Return_Code" xml:space="preserve">
+    <value>서비스 계정을 변경하지 못했습니다. 오류 코드: {0}. 자세한 내용은 {1}을(를) 참조하세요.</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="ConfigurationTool_Key_GUI_Enter_Service_Account_Name" xml:space="preserve">
+    <value>domain\username의 형식으로 사용자 이름을 입력하세요.</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="ConfigurationTool_Key_GUI_Enter_Service_Account_Password" xml:space="preserve">
+    <value>비밀번호를 입력하세요.</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="ConfigurationTool_Key_GUI_Start_Service_Failed" xml:space="preserve">
+    <value>에이전트 서비스를 시작하지 못했습니다. 비밀번호가 올바른지, 에이전트 계정에 '서비스로 로그온' 권한이 있는지 확인하세요.</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="ConfigurationTool_Key_GUI_Configuration_File_Check_Failed" xml:space="preserve">
+    <value>구성 파일 및 설치 코드의 유효성을 검사하지 못했습니다. 자세한 내용은 로그 파일을 참조하세요.</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="ConfigurationTool_Key_GUI_Change_Service_Account_Invalid_Account" xml:space="preserve">
+    <value>에이전트 계정을 찾을 수 없습니다. 사용자 이름이 올바른지 확인하세요.</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="ConfigurationTool_Key_GUI_Configuration_Complete" xml:space="preserve">
+    <value>구성이 완료되었습니다.</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="ConfigurationTool_Key_GUI_Configuration_File_Keep_Existing" xml:space="preserve">
+    <value>기존 구성 파일 계속 사용</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="ConfigurationTool_Key_GUI_Exisitng_Configuration_Invalid" xml:space="preserve">
+    <value>구성 파일을 찾을 수 없거나 유효하지 않습니다.</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="ConfigurationTool_Key_GUI_Agent_Service_Account_Water_Mark" xml:space="preserve">
+    <value>도메인\사용자 이름</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="ConfigurationTool_Key_GUI_App_Title" xml:space="preserve">
+    <value>클라우드 에이전트 구성 도구</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="ConfigurationTool_Key_GUI_Proxy_Host" xml:space="preserve">
+    <value>프록시 호스트:</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="ConfigurationTool_Key_GUI_Proxy_Password" xml:space="preserve">
+    <value>비밀번호:</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="ConfigurationTool_Key_GUI_Proxy_Port" xml:space="preserve">
+    <value>프록시 포트:</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="ConfigurationTool_Key_GUI_Proxy_UserName" xml:space="preserve">
+    <value>사용자 이름:</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="ConfigurationTool_Key_GUI_Proxy_Using_Proxy" xml:space="preserve">
+    <value>프록시 서버 사용</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="ConfigurationTool_Key_GUI_Enter_Valid_Proxy_Host" xml:space="preserve">
+    <value>유효한 프록시 호스트를 입력하세요.</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="ConfigurationTool_Key_GUI_Enter_Valid_Proxy_Port" xml:space="preserve">
+    <value>유효한 포트 번호를 입력하세요.</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="ConfigurationTool_Key_GUI_Test_Proxy_Failed" xml:space="preserve">
+    <value>프록시 서버에 연결하지 못했습니다. 입력한 정보를 확인하고 다시 시도하세요.</value>
+    <comment>Resolved</comment>
+  </data>
+  <data name="ConfigurationTool_Key_GUI_License_Expired" xml:space="preserve">
+    <value>AvePoint Opus 구독이 만료되었습니다. 관리자에게 문의하여 도움을 받으세요.</value>
+    <comment>Resolved</comment>
+  </data>
+</root>

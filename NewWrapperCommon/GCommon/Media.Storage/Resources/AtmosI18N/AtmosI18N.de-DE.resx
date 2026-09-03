@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="MediaStorage_Atmos_Full_Token_ID_Demo" xml:space="preserve">
+    <value>ID</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_Connector_Atmos_EMC_Atmos" xml:space="preserve">
+    <value>EMC Atmos</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_Connector_Atmos_Policy_Selector_Metadata" xml:space="preserve">
+    <value>Metadaten von Richtlinienauswahl</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_Connector_Atmos_Offline_Access_Point" xml:space="preserve">
+    <value>Offline-Zugriffspunkt</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_Connector_Atmos_Shared_Secret" xml:space="preserve">
+    <value>Gemeinsamer geheimer Schlüssel</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_Connector_Atmos_Configure_your_root_folder_user_ID_and_secret" xml:space="preserve">
+    <value>Geben Sie die detaillierten Informationen für den Speicherort an.</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_Connector_Atmos_Full_Token_ID" xml:space="preserve">
+    <value>Vollständige Token-ID</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_Connector_Atmos_Extended_Parameters" xml:space="preserve">
+    <value>Erweiterte Parameter</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_Connector_Atmos_Root_Folder" xml:space="preserve">
+    <value>Stammordner</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_Connector_Atmos_Advanced" xml:space="preserve">
+    <value>Erweitert</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_Connector_Atmos_ATT_Synaptic" xml:space="preserve">
+    <value>AT&amp;T Synaptic	</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_Connector_Atmos_Access_Point" xml:space="preserve">
+    <value>Zugriffspunkt</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_Connector_Atmos_Advanced_Option" xml:space="preserve">
+    <value>Erweiterte Optionen</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_Atmos_Access_Point" xml:space="preserve">
+    <value>Zugriffspunkt</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_Atmos_Root_Folder" xml:space="preserve">
+    <value>Stammordner</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_Atmos_EMC_Atmos" xml:space="preserve">
+    <value>EMC Atmos</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_Atmos_Interface_Type" xml:space="preserve">
+    <value>Schnittstellentyp</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_Atmos_ATT_Synaptic" xml:space="preserve">
+    <value>AT&amp;T Synaptic	</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_Atmos_Test_failed" xml:space="preserve">
+    <value>Der Validierungstest ist fehlgeschlagen. Bitte überprüfen Sie die eingegebenen Informationen.</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_Atmos_Offline_Access_Point" xml:space="preserve">
+    <value>Offline-Zugriffspunkt</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_Atmos_Full_Token_ID" xml:space="preserve">
+    <value>Vollständige Token-ID</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_Atmos_Configure_your_root_folder_user_ID_and_secret" xml:space="preserve">
+    <value>Geben Sie detaillierte Informationen für den Speicherort an.</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_Atmos_Policy_Selector_Metadata" xml:space="preserve">
+    <value>Metadaten der Richtlinienauswahl</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_Atmos_Object_Type" xml:space="preserve">
+    <value>Objekt</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_Atmos_Advanced" xml:space="preserve">
+    <value>Erweitert</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_Atmos_Extended_Parameters" xml:space="preserve">
+    <value>Erweiterte Parameter</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_Atmos_Namepace_Type" xml:space="preserve">
+    <value>Namespace</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_Atmos_Shared_Secret" xml:space="preserve">
+    <value>Gemeinsamer geheimer Schlüssel</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_Atmos_Advanced_Option" xml:space="preserve">
+    <value>Erweiterte Option</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_Connector_Atmos_The_root_folder_name_cannot_exceed_200_characters" xml:space="preserve">
+    <value>Der Name des Stammordners darf 200 Zeichen nicht überschreiten.</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_Atmos_The_root_folder_name_cannot_exceed_200_characters" xml:space="preserve">
+    <value>Der Name des Stammordners darf 200 Zeichen nicht überschreiten.</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_Atmos_RootFolderName_Invalid_Format" xml:space="preserve">
+    <value>Das Format des Stammordnernamens ist inkorrekt.</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_Connector_Atmos_RootFolderName_Invalid_Format" xml:space="preserve">
+    <value>Das Format des Stammordnernamens ist inkorrekt.</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_Atmos_Proxy" xml:space="preserve">
+    <value>Proxyeinstellungen</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_Atmos_Proxy_Host" xml:space="preserve">
+    <value>Proxy-Host</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_Atmos_Proxy_Password" xml:space="preserve">
+    <value>Kennwort</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_Atmos_Proxy_Port" xml:space="preserve">
+    <value>Proxy-Port</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_Atmos_Proxy_Username" xml:space="preserve">
+    <value>Benutzername</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_Connector_Atmos_Proxy" xml:space="preserve">
+    <value>Proxyeinstellungen</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_Connector_Atmos_Proxy_Host" xml:space="preserve">
+    <value>Proxy-Host</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_Connector_Atmos_Proxy_Password" xml:space="preserve">
+    <value>Kennwort</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_Connector_Atmos_Proxy_Port" xml:space="preserve">
+    <value>Proxy-Port</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_Connector_Atmos_Proxy_Username" xml:space="preserve">
+    <value>Benutzername</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_Connector_Atmos_RootFolderName_Demo" xml:space="preserve">
+    <value>Geben Sie einen Ordnernamen ein. Einer Schrägstrich (/) kann auch eingegeben werden, damit die Verbindung zwischen dem Stammordner des EMC Atmos-Kontos mit allen ihren Dateien und der SharePoint-Bibliothek hergestellt werden kann.</value>
+    <comment>None</comment>
+  </data>
+  <data name="MediaStorage_Connector_Atmos_Must_be_a_number_between_0_and_65535" xml:space="preserve">
+    <value>Bitte geben Sie eine ganze Zahl zwischen 0 und 65535 ein.</value>
+    <comment>None</comment>
+  </data>
+</root>

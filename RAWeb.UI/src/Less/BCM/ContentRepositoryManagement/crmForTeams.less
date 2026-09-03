@@ -1,0 +1,89 @@
+#crmForTeams {
+  padding: 40px;
+  border-radius: 8px;
+  border: 1px solid #e8e9ea;
+}
+
+#crmForTeams,
+#crmForTeamsSwitch {
+  gap: 40px;
+
+  .border {
+    border: 1px solid #e8e9ea;
+  }
+
+  .footer {
+    border-top: 0;
+    border-radius: 0 0 8px 8px;
+    padding: 24px;
+    justify-content: space-between;
+  }
+
+  h3 {
+    font-size: 24px;
+    font-weight: 600;
+  }
+
+  .teams-icon-wrapper {
+    width: 72px;
+    height: 72px;
+    background: linear-gradient(116.88deg, #e9edfa 10.28%, #c9c2ff 93.69%);
+    border-radius: 50%;
+
+    .teams-icon {
+      &::before {
+        font-size: 40px;
+        color: #5d5bd4;
+      }
+    }
+  }
+
+  .teams-table-wrapper {
+    border: 1px solid #e8e9ea;
+    border-radius: 8px;
+
+    .button.button-button {
+      border-radius: 50% !important;
+      background-color: #fff !important;
+
+      &:hover {
+        background-color: #f7f7f7 !important;
+      }
+
+      span::before {
+        color: #323e4d !important;
+      }
+    }
+  }
+
+  .crm-progress {
+        max-width: 588px;
+        margin: 5px auto 0;
+    }
+
+  .crm-progress-wrapper {
+      position: relative;
+
+      .crm-failed {
+          position: absolute;
+          top: -7px;
+          right: -46px;
+      }
+  }
+}
+
+#raCrmConflictSettingDetail {
+  .aui-expander {
+    border: 1px solid #e8e9ea !important;
+    border-radius: 4px !important;
+    overflow: hidden;
+
+    &.aui-expander-expand {
+      border-radius: 4px 4px 0 0 !important;
+    }
+    
+    .ra-details {
+      margin-top: 0;
+    }
+  }
+}

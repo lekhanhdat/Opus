@@ -1,0 +1,6 @@
+﻿//define logger in class
+using System.Reflection;
+private static AveLogger mLog = new AveLogger(MethodBase.GetCurrentMethod().DeclaringType);
+
+//in catch
+mLog.Error(string.Format("MethodName() UsePlace Error: {0}",ex.ToString()));

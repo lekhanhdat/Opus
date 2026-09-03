@@ -1,0 +1,221 @@
+.reco-termusage-create-wrapper,
+.reco-termusage-edit-wrapper {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-rows: auto minmax(330px, auto) 1fr 66px;
+  grid-template-columns: 100%;
+
+  .reco-termusage-form-card {
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid #DAE0E2;
+    border-radius: 8px;
+    padding: 24px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    margin-bottom: 16px;
+
+    .reco-termusage-form {
+      width: 100%;
+      height: 100%;
+      padding-right: 68px;
+    }
+
+    .reco-termusage-form-item {
+      margin-bottom: 24px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    .reco-termusage-tips {
+      width: 100%;
+      height: 100%;
+      padding-left: 24px;
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 1px;
+        background: #E7EAEB;
+      }
+    }
+
+    .reco-termusage-tips-header {
+      height: 40px;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+
+      .reco-termusage-tips-icon {
+        width: 40px;
+        height: 100%;
+        background: #F2F3F4;
+        border-radius: 4px;
+        font-size: 20px;
+        margin-right: 8px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .reco-termusage-tips-title {
+        font: normal normal 600 13px "Open Sans", sans-serif;
+        color: #323E4D;
+      }
+    }
+
+    .reco-termusage-tips-content {
+      width: 100%;
+      font: normal normal normal 13px "Open Sans", sans-serif;
+      color: #323E4D;
+    }
+
+    .reco-termusage-tips-picture {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 233px;
+      height: 155px;
+      background-image: url(/Images/RC/report_info.png);
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+    }
+  }
+
+  .reco-termusage-actions {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 66px;
+    padding-right: 40px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background: #FFFFFF;
+    box-shadow: 0px -1px 0px #dae0e2;
+  }
+
+  .reco-termusage-single-tree-card {
+    width: 100%;
+    padding: 24px;
+    background-color: #fff;
+    border: 1px solid #DAE0E2;
+    border-radius: 8px;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    overflow: auto;
+
+    .reco-termusage-tree {
+      transform: translateX(-22px);
+      overflow: auto;
+    }
+  }
+
+  .reco-termusage-tree-card {
+    width: 100%;
+    padding: 24px;
+    background-color: #fff;
+    border: 1px solid #DAE0E2;
+    border-radius: 8px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    position: relative;
+
+    .reco-termusage-tree-left {
+      overflow: auto;
+      padding-right: 40px;
+      display: grid;
+      grid-template-rows: auto 1fr;
+    }
+
+    .reco-termusage-tree-right {
+      overflow: auto;
+      padding-left: 25px;
+      display: grid;
+      grid-template-rows: auto 1fr;
+    }
+
+    .reco-termusage-tree {
+      transform: translateX(-22px);
+      overflow: auto;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 0;
+      height: 100%;
+      width: 1px;
+      background: #E7EAEB;
+    }
+  }
+
+  .reco-termusage-input-title {
+    height: 18px;
+    font: normal normal 600 13px/18px "Open Sans", sans-serif;
+    color: #323E4D;
+    margin-bottom: 8px;
+    position: relative;
+  }
+
+  .reco-termusage-input-desc {
+    display: block;
+    margin-top: 8px;
+    height: 17px;
+    font: normal normal normal 12px/17px "Open Sans", sans-serif;
+    color: #5D6778;
+  }
+
+  .require {
+    &::after {
+      content: "*";
+      right: -8px;
+      top: 0;
+      font: normal normal 600 13px "Open Sans", sans-serif;
+      color: #FF4444;
+    }
+  }
+}
+
+.reco-termusage-view-wrapper {
+  width: 100%;
+
+  .reco-termusage-view-section {
+    width: 100%;
+    margin-bottom: 24px;
+
+    .reco-termusage-section-title {
+      height: 18px;
+      font: normal normal 600 13px/18px "Open Sans", sans-serif;
+      color: #323E4D;
+      margin-bottom: 8px;
+    }
+
+    .reco-termusage-seciton-value {
+      font: normal normal normal 13px "Open Sans", sans-serif;
+      color: #27313C;
+    }
+
+    .reco-termusage-section-tree-value {
+      background: #F2F3F4;
+      border-radius: 8px;
+      padding: 16px 0;
+      overflow-x: auto;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

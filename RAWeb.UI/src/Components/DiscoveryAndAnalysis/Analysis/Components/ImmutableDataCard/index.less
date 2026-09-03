@@ -1,0 +1,35 @@
+.reco-immutable-data-card {
+  width: 100%;
+  height: 100%;
+  padding: 12px 8px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+  font: 14px Open Sans;
+  color: #171d24;
+  border: 1px solid #e7eaeb;
+  border-radius: 4px;
+  justify-content: center;
+  align-items: center;
+
+  .reco-name {
+    display: flex;
+    // column-gap: 8px;
+    align-items: center;
+  }
+
+  .reco-value-unit {
+    display: grid;
+    column-gap: 8px;
+    align-items: center;
+    max-width: calc(100% - 16px);
+  }
+
+  .reco-value {
+    font: 600 24px Open Sans;
+    color: #323e4d;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}

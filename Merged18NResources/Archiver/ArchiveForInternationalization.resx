@@ -1,0 +1,474 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="StorageOptimization_SOARBackupMainBackupErrorInMediaSQLiteException" xml:space="preserve">
+    <value>An error occurred while handling the index file. Please ensure that the Media cache is enabled.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="StorageOptimization_SOCGBackupTableNotFoundError" xml:space="preserve">
+    <value>The site collection has not been scanned by Compliance Guardian. Run a Discovery job in Compliance Guardian to scan the site collections first, and then rerun the Archiver job.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="StorageOptimization_SOARArchiverDeletionDeleteTaskItemWithSubTask" xml:space="preserve">
+    <value>Cannot delete the task, because there is one or more subtasks in this task.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="StorageOptimization_SOARBackupImpsItemBackupException" xml:space="preserve">
+    <value>The object and the object level specified in the Archiver rule are different.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="StorageOptimization_SOARScanDiscoverNodeWorkerInitItemLevelNodeWithRule" xml:space="preserve">
+    <value>An error occurred while scanning the selected node to match the item-level criteria.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="StorageOptimization_SOARScanProcessWebSPObjectNotFoundException" xml:space="preserve">
+    <value>The site does not exist in SharePoint.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="StorageOptimization_SOARSPObjectLockedException" xml:space="preserve">
+    <value>Cannot archive locked site collection.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="StorageOptimization_SOARSPObjectReadOnlyException" xml:space="preserve">
+    <value>Cannot archive read-only site collections.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="StorageOptimization_SOARBackupMainAddBackupCommonsItemComments" xml:space="preserve">
+    <value>An error occurred while backing up item.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="StorageOptimization_SOARBackupMainAddBackupCommonsListComments" xml:space="preserve">
+    <value>An error occurred while backing up list.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="StorageOptimization_SOARBackupMainAddBackupCommonsSiteCollectionComments" xml:space="preserve">
+    <value>An error occurred while backing up site collection.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="StorageOptimization_SOARBackupMainAddBackupCommonsSiteComments" xml:space="preserve">
+    <value>An error occurred while backing up site.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="StorageOptimization_SOARSOArchiverScheduleScancommonts" xml:space="preserve">
+    <value>An error occurred while running the Scan job. Please refer to the Agent logs for details.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="StorageOptimization_SOARBackupMainBackupErrorInMedia" xml:space="preserve">
+    <value>An error occurred in the media. Details: {0}</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="StorageOptimization_SOARArchiverDeletionDeleteDocumentModified" xml:space="preserve">
+    <value>Cannot delete the document, because it has been modified after being archived.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="StorageOptimization_SOARArchiverDeletionDeleteDocumentversionfailed" xml:space="preserve">
+    <value>Failed to archive the document version.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="StorageOptimization_SOARArchiverDeletionDeleteDocumentVersionModified" xml:space="preserve">
+    <value>Cannot delete the document version, because the document has been modified after being archived.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="StorageOptimization_SOARArchiverDeletionDeleteListCannotDelete" xml:space="preserve">
+    <value>The list cannot be deleted as this action is not allowed in SharePoint.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="StorageOptimization_SOARArchiverDeletionDeleteListItemCannotDelete" xml:space="preserve">
+    <value>Cannot delete the list from SharePoint. At least one item within the list cannot be deleted.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="StorageOptimization_SOARArchiverDeletionDeleteListItemItemVersion" xml:space="preserve">
+    <value>An error occurred while backing up the item version.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="StorageOptimization_SOARArchiverDeletionDeleteListItemModified" xml:space="preserve">
+    <value>Cannot delete the item, because it has been modified after being archived.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="StorageOptimization_SOARArchiverDeletionDeleteListItemVersionModified" xml:space="preserve">
+    <value>Cannot delete the item version, because the item has been modified after being archived.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="StorageOptimization_SOARArchiverDeletionDeleteSiteList" xml:space="preserve">
+    <value>Cannot delete the site. At least one list within the site cannot be deleted. Details: {0}</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="StorageOptimization_SOARArchiverDeletionDeleteSiteWeb" xml:space="preserve">
+    <value>Cannot delete the site collection. At least one site within the site collection cannot be deleted.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="StorageOptimization_SOARCOMArchiverReportDtoAddDeletionCommonsItem" xml:space="preserve">
+    <value>An error occurred while deleting item.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="StorageOptimization_SOARCOMArchiverReportDtoAddDeletionCommonsList" xml:space="preserve">
+    <value>An error occurred while deleting list.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="StorageOptimization_SOARCOMArchiverReportDtoAddDeletionCommonsSite" xml:space="preserve">
+    <value>An error occurred while deleting site.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="StorageOptimization_SOARCOMArchiverReportDtoAddDeletionCommonsSiteCollection" xml:space="preserve">
+    <value>An error occurred while deleting site collection.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="StorageOptimization_SOARCOMScheduleLanguageMappingScheduleLanguageMappingFileNotFoundException" xml:space="preserve">
+    <value>Cannot find the language resource files in SharePoint.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="StorageOptimization_SOARSOBackupErrorComment" xml:space="preserve">
+    <value>Please see details in the \"Backup Details\" tab.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="StorageOptimization_SOARSODeletionErrorComment" xml:space="preserve">
+    <value>Please see details in the \"Deletion Details\" tab.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="StorageOptimization_SOARCLReaderDiscoverError" xml:space="preserve">
+    <value>An error occurred while discovering the data.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="StorageOptimization_SOARSOArchiverRuleIsNotAvailable" xml:space="preserve">
+    <value>The applied rule {0} is not available.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="StorageOptimization_SOARSOArchiverDatabaseError" xml:space="preserve">
+    <value>There is no available archiver database, please configure one first.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="StorageOptimization_SOARSOVaultBefArFailedError" xml:space="preserve">
+    <value>An error occurred while exporting the SharePoint data.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="StorageOptimization_SOARSOVaultBefArFailedError4EXO" xml:space="preserve">
+    <value>^An error occurred while exporting the Exchange Online data.</value>
+  </data>
+  <data name="StorageOptimization_SOARSOVaultBefArReturnNull" xml:space="preserve">
+    <value>An error occurred while exporting the SharePoint data before archiving.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="StorageOptimization_SOARSOVaultBefArServiceErrorMessage" xml:space="preserve">
+    <value>An error occurred while exporting the SharePoint data before archiving.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="StorageOptimization_SOARAuditorEnableException" xml:space="preserve">
+    <value>Auditing has not been enabled for this site collection in SharePoint.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="StorageOptimization_SOARAuditorJobException" xml:space="preserve">
+    <value>The latest Auditor Retrieve Data job failed or finished with exception, and no data was retrieved. Run a new Auditor Retrieve Data job.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="StorageOptimization_SOARCheckAuditorJobTimeException" xml:space="preserve">
+    <value>The data from the last Auditor Retrieve Data job is out of date. Run a new Auditor Retrieve Data job to get the latest data.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="StorageOptimization_SOARNotFindAuditorJobException" xml:space="preserve">
+    <value>Cannot find any Auditor job that has the Track object last accessed time checkbox selected. </value>
+    <comment>Approved</comment>
+  </data>
+  <data name="StorageOptimization_SOARBackupMainAddVaultCommonsItemComments" xml:space="preserve">
+    <value>An error occurred while exporting the item.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="StorageOptimization_SOARBackupMainAddVaultCommonsListComments" xml:space="preserve">
+    <value>An error occurred while exporting the list.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="StorageOptimization_SOARBackupMainAddVaultCommonsSiteCollectionComments" xml:space="preserve">
+    <value>An error occurred while exporting the site collection.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="StorageOptimization_SOARBackupMainAddVaultCommonsSiteComments" xml:space="preserve">
+    <value>An error occurred while exporting the site.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="StorageOptimization_SOARSOVaultErrorComment" xml:space="preserve">
+    <value>For detailed information, refer to the \"Export Details\" tab or the Agent logs.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="StorageOptimization_SOARArchiverKeepDataInPlaceRecordsManagementFeatureNotInstalled" xml:space="preserve">
+    <value>This action cannot be performed. The In Place Records Management feature cannot be found in the related site collection of the selected node. </value>
+    <comment>Approved</comment>
+  </data>
+  <data name="StorageOptimization_SOARDocImportSkipConflictItem" xml:space="preserve">
+    <value>Skipped the file. This file already exists in the destination.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="StorageOptimization_SOARRecordManagerAutoCheckOutFile" xml:space="preserve">
+    <value>Skipped the file. This file is checked out automatically.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="StorageOptimization_SOARRecordManagerFileNameTooLong" xml:space="preserve">
+    <value>Cannot generate the metadata file, because the file name is longer than 128 characters.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="StorageOptimization_SOARRecordManagerFileNotExist" xml:space="preserve">
+    <value>This file does not exist.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="StorageOptimization_SOARArchiverDeletionDeleteSiteTemplateError" xml:space="preserve">
+    <value>Cannot delete the SharePoint Online site collection. The template for the site collection is a Publishing Portal.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="StorageOptimization13_SOARSORecordManagerErrorComment" xml:space="preserve">
+    <value>An error occurred while performing the Move and Declare action. Please see details in the \"Record Declaration Details\" tab.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="StorageOptimization13_SOARSORecordManagerLibraryNotExist" xml:space="preserve">
+    <value>The destination library does not exist.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="StorageOptimization_SOARArchiverDeletionDeleteSiteHaveSpecialCharacter" xml:space="preserve">
+    <value>Cannot delete this site collection. The site collection URL contains illegal characters, such as "&amp;" and "^".</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="StorageOptimization_SOARSORecordManagerNoInPlaceRecrdFeature" xml:space="preserve">
+    <value>There is no In Place Records Management feature in the farm.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="StorageOptimization_SOARArchiverDeletionDeleteWebList" xml:space="preserve">
+    <value>The site cannot be deleted. Some lists within the site could not be removed due to SharePoint records management policies. Details: {0}.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="StorageOptimization_SOARSOSkipLargerFile" xml:space="preserve">
+    <value>The object size has exceeded the 2 GB size limitation of Archiver.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="StorageOptimization_SOARSOArchiveIsSystemObject" xml:space="preserve">
+    <value>This is a system list and has been skipped.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="StorageOptimization_VEOExportOnlySupportCurrentVersion" xml:space="preserve">
+    <value>Only the current version of an item can be exported using the VEO File export format.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="StorageOptimization_FileVEOExportConfigFileDeserializeException" xml:space="preserve">
+    <value>The content format of the FileVEO.xml file is invalid. Check the content and try again.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="StorageOptimization_ManifestExportConfigFileDeserializeException" xml:space="preserve">
+    <value>The content format of the ManifestVEO.xml file is invalid. Check the content and try again.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="StorageOptimization_NAAExportConfigFileDeserializeException" xml:space="preserve">
+    <value>The content format of the NAA Configuration File.xml file is invalid. Check the content and try again.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="StorageOptimization_RecordVEOExportConfigFileDeserializeException" xml:space="preserve">
+    <value>The content format of the RecordVEO.xml file is invalid. Check the content and try again.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="StorageOptimization_VEOOnlyExportDocumentLibrary" xml:space="preserve">
+    <value>Item, item version, and attachment are not supported for exporting into VEO files.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="StorageOptimization_NARAExportConfigFileDeserializeException" xml:space="preserve">
+    <value>The content format of the NARA Configuration File.xml file is invalid. Check the content and try again.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="StorageOptimization_NAASkipItemAndAttachment" xml:space="preserve">
+    <value>Item, Item Version, and Attachment are not supported for an NAA export. </value>
+    <comment>Approved</comment>
+  </data>
+  <data name="StorageOptimization_NARASkipItemAndAttachment" xml:space="preserve">
+    <value>Item, Item Version, and Attachment are not supported for export to NARA. </value>
+    <comment>Approved</comment>
+  </data>
+  <data name="StorageOptimization_SOARAzureTableCanNotConnect" xml:space="preserve">
+    <value>The device is currently unavailable.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="StorageOptimization13_SOARRelatedRecordDeleteFailed" xml:space="preserve">
+    <value>This item failed to be deleted by the Related Records feature of AvePoint Cloud Records. Please contact the administrator for more information. </value>
+    <comment>Approved</comment>
+  </data>
+  <data name="StorageOptimization13_SOARRelatedRecordDeleteSuccess" xml:space="preserve">
+    <value>This item has been deleted by the Related Records feature of AvePoint Cloud Records.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="StorageOptimization13_SOARRelatedRecordBackupFailed" xml:space="preserve">
+    <value>This item failed to be archived by the Related Records feature of AvePoint Cloud Records. Please contact the administrator for more information.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="StorageOptimization13_SOARRelatedRecordBackupSuccess" xml:space="preserve">
+    <value>This item has been archived by the Related Records feature of AvePoint Cloud Records.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="StorageOptimization13_SOARRelatedRecordBackupSkipped" xml:space="preserve">
+    <value>This item was skipped during archiving by the Related Records feature of AvePoint Cloud Records. Please contact the administrator for more information. </value>
+    <comment>Approved</comment>
+  </data>
+  <data name="StorageOptimization13_SOARRelatedRecordDeleteSkipped" xml:space="preserve">
+    <value>This item was skipped during deleting by the Related Records feature of AvePoint Cloud Records. Please contact the administrator for more information.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="StorageOptimization13_SOARRelatedRecordExportFailed" xml:space="preserve">
+    <value>This item failed to be exported by the Related Records feature of AvePoint Cloud Records. Please contact the administrator for more information.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="StorageOptimization13_SOARRelatedRecordExportSkipped" xml:space="preserve">
+    <value>This item was skipped during exporting by the Related Records feature of AvePoint Cloud Records. Please contact the administrator for more information.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="StorageOptimization13_SOARRelatedRecordExportSuccess" xml:space="preserve">
+    <value>This item has been exported by the Related Records feature of AvePoint Cloud Records.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="StorageOptimization13_SOARRelatedRecordsSourceObjectDeleteFailed" xml:space="preserve">
+    <value>This item cannot be deleted. Its related records failed to be archived or deleted.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="StorageOptimization_SOARRecordManagerCheckOutDocumentDeleteFailed" xml:space="preserve">
+    <value>The source item cannot be deleted as it is a checked out file.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="StorageOptimization_SOARRecordManagerCheckOutDocumentDeclareFailed" xml:space="preserve">
+    <value>The moved item in the destination cannot be declared as a record as it is a checked out file.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="StorageOptimization_SOARRecordManagerDocumentSetContentTypeFileDeclareFailed" xml:space="preserve">
+    <value>This item cannot be declared as a record as it is a Folder content type.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="StorageOptimization_SOARRecordManagerLabelDocumentDeleteFailed" xml:space="preserve">
+    <value>Failed to delete the object. A Microsoft 365 label, configured to enforce retention, has been applied to this object.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="StorageOptimization_EXOFileVEOExportConfigFileDeserializeException" xml:space="preserve">
+    <value>The content format of the EXOFileVEO.xml file is invalid.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="StorageOptimization_EXOManifestExportConfigFileDeserializeException" xml:space="preserve">
+    <value>The content format of the EXOManifestVEO.xml file is invalid.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="StorageOptimization_EXONAAExportConfigFileDeserializeException" xml:space="preserve">
+    <value>The content format of the EXO NAA Configuration File.xml file is invalid.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="StorageOptimization_EXONARAExportConfigFileDeserializeException" xml:space="preserve">
+    <value>The content format of the EXO NARA Configuration File.xml file is invalid.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="StorageOptimization_EXORecordVEOExportConfigFileDeserializeException" xml:space="preserve">
+    <value>The content format of the EXORecordVEO.xml file is invalid.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="StorageOptimization_EXOExploreHoldFile" xml:space="preserve">
+    <value>The object has been placed on hold by AvePoint Cloud Records.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="StorageOptimization_SOARRecordManagerCheckOutFile" xml:space="preserve">
+    <value>The SharePoint Online item is checked out.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="StorageOptimization_SOARTagCannotGetLabelByName" xml:space="preserve">
+    <value>Cannot find the Microsoft 365 retention label in the site collection.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="StorageOptimization_SOARCurrentLabelIsNotRecordLabel" xml:space="preserve">
+    <value>^Current Label is not record label</value>
+  </data>
+  <data name="RM_PRM_PRE_Column_Status_Destroyed" xml:space="preserve">
+    <value>Destroyed</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="StorageOptimization_SOARRelatedRecordsItemScanFitRule" xml:space="preserve">
+    <value>This item is destroyed as it is part of the related records disposal action.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="StorageOptimization_SOARSODeletionParentFolder" xml:space="preserve">
+    <value>The folder is removed along with the files.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="StorageOptimization_SOARArchiverDeleteGroupSiteError" xml:space="preserve">
+    <value>Failed to delete this site collection. It is a Microsoft 365 Group team site and cannot be deleted separately from the associated Microsoft 365 Group.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="StorageOptimization13_SOARDeleteOfficeLockFile" xml:space="preserve">
+    <value>This file cannot be deleted. It is currently checked out or locked for editing by another user.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="StorageOptimization13_SOAveLATQueryException" xml:space="preserve">
+    <value>The last accessed time of the object cannot be retrieved. Please turn on auditing for the tenant and enable data collection in AvePoint Online Services, and try again.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="StorageOptimization_SkipRemoveContentAndDestroyAction" xml:space="preserve">
+    <value>You have chosen to skip the 'Remove content and destroy' rule action.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="StorageOptimization_SOARCheckOutFileCannotDeclare" xml:space="preserve">
+    <value>This item cannot be declared as a record as it is checked out.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="StorageOptimization_SOARFolderHasHoldOrDeclareCannotDelete" xml:space="preserve">
+    <value>The folder cannot be deleted from SharePoint. At least one item in the folder is on hold or declared as a record.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="StorageOptimization_SOARFolderHasSubFolderOrSubItemCannotDelete" xml:space="preserve">
+    <value>The folder is not empty and cannot be deleted.</value>
+    <comment>Approved</comment>
+  </data>
+  <data name="StorageOptimization_Skip_OPUSStubFile" xml:space="preserve">
+    <value>StorageOptimization_Skip_OPUSStubFile</value>
+  </data>
+</root>

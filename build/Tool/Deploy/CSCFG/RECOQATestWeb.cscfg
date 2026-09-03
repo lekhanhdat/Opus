@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ServiceConfiguration serviceName="RAWeb.Azure" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceConfiguration" osFamily="5" osVersion="WA-GUEST-OS-5.41_202003-01" schemaVersion="2015-04.2.6">
+  <Role name="RAWeb">
+    <Instances count="1" />
+    <ConfigurationSettings>
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="UseDevelopmentStorage=true" />
+      <Setting name="JobQueueConnectionString" value="Endpoint=sb://recoqatest.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=rHRYUaxPF2T9haqZ5qLTaoa3d9WrRRgIb1EYuQPP5sI=" />
+      <Setting name="LogStorage" value="RGVmYXVsdEVuZHBvaW50c1Byb3RvY29sPWh0dHBzO0FjY291bnROYW1lPXJlY29xYXRlc3Q7QWNjb3VudEtleT1SRjQ2cFdrZkVLZ2NhUEIxL0ZqczNSa1RtbHpobElYSDZRQi8zYkdXSHN4bnR3WnJlU3JqRGlIM1RZNTBIdnplcC9EV3E4STFVYzJEdHBDR0JYb05zUT09O0VuZHBvaW50U3VmZml4PWNvcmUud2luZG93cy5uZXQ=" />
+      <Setting name="RealTimeQueueName" value="RealTimeActionQueue1" />
+      <Setting name="JobQueueName" value="JobQueue1" />
+      <Setting name="LogContainerName" value="joblogs" />
+      <Setting name="ReportStorage" value="RGVmYXVsdEVuZHBvaW50c1Byb3RvY29sPWh0dHBzO0FjY291bnROYW1lPXJlY29xYXRlc3Q7QWNjb3VudEtleT1SRjQ2cFdrZkVLZ2NhUEIxL0ZqczNSa1RtbHpobElYSDZRQi8zYkdXSHN4bnR3WnJlU3JqRGlIM1RZNTBIdnplcC9EV3E4STFVYzJEdHBDR0JYb05zUT09O0VuZHBvaW50U3VmZml4PWNvcmUud2luZG93cy5uZXQ=" />
+      <Setting name="ReportFolder" value="C:\RECO_Reports" />
+      <Setting name="LogKeepDays" value="7" />
+      <Setting name="TenantDBTier" value="S0" />
+      <Setting name="RevIMHoldPhysicalLibraryName" value="Records Repository" />
+      <Setting name="JobLimitCount" value="4" />
+      <Setting name="RevIMHomeLocationName" value="Home Location" />
+      <Setting name="AppUrl" value="https://www.RevIM.com" />
+      <Setting name="ForwardToReportCenter" value="https://test.sharepointguild.com/forwardto/target?product=ReportCenter" />
+      <Setting name="RedirectAosLoginUrl" value="https://test.sharepointguild.com/account/LogOff" />
+      <Setting name="ReportContainerName" value="jobreports" />
+      <Setting name="ConfigDatabaseConnection" value="Server=tcp:recoqatest.database.windows.net,1433;Initial Catalog=RECOQATestDB;Persist Security Info=False;User ID=testrecordsadmin1;Password=pt{REC0Passw0rd!@};MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;" />
+      <Setting name="PortalApiUrl" value="https://testapi.sharepointguild.com" />
+      <Setting name="ControlServiceAddress" value="https://dbporecords.southeastasia.cloudapp.azure.com:8611/Datasets/00000000-0000-0000-0000-000000000000/RATest191203/Data/" />
+      <Setting name="CertificateThumbprint" value="958B6B5093959E9B3886BC19D5B10A19C417973D"/>
+	  <Setting name="NotificationSetting" value="PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjxOb3RpZmljYXRpb25TZXR0aW5nRHRvIHhtbG5zOnhzZD0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEiIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiPg0KICA8T3V0Z29pbmdNYWlsU2VydmVyPlNNVFAuc2VuZGdyaWQubmV0PC9PdXRnb2luZ01haWxTZXJ2ZXI+DQogIDxTZW5kZXI+UmVjb3Jkc19UZWFtQGF2ZXBvaW50b25saW5lc2VydmljZXMuY29tPC9TZW5kZXI+DQogIDxFeGNoYW5nZVNlcnZlcj5TTVRQLnNlbmRncmlkLm5ldDwvRXhjaGFuZ2VTZXJ2ZXI+DQogIDxVc2VyTmFtZT5SZWNvcmRzX1RlYW1AYXZlcG9pbnRvbmxpbmVzZXJ2aWNlcy5jb208L1VzZXJOYW1lPg0KICA8UGFzc3dvcmQ+bW90aC1KRXVWNjwvUGFzc3dvcmQ+DQogIDxTc2xBdXRoZW50aWNhdGlvbj50cnVlPC9Tc2xBdXRoZW50aWNhdGlvbj4NCiAgPFBvcnQ+NTg3PC9Qb3J0Pg0KICA8U2VjdXJlUGFzc3dvcmRBdXRoZW50aWNhdGlvbj5mYWxzZTwvU2VjdXJlUGFzc3dvcmRBdXRoZW50aWNhdGlvbj4NCjwvTm90aWZpY2F0aW9uU2V0dGluZ0R0bz4=" />
+      <Setting name="ClientId" value="3939dfab-72db-451b-ad68-59d4c60fc938"/>
+      <Setting name="ClientSecret" value="Y3NadEpsdzBzZVFlZ2F6U1RPczU5QWNhNVRWaHk2Rm82cmIvSnl6M3ZvOD0="/>
+	  <Setting name="CosmosDBURI" value="https://recoqatest1.documents.azure.com:443/"/>      
+	  <Setting name="CosmosDBSecret" value="RGU4UTlmTW9JZllJMUw2MTZmRUxxUDRlRFBoRG10YmJ6RkdQQ2hiU2V1aWJ4TXFrYjZ0SktyeE05azFzWUJZSU1BM1EzOUZ2OXlGMHpvVFp6T1JaMGc9PQ=="/>
+	<Setting name="AzureTableConnection" value="RGVmYXVsdEVuZHBvaW50c1Byb3RvY29sPWh0dHBzO0FjY291bnROYW1lPXJlY29xYXRlc3Q7QWNjb3VudEtleT1SRjQ2cFdrZkVLZ2NhUEIxL0ZqczNSa1RtbHpobElYSDZRQi8zYkdXSHN4bnR3WnJlU3JqRGlIM1RZNTBIdnplcC9EV3E4STFVYzJEdHBDR0JYb05zUT09O0VuZHBvaW50U3VmZml4PWNvcmUud2luZG93cy5uZXQ="/>
+	<Setting name="OCCertThumbprint" value="833E7D9269BD23A47916D5A1EEE07FF8CBFCB2C2"/>
+	</ConfigurationSettings>
+    <Certificates>
+      	<Certificate name="Web" thumbprint="E6DA8E308F29D6CB2490B0A48DEDFDBEB96C2A68" thumbprintAlgorithm="sha1" />
+      	<Certificate name="CloudRecords Application" thumbprint="958B6B5093959E9B3886BC19D5B10A19C417973D" thumbprintAlgorithm="sha1" />
+      	<Certificate name="DocAveOnline Application" thumbprint="DC895545B9271DDA56ADF6E7AC82E6CFDB457850" thumbprintAlgorithm="sha1" />
+		<Certificate name="Listener Wcf" thumbprint="D9CC5C50CEC068500233D370CDA18E4536750EC6" thumbprintAlgorithm="sha1" />
+		<Certificate name="Office Connector" thumbprint="833E7D9269BD23A47916D5A1EEE07FF8CBFCB2C2" thumbprintAlgorithm="sha1" />
+    </Certificates>
+  </Role>
+  <Role name="RATimerWorkerRole">
+    <Instances count="1" />
+    <ConfigurationSettings>
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="UseDevelopmentStorage=true" />
+      <Setting name="JobQueueName" value="JobQueue1" />
+	  <Setting name="COPQueueName" value="CopQueue" />
+	  <Setting name="COPApiUrl" value="https://copapi.sharepointguild.com" />
+      <Setting name="ReportFolder" value="C:\RECO_Reports" />
+      <Setting name="JobQueueConnectionString" value="Endpoint=sb://recoqatest.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=rHRYUaxPF2T9haqZ5qLTaoa3d9WrRRgIb1EYuQPP5sI=" />
+      <Setting name="ConfigDatabaseConnection" value="Server=tcp:recoqatest.database.windows.net,1433;Initial Catalog=RECOQATestDB;Persist Security Info=False;User ID=testrecordsadmin1;Password=pt{REC0Passw0rd!@};MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;" />
+      <Setting name="PortalApiUrl" value="Https://testapi.sharepointguild.com" />
+      <Setting name="ControlServiceAddress" value="https://dbporecords.southeastasia.cloudapp.azure.com:8611/Datasets/00000000-0000-0000-0000-000000000000/RATest191203/Data/" />
+      <Setting name="JobLimitCount" value="4" />
+      <Setting name="LogStorage" value="RGVmYXVsdEVuZHBvaW50c1Byb3RvY29sPWh0dHBzO0FjY291bnROYW1lPXJlY29xYXRlc3Q7QWNjb3VudEtleT1SRjQ2cFdrZkVLZ2NhUEIxL0ZqczNSa1RtbHpobElYSDZRQi8zYkdXSHN4bnR3WnJlU3JqRGlIM1RZNTBIdnplcC9EV3E4STFVYzJEdHBDR0JYb05zUT09O0VuZHBvaW50U3VmZml4PWNvcmUud2luZG93cy5uZXQ=" />
+      <Setting name="LogContainerName" value="joblogs" />
+      <Setting name="CertificateThumbprint" value="958B6B5093959E9B3886BC19D5B10A19C417973D"/>
+      <Setting name="PortalTopicConnectionstring" value="Endpoint=sb://aostest.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=ej/aQDRX3i2NtGCkbcVntOCu0xxecD3iCchcF/omeiw="/>
+      <Setting name="PortalSubscriptionName" value="aostestqueue" />
+      <Setting name="PortalTopicName" value="aostesttopic" />
+      <Setting name="NodeCountInSubJob" value="5"/>
+      <Setting name="SubJobCountInMainJob" value="2"/>
+	  <Setting name="ReportStorage" value="RGVmYXVsdEVuZHBvaW50c1Byb3RvY29sPWh0dHBzO0FjY291bnROYW1lPXJlY29xYXRlc3Q7QWNjb3VudEtleT1SRjQ2cFdrZkVLZ2NhUEIxL0ZqczNSa1RtbHpobElYSDZRQi8zYkdXSHN4bnR3WnJlU3JqRGlIM1RZNTBIdnplcC9EV3E4STFVYzJEdHBDR0JYb05zUT09O0VuZHBvaW50U3VmZml4PWNvcmUud2luZG93cy5uZXQ=" />
+      <Setting name="ReportContainerName" value="jobreports" />
+	  <Setting name="CosmosDBURI" value="https://recoqatest1.documents.azure.com:443/"/>      
+	  <Setting name="CosmosDBSecret" value="RGU4UTlmTW9JZllJMUw2MTZmRUxxUDRlRFBoRG10YmJ6RkdQQ2hiU2V1aWJ4TXFrYjZ0SktyeE05azFzWUJZSU1BM1EzOUZ2OXlGMHpvVFp6T1JaMGc9PQ=="/>
+	</ConfigurationSettings>
+    <Certificates>
+      <Certificate name="CloudRecords Application" thumbprint="958B6B5093959E9B3886BC19D5B10A19C417973D" thumbprintAlgorithm="sha1" />
+      <Certificate name="DocAveOnline Application" thumbprint="DC895545B9271DDA56ADF6E7AC82E6CFDB457850" thumbprintAlgorithm="sha1" />
+    </Certificates>
+  </Role>
+ <NetworkConfiguration>
+	<VirtualNetworkSite name="Group RECOQATest APCRQATestVirtualNetworks"/>
+    <AddressAssignments>
+	  <InstanceAddress roleName="RAWeb">
+		<Subnets>
+			<Subnet name="Web"/>
+		</Subnets>
+	  </InstanceAddress>
+	  <InstanceAddress roleName="RATimerWorkerRole">
+		<Subnets>
+			<Subnet name="Web"/>
+		</Subnets>
+	  </InstanceAddress>
+      <ReservedIPs>
+        <ReservedIP name="RECOQATestWebIP" />
+      </ReservedIPs>
+    </AddressAssignments>
+  </NetworkConfiguration>
+</ServiceConfiguration>

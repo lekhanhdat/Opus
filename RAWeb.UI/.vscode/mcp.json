@@ -1,0 +1,12 @@
+{
+    "servers": {
+        "figma": {
+            "url": "https://mcp.figma.com/mcp",
+            "type": "http"
+        },
+        "atlassian-jira": {
+            "command": "npx",
+            "args": ["-y", "mcp-remote", "https://mcp.atlassian.com/v1/mcp"]
+        }
+    }
+}

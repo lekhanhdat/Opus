@@ -1,0 +1,41 @@
+﻿***********************************************************************************
+原则性问题: 
+
+如果提供的接口是给外围实现的，那么每次release可以随便改，但是release之后就不能随便改了，
+需要添加接口继承原来那个接口，因为在接口添加方法会导致原来实现的类不好使。
+
+TODO: 如果接口基本上不懂变化，那么可以使用接口，否则建议使用虚方法，这样比较利于兼容老代码。
+
+***********************************************************************************
+
+1. Pending Folder是以前写的Contract
+2. 除Pending之外的folder是新的interface，共外围使用。
+3. 这个solution的名字以后需要修改下，包括assembly name
+4. stream.BeginWriteMetadata();和end这两个方法看看不让外围调用，封装起来。
+5. SPUtility，Server端不需要参数，但是Client依赖于Request，所以这个部分需要考虑。
+6. 切入编程，需要定义好一个rule，比如Report通过接口，performance也可以通过接口，这样外围自己负责实现是否需要监听就可以了。
+7. 移除所有[Obsolete("This method will be deprecated and removed later. key--001")]过期的字段以及方法之类
+8. TODO-LONG 是需要以后重新改正的。
+9. AveEnv.IsMoss问题需要解决，因为client不需要这个判断
+10. Term 是否需要覆盖，好像也没好方法啊，replicator没办法判断是否changed了，前天外围可以提供overwrite
+
+Pending Issues
+1. Security 多次装箱拆箱过程，影响效率。
+
+object obj = spSite.DataCache.GetPrincipalInfo(principalId);
+
+                            if (obj is AveUserInfo)
+                            {
+                                dataCache.AddToCache(principalId, (AveUserInfo)obj);
+                            }
+                            else if (obj is AveGroupInfo)
+                            {
+                                dataCache.AddToCache(principalId, (AveGroupInfo)obj);
+                            }
+
+
+2. WrapperSPMode先放到WrapperCommon，以后需要移回来
+3. ISPAPI的接口需要全部移到Contract中
+4. AveSPFolder和AveSPDoc, AveSPItem, AveSPListItem结合比较紧密，但是其实备份document或者item是不需要构造folder的，只需要之前folder的id就可以，这个需要改进。
+
+

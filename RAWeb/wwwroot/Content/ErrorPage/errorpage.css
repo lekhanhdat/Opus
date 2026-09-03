@@ -1,0 +1,60 @@
+﻿/*Covered by AvePoint copyright and license agreement*/
+.errorPageContainer {
+    text-align: center;
+}
+
+.icon-page-error-base {
+    width: 620px;
+    height: 380px;
+    margin: 0 auto;
+    background: url('../../Images/Base/http_error.png');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.page-error-content {
+    position: absolute;
+    left: 50%;
+    top: 120px;
+    transform: translate(-50%, 0);
+}
+
+.http-status-code {
+    position: absolute;
+    left: 240px;
+    top: 110px;
+    height: 100px;
+    line-height: 100px;
+    font-size: 89px;
+    color: #f46369;
+    letter-spacing: 6px;
+}
+
+.icon-expired {
+    background: url('../../Images/Base/license_expired.png');
+}
+.icon-not-permission {
+    background: url('../../Images/Base/no_permission.png');
+}
+
+.page-error-title {
+    margin-top: 64px;
+    margin-bottom: 8px;
+    font-family: 'Segoe UI', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    color: #27313C;
+}
+
+.page-error-desc {
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 13px;
+    color: #293037;
+}
+
+.page-error-desc a,
+.page-error-desc a:visited,
+.page-error-desc a:hover {
+    text-decoration: underline;
+    color: #0055AA;
+}

@@ -1,0 +1,1335 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ACBURBlobInfoCreateVolumePathArgumentNullExceptioncontentDBID" xml:space="preserve">
+    <value>The data ID cannot be null. Please value it by related property.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="ACBURBlobInfoCreateVolumePathArgumentNullExceptionmPoolId" xml:space="preserve">
+    <value>The argument 'mPoolId' cannot be null when extending a file with RBS.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="ACBURBlobInfoCreateVolumePathArgumentNullExceptionpoolId" xml:space="preserve">
+    <value>The pool ID cannot be null. Please value it by BlobInfo.PoolId property.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="ACBURBlobInfoFileLocationUnderDeviceArgumentNullExceptionFileLocationVolume" xml:space="preserve">
+    <value>File Location Volume can not be found in net share device.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="ACBURBlobStorageUtilityConsumeSynchronizationLockExceptionConsumer" xml:space="preserve">
+    <value>Consumer is getting an object from an empty container.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="ACBURBlobStorageUtilityDeviceSendBinaryContentExtendSteamUnavailableExceptioncurrent" xml:space="preserve">
+    <value>Current extend file stream can not be read. Please check the feature of file stream.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="ACBURBlobStorageUtilityEnsureBlobInfoStreamBlobAlreadyIsStubExceptionBlobInfo" xml:space="preserve">
+    <value>BlobInfo cannot contain a stream because it has been a stub already.The item ID: {0}.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="ACBURBlobStorageUtilityEnsureBlobInfoStreamBlobAlreadyIsStubExceptionstub" xml:space="preserve">
+    <value>BlobInfo cannot contain a stream because it has been a stub already.The item ID: {0}.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="ACBURBlobStorageUtilityEnsureBlobInfoStreamExtendSteamUnavailableExceptionBlobInfo" xml:space="preserve">
+    <value>BlobInfo cannot contain a stream for this item. Item ID: {0}</value>
+    <comment>Y</comment>
+  </data>
+  <data name="ACBURBlobStorageUtilityFactoryGetInstanceStorageFactoryExceptioninstance" xml:space="preserve">
+    <value>An error occurred while creating type {0} instance.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="ACBURBlobStorageUtilityMemoryBufferReadMemoryCacheErrorExceptionReading" xml:space="preserve">
+    <value>Read content from an unavailable cache. type:{0}</value>
+    <comment>Y</comment>
+  </data>
+  <data name="ACBURBlobStorageUtilityMemoryBufferReclaimMemoryCacheErrorExceptionmemory" xml:space="preserve">
+    <value>Reclaimed memory piece is not ReadForWrite.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="ACBURBlobStorageUtilityMemoryBufferWriteMemoryCacheErrorExceptionWriting" xml:space="preserve">
+    <value>Write content to an unavailable cache.type:{0}</value>
+    <comment>Y</comment>
+  </data>
+  <data name="ACBURBlobStorageUtilityProduceObjectDisposedExceptionproducing" xml:space="preserve">
+    <value>The producing process has ended.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="ACBURBlobStorageUtilityProduceSynchronizationLockExceptionProducer" xml:space="preserve">
+    <value>Producer adds an object to a full container.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="ACBURBlobStorageUtilitySharePointAddDirectoryNotFoundExceptiondirectory" xml:space="preserve">
+    <value>The file directory can not be found.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="ACBURBlobStorageUtilitySharePointCacheBinaryExceptionbinary" xml:space="preserve">
+    <value>Saved binary to cache failed because no available file stream is found.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="ACBURBlobStorageUtilitySharePointConvertToContentExceptionrestore" xml:space="preserve">
+    <value>Item's target object cannot be unknown when restoring EBS stub.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="ACBURBlobStorageUtilitySharePointCreateBlobExceptionType" xml:space="preserve">
+    <value>An error occurred while getting Blob type.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="ACBURBlobStorageUtilitySharePointCreateRBSBlobExceptionrecord" xml:space="preserve">
+    <value>Cannot generate Blob record.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="ACBURBlobStorageUtilitySharePointFlushNotImplementedExceptionflush" xml:space="preserve">
+    <value>Flush is not implemented.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="ACBURBlobStorageUtilitySharePointGetBlobIdFromContentDBExceptionBlob" xml:space="preserve">
+    <value>The Blob is not EBS or RBS data.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="ACBURBlobStorageUtilitySharePointGetBlobIdFromContentDBExceptionitem" xml:space="preserve">
+    <value>Cannot find the item.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="ACBURBlobStorageUtilitySharePointGetBlobIdFromContentDBExceptionRBS" xml:space="preserve">
+    <value>Cannot find RBS Blob Id.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="ACBURBlobStorageUtilitySharePointReadAccessViolationExceptionaccess" xml:space="preserve">
+    <value>Cannot access the disposed object.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="ACBURBlobStorageUtilitySharePointReadFromCacheExceptioncache" xml:space="preserve">
+    <value>The cache block cannot hold all the consequent content required by provider.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="ACBURBlobStorageUtilitySharePointWriteAccessViolationExceptionaccess" xml:space="preserve">
+    <value>Cannot access the disposed object.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="ACBURBlobStorageUtilitySharePointWriteNotImplementedExceptionstream" xml:space="preserve">
+    <value>This stream does not support to write.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="ACBURBlobStorageUtilitySharePointWriteNotImplementedExceptionwrite" xml:space="preserve">
+    <value>This object does not support to write.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="ACBURCacheInfoWriteCache" xml:space="preserve">
+    <value>An error occurred while writing the cache file.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="ACBURCacheUtilityGetAllInfoFromControlGetAllInfoFromControl" xml:space="preserve">
+    <value>An error occurred while getting all info from control service.Exception:\r\n</value>
+    <comment>Y</comment>
+  </data>
+  <data name="ACBURCacheUtilityGetLogicalDeviceDeviceNotFoundExceptionlogical" xml:space="preserve">
+    <value>Cannot find the logical device:</value>
+    <comment>Y</comment>
+  </data>
+  <data name="ACBURCacheUtilityGetLogicalInfoFromControlGetLogicalInfoFromControl" xml:space="preserve">
+    <value>An error occurred while getting logical info from control service.Exception:\r\n</value>
+    <comment>Y</comment>
+  </data>
+  <data name="ACBURCacheUtilityGetNodesFromControlGetNodesFromControl" xml:space="preserve">
+    <value>An error occurred while getting nodes from control service.Exception:\r\n</value>
+    <comment>Y</comment>
+  </data>
+  <data name="ACBURCacheUtilityGetPhysicalInfoFromControlGetPhysicalInfoFromControl" xml:space="preserve">
+    <value>An error occurred while getting physical info from control service.Exception:\r\n</value>
+    <comment>Y</comment>
+  </data>
+  <data name="ACBURCacheUtilityGetStubDBConnectionConnection" xml:space="preserve">
+    <value>Connection string is null.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="ACBURCacheUtilityGetStubDBConnectionStubDBNotFoundExceptionstub" xml:space="preserve">
+    <value>Cannot find the stub DB:</value>
+    <comment>Y</comment>
+  </data>
+  <data name="ACBURCacheUtilityGetStubDBIdStubDBNotFoundExceptiondatabase" xml:space="preserve">
+    <value>Cannot find the stub DB:</value>
+    <comment>Y</comment>
+  </data>
+  <data name="ACBURCacheUtilityGetStubDBInfoFromControlGetStubDBInfoFromControl" xml:space="preserve">
+    <value>An error occurred while getting stub DB from control service.Exception:\r\n</value>
+    <comment>Y</comment>
+  </data>
+  <data name="ACBURStubDBUtilityGetBlobStubNotFoundExceptionStub" xml:space="preserve">
+    <value>Cannot find the specified Stub in Stub DB .</value>
+    <comment>Y</comment>
+  </data>
+  <data name="ACSPPStorageProcessingPoolMainMainPool" xml:space="preserve">
+    <value>Start the Processing Pool...ID:</value>
+    <comment>Y</comment>
+  </data>
+  <data name="ACSPPStorageProcessingPoolMainMainsuccessfully" xml:space="preserve">
+    <value>Started Processing Pool successfully.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="ACSPPStorageProcessingPoolMainSetResponseToLocalAgentServiceresponse" xml:space="preserve">
+    <value>An error occurred while setting up response:</value>
+    <comment>Y</comment>
+  </data>
+  <data name="ACSPPStorageProcessingPoolServiceCheckStatusstatus" xml:space="preserve">
+    <value>Check the service status.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="ACSPPStorageProcessingPoolServicePerformScheduleJobservice" xml:space="preserve">
+    <value>An error occurred while performing the Processing Pool service:</value>
+    <comment>Y</comment>
+  </data>
+  <data name="ACSPPStorageProcessingPoolServiceStartArchiverJobSchedule" xml:space="preserve">
+    <value>An error occurred while starting the Achiver scheduled job.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="ACSPPStorageProcessingPoolServiceStartExtenderJobSchedule" xml:space="preserve">
+    <value>An error occurred while starting the Extender scheduled job.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SIMBlobManagerEnableEBSDisable" xml:space="preserve">
+    <value>An error occurred while disabling EBS:</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SIMBlobManagerEnableEBSEnable" xml:space="preserve">
+    <value>An error occurred while enabling EBS:</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SIMBlobManagerEnableRBSContentDB" xml:space="preserve">
+    <value>An error occurred while enabling RBS. content database :</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SIMBlobManagerEnableRBSDisable" xml:space="preserve">
+    <value>An error occurred while disabling RBS. content database:</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SIMBlobManagerEnableRBSEnableRBS" xml:space="preserve">
+    <value>An error occurred while enabling RBS. content database:</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SIMBlobManagerEnableRBSWebApp" xml:space="preserve">
+    <value>Cannot find the web application.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SIMBlobManagerIsEBSEnableEBSEnable" xml:space="preserve">
+    <value>An error occurred while checking if the EBS is enabled. </value>
+    <comment>Y</comment>
+  </data>
+  <data name="SIMBlobManagerIsRBSEnableRBSEnable" xml:space="preserve">
+    <value>An error occurred while checking if the RBS is enabled.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SIMInstallEBSProviderCheckIsInstalledEBSProvider" xml:space="preserve">
+    <value>Registered EBS Provider failed.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SIMInstallEBSProviderCheckIsInstalledEBSProviderWrapper" xml:space="preserve">
+    <value>Registered EBS Provider Wrapper failed.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SIMInstallEBSProviderCheckIsInstalledfile" xml:space="preserve">
+    <value>The file in agent bin is lost.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SIMInstallEBSProviderCheckIsInstalledGAC" xml:space="preserve">
+    <value>Copied EBS Provider Wrapper to GAC failed.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SIMInstallEBSProviderCheckIsInstalledSuccessed" xml:space="preserve">
+    <value>Registered EBS Provider successfully.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SIMInstallEBSProviderCheckIsInstalledSuccessedEBSProviderWrapper" xml:space="preserve">
+    <value>Registered EBS Provider Wrapper successfully.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SIMInstallEBSProviderCheckIsInstalledSuccessedGAC" xml:space="preserve">
+    <value>Copied EBS Provider Wrapper to GAC successfully.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SIMInstallEBSProviderInstallGACFilesGAC" xml:space="preserve">
+    <value>Copy {0}.dll to GAC.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SIMInstallEBSProviderInstallGACFilesInstallGACFiles" xml:space="preserve">
+    <value>Install GAC Files failed:</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SIMInstallEBSProviderInstallGACFilesregister" xml:space="preserve">
+    <value>Start registering {0}.dll...</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SIMInstallEBSProviderInstallGACFilesStart" xml:space="preserve">
+    <value>Start registering {0}.dll...</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SIMInstallEBSProviderProcessBlobCom" xml:space="preserve">
+    <value>Install Blob Com successfully.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SIMInstallEBSProviderProcessBlobComfailed" xml:space="preserve">
+    <value>Install Blob Com failed.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SIMInstallEBSProviderProcessebs" xml:space="preserve">
+    <value>An error occurred while disabling EBS: {0}.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SIMInstallEBSProviderProcessExceptionSPFarm" xml:space="preserve">
+    <value>Local SharePoint farm is null.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SIMInstallEBSProviderProcessinstalling" xml:space="preserve">
+    <value>An error occurred while installing Blob Com:</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SIMInstallEBSProviderProcessuninstall" xml:space="preserve">
+    <value>Uninstall BlobCom successfully</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SIMInstallEBSProviderProcessuninstalling" xml:space="preserve">
+    <value>An error occurred while uninstalling Blob Com:</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SIMInstallRBSProviderAddMachineConfigconfig" xml:space="preserve">
+    <value>An error ocurred while adding machine.config.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SIMInstallRBSProviderAddMachineConfigMachine" xml:space="preserve">
+    <value>Add Machine Config.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SIMInstallRBSProviderCopyProviderDllIntoBinAndGACbin" xml:space="preserve">
+    <value>An error ocurred while coping provider dll to bin and GAC.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SIMInstallRBSProviderCopyProviderDllIntoBinAndGACdll" xml:space="preserve">
+    <value>Copy provider dll to GAC.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SIMInstallRBSProviderInstallRBSBinariesBinaries" xml:space="preserve">
+    <value>Start installing RBS binaries...</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SIMInstallRBSProviderInstallRBSBinariesfile" xml:space="preserve">
+    <value>Cannot find file RBS_x64.msi or RBS.msi under path:</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SIMInstallRBSProviderInstallRBSBinariesFinished" xml:space="preserve">
+    <value>Install RBS binaries completed.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SIMInstallRBSProviderInstallRBSBinariesrbs" xml:space="preserve">
+    <value>An error occurred while installing RBS binaries.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SIMInstallRBSProviderProcessEnter" xml:space="preserve">
+    <value>Start installing RBS...             </value>
+    <comment>Y</comment>
+  </data>
+  <data name="SIMInstallRBSProviderProcessRBS" xml:space="preserve">
+    <value>Install RBS provider failed.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SIMRBSDisableDeleteBlobStoreblob" xml:space="preserve">
+    <value>Delete Blob store.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SIMRBSDisableDeleteBlobStoredeleting" xml:space="preserve">
+    <value>An error occurred while deleting Blob store.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SIMRBSDisableDisableRBScontent" xml:space="preserve">
+    <value>An error occurred while disabling RBS on content database.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SIMRBSDisableDisableRBSdb" xml:space="preserve">
+    <value>Disable RBS on content database.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SIMRBSDisableRemoveDefaultBlobStoredefault" xml:space="preserve">
+    <value>Remove default Blob store.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SIMRBSDisableRunprovider" xml:space="preserve">
+    <value>Start uninstalling provider...</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SIMRBSEnableAddMasterKeyInContentDBkey" xml:space="preserve">
+    <value>Add master key.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SIMRBSEnableAddMasterKeyInContentDBmaster" xml:space="preserve">
+    <value>An error occurred while adding master key.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SIMRBSEnableAddProvideradding" xml:space="preserve">
+    <value>An error occurred while adding provider.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SIMRBSEnableAddRBSTablesintoDBexecute" xml:space="preserve">
+    <value>An error occurred while execute the script.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SIMRBSEnableAddRBSTablesintoDBfile" xml:space="preserve">
+    <value>An error occurred while reading the file.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SIMRBSEnableAddRBSTablesintoDBfind" xml:space="preserve">
+    <value>Cannot find the file.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SIMRBSEnableEnableProviderE" xml:space="preserve">
+    <value>Enable Provider.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SIMRBSEnableEnableProviderenabling" xml:space="preserve">
+    <value>An error occurred while enabling provider.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SIMRBSEnableEnableProvidername" xml:space="preserve">
+    <value>An error occurred while setting active provider name.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SIMRBSEnableEnableProviderrbs" xml:space="preserve">
+    <value>An error occurred while enabling RBS.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SIMRBSEnableEnableProvidersize" xml:space="preserve">
+    <value>An error occurred while setting RBS minmum size.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SIMRBSEnableRunBlobStore" xml:space="preserve">
+    <value>Start Installing Blob Store.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SIMRBSEnableRunExceptionprovider" xml:space="preserve">
+    <value>Cannot add provider and enable it because an error occurred while adding RBS information.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SIMRBSEnableRunprovider" xml:space="preserve">
+    <value>Cannot add provider and enable it because an error occurred while adding RBS information.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SIMRBSEnableSetProviderAsDefaultprovider" xml:space="preserve">
+    <value>Set provider as default.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SIMUnInstallRBSProviderDisableRBSInAllDBcontent" xml:space="preserve">
+    <value>Disable RBS.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SIMUnInstallRBSProviderDisableRBSInAllDBdbs" xml:space="preserve">
+    <value>An error occurred while disabling RBS .</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SIMUnInstallRBSProviderDisableRBSInAllDBdisabling" xml:space="preserve">
+    <value>An error occurred while disabling RBS.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SIMUnInstallRBSProviderProcessEnter" xml:space="preserve">
+    <value>Start uninstalling RBS...</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SIMUnInstallRBSProviderProcessUnInstall" xml:space="preserve">
+    <value>An error occurred while uninstalling RBS provider.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SIMUnInstallRBSProviderRemoveProviderConfigurationconfiguration" xml:space="preserve">
+    <value>Remove provider configuration.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SIMUnInstallRBSProviderRemoveProviderConfigurationmachine" xml:space="preserve">
+    <value>An error occurred while removing provider machine.config</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SIMUnInstallRBSProviderRemoveRBSBinariesbinaries" xml:space="preserve">
+    <value>An error occurred while uninstalling RBS binaries.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SIMUnInstallRBSProviderRemoveRBSBinariesfile" xml:space="preserve">
+    <value>Cannot find file RBS_x64.msi or RBS.msi under path:</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SIMUnInstallRBSProviderRemoveRBSBinariesFinished" xml:space="preserve">
+    <value>Uninstall RBS binaries completed.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SIMUnInstallRBSProviderRemoveRBSBinariesuninstall" xml:space="preserve">
+    <value>Start uninstalling RBS binaries.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SIMUnInstallRBSProviderUninstallProviderDllFromGACdll" xml:space="preserve">
+    <value>Uninstall provider dll from GAC.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SIMUnInstallRBSProviderUninstallProviderDllFromGACuninstalling" xml:space="preserve">
+    <value>An error ocurred while uninstalling provider dll from GAC.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SOSEREbsSpecialRequestGetParentNodeInfoExceptionSPSite" xml:space="preserve">
+    <value>An error occurred while initializing and getting SharePoint site information. Site id: {0} .</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SOSERExtendCustomStreamReadExceptionData" xml:space="preserve">
+    <value>Read data from a close connection.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SOSERExtendCustomStreamReadNotSupportedExceptionCustom" xml:space="preserve">
+    <value>Custom stream \"UploadStream\" does not support to read.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SOSERExtenderImpInnerEbsGeneratorBlobInfo" xml:space="preserve">
+    <value>An error occurred while initializing Blob info : {0}.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SOSERExtenderImpInnerRbsGeneratorrule" xml:space="preserve">
+    <value>Cannot find the rule settings . id : {0}, name : {1}</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SOSERExtenderRulesManagerExtenderRuleManagerExtend" xml:space="preserve">
+    <value>Extend configuration file may be incorrect and this may affact EBS.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SOSERExtenderRulesManagerExtenderRuleManagerLoading" xml:space="preserve">
+    <value>A fatal error occurred while loading the configuration and this may affact EBS.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SOSERExtenderRulesManagerGetSettingInfoExceptionMinBlobSize" xml:space="preserve">
+    <value>Sub rule with minimum Blob size of less than {0} KB cannot be found in configuration.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SOSERExtenderRulesManagerGetSettingInfoExceptionSub" xml:space="preserve">
+    <value>Sub rule with minimum Blob size of less than {0} KB cannot be found in configuration.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SOSERExtenderRulesManagerInitBlobInfocontent" xml:space="preserve">
+    <value>An exception occurred while generating BlobInfo for content data with Id {0} and  parent webapplication Id {1}. Exception: {2}.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SOSERExtenderRulesManagerLoadConfigDeserialize" xml:space="preserve">
+    <value>A fatal error occurred while deserializing configuration. Please view the inner exception for details.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SOSERExtenderRulesManagerLoadConfigextender" xml:space="preserve">
+    <value>An unknown error occurred while loading the extender configuration.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SOSERRemoteRequestHandlerRunExceptionInit" xml:space="preserve">
+    <value>Initialized Blob Info failed for {0} provider's {1}'s request {2}"</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SOSERRemoteRequestHandlerRunNotImplementedExceptionmodule" xml:space="preserve">
+    <value>The module is invalid.Module :{0} </value>
+    <comment>Y</comment>
+  </data>
+  <data name="SOSERRemoteRequestHandlerRunreal" xml:space="preserve">
+    <value>New real-time setting configuration version is the same as the old one.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SOSERStorageOptimizationServiceMainMainService" xml:space="preserve">
+    <value>Storage Optimization Service has been started successfully, you could create a file named 'StoppingService.ave' in {0} folder.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SOSERStorageOptimizationServiceMainSendDiscoverNewMessageDebug" xml:space="preserve">
+    <value>Debug message. Exception \n{0}</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SOSERStorageOptimizationServiceMainUpdateRealTimeSettingsDebug" xml:space="preserve">
+    <value>Debug message. Exception \n{0}</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SOSERExtendCustomStreamSeek" xml:space="preserve">
+    <value>Access AveRBSStream.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="ACBUBlobStorageUtilityFactoryGetKey" xml:space="preserve">
+    <value>parameter can not be null or empty</value>
+    <comment>Y</comment>
+  </data>
+  <data name="ACBUBlobStorageUtilityInnerMigrateBlobInfoException" xml:space="preserve">
+    <value>The stub already exists in the destination.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="ACBUBlobStorageUtilitySharePointRead" xml:space="preserve">
+    <value>Cache null read</value>
+    <comment>Y</comment>
+  </data>
+  <data name="ACBUCacheUtilityGetAllStubDBIdFromControl" xml:space="preserve">
+    <value>An error occurred while getting all stub DB from control service.Exception:\r\n</value>
+    <comment>Y</comment>
+  </data>
+  <data name="ACBUCacheUtilityGetPhysicalDeviceDeviceNotFoundException" xml:space="preserve">
+    <value>Did not find the physical device:</value>
+    <comment>Y</comment>
+  </data>
+  <data name="ACBUBlobStorageUtilitySharePointInnerRead" xml:space="preserve">
+    <value>The device is null and no data can be read.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="ACBUBlobStorageUtilitySharePointReadA" xml:space="preserve">
+    <value>Retry to read enough data.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SOSERCheckPoolCapacity" xml:space="preserve">
+    <value>An error occurred while checking pool capacity. Error:</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SOSERRemoteRequestHandlerDeleteBlob" xml:space="preserve">
+    <value>An error occurred while deleting BLOB:</value>
+    <comment>Y</comment>
+  </data>
+  <data name="ACBUBlobStorageUtilityDeviceSendBinaryContentA" xml:space="preserve">
+    <value>An error occurred while deleting moved files,Exception:</value>
+    <comment>Y</comment>
+  </data>
+  <data name="ACBUBlobStorageUtilityFactoryCacheChanged" xml:space="preserve">
+    <value>An error occurred while changing the cache.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="ACBUBlobStorageUtilityFactoryInitializeCacheWatcher" xml:space="preserve">
+    <value>An error occurred while initializing the cache watcher.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="ACBUBlobStorageUtilityFactoryOnWatchedFileChanged" xml:space="preserve">
+    <value>An error occurred while clearing cache.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="ACBUStubDBUtilityCreateBlobAddBlobException" xml:space="preserve">
+    <value>The BLOBs in this table are being moved, and you cannot create new BLOBs until the moving job is complete.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="ACBUStubDBUtilityGetBlobById" xml:space="preserve">
+    <value>Please check if the data related to this stub ID have been deleted, or this stub ID does not exist. Stub ID:</value>
+    <comment>Y</comment>
+  </data>
+  <data name="ACBUStubDBUtilityGetBlobByIdStubTypeNotSuportException" xml:space="preserve">
+    <value>Not a DocAve 6 Stub</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SCUSODebugLoggerSODebugLogger" xml:space="preserve">
+    <value>A logger must be provided.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SCUSODebugLoggerSODebugLoggerLoad" xml:space="preserve">
+    <value>An error occurred while loading the configuration file:\r\n</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SCUSOReportManagerInit" xml:space="preserve">
+    <value>Initialized Report Manager failed:</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SCUSOReportManagerInitA" xml:space="preserve">
+    <value>Initialize Report Manager: ID: {0}, Category: {1}, Plan ID: {2}, Type: {3}, Is Subjob: {4}, Agent host: {5}, Job type: {6}</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SCUSOReportManagerInitB" xml:space="preserve">
+    <value>Report path: {0}</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SCUSOReportManagerInitC" xml:space="preserve">
+    <value>Report Manager Module:[{0}],Timeout Span:[{1}] min</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SCUSOReportManagerLogCurrentState" xml:space="preserve">
+    <value>{3} Progress: {0}, Completed Count: {1},Total Count: {2}</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SCUSOReportManagerSendReport" xml:space="preserve">
+    <value>An error occurred while updating job details:</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SCUSOReportManagerSendSpecificReport" xml:space="preserve">
+    <value>An error occurred while sending the specific report:</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SCUSOReportManagerUpdateProgress" xml:space="preserve">
+    <value>An error occurred while updating the progress.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SCUSOReportManagerWaitComplete" xml:space="preserve">
+    <value>Time out in Report Manager. Total count :{0}, Real Total Count:{1}, Completed Count: {2}</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SCUSOReportManagerWaitCompleteA" xml:space="preserve">
+    <value>An error occurred while sending the summary:</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SCUSOReportManagerWaitCompleteB" xml:space="preserve">
+    <value>An error occurred while finishing the report:</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SCUSOReportManagerWaitCompleteC" xml:space="preserve">
+    <value>Report Manager starts waiting for the job to complete.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SOSCommonEnvUtilityInitCommonInfo" xml:space="preserve">
+    <value>An error occurred while loading the configuration file:\r\n</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SOSCommonEnvUtilityInitCommonInfoA" xml:space="preserve">
+    <value>An error occurred while getting the storage service port:\r\n</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SOSCommonEnvUtilityInitCommonInfoB" xml:space="preserve">
+    <value>An error occurred while getting the max thread count of storage service:\r\n</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SOSCommonEnvUtilityInitCommonInfoC" xml:space="preserve">
+    <value>An error occurred while getting the performance switch:\r\n</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SOSRemoteRequestHandlerRunCC" xml:space="preserve">
+    <value>The pool {0} is full.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SOSRemoteRequestHandlerRunCCC" xml:space="preserve">
+    <value>{0} operation failed. Error: {1}</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SOSStorageOptimizationServiceMainCheckPoolCapacity" xml:space="preserve">
+    <value>Start checking the pool capacity...</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SOSStorageOptimizationServiceMainCheckPoolCapacityA" xml:space="preserve">
+    <value>Check the pool capacity completed.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="ACBUBlobStorageUtilityDeviceDeleteDeviceFile" xml:space="preserve">
+    <value>Deleted the BLOB failed. Stub ID:</value>
+    <comment>Y</comment>
+  </data>
+  <data name="ACBUBlobStorageUtilityDeviceSafeReadStream" xml:space="preserve">
+    <value>Safe read stream failed.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="ACBUBlobStorageUtilityInnerDeleteBlob" xml:space="preserve">
+    <value>Deleted the stub information failed. Error:</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SCUScheduleExceptionsScheduleManualStoppedException" xml:space="preserve">
+    <value>The schedule is stopped manually.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SCUScheduleExceptionsSPObjectNotFoundException" xml:space="preserve">
+    <value>Cannot find the SharePoint object.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SCUSOReportManagerRealTotalCount" xml:space="preserve">
+    <value>Real Total Count cannot be less than the completed count. Real Total Count: {0}, Completed Count: {1}, Set Value: {2}</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SCUSOReportManagerTotalCount" xml:space="preserve">
+    <value>Total Count cannot be less than the completed count. Total Count: {0} , Completed Count: {1}, Set Value: {2}</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SIMBlobManagerEnableEBS" xml:space="preserve">
+    <value>Start enabling EBS...</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SIMBlobManagerEnableEBSA" xml:space="preserve">
+    <value>Enabled EBS completed.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SIMBlobManagerEnableEBSAA" xml:space="preserve">
+    <value>Start disabling EBS...</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SIMBlobManagerEnableEBSAAA" xml:space="preserve">
+    <value>Disabling EBS completed.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SIMBlobManagerGetDatabaseMachineAddress" xml:space="preserve">
+    <value>An error occurred while getting data address:</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SIMProviderStateIsRBSEnableA" xml:space="preserve">
+    <value>Remote BLOB Settings: [{0}], Active Provider: [{1}]</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SIMProviderStateIsRBSEnableB" xml:space="preserve">
+    <value>Content database: {0}, RBS Enable: {1}</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SOSRemoteRequestHandlerGetBlobCRC" xml:space="preserve">
+    <value>The data's CRC in the stub DB is differet from that we get from media. CRC in stub DB: </value>
+    <comment>Y</comment>
+  </data>
+  <data name="ACBUBlobInfoConvertStubtoContent" xml:space="preserve">
+    <value>This method is only implemented in RestoreBlobInfo object.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="ACBUBlobInfoCreateBlobInfoA" xml:space="preserve">
+    <value>The argument 'module' should be Connector.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="ACBUBlobInfoCreateBlobInfoC" xml:space="preserve">
+    <value>The pParams is invalid.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="ACBUBlobInfoDeleteBlob" xml:space="preserve">
+    <value>This method is only implemented in RetentionBlobInfo object.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="ACBUBlobInfoFetchDeviceStream" xml:space="preserve">
+    <value>This method is only implemented in PRIntegrationBlobInfo object.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="ACBUBlobInfoGetAgentFarmName" xml:space="preserve">
+    <value>Get agent farm name with exception:</value>
+    <comment>Y</comment>
+  </data>
+  <data name="ACBUBlobInfoGetBlobforFeature" xml:space="preserve">
+    <value>This method has not been implemented yet.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="ACBUBlobInfoGetFileLocationUnderDeviceA" xml:space="preserve">
+    <value>File Volume</value>
+    <comment>Y</comment>
+  </data>
+  <data name="ACBUBlobInfoGetFileLocationUnderDeviceB" xml:space="preserve">
+    <value>Cannot combine the path:</value>
+    <comment>Y</comment>
+  </data>
+  <data name="ACBUBlobInfoGetFileLocationUnderDeviceC" xml:space="preserve">
+    <value>\r\n Try again.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="ACBUBlobInfoGetRelatedFolderPath" xml:space="preserve">
+    <value>Keep structure method has not been implemented yet.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="ACBUBlobInfoGetStartFolderPathA" xml:space="preserve">
+    <value>Keep structure method has not been implemented yet.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="ACBUBlobInfoGetStartFolderPathB" xml:space="preserve">
+    <value>Content Database ID</value>
+    <comment>Y</comment>
+  </data>
+  <data name="ACBUBlobInfoGetStartFolderPathC" xml:space="preserve">
+    <value>Pool ID</value>
+    <comment>Y</comment>
+  </data>
+  <data name="ACBUBlobInfoGetStartFolderPathD" xml:space="preserve">
+    <value>Site ID</value>
+    <comment>Y</comment>
+  </data>
+  <data name="ACBUBlobInfoInitForConvertStubToContent" xml:space="preserve">
+    <value>Please ensure you have already constructed a RestoreBlobInfo object before converting stub to content.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="ACBUBlobInfoInitForCreateBlob" xml:space="preserve">
+    <value>Please ensure you have already constructed a ConnectorBlobInfo object before creating blob.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="ACBUBlobInfoInitForDeleteBlob" xml:space="preserve">
+    <value>Please ensure you have already constructed a RetentionBlobInfo object before deleting blob.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="ACBUBlobInfoInitForDeletePool" xml:space="preserve">
+    <value>Please ensure you have already constructed a RetentionBlobInfo object before deleting pool.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="ACBUBlobInfoInitForEnumBlobs" xml:space="preserve">
+    <value>Please ensure you have already constructed a RetentionBlobInfo object before enumerating blobs.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="ACBUBlobInfoInitForFetchDeviceBlobStream" xml:space="preserve">
+    <value>Please ensure you have already constructed a PRIntegrationBlobInfo object before fetch blob stream.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="ACBUBlobInfoInnerCreateBlob" xml:space="preserve">
+    <value>This method is only implemented in StorageManagerBlobInfo and ConnectorBlobInfo.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="ACBUBlobInfoItemUtility" xml:space="preserve">
+    <value>Cannot get SPItemUtility object without ContentDatabaseConnectionString property.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="ACBUBlobInfoUpgradeBlob" xml:space="preserve">
+    <value>This method is only implemented in UpgradeBlobInfo object.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="ACBUBlobStorageUtilityDeviceGenerateDocAve5BlobFileA" xml:space="preserve">
+    <value>The data block size cannot be larger than 64KB.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="ACBUBlobStorageUtilityDeviceGenerateDocAve5BlobFileB" xml:space="preserve">
+    <value>Cannot read from device.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="ACBUBlobStorageUtilityDeviceSendBinaryContent" xml:space="preserve">
+    <value>CRC does not match.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="ACBUBlobStorageUtilityInnerQueueWorkItem" xml:space="preserve">
+    <value>The BLOB information should not be null.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="ACBUBlobStorageUtilityMemoryBufferStartReaderThreadE" xml:space="preserve">
+    <value>The Item is .</value>
+    <comment>Y</comment>
+  </data>
+  <data name="ACBUBlobStorageUtilityMemoryBufferStartReaderThreadF" xml:space="preserve">
+    <value>'s BLOB ID of is </value>
+    <comment>Y</comment>
+  </data>
+  <data name="ACBUBlobStorageUtilityMemoryBufferStartReaderThreadG" xml:space="preserve">
+    <value>'s BLOB ID is null.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="ACBUBlobStorageUtilityMemoryBufferStartReaderThreadH" xml:space="preserve">
+    <value> is already a stub.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="ACBUBlobStorageUtilityProduce" xml:space="preserve">
+    <value>PC Container</value>
+    <comment>Y</comment>
+  </data>
+  <data name="ACBUBlobStorageUtilitySharePointClose" xml:space="preserve">
+    <value>Closed the ContentKeeper with exception:</value>
+    <comment>Y</comment>
+  </data>
+  <data name="ACBUBlobStorageUtilitySharePointGetCheckoutLoginNameA" xml:space="preserve">
+    <value>Executed the GetCheckoutLoginName: Site ID:{0}; Item ID:{1}</value>
+    <comment>Y</comment>
+  </data>
+  <data name="ACBUBlobStorageUtilitySharePointGetCheckoutLoginNameB" xml:space="preserve">
+    <value>This is a checked-out file: Site ID:{0}; Item ID:{1}</value>
+    <comment>Y</comment>
+  </data>
+  <data name="ACBUBlobStorageUtilitySharePointGetCheckoutLoginNameC" xml:space="preserve">
+    <value>Checkout user is: Site ID:{0}; Item ID:{1}; Checkout user:{2}</value>
+    <comment>Y</comment>
+  </data>
+  <data name="ACBUBlobStorageUtilitySharePointGetStreamFromAPIA" xml:space="preserve">
+    <value>Come into GetStreamFromAPI: Site ID:{0}; Item ID:{1}</value>
+    <comment>Y</comment>
+  </data>
+  <data name="ACBUBlobStorageUtilitySharePointGetStreamFromAPIB" xml:space="preserve">
+    <value>Has checkout user: Site ID:{0}; Item ID:{1}</value>
+    <comment>Y</comment>
+  </data>
+  <data name="ACBUBlobStorageUtilitySharePointGetStreamFromAPIC" xml:space="preserve">
+    <value>Data stream is null: Site ID:{0}; Item ID:{1}</value>
+    <comment>Y</comment>
+  </data>
+  <data name="ACBUDocAveChangeStubDBInitialStubTableInfoes" xml:space="preserve">
+    <value>Cannot find corresponding stub database:</value>
+    <comment>Y</comment>
+  </data>
+  <data name="ACBUDocAveMoveFoldersMoveFolders" xml:space="preserve">
+    <value>. Exception:</value>
+    <comment>Y</comment>
+  </data>
+  <data name="ACBUExtenderUpgradeBlobInfoCreateD5BlobInfo" xml:space="preserve">
+    <value>This is not the DocAve 5 stub.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="ACBUExtenderUpgradeBlobInfoExtenderA" xml:space="preserve">
+    <value>Updated the stub icon with exception:</value>
+    <comment>Y</comment>
+  </data>
+  <data name="ACBUExtenderUpgradeBlobInfoExtenderB" xml:space="preserve">
+    <value>Cannot delete {0} because of {1}.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="ACBUExtenderUpgradeBlobInfoExtenderC" xml:space="preserve">
+    <value>This is a Connector stub.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="ACBUExtenderUpgradeBlobInfoGenerateDataVolumePath" xml:space="preserve">
+    <value>Unknown store type:</value>
+    <comment>Y</comment>
+  </data>
+  <data name="ACBUExtenderUpgradeBlobInfoGetBlobStreamA" xml:space="preserve">
+    <value>Upgrade to DocAve 6 with SharePoint API.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="ACBUExtenderUpgradeBlobInfoGetBlobStreamB" xml:space="preserve">
+    <value>Upgrade to DocAve 6 with temp files.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="ACBUExtenderUpgradeBlobInfoUpgradeWithStorageAPI" xml:space="preserve">
+    <value>Upgrade to DocAve 6 with Storage API.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="ACBURetentionBlobInfoDeleteBlob" xml:space="preserve">
+    <value>The Delay time does not match.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="ACBUSOPerformanceStartPerformanceTimer" xml:space="preserve">
+    <value>Started Performance Timer with exception:</value>
+    <comment>Y</comment>
+  </data>
+  <data name="ACBUSOPerformanceStopPerformanceTimer" xml:space="preserve">
+    <value>Stopped PerformanceTimer with exception:</value>
+    <comment>Y</comment>
+  </data>
+  <data name="ACBUSOQueryServiceConvertToContent" xml:space="preserve">
+    <value>This is not a stub.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="ACBUSOQueryServiceConvertToContentA" xml:space="preserve">
+    <value>CRC matched failed. CRC in stub database:</value>
+    <comment>Y</comment>
+  </data>
+  <data name="ACBUSOQueryServiceGetCheckoutLoginNameA" xml:space="preserve">
+    <value>Cannot find the related login name of item ID ({0}). The user ID is {1}.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="ACBUSOQueryServiceGetCheckoutLoginNameB" xml:space="preserve">
+    <value>Cannot find the checkout user ID of item ID ({0}). The level is {1}.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="ACBUSOQueryServiceGetPoolList" xml:space="preserve">
+    <value>An error occurred while getting pool list with exception:{0}</value>
+    <comment>Y</comment>
+  </data>
+  <data name="ACBUSOQueryServiceSetUpgradeInfoB" xml:space="preserve">
+    <value>Cannot get BLOB ID correctly.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="ACBUStubInfoTableCacheClearStubInfoTables" xml:space="preserve">
+    <value>Clear stub information tables with exception:</value>
+    <comment>Y</comment>
+  </data>
+  <data name="MSTDocAveMoveMainGeneratePerformanceFile" xml:space="preserve">
+    <value>An error occurred while executing GeneratePerformanceFile. Error: {0}</value>
+    <comment>Y</comment>
+  </data>
+  <data name="MSTDocAveMoveMainMainA" xml:space="preserve">
+    <value>Start running SP2013 MoveStubTool.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="MSTDocAveMoveMainMainB" xml:space="preserve">
+    <value>Started running SP2013MoveStubTool without any parameters.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="MSTDocAveMoveMainMainC" xml:space="preserve">
+    <value>Parameters: {0}</value>
+    <comment>Y</comment>
+  </data>
+  <data name="MSTDocAveMoveMainSendPerpformance" xml:space="preserve">
+    <value>An error occurred while reading Configuration.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SCURuleManagementCheckListType" xml:space="preserve">
+    <value>An error occurred while checking list type {0} :</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SCURuleManagementCheckOrOperation" xml:space="preserve">
+    <value>An error occurred while executing CheckOrOperation():</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SCUScheduleExceptionsScheduleManualStoppedExceptionA" xml:space="preserve">
+    <value>Schedule:{0} is stopped.\n{1}.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SCUScheduleExceptionsSPObjectLockedException" xml:space="preserve">
+    <value>Object:{0} with full name {1} has been locked.\n{2}.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SCUScheduleExceptionsSPObjectNotFoundExceptionA" xml:space="preserve">
+    <value>{0} {1} unable access, please check wheter exist.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SCUScheduleExceptionsSPObjectReadOnlyException" xml:space="preserve">
+    <value>Object:{0} with full name {1} is read-only.\n{2}.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SCUScheduleRulesImpInitAPIVariablesValue" xml:space="preserve">
+    <value>The object specified does not belong to a list.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SCUSODebugLoggerLogDiscoverItemA" xml:space="preserve">
+    <value>Discover Item: [{0}]</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SCUSODebugLoggerLogDiscoverItemB" xml:space="preserve">
+    <value>Discover Item: [{0}], Version:[{1}]</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SCUSODebugLoggerLogDiscoverItemCount" xml:space="preserve">
+    <value>Discovered Item Count: [{1}], Parent Item: [{0}]</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SCUSODebugLoggerLogSkipAtt" xml:space="preserve">
+    <value>Skipped Item: [{0}]</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SCUSODebugLoggerLogSkipItem" xml:space="preserve">
+    <value>Skipped Item: [{0}],Version:[{1}]</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SCUSODebugLoggerLogSkipItemCount" xml:space="preserve">
+    <value>Skipped Item Count: [{1}],Parent Item:[{0}]</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SCUSOReportManagerAddReport" xml:space="preserve">
+    <value>Report Added:[{0}]</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SCUSOReportManagerFinishReportF" xml:space="preserve">
+    <value>Total Count: {0}, Real Total Count:{1}, Completed Count: {2}</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SCUSOReportManagerSendReportA" xml:space="preserve">
+    <value>Job Reports Count:{0}</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SCUSOReportManagerSendReportB" xml:space="preserve">
+    <value>Send Report: Report Count:[{0}]</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SIMInstallEBSProviderProcessA" xml:space="preserve">
+    <value>Start installing BlobCom...</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SIMInstallEBSProviderProcessB" xml:space="preserve">
+    <value>Path:</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SIMInstallEBSProviderProcessC" xml:space="preserve">
+    <value>Uninstalling BlobCom...</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SIMInstallEBSProviderProcessD" xml:space="preserve">
+    <value>Username:</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SIMInstallRBSProviderInstallRBSBinariesA" xml:space="preserve">
+    <value>Processing RBS.msi timed out.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SIMInstallRBSProviderInstallRBSBinariesB" xml:space="preserve">
+    <value>Install DocAve 6 RBS.msi successfully, but the DocAve 5 RBS.msi cannot be found.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SIMProviderStateIsEBSEnable" xml:space="preserve">
+    <value>EBS Enabled: </value>
+    <comment>Y</comment>
+  </data>
+  <data name="SIMRBSEnableAddRBSTablesintoDB" xml:space="preserve">
+    <value>Script path:</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SIMRBSEnableEnableProviderA" xml:space="preserve">
+    <value>Enabling provider...</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SIMRBSEnableEnableRBSWithMiniSizeA" xml:space="preserve">
+    <value>There is no rule file for applying RBS real-time rule.{0}</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SIMRBSEnableEnableRBSWithMiniSizeB" xml:space="preserve">
+    <value>An error occurred while getting the rule file. Exception :{0}</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SOSEbsSpecialRequestGetParentNodeInfo" xml:space="preserve">
+    <value>Test Storage Optimization integration.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SOSRemoteRequestHandlerRunA" xml:space="preserve">
+    <value>Provider request:</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SOSRemoteRequestHandlerRunB" xml:space="preserve">
+    <value>The operation is not defined.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SOSRemoteRequestHandlerRunX" xml:space="preserve">
+    <value>, and CRC from media:</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SOSStorageOptimizationServiceMainCheckPoolCapacityB" xml:space="preserve">
+    <value>Checked the pool failed. Content DB: {0},Exception:{1}</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SOSStorageOptimizationServiceMainMainA" xml:space="preserve">
+    <value>Socket Listening Port:[{0}], Please ensure that the port is not used by other applications.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SOSTReportProcessorDeleteDocumentVersion" xml:space="preserve">
+    <value>Document Version: {0}</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SRBSTAveBlobStoreInstallerEnableProvider" xml:space="preserve">
+    <value>enable:</value>
+    <comment>Y</comment>
+  </data>
+  <data name="SRBSTAveBlobStoreInstallerEnableRBSWithMiniSize" xml:space="preserve">
+    <value>Loaded configueration file failed while applying RBS rule:{0}</value>
+    <comment>Y</comment>
+  </data>
+  <data name="StorageManager_71FC952708E8402F80C2EFF69636FBFA" xml:space="preserve">
+    <value>The job has been skipped. The extended data cannot be deleted until the specified "Delay deletion by" time period elapses.</value>
+    <comment>y</comment>
+  </data>
+  <data name="StorageOptimization_MS_17438296-C55A-4409-8DD1-0D2A0B6D581D" xml:space="preserve">
+    <value>Please set the status of the source stub database's corresponding content database to read-only to avoid generating new stub information in the source stub database during the process of changing the stub database.</value>
+  </data>
+  <data name="StorageManagerSP2013_10abdb421b1f4301b955b348116282f4" xml:space="preserve">
+    <value>Installed.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="StorageManagerSP2013_2138eea01db2428693ca81064804720e" xml:space="preserve">
+    <value>RBS has been successfully disabled for this content database.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="StorageManagerSP2013_3e5422852cb34658accd1db952a273e7" xml:space="preserve">
+    <value>Not installed.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="StorageManagerSP2013_43bc83e3fdc44f199bfc31e5072e3bcd" xml:space="preserve">
+    <value>Uninstall successful.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="StorageManagerSP2013_85a85644641449cdb5a1e6d4eac38d77" xml:space="preserve">
+    <value>Install successful.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="StorageManagerSP2013_8e36e000a8e04e1dae4b55897029497e" xml:space="preserve">
+    <value>RBS is not enabled in this content database.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="StorageManagerSP2013_b803a38308eb4d54a814c5099aafbd8b" xml:space="preserve">
+    <value>Uninstall failed.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="StorageManagerSP2013_c655816732c942f7a081e8658d71a330" xml:space="preserve">
+    <value>Install failed.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="StorageManagerSP2013_d0849ef776d94befb6a9784ad19d5fdd" xml:space="preserve">
+    <value>RBS  is enabled in this content database. The minimum blob storage size is : </value>
+    <comment>Y</comment>
+  </data>
+  <data name="StorageManagerSP2013_96a014b749ca45a4aa4e0c4a9060ca34" xml:space="preserve">
+    <value>RBS has been successfully disabled for this content database. Note: Any orphan BLOBs that may exist will not be deleted by orphan BLOB cleanup jobs. They can only be deleted after you re-enable RBS.</value>
+    <comment>Y</comment>
+  </data>
+  <data name="StorageManagerSP2013_cf324e5cf83848209cb053637ad32991" xml:space="preserve">
+    <value>Failed to disable RBS for this content database. RBS cannot be disabled via API if there are stubs in the content database.</value>
+    <comment>Y</comment>
+  </data>
+</root>

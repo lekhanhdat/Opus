@@ -1,0 +1,974 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{361F3C7C-ABBF-42D5-975A-65E4E9866068}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AvePoint.GCommon.Contract</RootNamespace>
+    <AssemblyName>CommonContract</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\bin\Agent\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;CODE_ANALYSIS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>..\..\..\server\Shared\AvePointRuleSets.ruleset</CodeAnalysisRuleSet>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\bin\Agent\Release\</OutputPath>
+    <DefineConstants>TRACE;CODE_ANALYSIS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <CodeAnalysisRuleSet>..\..\..\..\docave6\server\Shared\AvePointRuleSets.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>DocAveStandard.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'ReleaseWithoutUnitTest|AnyCPU'">
+    <OutputPath>..\..\..\bin\Release\</OutputPath>
+    <DefineConstants>TRACE;CODE_ANALYSIS</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>none</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>..\..\..\..\docave6\server\Shared\AvePointRuleSets.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\..\..\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>..\..\..\server\Shared\AvePointRuleSets.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE;CODE_ANALYSIS</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>none</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>..\..\..\..\docave6\server\Shared\AvePointRuleSets.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'ReleaseWithoutUnitTest|x64'">
+    <OutputPath>..\..\..\bin\Release\</OutputPath>
+    <DefineConstants>TRACE;CODE_ANALYSIS</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>none</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>..\..\..\..\docave6\server\Shared\AvePointRuleSets.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccountManager\IEditPlanPermissionService.cs" />
+    <Compile Include="AccountManager\IMAccountManagerService.cs" />
+    <Compile Include="AccountManager\IMTenantUserService.cs" />
+    <Compile Include="AccountManager\ITenantGroupInitService.cs" />
+    <Compile Include="AccountManager\Object\AccountDto.cs" />
+    <Compile Include="AccountManager\Object\AccountLogonInfo.cs" />
+    <Compile Include="AccountManager\Object\AccountManagerResultPagingRequestDto.cs" />
+    <Compile Include="AccountManager\Object\AccountManagerResultPagingResponseDto.cs" />
+    <Compile Include="AccountManager\Object\AccountManagerUsersPaging.cs" />
+    <Compile Include="AccountManager\Object\AccountStatusDto.cs" />
+    <Compile Include="AccountManager\Object\ActiveDirectorySearchResult.cs" />
+    <Compile Include="AccountManager\Object\AveModuleSpecial.cs" />
+    <Compile Include="AccountManager\Object\CheckPermissionsResult.cs" />
+    <Compile Include="AccountManager\Object\Constants.cs" />
+    <Compile Include="AccountManager\Object\DomainDto.cs" />
+    <Compile Include="AccountManager\Object\ErrorMessage.cs" />
+    <Compile Include="AccountManager\Object\GroupDto.cs" />
+    <Compile Include="AccountManager\Object\LogonRecordDto.cs" />
+    <Compile Include="AccountManager\Object\PasswordHistoryDto.cs" />
+    <Compile Include="AccountManager\Object\SystemPasswordPolicy.cs" />
+    <Compile Include="AccountManager\Object\PermissionDto.cs" />
+    <Compile Include="AccountManager\Object\PermissionLevelDto.cs" />
+    <Compile Include="AccountManager\Object\SecuritySetting.cs" />
+    <Compile Include="AccountManager\Object\SystemSecurityPolicy.cs" />
+    <Compile Include="AccountManager\Object\TenantUserResultDto.cs" />
+    <Compile Include="AccountManager\Object\WebAppInfoDto.cs" />
+    <Compile Include="AccountManager\Object\ZConstants.cs" />
+    <Compile Include="AccountManager\ViewModel\AddUserViewModel.cs" />
+    <Compile Include="AccountManager\ViewModel\UserOrGroupPermissionsViewModel.cs" />
+    <Compile Include="Agent\AgentService\IAAgentProcessService.cs" />
+    <Compile Include="Agent\AgentService\IAAgentService.cs" />
+    <Compile Include="Agent\AgentService\Object\AveLoadBalanceInfo.cs" />
+    <Compile Include="Agent\AgentService\Object\KeepAliveResult.cs" />
+    <Compile Include="Agent\AgentService\Object\DeleteAgentAspectResult.cs" />
+    <Compile Include="Agent\AgentService\Object\ValidateAccountResult.cs" />
+    <Compile Include="Agent\AgentService\Object\ValidateAgentsResult.cs" />
+    <Compile Include="Agent\SharePointBrowser\IASyncConfigFileService.cs" />
+    <Compile Include="Agent\SharePointBrowser\Object\AgentProxyMessageContract.cs" />
+    <Compile Include="Agent\SharePointBrowser\Object\BposAndLockStatus.cs" />
+    <Compile Include="Agent\SharePointBrowser\Object\FtpPathContract.cs" />
+    <Compile Include="Agent\SharePointBrowser\Object\SharePointNodeCountBrowserContract.cs" />
+    <Compile Include="Agent\SharePointBrowser\Object\SFtpPathContract.cs" />
+    <Compile Include="Agent\SharePointBrowser\Object\SyncConfigFileMessage.cs" />
+    <Compile Include="Agent\SharePointBrowser\Object\TreeNodeParserContract.cs" />
+    <Compile Include="Agent\SharePointBrowser\Object\Office365MessageContract.cs" />
+    <Compile Include="Agent\SharePointBrowser\Object\SharePointPropertyBrowserContract.cs" />
+    <Compile Include="Agent\SharePointBrowser\Object\TestResult.cs" />
+    <Compile Include="Agent\SharePointBrowser\Object\WFEPortContract.cs" />
+    <Compile Include="APIHelper\IAPICEIPService.cs" />
+    <Compile Include="APIHelper\IAPIFarmService.cs" />
+    <Compile Include="APIHelper\IAPIMigrationSourceResolver.cs" />
+    <Compile Include="APIHelper\IPlanUtilService.cs" />
+    <Compile Include="APIHelper\ISPUrlResolver.cs" />
+    <Compile Include="APIHelper\ITreeUtilService.cs" />
+    <Compile Include="AveLicense\Detail\LicenseDetailMessage.cs" />
+    <Compile Include="AveLicense\Detail\UserSeat.cs" />
+    <Compile Include="AveLicense\RetrieveUserSetting.cs" />
+    <Compile Include="CommonFilter\Rules\AttachmentRule.cs" />
+    <Compile Include="CommonFilter\Rules\ChoiceRule.cs" />
+    <Compile Include="CommonFilter\Rules\ColumnsRule.cs" />
+    <Compile Include="CommonFilter\Rules\ContentTypeCollectionIdRule.cs" />
+    <Compile Include="CommonFilter\Rules\ContentTypeCollectionNameRule.cs" />
+    <Compile Include="CommonFilter\Rules\ContentTypeCollectionRule.cs" />
+    <Compile Include="CommonFilter\Rules\ContentTypeIdRule.cs" />
+    <Compile Include="CommonFilter\Rules\ContentTypeNameRule.cs" />
+    <Compile Include="CommonFilter\Rules\ContentTypeRule.cs" />
+    <Compile Include="CommonFilter\Rules\DocumentTypeRule.cs" />
+    <Compile Include="CommonFilter\Rules\FileExtensionsRule.cs" />
+    <Compile Include="CommonFilter\Rules\FilePathRule.cs" />
+    <Compile Include="CommonFilter\Rules\FSTermRule.cs" />
+    <Compile Include="CommonFilter\Rules\ItemCountRule.cs" />
+    <Compile Include="CommonFilter\Rules\LikedByRule.cs" />
+    <Compile Include="CommonFilter\Rules\MentionRule.cs" />
+    <Compile Include="CommonFilter\Rules\MetadataNumberColumnRule.cs" />
+    <Compile Include="CommonFilter\Rules\MetadataTextColumnRule.cs" />
+    <Compile Include="CommonFilter\Rules\ParentFolderNameRule.cs" />
+    <Compile Include="CommonFilter\Rules\ParentSiteCollectionCustomPropertyTextRule.cs" />
+    <Compile Include="CommonFilter\Rules\ParentSiteCustomPropertyColumnTextRule.cs" />
+    <Compile Include="CommonFilter\Rules\ParticipationRule.cs" />
+    <Compile Include="CommonFilter\Rules\PostContentRule.cs" />
+    <Compile Include="CommonFilter\Rules\PostedByRule.cs" />
+    <Compile Include="CommonFilter\Rules\RepliedByRule.cs" />
+    <Compile Include="CommonFilter\Rules\CustomPropertyBaseRule.cs" />
+    <Compile Include="CommonFilter\Rules\SendDateUTCRule.cs" />
+    <Compile Include="CommonFilter\Rules\SendFromRule.cs" />
+    <Compile Include="CommonFilter\Rules\SendToRule.cs" />
+    <Compile Include="CommonFilter\Rules\SubjectRule.cs" />
+    <Compile Include="CommonFilter\Rules\TagRule.cs" />
+    <Compile Include="CommonFilter\Rules\TermRule.cs" />
+    <Compile Include="Exception\AveI18NException.cs" />
+    <Compile Include="GranularBackup\Object\BackupRestoreWorkflow.cs" />
+    <Compile Include="GranularBackup\Object\GBMessage.cs" />
+    <Compile Include="GranularBackup\Object\SiteMasterIndexExtension.cs" />
+    <Compile Include="Media\TCPRequest\Backup\GranularBackupRequest.cs" />
+    <Compile Include="PlatformRecovery\Object\WFAProfileDto.cs" />
+    <Compile Include="PlatformRecovery\Object\WFAProfileErrorCode.cs" />
+    <Compile Include="ReportCenter\IMReportCenterCommonService.cs" />
+    <Compile Include="Server\Common\Attribute\AveLicenseVersionAttribute.cs" />
+    <Compile Include="Server\Common\CommonSettingResult.cs" />
+    <Compile Include="Server\Common\ExportLocation\Object\CASOExportLocationDto.cs" />
+    <Compile Include="Server\Common\Monitor\Object\Action\RetryJobDto.cs" />
+    <Compile Include="Server\Common\DeployIDDto.cs" />
+    <Compile Include="Server\Common\Monitor\Object\Detail\Office365AutoScanJobDetailDto.cs" />
+    <Compile Include="Server\Common\Monitor\Object\Detail\PlatformProvisionJobDetailDto.cs" />
+    <Compile Include="Server\Common\Monitor\Object\Detail\RecordsJobDetailDto.cs" />
+    <Compile Include="Server\Common\Monitor\Object\Detail\VMBackupJobDetailDto.cs" />
+    <Compile Include="Server\Common\RunOnce\IRunOnceUpdateService.cs" />
+    <Compile Include="Server\Common\ValidateAgentResultDto.cs" />
+    <Compile Include="Server\Common\ValidateUsedProfileResult.cs" />
+    <Compile Include="Server\ControlPanel\Aspect\IAgentServiceDeleteAspect.cs" />
+    <Compile Include="Server\ControlPanel\Aspect\IFilterPolicyValidateAspect.cs" />
+    <Compile Include="Server\ControlPanel\Aspect\IMappingValidateAspect.cs" />
+    <Compile Include="Server\ControlPanel\Aspect\IModifyEditAgentGroupAspect.cs" />
+    <Compile Include="Server\ControlPanel\HostManager\IAVMHostProfileValidateService.cs" />
+    <Compile Include="Server\ControlPanel\HostManager\IMHostManagerService.cs" />
+    <Compile Include="Server\ControlPanel\HostManager\Object\VMClusterInfo.cs" />
+    <Compile Include="Server\ControlPanel\HostManager\Object\VMCredentialProfileDto.cs" />
+    <Compile Include="Server\ControlPanel\HostManager\Object\CredentialErrorCode.cs" />
+    <Compile Include="Server\ControlPanel\HostManager\Object\DeleteCheckMessage.cs" />
+    <Compile Include="Server\ControlPanel\HostManager\Object\DeleteMessageForGUI.cs" />
+    <Compile Include="Server\Common\Attribute\I18NAttribute.cs" />
+    <Compile Include="Server\Common\Monitor\Object\Detail\VMRestoreJobDetailDto.cs" />
+    <Compile Include="Server\Common\ServiceGroupAndAgentDto.cs" />
+    <Compile Include="Server\ControlPanel\Aspect\IHostManagerAspect.cs" />
+    <Compile Include="Server\ControlPanel\HostManager\Object\VMHostProfileMessage.cs" />
+    <Compile Include="Server\ControlPanel\LicenseManager\IALicenseJobService.cs" />
+    <Compile Include="Server\ControlPanel\Object\DownloadParameter.cs" />
+    <Compile Include="Server\ControlPanel\Office365AppToken\IMOffice365AppTokenService.cs" />
+    <Compile Include="Server\ControlPanel\Office365AppToken\Object\CreateAppResult.cs" />
+    <Compile Include="Server\ControlPanel\Office365AppToken\Object\Office365AppProfileContent.cs" />
+    <Compile Include="Server\ControlPanel\Office365AppToken\Object\Office365AppProfileModel.cs" />
+    <Compile Include="Server\ControlPanel\SuperUserConfiguration\Object\SuperUserConfigurationDetailDto.cs" />
+    <Compile Include="Server\ControlPanel\SystemSetting\Object\ScheduleCheckerTaskControlDto.cs" />
+    <Compile Include="Server\ControlPanel\PlanGroup\Object\PlanGroupPaging.cs" />
+    <Compile Include="Server\ControlPanel\PlanGroup\Object\PlanGroupResultPagingRequestDto.cs" />
+    <Compile Include="Server\ControlPanel\PlanGroup\Object\PlanGroupResultPagingResponseDto.cs" />
+    <Compile Include="Server\ControlPanel\LicenseManager\LicenseJobMessageContract.cs" />
+    <Compile Include="Server\ControlPanel\Office365AutoScan\IAOffice365AutoScanService.cs" />
+    <Compile Include="Server\ControlPanel\Office365AutoScan\IMOffice365AutoScanService.cs" />
+    <Compile Include="Server\ControlPanel\Office365AutoScan\Object\Office365AutoScanInfo.cs" />
+    <Compile Include="Server\ControlPanel\Office365AutoScan\Object\Office365AutoScanJobDto.cs" />
+    <Compile Include="Server\ControlPanel\UpdateManager\Object\ViewDeployIDDto.cs" />
+    <Compile Include="Server\Job\Object\JobExtraBlobFileContract.cs" />
+    <Compile Include="Server\ControlPanel\Aspect\INotificationProfilesUpdateNotifyAspect.cs" />
+    <Compile Include="ServiceMonitor\ServiceResultDto.cs" />
+    <Compile Include="StorageOptimization\Connector\Object\ConnectorInfoDto.cs" />
+    <Compile Include="StorageOptimization\Connector\Object\MapStoragePathDto.cs" />
+    <Compile Include="StorageOptimization\Connector\Object\Settings\CommonSetting.cs" />
+    <Compile Include="StorageOptimization\Connector\Object\Settings\LibrarySetting.cs" />
+    <Compile Include="StorageOptimization\Connector\Object\Settings\MappingInfo.cs" />
+    <Compile Include="StorageOptimization\Connector\Object\Settings\MappingSetting.cs" />
+    <Compile Include="StorageOptimization\Connector\Object\Settings\ProperitySetting.cs" />
+    <Compile Include="StorageOptimization\Connector\Object\Settings\SecuritySetting.cs" />
+    <Compile Include="StorageOptimization\Connector\Object\Settings\SPPermission.cs" />
+    <Compile Include="StorageOptimization\Object\ArchiverEndUseSettingPermissoin.cs" />
+    <Compile Include="StorageOptimization\Object\ArchiverIndexSubInfo.cs" />
+    <Compile Include="StorageOptimization\Object\ArchiverRetentionMetaData.cs" />
+    <Compile Include="StorageOptimization\Object\ArchiverSiteMasterIndexContract.cs" />
+    <Compile Include="StorageOptimization\Object\BlobProviderContract.cs" />
+    <Compile Include="StorageOptimization\Object\FSMasterIndexContract.cs" />
+    <Compile Include="StorageOptimization\Object\ProcessingPoolContract.cs" />
+    <Compile Include="StorageOptimization\Object\ProviderConfigContract.cs" />
+    <Compile Include="StorageOptimization\Object\RuleNodeContract.cs" />
+    <Compile Include="StorageOptimization\Object\SOFilterPolicy.cs" />
+    <Compile Include="StorageOptimization\Object\SOJob.cs" />
+    <Compile Include="StorageOptimization\Object\SOMessage.cs" />
+    <Compile Include="StorageOptimization\Object\SONodeContract.cs" />
+    <Compile Include="StorageOptimization\Object\SOPlan.cs" />
+    <Compile Include="StorageOptimization\Object\SORuleInfoContract.cs" />
+    <Compile Include="StorageOptimization\Object\SORules.cs" />
+    <Compile Include="StorageOptimization\Object\SOTreeNode.cs" />
+    <Compile Include="Storage\Entity\LocationDtoForHtml.cs" />
+    <Compile Include="Storage\Entity\StorageDeviceDto.cs" />
+    <Compile Include="Storage\Entity\StorageDeviceUIDto.cs" />
+    <Compile Include="Tree\Object\HighAvailability\HATreeNodeType.cs" />
+    <Compile Include="Media\Object\Common\DataSecurity.cs" />
+    <Compile Include="Media\Object\Common\DataVersionContentDto.cs" />
+    <Compile Include="Media\Object\MergeIndexJobInfo.cs" />
+    <Compile Include="Media\Object\MergeIndexJobState.cs" />
+    <Compile Include="Media\WcfService\IMMDataInfoService.cs" />
+    <Compile Include="MiscInfo\AgentMiscInfo.cs" />
+    <Compile Include="MiscInfo\AgentMiscInfoRequest.cs" />
+    <Compile Include="MiscInfo\FarmTopologyMiscInfo.cs" />
+    <Compile Include="MiscInfo\IAMiscAgentService.cs" />
+    <Compile Include="PlatformRecovery\IAPRInstallService.cs" />
+    <Compile Include="PlatformRecovery\Object\PRBackupLevel.cs" />
+    <Compile Include="PlatformRecovery\Object\PRBackupType.cs" />
+    <Compile Include="PlatformRecovery\Object\PRNodeTypeId.cs" />
+    <Compile Include="PlatformRecovery\Object\PRObjectBase.cs" />
+    <Compile Include="PlatformRecovery\Object\PRPlatformType.cs" />
+    <Compile Include="ReportCenter\Object\DiskSpaceLogicalDeviceDefinition.cs" />
+    <Compile Include="ReportCenter\Object\JobPerformance.cs" />
+    <Compile Include="ReportCenter\Object\NetworkAdapterDetail.cs" />
+    <Compile Include="ReportCenter\Object\PerformanceJobDto.cs" />
+    <Compile Include="ReportCenter\Object\RCEmailCellDto.cs" />
+    <Compile Include="ReportCenter\Object\RCNodeType.cs" />
+    <Compile Include="ReportCenter\ReportingServiceErrorConstant.cs" />
+    <Compile Include="Server\Common\Monitor\Object\Action\RerunJobParamDto.cs" />
+    <Compile Include="Server\Common\Monitor\Object\Detail\HealthAnalyzerJobDetailDto.cs" />
+    <Compile Include="Server\Common\NameAndIdDto.cs" />
+    <Compile Include="Server\Common\Performance\Object\CommonNetworkConnection.cs" />
+    <Compile Include="Server\Common\Performance\Object\CommonTopologyServer.cs" />
+    <Compile Include="Server\Common\ServiceAndJobIdsResultDto.cs" />
+    <Compile Include="Server\Common\ServicePlanCategoryAndJobIdsResultDto.cs" />
+    <Compile Include="Server\ControlPanel\Aspect\IRetrieveLogManagerAspect.cs" />
+    <Compile Include="Server\ControlPanel\AgentProxy\AgentProxyDataContract.cs" />
+    <Compile Include="Server\ControlPanel\Aspect\IServiceAndJobIdsAspect.cs" />
+    <Compile Include="Server\ControlPanel\IndexManager\IFullTextIndexModuleHandler.cs" />
+    <Compile Include="Server\ControlPanel\IndexManager\IMIndexManagerService.cs" />
+    <Compile Include="Server\ControlPanel\LogManager\Object\LogRetrieveDto.cs" />
+    <Compile Include="Server\ControlPanel\LogManager\Object\LogRetrieveForGuiDto.cs" />
+    <Compile Include="Server\ControlPanel\LogManager\Object\LogRetrieveXmlDto.cs" />
+    <Compile Include="Server\ControlPanel\Object\ServiceUpdateInfoDto.cs" />
+    <Compile Include="Server\ControlPanel\Office365Account\IMOffice365AccountService.cs" />
+    <Compile Include="Server\ControlPanel\Office365Account\Object\Office365AccountInfo.cs" />
+    <Compile Include="Server\ControlPanel\Object\JobPerformanceDto.cs" />
+    <Compile Include="Server\ControlPanel\PerformanceAlert\IJobPerformanceAlertWebService.cs" />
+    <Compile Include="Server\ControlPanel\PerformanceAlert\Object\JobPerformanceNotificationMessage.cs" />
+    <Compile Include="Server\ControlPanel\PlanGroup\PlanGroupAbstractHandler.cs" />
+    <Compile Include="Server\DataManager\IDataManagerJobControlService.cs" />
+    <Compile Include="Server\Job\Object\JobCheckerResult.cs" />
+    <Compile Include="StorageOptimization\Object\ArchiverType.cs" />
+    <Compile Include="Server\Retention\Entity\RetentionJobExtentionDto.cs" />
+    <Compile Include="StorageOptimization\Object\DeviceRelationContract.cs" />
+    <Compile Include="Server\Common\ValidateAgentGroupResultDto.cs" />
+    <Compile Include="Server\ControlPanel\Aspect\IDeleteAgentGroupsValidateAspect.cs" />
+    <Compile Include="StorageOptimization\Object\ExtenderType.cs" />
+    <Compile Include="StorageOptimization\Object\IAveFileMigrationToExtender.cs" />
+    <Compile Include="Storage\Entity\ValidateResultDto.cs" />
+    <Compile Include="Tree\Object\AveTreeUtil.cs" />
+    <Compile Include="Tree\Object\SPTreePermissionMappingDto.cs" />
+    <Compile Include="Tree\Service\ISPTreeExtendedService.cs" />
+    <Compile Include="Wcf\AveExtensibleDataObject.cs" />
+    <Compile Include="AveKnownTypeContext.cs" />
+    <Compile Include="AveLicense\Detail\FarmRegisterInfo.cs" />
+    <Compile Include="AveLicense\Detail\LicenseDetail.cs" />
+    <Compile Include="AveLicense\Detail\LicenseFile.cs" />
+    <Compile Include="AveLicense\Detail\PrimaryInfo.cs" />
+    <Compile Include="AveLicense\Detail\Maintenance.cs" />
+    <Compile Include="AveLicense\IMLicenseManagerService.cs" />
+    <Compile Include="AveLicense\LicenseNotificationSetting.cs" />
+    <Compile Include="AveLicense\LicenseOperationResult.cs" />
+    <Compile Include="AveLicense\IMLicenseService.cs" />
+    <Compile Include="AveLicense\LicenseWrapper.cs" />
+    <Compile Include="AveLicense\Detail\ModuleDetail.cs" />
+    <Compile Include="AveLicense\LicenseConstants.cs" />
+    <Compile Include="AveLicense\SettlementBase.cs" />
+    <Compile Include="AveModuleContract\Administration.cs" />
+    <Compile Include="AveModuleContract\AgentTypes.cs" />
+    <Compile Include="AveModuleContract\AveModule.cs" />
+    <Compile Include="AveModuleContract\GovernanceAutomation.cs" />
+    <Compile Include="AveModuleContract\ModuleContract.cs" />
+    <Compile Include="AveModuleContract\Compliance.cs" />
+    <Compile Include="AveModuleContract\ControlPanel.cs" />
+    <Compile Include="AveModuleContract\DataProtection.cs" />
+    <Compile Include="AveModuleContract\JobTypes.cs" />
+    <Compile Include="AveModuleContract\Migration.cs" />
+    <Compile Include="AveModuleContract\AveModuleID.cs" />
+    <Compile Include="AveModuleContract\ReportCenter.cs" />
+    <Compile Include="AveModuleContract\StorageOptimization.cs" />
+    <Compile Include="Agent\SharePointBrowser\Object\ImportTreeBrowserContract.cs" />
+    <Compile Include="AveModuleContract\SubAdministrator\FarmLevel.cs" />
+    <Compile Include="AveModuleContract\SubAdministrator\ItemDocumentVersionLevel.cs" />
+    <Compile Include="AveModuleContract\SubAdministrator\FolderLevel.cs" />
+    <Compile Include="AveModuleContract\SubAdministrator\ItemLevel.cs" />
+    <Compile Include="AveModuleContract\SubAdministrator\ListLibraryLevel.cs" />
+    <Compile Include="AveModuleContract\SubAdministrator\SiteCollectionLevel.cs" />
+    <Compile Include="AveModuleContract\SubAdministrator\SiteLevel.cs" />
+    <Compile Include="AveModuleContract\SubAdministrator\WebApplicationLevel.cs" />
+    <Compile Include="CodeReview\AveCodeReviewAttribute.cs" />
+    <Compile Include="CodeReview\CodeReviewConstants.cs" />
+    <Compile Include="CommonFilter\Rules\AccessTimeRule.cs" />
+    <Compile Include="CommonFilter\Rules\AnonymousAccessRule.cs" />
+    <Compile Include="CommonFilter\Rules\AuditingRule.cs" />
+    <Compile Include="CommonFilter\Rules\ContentUnderViewRule.cs" />
+    <Compile Include="CommonFilter\Rules\CustomColumnRule.cs" />
+    <Compile Include="CommonFilter\Rules\CustomContentTypeRule.cs" />
+    <Compile Include="CommonFilter\Rules\ListTypeRule.cs" />
+    <Compile Include="CommonFilter\Rules\LockStatusRule.cs" />
+    <Compile Include="CommonFilter\Rules\VersioningRule.cs" />
+    <Compile Include="DefaultKnownTypeResolver.cs" />
+    <Compile Include="CommonFilter\Rules\StubLastAccessTimeRule.cs" />
+    <Compile Include="ExportLocation\UNCDto.cs" />
+    <Compile Include="FullTextIndexSearch\FilterPolicy\FullTextIndeEnum.cs" />
+    <Compile Include="FullTextIndexSearch\FilterPolicy\FullTextIndexFilterPolicy.cs" />
+    <Compile Include="FullTextIndexSearch\FullTextIndexQuery.cs" />
+    <Compile Include="FullTextIndexSearch\Object\FullTextIndexQueryResults.cs" />
+    <Compile Include="GovernanceAutomation\IAGovernanceAutomationStationService.cs" />
+    <Compile Include="Media\Object\Common\DataManagementBrowseInfo.cs" />
+    <Compile Include="Media\Object\Common\DataManagementBrowseResult.cs" />
+    <Compile Include="Media\DataControlService.cs" />
+    <Compile Include="Media\IMBackupService.cs" />
+    <Compile Include="Media\IMConnectionService.cs" />
+    <Compile Include="Media\Object\Common\AveSharePointType.cs" />
+    <Compile Include="Media\Object\Common\BackupType.cs" />
+    <Compile Include="Media\Object\Common\CustomActionCheckDto.cs" />
+    <Compile Include="Media\Object\Common\CustomActionCheckResult.cs" />
+    <Compile Include="Media\Object\Common\DeviceCheckResult.cs" />
+    <Compile Include="Media\Object\Common\FileHeader.cs" />
+    <Compile Include="Media\Object\Common\FileHeaderUtil.cs" />
+    <Compile Include="Media\Object\Common\FileTail.cs" />
+    <Compile Include="Media\Object\Common\GeneralFileHeader.cs" />
+    <Compile Include="Media\Object\Common\MediaBackupStatus.cs" />
+    <Compile Include="Media\Object\Common\MediaDataDto.cs" />
+    <Compile Include="Media\Object\Common\MediaInfo.cs" />
+    <Compile Include="Media\Object\Common\MediaRestoreStatistics.cs" />
+    <Compile Include="Media\Object\Common\RestoreFileTail.cs" />
+    <Compile Include="Media\Object\Common\RestoreParamDto.cs" />
+    <Compile Include="Media\Object\Common\RestoreSearchContractDto.cs" />
+    <Compile Include="Media\Object\Common\RestoreTreeNode.cs" />
+    <Compile Include="Media\Object\Common\UpgradeBrowseInfo.cs" />
+    <Compile Include="Media\Object\Common\UpgradeBrowseResult.cs" />
+    <Compile Include="Media\Object\FullTextIndex\FullTextIndexJobPolicy.cs" />
+    <Compile Include="Media\Object\FullTextIndex\FullTextIndexParamDto.cs" />
+    <Compile Include="Media\Object\FullTextIndex\FullTextIndexRequest.cs" />
+    <Compile Include="Media\Object\FullTextIndex\FullTextIndexSearchRequest.cs" />
+    <Compile Include="Media\Object\FullTextIndex\FullTextIndexSearchRequestResult.cs" />
+    <Compile Include="Media\Object\FullTextIndex\FullTextIndexXmlInfo.cs" />
+    <Compile Include="Media\Object\FullTextIndex\FullTextMetaDataInfo.cs" />
+    <Compile Include="Media\Object\FullTextIndex\FullTextParentFolderInfo.cs" />
+    <Compile Include="Media\Object\FullTextIndex\FullTextTailInfo.cs" />
+    <Compile Include="Media\Object\PlatformType.cs" />
+    <Compile Include="Media\Object\ProductVersion.cs" />
+    <Compile Include="Media\TCPRequest\Backup\VaultBackupRequest.cs" />
+    <Compile Include="Media\TCPRequest\Request.cs" />
+    <Compile Include="Media\TCPRequest\Restore\RestoreSecurityInfoWrapper.cs" />
+    <Compile Include="Media\WcfService\IMMJobStopService.cs" />
+    <Compile Include="Media\WcfService\FullTextIndex\IMMFullTextIndexJobProgressUpdateService.cs" />
+    <Compile Include="Media\WcfService\IMMCustomActionCheckService.cs" />
+    <Compile Include="PermissionExpander\ModulePermission.cs" />
+    <Compile Include="Server\Common\DatabaseException.cs" />
+    <Compile Include="Server\Common\ExportLocation\Object\RequestResult.cs" />
+    <Compile Include="Server\Common\Monitor\Object\Action\CollectReportJobParamDto.cs" />
+    <Compile Include="Server\Common\Monitor\Object\Action\RelationJobGroupDto.cs" />
+    <Compile Include="Server\Common\Monitor\Object\Action\ResyncJobDto.cs" />
+    <Compile Include="Server\Common\Monitor\Object\CollectReportJobDto.cs" />
+    <Compile Include="Server\Common\Monitor\Object\CollectReportPlanDto.cs" />
+    <Compile Include="Server\Common\Monitor\Object\Detail\CollectReportJobDetailDto.cs" />
+    <Compile Include="Server\Common\Monitor\Object\Detail\ConnectorInventoryJobDetailDto.cs" />
+    <Compile Include="Server\Common\Monitor\Object\Detail\HAFailoverJobDetailDto.cs" />
+    <Compile Include="Server\Common\Monitor\Object\Detail\HAFallbackJobDetailDto.cs" />
+    <Compile Include="Server\Common\Monitor\Object\Detail\HAPreSanJobDetailDto.cs" />
+    <Compile Include="Server\Common\Monitor\Object\Detail\HASyncJobDetailDto.cs" />
+    <Compile Include="Server\Common\Monitor\Object\Detail\SyncDataJobDetaiDto.cs" />
+    <Compile Include="Server\Common\ObjectPermissionDto.cs" />
+    <Compile Include="Server\Common\ObjectPermissionScopeType.cs" />
+    <Compile Include="Server\Common\ObjectPermissionType.cs" />
+    <Compile Include="Server\Common\ObjectRoleDto.cs" />
+    <Compile Include="Server\Common\ObjectRoleType.cs" />
+    <Compile Include="Server\ControlPanel\Aspect\IModifyAccountProfileAspect.cs" />
+    <Compile Include="Server\ControlPanel\ListTitleMapping\IMListTitleMappingService.cs" />
+    <Compile Include="Server\ControlPanel\ListTitleMapping\Object\ListTitleMappingRequest.cs" />
+    <Compile Include="Server\ControlPanel\ListTitleMapping\Object\ListTitleMappingResponse.cs" />
+    <Compile Include="Server\ControlPanel\ListTitleMapping\Object\ListTitleMappingDto.cs" />
+    <Compile Include="Server\ControlPanel\ManagedAccount\IMManagedAccountService.cs" />
+    <Compile Include="Server\ControlPanel\ManagedAccount\Object\AccountProfileDto.cs" />
+    <Compile Include="Server\SyncData\Entity\SyncDataActionType.cs" />
+    <Compile Include="Server\SyncData\Entity\SyncDataJobDto.cs" />
+    <Compile Include="Server\DataManager\DataManagerExcuteResult.cs" />
+    <Compile Include="Server\Common\Monitor\Object\Detail\SRMAnalyzeSqlBackupJobDetailDto.cs" />
+    <Compile Include="Server\Common\Monitor\Object\Detail\SRMRestoreFromSQLJobDetailDto.cs" />
+    <Compile Include="Server\DataManager\DataManagerNodeType.cs" />
+    <Compile Include="Server\DataManager\IMDataManagerService.cs" />
+    <Compile Include="Server\Retention\Entity\RetentionState.cs" />
+    <Compile Include="Server\Common\RemoteNode\IRemoteNodeService.cs" />
+    <Compile Include="Server\ControlPanel\Aspect\IPlanTreeAspect.cs" />
+    <Compile Include="Server\SyncData\Entity\SyncDataStatus.cs" />
+    <Compile Include="Server\Common\Attribute\AveModuleAttribute.cs" />
+    <Compile Include="Server\Common\Attribute\PatchVersionAttribute.cs" />
+    <Compile Include="Server\Common\I18NFileDto.cs" />
+    <Compile Include="Server\Common\LogCollector\ILogCollector.cs" />
+    <Compile Include="Server\Common\LogCollector\LogConstants.cs" />
+    <Compile Include="Server\Common\LogCollector\PersistentLogDto.cs" />
+    <Compile Include="Server\Common\AveResourceManager.cs" />
+    <Compile Include="Server\Common\I18NMessageDto.cs" />
+    <Compile Include="Server\Common\Monitor\Object\ColumnContract.cs" />
+    <Compile Include="Server\Common\DRSConvertMappingDto.cs" />
+    <Compile Include="Server\Common\Monitor\Object\Detail\ConnectorJobDetailDto.cs" />
+    <Compile Include="Server\Common\Monitor\Object\Detail\JobReportGenerateDto.cs" />
+    <Compile Include="Server\Common\Monitor\Object\Detail\JobSummarySearchDto.cs" />
+    <Compile Include="Server\Common\Monitor\Object\Detail\PlatformFarmRebuildJobDetailDto.cs" />
+    <Compile Include="Server\Common\Monitor\Object\Detail\PlatformMigrationJobDetailDto.cs" />
+    <Compile Include="Server\Common\Monitor\Object\Detail\PlatformRestoreJobDetailDto.cs" />
+    <Compile Include="Server\Common\Monitor\Object\Detail\ReplicatorImportPlanJobDetailDto.cs" />
+    <Compile Include="Server\Common\Monitor\Object\Detail\VaultJobDetailDto.cs" />
+    <Compile Include="Server\Common\Monitor\Object\JobReportDownloadDto.cs" />
+    <Compile Include="Server\Common\Monitor\Object\RibbonContract.cs" />
+    <Compile Include="Server\Common\Monitor\Object\TimeZoneType.cs" />
+    <Compile Include="Server\Common\Profile\IMAuthorisedProfileService.cs" />
+    <Compile Include="Server\ControlPanel\Aspect\AbstractDeleteAccountAspect.cs" />
+    <Compile Include="Server\ControlPanel\Aspect\IDefaultBposGroupAspect.cs" />
+    <Compile Include="Server\ControlPanel\Aspect\IDeleteAgentAspect.cs" />
+    <Compile Include="Server\ControlPanel\Cryptography\SecurityImportResult.cs" />
+    <Compile Include="Server\ControlPanel\DataManager\IndexManager\BatchIndexDataDto.cs" />
+    <Compile Include="Server\ControlPanel\DataManager\IndexManager\FullTextIndexDownloadDto.cs" />
+    <Compile Include="Server\ControlPanel\DataManager\IndexManager\FullTextIndexSettingDto.cs" />
+    <Compile Include="Server\ControlPanel\Cryptography\Wrapper\DataEncryptionInfoWrapper.cs" />
+    <Compile Include="Server\Common\Monitor\IJobMonitorAPIService.cs" />
+    <Compile Include="Media\TCPRequest\Restore\EDiscoveryRestoreRequest.cs" />
+    <Compile Include="Server\Common\Monitor\Object\Detail\BaseDetailSearchDto.cs" />
+    <Compile Include="Server\Common\Monitor\Object\Detail\JobDetailInfos.cs" />
+    <Compile Include="Server\Common\Monitor\Object\Detail\JobDetailDto.cs" />
+    <Compile Include="Server\Common\Monitor\Object\Detail\JobSummaryInfos.cs" />
+    <Compile Include="Server\Common\Monitor\Object\Detail\JobSummaryItem.cs" />
+    <Compile Include="Server\Common\Monitor\Object\Detail\JobSummaryRow.cs" />
+    <Compile Include="Server\Common\Monitor\Object\Detail\MigrationJobDetailDto.cs" />
+    <Compile Include="Server\Common\Monitor\Object\Detail\RetentionJobDetailDto.cs" />
+    <Compile Include="Server\Common\Monitor\Object\Detail\SubJobDetailSearchDto.cs" />
+    <Compile Include="Server\Common\Notification\INotificationSender.cs" />
+    <Compile Include="Server\Common\Notification\Object\NotificationDto.cs" />
+    <Compile Include="Server\Common\Notification\Object\NotificationMessage.cs" />
+    <Compile Include="Server\Common\RunOnce\IRunOncePatchModuleService.cs" />
+    <Compile Include="Server\Common\RunOnce\IRunOncePatchService.cs" />
+    <Compile Include="Server\Common\TimeZone\ITimeInfoInitializer.cs" />
+    <Compile Include="Server\ControlPanel\ASUPSettings\ASUPConfigurationDto.cs" />
+    <Compile Include="Server\ControlPanel\ColumnMapping\IMColumnMappingService.cs" />
+    <Compile Include="Server\ControlPanel\DataManager\IndexManager\FullTextIndexPolicyDto.cs" />
+    <Compile Include="Server\ControlPanel\Aspect\IAccountAspect.cs" />
+    <Compile Include="Server\ControlPanel\Aspect\IEmailProfilesValidateAspect.cs" />
+    <Compile Include="Server\ControlPanel\Aspect\ISecurityProfileValidateAspect.cs" />
+    <Compile Include="Server\ControlPanel\GroupMapping\IMGroupMappingService.cs" />
+    <Compile Include="Server\ControlPanel\IAgentUseJobController.cs" />
+    <Compile Include="Server\ControlPanel\IServiceStatusNotification.cs" />
+    <Compile Include="Server\ControlPanel\Object\AgentConfigFileDto.cs" />
+    <Compile Include="Server\ControlPanel\Object\AgentConfigureModel.cs" />
+    <Compile Include="Server\ControlPanel\Aspect\ISystemOptionAspect.cs" />
+    <Compile Include="Server\ControlPanel\Object\CentralDatabaseBeUsedDto.cs" />
+    <Compile Include="Server\ControlPanel\Object\CentralDatabaseDto.cs" />
+    <Compile Include="Server\ControlPanel\PermissionMapping\PermissionMappingUserGroupInfoDto.cs" />
+    <Compile Include="Server\ControlPanel\Object\EmsAutoSupportLogDto.cs" />
+    <Compile Include="Server\ControlPanel\PlanGroup\IMPlanGroupAPIService.cs" />
+    <Compile Include="Server\ControlPanel\PlanGroup\IMPlanGroupSchedule.cs" />
+    <Compile Include="Server\ControlPanel\PlanGroup\IMPlanGroupService.cs" />
+    <Compile Include="Server\ControlPanel\PlanGroup\IMPlanGroupServiceForOtherModule.cs" />
+    <Compile Include="Server\ControlPanel\PlanGroup\Object\PlanGroupDto.cs" />
+    <Compile Include="Server\ControlPanel\Reporting\UserNotificationSettings\INotificationComponent.cs" />
+    <Compile Include="Server\ControlPanel\Reporting\UserNotificationSettings\INotificationService.cs" />
+    <Compile Include="Server\ControlPanel\Reporting\UserNotificationSettings\INotificationUpdateAspect.cs" />
+    <Compile Include="Server\ControlPanel\Reporting\UserNotificationSettings\INotificationUpdateRCAspect.cs" />
+    <Compile Include="Server\ControlPanel\SystemProfile\IMSystemProfileService.cs" />
+    <Compile Include="Server\ControlPanel\PermissionMapping\PermissionMappingDto.cs" />
+    <Compile Include="Server\ControlPanel\PermissionMapping\PermissionMappingOperationResult.cs" />
+    <Compile Include="Server\ControlPanel\SystemProfile\Object\ProfileUseHistoryDto.cs" />
+    <Compile Include="Server\ControlPanel\SystemSetting\ISystemOptionService.cs" />
+    <Compile Include="Server\ControlPanel\MappingManagementUtil.cs" />
+    <Compile Include="Server\ControlPanel\SystemSetting\Object\RunOnceDetailDto.cs" />
+    <Compile Include="Server\ControlPanel\UpdateManager\Object\InstallerDto.cs" />
+    <Compile Include="Server\ControlPanel\UpdateManager\Object\UpdateProgressDto.cs" />
+    <Compile Include="Server\ExportAndImport\BackupDataEIJobDto.cs" />
+    <Compile Include="Server\ExportAndImport\EIDataPlan.cs" />
+    <Compile Include="Server\ExportAndImport\EIDataType.cs" />
+    <Compile Include="Server\ExportAndImport\EIJobReport.cs" />
+    <Compile Include="Server\ExportAndImport\EIOperateType.cs" />
+    <Compile Include="Server\ExportAndImport\ImportDataVersion.cs" />
+    <Compile Include="Server\FullTextIndex\LangUtils.cs" />
+    <Compile Include="Server\FullTextIndex\CrawlContract.cs" />
+    <Compile Include="Server\FullTextIndex\IMFullTextIndexControllerService.cs" />
+    <Compile Include="Server\GUI\AUIModuleUtility.cs" />
+    <Compile Include="Server\Job\Object\JobContext.cs" />
+    <Compile Include="Server\Job\Object\JobExtraFileContract.cs" />
+    <Compile Include="Server\Job\Object\JobState.cs" />
+    <Compile Include="Server\Retention\Entity\DPDataRetentionReport.cs" />
+    <Compile Include="Server\Retention\Entity\RetentionActionType.cs" />
+    <Compile Include="Server\Retention\Entity\RetentionJobDto.cs" />
+    <Compile Include="Media\TCPRequest\Backup\EDiscoveryBackupRequest.cs" />
+    <Compile Include="Media\WcfService\FullTextIndex\IMMFullTextIndexSearchService.cs" />
+    <Compile Include="CommonFilter\Rules\AttributeRule.cs" />
+    <Compile Include="CommonFilter\Rules\CustomPropertyBooleanRule.cs" />
+    <Compile Include="CommonFilter\Rules\CustomPropertyDateTimeRule.cs" />
+    <Compile Include="CommonFilter\Rules\CustomPropertyNumberRule.cs" />
+    <Compile Include="CommonFilter\Rules\CustomPropertyTextRule.cs" />
+    <Compile Include="CommonFilter\Rules\InheritanceRule.cs" />
+    <Compile Include="CommonFilter\Rules\KeepHistoryVersionRule.cs" />
+    <Compile Include="CommonFilter\Rules\PolicyRuleBase.cs" />
+    <Compile Include="CommonFilter\Rules\RuleType\PolicyRuleType.cs" />
+    <Compile Include="CommonFilter\Rules\StubCreationTimeRule.cs" />
+    <Compile Include="CommonFilter\Rules\TemplateIdRule.cs" />
+    <Compile Include="CommonFilter\Rules\UserAndGroupRule.cs" />
+    <Compile Include="CommonFilter\Rules\WorkflowRule.cs" />
+    <Compile Include="CommonFilter\Values\PolicyValue.cs" />
+    <Compile Include="CommonFilter\Values\PolicyValueUnit.cs" />
+    <Compile Include="CommonFilter\Rules\ColumnBooleanRule.cs" />
+    <Compile Include="CommonFilter\Rules\ColumnDateTimeRule.cs" />
+    <Compile Include="CommonFilter\Rules\ColumnNumberRule.cs" />
+    <Compile Include="CommonFilter\Rules\ColumnTextRule.cs" />
+    <Compile Include="CommonFilter\Rules\CreatedByRule.cs" />
+    <Compile Include="CommonFilter\Rules\CreatedRule.cs" />
+    <Compile Include="CommonFilter\Rules\ModifiedRule.cs" />
+    <Compile Include="CommonFilter\Rules\ModifiedByRule.cs" />
+    <Compile Include="CommonFilter\Rules\NameAndExtentionRule.cs" />
+    <Compile Include="CommonFilter\Rules\NameRule.cs" />
+    <Compile Include="CommonFilter\Rules\OwnerRule.cs" />
+    <Compile Include="CommonFilter\Rules\SizeRule.cs" />
+    <Compile Include="CommonFilter\Rules\TemplateRule.cs" />
+    <Compile Include="CommonFilter\Rules\TitleRule.cs" />
+    <Compile Include="CommonFilter\Rules\UrlRule.cs" />
+    <Compile Include="CommonFilter\Rules\VersionsRule.cs" />
+    <Compile Include="CommonFilter\Levels\PolicyLevel.cs" />
+    <Compile Include="CommonFilter\Conditions\PolicyCondition.cs" />
+    <Compile Include="CommonFilter\FilterPolicy.cs" />
+    <Compile Include="Media\IFullTextIndexService.cs" />
+    <Compile Include="Media\TCPRequest\Restore\StartMediaVdbFileServiceResult.cs" />
+    <Compile Include="Media\WcfService\FullTextIndex\IMediaFullTextIndexService.cs" />
+    <Compile Include="Media\WcfService\FullTextIndex\IMMFullTextIndexXmlParser.cs" />
+    <Compile Include="Media\WcfService\IMMMergeIndexService.cs" />
+    <Compile Include="Server\Audit\AdminAuditConstatns.cs" />
+    <Compile Include="Server\Common\AbstractGroup.cs" />
+    <Compile Include="Server\Common\AdminSearch\Object\CACommonFilterPolicy.cs" />
+    <Compile Include="Server\Common\Attribute\AveLicenseUnitAttribute.cs" />
+    <Compile Include="Server\Common\BackupDataSearch\RestoreSearchFilterPolicy.cs" />
+    <Compile Include="Server\Common\Certificate\IMCertificateService.cs" />
+    <Compile Include="Server\Common\CommonDetailInfoDto.cs" />
+    <Compile Include="Server\Common\EmailMessageDto.cs" />
+    <Compile Include="Server\Common\IListener.cs" />
+    <Compile Include="Server\Common\Monitor\IMJobMonitorReportExportLocationService.cs" />
+    <Compile Include="Server\Common\Monitor\Object\Detail\DetailCell.cs" />
+    <Compile Include="Server\Common\Monitor\Object\Action\CopySnapShotJobDto.cs" />
+    <Compile Include="Server\Common\Monitor\Object\Action\DeadAccountDeletionDto.cs" />
+    <Compile Include="Server\Common\Monitor\Object\Action\DeleteJobContentDto.cs" />
+    <Compile Include="Server\Common\Monitor\Object\Action\IndexJobDto.cs" />
+    <Compile Include="Server\Common\Monitor\Object\Action\MappingJobDto.cs" />
+    <Compile Include="Server\Common\Monitor\Object\Action\ReportFileType.cs" />
+    <Compile Include="Server\Common\Monitor\Object\Action\RestartJobDto.cs" />
+    <Compile Include="Server\Common\Monitor\Object\Action\RollbackChangesDto.cs" />
+    <Compile Include="Server\Common\Monitor\Object\Action\SearchResultDto.cs" />
+    <Compile Include="Server\Common\Monitor\Object\Detail\CentralAdminJobDetailDto.cs" />
+    <Compile Include="Server\Common\Monitor\Object\Detail\ContentManagerJobDetailDto.cs" />
+    <Compile Include="Server\Common\Monitor\Object\Detail\DeploymentManagerJobDetailDto.cs" />
+    <Compile Include="Server\Common\Monitor\Object\Detail\ItemJobDetailDto.cs" />
+    <Compile Include="Server\Common\Monitor\Object\Detail\JobDetailSearchDto.cs" />
+    <Compile Include="Server\Common\Monitor\Object\Detail\JobPruningJobDetailDto.cs" />
+    <Compile Include="Server\Common\Monitor\Object\Detail\PlatformBackupJobDetailDto.cs" />
+    <Compile Include="Server\Common\Monitor\Object\Detail\PlatformMaintenanceJobDetailDto.cs" />
+    <Compile Include="Server\Common\Monitor\Object\Detail\ReplicatorJobDetailDto.cs" />
+    <Compile Include="Server\Common\Monitor\Object\Detail\ReportCenterJobDetailDto.cs" />
+    <Compile Include="Server\Common\Monitor\Object\Detail\SOJobDetailDto.cs" />
+    <Compile Include="Server\Common\AveSPVersion.cs" />
+    <Compile Include="Server\Common\Performance\IPerformanceService.cs" />
+    <Compile Include="Server\Common\Performance\Object\CpuMemoryUsage.cs" />
+    <Compile Include="Server\Common\Performance\Object\ProcessDetail.cs" />
+    <Compile Include="Server\Common\Schedule\IMScheduledJobMonitorService.cs" />
+    <Compile Include="Server\Common\Schedule\IScheduledJobMonitorOptionService.cs" />
+    <Compile Include="Server\Common\Schedule\Object\ScheduleContract.cs" />
+    <Compile Include="Server\Common\Schedule\Object\ScheduledColumnModule.cs" />
+    <Compile Include="Server\Common\Schedule\Object\ScheduledJobMonitorParam.cs" />
+    <Compile Include="Server\Common\Schedule\Object\ScheduledMonitorModule.cs" />
+    <Compile Include="Server\Common\Schedule\Object\ScheduledRibbonModule.cs" />
+    <Compile Include="Server\Common\Schedule\Object\ScheduledMonitorCommandType.cs" />
+    <Compile Include="Server\Common\Schedule\Object\ScheduleJobRibbonDto.cs" />
+    <Compile Include="Server\Common\Schedule\Object\ScheduleJobStatusDto.cs" />
+    <Compile Include="Server\Common\Schedule\Object\ScheduleSearchJobDto.cs" />
+    <Compile Include="Server\Common\SPObjectMappingDto.cs" />
+    <Compile Include="Server\Common\TimeZone\AveTimeZone.cs" />
+    <Compile Include="Server\Common\TransferMessage.cs" />
+    <Compile Include="Server\ControlPanel\AuthenticationManager\AuthenticationManagerDto.cs" />
+    <Compile Include="Server\ControlPanel\AuthenticationManager\AuthenticationTypeCatalogDto.cs" />
+    <Compile Include="Server\ControlPanel\AuthenticationManager\IMAuthenticationManagerService.cs" />
+    <Compile Include="Server\ControlPanel\IMSpecificPruningHanlder.cs" />
+    <Compile Include="Server\ControlPanel\Aspect\IServiceAspect.cs" />
+    <Compile Include="Server\ControlPanel\Cryptography\DataEncryptionInfo.cs" />
+    <Compile Include="Server\ControlPanel\Cryptography\DataEncryptionProfile.cs" />
+    <Compile Include="Server\ControlPanel\Cryptography\ProtectionAlgorithm.cs" />
+    <Compile Include="Server\ControlPanel\Cryptography\ProtectionAlgorithmType.cs" />
+    <Compile Include="Server\ControlPanel\DataManager\Object\JobPruningJobDto.cs" />
+    <Compile Include="Server\ControlPanel\DataManager\Object\JobPruningPlanDto.cs" />
+    <Compile Include="Server\ControlPanel\DataManager\Object\JobPruningRuleDto.cs" />
+    <Compile Include="Tree\Object\DeploymentManager\Object\DesignManagerPlanDto.cs" />
+    <Compile Include="Tree\Object\DeploymentManager\Object\FrontEndDeploymentPlanDto.cs" />
+    <Compile Include="Media\WcfService\IMMLogicalDeviceCheckService.cs" />
+    <Compile Include="CheckUsers\Service\IMCheckUsersService.cs" />
+    <Compile Include="Media\IAMediaService.cs" />
+    <Compile Include="Media\IMMediaService.cs" />
+    <Compile Include="Media\Object\MediaServerInfo.cs" />
+    <Compile Include="Media\TCPRequest\MediaTCPRequest.cs" />
+    <Compile Include="Media\WcfService\IMMControlService.cs" />
+    <Compile Include="Server\Common\BackupDataSearch\BackupDataSearchContract.cs" />
+    <Compile Include="Server\Common\Monitor\IJobMonitorOptionService.cs" />
+    <Compile Include="Server\Common\Monitor\Object\Action\DeleteJobDto.cs" />
+    <Compile Include="Server\Common\Monitor\Object\Action\JobViewDto.cs" />
+    <Compile Include="Server\Common\Monitor\Object\Action\PauseJobDto.cs" />
+    <Compile Include="Server\Common\Monitor\Object\Action\ResumeJobDto.cs" />
+    <Compile Include="Server\Common\Monitor\Object\Action\RibbonStateDto.cs" />
+    <Compile Include="Server\Common\Monitor\Object\Action\RollbackDto.cs" />
+    <Compile Include="Server\Common\Monitor\Object\Action\SearchJobDto.cs" />
+    <Compile Include="Server\Common\Monitor\Object\Action\StartJobDto.cs" />
+    <Compile Include="Server\Common\Monitor\Object\Action\StopJobDto.cs" />
+    <Compile Include="Server\Common\Monitor\Object\BaseJobParamDto.cs" />
+    <Compile Include="Server\Common\Monitor\Object\ColumnModule.cs" />
+    <Compile Include="Server\Common\Monitor\Object\JobMonitorParam.cs" />
+    <Compile Include="Server\Common\Monitor\Object\MonitorCommandType.cs" />
+    <Compile Include="Server\Common\Monitor\Object\MonitorModule.cs" />
+    <Compile Include="Server\Common\Monitor\Object\RibbonModule.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Server\Authentication\IMAuthenticationService.cs" />
+    <Compile Include="Server\Authentication\Objects\AuthenticationDto.cs" />
+    <Compile Include="Server\Common\AccountGroupDto.cs" />
+    <Compile Include="Server\Common\ContentDto.cs" />
+    <Compile Include="Server\Common\ContractConstants.cs" />
+    <Compile Include="Server\Common\DeviceDto.cs" />
+    <Compile Include="Server\Common\DocAveServiceDto.cs" />
+    <Compile Include="Server\Common\Download\IDownloadable.cs" />
+    <Compile Include="Server\Common\Download\IMDownloadService.cs" />
+    <Compile Include="Server\Common\ExportLocation\IMExportLocationService.cs" />
+    <Compile Include="Server\Common\ExportLocation\Object\ExportLocationDto.cs" />
+    <Compile Include="Server\Common\FarmDto.cs" />
+    <Compile Include="Server\Common\Farm\IMFarmService.cs" />
+    <Compile Include="Server\Common\Profile\Object\ProfileContent.cs" />
+    <Compile Include="Server\Common\Schedule\Object\ScheduledJobParamDto.cs" />
+    <Compile Include="Server\Common\Schedule\Object\ScheduleJobMonitorContract.cs" />
+    <Compile Include="Server\Common\Schedule\Object\ScheduleSchemeDto.cs" />
+    <Compile Include="Server\ControlPanel\Aspect\ICacheSettingValidateAspect.cs" />
+    <Compile Include="Server\ControlPanel\Aspect\IExportLocationValidateAspect.cs" />
+    <Compile Include="Server\ControlPanel\FilterPolicy\IMFilterPolicyInfoService.cs" />
+    <Compile Include="Server\ControlPanel\FilterPolicy\Object\FilterPolicyInfo.cs" />
+    <Compile Include="Server\ControlPanel\Aspect\IAgentAspect.cs" />
+    <Compile Include="Server\ControlPanel\IDataPreparation.cs" />
+    <Compile Include="Server\ControlPanel\IEmailSender.cs" />
+    <Compile Include="Server\ControlPanel\IMSearchDeviceService.cs" />
+    <Compile Include="Server\ControlPanel\Aspect\IStoragePolicyAspect.cs" />
+    <Compile Include="Server\ControlPanel\Aspect\IStoragePolicyValidateAspect.cs" />
+    <Compile Include="Server\ControlPanel\LanguageMapping\Object\LanguageMappingConfigDto.cs" />
+    <Compile Include="Server\ControlPanel\LicenseManager\LicenseNotificationSetting.cs" />
+    <Compile Include="Server\ControlPanel\LogManager\ILogManagerDispatcher.cs" />
+    <Compile Include="Server\ControlPanel\LogManager\IALogManagerJobHandler.cs" />
+    <Compile Include="Server\ControlPanel\LogManager\Object\LogConfig.cs" />
+    <Compile Include="Server\ControlPanel\LogManager\Object\LogManagerDto.cs" />
+    <Compile Include="Server\ControlPanel\LogManager\Object\LogManagerJobDto.cs" />
+    <Compile Include="Server\ControlPanel\LogManager\Object\LogManagerPlanDto.cs" />
+    <Compile Include="Server\ControlPanel\LogManager\Object\ServiceDtoConfigResult.cs" />
+    <Compile Include="Server\ControlPanel\Object\AgentConfigResult.cs" />
+    <Compile Include="Server\ControlPanel\Object\AspectMessageDto.cs" />
+    <Compile Include="Server\ControlPanel\Object\CheckPasswordDto.cs" />
+    <Compile Include="Server\ControlPanel\Object\DownloadStatusModel.cs" />
+    <Compile Include="Server\ControlPanel\Object\JobContextDto.cs" />
+    <Compile Include="Server\ControlPanel\Object\LogInfoDto.cs" />
+    <Compile Include="Server\ControlPanel\Object\ModuleTypeDto.cs" />
+    <Compile Include="Server\ControlPanel\Object\PhysicalDeviceDataInfoDto.cs" />
+    <Compile Include="Server\ControlPanel\Object\RelatedJobIDAndTypeDto.cs" />
+    <Compile Include="Server\ControlPanel\Object\TaskDto.cs" />
+    <Compile Include="Server\ControlPanel\Object\TaskSignDto.cs" />
+    <Compile Include="Server\ControlPanel\Object\UpdatePatchInfoDto.cs" />
+    <Compile Include="Server\ControlPanel\Object\UpdateServicesDto.cs" />
+    <Compile Include="Server\ControlPanel\Office365\IAOffice365Service.cs" />
+    <Compile Include="Server\ControlPanel\Office365\Object\Office365Message.cs" />
+    <Compile Include="Server\ControlPanel\Passphrase\AvePasswordDto.cs" />
+    <Compile Include="Server\ControlPanel\Cryptography\CommunicationEncryptionInfo.cs" />
+    <Compile Include="Server\ControlPanel\Passphrase\DatabaseEncryptionInfo.cs" />
+    <Compile Include="Server\ControlPanel\Passphrase\IMPassphraseService.cs" />
+    <Compile Include="Server\ControlPanel\Passphrase\PassphraseInfo.cs" />
+    <Compile Include="Server\ControlPanel\PlatformRecoveryConfig\Object\PlatformRecoveryConfigDto.cs" />
+    <Compile Include="Server\ControlPanel\Reporting\UserNotificationSettings\Object\NotificationSettingDto.cs" />
+    <Compile Include="Server\ControlPanel\SecurityInformationManager\DocAveEncryptionInfo.cs" />
+    <Compile Include="Server\ControlPanel\SecurityInformationManager\IMSecurityInformationManagerService.cs" />
+    <Compile Include="Server\ControlPanel\SolutionManager\IASolutionManagerService.cs" />
+    <Compile Include="Server\ControlPanel\SolutionManager\IMSolutionManagerService.cs" />
+    <Compile Include="Server\ControlPanel\SolutionManager\ISolutionManagerHandler.cs" />
+    <Compile Include="Server\ControlPanel\SolutionManager\Object\AgentDetailDto.cs" />
+    <Compile Include="Server\ControlPanel\SolutionManager\Object\FarmSolutionDto.cs" />
+    <Compile Include="Server\ControlPanel\SolutionManager\Object\RequestMessage.cs" />
+    <Compile Include="Server\ControlPanel\SolutionManager\Object\ResponseMessage.cs" />
+    <Compile Include="Server\ControlPanel\SolutionManager\Object\SolutionManagerDto.cs" />
+    <Compile Include="Server\ControlPanel\SolutionManager\Object\WebAppInfoDto.cs" />
+    <Compile Include="Server\ControlPanel\SystemSetting\Object\ISystemSettingContent.cs" />
+    <Compile Include="Server\ControlPanel\SystemSetting\Object\SystemSettingContent.cs" />
+    <Compile Include="Server\ControlPanel\SystemSetting\Object\SystemSettingDto.cs" />
+    <Compile Include="Server\ControlPanel\SystemSetting\Object\UserConfirmDto.cs" />
+    <Compile Include="Server\ControlPanel\SystemSetting\SingleSignOnTypes.cs" />
+    <Compile Include="Server\ControlPanel\UpdateManager\IADeployPatchService.cs" />
+    <Compile Include="Server\ControlPanel\UpdateManager\IAUpdateHistoryService.cs" />
+    <Compile Include="Server\ControlPanel\UpdateManager\IMPatchDownloadService.cs" />
+    <Compile Include="Server\ControlPanel\UpdateManager\IMUpdateManagerService.cs" />
+    <Compile Include="Server\ControlPanel\UpdateManager\Object\ImportCallBackDto.cs" />
+    <Compile Include="Server\ControlPanel\UpdateManager\Object\InstallCallBackDto.cs" />
+    <Compile Include="Server\ControlPanel\UpdateManager\Object\UpdateHistoryDto.cs" />
+    <Compile Include="Server\ControlPanel\UpdateManager\Object\UpdateSettingDto.cs" />
+    <Compile Include="Server\ControlPanel\UserAndDomainMapping\DomainMapping\DomainMappingDataContract.cs" />
+    <Compile Include="Server\ControlPanel\UserAndDomainMapping\DomainMapping\DomainMappingXmlDto.cs" />
+    <Compile Include="Server\ControlPanel\UserAndDomainMapping\IMUserMappingService.cs" />
+    <Compile Include="Server\ControlPanel\UserAndDomainMapping\Object\UserAndDomainMapping.cs" />
+    <Compile Include="Server\ControlPanel\UserAndDomainMapping\Object\UserAndDomainMappingDto.cs" />
+    <Compile Include="Server\ControlPanel\LanguageMapping\IMLanguageMappingService.cs" />
+    <Compile Include="Server\ControlPanel\LanguageMapping\Object\LanguageMappingDto.cs" />
+    <Compile Include="Server\ControlPanel\LanguageMapping\Object\LanguageMappingItemDto.cs" />
+    <Compile Include="Server\ControlPanel\ColumnMapping\Object\ColumnMappingDataContract.cs" />
+    <Compile Include="Server\ControlPanel\ContentTypeMapping\IMContentTypeMappingService.cs" />
+    <Compile Include="Server\ControlPanel\ContentTypeMapping\Object\ContentMappingRequest.cs" />
+    <Compile Include="Server\ControlPanel\ContentTypeMapping\Object\ContentMappingResponse.cs" />
+    <Compile Include="Server\ControlPanel\ContentTypeMapping\Object\ContentTypeMappingDto.cs" />
+    <Compile Include="Server\ControlPanel\GroupMapping\Object\GroupMappings.cs" />
+    <Compile Include="Server\ControlPanel\Office365\IMOffice365Service.cs" />
+    <Compile Include="Server\ControlPanel\TemplateMapping\IMTemplateMappingService.cs" />
+    <Compile Include="Server\ControlPanel\TemplateMapping\Object\TemplateMappingContract.cs" />
+    <Compile Include="Server\ControlPanel\TemplateMapping\Object\TemplateMappingXmlDto.cs" />
+    <Compile Include="Server\ControlPanel\Office365\Object\RemoteDataDto.cs" />
+    <Compile Include="Server\ControlPanel\UserAndDomainMapping\UserMapping\UserMappingDataContract.cs" />
+    <Compile Include="Server\ControlPanel\UserAndDomainMapping\UserMapping\UserMappingXmlDto.cs" />
+    <Compile Include="Server\DBManager\IDBManagerService.cs" />
+    <Compile Include="Server\Common\IContentDto.cs" />
+    <Compile Include="Server\GUI\AUITableColumnFilterBase.cs" />
+    <Compile Include="Server\GUI\AUITableColumnNameFilter.cs" />
+    <Compile Include="Server\Installation\IInstallationService.cs" />
+    <Compile Include="Server\Job\IAJobDetailService.cs" />
+    <Compile Include="Server\Job\Object\ApproveReport.cs" />
+    <Compile Include="Server\Job\Object\JobSummaryContract.cs" />
+    <Compile Include="Server\Job\Object\JobDetailContract.cs" />
+    <Compile Include="Server\Common\JobDto.cs" />
+    <Compile Include="Server\Job\IAJobStatusUpdater.cs" />
+    <Compile Include="Server\Job\Object\JobStatusInfoContract.cs" />
+    <Compile Include="Server\Common\Profile\IMProfileService.cs" />
+    <Compile Include="Server\Common\Profile\Object\FilterPolicy.cs" />
+    <Compile Include="Server\Common\Profile\Object\ProfileDto.cs" />
+    <Compile Include="Server\Common\SimpleDataDto.cs" />
+    <Compile Include="Server\Common\UserConfigurationDto.cs" />
+    <Compile Include="Server\ControlPanel\IMAgentGroupService.cs" />
+    <Compile Include="Server\ControlPanel\IMCacheSettingService.cs" />
+    <Compile Include="Server\ControlPanel\IMLogicalDeviceService.cs" />
+    <Compile Include="Server\ControlPanel\IMPhysicalDeviceService.cs" />
+    <Compile Include="Server\ControlPanel\IMStoragePolicyService.cs" />
+    <Compile Include="Server\ControlPanel\Object\CacheSettingDto.cs" />
+    <Compile Include="Server\ControlPanel\Object\PhysicalDeviceOrderDto.cs" />
+    <Compile Include="Server\ControlPanel\Object\PhysicalDeviceParaDto.cs" />
+    <Compile Include="Server\ControlPanel\Object\SubJobDto.cs" />
+    <Compile Include="Server\Common\IMIdService.cs" />
+    <Compile Include="Server\Common\LoadBalanceDataCollectionDto.cs" />
+    <Compile Include="Server\Common\NodeLoadInfoDto.cs" />
+    <Compile Include="Server\Common\ObjectInfoDto.cs" />
+    <Compile Include="Server\Common\PlanDto.cs" />
+    <Compile Include="Server\Common\Schedule\Object\TimeRangeDto.cs" />
+    <Compile Include="Server\Common\ServiceGroupDto.cs" />
+    <Compile Include="Server\Common\Tree\IMSCSearchTreeService.cs" />
+    <Compile Include="Server\Common\Tree\Object\SCSearchResultTreeNodeDto.cs" />
+    <Compile Include="Server\Common\Tree\Object\TreeCommunication.cs" />
+    <Compile Include="Server\ControlPanel\ColumnFilter.cs" />
+    <Compile Include="Server\ControlPanel\IMAgentService.cs" />
+    <Compile Include="Server\Job\IMDownloadJobReport.cs" />
+    <Compile Include="Server\Job\IMJobMonitorDisplayService.cs" />
+    <Compile Include="Server\Job\IMJobMonitorService.cs" />
+    <Compile Include="Server\Job\Object\ContentManagerJobDto.cs" />
+    <Compile Include="Server\Job\Object\JobDto.cs" />
+    <Compile Include="Server\Job\Object\JobDtoExtension.cs" />
+    <Compile Include="Server\ControlPanel\Object\ServiceDto.cs" />
+    <Compile Include="Server\ControlPanel\Object\BackupJobDto.cs" />
+    <Compile Include="Server\ControlPanel\Object\BaseJobDto.cs" />
+    <Compile Include="Server\ControlPanel\Object\ColumnMapAttribute.cs" />
+    <Compile Include="Server\ControlPanel\Object\JobMonitorConfigDto.cs" />
+    <Compile Include="Server\ControlPanel\Object\JobMonitorParameter.cs" />
+    <Compile Include="Server\ControlPanel\Object\JobMonitorQueryResult.cs" />
+    <Compile Include="Server\ControlPanel\Object\JobParameter.cs" />
+    <Compile Include="Server\Job\IMJobReportControlService.cs" />
+    <Compile Include="Server\Job\Object\JobMonitorDisplay.cs" />
+    <Compile Include="Server\Job\Object\SvcsReport.cs" />
+    <Compile Include="Server\Login\ADAccountCredential.cs" />
+    <Compile Include="Server\Login\BaseCredential.cs" />
+    <Compile Include="Server\Login\BuildinAccountCredential.cs" />
+    <Compile Include="Server\Login\IClaimService.cs" />
+    <Compile Include="Server\Login\IMLoginAuthenticateService.cs" />
+    <Compile Include="Server\Login\IMLoadingLoginService.cs" />
+    <Compile Include="Server\Login\IMLoginService.cs" />
+    <Compile Include="Server\Login\LoadingDataDto.cs" />
+    <Compile Include="Server\Login\LoginResult.cs" />
+    <Compile Include="Agent\SharePointBrowser\IABrowserService.cs" />
+    <Compile Include="Agent\SharePointBrowser\IACheckUsersService.cs" />
+    <Compile Include="Agent\SharePointBrowser\Object\AbstractTreeNodeDto.cs" />
+    <Compile Include="Agent\SharePointBrowser\Object\BrowserMessage.cs" />
+    <Compile Include="Agent\SharePointBrowser\Object\CheckUsersMessage.cs" />
+    <Compile Include="Agent\SharePointBrowser\Object\CheckUsersOperation.cs" />
+    <Compile Include="Agent\SharePointBrowser\Object\FileSystemBrowserContract.cs" />
+    <Compile Include="Agent\SharePointBrowser\Object\NetSharePathContract.cs" />
+    <Compile Include="Agent\SharePointBrowser\Object\SharePointBrowserContract.cs" />
+    <Compile Include="Server\Login\TimeSettingDto.cs" />
+    <Compile Include="Server\Login\WindowsAccountCredential.cs" />
+    <Compile Include="Server\ControlPanel\DataManager\IMJobPruningService.cs" />
+    <Compile Include="Server\ControlPanel\LogManager\IMLogManagerService.cs" />
+    <Compile Include="Server\Retention\Entity\RetentionRequest.cs" />
+    <Compile Include="Server\Service\IMServManageService.cs" />
+    <Compile Include="Server\Service\IPlanService.cs" />
+    <Compile Include="Server\Service\IServiceController.cs" />
+    <Compile Include="Server\Service\ServiceControllerResult.cs" />
+    <Compile Include="Server\SingleSignOn\IMSingleSignOnService.cs" />
+    <Compile Include="Server\SingleSignOn\Object\CertificateInformationDto.cs" />
+    <Compile Include="Server\SingleSignOn\Object\ClaimTypeMappingDto.cs" />
+    <Compile Include="Server\SingleSignOn\Object\SingleSignOnSettingDto.cs" />
+    <Compile Include="Server\SingleSignOn\Object\WindowsAuthenticationSettingDto.cs" />
+    <Compile Include="ServiceVersion\IServiceVersionInfoService.cs" />
+    <Compile Include="ServiceVersion\Object\ServiceProductInfoDto.cs" />
+    <Compile Include="ServiceVersion\Object\ServiceVersionInfoDto.cs" />
+    <Compile Include="Storage\Entity\ArchiverJobDto.cs" />
+    <Compile Include="Storage\Entity\ArchiverSiteInfoDto.cs" />
+    <Compile Include="Server\DataManager\DataManagerContactDto.cs" />
+    <Compile Include="Storage\Entity\LogicalDeviceDto.cs" />
+    <Compile Include="Storage\Entity\PhysicalDeviceDescription.cs" />
+    <Compile Include="Storage\Entity\PhysicalDeviceDto.cs" />
+    <Compile Include="Storage\Entity\PhysicalDeviceOrderXml.cs" />
+    <Compile Include="Storage\Entity\RetentionDto.cs" />
+    <Compile Include="Storage\Entity\StorageConfigurationDetailPara.cs" />
+    <Compile Include="Storage\Entity\StoragePolicyDto.cs" />
+    <Compile Include="Storage\Entity\StoragePolicyXml.cs" />
+    <Compile Include="Media\IMAcceptMediaData.cs" />
+    <Compile Include="Storage\Entity\SystemProfileDto.cs" />
+    <Compile Include="Storage\Service\IPhysicalDeviceChecker.cs" />
+    <Compile Include="Tree\Object\AveTreeMessage.cs" />
+    <Compile Include="Tree\Object\AveTreeNodeDto.cs" />
+    <Compile Include="Tree\Object\ComparisonTreeMessage.cs" />
+    <Compile Include="Tree\Object\ConnectorTreeNodeDto.cs" />
+    <Compile Include="Tree\Object\DataManagerTreeMessage.cs" />
+    <Compile Include="Tree\Object\DataManagerTreeNodeDto.cs" />
+    <Compile Include="Tree\Object\DeploymentManagerFSTreeMessage.cs" />
+    <Compile Include="Tree\Object\EITreeMessage.cs" />
+    <Compile Include="Tree\Object\EITreeNodeDto.cs" />
+    <Compile Include="Tree\Object\DMCompare\CompareBaseDTO.cs" />
+    <Compile Include="Tree\Object\DMCompare\DMCompareInfoDTO.cs" />
+    <Compile Include="Tree\Object\DMTreeSchema.cs" />
+    <Compile Include="Tree\Object\FilterPolicy.cs" />
+    <Compile Include="Tree\Object\ImportTreeMessage.cs" />
+    <Compile Include="Tree\Object\NodeExtensionDto.cs" />
+    <Compile Include="Tree\Object\FSTreeMessage.cs" />
+    <Compile Include="Tree\Object\FSTreeNodeDto.cs" />
+    <Compile Include="Tree\Object\NodeInfo.cs" />
+    <Compile Include="Tree\Object\PreviewTreeMessage.cs" />
+    <Compile Include="Tree\Object\SolutionDetailDTO.cs" />
+    <Compile Include="Tree\Object\SPTreeMessage.cs" />
+    <Compile Include="Tree\Object\SPTreeNodeDto.cs" />
+    <Compile Include="Tree\Object\FarmInfoDto.cs" />
+    <Compile Include="Tree\Object\SPTreeNodePropertyDto.cs" />
+    <Compile Include="Tree\Object\CommonTreeNodeFilter.cs" />
+    <Compile Include="Tree\Service\IGUINodeBrowse.cs" />
+    <Compile Include="Tree\Service\ITreePropertyService.cs" />
+    <Compile Include="Tree\Service\ITreeQuickSearch.cs" />
+    <Compile Include="Tree\Service\ITreeSearchService.cs" />
+    <Compile Include="Tree\Service\ITreeService.cs" />
+    <Compile Include="Wcf\AveMessage.cs" />
+    <Compile Include="Wcf\WcfException.cs" />
+    <Compile Include="Wcf\WcfMessageHeaderInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ServiceProductInformation.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <EmbeddedResource Include="KnownType.config">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="DocAveStandard.snk" />
+    <None Include="GAServiceVersion.config">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ServiceVersion.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GCommon.MicroKernel\GCommon.MicroKernel.csproj">
+      <Project>{4D7D0D1F-EE7B-4494-892B-478B3F92B339}</Project>
+      <Name>GCommon.MicroKernel</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

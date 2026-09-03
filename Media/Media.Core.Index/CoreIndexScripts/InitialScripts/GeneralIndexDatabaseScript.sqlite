@@ -1,0 +1,108 @@
+﻿-- /********************************************************************
+-- *
+-- *  PROPRIETARY and CONFIDENTIAL
+-- *
+-- *  This file is licensed from, and is a trade secret of:
+-- *
+-- *                   AvePoint, Inc.
+-- *                   525 Washington Blvd, Suite 1400
+-- *                   Jersey City, NJ 07310
+-- *                   United States of America
+-- *                   Telephone: +1-201-793-1111
+-- *                   WWW: www.avepoint.com
+-- *
+-- *  Refer to your License Agreement for restrictions on use,
+-- *  duplication, or disclosure.
+-- *
+-- *  RESTRICTED RIGHTS LEGEND
+-- *
+-- *  Use, duplication, or disclosure by the Government is
+-- *  subject to restrictions as set forth in subdivision
+-- *  (c)(1)(ii) of the Rights in Technical Data and Computer
+-- *  Software clause at DFARS 252.227-7013 (Oct. 1988) and
+-- *  FAR 52.227-19 (C) (June 1987).
+-- *
+-- *  Copyright © 2017-2026 AvePoint® Inc. All Rights Reserved. 
+-- *
+-- *  Unpublished - All rights reserved under the copyright laws of the United States.
+-- */
+  CREATE TABLE [tb_item_index] (
+			[COL_ID] CHAR(36) NOT NULL,
+			[COL_FLAG] BIGINT, 
+			[COL_TYPE] CHAR(2), 
+			[COL_NAME] VARCHAR(32672), 
+			[COL_PLANID] VARCHAR(256), 
+			[COL_JOBID] VARCHAR(256), 
+			[COL_DATA_FILE_NUMBER] BIGINT, 
+			[COL_DATA_FILE_OFFSET] BIGINT, 
+			[COL_DATA_FILE_LENGTH] BIGINT, 
+			[COL_DATA_FILE_PREFIX_NUMBER] BIGINT, 
+			[COL_BACKUP_TIME] BIGINT, 
+			[COL_CONTENT_OFFSET] BIGINT, 
+			[COL_CONTENT_LENGTH] BIGINT,
+			[COL_SEQUENCE] BIGINT,
+			[COL_IS_FAILED] VARCHAR(20),
+			[COL_STORAGE_CRC32] BIGINT,
+			[COL_CONTENT_DATA_OFFSET] BIGINT, 
+			[COL_CONTENT_DATA_FILE_NUMBER] BIGINT, 
+			[COL_CONTENT_DATA_FILE_PREFIX_NUMBER] BIGINT, 
+			[COL_STORAGEINFO] TEXT, 
+			[COL_VERSION] BIGINT, 
+			[COL_META_DATA_HEADER_OFFSET] BIGINT, 
+			[COL_CONTENT_DATA_HEADER_OFFSET] BIGINT, 
+			[COL_CONTENT_PAGE_SIZE] BIGINT,
+			[COL_EXTENSION_1] INT, 
+			[COL_EXTENSION_2] INT, 
+			[COL_EXTENSION_3] INT, 
+			[COL_EXTENSION_4] BIGINT, 
+			[COL_EXTENSION_5] BIGINT, 
+			[COL_EXTENSION_6] VARCHAR(32672), 
+			[COL_EXTENSION_7] VARCHAR(32672), 
+			[COL_EXTENSION_8] VARCHAR(32672), 
+		    [COL_EXTENSION_9] TEXT, 
+            [COL_EXTENSION_10] TEXT
+  );
+  
+
+  CREATE TABLE tb_job_info( 
+			[COL_GUID] VARCHAR(36) NOT NULL PRIMARY KEY, 
+			[COL_JOB_ID] VARCHAR(32672), 
+			[COL_KEY] VARCHAR(32672), 
+			[COL_VALUE] VARCHAR(32672), 
+			[COL_EXTENSION_1] INT, 
+			[COL_EXTENSION_2] INT, 
+			[COL_EXTENSION_3] INT, 
+			[COL_EXTENSION_4] BIGINT, 
+			[COL_EXTENSION_5] BIGINT,
+			[COL_EXTENSION_6] VARCHAR(32672), 
+			[COL_EXTENSION_7] VARCHAR(32672), 
+			[COL_EXTENSION_8] VARCHAR(32672), 
+			[COL_EXTENSION_9] TEXT, 
+			[COL_EXTENSION_10] TEXT
+);
+
+
+  CREATE TABLE [tb_site_master_index](
+			[COL_ID] VARCHAR(255) NOT NULL PRIMARY KEY,
+			[COL_PLAN_ID] VARCHAR(255), 
+			[COL_JOB_ID] VARCHAR(255), 
+			[COL_LOGICAL_DRIVE] VARCHAR(255), 
+			[COL_BACKUP_TIME] BIGINT, 
+			[COL_SP_VERSION] INTEGER, 
+			[COL_MAX_DATA_BLOCK_SIZE] INTEGER,
+			[COL_REMARK1] VARCHAR(255), 
+			[COL_REMARK2] VARCHAR(255), 
+			[COL_REMARK3] VARCHAR(32672), 
+			[COL_REMARK4] VARCHAR(32672), 
+			[COL_REMARK5] INTEGER, 
+			[COL_REMARK6] INTEGER, 
+			[COL_REMARK7] BIGINT, 
+			[COL_REMARK8] CLOB(2147483647), 
+			[COL_REMARK9] VARCHAR(255)
+);
+
+INSERT INTO tb_job_info (COL_GUID, COL_KEY, COL_VALUE) VALUES( 'AAAAAAAA-AAAA-AAAA-AAAA-AAAAAAAAAAAA', 'version','6.0.0.0');
+
+CREATE INDEX [IDX_ITEM_JOBID] 
+			ON [tb_item_index]
+			(COL_JOBID asc);

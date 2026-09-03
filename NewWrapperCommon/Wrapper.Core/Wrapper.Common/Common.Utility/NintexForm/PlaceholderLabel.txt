@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-16"?>
+<Form xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.datacontract.org/2004/07/Nintex.Forms">
+	<FormControls xmlns:d2p1="http://schemas.datacontract.org/2004/07/Nintex.Forms.FormControls">
+		<d2p1:FormControlProperties i:type="d2p1:LabelFormControlProperties">
+			<d2p1:Border />
+			<d2p1:BorderColor>#000000</d2p1:BorderColor>
+			<d2p1:BorderStyle>Solid</d2p1:BorderStyle>
+			<d2p1:BorderWidth>2</d2p1:BorderWidth>
+			<d2p1:CanResizeAtRuntime>false</d2p1:CanResizeAtRuntime>
+			<d2p1:ControlVersion>101.1.1.0</d2p1:ControlVersion>
+			<d2p1:CssClass>nf-form-label nf-section</d2p1:CssClass>
+			<d2p1:DisplayName>Comment</d2p1:DisplayName>
+			<d2p1:FormControlTypeUniqueId>c0a89c70-0781-4bd4-8623-f73675005e00</d2p1:FormControlTypeUniqueId>
+			<d2p1:FormType>Global</d2p1:FormType>
+			<d2p1:InRepeater>false</d2p1:InRepeater>
+			<d2p1:InsertReferences xmlns:d4p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+			<d2p1:InternalPropertyBag xmlns:d4p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+			<d2p1:IsControlWidthFixedToCanvasWidth>false</d2p1:IsControlWidthFixedToCanvasWidth>
+			<d2p1:IsDirty>false</d2p1:IsDirty>
+			<d2p1:IsLocked>false</d2p1:IsLocked>
+			<d2p1:IsVisible>true</d2p1:IsVisible>
+			<d2p1:PaddingWidth>0</d2p1:PaddingWidth>
+			<d2p1:TabIndex>0</d2p1:TabIndex>
+			<d2p1:UniqueId>46f89ea4-c197-4188-a689-48786d1737fb</d2p1:UniqueId>
+			<d2p1:VariableSource>SharePoint</d2p1:VariableSource>
+			<d2p1:VerticalAlign>NotSet</d2p1:VerticalAlign>
+			<d2p1:BackgroundColor i:nil="true" />
+			<d2p1:Bold>false</d2p1:Bold>
+			<d2p1:FontColor i:nil="true" />
+			<d2p1:FontFamily i:nil="true" />
+			<d2p1:FontFamilyItemId i:nil="true" />
+			<d2p1:FontSize i:nil="true" />
+			<d2p1:FontSizeItemId i:nil="true" />
+			<d2p1:HorizontalAlignment>NotSet</d2p1:HorizontalAlignment>
+			<d2p1:Italics>false</d2p1:Italics>
+			<d2p1:StrikeThrough>false</d2p1:StrikeThrough>
+			<d2p1:ThemeClass i:nil="true" />
+			<d2p1:Underline>false</d2p1:Underline>
+			<d2p1:Name i:nil="true" />
+			<d2p1:Text>Comment</d2p1:Text>
+			<d2p1:AssociatedControl/>
+			<d2p1:AssociatedControlTextSet/>
+		</d2p1:FormControlProperties>
+	</FormControls>
+</Form>

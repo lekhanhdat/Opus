@@ -1,0 +1,26 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "opus-actions-command-set": {
+      "components": [
+        {
+          "entrypoint": "./lib/extensions/opusActions/OpusActionsCommandSet.js",
+          "manifest": "./src/extensions/opusActions/OpusActionsCommandSet.manifest.json"
+        }
+      ]
+    },
+    "deletion-date-calculation-field-customizer": {
+      "components": [
+        {
+          "entrypoint": "./lib/extensions/deletionDateCalculation/DeletionDateCalculationFieldCustomizer.js",
+          "manifest": "./src/extensions/deletionDateCalculation/DeletionDateCalculationFieldCustomizer.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "OpusCustomizationStrings": "lib/loc/default.{locale}.js"
+  }
+}

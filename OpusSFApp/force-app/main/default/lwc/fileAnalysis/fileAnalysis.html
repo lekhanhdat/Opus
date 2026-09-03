@@ -1,0 +1,37 @@
+<!--Covered by AvePoint copyright and license agreement-->
+<template>
+    <lightning-card>
+        <h3 slot="title" class="file-analysis-card-container-title">
+            {translation.fileAnalysis}
+        </h3>
+
+        <div class="file-analysis-container">
+            <div>
+                <lightning-datatable 
+                    key-field="id"
+                    data={tableDataWithTotal}
+                    onrowselection={handleTableSelection}
+                    columns={columns}
+                    min-column-width="200"
+                    class="file-analysis-table"
+                    resize-column-disabled
+                >
+                </lightning-datatable>
+            </div>
+            
+            <div class="chart-zone">
+                <div class="file-bar-chart">
+                    <div class="chart-title">{translation.byFileSize}</div>
+                    <div class="file-bar-chart-container" lwc:dom="manual"></div>
+                </div>
+                <div class="file-treemap-chart">
+                    <div class="chart-title">{translation.topFileType}</div>
+                    <div class="file-treemap-chart-container" lwc:dom="manual"></div>
+                </div>
+
+            </div>
+
+        </div>
+    </lightning-card>
+
+</template>

@@ -1,0 +1,447 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <RootNamespace>AvePoint.RA.Web</RootNamespace>
+    <AssemblyName>AvePointRevIM</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup>
+    <EnableUnsafeBinaryFormatterSerialization>true</EnableUnsafeBinaryFormatterSerialization>
+  </PropertyGroup>
+  <ItemGroup>
+    <Antlr4 Remove="wwwroot\Scripts\RD\**" />
+    <Compile Remove="wwwroot\Scripts\RD\**" />
+    <Content Remove="wwwroot\Scripts\RD\**" />
+    <EmbeddedResource Remove="wwwroot\Scripts\RD\**" />
+    <None Remove="wwwroot\Scripts\RD\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Update="appsettings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Config\Castle\ServiceCastle.config">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Config\ControlLog4net.dev.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Update="Config\ControlLog4net.config">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Config\ControlWCFClients.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Update="Config\ControlWCFExtensions.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Config\ControlWCFServices.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Config\DesignLists\DesignLists.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Common\GlobalCommon\GCommonContract\DocAve.GCommonContract.csproj" />
+    <ProjectReference Include="..\Common\GlobalCommon\GCommonUtility\DocAve.GCommonUtility.csproj" />
+    <ProjectReference Include="..\Common\MediaStorage\Media.StorageApi\Media.StorageApi.csproj" />
+    <ProjectReference Include="..\Common\SPAPIWrapper\AveObjectModel.Client\AveObjectModel.Common\AveObjectModel.Common.csproj" />
+    <ProjectReference Include="..\Common\VCService30\CommonUtility30\DocAve.CommonUtility30.csproj" />
+    <ProjectReference Include="..\Common\Wrapper\Wrapper.Common\Wrapper.Common.csproj" />
+    <ProjectReference Include="..\Hybrid\Hybrid.Contract\Hybrid.Contract.csproj" />
+    <ProjectReference Include="..\Media\Media.Common\Media.Common.csproj" />
+    <ProjectReference Include="..\RACommon.Global\RACommon.Global.csproj" />
+    <ProjectReference Include="..\RACommonUtility\RACommonUtility.csproj" />
+    <ProjectReference Include="..\RAContract.Global\RAContract.Global.csproj" />
+    <ProjectReference Include="..\RADataBroker\RADataBroker.csproj" />
+    <ProjectReference Include="..\RACommon\RACommon.csproj" />
+    <ProjectReference Include="..\RAContract\RAContract.csproj" />
+    <ProjectReference Include="..\RADB\RADB.csproj" />
+    <ProjectReference Include="..\RAI18N\RAI18N.csproj" />
+    <ProjectReference Include="..\RAReportCenter\RAReportCenter.csproj" />
+    <ProjectReference Include="..\RASalesforce\RASalesforce.csproj" />
+    <ProjectReference Include="..\RAService\RAService.csproj" />
+    <ProjectReference Include="..\RASharePoint\RASharePoint.csproj" />
+    <ProjectReference Include="..\RAWebExtensions\RAWebExtensions.csproj" />
+    <ProjectReference Include="..\RecordsAPIContract\RecordsAPIContract.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="AWSSDK.S3" Version="4.0.17.3" />
+    <PackageReference Include="Castle.Windsor.Extensions.DependencyInjection" Version="6.0.0" />
+    <PackageReference Include="cloud.governance.sdk" Version="1.0.33" />
+    <PackageReference Include="Duende.IdentityModel" Version="8.1.0" />
+    <PackageReference Include="log4net" Version="3.3.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Antiforgery" Version="2.3.9" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.OpenIdConnect" Version="8.0.19" />
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="6.1.4" />
+    <PackageReference Include="Microsoft.IdentityModel.Protocols.OpenIdConnect" Version="8.15.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.4" />
+    <PackageReference Include="Newtonsoft.Json.Bson" Version="1.0.3" />
+    <PackageReference Include="SoapCore" Version="1.2.1.12" />
+    <PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0" />
+    <PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.9.0" />
+    <PackageReference Include="System.DirectoryServices" Version="10.0.2" />
+    <PackageReference Include="EntityFramework" Version="6.5.1" />
+    <PackageReference Include="System.Private.Uri" Version="4.3.2" />
+    <PackageReference Include="System.ServiceModel.Federation" Version="8.1.2" />
+    <PackageReference Include="Microsoft.DotNet.UpgradeAssistant.Extensions.Default.Analyzers" Version="0.4.421302">
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Antlr4" Version="4.6.6" />
+    <PackageReference Include="System.Dynamic.Runtime" Version="4.3.0" />
+    <PackageReference Include="System.Linq.Queryable" Version="4.3.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\RACommon\ServiceVersion\ServiceVersion.config">
+      <Link>Config\ServiceVersion\ServiceVersion.config</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Config\AvePointRelatedRecords.app">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Config\BarcodeTemplate\BarcodeTemplate.docx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Config\BarcodeTemplate\Label_95x65-R_Word_Template.docx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Config\BarcodeTemplate\Label_200x93-R_Word_Template.docx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Config\BarcodeTemplate\Label_135x95-R_Word_Template.docx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Config\BarcodeTemplate\Label_99x67-R_Word_Template.docx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Config\BarcodeTemplate\Label_72x63-R_Word_Template.docx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Config\Deduplicate Template.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Config\File Plan Import Template.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Config\GOVApp\AvePointRelatedRecords.app">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Config\Import Content Sources Settings for File System.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Config\Import Content Sources Settings for SharePoint Online.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Config\Import Content Sources Settings for Teams.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Config\OldTemplate\Import Content Sources Settings for SharePoint Online.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Config\Archiver Import Site Template.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+	<Content Include="Config\Archiver Import Teams Template.csv">
+		<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	</Content>
+    <Content Include="Config\NAA Configuration File.zip">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Config\NARA Configuration File.zip">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Config\Physical Locations Import Template.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Config\physicaltemplate.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Config\RASPApp.app">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Config\VEO Configuration Files.zip">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Config\DAOExportTemplate\VEO Configuration Files.zip">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Config\DAOExportTemplate\NAA Configuration File.zip">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Config\DAOExportTemplate\NARA Configuration File.zip">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Config\VEO V3 Configuration Files.zip">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+	<Content Include="Config\Import Content Sources Settings for File System JPMC.xlsx">
+		<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	</Content>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Knockout.Mapping" Version="2.4.0" />
+    <PackageReference Include="Microsoft.Azure.Amqp" Version="2.7.0" />
+    <PackageReference Include="Microsoft.Win32.Registry" Version="5.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="8.0.19" />
+    <PackageReference Include="NWebsec.AspNetCore.Middleware" Version="3.0.0" />
+    <PackageReference Include="System.Text.RegularExpressions" Version="4.3.1" />
+    <PackageReference Include="util.ai.text.extractor" Version="6.10.11" />
+    <PackageReference Include="util.database" Version="5.4.6" PrivateAssets="analyzers" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Common\CustomRequestValidation.cs" />
+    <Compile Remove="Common\HttpControllerFactory.cs" />
+    <Compile Remove="Common\WIF\AESSessionSecurityTokenHandler.cs" />
+    <Compile Remove="Common\WIF\AuthModule.cs" />
+    <Compile Remove="Common\WIF\MvcApplication.cs" />
+    <Compile Remove="Common\WindsorControllerFactory.cs" />
+    <Compile Remove="Common\WindsorHttpControllerActivator.cs" />
+    <Compile Remove="Controllers\API\COPAPIController.cs" />
+    <Compile Remove="Controllers\SharePointSettings\SPSettingsController.cs" />
+    <Compile Remove="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="Config\emailVelocityTemplate\TemplateEmailNotificationHtml.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Config\AvePointRelatedRecords.app" />
+    <None Remove="Config\BarcodeTemplate\BarcodeTemplate.docx" />
+    <None Remove="Config\BarcodeTemplate\Label_95x65-R_Word_Template.docx" />
+    <None Remove="Config\BarcodeTemplate\Label_200x93-R_Word_Template.docx" />
+    <None Remove="Config\BarcodeTemplate\Label_135x95-R_Word_Template.docx" />
+    <None Remove="Config\BarcodeTemplate\Label_99x67-R_Word_Template.docx" />
+    <None Remove="Config\BarcodeTemplate\Label_72x63-R_Word_Template.docx" />
+    <None Remove="Config\DAOExportTemplate\VEO V3 Configuration Files.zip" />
+    <None Remove="Config\Deduplicate Template.xlsx" />
+    <None Remove="Config\File Plan Import Template.xlsx" />
+    <None Remove="Config\GOVApp\AvePointRelatedRecords.app" />
+    <None Remove="Config\Import Content Sources Settings for File System.xlsx" />
+    <None Remove="Config\Import Content Sources Settings for SharePoint Online.csv" />
+    <None Remove="Config\Import Content Sources Settings for Teams.csv" />
+    <None Remove="Config\OldTemplate\Import Content Sources Settings for SharePoint Online.csv" />
+    <None Remove="Config\Archiver Import Site Template.csv" />
+	<None Remove="Config\Archiver Import Teams Template.csv" />
+    <None Remove="Config\NAA Configuration File.zip" />
+    <None Remove="Config\NARA Configuration File.zip" />
+    <None Remove="Config\Physical Locations Import Template.xlsx" />
+    <None Remove="Config\physicaltemplate.csv" />
+    <None Remove="Config\RASPApp.app" />
+    <None Remove="Config\recotest.cer" />
+    <None Remove="Config\VEO Configuration Files.zip" />
+    <None Remove="Config\DAOExportTemplate\NAA Configuration File.zip" />
+    <None Remove="Config\DAOExportTemplate\NARA Configuration File.zip" />
+    <None Remove="Config\DAOExportTemplate\VEO Configuration Files.zip" />
+    <None Remove="Config\VEO V3 Configuration Files.zip" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="..\Media\Media.Common\SDS-SEE.exml" Link="SDS-SEE.exml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <None Include="Config\emailVelocityTemplate\TemplateEmailNotificationHtml.cshtml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="wwwroot\aui\font\font-widget.eot" />
+    <None Include="wwwroot\aui\font\font-widget.svg" />
+    <None Include="wwwroot\aui\font\font-widget.ttf" />
+    <None Include="wwwroot\aui\font\font-widget.woff" />
+    <None Include="wwwroot\aui\image\calendar_arrow_left.png" />
+    <None Include="wwwroot\aui\image\calendar_arrow_right.png" />
+    <None Include="wwwroot\aui\image\checkbox.png" />
+    <None Include="wwwroot\aui\image\common.jquery-icons.png" />
+    <None Include="wwwroot\aui\image\common.loading_16x16.gif" />
+    <None Include="wwwroot\aui\image\common.png" />
+    <None Include="wwwroot\aui\image\common.waveline_dis.png" />
+    <None Include="wwwroot\aui\image\common.waveline_normal.png" />
+    <None Include="wwwroot\aui\image\datagrid.png" />
+    <None Include="wwwroot\aui\image\dialog.png" />
+    <None Include="wwwroot\aui\image\dynamicgrid.png" />
+    <None Include="wwwroot\aui\image\exception_16x16.png" />
+    <None Include="wwwroot\aui\image\failed_16x16.png" />
+    <None Include="wwwroot\aui\image\finished_16x16.png" />
+    <None Include="wwwroot\aui\image\inprogress_16x16.png" />
+    <None Include="wwwroot\aui\image\loading.gif" />
+    <None Include="wwwroot\aui\image\messagebar.png" />
+    <None Include="wwwroot\aui\image\navigation.png" />
+    <None Include="wwwroot\aui\image\newpicker.png" />
+    <None Include="wwwroot\aui\image\notecalendar.png" />
+    <None Include="wwwroot\aui\image\numerictextbox.png" />
+    <None Include="wwwroot\aui\image\peoplepicker.png" />
+    <None Include="wwwroot\aui\image\radiobutton.png" />
+    <None Include="wwwroot\aui\image\richcombobox.png" />
+    <None Include="wwwroot\aui\image\richtexteditor.png" />
+    <None Include="wwwroot\aui\image\scrollbar.png" />
+    <None Include="wwwroot\aui\image\searchbox.png" />
+    <None Include="wwwroot\aui\image\selected_tile.png" />
+    <None Include="wwwroot\aui\image\slider.png" />
+    <None Include="wwwroot\aui\image\splitter.png" />
+    <None Include="wwwroot\aui\image\switchbutton.png" />
+    <None Include="wwwroot\aui\image\switch_button_off.png" />
+    <None Include="wwwroot\aui\image\switch_button_on.png" />
+    <None Include="wwwroot\aui\image\tableview.png" />
+    <None Include="wwwroot\aui\image\tabs.wizard.png" />
+    <None Include="wwwroot\aui\image\taskcalendar.png" />
+    <None Include="wwwroot\aui\image\tile_edit.png" />
+    <None Include="wwwroot\aui\image\tile_info.png" />
+    <None Include="wwwroot\aui\image\tile_max.png" />
+    <None Include="wwwroot\aui\image\tile_refresh.png" />
+    <None Include="wwwroot\aui\react\aui.chart.js" />
+    <None Include="wwwroot\aui\react\aui.css" />
+    <None Include="wwwroot\aui\react\aui.css.map" />
+    <None Include="wwwroot\aui\react\aui.js" />
+    <None Include="wwwroot\aui\react\aui.js.map" />
+    <None Include="wwwroot\aui\react\aui.min.css" />
+    <None Include="wwwroot\aui\react\aui.min.js" />
+    <None Include="wwwroot\aui\react\aui.react.js" />
+    <None Include="wwwroot\aui\react\aui.react.js.map" />
+    <None Include="wwwroot\aui\react\aui.react.min.js" />
+    <None Include="wwwroot\aui\react\opensans.css" />
+    <None Include="wwwroot\Content\3rd\jquery-ui.min.css" />
+    <None Include="wwwroot\Content\Base\core.css" />
+    <None Include="wwwroot\Content\Base\jquery.extend.css" />
+    <None Include="wwwroot\Content\Base\rm.tabs.css" />
+    <None Include="wwwroot\Content\ErrorPage\errorpage.css" />
+    <None Include="wwwroot\Content\Home\home.css" />
+    <None Include="wwwroot\dist\bundle\common.css" />
+    <None Include="wwwroot\dist\bundle\common.css.map" />
+    <None Include="wwwroot\dist\bundle\common.js" />
+    <None Include="wwwroot\dist\bundle\common.js.map" />
+    <None Include="wwwroot\dist\bundle\common.min.css" />
+    <None Include="wwwroot\dist\bundle\common.min.js" />
+    <None Include="wwwroot\dist\bundle\index.css" />
+    <None Include="wwwroot\dist\bundle\index.css.map" />
+    <None Include="wwwroot\dist\bundle\index.js" />
+    <None Include="wwwroot\dist\bundle\index.js.map" />
+    <None Include="wwwroot\dist\bundle\index.min.css" />
+    <None Include="wwwroot\dist\bundle\index.min.js" />
+    <None Include="wwwroot\dist\bundle\lib.js" />
+    <None Include="wwwroot\dist\bundle\lib.js.map" />
+    <None Include="wwwroot\dist\bundle\lib.min.js" />
+	<None Include="wwwroot\dist\bundle\vendors.css" />
+	<None Include="wwwroot\dist\bundle\vendors.css.map" />
+	<None Include="wwwroot\dist\bundle\vendors.min.css" />
+	<None Include="wwwroot\dist\bundle\vendors.js" />
+	<None Include="wwwroot\dist\bundle\vendors.js.map" />
+	<None Include="wwwroot\dist\bundle\vendors.min.js" />
+    <None Include="wwwroot\Favicon.ico" />
+    <None Include="wwwroot\Images\Base\about_RA.png" />
+    <None Include="wwwroot\Images\Base\action_button.png" />
+    <None Include="wwwroot\Images\Base\Favicon.ico" />
+    <None Include="wwwroot\Images\Base\http_error.png" />
+    <None Include="wwwroot\Images\Base\import_16x16.png" />
+    <None Include="wwwroot\Images\Base\import_18x18.png" />
+    <None Include="wwwroot\Images\Base\license_expired.png" />
+    <None Include="wwwroot\Images\Base\loading_18x18.gif" />
+    <None Include="wwwroot\Images\Base\logo-24x24.png" />
+    <None Include="wwwroot\Images\Base\no_permission.png" />
+    <None Include="wwwroot\Images\Base\no_permission_small.svg" />
+    <None Include="wwwroot\Images\Base\physical_record_65x65.png" />
+    <None Include="wwwroot\Images\BCM\downarrw.gif" />
+    <None Include="wwwroot\Images\BCM\EMMGroup.png" />
+    <None Include="wwwroot\Images\BCM\EMMTerm.png" />
+    <None Include="wwwroot\Images\BCM\EMMTermSet.png" />
+    <None Include="wwwroot\Images\CP\UserSquiggle.png" />
+    <None Include="wwwroot\Images\Home\logo.png" />
+    <None Include="wwwroot\Images\Home\logo_nav.png" />
+    <None Include="wwwroot\Images\Home\modules_icons.png" />
+    <None Include="wwwroot\Images\Home\Navigation.png" />
+    <None Include="wwwroot\Images\Home\noaccess.png" />
+    <None Include="wwwroot\Images\JM\button.png" />
+    <None Include="wwwroot\Images\Logon\login_image_500x460.png" />
+    <None Include="wwwroot\Images\PRM\Barcode.png" />
+    <None Include="wwwroot\Images\RC\report_info.png" />
+    <None Include="wwwroot\Images\RDM\icons.png" />
+    <None Include="wwwroot\Images\RDM\loading_24x24.gif" />
+    <None Include="wwwroot\Scripts\3rd\jquery-3.5.1.js" />
+    <None Include="wwwroot\Scripts\3rd\jquery-3.5.1.min.js" />
+    <None Include="wwwroot\Scripts\3rd\jquery-ui-draggable\jquery-ui.js" />
+    <None Include="wwwroot\Scripts\3rd\jquery-ui.js" />
+    <None Include="wwwroot\Scripts\3rd\jquery-ui.min.js" />
+    <None Include="wwwroot\Scripts\3rd\jquery.base64.js" />
+    <None Include="wwwroot\Scripts\3rd\jquery.contextmenu.r2.packed.js" />
+    <None Include="wwwroot\Scripts\3rd\jquery.fileDownload.js" />
+    <None Include="wwwroot\Scripts\3rd\jquery.form.js" />
+    <None Include="wwwroot\Scripts\3rd\jquery.mousewheel.js" />
+    <None Include="wwwroot\Scripts\3rd\jquery.validate.unobtrusive.js" />
+    <None Include="wwwroot\Scripts\3rd\jquery.validate.unobtrusive.min.js" />
+    <None Include="wwwroot\Scripts\3rd\knockout-3.5.1.js" />
+    <None Include="wwwroot\Scripts\3rd\knockout.mapping-latest.js" />
+    <None Include="wwwroot\Scripts\3rd\knockout.validation.js" />
+    <None Include="wwwroot\Scripts\3rd\knockout.validation.min.js" />
+    <None Include="wwwroot\Scripts\3rd\knockout.validation.min.js.map" />
+    <None Include="wwwroot\Scripts\Base\aui.custom.js" />
+    <None Include="wwwroot\Scripts\Base\aui.i18n.js" />
+    <None Include="wwwroot\Scripts\Base\core.js" />
+    <None Include="wwwroot\Scripts\Base\core.react.js" />
+    <None Include="wwwroot\Scripts\Base\FetchUtility.js" />
+    <None Include="wwwroot\Scripts\Base\jquery.extend.js" />
+    <None Include="wwwroot\Scripts\Base\permissionManager.js" />
+    <None Include="wwwroot\Scripts\Base\prototype.extend.js" />
+    <None Include="wwwroot\Scripts\Base\rm.tabs.js" />
+    <None Include="wwwroot\Scripts\Base\rm.validation.js" />
+    <None Include="wwwroot\Scripts\Home\home.js" />
+    <None Include="wwwroot\Scripts\Logon\logon.js" />
+    <None Include="wwwroot\Scripts\Logon\sso.js" />
+    <None Include="wwwroot\Scripts\RC\auifw.chart.js" />
+    <None Include="wwwroot\Scripts\RC\dashboard.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="Config\Bulk Create template.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Config\Classification Scheme Template.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </None>
+    <None Update="Config\Hold import template.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </None>
+	  <None Update="Config\Workplace Hold import template.csv">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </None>
+	  <None Update="Config\emailVelocityTemplate\invitation_email_bottom_775x30.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Config\emailVelocityTemplate\invitation_email_top_775x96.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Config\related-records-app.sppkg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Config\related-records-spse-app.sppkg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Config\AvePointRelatedRecordsSPSESolution.wsp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Properties\launchSettings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>..\DocaveReference\DocAveStandard.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <Target Condition="'$(Configuration)' == 'Debug'" Name="CopyAppSettings" BeforeTargets="PrepareForBuild">
+    <Copy SourceFiles="$(ProjectDir)..\build\AppConfig\appsettings.json" DestinationFolder="$(ProjectDir)" />
+  </Target>
+  <PropertyGroup Condition="'$(Configuration)'!='DEBUG'">
+    <CopyBadgeCoreFiles Condition="'$(CopyBadgeCoreFiles)' == ''">false</CopyBadgeCoreFiles>
+    <CopyHarpyLibraryFiles Condition="'$(CopyHarpyLibraryFiles)' == ''">false</CopyHarpyLibraryFiles>
+  </PropertyGroup>
+  <Target Name="PostCopyHarpyCoreFilesAfterBuild" AfterTargets="Build">
+    <ItemGroup>
+      <HarpyPackageCoreFiles Include="$(TargetDir)lib\Harpy1.0\Harpy.dll" />
+    </ItemGroup>
+    <Copy SourceFiles="@(HarpyPackageCoreFiles)" DestinationFolder="$(TargetDir)" SkipUnchangedFiles="false" Condition="Exists(@(HarpyPackageCoreFiles))" />
+    <Copy SourceFiles="@(HarpyPackageCoreFiles)" DestinationFolder="$(PublishDir)" SkipUnchangedFiles="false" Condition="Exists(@(HarpyPackageCoreFiles))" />
+  </Target>
+  <Target Name="PostCopyHarpyLibraryFilesAfterBuild" AfterTargets="Build">
+    <ItemGroup>
+      <HarpyPackageLibraryFiles Include="$(TargetDir)lib\**\*" />
+    </ItemGroup>
+    <Copy SourceFiles="@(HarpyPackageLibraryFiles)" DestinationFolder="$(PublishDir)\lib\%(RecursiveDir)" SkipUnchangedFiles="false" Condition="Exists(@(HarpyPackageLibraryFiles))" />
+  </Target>
+</Project>

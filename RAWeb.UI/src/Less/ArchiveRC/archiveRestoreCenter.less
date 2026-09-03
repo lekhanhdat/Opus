@@ -1,0 +1,165 @@
+#rmRestoreCenter {
+    .ra-header {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .ra-pager-label {
+        line-height: 35px !important;
+    }
+
+    .ra-section {
+        box-shadow: none;
+        border: 1px solid #dae0e2;
+        border-radius: 8px;
+    }
+
+    .ra-main-navbar {
+        padding: 0 0 16px 0;
+        border-top: 0;
+
+        #crm-menu {
+            display: flex;
+            column-gap: 8px;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+    }
+
+    .reco-az-paginate {
+        height: 32px;
+        display: flex;
+        align-items: center;
+      }
+    
+      .reco-az-paginate-rows {
+        margin-right: 12px;
+    
+        >span {
+            margin-right: 8px;
+        }
+      }
+
+    .ra-main-table {
+        padding: 0;
+    }
+
+    .ra-main-footer {
+        height: 32px;
+        display: flex;
+        justify-content: end;
+        padding: 0 !important;
+        margin-top: 16px;
+    }
+
+    .ra-rc-search {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(200px, 1fr));
+        gap: 16px;
+    }
+
+    .ra-rc-search-title {
+        margin-bottom: 8px;
+        font: normal normal 600 13px/18px "Open Sans", sans-serif;
+        color: #323E4D;
+    }
+
+    .ra-searchtype-link {
+        width: fit-content;
+        color: #0072D0;;
+        font: italic normal normal 13px/18px "Open Sans", sans-serif;
+        text-decoration: underline;
+        cursor: pointer;
+    }
+
+    .ra-foot-btns {
+        margin-top: 24px;
+    }
+
+    #raRestoreSearchBtn {
+      .button.button-button.button-primary span::before {
+        color: #fff !important;
+      }
+    }
+}
+
+#restorePanel,
+#raAdvanceRestorePanel {
+    .rc-panel-content {
+        margin-bottom: 24px;
+        font-size: 13px;
+    }
+
+    .rc-panel-title {
+        font: normal normal 600 13px/18px "Open Sans", sans-serif;
+        color: #323E4D;
+    }
+
+    .rc-user-checkbox {
+      margin-top: 4px;
+      margin-bottom: 4px;
+    }
+
+    .rc-user-people-picker {
+      margin-top: 8px;
+      margin-left: 24px;
+    }
+
+    .rc-tree-container {
+        border: 1px solid #cccccc;
+        height: 200px;
+        overflow: auto;
+        margin-top: 8px;
+    }
+
+    .destination-tab {
+        padding: 0;
+        margin-top: 8px;
+        .ra-tree {
+            padding: 0;
+
+            .ra-tree-list {
+                margin-top: 0;           
+            }
+        }
+    }
+
+    .location-validate-msg {
+        margin-top: 8px;
+        font-size: 14px;
+    }
+
+    .impact-list {
+        margin: 8px -12px 24px;
+
+        &::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+    }
+
+    .impact-item {
+        margin-bottom: 4px;
+    }
+
+    .impact-label {
+        background-color: #f2f3f4;
+        padding: 8px;
+        font-size: 13px;
+        font-weight: 600;
+    }
+
+    .impact-value {
+        font-size: 13px;
+        padding: 8px;
+        font-weight: 500;
+    }
+}
+
+#raSiteMappingPanel, #raWhitelistPanel {
+  #crm-menu {
+    display: flex;
+    gap: 8px;
+  }
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+@*Covered by AvePoint copyright and license agreement*@
+<html lang="en-US">
+<head>
+    <title></title>
+    <style type="text/css">
+        p {
+            margin: 0;
+            padding: 0;
+        }
+
+        .eContent {
+            font-family: 'segoe ui', sans-serif;
+            font-size: 14px;
+            font-weight: 10;
+            margin-bottom: 8px;
+        }
+
+        .requestLink {
+            display: inline;
+            margin-right: 3px;
+        }
+
+        .manualLink {
+            display: inline;
+        }
+
+        .requestLink a, .manualLink a {
+            color: #3572b0;
+            text-decoration: none;
+        }
+
+        .requestLink a:focus, a:hover, a:active {
+            text-decoration: underline;
+            color: #600;
+        }
+
+        .manualLink a:focus, a:hover, a:active {
+            text-decoration: underline;
+            color: #600;
+        }
+
+        a {
+            text-decoration: none;
+         }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="logoContainer" style="width: 775px;display:none;">
+        <img id="logo" src="cid:weblogo" style="width: 775px;height: 96px;" alt="logo"/>
+    </div>
+    <br />
+    @if (!String.IsNullOrEmpty(Model.Title))
+    {
+        <div style="font-family:arial, sans-serif;font-weight:bold;font-size:20px;">@Model.Title</div>
+        <br />
+    }
+    @Model.Body
+    <div id="copyright"></div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Common\M365Wrapper\WrapperBackup\M365.Wrapper.Backup.csproj" />
+    <ProjectReference Include="..\Common\M365Wrapper\WrapperCommon\M365.Wrapper.Common.csproj" />
+    <ProjectReference Include="..\Media\Media.Common\Media.Common.csproj" />
+    <ProjectReference Include="..\Media\Media.Core.IO\Media.Core.IO.csproj" />
+    <ProjectReference Include="..\Media\Media.DataIO\Media.DataIO.csproj" />
+    <ProjectReference Include="..\Media\Media.Service.ApplicationModel\Media.Service.ApplicationModel.csproj" />
+    <ProjectReference Include="..\Media\Media.Service.DomainModel\Media.Service.DomainModel.csproj" />
+    <ProjectReference Include="..\Media\metadata\metadata.csproj" />
+    <ProjectReference Include="..\RAArchiverCommon\RAArchiverCommon.csproj" />
+    <ProjectReference Include="..\RACommon.Global\RACommon.Global.csproj" />
+    <ProjectReference Include="..\RACommon\RACommon.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Aspose.Email" Version="26.5.0" />
+    <PackageReference Include="AWSSDK.S3" Version="4.0.17.3" />
+    <PackageReference Include="log4net" Version="3.3.1" />
+  </ItemGroup>
+
+</Project>

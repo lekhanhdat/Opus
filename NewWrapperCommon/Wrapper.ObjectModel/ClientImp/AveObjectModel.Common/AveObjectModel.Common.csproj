@@ -1,0 +1,718 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{65D422A9-D006-4F96-B970-5DB99A3B9E12}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AvePoint.ObjectModel.Common</RootNamespace>
+    <AssemblyName>AgentCommonObjectModelCommon</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\..\bin\Agent\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;PerformaceLog</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <WarningsAsErrors>0168</WarningsAsErrors>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <CodeAnalysisRuleSet>..\..\..\Wrapper\Wrapper.Common\RolesSet\WrapperRuleSet.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\..\bin\Agent\Release\</OutputPath>
+    <DefineConstants>TRACE;CODE_ANALYSIS,PerformaceLog</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'DebugWithCodeAnaylysis|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\DebugWithCodeAnaylysis\</OutputPath>
+    <DefineConstants>CODE_ANALYSIS;TRACE;DEBUG;PerformaceLog</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <WarningsAsErrors>0168</WarningsAsErrors>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+    <CodeAnalysisLogFile>..\..\..\..\bin\Debug\AgentCommonObjectModelCommon.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>..\..\..\Wrapper\Wrapper.Common\RolesSet\WrapperRuleSet.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'DebugWithoutUnitTest|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\DebugWithoutUnitTest\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;PerformaceLog</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <WarningsAsErrors>0168</WarningsAsErrors>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>..\..\..\Wrapper\Wrapper.Common\RolesSet\WrapperRuleSet.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DnsClient, Version=1.8.0.0, Culture=neutral, PublicKeyToken=4574bb5573c51424, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\Packages\DnsClient.1.8.0\lib\net472\DnsClient.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlAgilityPack, Version=1.12.4.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\Packages\HtmlAgilityPack.1.12.4\lib\Net45\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Azure.ActiveDirectory.Client.Framework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\Packages\Microsoft.Azure.ActiveDirectory.Client.Framework.1.0.8362.1\lib\Microsoft.Azure.ActiveDirectory.Client.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Azure.ActiveDirectory.GraphClient, Version=2.1.10.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\Packages\Microsoft.Azure.ActiveDirectory.GraphClient.2.1.1\lib\portable-net4+sl5+win+wpa+wp8\Microsoft.Azure.ActiveDirectory.GraphClient.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Data.Edm, Version=5.8.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\Packages\Microsoft.Data.Edm.5.8.4\lib\net40\Microsoft.Data.Edm.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.OData, Version=5.8.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\Packages\Microsoft.Data.OData.5.8.4\lib\net40\Microsoft.Data.OData.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.Services.Client, Version=5.8.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\Packages\Microsoft.Data.Services.Client.5.8.4\lib\net40\Microsoft.Data.Services.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration, Version=10.0.0.2, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\Packages\Microsoft.Extensions.Configuration.10.0.2\lib\net462\Microsoft.Extensions.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.Abstractions, Version=10.0.0.2, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\Packages\Microsoft.Extensions.Configuration.Abstractions.10.0.2\lib\net462\Microsoft.Extensions.Configuration.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.Binder, Version=10.0.0.2, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\Packages\Microsoft.Extensions.Configuration.Binder.10.0.2\lib\net462\Microsoft.Extensions.Configuration.Binder.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.FileProviders.Abstractions, Version=10.0.0.2, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\Packages\Microsoft.Extensions.FileProviders.Abstractions.10.0.2\lib\net462\Microsoft.Extensions.FileProviders.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Primitives, Version=10.0.0.2, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\Packages\Microsoft.Extensions.Primitives.10.0.2\lib\net462\Microsoft.Extensions.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Identity.Client, Version=4.81.0.0, Culture=neutral, PublicKeyToken=0a613f4dd989e8ae, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\Packages\Microsoft.Identity.Client.4.81.0\lib\net472\Microsoft.Identity.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Abstractions, Version=8.15.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\Packages\Microsoft.IdentityModel.Abstractions.8.15.0\lib\net472\Microsoft.IdentityModel.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Clients.ActiveDirectory, Version=3.19.8.16603, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\Packages\Microsoft.IdentityModel.Clients.ActiveDirectory.3.19.8\lib\net45\Microsoft.IdentityModel.Clients.ActiveDirectory.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Clients.ActiveDirectory.Platform, Version=3.19.8.16603, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\Packages\Microsoft.IdentityModel.Clients.ActiveDirectory.3.19.8\lib\net45\Microsoft.IdentityModel.Clients.ActiveDirectory.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Client.Policy, Version=16.1.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\Packages\Microsoft.SharePointOnline.CSOM.16.1.26712.12000\lib\net45\Microsoft.Office.Client.Policy.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Client.TranslationServices, Version=16.1.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\Packages\Microsoft.SharePointOnline.CSOM.16.1.26712.12000\lib\net45\Microsoft.Office.Client.TranslationServices.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.SharePoint.Tools, Version=16.1.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\Packages\Microsoft.SharePointOnline.CSOM.16.1.26712.12000\lib\net45\Microsoft.Office.SharePoint.Tools.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Online.Administration.Automation.PSModule, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\Packages\Microsoft.Online.Administration.Automation.PSModule.1.0.8362.1\lib\Microsoft.Online.Administration.Automation.PSModule.dll</HintPath>
+      <Aliases>OnlinePSModule</Aliases>
+    </Reference>
+    <Reference Include="Microsoft.Online.Administration.Automation.PSModule.Resources, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\packages\Microsoft.Online.Administration.Automation.PSModule.1.0.8362.1\lib\Microsoft.Online.Administration.Automation.PSModule.Resources.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Online.SharePoint.Client.Tenant, Version=16.1.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\Packages\Microsoft.SharePointOnline.CSOM.16.1.26712.12000\lib\net45\Microsoft.Online.SharePoint.Client.Tenant.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ProjectServer.Client, Version=16.1.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\Packages\Microsoft.SharePointOnline.CSOM.16.1.26712.12000\lib\net45\Microsoft.ProjectServer.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Client, Version=16.1.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\Packages\Microsoft.SharePointOnline.CSOM.16.1.26712.12000\lib\net45\Microsoft.SharePoint.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Client.DocumentManagement, Version=16.1.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\Packages\Microsoft.SharePointOnline.CSOM.16.1.26712.12000\lib\net45\Microsoft.SharePoint.Client.DocumentManagement.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Client.Publishing, Version=16.1.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\Packages\Microsoft.SharePointOnline.CSOM.16.1.26712.12000\lib\net45\Microsoft.SharePoint.Client.Publishing.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Client.Runtime, Version=16.1.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\Packages\Microsoft.SharePointOnline.CSOM.16.1.26712.12000\lib\net45\Microsoft.SharePoint.Client.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Client.Search, Version=16.1.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\Packages\Microsoft.SharePointOnline.CSOM.16.1.26712.12000\lib\net45\Microsoft.SharePoint.Client.Search.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Client.Search.Applications, Version=16.1.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\Packages\Microsoft.SharePointOnline.CSOM.16.1.26712.12000\lib\net45\Microsoft.SharePoint.Client.Search.Applications.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Client.Taxonomy, Version=16.1.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\Packages\Microsoft.SharePointOnline.CSOM.16.1.26712.12000\lib\net45\Microsoft.SharePoint.Client.Taxonomy.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Client.UserProfiles, Version=16.1.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\Packages\Microsoft.SharePointOnline.CSOM.16.1.26712.12000\lib\net45\Microsoft.SharePoint.Client.UserProfiles.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Client.WorkflowServices, Version=16.1.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\Packages\Microsoft.SharePointOnline.CSOM.16.1.26712.12000\lib\net45\Microsoft.SharePoint.Client.WorkflowServices.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Win32.Registry, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\Packages\Microsoft.Win32.Registry.5.0.0\lib\net461\Microsoft.Win32.Registry.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\Packages\Newtonsoft.Json.13.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NintexO365API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=fffb45e56dd478e3, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\Packages\NintexO365API.1.2.0\lib\net45\NintexO365API.dll</HintPath>
+    </Reference>
+    <Reference Include="Office365Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=fffb45e56dd478e3, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\Packages\Office365Api.2.1.1\lib\net461\Office365Api.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.5.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\Packages\System.Buffers.4.6.1\lib\net462\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=10.0.0.3, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\Packages\System.Diagnostics.DiagnosticSource.10.0.3\lib\net462\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Formats.Asn1, Version=10.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\Packages\System.Formats.Asn1.10.0.2\lib\net462\System.Formats.Asn1.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IdentityModel" />
+    <Reference Include="System.Memory, Version=4.0.5.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\Packages\System.Memory.4.6.3\lib\net462\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.6.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\Packages\System.Numerics.Vectors.4.6.1\lib\net462\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\Packages\System.Runtime.CompilerServices.Unsafe.6.1.2\lib\net462\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security.AccessControl, Version=6.0.0.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\Packages\System.Security.AccessControl.6.0.1\lib\net461\System.Security.AccessControl.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Principal.Windows, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\Packages\System.Security.Principal.Windows.5.0.0\lib\net461\System.Security.Principal.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Spatial, Version=5.8.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\Packages\System.Spatial.5.8.4\lib\net40\System.Spatial.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin\AveSiteAdministration.cs" />
+    <Compile Include="Alert\AveAlert.cs" />
+    <Compile Include="Alert\AveAlertCollection.cs" />
+    <Compile Include="Alert\AveAlertTemplate.cs" />
+    <Compile Include="App\AveApp.cs" />
+    <Compile Include="App\AveAppCatalog.cs" />
+    <Compile Include="App\AveAppInstance.cs" />
+    <Compile Include="App\AveAppSerializer.cs" />
+    <Compile Include="Attachment\AveAttachment.cs" />
+    <Compile Include="Attachment\AveAttachmentCollection.cs" />
+    <Compile Include="Audit\AveAudit.cs" />
+    <Compile Include="AuthenticationProvider\AveFormsAuthenticationProvider.cs" />
+    <Compile Include="Authetication\AuthenMethod\ADFSAuthenticationProvider.cs" />
+    <Compile Include="Authetication\AuthenMethod\OnlineGraphAuthenticationProvider.cs" />
+    <Compile Include="Authetication\AuthenticationHandler.cs" />
+    <Compile Include="Authetication\Model\AuthenticationMode.cs" />
+    <Compile Include="Authetication\AuthenMethod\ClaimsAuthenticationProvider.cs" />
+    <Compile Include="Authetication\AuthenMethod\FormAuthenticationProvider.cs" />
+    <Compile Include="Authetication\IAuthenticationProvider.cs" />
+    <Compile Include="Authetication\AuthenMethod\OnlineAuthenticationProvider.cs" />
+    <Compile Include="Authetication\AuthenMethod\WindowsAuthenticationProvider.cs" />
+    <Compile Include="Authetication\Model\AuthenticationResult.cs" />
+    <Compile Include="Authetication\RegionValidation.cs" />
+    <Compile Include="AveAbstractCommonCollection.cs" />
+    <Compile Include="AveAbstractLazyCollection.cs" />
+    <Compile Include="AzurePowerShell\AveAzurePowerShellRequest.cs" />
+    <Compile Include="AveContentReplacer.cs" />
+    <Compile Include="ChangeLog\AveChange.cs" />
+    <Compile Include="ChangeLog\AveChangeAlert.cs" />
+    <Compile Include="ChangeLog\AveChangeCollection.cs" />
+    <Compile Include="ChangeLog\AveChangeContentType.cs" />
+    <Compile Include="ChangeLog\AveChangeField.cs" />
+    <Compile Include="ChangeLog\AveChangeFile.cs" />
+    <Compile Include="ChangeLog\AveChangeFolder.cs" />
+    <Compile Include="ChangeLog\AveChangeGroup.cs" />
+    <Compile Include="ChangeLog\AveChangeItem.cs" />
+    <Compile Include="ChangeLog\AveChangeList.cs" />
+    <Compile Include="ChangeLog\AveChangeQuery.cs" />
+    <Compile Include="AveClientCacheHandler.cs" />
+    <Compile Include="AveClientObject.cs" />
+    <Compile Include="AveClientObjectData.cs" />
+    <Compile Include="AveClientObjectModelFactory.cs" />
+    <Compile Include="AveClientRequest.cs" />
+    <Compile Include="ChangeLog\AveChangeSite.cs" />
+    <Compile Include="ChangeLog\AveChangeToken.cs" />
+    <Compile Include="ChangeLog\AveChangeUser.cs" />
+    <Compile Include="ChangeLog\AveChangeView.cs" />
+    <Compile Include="ChangeLog\AveChangeWeb.cs" />
+    <Compile Include="Core\AveWrapperAPIUtility.cs" />
+    <Compile Include="Field\AveFieldTypeDefinition.cs" />
+    <Compile Include="Field\AveFieldWorkflowStatus.cs" />
+    <Compile Include="Field\AveOutcomeChoiceField.cs" />
+    <Compile Include="Item\AveDocumentSet.cs" />
+    <Compile Include="Item\AveListItemComplianceInfo.cs" />
+    <Compile Include="Item\SharePointDataProcessorPostAction.cs" />
+    <Compile Include="List\AveComplianceTag.cs" />
+    <Compile Include="List\AveInformationRightsManagementSettings.cs" />
+    <Compile Include="Office365ApiImplemented\Office365APIHttpWebRequest.cs" />
+    <Compile Include="Office365ApiImplemented\Office365ApiLogger.cs" />
+    <Compile Include="Office365ApiImplemented\WrapperHttpWebRequestProvider.cs" />
+    <Compile Include="Office\AveOMetadataDefaults.cs" />
+    <Compile Include="Office\AveOSocialActor.cs" />
+    <Compile Include="Office\AveOSocialFeed.cs" />
+    <Compile Include="Office\AveOSocialFeedManager.cs" />
+    <Compile Include="Office\AveOSocialFeedOptions.cs" />
+    <Compile Include="Office\AveOSocialPost.cs" />
+    <Compile Include="Office\AveOSocialPostActorInfo.cs" />
+    <Compile Include="Office\AveOSocialPostCreationData.cs" />
+    <Compile Include="Office\AveOSocialPostReference.cs" />
+    <Compile Include="Office\AveOSocialThread.cs" />
+    <Compile Include="Office\AveProfileLoader.cs" />
+    <Compile Include="Office\AveUserProfileSerializer.cs" />
+    <Compile Include="Office\AveOAudience.cs" />
+    <Compile Include="Office\AveOAudienceCollection.cs" />
+    <Compile Include="Office\AveOAudienceManager.cs" />
+    <Compile Include="Office\AveOSocialComment.cs" />
+    <Compile Include="Office\AveOSocialCommentManager.cs" />
+    <Compile Include="AveDiscoveryQuery.cs" />
+    <Compile Include="AveRequestInterceptor.cs" />
+    <Compile Include="AveSiteService.cs" />
+    <Compile Include="AveSPServerVersion.cs" />
+    <Compile Include="AveSPCommonUtility.cs" />
+    <Compile Include="Broswer\AveBrowserQuery.cs" />
+    <Compile Include="ContentType\AveXmlDocumentCollection.cs" />
+    <Compile Include="Context\AveHelpContextManager.cs" />
+    <Compile Include="Context\AveQueryProvider.cs" />
+    <Compile Include="EventReceiver\AveEventReceiverDefinition.cs" />
+    <Compile Include="EventReceiver\AveEventReceiverDefinitionCollection.cs" />
+    <Compile Include="EventReceiver\AveItemEventReceiver.cs" />
+    <Compile Include="Feature\AveFeature.cs" />
+    <Compile Include="Feature\AveFeatureCollection.cs" />
+    <Compile Include="Feature\AveFeatureDefinition.cs" />
+    <Compile Include="Feature\AveFeatureDefinitionCollection.cs" />
+    <Compile Include="Feature\AveFeatureDependency.cs" />
+    <Compile Include="Feature\AveFeatureDependencyCollection.cs" />
+    <Compile Include="Feature\AveFeatureImport.cs" />
+    <Compile Include="Feature\AveFeatureSerializer.cs" />
+    <Compile Include="Field\AveFieldAttachments.cs" />
+    <Compile Include="Field\AveFieldBoolean.cs" />
+    <Compile Include="Field\AveFieldCalculated.cs" />
+    <Compile Include="Field\AveFieldChoice.cs" />
+    <Compile Include="Field\AveFieldComputed.cs" />
+    <Compile Include="Field\AveFieldCurrency.cs" />
+    <Compile Include="Field\AveFieldDateTime.cs" />
+    <Compile Include="Field\AveFieldLink.cs" />
+    <Compile Include="Field\AveFieldLinkCollection.cs" />
+    <Compile Include="Field\AveFieldLookup.cs" />
+    <Compile Include="Field\AveFieldLookupValue.cs" />
+    <Compile Include="Field\AveFieldLookupValueCollection.cs" />
+    <Compile Include="Field\AveFieldModStat.cs" />
+    <Compile Include="Field\AveFieldMultiChoice.cs" />
+    <Compile Include="Field\AveFieldMultiChoiceValue.cs" />
+    <Compile Include="Field\AveFieldMultiLineText.cs" />
+    <Compile Include="Field\AveFieldNumber.cs" />
+    <Compile Include="Field\AveFieldRatingScale.cs" />
+    <Compile Include="Field\AveFieldStringValues.cs" />
+    <Compile Include="Field\AveFieldText.cs" />
+    <Compile Include="Field\AveFieldUrl.cs" />
+    <Compile Include="Field\AveFieldUrlValue.cs" />
+    <Compile Include="Field\AveFieldUser.cs" />
+    <Compile Include="Field\AveFieldUserValue.cs" />
+    <Compile Include="Field\AveFieldUserValueCollection.cs" />
+    <Compile Include="Field\AveRelatedField.cs" />
+    <Compile Include="Field\AveRelatedFieldCollection.cs" />
+    <Compile Include="Field\AveTaxonomyField.cs" />
+    <Compile Include="Field\AveTaxonomyFieldValue.cs" />
+    <Compile Include="Field\AveTaxonomyFieldValueCollection.cs" />
+    <Compile Include="Iis\AveIisSettings.cs" />
+    <Compile Include="Item\AveCheckedOutFile.cs" />
+    <Compile Include="Item\AveDocumentSerializer.cs" />
+    <Compile Include="Item\AveFile.cs" />
+    <Compile Include="Item\AveFileCollection.cs" />
+    <Compile Include="Item\AveFileVersion.cs" />
+    <Compile Include="Item\AveFileVersionCollection.cs" />
+    <Compile Include="Item\AveFolder.cs" />
+    <Compile Include="Item\AveFolderCollection.cs" />
+    <Compile Include="Item\AveItem.cs" />
+    <Compile Include="Item\AveListItem.cs" />
+    <Compile Include="Item\AveListItemCollection.cs" />
+    <Compile Include="Item\AveListItemCollectionPosition.cs" />
+    <Compile Include="Item\AveListItemSerializer.cs" />
+    <Compile Include="Item\AveListItemVersion.cs" />
+    <Compile Include="Item\AveListItemVersionCollection.cs" />
+    <Compile Include="Field\AveField.cs" />
+    <Compile Include="Field\AveFieldCollection.cs" />
+    <Compile Include="Item\AveModerationInformation.cs" />
+    <Compile Include="List\AveDocumentLibrary.cs" />
+    <Compile Include="List\AveForm.cs" />
+    <Compile Include="List\AveFormCollection.cs" />
+    <Compile Include="List\AveList.cs" />
+    <Compile Include="List\AveListCollection.cs" />
+    <Compile Include="List\AveListDataSource.cs" />
+    <Compile Include="List\AveListTemplate.cs" />
+    <Compile Include="List\AveListTemplateCollection.cs" />
+    <Compile Include="List\AveLegacyListTemplate.cs" />
+    <Compile Include="Mobile\AveMobileUtility.cs" />
+    <Compile Include="Navigation\AveNavigation.cs" />
+    <Compile Include="Navigation\AveNavigationImport.cs" />
+    <Compile Include="Navigation\AveNavigationNode.cs" />
+    <Compile Include="Navigation\AveNavigationNodeCollection.cs" />
+    <Compile Include="Navigation\AveNavigationSerializer.cs" />
+    <Compile Include="Office\AveOBestBet.cs" />
+    <Compile Include="Office\AveOBestBetCollection.cs" />
+    <Compile Include="Office\AveOColleague.cs" />
+    <Compile Include="Office\AveOColleagueManager.cs" />
+    <Compile Include="Office\AveOKeyword.cs" />
+    <Compile Include="Office\AveOKeywordCollection.cs" />
+    <Compile Include="Office\AveOKeywords.cs" />
+    <Compile Include="Office\AveOHold.cs" />
+    <Compile Include="Office\AveOLocalizedStringManager.cs" />
+    <Compile Include="Office\AveOMemberGroup.cs" />
+    <Compile Include="Office\AveOMemberGroupManager.cs" />
+    <Compile Include="Office\AveOMembership.cs" />
+    <Compile Include="Office\AveOMembershipManager.cs" />
+    <Compile Include="Office\AveOMetadataNavigationHierarchy.cs" />
+    <Compile Include="Office\AveOMetadataNavigationItem.cs" />
+    <Compile Include="Office\AveOMetadataNavigationKeyFilter.cs" />
+    <Compile Include="Office\AveOMetadataNavigationSettings.cs" />
+    <Compile Include="Office\AveOPrivacyPolicyItem.cs" />
+    <Compile Include="Office\AveOProfileSubtypeProperty.cs" />
+    <Compile Include="Office\AveOProfileSubtypePropertyManager.cs" />
+    <Compile Include="Office\AveOProperty.cs" />
+    <Compile Include="Office\AveOPropertyCollection.cs" />
+    <Compile Include="Office\AveOQuickLink.cs" />
+    <Compile Include="Office\AveOQuickLinkManager.cs" />
+    <Compile Include="Office\AveORemoteScopes.cs" />
+    <Compile Include="Office\AveOScope.cs" />
+    <Compile Include="Office\AveOScopeCollection.cs" />
+    <Compile Include="Office\AveOScopeDisplayGroup.cs" />
+    <Compile Include="Office\AveOScopeDisplayGroupCollection.cs" />
+    <Compile Include="Office\AveOScopesManager.cs" />
+    <Compile Include="Office\AveOScopesUtilities.cs" />
+    <Compile Include="Office\AveOSearchServiceApplicationProxy.cs" />
+    <Compile Include="Office\AveOSocialTag.cs" />
+    <Compile Include="Office\AveOSocialTagManager.cs" />
+    <Compile Include="Office\AveOSynonym.cs" />
+    <Compile Include="Office\AveOSynonymCollection.cs" />
+    <Compile Include="Office\AveORecords.cs" />
+    <Compile Include="Office\AveOUserProfile.cs" />
+    <Compile Include="Office\AveOUserProfileManager.cs" />
+    <Compile Include="Office\AveOUserProfileValueCollection.cs" />
+    <Compile Include="Portal\AveRatingsSettingsPage.cs" />
+    <Compile Include="Portal\AveReputationHelper.cs" />
+    <Compile Include="Project\AveProject.cs" />
+    <Compile Include="Project\AveProjectCollection.cs" />
+    <Compile Include="Project\AveProjectSerializer.cs" />
+    <Compile Include="Project\AveProjectServer.cs" />
+    <Compile Include="Project\EnterpriseProjectTypes\AveProjectDetailPage.cs" />
+    <Compile Include="Project\EnterpriseProjectTypes\AveProjectDetailPageCollection.cs" />
+    <Compile Include="Project\EnterpriseProjectTypes\AveProjectEnterpriseProjectType.cs" />
+    <Compile Include="Project\EnterpriseProjectTypes\AveProjectEnterpriseProjectTypeCollection.cs" />
+    <Compile Include="Project\EnterpriseResource\AveProjectEnterpriseResource.cs" />
+    <Compile Include="Project\EnterpriseResource\AveProjectEnterpriseResourceCollection.cs" />
+    <Compile Include="Project\EnterpriseResource\AveProjectStatusAssignment.cs" />
+    <Compile Include="Project\EnterpriseResource\AveProjectStatusAssignmentCollection.cs" />
+    <Compile Include="Project\ProjectCalendarException\AveProjectCalendarException.cs" />
+    <Compile Include="Project\ProjectCalendarException\AveProjectCalendarExceptionCollection.cs" />
+    <Compile Include="Project\ProjectCalendar\AveProjectCalendar.cs" />
+    <Compile Include="Project\ProjectCalendar\AveProjectCalendarCollection.cs" />
+    <Compile Include="Project\ProjectCustomField\AveProjectCustomField.cs" />
+    <Compile Include="Project\ProjectCustomField\AveProjectCustomFieldCollection.cs" />
+    <Compile Include="Project\ProjectCustomField\AveProjectEntityType.cs" />
+    <Compile Include="Project\ProjectLookupTable\AveProjectLookupEntry.cs" />
+    <Compile Include="Project\ProjectLookupTable\AveProjectLookupEntryCollection.cs" />
+    <Compile Include="Project\ProjectLookupTable\AveProjectLookupMask.cs" />
+    <Compile Include="Project\ProjectLookupTable\AveProjectLookupTable.cs" />
+    <Compile Include="Project\ProjectLookupTable\AveProjectLookupTableCollection.cs" />
+    <Compile Include="Project\ProjectPhase\AveProjectPhase.cs" />
+    <Compile Include="Project\ProjectPhase\AveProjectPhaseCollection.cs" />
+    <Compile Include="Project\ProjectStage\AveProjectStage.cs" />
+    <Compile Include="Project\ProjectStage\AveProjectStageCollection.cs" />
+    <Compile Include="Project\ProjectStage\AveProjectStageCustomField.cs" />
+    <Compile Include="Project\ProjectStage\AveProjectStageCustomFieldCollection.cs" />
+    <Compile Include="Project\ProjectStage\AveProjectStageDetailPage.cs" />
+    <Compile Include="Project\ProjectStage\AveProjectStageDetailPageCollection.cs" />
+    <Compile Include="Project\ProjectTask\AveProjectTask.cs" />
+    <Compile Include="Project\ProjectTask\AveProjectTaskCollection.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Publishing\AveInheritableStringProperty.cs" />
+    <Compile Include="Publishing\AveNavigationSiteMapNode.cs" />
+    <Compile Include="Publishing\AvePageLayout.cs" />
+    <Compile Include="Publishing\AvePublishing.cs" />
+    <Compile Include="Publishing\AvePublishingPage.cs" />
+    <Compile Include="Publishing\AvePublishingWeb.cs" />
+    <Compile Include="Quota\AveQuota.cs" />
+    <Compile Include="RecycleBin\AveRecycleBinItem.cs" />
+    <Compile Include="RecycleBin\AveRecycleBinItemCollection.cs" />
+    <Compile Include="Register\AveRegister.cs" />
+    <Compile Include="Request\AveRequestParameter.cs" />
+    <Compile Include="Resource\AveContentTypeUserResource.cs" />
+    <Compile Include="Resource\AveFieldUserResource.cs" />
+    <Compile Include="Resource\AveListUserResource.cs" />
+    <Compile Include="Resource\AveUserResource.cs" />
+    <Compile Include="Resource\AveWebUserResource.cs" />
+    <Compile Include="Security\AveGroupSerializer.cs" />
+    <Compile Include="Security\AveGroupsSerializer.cs" />
+    <Compile Include="Security\AveO365Group.cs" />
+    <Compile Include="Security\AveO365User.cs" />
+    <Compile Include="Security\AvePricipal.cs" />
+    <Compile Include="Security\AvePrincipalInfo.cs" />
+    <Compile Include="Security\AveRole.cs" />
+    <Compile Include="Security\AveRoleAssignment.cs" />
+    <Compile Include="Security\AveRoleAssignmentCollection.cs" />
+    <Compile Include="Security\AveRoleAssignmentsSerializer.cs" />
+    <Compile Include="Security\AveRoleCollection.cs" />
+    <Compile Include="Security\AveRoleDefinition.cs" />
+    <Compile Include="Security\AveRoleDefinitionBinding.cs" />
+    <Compile Include="Security\AveRoleDefinitionBindingCollection.cs" />
+    <Compile Include="Security\AveRoleDefinitionCollection.cs" />
+    <Compile Include="Security\AveGroup.cs" />
+    <Compile Include="Security\AveGroupCollection.cs" />
+    <Compile Include="Security\AveRolesSerializer.cs" />
+    <Compile Include="Security\AveSecurableObject.cs" />
+    <Compile Include="Security\AveSecurableObjectImpl.cs" />
+    <Compile Include="Security\AveSecurity.cs" />
+    <Compile Include="Security\AveSiteUsersSerializer.cs" />
+    <Compile Include="Security\AveUserIdInfo.cs" />
+    <Compile Include="Security\AveUserSerializer.cs" />
+    <Compile Include="Security\AveWebUsersSerializer.cs" />
+    <Compile Include="Service\AveIisWebServiceApplicationProxy.cs" />
+    <Compile Include="Service\AveServiceApplicationProxy.cs" />
+    <Compile Include="Service\AveServiceApplicationProxyGroup.cs" />
+    <Compile Include="Service\AveServiceContext.cs" />
+    <Compile Include="Service\AveServiceContextScope.cs" />
+    <Compile Include="Service\AveSiteServiceHelper.cs" />
+    <Compile Include="Site\AveEncryptionOption.cs" />
+    <Compile Include="Site\AveSite.cs" />
+    <Compile Include="Site\AveSiteProperties.cs" />
+    <Compile Include="Site\AveSiteSerializer.cs" />
+    <Compile Include="Site\AveSiteSettingSerializer.cs" />
+    <Compile Include="Site\AveWebTemplate.cs" />
+    <Compile Include="Site\AveWebTemplateCollection.cs" />
+    <Compile Include="ContentType\AveContentType.cs" />
+    <Compile Include="ContentType\AveContentTypeCollection.cs" />
+    <Compile Include="ContentType\AveContentTypeId.cs" />
+    <Compile Include="Solution\AveFarmSolutionPackage.cs" />
+    <Compile Include="Solution\AveSolutionLanguagePack.cs" />
+    <Compile Include="Solution\AveSolutionPackage.cs" />
+    <Compile Include="Solution\AveUserSolution.cs" />
+    <Compile Include="Solution\AveUserSolutionCollection.cs" />
+    <Compile Include="Security\AveUser.cs" />
+    <Compile Include="Security\AveUserCollection.cs" />
+    <Compile Include="Taxonomy\AveChangedItem.cs" />
+    <Compile Include="Taxonomy\AveChangedItemCollection.cs" />
+    <Compile Include="Taxonomy\AveLabel.cs" />
+    <Compile Include="Taxonomy\AveLabelCollection.cs" />
+    <Compile Include="Taxonomy\AveMetadataListFieldSettings.cs" />
+    <Compile Include="Taxonomy\AveMetadataServiceApplication.cs" />
+    <Compile Include="Taxonomy\AveMetaDataServiceSerializer.cs" />
+    <Compile Include="Taxonomy\AveTaxonomyGroup.cs" />
+    <Compile Include="Taxonomy\AveTaxonomyGroupCollection.cs" />
+    <Compile Include="Taxonomy\AveTaxonomyGroupSerializer.cs" />
+    <Compile Include="Taxonomy\AveTaxonomyItem.cs" />
+    <Compile Include="Taxonomy\AveTaxonomySession.cs" />
+    <Compile Include="Taxonomy\AveTerm.cs" />
+    <Compile Include="Taxonomy\AveTermCollection.cs" />
+    <Compile Include="Taxonomy\AveTermSerializer.cs" />
+    <Compile Include="Taxonomy\AveTermSet.cs" />
+    <Compile Include="Taxonomy\AveTermSetCollection.cs" />
+    <Compile Include="Taxonomy\AveTermSetItem.cs" />
+    <Compile Include="Taxonomy\AveTermSetSerializer.cs" />
+    <Compile Include="Taxonomy\AveTermStore.cs" />
+    <Compile Include="Taxonomy\AveTermStoreCollection.cs" />
+    <Compile Include="Taxonomy\AveTermStoreSerializer.cs" />
+    <Compile Include="Tenant\AveTenant.cs" />
+    <Compile Include="Tenant\AveLocalTenant.cs" />
+    <Compile Include="Utilities\AveColor.cs" />
+    <Compile Include="Utilities\AveFont.cs" />
+    <Compile Include="Utilities\AveCustomHashtable.cs" />
+    <Compile Include="Utilities\AvePropertyBag.cs" />
+    <Compile Include="Utilities\AveThemeColor.cs" />
+    <Compile Include="Utilities\AveThemeFont.cs" />
+    <Compile Include="Utilities\AveThmxTheme.cs" />
+    <Compile Include="Utilities\AveUtility.cs" />
+    <Compile Include="Utilities\JsonSerializer\AveJsonSerializer.cs" />
+    <Compile Include="Utilities\JsonSerializer\AveJsonUtility.cs" />
+    <Compile Include="View\AveView.cs" />
+    <Compile Include="View\AveViewCollection.cs" />
+    <Compile Include="View\AveViewFieldCollection.cs" />
+    <Compile Include="WebApplication\AvePrefix.cs" />
+    <Compile Include="WebApplication\AvePrefixCollection.cs" />
+    <Compile Include="WebApplication\AveSiteSubscriptionIdentifier.cs" />
+    <Compile Include="WebApplication\AveWebApplication.cs" />
+    <Compile Include="WebPart\AveCommunityWebPart.cs" />
+    <Compile Include="WebPart\AveLimitedWebPartCollection.cs" />
+    <Compile Include="WebPart\AveLimitedWebPartManager.cs" />
+    <Compile Include="WebPart\AveListViewWebPart.cs" />
+    <Compile Include="WebPart\AvePageViewerWebPart.cs" />
+    <Compile Include="WebPart\AveWebPart.cs" />
+    <Compile Include="WebPart\AveXsltListViewWebPart.cs" />
+    <Compile Include="WebPart\AveListFormWebPart.cs" />
+    <Compile Include="WebPart\AveWebPartUrlHanlder.cs" />
+    <Compile Include="Web\AveLanguage.cs" />
+    <Compile Include="Web\AveLanguageCollection.cs" />
+    <Compile Include="Web\AveRegionalSettings.cs" />
+    <Compile Include="Web\AveTimeZone.cs" />
+    <Compile Include="Web\AveWeb.cs" />
+    <Compile Include="Web\AveWebCollection.cs" />
+    <Compile Include="Web\AveWebSerializer.cs" />
+    <Compile Include="Web\AveWebSettingSerializer.cs" />
+    <Compile Include="Workflow\AveFormsServicesWebService.cs" />
+    <Compile Include="Workflow\AveWebPartPagesWebService.cs" />
+    <Compile Include="Workflow\AveWorkflowAssociation.cs" />
+    <Compile Include="Workflow\AveWorkflowAssociationCollection.cs" />
+    <Compile Include="Workflow\AveWorkflowDefinition.cs" />
+    <Compile Include="Workflow\AveWorkflowDefinitionCollection.cs" />
+    <Compile Include="Workflow\AveWorkflowDeploymentService.cs" />
+    <Compile Include="Workflow\AveWorkflowServicesManager.cs" />
+    <Compile Include="Workflow\AveWorkflowSubscription.cs" />
+    <Compile Include="Workflow\AveWorkflowSubscriptionCollection.cs" />
+    <Compile Include="Workflow\AveWorkflowSubscriptionService.cs" />
+    <Compile Include="Workflow\AveWorkflowTemplate.cs" />
+    <Compile Include="Workflow\AveWorkflowTemplateCollection.cs" />
+    <None Include="app.config" />
+    <None Include="DocAveStandard.snk" />
+    <None Include="NintexAPIConfiguration.config" />
+    <None Include="Office365Api.dll.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\GCommon\GCommonContract\DocAve.GCommonContract.csproj">
+      <Project>{361F3C7C-ABBF-42D5-975A-65E4E9866068}</Project>
+      <Name>DocAve.GCommonContract</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\GCommon\GCommonUtility\DocAve.GCommonUtility.csproj">
+      <Project>{7151E862-A761-4A90-ACE6-37D7442047A6}</Project>
+      <Name>DocAve.GCommonUtility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\GCommon\CommonUtility30\DocAve.CommonUtility30.csproj">
+      <Project>{ABF32DB9-9D2A-4F78-96B5-E2B1FAC08658}</Project>
+      <Name>DocAve.CommonUtility30</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Wrapper.Core\Wrapper.Common\Wrapper.Common.csproj">
+      <Project>{9380E15E-5F69-4F2C-889F-E04756F6CCCA}</Project>
+      <Name>Wrapper.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Wrapper.Core\Wrapper.Contract\Wrapper.Contract.csproj">
+      <Project>{b6805753-b35a-4df5-a3a4-27e6868dee09}</Project>
+      <Name>Wrapper.Contract</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Wrapper.Core\Wrapper.CustomUtility\Wrapper.CustomUtility.csproj">
+      <Project>{5FF18312-8DA2-4ABF-BC20-805A18065DB6}</Project>
+      <Name>Wrapper.CustomUtility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Wrapper.Core\Wrapper.Resource\Wrapper.Resource.csproj">
+      <Project>{F977BD26-9DD0-4B6D-95DA-58096DCA1913}</Project>
+      <Name>Wrapper.Resource</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AveClientCompoundRequest\AveClientCompoundRequest.csproj">
+      <Project>{6ADC3017-2885-438A-A963-A4A118C1A589}</Project>
+      <Name>AveClientCompoundRequest</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AveClientOMRequest\AveClientOMRequest.csproj">
+      <Project>{CE99DB75-AAA2-4663-BAB4-6D6133299D00}</Project>
+      <Name>AveClientOMRequest</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AveClientRequest.Common\AveClientRequest.Common.csproj">
+      <Project>{869DEBB8-9BF4-4FA6-8A39-DE588D5BA1F5}</Project>
+      <Name>AveClientRequest.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AveWebServiceRequest\AveWebServiceRequest.csproj">
+      <Project>{50CBEAB6-1A53-4F03-9078-D7E224DAC10C}</Project>
+      <Name>AveWebServiceRequest</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>DocAveStandard.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <Import Project="..\..\..\..\Packages\System.ValueTuple.4.6.2\build\net471\System.ValueTuple.targets" Condition="Exists('..\..\..\..\Packages\System.ValueTuple.4.6.2\build\net471\System.ValueTuple.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\..\..\..\Packages\System.ValueTuple.4.6.2\build\net471\System.ValueTuple.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\..\..\Packages\System.ValueTuple.4.6.2\build\net471\System.ValueTuple.targets'))" />
+  </Target>
+</Project>

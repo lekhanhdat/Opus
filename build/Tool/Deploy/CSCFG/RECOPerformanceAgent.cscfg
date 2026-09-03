@@ -1,0 +1,39 @@
+<ServiceConfiguration xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceConfiguration" serviceName="ScheduleJobCloudService" osFamily="5" osVersion="WA-GUEST-OS-5.41_202003-01" schemaVersion="2015-04.2.6">
+  <Role name="RAScheduleJobWorkerRole">
+    <Instances count="1"/>
+    <ConfigurationSettings>
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="UseDevelopmentStorage=true"/>
+      <Setting name="JobQueueConnectionString" value="Endpoint=sb://recoperformacebus.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=urbNJtagxRVY6GXVeIuf+b6ZniujidWyXCMh2VJiYoo="/>
+      <Setting name="LogStorage" value="RGVmYXVsdEVuZHBvaW50c1Byb3RvY29sPWh0dHBzO0FjY291bnROYW1lPXJlY29wZXJmb3JzdG9yYWdlO0FjY291bnRLZXk9WWVocEh3aDZHMkdlMVpibjlRWVNMczVlSVdaSFVObjFxczVOenVWL0FNVHhoeDNWcTdXZ0N1d2c4ek5KendTT1BmZHZrWHY0VUtNRysvMitCTFZ6M0E9PTtFbmRwb2ludFN1ZmZpeD1jb3JlLndpbmRvd3MubmV0"/>
+      <Setting name="LogContainerName" value="joblogs"/>
+      <Setting name="ReportStorage" value="RGVmYXVsdEVuZHBvaW50c1Byb3RvY29sPWh0dHBzO0FjY291bnROYW1lPXJlY29wZXJmb3JzdG9yYWdlO0FjY291bnRLZXk9WWVocEh3aDZHMkdlMVpibjlRWVNMczVlSVdaSFVObjFxczVOenVWL0FNVHhoeDNWcTdXZ0N1d2c4ek5KendTT1BmZHZrWHY0VUtNRysvMitCTFZ6M0E9PTtFbmRwb2ludFN1ZmZpeD1jb3JlLndpbmRvd3MubmV0"/>
+      <Setting name="ReportFolder" value="C:\RECO_Reports"/>
+      <Setting name="JobQueueName" value="JobQueue"/>
+      <Setting name="ReportContainerName" value="jobreports"/>
+      <Setting name="ConfigDatabaseConnection" value="Server=tcp:recoperformacesql.database.windows.net,1433;Initial Catalog=recopercontroldb;Persist Security Info=False;User ID=testrecordsadmin1;Password=pt{REC0Passw0rd!@};MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"/>
+      <Setting name="RedirectAosLoginUrl" value="Https://test.sharepointguild.com/account/LogOff"/>
+      <Setting name="ControlServiceAddress" value="https://daotestapi.sharepointguild.com/odata"/>
+      <Setting name="PortalApiUrl" value="Https://testapi.sharepointguild.com"/>
+      <Setting name="CertificateThumbprint" value="958B6B5093959E9B3886BC19D5B10A19C417973D"/>
+      <Setting name="HotfixStorageUrl" value="ZG9jYXZlLXhhbTovL2F6dXJlX3ZpbT9hY2Nlc3NQb2ludD1odHRwczovL3JlY28xMDBxYXRlc3QuYmxvYi5jb3JlLndpbmRvd3MubmV0LyZjb250YWluZXJOYW1lPWFnZW50aG90Zml4Jm5hbWU9cmVjbzEwMHFhdGVzdCZzZWNyZXQ9aXNRSjhQSjM3QXFYY0xyL3NjMG9JRjZwYU9oNzNIYUgyZTRuaXM4N3NGTUJNOFBCV2RkanpNTDhDVFlxVTR4dDVOYk5mQlZlVk54ODlmZ1FmbWR5VFFRa2hpemdKY2x6blY1WC8ySXpXSCt1QnV3by9UaFlXNHBFRWZTdW1mdC9PdHpMV1JQdGpnSFpHRWVOT2IxYW1BJTNEJTNE"/>
+      <Setting name="AzureTableConnection" value="RGVmYXVsdEVuZHBvaW50c1Byb3RvY29sPWh0dHBzO0FjY291bnROYW1lPXJlY29wZXJmb3JzdG9yYWdlO0FjY291bnRLZXk9WWVocEh3aDZHMkdlMVpibjlRWVNMczVlSVdaSFVObjFxczVOenVWL0FNVHhoeDNWcTdXZ0N1d2c4ek5KendTT1BmZHZrWHY0VUtNRysvMitCTFZ6M0E9PTtFbmRwb2ludFN1ZmZpeD1jb3JlLndpbmRvd3MubmV0"/>
+      <Setting name="NotificationSetting" value="PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjxOb3RpZmljYXRpb25TZXR0aW5nRHRvIHhtbG5zOnhzZD0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEiIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiPg0KICA8T3V0Z29pbmdNYWlsU2VydmVyPlNNVFAuc2VuZGdyaWQubmV0PC9PdXRnb2luZ01haWxTZXJ2ZXI+DQogIDxTZW5kZXI+UmVjb3Jkc19UZWFtQGF2ZXBvaW50b25saW5lc2VydmljZXMuY29tPC9TZW5kZXI+DQogIDxFeGNoYW5nZVNlcnZlcj5TTVRQLnNlbmRncmlkLm5ldDwvRXhjaGFuZ2VTZXJ2ZXI+DQogIDxVc2VyTmFtZT5SZWNvcmRzX1RlYW1AYXZlcG9pbnRvbmxpbmVzZXJ2aWNlcy5jb208L1VzZXJOYW1lPg0KICA8UGFzc3dvcmQ+bW90aC1KRXVWNjwvUGFzc3dvcmQ+DQogIDxTc2xBdXRoZW50aWNhdGlvbj50cnVlPC9Tc2xBdXRoZW50aWNhdGlvbj4NCiAgPFBvcnQ+NTg3PC9Qb3J0Pg0KICA8U2VjdXJlUGFzc3dvcmRBdXRoZW50aWNhdGlvbj5mYWxzZTwvU2VjdXJlUGFzc3dvcmRBdXRoZW50aWNhdGlvbj4NCjwvTm90aWZpY2F0aW9uU2V0dGluZ0R0bz4="/>
+	  <Setting name="CosmosDBURI" value="https://recoperforcusmosdb.documents.azure.com:443/"/>
+	  <Setting name="CosmosDBSecret" value="RDZaRDlVVm9yeW9oSExHUkdvWVVqdHlvaGVoSmUwbWlDVVgzRDVFd3YyS1Q1azhVVHZVODdEVnRPakxWcE1qdlpuRTd1bU1KQ0s3Vm5jdjlXUWJkZVE9PQ=="/>
+	  <Setting name="DAOKeyVaultUrl" value="https://daomarket.vault.azure.net/"/>
+	  <Setting name="DAOKeyVaultClientId" value="32e00b72-cb44-4212-807f-ecab59a0e822"/>
+	  <Setting name="DAOKeyVaultCertThumbprint" value="A6F2B3046148A581A4B442DC9965FD41C23ED771"/>
+	  <Setting name="SubscriptionId" value="7709d19e-4689-469e-adb0-390fb5a9014e"/>  <Setting name="SubscriptionCertThumbprint" value="958B6B5093959E9B3886BC19D5B10A19C417973D"/> 
+	  <Setting name="MaxBackupItemsThreads" value="25"/>
+	  <Setting name="ReservedInstanceCount" value="2"/>
+	  <Setting name="RealTimeQueueName" value="RealTimeActionQueue"/>
+    </ConfigurationSettings>
+    <Certificates>
+      <Certificate name="CloudRecords Application" thumbprint="958B6B5093959E9B3886BC19D5B10A19C417973D" thumbprintAlgorithm="sha1"/>
+      <Certificate name="DocAveOnline Application" thumbprint="DC895545B9271DDA56ADF6E7AC82E6CFDB457850" thumbprintAlgorithm="sha1"/>
+	  <Certificate name="DocAveOnline KeyVault" thumbprint="A6F2B3046148A581A4B442DC9965FD41C23ED771" thumbprintAlgorithm="sha1"/>
+ 
+  <Certificate name="Subscription Management" thumbprint="958B6B5093959E9B3886BC19D5B10A19C417973D" thumbprintAlgorithm="sha1"/>
+      </Certificates>
+  </Role>
+</ServiceConfiguration>

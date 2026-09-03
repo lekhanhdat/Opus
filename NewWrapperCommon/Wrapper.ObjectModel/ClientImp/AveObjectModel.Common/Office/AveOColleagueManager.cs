@@ -1,0 +1,94 @@
+﻿/********************************************************************
+ *
+ *  PROPRIETARY and CONFIDENTIAL
+ *
+ *  This file is licensed from, and is a trade secret of:
+ *
+ *                   AvePoint, Inc.
+ *                   525 Washington Blvd, Suite 1400
+ *                   Jersey City, NJ 07310
+ *                   United States of America
+ *                   Telephone: +1-201-793-1111
+ *                   WWW: www.avepoint.com
+ *
+ *  Refer to your License Agreement for restrictions on use,
+ *  duplication, or disclosure.
+ *
+ *  RESTRICTED RIGHTS LEGEND
+ *
+ *  Use, duplication, or disclosure by the Government is
+ *  subject to restrictions as set forth in subdivision
+ *  (c)(1)(ii) of the Rights in Technical Data and Computer
+ *  Software clause at DFARS 252.227-7013 (Oct. 1988) and
+ *  FAR 52.227-19 (C) (June 1987).
+ *
+ *  Copyright © 2017-2026 AvePoint® Inc. All Rights Reserved. 
+ *
+ *  Unpublished - All rights reserved under the copyright laws of the United States.
+ */
+
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using AvePoint.Wrapper.Common;
+using AvePoint.Wrapper.Common.Office;
+
+namespace AvePoint.ObjectModel.Common.Office
+{
+    class AveOColleagueManager : AveAbstractCommonCollection<IAveOColleague>, IAveOColleagueManager
+    {
+        private IAveRequest mRequest;
+        private AveOUserProfile mProfile;
+
+        public AveOColleagueManager(IAveRequest request, AveOUserProfile profile,Dictionary<string,object>colleaguesProp) 
+        {
+            mRequest = request;
+            mProfile = profile;
+            base.DataCache.AddPropertyies(colleaguesProp);
+            InitColleagueManager();
+        }
+
+        internal void InitColleagueManager()
+        {
+            List<Dictionary<string, object>> colleagueList = base.DataCache.GetProperty<List<Dictionary<string, object>>>(AveObjectModelConstant.ChildrenProperties);
+            mListData = new List<IAveOColleague>(colleagueList.Count);
+            foreach(Dictionary<string,object>colleagueProp in colleagueList )
+            {
+                AveOColleague colleague = new AveOColleague(this.mRequest, new AveOUserProfile(this.mRequest, null, null, null), colleagueProp);
+                mListData.Add(colleague);
+            }
+        }
+
+        #region IAveOColleagueManager Members
+
+        public IAveOColleague this[IAveOUserProfile userProfile]
+        {
+            get { throw new NotImplementedException(); }
+        }
+
+        public IAveOColleague[] GetItems()
+        {
+            IAveOColleague[]colleagues=new IAveOColleague[mListData.Count];
+            for (int i = 0; i < mListData.Count;i++ )
+            {
+                colleagues[i] = mListData[i];
+            }
+            return colleagues;
+        }
+
+        public bool IsColleague(Guid userId)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IAveOColleague Create(IAveOUserProfile colleague, AveColleagueGroupType colleagueGroupType, string strGroup, bool isInWorkgroup, AvePrivacy privacyLevel)
+        {
+            throw new NotImplementedException();
+        }
+
+        #endregion
+    }
+}

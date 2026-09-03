@@ -1,0 +1,5 @@
+Site Collection,Site,Library
+https://contoso.sharepoint.com/sites/targetsite,,
+https://contoso.sharepoint.com/sites/targetsite,,Shared Documents
+https://contoso.sharepoint.com/sites/targetsite,subsite1,library1
+https://contoso.sharepoint.com/sites/targetsite,subsite1/subsite2,

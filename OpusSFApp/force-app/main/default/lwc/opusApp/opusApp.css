@@ -1,0 +1,31 @@
+/*Covered by AvePoint copyright and license agreement*/
+.opus-app-container {
+    padding: 10px;
+    background-color: #f3f3f3;
+    border-radius: 5px;
+    min-width: 1080px;
+    position: relative;
+    overflow: hidden;
+}
+.gadget-container {
+    margin-bottom: 15px;
+}
+.appname-header {
+    line-height: 1.5;
+    font-weight: 600;
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+.app-header {
+    margin-bottom: 10px;
+    min-width: 1080px;
+}
+
+.dashboard-name {
+    padding-left: 5px;
+    padding-top: 10px;
+    padding-bottom: 15px;
+    font-size: 16px;
+    font-weight: 700;
+}

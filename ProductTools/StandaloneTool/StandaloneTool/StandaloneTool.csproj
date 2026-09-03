@@ -1,0 +1,83 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+    <Company>AvePoint, Inc.</Company>
+    <ApplicationIcon>Images\logo.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>..\..\..\bin\Debug\StandaloneTool\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>..\..\..\bin\Release\StandaloneTool\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ErrorOnDuplicatePublishOutputFiles>false</ErrorOnDuplicatePublishOutputFiles>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="Images\data_export.png" />
+    <None Remove="Images\data_export_hover.png" />
+    <None Remove="Images\failed.png" />
+    <None Remove="Images\finish_with_exception.png" />
+    <None Remove="Images\loading.gif" />
+    <None Remove="Images\location.png" />
+    <None Remove="Images\logo.ico" />
+    <None Remove="Images\logo.png" />
+    <None Remove="Images\msgwin_error.png" />
+    <None Remove="Images\successful.png" />
+    <None Remove="Images\truck-4146_128.gif" />
+    <None Remove="SDS-SEE.exml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="SDS-SEE.exml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <LogicalName>SDS-SEE.exml</LogicalName>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\location.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="AngleSharp.Css" Version="0.17.0" />
+    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.4.0" />
+    <PackageReference Include="Microsoft.Xaml.Behaviors.Wpf" Version="1.1.135" />
+    <PackageReference Include="SharpZipLib" Version="1.4.2" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Media\Media.Core.Index\Media.Core.Index.csproj" />
+    <ProjectReference Include="..\..\..\Media\Media.Service.DomainModel\Media.Service.DomainModel.csproj" />
+    <ProjectReference Include="..\..\..\RACommon.Global\RACommon.Global.csproj" />
+    <ProjectReference Include="..\CommonDeploymentGUI\CommonDeploymentGUI.csproj" />
+    <ProjectReference Include="..\DataExportCore\DataExportCore.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\data_export.png" />
+    <Resource Include="Images\data_export_hover.png" />
+    <Resource Include="Images\failed.png" />
+    <Resource Include="Images\finish_with_exception.png" />
+    <Resource Include="Images\loading.gif" />
+    <Resource Include="Images\logo.ico" />
+    <Resource Include="Images\logo.png" />
+    <Resource Include="Images\msgwin_error.png" />
+    <Resource Include="Images\successful.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="AgentLog4net.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="AgentLog4net.dev.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="appsettings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="ServiceVersion.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>

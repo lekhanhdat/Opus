@@ -1,0 +1,151 @@
+﻿/*Covered by AvePoint copyright and license agreement*/
+/* Code Review Whole File */
+/*#rmGreetings {
+    padding: 65px 0 45px 0;
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: #585858;
+    text-align: center;
+}*/
+#rmModules {
+    width: 100%;
+    margin-bottom: 35px;
+    padding-top: 110px;
+}
+
+#rmInnerModules {
+    margin: 0 auto;
+}
+
+.rm-home-module {
+    box-sizing: content-box;
+    padding: 35px 20px 35px 20px;
+    margin: 0 15px 30px 15px;
+    width: 12.5rem;
+    min-height: 410px;
+    float: left;
+    -moz-box-shadow: 0 0 5px #bbbbbb;
+    -webkit-box-shadow: 0 0 5px #bbbbbb;
+    box-shadow: 0 0 5px #bbbbbb;
+}
+
+.rm-home-module-head {
+    margin-bottom: 20px;
+    display: table;
+}
+
+.rm-home-module-icon {
+    float: left;
+    width: 67px;
+    height: 67px;
+    background-image: url('/Images/Base/action_button.png');
+    background-repeat: no-repeat;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.rm-home-module-icon-bcm {
+    background-position: 0 -71px;
+}
+
+.rm-home-module-icon-radm {
+    background-position: -67px -71px;
+}
+
+.rm-home-module-icon-rrc {
+    background-position: -134px -71px;
+}
+
+.rm-home-module-icon-pim {
+    background-position: -201px -71px;
+}
+
+.rm-home-module-icon-macm {
+    background-position: 0 -71px;
+}
+
+.rm-home-module-icon-prm {
+    width: 67px;
+    height: 67px;
+    background-image: url('/Images/Base/physical_record_65x65.png');
+    background-repeat: no-repeat;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.rm-home-module-icon-rd {
+    background-position: 0 -71px;
+}
+
+.rm-home-module-icon-sm {
+    background-position: 0 -71px;
+}
+
+.rm-home-module-icon-eahm {
+    background-position: 0 -71px;
+}
+
+.rm-home-module-icon-rtm {
+    background-position: 0 -71px;
+}
+
+.rm-home-moudule-title {
+    padding: 0 10px 0 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    line-height: 0.9rem;
+    color: #585858;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.rm-home-moudule-description {
+    height: 6rem;
+    line-height: normal;
+    font-size: 0.7rem;
+    color: #585858;
+}
+
+.rm-home-moudule-links {
+    margin-top: 15px;
+}
+
+.rm-home-moudule-link {
+    padding-left: 20px;
+    margin-bottom: 5px;
+    position: relative;
+    line-height: normal;
+}
+
+.rm-home-moudule-link-icon {
+    position: absolute;
+    left: 0;
+    top: -1.5px;
+    width: 18px;
+    height: 18px;
+    background-image: url('/Images/Base/action_button.png');
+    background-repeat: no-repeat;
+    background-position: -234px 0;
+}
+
+.rm-home-moudule-link-a, .rm-home-moudule-link-a:active, .rm-home-moudule-link-a:visited {
+    font-size: 0.75rem;
+    line-height: 0.75rem;
+    color: #0026b3;
+    text-decoration: none;
+    vertical-align: top;
+}
+
+    .rm-home-moudule-link-a:hover {
+        color: #0026b3;
+        text-decoration: underline;
+    }
+
+.rm-home-sub-module-title {
+    font-size: 0.8rem;
+    margin-bottom: 12px;
+}
+
+.rm-home-sub-module-title-not-first-child {
+    margin-top: 20px;
+}

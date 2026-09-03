@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{49631B81-6F16-4ACE-91D6-AE867A496C60}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AutoInstallation.ViewModel</RootNamespace>
+    <AssemblyName>CloudAgentConfigurationToolViewModel</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\bin\Agent\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\bin\Agent\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet />
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>..\..\DocaveReference\DocAveStandard.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Binding\BaseFinishPageViewModel.cs" />
+    <Compile Include="Binding\BaseInstallProgressViewModel.cs" />
+    <Compile Include="Binding\BaseLicenseAgreementViewModel.cs" />
+    <Compile Include="Binding\BaseMainWindowViewModel.cs" />
+    <Compile Include="Binding\BaseNavigationViewModel.cs" />
+    <Compile Include="Binding\BasePreviewViewModel.cs" />
+    <Compile Include="Binding\BaseTreeViewModel.cs" />
+    <Compile Include="Binding\BaseWelcomePageViewModel.cs" />
+    <Compile Include="Binding\MeetinsMainWindowViewModel.cs" />
+    <Compile Include="CommandButton\BackButton.cs" />
+    <Compile Include="CommandButton\CancelButton.cs" />
+    <Compile Include="CommandButton\FileBrowserButton.cs" />
+    <Compile Include="CommandButton\FolderBrowserButton.cs" />
+    <Compile Include="CommandButton\NextButton.cs" />
+    <Compile Include="CommandCheckBox\SingleCheckBox.cs" />
+    <Compile Include="Command\BackCommand.cs" />
+    <Compile Include="Command\BaseCommand.cs" />
+    <Compile Include="Command\BaseFinishCommand.cs" />
+    <Compile Include="Command\BaseInstallInitializeCommand.cs" />
+    <Compile Include="Command\BaseNextCommand.cs" />
+    <Compile Include="Command\ExitCommand.cs" />
+    <Compile Include="Command\FileBrowserCommand.cs" />
+    <Compile Include="Command\FolderBrowserCommand.cs" />
+    <Compile Include="Command\LicenseCheckBoxCommand.cs" />
+    <Compile Include="Command\WelcomePageCommand.cs" />
+    <Compile Include="CommonVMConstantString.cs" />
+    <Compile Include="Converter\InverseBooleanConverter.cs" />
+    <Compile Include="Converter\PageWizardItemConverter.cs" />
+    <Compile Include="Handler\BaseInitialization.cs" />
+    <Compile Include="Handler\BaseSecondaryInit.cs" />
+    <Compile Include="Handler\BaseSecondaryInitialization.cs" />
+    <Compile Include="Handler\PopupMessageBox.cs" />
+    <Compile Include="RecordsVMConstantString.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AutoInstallation.Contract\AutoInstallation.Contract.csproj">
+      <Project>{e188d83a-cf2d-4b24-8986-e1a59753e278}</Project>
+      <Name>AutoInstallation.Contract</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AutoInstallation.Records.App.Resources\AutoInstallation.Records.App.Resources.csproj">
+      <Project>{5dd62476-408d-4653-a221-a54cd2965919}</Project>
+      <Name>AutoInstallation.Records.App.Resources</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AutoInstallationCommon\AutoInstallationCommon.csproj">
+      <Project>{2a6960ef-0fa1-4f98-97fd-7654db6b900e}</Project>
+      <Name>AutoInstallationCommon</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\DocaveReference\DocAveStandard.snk">
+      <Link>DocAveStandard.snk</Link>
+    </None>
+    <None Include="app.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

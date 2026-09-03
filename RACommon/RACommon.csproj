@@ -1,0 +1,109 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <OutputType>Library</OutputType>
+    <RootNamespace>AvePoint.RA.Common</RootNamespace>
+    <AssemblyName>RevIMCommon</AssemblyName>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <OutputPath>..\bin\Release\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>..\DocaveReference\DocAveStandard.snk</AssemblyOriginatorKeyFile>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+  </PropertyGroup>
+	<PropertyGroup>
+		<EnableUnsafeBinaryFormatterSerialization>true</EnableUnsafeBinaryFormatterSerialization>
+	</PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="Authorize\**" />
+    <Compile Remove="Discovery\**" />
+    <EmbeddedResource Remove="Authorize\**" />
+    <EmbeddedResource Remove="Discovery\**" />
+    <None Remove="Authorize\**" />
+    <None Remove="Discovery\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Aspose.Email" Version="26.5.0" />
+    <PackageReference Include="Aspose.Cells" Version="25.9.0" />
+    <PackageReference Include="AWSSDK.S3" Version="4.0.17.3" />
+    <PackageReference Include="Azure.Storage.Blobs" Version="12.27.0" />
+    <PackageReference Include="Azure.Storage.Queues" Version="12.25.0" />
+    <PackageReference Include="Castle.Core.AsyncInterceptor" Version="2.1.0" />
+    <PackageReference Include="Cloud.Sdk.Aos" Version="5.6.17" />
+    <PackageReference Include="Cloud.Sdk.AosModernApi" Version="6.8.39" />
+    <PackageReference Include="Cloud.Sdk.Cipher" Version="4.12.30" />
+    <PackageReference Include="Cloud.Sdk.Cop" Version="5.8.61" />
+    <PackageReference Include="Cloud.Sdk.Data.Dal" Version="6.10.16" />
+    <PackageReference Include="Cloud.Sdk.LAL.PlatformSS" Version="6.10.16" />
+    <PackageReference Include="Cloud.Sdk.MyHub" Version="6.4.118" />
+    <PackageReference Include="Cloud.Sdk.Telemetry" Version="1.0.188" />
+    <PackageReference Include="Duende.IdentityModel" Version="8.1.0" />
+    <PackageReference Include="log4net" Version="3.3.1" />
+    <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
+    <PackageReference Include="Microsoft.Extensions.Caching.Memory" Version="10.0.2" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="10.0.2" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.EnvironmentVariables" Version="10.0.2" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="10.0.2" />
+    <PackageReference Include="Microsoft.Extensions.Http.Polly" Version="10.0.2" />
+    <PackageReference Include="Polly" Version="8.6.5" />
+    <PackageReference Include="SkiaSharp" Version="3.119.1" />
+    <PackageReference Include="SkiaSharp.NativeAssets.Linux" Version="3.119.1" />
+    <PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0" />
+    <PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
+    <PackageReference Include="System.Formats.Asn1" Version="10.0.10" />
+    <PackageReference Include="System.Runtime.Caching" Version="10.0.2" />
+    <PackageReference Include="System.Security.Cryptography.Xml" Version="10.0.10" />
+    <PackageReference Include="System.ServiceModel.Federation" Version="8.1.2" />
+    <PackageReference Include="Microsoft.DotNet.UpgradeAssistant.Extensions.Default.Analyzers" Version="0.4.421302">
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="System.Dynamic.Runtime" Version="4.3.0" />
+    <PackageReference Include="System.Linq.Queryable" Version="4.3.0" />
+    <PackageReference Include="Castle.Windsor" Version="6.0.0" />
+    <PackageReference Include="Cloud.Sdk.CloudInsights" Version="5.4.70" />
+    <PackageReference Include="Cloud.Sdk.Dao" Version="5.2.22" />
+    <PackageReference Include="Cloud.Sdk.Token" Version="6.8.81" />
+    <PackageReference Include="CryptographyAlgorithm" Version="1.1.40" />
+    <PackageReference Include="DocumentFormat.OpenXml" Version="3.4.1" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="10.0.2" />
+    <PackageReference Include="System.Reflection.Emit" Version="4.7.0" />
+    <PackageReference Include="System.Reflection.Emit.ILGeneration" Version="4.7.0" />
+    <PackageReference Include="System.Reflection.TypeExtensions" Version="4.7.0" />
+    <PackageReference Include="util.azure" Version="4.2.2" />
+    <PackageReference Include="util.security" Version="4.12.7" />
+    <PackageReference Include="util.database" Version="5.4.6" />
+    <PackageReference Include="Dapper" Version="2.1.66" />
+    <PackageReference Include="ZXing.Net" Version="0.16.11" />
+    <PackageReference Include="ZXing.Net.Bindings.SkiaSharp" Version="0.16.22" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Common\GlobalCommon\GCommonContract\DocAve.GCommonContract.csproj" />
+    <ProjectReference Include="..\Common\GlobalCommon\GCommonUtility\DocAve.GCommonUtility.csproj" />
+    <ProjectReference Include="..\Common\MediaStorage\Media.StorageApi\Media.StorageApi.csproj" />
+    <ProjectReference Include="..\Common\VCService30\CommonUtility30\DocAve.CommonUtility30.csproj" />
+    <ProjectReference Include="..\Common\Wrapper\Wrapper.Common\Wrapper.Common.csproj" />
+    <ProjectReference Include="..\RAApi.Contract\RAApi.Contract.csproj" />
+    <ProjectReference Include="..\RACommon.Global\RACommon.Global.csproj" />
+    <ProjectReference Include="..\RAContract.Global\RAContract.Global.csproj" />
+    <ProjectReference Include="..\RAContract\RAContract.csproj" />
+    <ProjectReference Include="..\RAI18N\RAI18N.csproj" />
+    <ProjectReference Include="..\RAI.Core\RAI.Core.csproj" />
+    <ProjectReference Include="..\RARedisCache\RedisService.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="AzureService\PerformanceMonitor.cs" />
+    <Compile Remove="AzureService\ServiceBusUtil.cs" />
+    <Compile Remove="Cache\RedisCombinAosMessageService.cs" />
+    <Compile Remove="StorageUtil.cs" />
+    <Compile Remove="ThrowUtil.cs" />
+    <Compile Remove="Util\AveCertificateHelper.cs" />
+    <Compile Remove="Util\AveSecurityKeyEncryptor.cs" />
+    <Compile Remove="Util\RAPortalUtil.cs" />
+    <Compile Remove="Util\RASecurityKeyEncryptor.cs" />
+    <Compile Remove="Util\ResourceManager.cs" />
+  </ItemGroup>
+
+</Project>

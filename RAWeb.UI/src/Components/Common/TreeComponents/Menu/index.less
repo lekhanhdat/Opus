@@ -1,0 +1,66 @@
+.reco-tree-menu-popup-wrapper {
+  position: relative;
+  height: 1px;
+
+  .reco-tree-menu-popup {
+    position: absolute;
+    left: 15px;
+    top: -20px;
+    min-width: 180px;
+    border-radius: 2px;
+    box-shadow: 1px 1px 7px 1px #c9c9c9;
+    background-color: #FFF;
+    padding: 10px;
+    z-index: 9999;
+  }
+
+  .reco-tree-menu-item {
+      height: 24px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      margin-bottom: 8px;
+      font-family: "Segoe UI", sans-serif;
+
+      .reco-tree-menu-item-icon {
+          margin-right: 8px;
+      }
+
+      .reco-tree-menu-item-title {
+          font-size: 14px;
+          color: #1c1c1c;
+      }
+
+      &:last-child {
+          margin-bottom: 0;
+      }
+
+      &:hover .reco-tree-menu-item-title{
+        border-bottom: 1px solid #1c1c1c;
+      }
+  }
+
+  .reco-tree-menu-arrow-wrapper {
+    position: relative;
+    left: 5px;
+    top: -9px;
+    z-index: 9999;
+
+    .reco-tree-menu-arrow {
+      position: absolute;
+      border-color: transparent #FFF transparent transparent;
+      border-style: solid;
+      border-width: 6px 10px 6px 0px;
+      top: 2px;
+    }
+
+    .reco-tree-menu-arrow-border {
+      position: absolute;
+      border-color: transparent #cbcbcb transparent transparent;
+      border-style: solid;
+      border-width: 8px 12px 8px 0px;
+      left: -2px;
+    }
+  }
+}

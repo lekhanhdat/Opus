@@ -1,0 +1,11 @@
+import AnalysisConfigurationInitializationPage from "./AnalysisConfigurationInitializationPage"
+import AnalysisConfigurationEditPage from "./AnalysisConfigurationEditPage"
+import AnalysisConfigurationRunningPage from "./AnalysisConfigurationRunningPage"
+import AnalysisConfigurationFinishPage from "./AnalysisConfigurationFinishPage"
+
+export {
+    AnalysisConfigurationInitializationPage as GoogleDriveAnalysisConfigurationInitializationPage,
+    AnalysisConfigurationEditPage as GoogleDriveAnalysisConfigurationEditPage,
+    AnalysisConfigurationRunningPage as GoogleDriveAnalysisConfigurationRunningPage,
+    AnalysisConfigurationFinishPage as GoogleDriveAnalysisConfigurationFinishPage,
+}

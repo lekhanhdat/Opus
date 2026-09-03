@@ -1,0 +1,146 @@
+// Nav Panel
+:root {
+  --skin-name: Allure;
+  --classify-ai: linear-gradient(to right, #494fc6, #007ead);
+}
+
+aui-navpanel {
+  font-size: 12px;
+  --color: #c1c5cd;
+  --border-color: #1c1e22;
+  --group-color: #7e8695;
+  --box-expanded-bg: #32363e3d;
+  --pop-min-width: 254px;
+  --hover-bg: #32363e66;
+  --icon-action-color: #c1c5cd;
+  --icon-expanded-color: #fff;
+}
+
+#NavPanelLeft {
+  --group-padding-collapse: 0;
+  --item-padding-collapse: 8px;
+  --background: #1c1e22;
+  --active-color: #25272b;
+  --active-bg: #25272b;
+  --expanded-pop-bg: none;
+}
+
+#NavPanelRight {
+  --background: #25272b;
+  --body-padding: 0px;
+}
+
+aui-radio,
+aui-checkbox {
+  display: inline-flex
+}
+
+.aui-breadcrumb {
+
+  .aui-breadcrumb-item,
+  .aui-breadcrumb-separator,
+  .aui-breadcrumb-item.aui-breadcrumb-item-last, 
+  .aui-breadcrumb-item .aui-breadcrumb-link-text {
+    color: #323E4D !important;
+    letter-spacing: 0px;
+    font: normal normal 300 22px/30px 'Open Sans', sans-serif !important;
+  }
+
+  .aui-breadcrumb-separator {
+    padding-top: 2px;
+  }
+}
+
+//icon button
+
+.button.button-icon,.button.button-button {
+  border-color: #E7EAEB !important;
+  border-radius: 4px;
+  background-color: rgba(0,0,0,0);
+}
+
+.button.button-button span::before {
+  color: #0072D0 !important;
+}
+
+.button-button.button-default .button-text-part {
+  color: #323E4D !important;
+}
+
+.button.button-button.button-primary span::before {
+  color: #fff !important;
+}
+
+.button-default .ra-iconbtn {
+  background-color: #E7EAEB !important;
+  border-radius: 4px;
+  opacity: 1;
+}
+
+.button-theme {
+  border-radius: 4px;
+}
+
+.button-theme .button-text-part {
+  color: #FFFFFF !important;
+}
+
+.aui-buttongroup-inner .button-default {
+  border: 0px !important;
+  border-radius: 0% !important;
+  background-color: #FFFFFF;
+}
+
+.aui-buttongroup .button-default span::before {
+  color: var(--button-color) !important;
+}
+
+.aui-buttongroup-popup li .button{
+  border: 0 !important;
+}
+
+// setting expander
+
+.aui-expander {
+  border: 0px !important;
+  border-radius: 0% !important;
+
+  .button-icon-part:only-child {
+    font-size: 13px;
+    color: #323E4D;
+  }
+}
+
+.aui-expander-title {
+  border-radius: 0% !important;
+  background: #F2F3F4;
+}
+
+.aui-expander-expand>.aui-expander-title {
+  background: #FFFFFF;
+}
+
+.aui-expander-action-start {
+  display: flex;
+}
+
+//Toast Position
+.aui-toast-position-top-right {
+  top: 67px;
+  right: 40px;
+  border-radius: 8px;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  box-shadow: 0px 2px 12px #00000029;
+
+  .aui-toast-item.aui-toast-item-notification {
+    border-radius: 8px;
+  }
+
+  .aui-toast-item-content {
+    border-radius: 8px;
+  }
+}
+
+.aui-popup-header[data-closeable=true] .aui-popup-close {
+  display: none;
+}

@@ -1,0 +1,1486 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--/********************************************************************
+ *
+ *  PROPRIETARY and CONFIDENTIAL
+ *
+ *  This file is licensed from, and is a trade secret of:
+ *
+ *                   AvePoint, Inc.
+ *                   525 Washington Blvd, Suite 1400
+ *                   Jersey City, NJ 07310
+ *                   United States of America
+ *                   Telephone: +1-201-793-1111
+ *                   WWW: www.avepoint.com
+ *
+ *  Refer to your License Agreement for restrictions on use,
+ *  duplication, or disclosure.
+ *
+ *  RESTRICTED RIGHTS LEGEND
+ *
+ *  Use, duplication, or disclosure by the Government is
+ *  subject to restrictions as set forth in subdivision
+ *  (c)(1)(ii) of the Rights in Technical Data and Computer
+ *  Software clause at DFARS 252.227-7013 (Oct. 1988) and
+ *  FAR 52.227-19 (C) (June 1987).
+ *
+ *  Copyright © 2017-2026 AvePoint® Inc. All Rights Reserved. 
+ *
+ *  Unpublished - All rights reserved under the copyright laws of the United States.
+ */-->
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="LS.SPWorkflowProcessor.NintexWFSettingsProcessor">
+    <Position X="19" Y="21.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\NintexWFSettingsProcessor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LS.SPWorkflowProcessor.NWListNotFoundException" Collapsed="true">
+    <Position X="40.75" Y="17.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\Exception\NWListNotFoundException.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LS.SPWorkflowProcessor.UnSupportedActionTypeException" Collapsed="true">
+    <Position X="32" Y="20.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\Exception\UnSupportedActionTypeException.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LS.SPWorkflowProcessor.NWWebRequestActionProcessor" Collapsed="true">
+    <Position X="5.25" Y="5.5" Width="2.5" />
+    <InheritanceLine Type="LS.SPWorkflowProcessor.NWActionProcessorBase" FixedToPoint="true">
+      <Path>
+        <Point X="2.25" Y="1.062" />
+        <Point X="2.25" Y="5.875" />
+        <Point X="5.25" Y="5.875" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAACAAAAAAAAAAIACBBAIAAAAAAAAAAAgE=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\NintexWorkflowActionProcessor\Integration\NWWebRequestActionProcessor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LS.SPWorkflowProcessor.NWCopyFileToFileShareActionProcessor" Collapsed="true">
+    <Position X="5.25" Y="6.5" Width="2.5" />
+    <InheritanceLine Type="LS.SPWorkflowProcessor.NWActionProcessorBase" FixedToPoint="true">
+      <Path>
+        <Point X="2.25" Y="1.062" />
+        <Point X="2.25" Y="6.875" />
+        <Point X="5.25" Y="6.875" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>IQAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\NintexWorkflowActionProcessor\Libraries and Lists\CopyFileToFileShare\NWCopyFileToFileShareActionProcessor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LS.SPWorkflowProcessor.NWCheckInItemActionProcessor" Collapsed="true">
+    <Position X="10.75" Y="28.75" Width="2.75" />
+    <InheritanceLine Type="LS.SPWorkflowProcessor.NWLibariesAndListsActionProcessor" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="7.75" Y="30.125" />
+        <Point X="8.125" Y="30.125" />
+        <Point X="8.125" Y="29.125" />
+        <Point X="10.75" Y="29.125" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAIBAAAAAAAAAAAAAAAAAAAAAAAAAAAgE=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\NintexWorkflowActionProcessor\Libraries and Lists\NWCheckInItemActionProcessor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LS.SPWorkflowProcessor.NWCheckOutItemActionProcessor" Collapsed="true">
+    <Position X="10.75" Y="29.75" Width="2.75" />
+    <InheritanceLine Type="LS.SPWorkflowProcessor.NWLibariesAndListsActionProcessor" FixedToPoint="true">
+      <Path>
+        <Point X="7.75" Y="30.125" />
+        <Point X="10.75" Y="30.125" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgE=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\NintexWorkflowActionProcessor\Libraries and Lists\NWCheckOutItemActionProcessor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LS.SPWorkflowProcessor.NWCopyItemActionProcessor" Collapsed="true">
+    <Position X="10.75" Y="30.75" Width="2.75" />
+    <InheritanceLine Type="LS.SPWorkflowProcessor.NWLibariesAndListsActionProcessor" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="7.75" Y="30.125" />
+        <Point X="8.125" Y="30.125" />
+        <Point X="8.125" Y="31.062" />
+        <Point X="10.75" Y="31.062" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AQAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwE=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\NintexWorkflowActionProcessor\Libraries and Lists\NWCopyItemActionProcessor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LS.SPWorkflowProcessor.NWCreateItemActionProcessor" Collapsed="true">
+    <Position X="10.75" Y="31.75" Width="2.75" />
+    <InheritanceLine Type="LS.SPWorkflowProcessor.NWLibariesAndListsActionProcessor" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="7.75" Y="30.125" />
+        <Point X="8.125" Y="30.125" />
+        <Point X="8.125" Y="32.125" />
+        <Point X="10.75" Y="32.125" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAQQAAAAAAAAAAABAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\NintexWorkflowActionProcessor\Libraries and Lists\NWCreateItemActionProcessor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LS.SPWorkflowProcessor.NWDeleteItemActionProcessor" Collapsed="true">
+    <Position X="10.75" Y="32.75" Width="2.75" />
+    <InheritanceLine Type="LS.SPWorkflowProcessor.NWLibariesAndListsActionProcessor" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="7.75" Y="30.125" />
+        <Point X="8.125" Y="30.125" />
+        <Point X="8.125" Y="33.125" />
+        <Point X="10.75" Y="33.125" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\NintexWorkflowActionProcessor\Libraries and Lists\NWDeleteItemActionProcessor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LS.SPWorkflowProcessor.NWDeleteItemsActionProcessor" Collapsed="true">
+    <Position X="10.75" Y="33.75" Width="2.75" />
+    <InheritanceLine Type="LS.SPWorkflowProcessor.NWLibariesAndListsActionProcessor" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="7.75" Y="30.125" />
+        <Point X="8.125" Y="30.125" />
+        <Point X="8.125" Y="34.125" />
+        <Point X="10.75" Y="34.125" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAACAAABAAAAAAABAAAAAAAAAAIAAAAAqA=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\NintexWorkflowActionProcessor\Libraries and Lists\NWDeleteItemsActionProcessor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LS.SPWorkflowProcessor.NWDiscardCheckOutItemActionProcessor" Collapsed="true">
+    <Position X="10.75" Y="34.75" Width="3" />
+    <InheritanceLine Type="LS.SPWorkflowProcessor.NWLibariesAndListsActionProcessor" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="7.75" Y="30.125" />
+        <Point X="8.125" Y="30.125" />
+        <Point X="8.125" Y="35.062" />
+        <Point X="10.75" Y="35.062" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\NintexWorkflowActionProcessor\Libraries and Lists\NWDiscardCheckOutItemActionProcessor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LS.SPWorkflowProcessor.NWLibariesAndListsActionProcessor" Collapsed="true">
+    <Position X="4.75" Y="29.75" Width="3" />
+    <InheritanceLine Type="LS.SPWorkflowProcessor.NWActionProcessorBase" FixedToPoint="true">
+      <Path>
+        <Point X="2.25" Y="1.062" />
+        <Point X="2.25" Y="30.125" />
+        <Point X="4.75" Y="30.125" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAgAAAQAAABAAAAAAAAAEAAAAAAAAA=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\NintexWorkflowActionProcessor\Libraries and Lists\NWLibariesAndListsActionProcessor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LS.SPWorkflowProcessor.NWUpdateListItemActionProcessor" Collapsed="true">
+    <Position X="10.75" Y="25.75" Width="2.75" />
+    <InheritanceLine Type="LS.SPWorkflowProcessor.NWLibariesAndListsActionProcessor" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="7.75" Y="30.125" />
+        <Point X="8.125" Y="30.125" />
+        <Point X="8.125" Y="26.062" />
+        <Point X="10.75" Y="26.062" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAAAgAAAAAABAAAAAAAAAAAAAAAAAAgE=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\NintexWorkflowActionProcessor\Libraries and Lists\NWUpdateListItemActionProcessor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LS.SPWorkflowProcessor.NWSetApprovalStatusActionProcessor" Collapsed="true">
+    <Position X="10.75" Y="26.75" Width="2.75" />
+    <InheritanceLine Type="LS.SPWorkflowProcessor.NWLibariesAndListsActionProcessor" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="7.75" Y="30.125" />
+        <Point X="8.125" Y="30.125" />
+        <Point X="8.125" Y="27.125" />
+        <Point X="10.75" Y="27.125" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>IQAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\NintexWorkflowActionProcessor\Libraries and Lists\SetApprovalStatus\NWSetApprovalStatusActionProcessor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LS.SPWorkflowProcessor.NWSetDocumentSetApprovalStatusActionProcessor" Collapsed="true">
+    <Position X="10.75" Y="27.75" Width="2.75" />
+    <InheritanceLine Type="LS.SPWorkflowProcessor.NWLibariesAndListsActionProcessor" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="7.75" Y="30.125" />
+        <Point X="8.125" Y="30.125" />
+        <Point X="8.125" Y="28.125" />
+        <Point X="10.75" Y="28.125" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>IQAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\NintexWorkflowActionProcessor\Libraries and Lists\SetDocumentSetApprovalStatus\NWSetDocumentSetApprovalStatusActionProcessor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LS.SPWorkflowProcessor.ListLookupCacheManager" Collapsed="true">
+    <Position X="32" Y="15.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAEAAAAAAAAAAAAAAAAAAACAAAAAgAAAAAAAAA=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\NintexWorkflowActionProcessor\ListLookupCacheManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LS.SPWorkflowProcessor.NWConditionActionBase" Collapsed="true">
+    <Position X="5.25" Y="11.25" Width="2.5" />
+    <InheritanceLine Type="LS.SPWorkflowProcessor.NWActionProcessorBase" FixedToPoint="true">
+      <Path>
+        <Point X="2.25" Y="1.062" />
+        <Point X="2.25" Y="11.625" />
+        <Point X="5.25" Y="11.625" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAIAAgAAAAESAAAAgACIAAgACAgAAgAAAAAQAAAAA=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\NintexWorkflowActionProcessor\Logic and Flow\NWConditionActionBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LS.SPWorkflowProcessor.NWConditionalBranchActionProcessor" Collapsed="true">
+    <Position X="8.75" Y="9.75" Width="2.75" />
+    <InheritanceLine Type="LS.SPWorkflowProcessor.NWConditionActionBase" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="7.75" Y="11.625" />
+        <Point X="8.259" Y="11.625" />
+        <Point X="8.259" Y="10.062" />
+        <Point X="8.75" Y="10.062" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAgE=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\NintexWorkflowActionProcessor\Logic and Flow\NWConditionalBranchActionProcessor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LS.SPWorkflowProcessor.NWContainerActionBase" Collapsed="true">
+    <Position X="8.75" Y="12.75" Width="2.75" />
+    <InheritanceLine Type="LS.SPWorkflowProcessor.NWConditionActionBase" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="7.75" Y="11.625" />
+        <Point X="8.245" Y="11.625" />
+        <Point X="8.245" Y="13.188" />
+        <Point X="8.75" Y="13.188" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAE=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\NintexWorkflowActionProcessor\Logic and Flow\NWContainerActionBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LS.SPWorkflowProcessor.NWFilterActionProcessor" Collapsed="true">
+    <Position X="8.75" Y="11.75" Width="2.75" />
+    <InheritanceLine Type="LS.SPWorkflowProcessor.NWConditionActionBase" FixedFromPoint="true">
+      <Path>
+        <Point X="7.75" Y="11.625" />
+        <Point X="8.245" Y="11.625" />
+        <Point X="8.245" Y="12.096" />
+        <Point X="8.75" Y="12.096" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\NintexWorkflowActionProcessor\Logic and Flow\NWFilterActionProcessor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LS.SPWorkflowProcessor.NWForeachActionProcessor" Collapsed="true">
+    <Position X="12.5" Y="11.75" Width="2.5" />
+    <InheritanceLine Type="LS.SPWorkflowProcessor.NWContainerActionBase" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="11.5" Y="13.125" />
+        <Point X="12.049" Y="13.125" />
+        <Point X="12.049" Y="12.125" />
+        <Point X="12.5" Y="12.125" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAABAEAAAAgAAQAEAAAAAAAgAEAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\NintexWorkflowActionProcessor\Logic and Flow\NWForeachActionProcessor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LS.SPWorkflowProcessor.NWLoopActionProcessor" Collapsed="true">
+    <Position X="12.5" Y="12.75" Width="2.5" />
+    <InheritanceLine Type="LS.SPWorkflowProcessor.NWContainerActionBase" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="11.5" Y="13.125" />
+        <Point X="11.624" Y="13.125" />
+        <Point X="11.624" Y="13.125" />
+        <Point X="12.5" Y="13.125" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\NintexWorkflowActionProcessor\Logic and Flow\NWLoopActionProcessor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LS.SPWorkflowProcessor.NWParallelBlockActionProcessor" Collapsed="true">
+    <Position X="5" Y="20.5" Width="2.75" />
+    <InheritanceLine Type="LS.SPWorkflowProcessor.NWActionProcessorBase" FixedToPoint="true">
+      <Path>
+        <Point X="2.25" Y="1.062" />
+        <Point X="2.25" Y="20.875" />
+        <Point X="5" Y="20.875" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAgE=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\NintexWorkflowActionProcessor\Logic and Flow\NWParallelBlockActionProcessor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LS.SPWorkflowProcessor.NWRunIfActoinProcessor" Collapsed="true">
+    <Position X="12.5" Y="13.75" Width="2.5" />
+    <InheritanceLine Type="LS.SPWorkflowProcessor.NWContainerActionBase" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="11.5" Y="13.125" />
+        <Point X="12.041" Y="13.125" />
+        <Point X="12.041" Y="14.125" />
+        <Point X="12.5" Y="14.125" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\NintexWorkflowActionProcessor\Logic and Flow\NWRunIfActoinProcessor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LS.SPWorkflowProcessor.NWSetNextStateActionProcessor" Collapsed="true">
+    <Position X="5" Y="23.5" Width="2.75" />
+    <InheritanceLine Type="LS.SPWorkflowProcessor.NWActionProcessorBase" FixedToPoint="true">
+      <Path>
+        <Point X="2.25" Y="1.062" />
+        <Point X="2.25" Y="23.812" />
+        <Point X="5" Y="23.812" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAACgAAAAAAIAAAAAAAgA=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\NintexWorkflowActionProcessor\Logic and Flow\NWSetNextStateActionProcessor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LS.SPWorkflowProcessor.NWStateMachineActionProcessor" Collapsed="true">
+    <Position X="5.25" Y="0.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAEAIAAAIAAAAAAGAAAAAgAAAAAAQIAgE=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\NintexWorkflowActionProcessor\Logic and Flow\NWStateMachineActionProcessor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LS.SPWorkflowProcessor.NWSwitchActionProcessor" Collapsed="true">
+    <Position X="5.25" Y="3" Width="2.5" />
+    <InheritanceLine Type="LS.SPWorkflowProcessor.NWActionProcessorBase" FixedToPoint="true">
+      <Path>
+        <Point X="2.25" Y="1.062" />
+        <Point X="2.25" Y="3.375" />
+        <Point X="5.25" Y="3.375" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAAAAAAAAAAIAAAAASCQAgAAAAAAIIAABCgE=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\NintexWorkflowActionProcessor\Logic and Flow\NWSwitchActionProcessor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LS.SPWorkflowProcessor.NintexWFActionProcessor" Collapsed="true">
+    <Position X="33.75" Y="16.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAggAAQAQAAAAAAAAAAAAAIAIAAgCAAABAAAAAI=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\NintexWorkflowActionProcessor\NinTexWFActionProcessor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LS.SPWorkflowProcessor.NWActionAdapter" Collapsed="true">
+    <Position X="26.75" Y="17.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAIAAAAAAAAAAAAAAAAEAAABAAAAACAAE=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\NintexWorkflowActionProcessor\NWActionAdapter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LS.SPWorkflowProcessor.NWActionProcessorBase" Collapsed="true">
+    <Position X="1" Y="0.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>ARAAAAAAgAAgIAAAAAAACAAAAiCAAIAAAAAAAAAAAgU=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\NintexWorkflowActionProcessor\NWActionProcessorBase.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="LS.SPWorkflowProcessor.NWRootActionProcessor" Collapsed="true">
+    <Position X="5" Y="14.5" Width="2.75" />
+    <InheritanceLine Type="LS.SPWorkflowProcessor.NWActionProcessorBase" FixedToPoint="true">
+      <Path>
+        <Point X="2.25" Y="1.062" />
+        <Point X="2.25" Y="14.875" />
+        <Point X="5" Y="14.875" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAE=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\NintexWorkflowActionProcessor\NWRootActionProcessor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LS.SPWorkflowProcessor.NWSequenceActivityActionProcessor" Collapsed="true">
+    <Position X="5" Y="15.5" Width="2.75" />
+    <InheritanceLine Type="LS.SPWorkflowProcessor.NWActionProcessorBase" FixedToPoint="true">
+      <Path>
+        <Point X="2.25" Y="1.062" />
+        <Point X="2.25" Y="15.875" />
+        <Point X="5" Y="15.875" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAE=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\NintexWorkflowActionProcessor\NWSequenceActivityActionProcessor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LS.SPWorkflowProcessor.NWBuildStringProcessor" Collapsed="true">
+    <Position X="5" Y="17.5" Width="2.75" />
+    <InheritanceLine Type="LS.SPWorkflowProcessor.NWActionProcessorBase" FixedToPoint="true">
+      <Path>
+        <Point X="2.25" Y="1.062" />
+        <Point X="2.25" Y="17.812" />
+        <Point X="5" Y="17.812" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAACAgA=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\NintexWorkflowActionProcessor\Operations\NWBuildStringProcessor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LS.SPWorkflowProcessor.NWCalculateDateProcessor" Collapsed="true">
+    <Position X="5" Y="18.5" Width="2.75" />
+    <InheritanceLine Type="LS.SPWorkflowProcessor.NWActionProcessorBase" FixedToPoint="true">
+      <Path>
+        <Point X="2.25" Y="1.062" />
+        <Point X="2.25" Y="18.875" />
+        <Point X="5" Y="18.875" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAACgAAAgAAAAAAgAAAAAAAAQAAAoCAAAAAgAAgA=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\NintexWorkflowActionProcessor\Operations\NWCalculateDateProcessor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LS.SPWorkflowProcessor.NWConvertValueProcessor" Collapsed="true">
+    <Position X="5" Y="19.5" Width="2.75" />
+    <InheritanceLine Type="LS.SPWorkflowProcessor.NWActionProcessorBase" FixedToPoint="true">
+      <Path>
+        <Point X="2.25" Y="1.062" />
+        <Point X="2.25" Y="19.812" />
+        <Point X="5" Y="19.812" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>ECgAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\NintexWorkflowActionProcessor\Operations\NWConvertValueProcessor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LS.SPWorkflowProcessor.NWDelayForAtionProcessor" Collapsed="true">
+    <Position X="5" Y="21.5" Width="2.75" />
+    <InheritanceLine Type="LS.SPWorkflowProcessor.NWActionProcessorBase" FixedToPoint="true">
+      <Path>
+        <Point X="2.25" Y="1.062" />
+        <Point X="2.25" Y="21.812" />
+        <Point X="5" Y="21.812" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>gAAAAgAAAAAAAEAAAAAAAACAAAAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\NintexWorkflowActionProcessor\Operations\NWDelayForAtionProcessor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LS.SPWorkflowProcessor.NWEndWorkflowProcessor" Collapsed="true">
+    <Position X="5" Y="22.5" Width="2.75" />
+    <InheritanceLine Type="LS.SPWorkflowProcessor.NWActionProcessorBase" FixedToPoint="true">
+      <Path>
+        <Point X="2.25" Y="1.062" />
+        <Point X="2.25" Y="22.812" />
+        <Point X="5" Y="22.812" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\NintexWorkflowActionProcessor\Operations\NWEndWorkflowProcessor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LS.SPWorkflowProcessor.NWLogInHistoryListProcessor" Collapsed="true">
+    <Position X="5" Y="24.5" Width="2.75" />
+    <InheritanceLine Type="LS.SPWorkflowProcessor.NWActionProcessorBase" FixedToPoint="true">
+      <Path>
+        <Point X="2.25" Y="1.062" />
+        <Point X="2.25" Y="24.812" />
+        <Point X="5" Y="24.812" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\NintexWorkflowActionProcessor\Operations\NWLogInHistoryListProcessor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LS.SPWorkflowProcessor.NWMathOperationProcessor" Collapsed="true">
+    <Position X="5.25" Y="1.75" Width="2.5" />
+    <InheritanceLine Type="LS.SPWorkflowProcessor.NWActionProcessorBase" FixedToPoint="true">
+      <Path>
+        <Point X="2.25" Y="1.062" />
+        <Point X="2.25" Y="2.125" />
+        <Point X="5.25" Y="2.125" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AACQAAAAAAABAAAAAAAAAAAAIMCAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\NintexWorkflowActionProcessor\Operations\NWMathOperationProcessor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LS.SPWorkflowProcessor.NWPauseUntilProcessor" Collapsed="true">
+    <Position X="5.25" Y="4.25" Width="2.5" />
+    <InheritanceLine Type="LS.SPWorkflowProcessor.NWActionProcessorBase" FixedToPoint="true">
+      <Path>
+        <Point X="2.25" Y="1.062" />
+        <Point X="2.25" Y="4.562" />
+        <Point X="5.25" Y="4.562" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAgE=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\NintexWorkflowActionProcessor\Operations\NWPauseUntilProcessor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LS.SPWorkflowProcessor.NWSetVariableProcessor" Collapsed="true">
+    <Position X="5.25" Y="8.5" Width="2.5" />
+    <InheritanceLine Type="LS.SPWorkflowProcessor.NWActionProcessorBase" FixedToPoint="true">
+      <Path>
+        <Point X="2.25" Y="1.062" />
+        <Point X="2.25" Y="8.938" />
+        <Point X="5.25" Y="8.938" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAQAgAAAIAgAAAAAAECAAAAAAAAAAAAAAAAAAAAAgQ=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\NintexWorkflowActionProcessor\Operations\NWSetVariableProcessor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LS.SPWorkflowProcessor.NWSetWorkflowStatusActionProcessor" Collapsed="true">
+    <Position X="5.25" Y="7.5" Width="2.5" />
+    <InheritanceLine Type="LS.SPWorkflowProcessor.NWActionProcessorBase" FixedToPoint="true">
+      <Path>
+        <Point X="2.25" Y="1.062" />
+        <Point X="2.25" Y="7.812" />
+        <Point X="5.25" Y="7.812" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\NintexWorkflowActionProcessor\Operations\NWSetWorkflowStatusActionProcessor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LS.SPWorkflowProcessor.NWRequestApprovalActionProcessor" Collapsed="true">
+    <Position X="8.75" Y="10.75" Width="2.75" />
+    <InheritanceLine Type="LS.SPWorkflowProcessor.NWConditionActionBase" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="7.75" Y="11.625" />
+        <Point X="8.251" Y="11.625" />
+        <Point X="8.251" Y="11.062" />
+        <Point X="8.75" Y="11.062" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>0BMIJgBgxEQBhgAJAACAuBgACGRAAgggAigETQByBgM=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\NintexWorkflowActionProcessor\User Interaction\NWRequestApprovalActionProcessor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LS.SPWorkflowProcessor.NWSendEmailActionProcessor" Collapsed="true">
+    <Position X="5" Y="16.5" Width="2.75" />
+    <InheritanceLine Type="LS.SPWorkflowProcessor.NWActionProcessorBase" FixedToPoint="true">
+      <Path>
+        <Point X="2.25" Y="1.062" />
+        <Point X="2.25" Y="16.875" />
+        <Point X="5" Y="16.875" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AQAADQAAAAIAAAACAAAAAAAAQAAAAAAgAAAAAAAABgE=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\NintexWorkflowActionProcessor\User Interaction\NWSendEmailActionProcessor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LS.SPWorkflowProcessor.VariablesCacheManager" Collapsed="true">
+    <Position X="30.25" Y="21.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAAAAAABEAAAAAAAAAAAAAAAAAAAAQAA=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\NintexWorkflowActionProcessor\VariablesCacheManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LS.SPWorkflowProcessor.Collection" Collapsed="true">
+    <Position X="35.5" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\NinTexWorkflowEntity\Collection.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LS.SPWorkflowProcessor.Configuration" Collapsed="true">
+    <Position X="37.25" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACQAAAAAAoAAAAAAAAAAQAAAAAABAAAAAIAAADAAA=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\NinTexWorkflowEntity\Configuration.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LS.SPWorkflowProcessor.ContentType" Collapsed="true">
+    <Position X="26.75" Y="14.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\NinTexWorkflowEntity\ContentType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LS.SPWorkflowProcessor.DateTimeInfo" Collapsed="true">
+    <Position X="28.5" Y="14.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAJAAAAAAAAAAAAAAAAAAAACIEAAAAAAAAgAA=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\NinTexWorkflowEntity\DateTimeInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LS.SPWorkflowProcessor.DictionaryValue" Collapsed="true">
+    <Position X="30.25" Y="14.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAAAAAQAAAAAAAAAAAACAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\NinTexWorkflowEntity\DictionaryValue.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LS.SPWorkflowProcessor.FormatValues" Collapsed="true">
+    <Position X="40.75" Y="14.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\NinTexWorkflowEntity\FormatValues.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LS.SPWorkflowProcessor.Image" Collapsed="true">
+    <Position X="26.75" Y="15.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACIAAAADAAEAAQAAAAAAAAAAAIAQAAAACA=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\NinTexWorkflowEntity\Image.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LS.SPWorkflowProcessor.ListLookup" Collapsed="true">
+    <Position X="30.25" Y="15.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAEAAAgAAAAAAAAAAAAAAAAAEEAACAAAAEAAAECAA=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\NinTexWorkflowEntity\ListLookup.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LS.SPWorkflowProcessor.Live" Collapsed="true">
+    <Position X="33.75" Y="15.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAABAA=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\NinTexWorkflowEntity\Live.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LS.SPWorkflowProcessor.Metadata" Collapsed="true">
+    <Position X="26.75" Y="16.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\NinTexWorkflowEntity\Metadata.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LS.SPWorkflowProcessor.MetadataCollection" Collapsed="true">
+    <Position X="28.5" Y="16.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\NinTexWorkflowEntity\MetadataCollection.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LS.SPWorkflowProcessor.ArrayOfVariable" Collapsed="true">
+    <Position X="28.5" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAQAAAAAAAA=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\NinTexWorkflowEntity\NintexVariables\ArrayOfVariable.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LS.SPWorkflowProcessor.ChoiceConfiguration" Collapsed="true">
+    <Position X="20.5" Y="8.5" Width="2.25" />
+    <InheritanceLine Type="LS.SPWorkflowProcessor.VariableConfiguration" FixedToPoint="true">
+      <Path>
+        <Point X="17.75" Y="10.25" />
+        <Point X="17.75" Y="8.875" />
+        <Point X="20.5" Y="8.875" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAIAAAAAAA=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\NinTexWorkflowEntity\NintexVariables\ChoiceConfiguration.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LS.SPWorkflowProcessor.DateTimeConfiguration" Collapsed="true">
+    <Position X="20.5" Y="9.75" Width="2.25" />
+    <InheritanceLine Type="LS.SPWorkflowProcessor.VariableConfiguration" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="17.75" Y="10.25" />
+        <Point X="17.75" Y="10.062" />
+        <Point X="20.5" Y="10.062" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgABAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\NinTexWorkflowEntity\NintexVariables\DateTimeConfiguration.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LS.SPWorkflowProcessor.PersonGroupConfiguration" Collapsed="true">
+    <Position X="20.5" Y="10.75" Width="2.25" />
+    <InheritanceLine Type="LS.SPWorkflowProcessor.VariableConfiguration" FixedToPoint="true">
+      <Path>
+        <Point X="17.75" Y="10.812" />
+        <Point X="17.75" Y="11.062" />
+        <Point X="20.5" Y="11.062" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAEAABAAAAAACAAAAEEAAQAAAAAAAAAAA=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\NinTexWorkflowEntity\NintexVariables\PersonGroupConfiguration.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LS.SPWorkflowProcessor.SharePointGroup" Collapsed="true">
+    <Position X="35.5" Y="19.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\NinTexWorkflowEntity\NintexVariables\PersonGroupConfiguration.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LS.SPWorkflowProcessor.StringConfiguration" Collapsed="true">
+    <Position X="20.5" Y="11.75" Width="2.25" />
+    <InheritanceLine Type="LS.SPWorkflowProcessor.VariableConfiguration" FixedToPoint="true">
+      <Path>
+        <Point X="17.75" Y="10.812" />
+        <Point X="17.75" Y="12.062" />
+        <Point X="20.5" Y="12.062" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAABAAAAAAAAAAAAAAAACAAAAAAAAAA=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\NinTexWorkflowEntity\NintexVariables\StringConfiguration.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LS.SPWorkflowProcessor.Variable" Collapsed="true">
+    <Position X="28.5" Y="21.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAIAAAAAAAAAAASAAAAAAAEAAQAEQAAAAAA=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\NinTexWorkflowEntity\NintexVariables\Variable.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LS.SPWorkflowProcessor.VariableConfiguration" Collapsed="true">
+    <Position X="16.75" Y="10.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAADACAAAAAgAAAAgEIAAgAAAABAAAAACAAAAAAAAAA=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\NinTexWorkflowEntity\NintexVariables\VariableConfiguration.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LS.SPWorkflowProcessor.Options" Collapsed="true">
+    <Position X="33.75" Y="18.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAAAAAI=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\NinTexWorkflowEntity\Options.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LS.SPWorkflowProcessor.Parameters" Collapsed="true">
+    <Position X="35.5" Y="18.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAMgABAAACAAAAQAAAAAAAABAQAoAADCAAA=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\NinTexWorkflowEntity\Parameters.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LS.SPWorkflowProcessor.ParametersProperties" Collapsed="true">
+    <Position X="37.25" Y="18.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAA=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\NinTexWorkflowEntity\ParametersProperties.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LS.SPWorkflowProcessor.ParametersValue" Collapsed="true">
+    <Position X="39" Y="18.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAAAAQAgAAAAAAAAAAAAEBAAAAQQ0AAgAAAA=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\NinTexWorkflowEntity\ParametersValue.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LS.SPWorkflowProcessor.PrimitiveValue" Collapsed="true">
+    <Position X="40.75" Y="18.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAAAAAAAAAAAAAACAAAAAQEgAAAAAAA=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\NinTexWorkflowEntity\PrimitiveValue.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LS.SPWorkflowProcessor.Property" Collapsed="true">
+    <Position X="28.5" Y="19.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAAgAAAAAAAAAAAAAAAAAAAAIAIAAAAAAA=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\NinTexWorkflowEntity\Property.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LS.SPWorkflowProcessor.SelectedValue" Collapsed="true">
+    <Position X="30.25" Y="19.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAAAAAIAAAAAAAAAAAAAEAAAAAAQEAAgAAQA=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\NinTexWorkflowEntity\SelectedValue.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LS.SPWorkflowProcessor.ServerInfo" Collapsed="true">
+    <Position X="33.75" Y="19.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAA=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\NinTexWorkflowEntity\ServerInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LS.SPWorkflowProcessor.State" Collapsed="true">
+    <Position X="37.25" Y="19.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\NinTexWorkflowEntity\State.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LS.SPWorkflowProcessor.StateConfiguration" Collapsed="true">
+    <Position X="39" Y="19.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\NinTexWorkflowEntity\StateConfiguration.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LS.SPWorkflowProcessor.SubscriptionInfo" Collapsed="true">
+    <Position X="40.75" Y="19.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\NinTexWorkflowEntity\SubscriptionInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LS.SPWorkflowProcessor.TaskProperty" Collapsed="true">
+    <Position X="26.75" Y="20.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAgAAAAAAA=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\NinTexWorkflowEntity\TaskProperty.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LS.SPWorkflowProcessor.TypeFilter" Collapsed="true">
+    <Position X="30.25" Y="20.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\NinTexWorkflowEntity\TypeFilter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LS.SPWorkflowProcessor.User" Collapsed="true">
+    <Position X="33.75" Y="20.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\NinTexWorkflowEntity\User.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LS.SPWorkflowProcessor.Value" Collapsed="true">
+    <Position X="39" Y="20.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAgAAQEAAgAAAA=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\NinTexWorkflowEntity\Value.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LS.SPWorkflowProcessor.WorkflowAction" Collapsed="true">
+    <Position X="32" Y="21.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgACAAAAAACAAAAAAAAEAAAAAAAAAAAAgAAAAAAAAAA=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\NinTexWorkflowEntity\WorkflowAction.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LS.SPWorkflowProcessor.WorkflowContext" Collapsed="true">
+    <Position X="35.5" Y="21.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAgAAAAAAA=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\NinTexWorkflowEntity\WorkflowContext.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LS.SPWorkflowProcessor.NWDateTimeInfoConverter" Collapsed="true">
+    <Position X="37.25" Y="17.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\NintexWorkflowUtility\Converter\NWDateTimeInfoConverter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LS.SPWorkflowProcessor.NWListLookupConverter" Collapsed="true">
+    <Position X="39" Y="17.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAABAAAACAAAAAAAABAgAA=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\NintexWorkflowUtility\Converter\NWListLookupConverter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LS.SPWorkflowProcessor.NWPrimitiveValueConverter" Collapsed="true">
+    <Position X="26.75" Y="18.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AADAAAACAAAAAAAAAAAAAAgAAAAAAAAAABAAAQAAgAA=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\NintexWorkflowUtility\Converter\NWPrimitiveValueConverter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LS.SPWorkflowProcessor.NWValueConverter" Collapsed="true">
+    <Position X="28.5" Y="18.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAA=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\NintexWorkflowUtility\Converter\NWValueConverter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LS.SPWorkflowProcessor.NWWorkflowContextDataConverter" Collapsed="true">
+    <Position X="30.25" Y="18.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\NintexWorkflowUtility\Converter\NWWorkflowContextDataConverter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LS.SPWorkflowProcessor.NWCoercionStringProcessor" Collapsed="true">
+    <Position X="33.75" Y="17.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\NintexWorkflowUtility\NWCoercionStringProcessor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LS.SPWorkflowProcessor.NintexVariablesProcessor" Collapsed="true">
+    <Position X="32" Y="16.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAAAAQAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\NintexWorkflowVariablesProcessor\NintexVariablesProcessor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LS.SPWorkflowProcessor.BooleanVariablesProcessor" Collapsed="true">
+    <Position X="20.5" Y="7" Width="2.25" />
+    <InheritanceLine Type="LS.SPWorkflowProcessor.VariablesProcessorBase" FixedToPoint="true">
+      <Path>
+        <Point X="17.25" Y="4.562" />
+        <Point X="17.25" Y="7.375" />
+        <Point X="20.5" Y="7.375" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\NintexWorkflowVariablesProcessor\VaruablesProcessors\BooleanVariablesProcessor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LS.SPWorkflowProcessor.ChoiceVariablesProcessor" Collapsed="true">
+    <Position X="20.5" Y="1" Width="2.25" />
+    <InheritanceLine Type="LS.SPWorkflowProcessor.VariablesProcessorBase" ManuallyRouted="true" FixedToPoint="true">
+      <Path>
+        <Point X="17.25" Y="4" />
+        <Point X="17.25" Y="1.312" />
+        <Point X="20.5" Y="1.312" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\NintexWorkflowVariablesProcessor\VaruablesProcessors\ChoiceVariablesProcessor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LS.SPWorkflowProcessor.CollectionVariableProcessor" Collapsed="true">
+    <Position X="20.5" Y="2" Width="2.25" />
+    <InheritanceLine Type="LS.SPWorkflowProcessor.VariablesProcessorBase" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="17.25" Y="4" />
+        <Point X="17.25" Y="2.375" />
+        <Point X="20.5" Y="2.375" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\NintexWorkflowVariablesProcessor\VaruablesProcessors\CollectionVariableProcessor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LS.SPWorkflowProcessor.DatetimeVariablesProcessor" Collapsed="true">
+    <Position X="20.5" Y="3" Width="2.25" />
+    <InheritanceLine Type="LS.SPWorkflowProcessor.VariablesProcessorBase" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="17.25" Y="4" />
+        <Point X="17.25" Y="3.375" />
+        <Point X="20.5" Y="3.375" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\NintexWorkflowVariablesProcessor\VaruablesProcessors\DatetimeVariablesProcessor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LS.SPWorkflowProcessor.IntegerVariablesProcessor" Collapsed="true">
+    <Position X="20.5" Y="4" Width="2.25" />
+    <InheritanceLine Type="LS.SPWorkflowProcessor.VariablesProcessorBase" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="18.25" Y="4.312" />
+        <Point X="20.5" Y="4.312" />
+        <Point X="20.5" Y="4.375" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\NintexWorkflowVariablesProcessor\VaruablesProcessors\IntegerVariablesProcessor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LS.SPWorkflowProcessor.StringVariablesProcessor" Collapsed="true">
+    <Position X="20.5" Y="5" Width="2.25" />
+    <InheritanceLine Type="LS.SPWorkflowProcessor.VariablesProcessorBase" FixedToPoint="true">
+      <Path>
+        <Point X="17.25" Y="4.562" />
+        <Point X="17.25" Y="5.375" />
+        <Point X="20.5" Y="5.375" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\NintexWorkflowVariablesProcessor\VaruablesProcessors\StringVariablesProcessor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LS.SPWorkflowProcessor.UserVariableProcessor" Collapsed="true">
+    <Position X="20.5" Y="6" Width="2.25" />
+    <InheritanceLine Type="LS.SPWorkflowProcessor.VariablesProcessorBase" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="17.25" Y="4.562" />
+        <Point X="17.25" Y="6.375" />
+        <Point X="20.5" Y="6.375" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\NintexWorkflowVariablesProcessor\VaruablesProcessors\UserVariableProcessor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LS.SPWorkflowProcessor.VariablesProcessorBase" Collapsed="true">
+    <Position X="16.25" Y="4" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAAgACAAAAAAAAAAAAAAAAAAAAAAAQEAAE=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\NintexWorkflowVariablesProcessor\VaruablesProcessors\VariablesProcessorBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LS.SPWorkflowProcessor.NintexWFCompressProcessor" Collapsed="true">
+    <Position X="35.5" Y="16.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAAAAAgAAAAAAAEAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\NintexWFCompressProcessor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LS.SPWorkflowProcessor.NintexWFListsProcessor" Collapsed="true">
+    <Position X="37.25" Y="16.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAQAAAAAAgAAAAAAAAIAAAAACAAAAAAAAAAAAA=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\NintexWFListsProcessor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LS.SPWorkflowProcessor.NintexWFManifestProcessor" Collapsed="true">
+    <Position X="39" Y="16.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAAAAEAAAAAAAAAAAEAAAAAAAAAAAA=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\NintexWFManifestProcessor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LS.SPWorkflowProcessor.NintexWFMetadataProcessor" Collapsed="true">
+    <Position X="40.75" Y="16.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\NinTexWFMetadataProcessor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LS.SPWorkflowProcessor.SerializerHelper" Collapsed="true">
+    <Position X="32" Y="19.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAQAAAAAAAIAAACAAAAQAAAAAAAAI=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\SerializerHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LS.SPWorkflowProcessor.XMLUtility" Collapsed="true">
+    <Position X="39" Y="21.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\XMLUtility.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Native13NinTexWorkflowEntity.ActivityParameter" Collapsed="true">
+    <Position X="23" Y="15.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAEAAAAAAAAAAAAAEAAEQAAAAMCAAAAAQEAAAAAAA=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\Native13NinTexWorkflowEntity\ActivityParameter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Native13NinTexWorkflowEntity.AssociationColumn" Collapsed="true">
+    <Position X="30.25" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACEAAAAgAAAAAAAAAAAAAAAAAAIAgAAUAAAAAAAAA=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\Native13NinTexWorkflowEntity\AssociationColumn.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Native13NinTexWorkflowEntity.AssociationColumnCollection" Collapsed="true">
+    <Position X="32" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\Native13NinTexWorkflowEntity\AssociationColumnCollection.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Native13NinTexWorkflowEntity.Coercion" Collapsed="true">
+    <Position X="33.75" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAE=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\Native13NinTexWorkflowEntity\Coercion.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Native13NinTexWorkflowEntity.ConditionConfig" Collapsed="true">
+    <Position X="19.25" Y="15.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\Native13NinTexWorkflowEntity\ConditionConfig.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Native13NinTexWorkflowEntity.ConditionPair" Collapsed="true">
+    <Position X="20.25" Y="16.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACACAAAAAIAA=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\Native13NinTexWorkflowEntity\ConditionPair.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Native13NinTexWorkflowEntity.ConfiguredOutcome" Collapsed="true">
+    <Position X="39" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAgAAAAAAAAAAQBAAAAgAAAAAAAAAAAAAA=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\Native13NinTexWorkflowEntity\ConfiguredOutcome.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Native13NinTexWorkflowEntity.ConfiguredOutcomeCollection" Collapsed="true">
+    <Position X="40.75" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\Native13NinTexWorkflowEntity\ConfiguredOutcomeCollection.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Native13NinTexWorkflowEntity.DataLookup" Collapsed="true">
+    <Position X="18.5" Y="18.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAEAIEAAAAAMCAAAAAQEAAAAAAA=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\Native13NinTexWorkflowEntity\DataLookup.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Native13NinTexWorkflowEntity.ErrorHandling" Collapsed="true">
+    <Position X="32" Y="14.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAAAAAAAAAAAAAgAAAAAAAAAAIAAAAAA=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\Native13NinTexWorkflowEntity\ErrorHandling.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Native13NinTexWorkflowEntity.ExportedWorkflow">
+    <Position X="19.25" Y="25.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\Native13NinTexWorkflowEntity\ExportedWorkflow.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Native13NinTexWorkflowEntity.ExtensionProperty" Collapsed="true">
+    <Position X="33.75" Y="14.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAAAAQAAAAAAAAAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\Native13NinTexWorkflowEntity\ExtensionProperty.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Native13NinTexWorkflowEntity.Field" Collapsed="true">
+    <Position X="35.5" Y="14.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\Native13NinTexWorkflowEntity\Field.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Native13NinTexWorkflowEntity.Message" Collapsed="true">
+    <Position X="35.5" Y="15.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgBAAAQAAAAAAAEkAIQBAAABAAAAAAACAAAAQABgAAA=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\Native13NinTexWorkflowEntity\Message.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Native13NinTexWorkflowEntity.MessageAttachment" Collapsed="true">
+    <Position X="37.25" Y="15.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAgAAgAAAAAAAAAAAAAAAAAAAAQAAAABAAAA=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\Native13NinTexWorkflowEntity\MessageAttachment.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Native13NinTexWorkflowEntity.MessageAttachmentCollection" Collapsed="true">
+    <Position X="39" Y="15.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\Native13NinTexWorkflowEntity\MessageAttachmentCollection.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Native13NinTexWorkflowEntity.MessageOptions" Collapsed="true">
+    <Position X="40.75" Y="15.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAA=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\Native13NinTexWorkflowEntity\MessageOptions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Native13NinTexWorkflowEntity.MultiOutputValueInfo" Collapsed="true">
+    <Position X="30.25" Y="16.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\Native13NinTexWorkflowEntity\MultiOutputValueInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Native13NinTexWorkflowEntity.NWActionConfig" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="28.5" Y="17.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EEEACwUiAA2GKIAQKhiUTBBeBIAAgIaIQfACaRAAMns=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\Native13NinTexWorkflowEntity\NWActionConfig.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Native13NinTexWorkflowEntity.NWActionConfigurations" Collapsed="true">
+    <Position X="30.25" Y="17.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\Native13NinTexWorkflowEntity\NWActionConfigurations.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Native13NinTexWorkflowEntity.NWApprover" Collapsed="true">
+    <Position X="32" Y="17.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAgBEAAAAAAAAAAgAAAAAAAAAAAgMAEAAAAAQIAAAAA=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\Native13NinTexWorkflowEntity\NWApprover.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Native13NinTexWorkflowEntity.NWConditionConfig" Collapsed="true">
+    <Position X="18" Y="16.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\Native13NinTexWorkflowEntity\NWConditionConfig.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Native13NinTexWorkflowEntity.NWConditionConfigParam" Collapsed="true">
+    <Position X="35.5" Y="17.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAAAACAAAAAEAAEQAAAAMCAAAAAQEAAAAAAA=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\Native13NinTexWorkflowEntity\NWConditionConfigParam.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Native13NinTexWorkflowEntity.NWFieldReference" Collapsed="true">
+    <Position X="23" Y="16.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAAEAAABCAAAAAAAAAAAACAAAAQAgAACACAA=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\Native13NinTexWorkflowEntity\NWFieldReference.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Native13NinTexWorkflowEntity.NWWorkflowVariable" Collapsed="true">
+    <Position X="32" Y="18.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAEgAAAAACAAAASAAAhACAAAAQAAAAAAAAQ=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\Native13NinTexWorkflowEntity\NWWorkflowVariable.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Native13NinTexWorkflowEntity.PrimitiveValue" Collapsed="true">
+    <Position X="26.75" Y="19.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAEAA=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\Native13NinTexWorkflowEntity\PrimitiveValue.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Native13NinTexWorkflowEntity.ProfileLookup" Collapsed="true">
+    <Position X="19.5" Y="19.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAIEAAAAAAAAA=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\Native13NinTexWorkflowEntity\ProfileLookup.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Native13NinTexWorkflowEntity.ToolboxData" Collapsed="true">
+    <Position X="28.5" Y="20.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAAAAAgAAAAAAAAAAAAAAAAQAAAAEACAA=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\Native13NinTexWorkflowEntity\ToolboxData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Native13NinTexWorkflowEntity.User" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="35.5" Y="20.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>DAAAEgAAAAAAAEQAAAAAAAgAgAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\Native13NinTexWorkflowEntity\User.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Native13NinTexWorkflowEntity.UserCollection" Collapsed="true">
+    <Position X="37.25" Y="20.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\Native13NinTexWorkflowEntity\UserCollection.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Native13NinTexWorkflowEntity.ValueLookup" Collapsed="true">
+    <Position X="17.25" Y="19.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAgAAAAAAAAAAAAAEAAAAAAAAAAACAAAAgAA=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\Native13NinTexWorkflowEntity\ValueLookup.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Native13NinTexWorkflowEntity.ValueStorage" Collapsed="true">
+    <Position X="40.75" Y="20.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAAAAAEAAAAAAAAAAAACAAAAAABAAAA=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\Native13NinTexWorkflowEntity\ValueStorage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Native13NinTexWorkflowEntity.ValueStorageCollection" Collapsed="true">
+    <Position X="26.75" Y="21.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\Native13NinTexWorkflowEntity\ValueStorageCollection.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Native13NinTexWorkflowEntity.WorkflowConstantLookup" Collapsed="true">
+    <Position X="33.75" Y="21.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\Native13NinTexWorkflowEntity\WorkflowConstantLookup.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Native13NinTexWorkflowEntity.WorkflowContextData" Collapsed="true">
+    <Position X="37.25" Y="21.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\Native13NinTexWorkflowEntity\WorkflowContextData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Native13NinTexWorkflowEntity.WorkflowPart" Collapsed="true">
+    <Position X="19.25" Y="24.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAgAAAABgAEQAACAAAAAAAAAAAAAAAAAAAAAAAAE=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\Native13NinTexWorkflowEntity\WorkflowPart.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ArrayOfListInfo" Collapsed="true">
+    <Position X="26.75" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAA=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\NinTexWorkflowEntity\ListsEntity\ArrayOfListInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FieldInfo" Collapsed="true">
+    <Position X="37.25" Y="14.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAACAAAAEAAAgIAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\NinTexWorkflowEntity\ListsEntity\FieldInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Fields" Collapsed="true">
+    <Position X="39" Y="14.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\NinTexWorkflowEntity\ListsEntity\Fields.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ListInfo" Collapsed="true">
+    <Position X="28.5" Y="15.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAAAIEAAAAAAAAAEAAAAAAAAAAAAAAAAgAA=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\NinTexWorkflowEntity\ListsEntity\ListInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="LS.SPWorkflowProcessor.INWActionProcessor" Collapsed="true">
+    <Position X="26.75" Y="22.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAE=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\NintexWorkflowActionProcessor\INWActionProcessor.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="LS.SPWorkflowProcessor.ApprovalType" Collapsed="true">
+    <Position X="26.75" Y="23.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAAAAAAABAAQAAAAAAAAAAAAAAAAAAAABAAA=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\NintexWorkflowActionProcessor\User Interaction\NWRequestApprovalActionProcessor.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Native13NinTexWorkflowEntity.AssociationColumnSource" Collapsed="true">
+    <Position X="28.5" Y="23.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\Native13NinTexWorkflowEntity\AssociationColumnSource.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Native13NinTexWorkflowEntity.CommentsMode" Collapsed="true">
+    <Position X="30.25" Y="23.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\Native13NinTexWorkflowEntity\CommentsMode.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Native13NinTexWorkflowEntity.CommentType" Collapsed="true">
+    <Position X="32" Y="23.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAAAAAAAAAgAAAAAAAAAAAAAAAAAAACAAAAA=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\Native13NinTexWorkflowEntity\CommentType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Native13NinTexWorkflowEntity.ConditionOperator" Collapsed="true">
+    <Position X="33.75" Y="23.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAA=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\Native13NinTexWorkflowEntity\ConditionOperator.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Native13NinTexWorkflowEntity.ConditionUse" Collapsed="true">
+    <Position X="35.5" Y="23.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAIAIAAAAAAAAAAAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\Native13NinTexWorkflowEntity\ConditionUse.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Native13NinTexWorkflowEntity.DeliveryMechanism" Collapsed="true">
+    <Position X="37.25" Y="23.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQCAAAAAAAAAQQAAAAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\Native13NinTexWorkflowEntity\DeliveryMechanism.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Native13NinTexWorkflowEntity.LazyApprovalFlags" Collapsed="true">
+    <Position X="39" Y="23.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\Native13NinTexWorkflowEntity\LazyApprovalFlags.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Native13NinTexWorkflowEntity.MessageAttachmentType" Collapsed="true">
+    <Position X="40.75" Y="23.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAA=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\Native13NinTexWorkflowEntity\MessageAttachmentType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Native13NinTexWorkflowEntity.MessageImportance" Collapsed="true">
+    <Position X="26.75" Y="24.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAgAAAAAAAAgIAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\Native13NinTexWorkflowEntity\MessageImportance.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Native13NinTexWorkflowEntity.ParameterDirection" Collapsed="true">
+    <Position X="28.5" Y="24.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAIAAAAEAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\Native13NinTexWorkflowEntity\ParameterDirection.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Native13NinTexWorkflowEntity.SLLookupType" Collapsed="true">
+    <Position X="30.25" Y="24.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAIAAAIAAAAAAAAAAAAAAAAIAA=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\Native13NinTexWorkflowEntity\SLLookupType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Native13NinTexWorkflowEntity.WorkflowInitiationControlType" Collapsed="true">
+    <Position X="32" Y="24.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAEAAAAAAABACEABAAAgAAQAAgQACAAAAEFAAAg=</HashCode>
+      <FileName>NinTexWorkflowUpgradeProcessor\Native13NinTexWorkflowEntity\WorkflowInitiationControlType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

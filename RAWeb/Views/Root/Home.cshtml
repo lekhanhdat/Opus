@@ -1,0 +1,53 @@
+﻿@*Covered by AvePoint copyright and license agreement*@
+@using AvePoint.RA.I18N.Core;
+@using AvePoint.RA.Common.Util;
+@using AvePoint.RA.Web.Common;
+@using AvePoint.RA.Web.Common.WIF
+@using Microsoft.AspNetCore.Antiforgery
+@using AvePoint.RA.Common.Configurations
+@inject IAntiforgery Antiforgery
+@{
+    Layout = null;
+    bool isDebug = ViewBag.IsDebug;
+    var requestToken = Antiforgery.GetAndStoreTokens(Context).RequestToken;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@I18NEntity.GetString("RM_JS_Common_RecourdAutomation")</title>
+    <link rel='SHORTCUT ICON' href='https://res.cdn.avepointonlineservices.com/cloud%20records/favicon.ico' type='image/x-icon' />
+    <link rel="stylesheet" type="text/css" href="@Url.Script("~/Content/3rd/jquery-ui.min.css")"/>
+    <link rel="stylesheet" type="text/css" href="@Url.Script("~/aui/react/fia-records.css")"/>
+    <link rel="stylesheet" type="text/css" href="@Url.Script("~/aui/react/opensans.css")"/>
+    <link rel="Stylesheet" type="text/css" href="@Url.Script("~/aui/react/aui.css", isDebug)">
+    <link rel="stylesheet" type="text/css" href="@Url.Script("~/dist/bundle/common.css", isDebug)" />
+    <link rel="stylesheet" type="text/css" href="@Url.Script("~/dist/bundle/vendors.css", isDebug)" />
+    <link rel="stylesheet" type="text/css" href="@Url.Script("~/dist/bundle/index.css", isDebug)" />
+</head>
+<body tabindex="-1">
+    <noscript>
+        You need to enable JavaScript to run this app.
+    </noscript>
+
+    @Html.Hidden("hiddenRequestVerificationToken", requestToken)
+    <div id="root"></div>
+    
+    <script nonce="@ViewBag.Nonce" src="@RMResourceManager.GetJsResourceUrl(RMGlobalConfiguration.EnvSetting.ProductVersion)"></script>
+    <script nonce="@ViewBag.Nonce" type="text/javascript" src="@Url.Script("~/Scripts/3rd/jquery-3.5.1.min.js", isDebug)"></script>
+    <script nonce="@ViewBag.Nonce" type="text/javascript" src="@Url.Script("~/aui/react/aui.editor.js")"></script>
+    <script nonce="@ViewBag.Nonce" type="text/javascript" src="@Url.Script("~/aui/react/aui.js", isDebug)"></script>
+    <script nonce="@ViewBag.Nonce" type="text/javascript" src="@Url.Script("~/aui/react/aui.react.js", isDebug)"></script>
+    <script nonce="@ViewBag.Nonce" type="text/javascript" src="@Url.Script("~/aui/react/aui.chart.js")"></script>
+    <script nonce="@ViewBag.Nonce" type="text/javascript" src="@Url.Script("~/Scripts/3rd/jquery-ui-draggable/jquery-ui.js")"></script>
+    <script nonce="@ViewBag.Nonce" type="text/javascript" src="~/Scripts/3rd/jquery.mousewheel.js"></script>
+    <script nonce="@ViewBag.Nonce" type="text/javascript" src="~/Scripts/3rd/jquery.form.js"></script>
+    <script nonce="@ViewBag.Nonce" type="text/javascript" src="@Url.Script("~/dist/bundle/vendors.js", isDebug)"></script>
+    <script nonce="@ViewBag.Nonce" type="text/javascript" src="@Url.Script("~/dist/bundle/lib.js", isDebug)"></script>
+    <script nonce="@ViewBag.Nonce" type="text/javascript" src="@Url.Script("~/dist/bundle/common.js", isDebug)"></script>
+    <script nonce="@ViewBag.Nonce" type="text/javascript" src="@Url.Script("~/dist/bundle/index.js", isDebug)"></script>
+</body>
+</html>

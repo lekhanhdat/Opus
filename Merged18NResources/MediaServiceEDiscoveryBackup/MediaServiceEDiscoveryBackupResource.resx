@@ -1,0 +1,264 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="EDiscoveryBackupExportServiceExportDataFailed" xml:space="preserve">
+    <value>Exporting file failed.</value>
+    <comment>Added</comment>
+  </data>
+  <data name="EDiscoveryBackupExportServiceExportDataSucceed" xml:space="preserve">
+    <value>Exporting file succeed.</value>
+    <comment>Added</comment>
+  </data>
+  <data name="EDiscoveryBackupExportServiceExportError" xml:space="preserve">
+    <value>An error occurred while exporting the file {0} to the export device, details: {1}.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="EDiscoveryBackupExportServiceExportWarn" xml:space="preserve">
+    <value>Cannot find the file {0}. Job ID: {1}.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="EDiscoveryBackupExportServiceGenerateJobDetailListError" xml:space="preserve">
+    <value>An error occurred while trying to update the job details, details: {0}.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="EDiscoveryBackupExportServiceGenerateJobReportBegin" xml:space="preserve">
+    <value>Start generating export data report...</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="EDiscoveryBackupExportServiceGenerateJobReportEnd" xml:space="preserve">
+    <value>Finished generating ediscovery export archiver data job report.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="EDiscoveryBackupExportServiceGenerateJobReportError" xml:space="preserve">
+    <value>An error occurred while trying to update the job summary, details: {0}.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="EDiscoveryBackupExportServiceOpenBegin" xml:space="preserve">
+    <value>Start exporting archiver data... Job ID: {0}</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="EDiscoveryBackupExportServiceProcessExceptionOccur" xml:space="preserve">
+    <value>Failed to export archiver data, details: {0}.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="EDiscoveryBackupGenerateOfflineDBServiceGenerateJobDetailListError" xml:space="preserve">
+    <value>An error occurred while trying to update job details, details: {0}.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="EDiscoveryBackupGenerateOfflineDBServiceGenerateJobReportBegin" xml:space="preserve">
+    <value>Start generating export data report...</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="EDiscoveryBackupGenerateOfflineDBServiceGenerateJobReportEnd" xml:space="preserve">
+    <value>Finished generating ediscovery offline database job report.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="EDiscoveryBackupGenerateOfflineDBServiceGenerateJobReportError" xml:space="preserve">
+    <value>An error occurred while trying to update the job summary, details: {0}.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="EDiscoveryBackupGenerateOfflineDBServiceOpenBegin" xml:space="preserve">
+    <value>[{0}]: Start generating offline database...</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="EDiscoveryBackupGenerateOfflineDBServiceProcessExceptionOccur" xml:space="preserve">
+    <value>[{0}]: Failed to generate offline database, details: {1}.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="EDiscoveryBackupGenerateOfflineDBServiceProcessExceptionStopJob" xml:space="preserve">
+    <value>Job [{0}] is stopped.</value>
+    <comment>Added</comment>
+  </data>
+  <data name="EDiscoveryBackupHoldServiceGenerateJobDetailListError" xml:space="preserve">
+    <value>An error occurred while trying to update job details, details: {0}.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="EDiscoveryBackupHoldServiceGenerateJobReportBegin" xml:space="preserve">
+    <value>Start generating hold data report...</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="EDiscoveryBackupHoldServiceGenerateJobReportComplete" xml:space="preserve">
+    <value>Finished generating ediscovery hold archiver data job report.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="EDiscoveryBackupHoldServiceGenerateJobReportError" xml:space="preserve">
+    <value>An error occurred while trying to update the job summary, details: {0}.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="EDiscoveryBackupHoldServiceHoldDataFailed" xml:space="preserve">
+    <value>Holding file failed.</value>
+    <comment>Added</comment>
+  </data>
+  <data name="EDiscoveryBackupHoldServiceHoldDataSkipped" xml:space="preserve">
+    <value>Holding file skipped because the file has already held.</value>
+    <comment>Added</comment>
+  </data>
+  <data name="EDiscoveryBackupHoldServiceHoldDataSucceed" xml:space="preserve">
+    <value>Holding file succeed.</value>
+    <comment>Added</comment>
+  </data>
+  <data name="EDiscoveryBackupHoldServiceHoldWarn" xml:space="preserve">
+    <value>The Item {0} whose Job ID is {1} cannot be found in [index.db].</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="EDiscoveryBackupHoldServiceOpenBegin" xml:space="preserve">
+    <value>Start holding archiver data... Job ID: {0}</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="EDiscoveryBackupHoldServiceProcessExceptionOccur" xml:space="preserve">
+    <value>Failed to hold archiver data, details: {0}.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="EDiscoveryBackupHoldServiceProcessExceptionStopJob" xml:space="preserve">
+    <value>Job [{0}] is stopped.</value>
+    <comment>Added</comment>
+  </data>
+  <data name="EDiscoveryBackupHoldServiceRealHoldDataError" xml:space="preserve">
+    <value>An error occurred while holding the file {0} to the hold device, details: {1}.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="EDiscoveryBackupHoldServiceUpdateHoldDBOnlyError" xml:space="preserve">
+    <value>An error occurred while holding the file {0}, details: {1}.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="EDiscoveryBackupReleaseServiceOpenBegin" xml:space="preserve">
+    <value>Start releasing ediscovery hold data... Job ID: {0}</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="EDiscoveryBackupReleaseServiceProcessExceptionOccur" xml:space="preserve">
+    <value>Failed to release ediscovery hold data, details: {0}.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="EDiscoveryBackupReleaseServiceProcessExceptionStopJob" xml:space="preserve">
+    <value>Job [{0}] is stopped.</value>
+    <comment>Added</comment>
+  </data>
+  <data name="EDiscoveryBackupReleaseServiceRealReleaseDataError" xml:space="preserve">
+    <value>An error occurred while releasing the file {0}, details: {1}.</value>
+    <comment>Verified</comment>
+  </data>
+  <data name="EDiscoveryBackupReleaseServiceRealReleaseDataFailed" xml:space="preserve">
+    <value>Releasing file failed.</value>
+    <comment>Added</comment>
+  </data>
+  <data name="EDiscoveryBackupReleaseServiceRealReleaseDataSucceed" xml:space="preserve">
+    <value>Releasing file succeed.</value>
+    <comment>Added</comment>
+  </data>
+</root>

@@ -1,0 +1,260 @@
+﻿<!--/********************************************************************
+ *
+ *  PROPRIETARY and CONFIDENTIAL
+ *
+ *  This file is licensed from, and is a trade secret of:
+ *
+ *                   AvePoint, Inc.
+ *                   525 Washington Blvd, Suite 1400
+ *                   Jersey City, NJ 07310
+ *                   United States of America
+ *                   Telephone: +1-201-793-1111
+ *                   WWW: www.avepoint.com
+ *
+ *  Refer to your License Agreement for restrictions on use,
+ *  duplication, or disclosure.
+ *
+ *  RESTRICTED RIGHTS LEGEND
+ *
+ *  Use, duplication, or disclosure by the Government is
+ *  subject to restrictions as set forth in subdivision
+ *  (c)(1)(ii) of the Rights in Technical Data and Computer
+ *  Software clause at DFARS 252.227-7013 (Oct. 1988) and
+ *  FAR 52.227-19 (C) (June 1987).
+ *
+ *  Copyright © 2017-2026 AvePoint® Inc. All Rights Reserved. 
+ *
+ *  Unpublished - All rights reserved under the copyright laws of the United States.
+ */-->
+
+
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="BCStyleLink.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+
+
+    <!-- SimpleStyles: Button -->
+
+    <Style x:Key="{x:Type Button}" TargetType="{x:Type Button}">
+        <Setter Property="SnapsToDevicePixels" Value="true" />
+        <Setter Property="OverridesDefaultStyle" Value="true" />
+        <Setter Property="FocusVisualStyle" Value="{x:Null}" />
+        <Setter Property="Foreground" Value="#FF333333" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Grid MinHeight="0" MinWidth="70" HorizontalAlignment="Center" VerticalAlignment="Center"
+                          Background="Transparent" Width="Auto" Height="24">
+                        <Border x:Name="BackgroundNormal" BorderBrush="#FFABABAB" BorderThickness="1"
+                                Background="White" />
+                        <Border x:Name="BackgroundOver" BorderBrush="#FFABABAB" BorderThickness="1"
+                                Background="#FFE9E9E9" Visibility="Collapsed" />
+                        <Border x:Name="BackgroundFocus" BorderBrush="#FF075999" BorderThickness="1" Opacity="0" />
+                        <Border x:Name="BackgroundPressed" BorderBrush="#FFA3A3A3" BorderThickness="1"
+                                Background="Gainsboro" Visibility="Collapsed" />
+                        <Border x:Name="BackgroundDis" Background="#FFE0E0E0" Visibility="Collapsed" />
+                        <TextBlock x:Name="TextBlockNormal" HorizontalAlignment="Center" Padding="8,1"
+                                   VerticalAlignment="Center" Foreground="#FF333333" TextAlignment="Center"
+                                   Text="{TemplateBinding Content}" />
+                        <TextBlock x:Name="TextBlockDis" HorizontalAlignment="Center" Padding="8,1"
+                                   VerticalAlignment="Center" Foreground="#FFACACAC" TextWrapping="Wrap"
+                                   Text="{TemplateBinding Content}" Visibility="Collapsed" />
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsKeyboardFocused" Value="true">
+                            <Setter Property="Visibility" TargetName="BackgroundFocus" Value="Visible" />
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="true">
+                            <Setter Property="Visibility" TargetName="BackgroundOver" Value="Visible" />
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="true">
+                            <Setter Property="Visibility" TargetName="BackgroundPressed" Value="Visible" />
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="false">
+                            <Setter Property="Visibility" TargetName="TextBlockDis" Value="Visible" />
+                            <Setter Property="Visibility" TargetName="TextBlockNormal" Value="Collapsed" />
+                            <Setter Property="Visibility" TargetName="BackgroundDis" Value="Visible" />
+                        </Trigger>
+                        <Trigger Property="IsFocused" Value="True">
+                            <Setter Property="Opacity" TargetName="BackgroundFocus" Value="1" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+
+    <!-- Wizard button styles: Button -->
+    <Style x:Key="WizardButtonStyle" TargetType="{x:Type Button}">
+        <Setter Property="SnapsToDevicePixels" Value="true" />
+        <Setter Property="OverridesDefaultStyle" Value="true" />
+        <Setter Property="FocusVisualStyle" Value="{x:Null}" />
+        <Setter Property="Padding" Value="4,1,10,1" />
+        <Setter Property="Height" Value="40" />
+        <Setter Property="HorizontalAlignment" Value="Left" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Grid>
+                        <Border x:Name="BackgroundNorm" BorderThickness="1" Background="{x:Null}"
+                                BorderBrush="{x:Null}" CornerRadius="1" />
+                        <Border x:Name="BackgroundOver" Height="Auto" />
+                        <Border x:Name="BackgroundNorm_highlight" Margin="1" BorderBrush="{x:Null}"
+                                BorderThickness="1,1,1,1" CornerRadius="1" Height="Auto" />
+                        <Border x:Name="BackgroundPressed" Background="{x:Null}" BorderBrush="{x:Null}"
+                                BorderThickness="1" CornerRadius="1" Opacity="0" Height="Auto" />
+                        <TextBlock x:Name="textBlock" FontFamily="Segoe UI" FontSize="13" TextWrapping="Wrap"
+                                   MaxWidth="200" Margin="3,0"
+                                   HorizontalAlignment="Left"
+                                   VerticalAlignment="Center" Text="{TemplateBinding Content}" Foreground="#FF075999"
+                                   Opacity="0" />
+                        <TextBlock x:Name="textBlockGray" FontFamily="Segoe UI" FontSize="13" TextWrapping="Wrap"
+                                   MaxWidth="200" Margin="5,0"
+                                   HorizontalAlignment="Left"
+                                   VerticalAlignment="Center" Text="{TemplateBinding Content}" Foreground="#FF444444"
+                                   Opacity="1" />
+                        <ContentPresenter x:Name="contentPresenter"
+                                          HorizontalAlignment="Center"
+                                          VerticalAlignment="Center"
+                                          RecognizesAccessKey="True" Opacity="0" />
+                        <Border x:Name="DisabledVisualElement" Background="{x:Null}" BorderBrush="{x:Null}"
+                                BorderThickness="1" CornerRadius="1" IsHitTestVisible="false" Visibility="Collapsed" />
+                        <Rectangle x:Name="Focus" Fill="{x:Null}" Stroke="Black" Margin="0"
+                                   d:LayoutOverrides="HorizontalAlignment, VerticalAlignment" StrokeDashArray="0.5 1"
+                                   Visibility="Collapsed" />
+                        <Border x:Name="FocusVisualElement" Margin="1" BorderBrush="{x:Null}" BorderThickness="1"
+                                CornerRadius="1" IsHitTestVisible="false" Visibility="Collapsed" />
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsKeyboardFocused" Value="true">
+                            <Setter Property="Visibility" TargetName="FocusVisualElement" Value="Visible" />
+                            <Setter Property="Visibility" TargetName="Focus" Value="Visible" />
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="true">
+                            <Setter Property="Opacity" TargetName="BackgroundPressed" Value="1" />
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="false">
+                            <Setter Property="Visibility" TargetName="DisabledVisualElement" Value="Visible" />
+                            <Setter Property="Opacity" TargetName="textBlock" Value="1" />
+                            <Setter Property="Opacity" TargetName="textBlockGray" Value="0" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+
+    </Style>
+
+
+    <!-- RecommandedStyle: Button -->
+    <Style x:Key="RecommandedButtonStyle" TargetType="{x:Type Button}">
+        <Setter Property="SnapsToDevicePixels" Value="true" />
+        <Setter Property="OverridesDefaultStyle" Value="true" />
+        <Setter Property="FocusVisualStyle" Value="{x:Null}" />
+        <Setter Property="Foreground" Value="#FFFFFFFF" />
+        <Setter Property="HorizontalAlignment" Value="Stretch" />
+        <Setter Property="VerticalAlignment" Value="Stretch" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Grid MinHeight="0" MinWidth="70" Height="24">
+                        <Border x:Name="BackgroundNorm" Background="#125e99" />
+                        <Border x:Name="BackgroundOver" Background="#1466aa" Visibility="Collapsed" />
+                        <Border x:Name="BackgroundPressed" Background="#0c5599" Visibility="Collapsed" />
+                        <Border x:Name="BackgroundDis" BorderThickness="0" Background="#FFE0E0E0"
+                                Visibility="Collapsed" />
+                        <ContentPresenter Margin="0" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                          RecognizesAccessKey="True" Opacity="0" />
+                        <TextBlock x:Name="TextBlockNormal" Padding="8,1" Text="{TemplateBinding Content}"
+                                   TextWrapping="NoWrap" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                   Foreground="White" />
+                        <Border x:Name="FocusVisualElement" Margin="1" BorderBrush="#99FFFFFF" BorderThickness="1"
+                                IsHitTestVisible="false" Visibility="Collapsed" Opacity="0" />
+                        <Border x:Name="DisabledVisualElement" IsHitTestVisible="false" Background="#FFE0E0E0"
+                                Visibility="Collapsed" />
+                        <TextBlock x:Name="TextBlockDis" Padding="8,1" HorizontalAlignment="Center"
+                                   VerticalAlignment="Center" Foreground="#FFACACAC" Text="{TemplateBinding Content}"
+                                   TextWrapping="NoWrap" Visibility="Collapsed" />
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsKeyboardFocused" Value="true">
+                            <!--<Setter Property="Visibility" TargetName="FocusVisualElement" Value="Visible"/>-->
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="true">
+                            <Setter Property="Visibility" TargetName="BackgroundOver" Value="Visible" />
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="true">
+                            <Setter Property="Visibility" TargetName="BackgroundPressed" Value="Visible" />
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="false">
+                            <!--<Setter Property="Visibility" TargetName="DisabledVisualElement" Value="Visible"/>-->
+                            <Setter Property="Visibility" TargetName="TextBlockDis" Value="Visible" />
+                            <Setter Property="Visibility" TargetName="TextBlockNormal" Value="Collapsed" />
+                            <Setter Property="Visibility" TargetName="BackgroundDis" Value="Visible" />
+                        </Trigger>
+                        <Trigger Property="IsFocused" Value="True">
+                            <Setter Property="Opacity" TargetName="FocusVisualElement" Value="1" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+
+    <!-- NotRecommandedStyle: Button -->
+    <Style x:Key="NotRecommandedButtonStyle" TargetType="{x:Type Button}">
+        <Setter Property="SnapsToDevicePixels" Value="true" />
+        <Setter Property="OverridesDefaultStyle" Value="true" />
+        <Setter Property="FocusVisualStyle" Value="{x:Null}" />
+        <Setter Property="Foreground" Value="#FF333333" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Grid MinHeight="0" MinWidth="70" HorizontalAlignment="Center" VerticalAlignment="Center"
+                          Background="Transparent" Width="Auto" Height="24">
+                        <Border x:Name="BackgroundNormal" BorderBrush="#FFABABAB" BorderThickness="1"
+                                Background="White" />
+                        <Border x:Name="BackgroundOver" BorderBrush="#FFABABAB" BorderThickness="1"
+                                Background="#FFE9E9E9" Visibility="Collapsed" />
+                        <Border x:Name="BackgroundFocus" BorderBrush="#FF075999" BorderThickness="1" Opacity="0" />
+                        <Border x:Name="BackgroundPressed" BorderBrush="#FFA3A3A3" BorderThickness="1"
+                                Background="Gainsboro" Visibility="Collapsed" />
+                        <Border x:Name="BackgroundDis" BorderThickness="1" Background="#FFE0E0E0"
+                                Visibility="Collapsed" />
+                        <TextBlock x:Name="TextBlockNormal" HorizontalAlignment="Center" Padding="8,1"
+                                   VerticalAlignment="Center" Foreground="#FF333333" TextAlignment="Center"
+                                   Text="{TemplateBinding Content}" />
+                        <TextBlock x:Name="TextBlockDis" HorizontalAlignment="Center" Padding="8,1"
+                                   VerticalAlignment="Center" Foreground="#FFACACAC" TextWrapping="Wrap"
+                                   Visibility="Collapsed" />
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsKeyboardFocused" Value="true">
+                            <Setter Property="Visibility" TargetName="BackgroundFocus" Value="Visible" />
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="true">
+                            <Setter Property="Visibility" TargetName="BackgroundOver" Value="Visible" />
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="true">
+                            <Setter Property="Visibility" TargetName="BackgroundPressed" Value="Visible" />
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="false">
+                            <Setter Property="Visibility" TargetName="TextBlockDis" Value="Visible" />
+                            <Setter Property="Visibility" TargetName="TextBlockNormal" Value="Collapsed" />
+                            <Setter Property="Visibility" TargetName="BackgroundDis" Value="Visible" />
+                        </Trigger>
+                        <Trigger Property="IsFocused" Value="True">
+                            <Setter Property="Opacity" TargetName="BackgroundFocus" Value="1" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

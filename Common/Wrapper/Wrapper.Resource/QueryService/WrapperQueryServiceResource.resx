@@ -1,0 +1,270 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AddtoStubFileListError" xml:space="preserve">
+    <value>An error occurred while adding item to stub file list.Error Message{0}</value>
+  </data>
+  <data name="ChangeItemTPGuidByNativeError" xml:space="preserve">
+    <value>An error occurred while Changing ItemTPGuidByNative of a list item.Error Message{0}.</value>
+  </data>
+  <data name="ChangeModerationStatusAndDraftOwnerIdByNativeError" xml:space="preserve">
+    <value>An error occurred while updating ModerationStatusAndDraftOwnerIdByNative.Error Message{0}.</value>
+  </data>
+  <data name="ChangeWebPartIDError" xml:space="preserve">
+    <value>An error occurred while changing web part ID.Error Message{0}.</value>
+  </data>
+  <data name="CheckContentTypeError" xml:space="preserve">
+    <value>An error occurred while checking the specified whether exits or not.Error Message{0}.</value>
+  </data>
+  <data name="CheckIfContentTypeExistInChildrenError" xml:space="preserve">
+    <value>An error occurred while checking whether spcified content type exits in children.Error Message{0}.</value>
+  </data>
+  <data name="CheckSpcifiedItemDeleteError" xml:space="preserve">
+    <value>An error occurred while checking whether spcified item is delete or not.Error Message{0}.</value>
+  </data>
+  <data name="ConflictWithRecycleError" xml:space="preserve">
+    <value>An error occurred while judging whether the site is exists or not.Error Message{0}.</value>
+  </data>
+  <data name="ConnectionDisposeError" xml:space="preserve">
+    <value>An error occurred while a connection disposing.Error Message{0}.</value>
+  </data>
+  <data name="DeleteAllFromEventReceiversError" xml:space="preserve">
+    <value>An error occurred while deleting all from event receivers.Error Message{0}.</value>
+  </data>
+  <data name="DumpLocksInfoError" xml:space="preserve">
+    <value>An error occurred while dumping locksinfo.Error Message{0}.</value>
+  </data>
+  <data name="DumpSysProcessError" xml:space="preserve">
+    <value>An error occurred while dumping sysprocess.Error Message{0}.</value>
+  </data>
+  <data name="FindRealUserGroupNameError" xml:space="preserve">
+    <value>An error occurred while finding real user group name.Error Message{0}.</value>
+  </data>
+  <data name="GetColumnValueError" xml:space="preserve">
+    <value>An error occurred while getting column value from DB.Error Message{0}.</value>
+  </data>
+  <data name="GetContentTypeContentError" xml:space="preserve">
+    <value>An error occurred while getting list content type.Error Message{0}.</value>
+  </data>
+  <data name="GetContentTypeError" xml:space="preserve">
+    <value>An error occurred while getting content type information.Error Message{0}.</value>
+  </data>
+  <data name="GetFieldsError" xml:space="preserve">
+    <value>An error occurred while getting fields.Error Message{0}.</value>
+  </data>
+  <data name="GetFolderIDByNameError" xml:space="preserve">
+    <value>An error occurred while getting folderID by Name.Error Message{0}.</value>
+  </data>
+  <data name="GetItemLastModifyError" xml:space="preserve">
+    <value>An error occurred while getting item last modify.Error Message{0}.</value>
+  </data>
+  <data name="GetItemStubAttachmentsError" xml:space="preserve">
+    <value>An error occurred while getting items attachments.Error Message{0}.</value>
+  </data>
+  <data name="GetLanguageError" xml:space="preserve">
+    <value>An error occurred while getting MMS default language.Error Message{0}.</value>
+  </data>
+  <data name="GetNavigationNodeMetainfoError" xml:space="preserve">
+    <value>An error occurred while getting navigation node metainfo.Error Message{0}.</value>
+  </data>
+  <data name="GetOldIDError" xml:space="preserve">
+    <value>An error occurred while getting old ID,Error Message{0}</value>
+  </data>
+  <data name="GetPoolsOfDBError" xml:space="preserve">
+    <value>An error occurred while getting pools of DB,Error Message{0}.</value>
+  </data>
+  <data name="GetSiteCollectionIdError" xml:space="preserve">
+    <value>An error occurred while getting sitecollectionID.Error Message{0}.</value>
+  </data>
+  <data name="GetStubAttachmentsError" xml:space="preserve">
+    <value>An error occurred while getting stub attachments.Error Message{0}.</value>
+  </data>
+  <data name="GetSubWebsAndPageInfoError" xml:space="preserve">
+    <value>An error occurred while getting sub webs and pageinfo.Error Message{0}.</value>
+  </data>
+  <data name="GetUserInfoError" xml:space="preserve">
+    <value>An error occurred while getting user informatin by native.Error Message{0}.</value>
+  </data>
+  <data name="GetVersionModifiedError" xml:space="preserve">
+    <value>An error occurred while getting VersionModified.Error Message{0}</value>
+  </data>
+  <data name="GetViewsError" xml:space="preserve">
+    <value>An error occurred while getting views.Error Message{0}.</value>
+  </data>
+  <data name="InitConnectionStringError" xml:space="preserve">
+    <value>An error occurred while initiating connnection string in open.Error Message{0}.</value>
+  </data>
+  <data name="InstantiatedError" xml:space="preserve">
+    <value>An error occurred while creating an instance.Error Message{0}.</value>
+  </data>
+  <data name="IsSiteCollectionGroupError" xml:space="preserve">
+    <value>An error occurred while judging whether the group is sitecollection group or not.Error Message{0}.</value>
+  </data>
+  <data name="ItemStubAttachmentsInFolderError" xml:space="preserve">
+    <value>An error occurred while item stubing attachments in folder.Error Message{0}.</value>
+  </data>
+  <data name="KeepItemIDError" xml:space="preserve">
+    <value>An error occurred while keeping itemID.Error Message{0}.</value>
+  </data>
+  <data name="SOBlobStorageUtilitySharePointConvertToContentExceptionrestore" xml:space="preserve">
+    <value>Item's target object cannot be unknown when restoring EBS stub.</value>
+  </data>
+  <data name="SOBlobStorageUtilitySharePointCreateRBSBlobExceptionrecord" xml:space="preserve">
+    <value>Cannot generate Blob record.</value>
+  </data>
+  <data name="SOBlobStorageUtilitySharePointGetBlobIdFromContentDBExceptionBlob" xml:space="preserve">
+    <value>The Blob is not EBS or RBS data.</value>
+  </data>
+  <data name="SOBlobStorageUtilitySharePointGetBlobIdFromContentDBExceptionitem" xml:space="preserve">
+    <value>Cannot find the item.</value>
+  </data>
+  <data name="SOBlobStorageUtilitySharePointGetBlobIdFromContentDBExceptionRBS" xml:space="preserve">
+    <value>Cannot find RBS Blob Id.</value>
+  </data>
+  <data name="StubAttachmentRelativeUrlError" xml:space="preserve">
+    <value>An error occurred while stubing attachment relativeURL.Error Message{0}.</value>
+  </data>
+  <data name="StubFileAndVersionError" xml:space="preserve">
+    <value>An error occurred while stubing file and version.Error Message{0}.</value>
+  </data>
+  <data name="TimeOutError" xml:space="preserve">
+    <value>Timeout checker thread is down.Error Message{0}.</value>
+  </data>
+  <data name="UpdataVersionByNativeError" xml:space="preserve">
+    <value>An error occurred while UpdatingVersionByNative.Error Message{0}.</value>
+  </data>
+  <data name="UpdateDeleteDocError" xml:space="preserve">
+    <value>An error occurred while updating DeleteTransactionId activity in alldoc.Error Message{0}.</value>
+  </data>
+  <data name="UpdateItemInternalVersionError" xml:space="preserve">
+    <value>An error occurred while updating item internal version.Error Message{0}.</value>
+  </data>
+  <data name="WriteToFileError" xml:space="preserve">
+    <value>An error occurred while writing file .Error Message{0}.</value>
+  </data>
+  <data name="UpdateCheckError" xml:space="preserve">
+    <value>Update with query string {0} actual affected rows and expected rows dismatch, expected rows: {1}, actual affected rows: {2}</value>
+  </data>
+  <data name="GetExpectedUpdateRowsError" xml:space="preserve">
+    <value>An error occurred While getting expected UpdateAffectedRows with queryString: {0}.Error Message{1}.</value>
+  </data>
+  <data name="CheckIfItemHasAlertsError" xml:space="preserve">
+    <value>An error occurred while checking if a item has alerts .Error Message{0}.</value>
+  </data>
+</root>

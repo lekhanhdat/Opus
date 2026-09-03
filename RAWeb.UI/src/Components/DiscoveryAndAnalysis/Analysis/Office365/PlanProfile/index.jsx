@@ -422,6 +422,9 @@ const PlanProfile = () => {
             }
 
             closePanel();
+            if (editorMode === "create") {
+                showToast.success(RMResx.RM_FA_PlanProfile_Create_Success);
+            }
             loadTableData(); 
         } catch (error) {
             console.error("Save operation failed.", error);

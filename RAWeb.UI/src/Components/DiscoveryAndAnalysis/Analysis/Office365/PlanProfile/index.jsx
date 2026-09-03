@@ -540,7 +540,9 @@ const PlanProfile = () => {
     const renderNavbar = () => (
         <div className="ra-main-navbar">
             <div className="flex">
-                <R.Button primary classify="theme" text={RMResx.RM_JS_Common_Create} onClick={openCreatePanel} />
+                {selectedItems.length === 0 && (
+                    <R.Button primary classify="theme" text={RMResx.RM_JS_Common_Create} onClick={openCreatePanel} />
+                )}
                 {selectedItems.length === 1 && (
                     <R.Button icon="fia-edit" text={RMResx.RM_JS_Common_Edit} onClick={openEditPanel} />
                 )}

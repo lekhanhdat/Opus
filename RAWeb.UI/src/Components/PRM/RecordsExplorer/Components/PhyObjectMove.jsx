@@ -69,28 +69,48 @@ export default class PhyObjectMove extends R.Component {
         });
     }
 
+    getSearchPlaceholder(leafNodeType) {
+        if (leafNodeType == NodeType.PhyFile) {
+            return RMResx.RM_JS_BCM_Explorer_SearchFilePlaceHolder;
+        }
+        return RMResx.RM_JS_BCM_Explorer_SearchPlaceHolder;
+    }
+
+    shouldShowSearchBox() {
+        const sources = this.props.data?.Source;
+        if (sources?.some(item => item.NodeType === NodeType.PhyBox)) {
+            return false;
+        }
+
+        return true;
+    }
+
     render() {
         const leafNodeType = this.props.smallNodeType;
-        let searchPlaceHolder = RMResx.RM_JS_BCM_Explorer_SearchPlaceHolder;
-        if (leafNodeType == NodeType.PhyFile) {
-            searchPlaceHolder = RMResx.RM_JS_BCM_Explorer_SearchFilePlaceHolder;
-        }
+        const showSearchBox = this.shouldShowSearchBox();
+        const searchKey = showSearchBox ? this.state.searchKey : "";
+        const searchPlaceHolder = this.getSearchPlaceholder(leafNodeType);
+
         return (
             <div id={this.props.id}>
-                <R.Searchbox
-                    width={380}
-                    height={34}
-                    placeholder={searchPlaceHolder}
-                    disabled={false}
-                    onSearch={this.onSearch}
-                />
-                {this.state.isExceedLimitSearch && (
-                    <div tabIndex={0} style={{ color: "red" }} className="margin-top-s">
-                        {RMResx.RM_JS_BCM_Explorer_SearchErrorContent}
-                    </div>
+                {showSearchBox && (
+                    <React.Fragment>
+                        <R.Searchbox
+                            width={380}
+                            height={34}
+                            placeholder={searchPlaceHolder}
+                            disabled={false}
+                            onSearch={this.onSearch}
+                        />
+                        {this.state.isExceedLimitSearch && (
+                            <div tabIndex={0} style={{ color: "red" }} className="margin-top-s">
+                                {RMResx.RM_JS_BCM_Explorer_SearchErrorContent}
+                            </div>
+                        )}
+                    </React.Fragment>
                 )}
                 <PhysicalRuleMoveTree
-                    searchKey={this.state.searchKey}
+                    searchKey={searchKey}
                     onSelectedNodeChanged={this.onMoveTreeSelectedNodeChanged}
                     leafNodeType={leafNodeType}
                     onSetIsExceedLimitSearch={(isExceedLimitSearch) => { this.setState({ isExceedLimitSearch }); }}

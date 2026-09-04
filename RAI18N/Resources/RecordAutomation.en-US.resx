@@ -8545,6 +8545,15 @@
     <value>Search by box name, folder name, or unique ID</value>
     <comment>Resolved</comment>
   </data>
+  <data name="RM_JS_BCM_Explorer_SearchRecordPlaceHolder" xml:space="preserve">
+    <value>Search by folder name, or unique ID</value>
+  </data>
+  <data name="RM_JS_BCM_Explorer_SearchFolderPlaceHolder" xml:space="preserve">
+    <value>Search by location name, box name, or unique ID</value>
+  </data>
+  <data name="RM_JS_BCM_Explorer_SearchBoxPlaceHolder" xml:space="preserve">
+    <value>Search by location name, or unique ID</value>
+  </data>
   <data name="RM_JS_BCM_Explorer_Move_FileConflictOption_Title" xml:space="preserve">
     <value>If an object with the same name already exists, then:</value>
     <comment>Resolved</comment>

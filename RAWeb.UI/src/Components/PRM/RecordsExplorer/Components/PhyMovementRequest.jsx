@@ -53,8 +53,24 @@ export default class PhyMovementRequest extends R.Component {
         this.setState({ comment: value });
     }
 
+    getSearchPlaceholder() {
+        const source = this.props.data && this.props.data.Source && this.props.data.Source[0];
+
+        switch (source && source.NodeType) {
+            case NodeType.PhyRecord:
+                return RMResx.RM_JS_BCM_Explorer_SearchRecordPlaceHolder;
+            case NodeType.PhyFile:
+                return RMResx.RM_JS_BCM_Explorer_SearchFolderPlaceHolder;
+            case NodeType.PhyBox:
+                return RMResx.RM_JS_BCM_Explorer_SearchBoxPlaceHolder;
+            default:
+                return "Search";
+        }
+    }
+
     render() {
         const leafNodeType = this.props.smallNodeType;
+        const searchPlaceholder = this.getSearchPlaceholder();
 
         let isSourceFolder = false;
         if (this.props.data && this.props.data.Source && this.props.data.Source.length > 0) {
@@ -70,7 +86,7 @@ export default class PhyMovementRequest extends R.Component {
                 <R.Searchbox
                     width={380}
                     height={34}
-                    placeholder={"Search"}
+                    placeholder={searchPlaceholder}
                     disabled={false}
                     onSearch={this.onSearch}
                 />
